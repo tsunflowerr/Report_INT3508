@@ -1,0 +1,85 @@
+\section{Yêu cầu bài toán}
+
+\subsection{Miêu tả chi tiết bài toán}
+
+Hệ thống phục vụ ba nhóm người dùng có nhu cầu rất khác nhau, và chính sự khác nhau đó tạo ra phần lớn độ khó.
+
+Lễ tân và thu ngân làm việc ở quầy, thường vào lúc đông khách, nên cần thao tác nhanh, ít bước, thấy ngay tình trạng phòng. Màn hình của họ phải trả lời tức thì những câu như phòng nào đang trống, khách này đã trả tiền chưa, đơn này còn thiếu bao nhiêu. Nếu màn hình chậm một giây thì khách đứng chờ ở quầy sẽ thấy ngay.
+
+Người quản lý và chủ cơ sở thì quan tâm con số tổng: doanh thu tháng này so với tháng trước, công suất phòng bao nhiêu phần trăm, nguồn khách nào mang lại nhiều tiền nhất. Câu hỏi của họ luôn là câu hỏi tổng hợp trên một lượng dữ liệu lớn, và điều họ khó tha thứ nhất là hai màn hình cùng nói về một chỉ tiêu nhưng cho ra hai con số khác nhau. Nhóm thứ ba là bộ phận kế toán và buồng phòng, với những nhu cầu rất cụ thể như xuất hoá đơn, đối chiếu sổ quỹ, bàn giao ca, theo dõi tình trạng dọn phòng.
+
+Yêu cầu chung đặt lên hệ thống, theo cách em hiểu sau sáu tháng, gồm bốn điểm: số liệu phải nhất quán, nghĩa là cùng một chỉ tiêu thì mọi màn hình và mọi báo cáo phải cho cùng một kết quả; quyền hạn phải được tôn trọng, và việc chặn phải nằm ở phía máy chủ chứ không phải chỉ ẩn nút đi trên giao diện; hệ thống phải đúng theo bối cảnh địa phương gồm ngôn ngữ, múi giờ và đơn vị tiền tệ; và hệ thống phải đủ nhanh khi nhiều chi nhánh cùng dùng, một người bấm xuất tệp dữ liệu lớn thì không được làm những người còn lại phải chờ.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw=xamvien, fill=xamnhat, rounded corners=2pt, align=center,
+              font=\small, inner sep=3pt},
+  nen/.style={draw=xanhkv, fill=white, rounded corners=2pt, align=center,
+              font=\small, inner sep=3pt, thick},
+  mui/.style={-{Stealth[length=2mm]}, draw=xamvien, thick}
+]
+\node[box, text width=4.2cm, minimum height=1.05cm] (fe1) at (3.0,0)
+  {\textbf{Màn hình lễ tân}\\[1pt]{\scriptsize Angular 9, chạy tại quầy}};
+\node[box, text width=4.2cm, minimum height=1.05cm] (fe2) at (9.6,0)
+  {\textbf{Màn hình quản lý}\\[1pt]{\scriptsize Angular 18, bản viết lại}};
+
+\node[box, text width=3.55cm, minimum height=1.05cm] (sv1) at (2.1,-2.1)
+  {\textbf{Dịch vụ đặt phòng}\\[1pt]{\scriptsize .NET, xử lý lệnh}};
+\node[box, text width=3.55cm, minimum height=1.05cm] (sv2) at (6.3,-2.1)
+  {\textbf{Dịch vụ quản lý}\\[1pt]{\scriptsize .NET, dữ liệu danh mục}};
+\node[box, text width=3.55cm, minimum height=1.05cm] (sv3) at (10.5,-2.1)
+  {\textbf{Giao tiếp di động}\\[1pt]{\scriptsize .NET, cho ứng dụng}};
+
+\node[box, text width=3.55cm, minimum height=1.05cm] (sv4) at (4.2,-3.95)
+  {\textbf{Dịch vụ báo cáo}\\[1pt]{\scriptsize .NET, sinh báo cáo}};
+\node[box, text width=3.55cm, minimum height=1.05cm] (sv5) at (8.4,-3.95)
+  {\textbf{Xuất nhập tệp}\\[1pt]{\scriptsize .NET, chạy nền}};
+
+\node[nen, text width=10.6cm, minimum height=0.85cm] (nen) at (6.3,-5.8)
+  {\textbf{Phần nền dùng chung}\\[1pt]{\scriptsize Thực thể nghiệp vụ, phân quyền, cấu hình, thư viện tiện ích}};
+
+\node[box, text width=5.8cm, minimum height=0.85cm] (db) at (3.9,-7.55)
+  {\textbf{SQL Server}\\[1pt]{\scriptsize Chia nhiều phân vùng dữ liệu}};
+\node[box, text width=3.2cm, minimum height=0.85cm] (redis) at (9.6,-7.55)
+  {\textbf{Redis}\\[1pt]{\scriptsize Bộ đệm, khoá phân tán}};
+
+\draw[mui] (fe1.south) -- (sv1.north);
+\draw[mui] (fe1.south) -- (sv2.north);
+\draw[mui] (fe2.south) -- (sv2.north);
+\draw[mui] (fe2.south) -- (sv3.north);
+\draw[mui] (fe2.south) -- (sv4.north);
+\draw[mui] (sv1.south) -- (sv4.north);
+\draw[mui] (sv2.south) -- (sv5.north);
+\draw[mui] (sv4.south) -- (nen.north);
+\draw[mui] (sv5.south) -- (nen.north);
+\draw[mui] (sv3.south) -- (nen.north);
+\draw[mui] (nen.south) -- (db.north);
+\draw[mui] (nen.south) -- (redis.north);
+\end{tikzpicture}
+\caption{Các thành phần chính của hệ thống và quan hệ giữa chúng}
+\label{hinh:kientruc}
+\end{figure}
+
+Hình \ref{hinh:kientruc} là cách em vẽ lại hệ thống sau khi đã làm việc với nó một thời gian. Điều em muốn nhấn mạnh là các dịch vụ không tách rời nhau. Một tính năng thật gần như luôn phải đi qua nhiều hộp trong hình, và đó là lý do việc đọc hiểu phần người khác đã viết lại quan trọng hơn việc viết mã mới.
+
+\subsection{Phần bài toán em trực tiếp giải quyết}
+
+Toàn bộ sản phẩm là công việc của cả một nhóm nhiều người trong nhiều năm, nên em xin nói rõ phần nào là phần của mình. Em không tham gia thiết kế kiến trúc tổng thể, cũng không quyết định hướng đi của sản phẩm. Phần em nhận là những bài toán con đã được xác định rõ đầu vào và đầu ra, còn cách giải thì để người làm tự quyết. Trong sáu tháng, phần việc của em rơi vào sáu hướng.
+
+\begin{enumerate}[leftmargin=1.2cm, itemsep=2pt, topsep=3pt]
+\item Làm mới tính năng khoá phòng để sửa chữa, đi từ bảng dữ liệu, quy tắc nghiệp vụ, đầu giao tiếp, cho tới giao diện, bản dịch ngôn ngữ và kiểm thử tự động.
+\item Bổ sung hai chỉ tiêu thống kê mới về lượt khách nghỉ qua đêm và tổng số đêm nghỉ. Đây là bài toán mang tính thuật toán rõ nhất em gặp trong kỳ thực tập.
+\item Tách một quyền hạn cũ thành hai quyền riêng biệt, kèm việc chuyển đổi dữ liệu phân quyền của toàn bộ khách hàng đang dùng sang cấu trúc mới.
+\item Tối ưu hiệu năng: sửa những chỗ truy vấn cơ sở dữ liệu kém, những chỗ giữ khoá quá lâu làm người khác phải chờ, và những chỗ giao diện tính toán lại nhiều lần không cần thiết.
+\item Dựng các màn hình cho bản quản lý mới, gồm màn hình tổng quan với các biểu đồ doanh thu, màn hình danh sách và chi tiết phòng, và phần sổ tay hướng dẫn tích hợp kênh bán phòng trực tuyến.
+\item Xử lý phần đa ngôn ngữ và bối cảnh địa phương, gồm bổ sung tiếng Hàn, tiếng Trung, tiếng Lào cho nhiều màn hình, và sửa những lỗi định dạng ngày tháng, đơn vị tiền tệ, múi giờ.
+\end{enumerate}
+
+\subsection{Công việc của nhóm và công việc của em}
+
+Nhóm có nhiều vai trò: bộ phận phân tích nghiệp vụ nói chuyện với khách hàng và viết ra yêu cầu, bộ phận thiết kế giao diện dựng bản vẽ, người phát triển hiện thực yêu cầu, bộ phận kiểm thử xác nhận kết quả trước khi cho phát hành, bộ phận hỗ trợ khách hàng tiếp nhận phản hồi từ người dùng thật và chuyển ngược lại thành phiếu công việc, còn trưởng nhóm phân việc, xem lại mã và quyết định thứ tự ưu tiên.
+
+Trong sơ đồ đó, em ở vị trí người phát triển. Việc của em bắt đầu khi nhận một phiếu và kết thúc khi thay đổi của em chạy được trên hệ thống thật mà không gây ra vấn đề mới. Ở giữa hai mốc đó, em tự làm các bước: đọc yêu cầu và hỏi lại cho rõ, đọc mã cũ để hiểu chỗ mình sắp chạm vào, chọn cách sửa, viết mã, tự kiểm tra, viết kiểm thử tự động cho những phần logic quan trọng, đưa mã lên để đồng nghiệp xem lại, sửa theo góp ý, rồi phối hợp với bộ phận kiểm thử cho đến khi phiếu được đóng.
+
+Có một chi tiết em muốn nhắc vì nó thay đổi cách em làm việc. Ở hai tháng đầu, em nghĩ nhiệm vụ của mình là làm cho yêu cầu chạy được; về sau em hiểu nhiệm vụ thật là làm cho yêu cầu chạy được mà không làm hỏng thứ đang chạy. Điều thứ hai buộc em phải đi tìm những chỗ mình có thể vô tình ảnh hưởng, và đó thường là phần mất nhiều thời gian nhất của một phiếu.

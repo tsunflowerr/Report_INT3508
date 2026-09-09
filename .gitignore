@@ -1,0 +1,16 @@
+# Bộ công cụ portable tải về (tectonic + poppler), không commit binary
+tools/
+
+# Ảnh render từng trang, chỉ dùng để soát bố cục lúc làm
+preview/
+
+# File trung gian của LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg

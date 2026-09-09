@@ -1,0 +1,102 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+%==================== GOI THU VIEN ====================
+\usepackage{fontspec}
+\usepackage[fontsize=13pt]{fontsize}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds}
+
+%==================== TRANG & FONT ====================
+\geometry{a4paper,left=3cm,right=2cm,top=2cm,bottom=2cm}
+\setmainfont{Times New Roman}
+\onehalfspacing
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{1pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 3pt}
+\setlength{\intextsep}{12pt plus 2pt minus 3pt}
+\setlength{\abovecaptionskip}{7pt}
+
+% tieng Viet khong ngat tu
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=2500
+\emergencystretch=3em
+
+\definecolor{docdo}{RGB}{204,0,0}
+\definecolor{xanhkv}{RGB}{16,54,110}
+\definecolor{xamnhat}{RGB}{242,244,247}
+\definecolor{xamvien}{RGB}{170,178,189}
+\definecolor{cotbieudo}{RGB}{42,92,168}
+
+%==================== DINH DANG DE MUC I. / a. ====================
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\alph{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{0.6em}{}
+\titlespacing*{\section}{0pt}{18pt}{10pt}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{14pt}{8pt}
+\titleformat{\subsubsection}{\normalfont\bfseries\itshape}{\thesubsubsection.}{0.5em}{}
+\titlespacing*{\subsubsection}{0pt}{12pt}{6pt}
+
+%==================== MUC LUC ====================
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\cfttoctitlefont}{\hfill\normalfont\Large\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+\setlength{\cftbeforesecskip}{6pt}
+
+%==================== CAPTION HINH / BANG ====================
+\renewcommand{\figurename}{Hình}
+\renewcommand{\tablename}{Bảng}
+\captionsetup{font=small,labelfont=bf,labelsep=period,justification=centering}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+
+%==================== HEADER / FOOTER ====================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+%==================== MACRO RIENG ====================
+% dong ke bang dau cham cho trang danh gia
+\newcommand{\dongcham}{\par\vspace{1.15em}\noindent\dotfill\par}
+
+% khung ghi chu nhe
+\newenvironment{khungy}
+  {\par\vspace{6pt}\begin{list}{}{\leftmargin=1cm \rightmargin=0.4cm}\item[]\itshape}
+  {\end{list}\vspace{4pt}}
+
+\begin{document}
+
+\input{noi-dung/00-bia}
+\input{noi-dung/01-muc-luc}
+\input{noi-dung/02-loi-cam-on}
+
+\setcounter{page}{1}
+\input{noi-dung/03-gioi-thieu-chung}
+\input{noi-dung/04-yeu-cau-bai-toan}
+\input{noi-dung/05-giai-phap}
+\input{noi-dung/06-cai-dat}
+\input{noi-dung/07-ket-qua}
+\input{noi-dung/08-tai-lieu-tham-khao}
+\input{noi-dung/09-trang-danh-gia}
+
+\end{document}

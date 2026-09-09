@@ -1,0 +1,159 @@
+\section{Tóm tắt lý thuyết, giải pháp, thuật toán}
+
+\subsection{Các lý thuyết và giải pháp liên quan}
+
+Phần này ghi lại những khái niệm em thực sự phải hiểu để làm được việc. Mỗi khái niệm đều gắn với một tình huống cụ thể đã buộc em tìm hiểu nó, và em sẽ nói rõ tình huống đó ở mục sau.
+
+\begin{itemize}[leftmargin=1.1cm, itemsep=3pt, topsep=3pt]
+\item \textbf{Phân tách theo tầng.} Tầng ngoài nhận yêu cầu và trả kết quả, tầng giữa chứa quy tắc nghiệp vụ, tầng trong nói chuyện với cơ sở dữ liệu. Lúc đầu em thấy rườm rà, nhưng khi phải thêm cùng một tính năng vào hai nơi khác nhau thì mới thấy lợi ích: quy tắc nằm riêng một tầng nên chỉ viết một lần, hai đầu giao tiếp cùng gọi vào đó.
+
+\item \textbf{Tách lệnh khỏi truy vấn.} Dịch vụ đặt phòng không sửa trực tiếp vào bản ghi mà sinh ra một lệnh mô tả ý định, các lệnh được xử lý tuần tự, rồi từ chuỗi lệnh đó hệ thống dựng nên một bản dữ liệu riêng dành cho việc đọc. Nhờ vậy lịch sử thay đổi được giữ đầy đủ và phần đọc tối ưu được riêng, nhưng người mới mất nhiều thời gian hơn để hiểu.
+
+\item \textbf{Chi phí của tầng trừu tượng khi truy cập dữ liệu.} Thư viện cho phép viết truy vấn bằng chính ngôn ngữ lập trình rồi tự dịch sang câu lệnh cơ sở dữ liệu. Rất tiện, nhưng câu lệnh gửi đi không phải thứ mình nhìn thấy khi đọc mã: một biểu thức lồng nhiều lớp, có nối bảng kiểu lấy cả phần thiếu, có ghép nhiều nguồn rồi lọc trùng, khi dịch ra có thể thành câu lệnh rất dài mà cơ sở dữ liệu không tối ưu nổi.
+
+\item \textbf{Khoá phân tán và thời gian sống của khoá.} Có những đoạn việc chỉ được phép một tiến trình làm tại một thời điểm. Rủi ro là nếu tiến trình đang giữ khoá bị dừng đột ngột thì khoá không bao giờ được nhả và mọi tiến trình khác chờ mãi, nên phải gắn cho khoá một thời gian sống để nó tự mất đi khi hết hạn.
+
+\item \textbf{Cơ chế phát hiện thay đổi của giao diện.} Mỗi lần thư viện kiểm tra dữ liệu đã đổi chưa thì mọi biểu thức đang hiển thị đều bị tính lại. Nếu ta viết một thuộc tính tính toán rồi đem hiển thị, với danh sách vài chục dòng mà mỗi biểu thức lại quét cả mảng để tính tổng, chi phí nhân lên rất nhanh và màn hình bị giật.
+
+\item \textbf{Gộp khoảng và giao khoảng.} Cho một tập khoảng thời gian có thể chồng lấn, hãy gộp những khoảng chồng lấn thành khoảng liền rồi tính phần giao với một khoảng quan sát cho trước. Bước gộp: sắp xếp theo thời điểm bắt đầu, đi lần lượt, nếu khoảng đang xét bắt đầu sau khi khoảng cuối trong kết quả đã kết thúc thì thêm mới, ngược lại thì nới điểm kết thúc ra cho đủ. Bước cắt: điểm bắt đầu lấy giá trị lớn hơn giữa nó và mốc đầu kỳ, điểm kết thúc lấy giá trị nhỏ hơn giữa nó và mốc cuối kỳ, và nếu kết quả âm thì coi như bằng không.
+
+\item \textbf{Băm dữ liệu định danh.} Dữ liệu định danh của khách là dữ liệu cá nhân nên hệ thống lưu dạng đã băm, tức là biến chuỗi gốc thành một dãy ký tự có độ dài cố định theo một hàm một chiều. Hai chuỗi gốc giống nhau cho ra cùng một dãy, còn từ dãy đó thì không suy lại được chuỗi gốc, nhờ vậy so sánh được mà không cần đọc thông tin gốc.
+
+\item \textbf{Chuẩn hoá văn bản để tìm kiếm nhiều ngôn ngữ.} Người dùng gõ không giống hệt nội dung được lưu, nên phải chuẩn hoá cả hai phía trước khi so sánh rồi tách thành các từ và yêu cầu tiêu đề chứa tất cả các từ đó. Điểm cần lưu ý là không được định nghĩa chữ theo bảng chữ cái tiếng Anh, vì làm vậy sẽ xoá mất dấu tiếng Việt và toàn bộ chữ Hàn, chữ Trung.
+\end{itemize}
+
+\subsection{Cách giải quyết của em}
+
+\subsubsection{Tính năng khoá phòng: sinh lệnh theo sai khác trạng thái}
+
+Đây là tính năng lớn nhất em làm. Yêu cầu nghe gọn: cho phép người quản lý khoá một hoặc nhiều phòng trong một khoảng thời gian kèm lý do, để phòng đó tạm không kinh doanh.
+
+Phần khó xuất hiện ở thao tác sửa. Người dùng mở một lượt khoá đã có, rồi có thể đồng thời bỏ vài phòng, thêm vài phòng khác, đổi khoảng thời gian và sửa lý do. Cách đơn giản nhất là huỷ sạch lượt khoá cũ rồi tạo lại. Em đã nghĩ tới cách này trước vì nó dễ viết nhất, nhưng nó có hai điểm dở: lịch sử thay đổi bị mất nên người quản lý không còn biết ai đã sửa gì, và những phòng người dùng không hề chạm tới cũng bị huỷ rồi tạo lại, tạo ra một loạt biến động vô nghĩa và tăng nguy cơ đụng vào các đơn khác trong khoảng thời gian đó.
+
+Cách em chọn là so sánh trạng thái hiện tại với trạng thái người dùng vừa gửi lên, rồi chỉ sinh đúng những lệnh phản ánh phần khác biệt. Em viết một thành phần riêng chuyên làm việc này, tách hoàn toàn khỏi phần nhận yêu cầu và phần lưu dữ liệu, nên nó không phụ thuộc cơ sở dữ liệu và kiểm thử được độc lập.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  hop/.style={draw=xamvien, fill=xamnhat, rounded corners=2pt, align=center,
+              font=\small, inner sep=4pt},
+  lenh/.style={draw=xanhkv, fill=white, rounded corners=2pt, align=left,
+               font=\scriptsize, inner sep=4pt, text width=4.2cm},
+  mui/.style={-{Stealth[length=2mm]}, draw=xamvien, thick}
+]
+\node[hop, text width=3.6cm, minimum height=1.1cm] (cu) at (0,0)
+  {\textbf{Trạng thái đang lưu}\\[1pt]{\scriptsize Phòng nào đang khoá, khoảng nào}};
+\node[hop, text width=3.6cm, minimum height=1.1cm] (moi) at (0,-2.2)
+  {\textbf{Trạng thái gửi lên}\\[1pt]{\scriptsize Người dùng vừa sửa xong}};
+\node[hop, text width=2.6cm, minimum height=1.5cm, fill=white, draw=xanhkv, thick] (ss) at (5.0,-1.1)
+  {\textbf{So sánh}\\[2pt]{\scriptsize Tìm phần khác biệt}};
+
+\node[lenh] (l1) at (10.1,0.6) {Phòng mới xuất hiện\\ $\rightarrow$ lệnh giữ phòng};
+\node[lenh] (l2) at (10.1,-0.75) {Phòng bị bỏ ra\\ $\rightarrow$ lệnh huỷ giữ phòng};
+\node[lenh] (l3) at (10.1,-2.1) {Khoảng thời gian đổi\\ $\rightarrow$ lệnh đổi thời gian};
+\node[lenh] (l4) at (10.1,-3.45) {Chỉ lý do đổi\\ $\rightarrow$ lệnh cập nhật ghi chú};
+
+\draw[mui] (cu.east) -- (ss.west);
+\draw[mui] (moi.east) -- (ss.west);
+\draw[mui] (ss.east) -- (l1.west);
+\draw[mui] (ss.east) -- (l2.west);
+\draw[mui] (ss.east) -- (l3.west);
+\draw[mui] (ss.east) -- (l4.west);
+\end{tikzpicture}
+\caption{Chỉ sinh lệnh cho phần thực sự thay đổi thay vì huỷ và tạo lại toàn bộ}
+\label{hinh:sinhlenh}
+\end{figure}
+
+Hình \ref{hinh:sinhlenh} mô tả ý tưởng. Nếu người dùng chỉ sửa lý do, hệ thống chỉ sinh một lệnh cập nhật ghi chú; nếu bỏ toàn bộ phòng mà không chọn phòng mới thì bị chặn lại ngay. Em cũng tách riêng các quy tắc kiểm tra dữ liệu vào một chỗ: loại khoá phải nằm trong danh sách cho phép, lý do không dài quá giới hạn, phải chọn ít nhất một phòng, không được chọn trùng một phòng hai lần, thời điểm kết thúc phải sau thời điểm bắt đầu. Việc gom các quy tắc này giúp thông báo lỗi nhất quán, và quan trọng hơn là mọi đường vào hệ thống đều chịu cùng một bộ kiểm tra.
+
+Ở phía giao diện, em làm một hộp thoại riêng cho việc khoá phòng, gắn vào màn hình lịch phòng để người dùng thấy khoảng bị khoá ngay trên lịch, và bổ sung phần kiểm tra khi đặt phòng. Toàn bộ chuỗi chữ hiển thị được khai báo cho cả ba ngôn ngữ ngay trong cùng lần làm, vì em đã học được rằng để lại việc dịch cho sau thì gần như chắc chắn sẽ quên. Nhưng phần em tâm đắc nhất lại không phải phần mã chính mà là phần đi tìm hậu quả. Sau khi tính năng chạy được, em tự hỏi những chỗ nào khác đang đếm phòng mà chưa biết đến khái niệm phòng bị khoá, và thấy các phép tính công suất phòng vẫn tính phòng bị khoá vào phần có thể bán được, khiến công suất thấp hơn thực tế và người quản lý bị đánh giá sai. Em đã sửa các phép tính này để loại phòng đang khoá ra khỏi mẫu số. Việc này không có trong yêu cầu, không ai nhắc em, và nếu em không làm thì lỗi sẽ chỉ lộ ra sau vài tuần khi có người thắc mắc về con số.
+
+\subsubsection{Thống kê lượt khách nghỉ qua đêm và tổng số đêm nghỉ}
+
+Yêu cầu là bổ sung hai chỉ tiêu vào báo cáo phòng cho một khoảng thời gian tuỳ chọn. Nghe qua tưởng chỉ cần đếm, nhưng khi phân tích em thấy có ba vấn đề tách biệt.
+
+\textbf{Vấn đề thứ nhất là chồng lấn.} Cùng một người có thể có nhiều bản ghi lưu trú chồng lên nhau hoặc nối tiếp nhau, nên cộng thẳng số đêm của từng bản ghi thì những ngày bị tính hai lần sẽ làm con số phồng lên. Em giải quyết bằng thuật toán gộp khoảng đã nói ở trên.
+
+\textbf{Vấn đề thứ hai là biên của kỳ báo cáo.} Một lượt lưu trú có thể bắt đầu trước ngày đầu kỳ và kết thúc sau ngày cuối kỳ. Em tách hai chỉ tiêu ra xử lý khác nhau: số lượt chỉ được tính nếu ngày bắt đầu nằm trong kỳ đang xem, vì lượt là một sự kiện xảy ra tại một thời điểm; còn số đêm thì phải cắt theo kỳ, chỉ đếm phần đêm thực sự nằm trong kỳ, kể cả khi lượt đó bắt đầu từ trước.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small]
+\draw[->, thick, draw=xamvien] (0,0) -- (11.9,0) node[right,font=\scriptsize]{thời gian};
+\foreach \x/\l in {1/1,3/3,5/5,7/7,9/9,11/11} {
+  \draw[draw=xamvien] (\x,-0.1) -- (\x,0.1);
+  \node[font=\scriptsize, below=1pt] at (\x,-0.1) {ngày \l};
+}
+\fill[xanhkv, opacity=0.08] (3,-0.55) rectangle (9,4.3);
+\draw[dashed, thick, draw=xanhkv] (3,-0.55) -- (3,4.3);
+\draw[dashed, thick, draw=xanhkv] (9,-0.55) -- (9,4.3);
+\node[font=\scriptsize\bfseries, text=xanhkv] at (6,4.05) {kỳ báo cáo đang xem};
+
+\node[font=\scriptsize, anchor=east] at (-0.15,3.4) {bản ghi 1};
+\draw[line width=3.5pt, draw=xamvien] (1,3.4) -- (4,3.4);
+\node[font=\scriptsize, anchor=east] at (-0.15,2.85) {bản ghi 2};
+\draw[line width=3.5pt, draw=xamvien] (3.4,2.85) -- (6,2.85);
+\node[font=\scriptsize, anchor=east] at (-0.15,2.3) {bản ghi 3};
+\draw[line width=3.5pt, draw=xamvien] (7,2.3) -- (11,2.3);
+
+\node[font=\scriptsize, anchor=east] at (-0.15,1.45) {sau khi gộp};
+\draw[line width=3.5pt, draw=xanhkv] (1,1.45) -- (6,1.45);
+\draw[line width=3.5pt, draw=xanhkv] (7,1.45) -- (11,1.45);
+
+\node[font=\scriptsize, anchor=east] at (-0.15,0.75) {phần được tính};
+\draw[line width=3.5pt, draw=xanhkv] (3,0.75) -- (6,0.75);
+\draw[line width=3.5pt, draw=xanhkv] (7,0.75) -- (9,0.75);
+\end{tikzpicture}
+\caption{Gộp các khoảng lưu trú chồng lấn rồi cắt theo biên của kỳ báo cáo}
+\label{hinh:gopkhoang}
+\end{figure}
+
+Hình \ref{hinh:gopkhoang} minh hoạ cả hai bước. Ba bản ghi ban đầu chồng lấn nhau, sau khi gộp còn hai khoảng rời, và khi cắt theo kỳ thì phần nằm ngoài hai đường kẻ đứt bị bỏ đi. Bản ghi 1 bắt đầu trước kỳ nên không được tính là một lượt, nhưng những đêm của nó nằm trong kỳ vẫn được cộng vào tổng số đêm.
+
+\textbf{Vấn đề thứ ba là nhận diện cùng một người.} Em dùng dữ liệu định danh đã băm làm chìa khoá gom nhóm, và ở đây em gặp cái bẫy đáng nhớ nhất của cả kỳ thực tập. Với những khách không khai giấy tờ, chuỗi định danh là chuỗi rỗng. Nhưng chuỗi rỗng khi đưa qua hàm băm vẫn cho ra một dãy ký tự cố định, và dãy đó giống nhau với mọi khách không khai giấy tờ. Nghĩa là nếu gom nhóm một cách hồn nhiên, toàn bộ khách không khai giấy tờ trong kỳ sẽ bị coi là cùng một người duy nhất, báo cáo sẽ báo một lượt trong khi thực tế có thể là hàng trăm lượt.
+
+Điều đáng lo là lỗi này rất khó bị phát hiện khi kiểm thử thủ công, vì với dữ liệu mẫu nhỏ chỉ có một hai khách chưa khai giấy tờ thì con số vẫn trông hợp lý. Em xử lý bằng cách nhận biết đúng dãy băm của chuỗi rỗng và coi nó là trường hợp không có định danh, khi đó chuyển sang dùng mã bản ghi làm chìa khoá gom nhóm để mỗi khách vẫn được đếm riêng, kèm một trường hợp kiểm thử mang tên nói rõ ý định để người sau có sửa lại phần này thì cũng không vô tình làm lỗi quay lại.
+
+Em viết toàn bộ phần tính toán này thành một lớp thuần, chỉ nhận dữ liệu vào và trả kết quả ra, không chạm tới cơ sở dữ liệu, nhờ vậy kiểm thử được đầy đủ mười ba trường hợp gồm cả những trường hợp biên khó dựng bằng tay. Trong đó có một trường hợp em thấy hữu ích hơn cả: em kiểm tra rằng tổng của hai kỳ liền nhau phải bằng đúng kết quả tính một lần cho cả khoảng gộp lại. Đây không phải kiểm tra một giá trị cụ thể mà là kiểm tra một tính chất phải luôn đúng, và nó bắt được những sai sót ở biên mà việc thử từng số riêng lẻ dễ bỏ qua. Cũng cần nói thêm rằng thông tin định danh của khách được lưu ở kho dữ liệu riêng và được mã hoá, nên phần tính toán của em phải đọc từ hai nguồn rồi ghép lại theo mã bản ghi. Việc này bất tiện hơn là để tất cả cùng một chỗ, nhưng em coi đây là lần đầu mình được làm việc với dữ liệu cá nhân theo đúng cách.
+
+\subsubsection{Tối ưu việc xuất dữ liệu và hai lỗi hiệu năng đáng nhớ}
+
+Chức năng xuất tệp sổ quỹ bị báo chậm. Em đọc thì thấy phần lấy tên phòng cho mỗi dòng dữ liệu được viết bằng bốn năm biểu thức truy vấn khác nhau, mỗi biểu thức nối vài bảng theo kiểu lấy cả phần thiếu, rồi ghép lại và lọc trùng; ở giữa còn một câu kiểm tra xem có dữ liệu hay không, và chính câu đó cũng là một lượt đi tới cơ sở dữ liệu. Nhưng chỗ tệ nhất không nằm ở truy vấn: sau khi lấy được dữ liệu về, mã cũ đi qua từng dòng của tệp kết quả, và với mỗi dòng lại quét lại toàn bộ danh sách vừa lấy về. Nếu tệp có $n$ dòng và danh sách có $m$ phần tử thì số phép so sánh là $n$ nhân $m$, và với tệp vài nghìn dòng thì con số này đủ lớn để người dùng cảm nhận được.
+
+Em làm lại theo ba bước: nếu không có dòng nào cần xử lý thì thoát ra ngay; thay toàn bộ chuỗi biểu thức truy vấn bằng một câu lệnh viết sẵn phía cơ sở dữ liệu, gọi một lần và nhận về đúng dữ liệu cần; và thay vì quét lại danh sách cho từng dòng thì gom dữ liệu một lần thành một bảng tra theo chìa khoá. Số phép tính giảm từ $n$ nhân $m$ xuống còn khoảng $n$ cộng $m$, và phần mã sau khi làm lại ngắn hơn phần mã cũ khoảng hai phần ba. Điều này dạy em rằng mã nhanh hơn không đồng nghĩa với mã phức tạp hơn: ở đây cách viết nhanh hơn cũng chính là cách viết dễ đọc hơn.
+
+Một phiếu khác báo rằng khi có người xuất tệp hoá đơn kèm chi tiết thì các thao tác khác trên cùng dữ liệu bị chậm hẳn, tức là hiện tượng chặn nhau ở tầng cơ sở dữ liệu. Em không đi sửa cách quản lý giao dịch vì đó là phần chung, chạm vào sẽ ảnh hưởng rộng, mà đi tìm câu hỏi khác: tại sao lượt đọc này lại nặng như vậy. Đọc mã thì thấy phần khai báo dữ liệu cần lấy kèm đang yêu cầu ba nhóm dữ liệu mà tệp kết quả không hề dùng tới, và trong danh sách còn có phần tử bị lặp; mỗi nhóm lấy kèm làm câu lệnh phải nối thêm bảng, khiến phạm vi khoá rộng ra và thời gian giữ khoá dài ra. Em bỏ ba nhóm không dùng và lọc trùng danh sách, thay đổi cuối cùng chỉ vài dòng. Nếu lao vào sửa cơ chế giao dịch thì vừa mất thời gian, vừa rủi ro, mà vẫn không giải quyết được nguyên nhân thật.
+
+Lỗi thứ hai em tự tìm ra chứ không ai báo: khoá phân tán được tạo ra mà không đặt thời gian sống, nghĩa là nếu tiến trình giữ khoá dừng bất thường thì khoá sẽ nằm lại vĩnh viễn và mọi tiến trình sau đó đều bị chặn. Em bổ sung thời gian sống cho khoá, chỉ năm dòng và không thêm tính năng nào cho người dùng, nhưng đây là lần đầu em tự tìm ra một rủi ro chưa xảy ra thay vì chờ nó xảy ra rồi mới đi sửa.
+
+\subsubsection{Tập trung quy tắc phân quyền vào một chỗ}
+
+Yêu cầu là tách một quyền hạn cũ về việc huỷ đơn thành hai quyền riêng, phân biệt theo tình trạng của khách. Phần khó có hai mặt.
+
+Mặt thứ nhất là dữ liệu. Toàn bộ khách hàng đang dùng đã có sẵn quyền cũ gán cho các vai trò của họ, nên phải chuyển đổi dữ liệu phân quyền sang cấu trúc mới sao cho không ai bị mất quyền đang có. Em viết một tập lệnh chuyển đổi, và cùng với nó viết luôn một tập lệnh đưa dữ liệu về trạng thái cũ. Ban đầu em thấy việc viết phần quay lại là dư thừa vì mình tin tập lệnh của mình chạy đúng, nhưng anh hướng dẫn nói một câu em nhớ mãi, đại ý là thứ cần chuẩn bị không phải cho trường hợp mình sai, mà cho trường hợp mình không có thời gian tìm hiểu vì sao mình sai.
+
+Mặt thứ hai là giao diện. Việc kiểm tra quyền cần xuất hiện ở nhiều chỗ trên màn hình lễ tân. Cách nhanh nhất là rải các câu điều kiện vào từng chỗ, nhưng em không làm vậy vì đã thấy hậu quả của lối viết đó: mỗi lần quy tắc đổi là phải đi tìm lại tất cả những chỗ đã rải, và chỉ cần sót một chỗ là hành vi không còn nhất quán. Em gom toàn bộ quy tắc vào một thành phần chuyên trách về quyền huỷ đơn, các thành phần hiển thị chỉ hỏi nó một câu duy nhất là người dùng hiện tại có được huỷ đơn này hay không.
+
+Cần nói thêm rằng việc ẩn hay hiện nút trên giao diện không phải là bảo mật, nó chỉ là trải nghiệm người dùng. Việc chặn thật phải nằm ở phía máy chủ, vì người dùng hoàn toàn có thể gọi trực tiếp vào đầu giao tiếp mà không đi qua giao diện.
+
+\subsubsection{Giữ cho giao diện nhẹ và tách logic khỏi phần hiển thị}
+
+Nhóm em có quy ước không dùng thuộc tính tính toán đem hiển thị, và thay bằng hai cách. Cách thứ nhất là dùng một biến lưu kết quả, gán lại tại đúng những thời điểm dữ liệu thay đổi, còn phần hiển thị chỉ đọc biến; em đã viết theo cách này cho thông tin lượt khoá phòng đang xem, tiêu đề hộp thoại theo chế độ đang mở, và bảng tổng kết các dòng thanh toán. Cách thứ hai dùng khi giá trị phụ thuộc tham số của từng dòng trong danh sách, lúc đó nhóm có sẵn một bộ chuyển đổi thuần chỉ chạy lại khi tham số thay đổi. Phần này thay đổi cách em nhìn về hiệu năng: trước đây em nghĩ tối ưu là việc làm sau, giờ em thấy hiệu năng là một thói quen viết mã, và một quy ước đơn giản được cả nhóm tuân theo có tác dụng lớn hơn nhiều so với việc để một người ngồi tối ưu về sau.
+
+Cùng tinh thần đó, khi làm ô tìm kiếm cho phần sổ tay hỗ trợ tích hợp kênh bán phòng trực tuyến, em tách logic tìm kiếm ra khỏi phần hiển thị thành một lớp tiện ích thuần chỉ gồm ba việc: chuẩn hoá chuỗi, tách chuỗi thành các từ, và đối chiếu. Khi chuẩn hoá, em khai báo chữ và số theo thuộc tính ký tự thay vì liệt kê bảng chữ cái, để dấu tiếng Việt và các hệ chữ khác không bị xoá mất; khi đối chiếu, em yêu cầu tiêu đề chứa tất cả các từ người dùng gõ nhưng không cần đúng thứ tự.
+
+\subsubsection{Dựng lại biểu đồ doanh thu và một lỗi lặp lại ba lần}
+
+Ở bản quản lý viết lại, em nhận việc dựng màn hình tổng quan với các biểu đồ về doanh thu. Thành phần cũ là một tệp dài trộn lẫn phần lấy dữ liệu, phần tính toán và phần vẽ, nên em chọn viết lại và tách thành ba tệp riêng, đồng thời chuyển việc gọi dữ liệu ra tầng riêng theo đúng cách tổ chức của dự án.
+
+Trong lúc làm, em nhận được ba phiếu lỗi khác nhau, do ba người báo, ở ba chỗ khác nhau trên cùng màn hình tổng quan: bỏ chọn một chi nhánh nhưng doanh thu của chi nhánh đó vẫn được tính vào tổng, biểu đồ hình tròn không tính lại, và khối tổng tiền phòng cũng không tính lại. Nếu em sửa từng phiếu một thì sẽ có ba chỗ sửa riêng và cả ba lần đều là sửa đúng theo yêu cầu. Nhưng khi đọc kỹ em thấy chúng chỉ là một vấn đề: các thành phần con đang truyền cho nhau danh sách mã chi nhánh, và mỗi thành phần lại tự giữ một bản sao rồi tự xử lý theo cách riêng, nên khi người dùng bỏ chọn một chi nhánh thì có thành phần nhận được thông tin cập nhật, có thành phần thì không. Em sửa ở gốc: thay vì truyền danh sách mã, các thành phần cùng nhận và cùng dùng một đối tượng chi nhánh thống nhất. Sau lần sửa đó cả ba phiếu đều hết, và loại lỗi này không quay lại ở những biểu đồ em thêm sau.
+
+Bài học ở đây là một trong những bài học em thấy hữu ích nhất cả kỳ. Khi cùng một hiện tượng xuất hiện ở ba chỗ, rất có thể đó không phải ba lỗi mà là một vấn đề về thiết kế: sửa từng chỗ sẽ đóng được phiếu nhưng không giải quyết được nguyên nhân, và chỗ thứ tư sẽ xuất hiện vào lúc ta không mong đợi nhất.
+
+\subsection{Liên hệ và so sánh với các cách đã có}
+
+\textbf{Về tính năng khoá phòng.} Cách đơn giản là huỷ hết rồi tạo lại: ít mã, dễ hiểu, và nếu tính năng chỉ dùng nội bộ thì hoàn toàn chấp nhận được. Cách em chọn tốn công hơn và cần nhiều trường hợp kiểm thử hơn, nên cách nào tốt hơn phụ thuộc vào bối cảnh. Ở đây có ba yếu tố khiến cách thứ hai xứng đáng: lịch sử thay đổi là thứ người quản lý thực sự cần, phòng và khoảng thời gian có thể đụng tới các đơn khác nên càng ít biến động càng an toàn, và tính năng này sẽ được nhiều khách hàng dùng lâu dài. Nếu thiếu ba yếu tố đó thì cách đơn giản mới là cách đúng. Em ghi lại nhận xét này vì trước kỳ thực tập em hay mặc định rằng giải pháp phức tạp hơn là giải pháp tốt hơn.
+
+\textbf{Về nơi đặt phần tính toán thống kê.} Đây là quyết định em làm sai trước rồi sửa lại. Ban đầu em hiện thực phần thống kê ở dịch vụ quản lý, vì báo cáo được xem từ màn hình quản lý nên đặt ở đó có vẻ tự nhiên. Ba ngày sau, khi ngồi xem lại cùng anh hướng dẫn, em nhận ra chỗ đặt như vậy không đúng: dữ liệu lưu trú thuộc về dịch vụ đặt phòng, và để dịch vụ quản lý tự đọc rồi tự tính sẽ dẫn tới hai chỗ trong hệ thống cùng định nghĩa một chỉ tiêu, đến lúc quy tắc tính đổi thì chỉ cần sửa một bên là hai màn hình cho ra hai con số khác nhau. Em đã huỷ bỏ toàn bộ phần đã làm và hiện thực lại ở dịch vụ đặt phòng, nơi sở hữu dữ liệu. Việc bỏ đi công sức mấy ngày không dễ chịu, nhưng em học được một nguyên tắc rõ ràng: phần tính toán nên nằm ở nơi sở hữu dữ liệu, còn các nơi khác thì gọi vào chứ không tự tính lại.
+
+\textbf{Về phạm vi ảnh hưởng của một thay đổi.} Báo cáo hiển thị sai định dạng ngày khi dùng ngôn ngữ Hàn. Em đọc mã và thấy phần xử lý ngày có nhiều đoạn viết riêng cho từng ngôn ngữ, nằm rải ở nhiều tệp và trông rất chắp vá, nên em viết lại phần đó, bỏ đi khoảng một trăm năm mươi dòng ở sáu tệp khác nhau. Nhìn lại thì đó là một thay đổi rất rộng cho một lỗi rất hẹp. Ba mươi phút sau em tự huỷ bỏ thay đổi của mình, vì không có cách nào tự tin rằng sáu tệp đó không được dùng bởi những báo cáo khác mà em chưa hề mở ra xem. Sau đó em làm lại theo hướng hẹp, chỉ sửa đúng chỗ sinh ra lỗi và bổ sung một hàm nhỏ để phần đọc ngày tháng chịu được nhiều dạng đầu vào hơn, gói trong một tệp và khoảng hai mươi dòng. Bài học không phải là đừng dọn mã, mà là dọn mã phải là một việc riêng có kế hoạch riêng và có kiểm thử che phủ trước, không nên gộp vào một phiếu sửa lỗi đang cần phát hành gấp.

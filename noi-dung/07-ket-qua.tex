@@ -1,0 +1,81 @@
+\section{Kết quả đạt được, hướng phát triển}
+
+\subsection{Kỹ năng và kiến thức thu thập được}
+
+\subsubsection{Những việc đã hoàn thành}
+
+Trong sáu tháng, em hoàn thành 173 phiếu công việc, tương ứng 342 đầu việc khác nhau, trải trên chín kho mã của sản phẩm. Những phần đáng kể nhất gồm:
+
+\begin{itemize}[leftmargin=1.2cm, itemsep=1pt, topsep=2pt]
+\item Tính năng khoá phòng để sửa chữa, làm trọn vẹn từ bảng dữ liệu, quy tắc nghiệp vụ, đầu giao tiếp cho tới giao diện, bản dịch ba ngôn ngữ và kiểm thử tự động, kèm việc sửa các phép tính công suất phòng để phòng đang khoá không bị tính sai.
+\item Hai chỉ tiêu thống kê mới về lượt khách nghỉ qua đêm và tổng số đêm nghỉ, với phần tính toán tách thành một lớp thuần và có mười ba trường hợp kiểm thử.
+\item Việc tách một quyền hạn cũ thành hai quyền riêng, gồm cả tập lệnh chuyển đổi dữ liệu cho toàn bộ khách hàng đang dùng và tập lệnh đưa về trạng thái trước đó.
+\item Bốn hạng mục tối ưu hiệu năng: giảm số lượt truy vấn và hạ chi phí tính toán khi xuất tệp sổ quỹ, chặn hiện tượng người dùng phải chờ nhau khi xuất tệp hoá đơn, đặt thời gian sống cho khoá phân tán, và áp dụng quy ước tránh tính toán lại trên giao diện.
+\item Các màn hình cho bản quản lý viết lại, gồm màn hình tổng quan với các biểu đồ doanh thu, màn hình danh sách và chi tiết phòng, phần sổ tay hướng dẫn tích hợp kênh bán phòng trực tuyến kèm ô tìm kiếm, và việc tái cấu trúc bảng tổng kết của phiếu bàn giao ca.
+\item Phần đa ngôn ngữ và bối cảnh địa phương, gồm bổ sung tiếng Hàn, tiếng Trung, tiếng Lào cho nhiều màn hình và sửa các lỗi định dạng ngày tháng, đơn vị tiền tệ, múi giờ. Cùng với đó là khoảng một nghìn chín trăm dòng kiểm thử tự động ở cả hai phía.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[font=\small]
+\def\bw{1.0}
+\foreach \i/\h/\v/\m in {0/1.17/49/3, 1/1.93/81/4, 2/2.17/91/5, 3/2.60/109/6, 4/3.94/165/7, 5/4.20/176/8, 6/0.64/27/9} {
+  \pgfmathsetmacro{\x}{\i*1.45}
+  \fill[cotbieudo, rounded corners=1.5pt] (\x,0) rectangle (\x+\bw,\h);
+  \node[font=\small, text=xanhkv, above=1.5pt] at (\x+\bw/2,\h) {\v};
+  \node[font=\small, below=3pt] at (\x+\bw/2,0) {\m};
+}
+\draw[draw=xamvien, line width=0.8pt] (-0.25,0) -- (9.95,0);
+\node[font=\scriptsize, below=26pt] at (4.85,0) {tháng, năm 2026};
+\end{tikzpicture}
+\caption{Số lần ghi mã theo từng tháng trong kỳ thực tập.\\ Tháng 9 chỉ gồm 7 ngày đầu nên cột thấp hơn hẳn.}
+\label{hinh:tiendo}
+\end{figure}
+
+Hình \ref{hinh:tiendo} nói về kỳ thực tập của em chính xác hơn mọi lời tự nhận xét. Tháng đầu em ghi mã ít nhất, không phải vì làm ít mà vì phần lớn thời gian ngồi đọc; con số tăng dần và cao nhất vào tháng 7 và tháng 8, đúng giai đoạn em đã đủ quen để tự nhận những phiếu lớn hơn. Nhưng cách hiểu đúng không phải là em làm việc hiệu quả hơn theo thời gian, mà là thời gian đọc hiểu ở giai đoạn đầu không mất đi, nó chuyển thành khả năng làm nhanh ở giai đoạn sau.
+
+\subsubsection{Kiến thức kỹ thuật}
+
+Về cơ sở dữ liệu, em học được cách đọc để hiểu một câu truy vấn thật sự làm gì thay vì chỉ đọc mã sinh ra nó, và cách nhận ra dấu hiệu của một truy vấn tồi như nối quá nhiều bảng, lọc trùng trên tập lớn, hay lấy kèm dữ liệu không dùng. Em cũng lần đầu viết câu lệnh sẵn phía cơ sở dữ liệu cho một chỗ cần hiệu năng, và lần đầu viết tập lệnh chuyển đổi dữ liệu cho hệ thống đang chạy thật.
+
+Về hiệu năng, em hiểu rằng phần lớn vấn đề không nằm ở thuật toán tinh vi mà ở những việc rất cơ bản: làm nhiều lần một việc chỉ cần làm một lần, mang về nhiều dữ liệu hơn mức cần dùng, và tìm kiếm tuần tự trong khi có thể tra theo chìa khoá. Trong bốn hạng mục tối ưu em làm, không hạng mục nào cần đến một thuật toán khó.
+
+Về kiến trúc, em chuyển từ chỗ thấy việc chia tầng là rườm rà sang chỗ hiểu nó giải quyết vấn đề gì, và học được một nguyên tắc em tin sẽ theo mình lâu: phần tính toán nên nằm ở nơi sở hữu dữ liệu, và cùng một chỉ tiêu thì chỉ nên được định nghĩa ở đúng một chỗ. Về kiểm thử, em cũng thay đổi hẳn quan niệm: trước đây em coi nó là việc phải làm để đủ thủ tục, giờ em coi nó là một bản mô tả hành vi mà người sau đọc được, và một tấm lưới bảo vệ những hành vi cũ. Về xử lý nhiều ngôn ngữ và nhiều vùng, em nhận ra đây không phải việc thay chuỗi chữ như em từng nghĩ, mà gồm cả định dạng ngày tháng, cách viết số, ký hiệu tiền tệ, và quan trọng nhất là múi giờ: câu hỏi hôm nay bán được bao nhiêu là câu hỏi không có nghĩa cho đến khi xác định được hôm nay là theo giờ ở đâu.
+
+\subsubsection{Kỹ năng làm việc}
+
+Có những thứ em học được mà không liên quan đến kỹ thuật, và em nghĩ chúng quan trọng không kém.
+
+Thứ nhất là biết hỏi. Tháng đầu em hay ngồi tự mò hai ba giờ vì sợ hỏi thì bị đánh giá là không biết gì. Sau vài lần được nhắc, em đổi cách: tự tìm khoảng ba mươi phút, nếu vẫn bí thì hỏi, nhưng hỏi kèm những gì mình đã thử và đang nghi ngờ ở đâu.
+
+Thứ hai là viết mô tả cho thay đổi của mình. Đầu kỳ em viết những dòng như sửa lỗi hoặc cập nhật, và chính em hai tuần sau đó không hiểu mình đã sửa gì; về sau em viết rõ mã phiếu và nội dung thay đổi, mất thêm ba mươi giây nhưng tiết kiệm rất nhiều thời gian cho người phải lần lại.
+
+Thứ ba là làm việc với bộ phận kiểm thử. Ban đầu em thấy hơi khó chịu khi phiếu bị trả lại, về sau em hiểu họ đang làm phần việc em khó tự làm được: em luôn thử theo đúng cách em hình dung khi viết mã, còn họ thử theo cách người dùng thật hành xử. Rất nhiều lỗi họ tìm ra là những trường hợp em không nghĩ tới.
+
+Thứ tư là chấp nhận bỏ đi phần việc đã làm. Lần em huỷ bỏ toàn bộ phần thống kê đã hiện thực ở một dịch vụ để làm lại ở dịch vụ khác là lần khó chịu nhất, nhưng cũng là lần em trưởng thành nhất về nghề, vì công sức đã bỏ ra không phải lý do để giữ một quyết định sai.
+
+\subsubsection{Những bài học em cho là quan trọng nhất}
+
+\begin{enumerate}[leftmargin=1.2cm, itemsep=1pt, topsep=2pt]
+\item Một tính năng chưa xong khi nó chạy được. Nó xong khi ta đã đi tìm và xử lý những chỗ nó âm thầm làm sai.
+\item Phạm vi của một thay đổi quan trọng ngang với nội dung của nó. Một lỗi hẹp nên được sửa bằng một thay đổi hẹp, còn dọn mã phải là một việc riêng có kế hoạch riêng.
+\item Mọi tầng trừu tượng đều có giá. Viết truy vấn bằng ngôn ngữ lập trình rất tiện, nhưng ở chỗ nóng thì phải biết câu lệnh thật sự được gửi đi là gì.
+\item Việc chặn phải nằm ở phía máy chủ. Ẩn một cái nút trên giao diện là trải nghiệm người dùng, không phải bảo mật.
+\item Phần tính toán nên nằm ở nơi sở hữu dữ liệu, vì hai chỗ cùng định nghĩa một chỉ tiêu là một quả bom hẹn giờ. Và khi cùng một hiện tượng xuất hiện ở nhiều chỗ, rất có thể đó không phải nhiều lỗi mà là một vấn đề về thiết kế.
+\item Hãy viết phần quay lại trước khi cần đến nó. Điều cần chuẩn bị không phải cho trường hợp mình sai, mà cho trường hợp mình không có thời gian tìm hiểu vì sao mình sai.
+\item Kiểm thử có giá trị nhất là kiểm thử bảo vệ hành vi cũ, chứ không phải kiểm thử lại đúng cái mình vừa viết. Và hiệu năng là một thói quen viết mã, không phải một giai đoạn làm sau.
+\end{enumerate}
+
+\subsubsection{Những điều em chưa làm được}
+
+Một báo cáo chỉ kể phần tốt thì không trung thực, nên em xin ghi lại cả những hạn chế của mình. Em vẫn ước lượng thời gian kém, có phiếu nói hai ngày mà làm bốn ngày, và phần vượt gần như luôn nằm ở khâu đọc hiểu phần đã có chứ không nằm ở khâu viết mã. Em viết kiểm thử cũng chưa đồng đều: với những phần logic rõ ràng thì khá đầy đủ, nhưng với những phần chủ yếu là hiển thị thì em hay bỏ qua và chỉ thử bằng tay. Em còn phụ thuộc vào việc được hỏi, vì nhiều lần em giải quyết được vấn đề sau khi anh hướng dẫn đặt lại câu hỏi theo một hướng khác, còn em thì chưa tự đặt được những câu hỏi như vậy cho chính mình. Cuối cùng, em hiểu hệ thống theo từng mảng chứ chưa hiểu toàn cục: những phần mình đã chạm vào thì nắm khá rõ, nhưng nếu được hỏi về một phân hệ chưa làm thì vẫn phải mở mã ra đọc lại từ đầu.
+
+\subsection{Hướng phát triển tiếp theo}
+
+Tính năng khoá phòng hiện xử lý tốt trường hợp khoá theo một khoảng thời gian cụ thể. Hướng mở rộng tự nhiên là khoá theo chu kỳ lặp lại, ví dụ bảo trì định kỳ hằng tháng, và gắn lượt khoá với một kế hoạch bảo trì để người quản lý thấy được lịch sử sửa chữa của từng phòng; phần sinh lệnh theo sai khác trạng thái mà em đã viết có thể dùng lại cho hướng này mà không phải viết lại từ đầu.
+
+Phần tính toán thống kê hiện chạy trực tiếp mỗi lần người dùng xem báo cáo, nên với những cơ sở có lượng khách lớn và khoảng thời gian xem rộng thì sẽ dần chậm. Hướng cải thiện là tính trước theo từng ngày rồi lưu lại, khi người dùng xem một khoảng thì chỉ cần cộng các ngày trong khoảng đó; vì phần tính toán đã được tách thành một lớp thuần nên việc chuyển đổi không ảnh hưởng tới quy tắc nghiệp vụ. Với phần tối ưu, em mới chỉ xử lý những chỗ đã có người báo là chậm, nên việc nên làm tiếp là đo đạc chủ động để tìm ra những chỗ chậm mà chưa ai kịp phàn nàn. Với phần kiểm thử, khoảng trống rõ nhất là phần hiển thị.
+
+Về bản thân, em muốn tiếp tục làm ở vị trí có thể chạm vào cả phần giao diện và phần máy chủ, vì sáu tháng qua cho em thấy nhiều vấn đề chỉ nhìn ra được khi ta thấy cả hai đầu. Ba việc cụ thể em muốn làm tiếp là học kỹ hơn về cơ sở dữ liệu, cụ thể là cách đọc kế hoạch thực thi của câu truy vấn và cách thiết kế chỉ mục; tập viết kiểm thử trước khi viết mã cho những phần có logic rõ; và tập tự trả lời câu hỏi thay đổi này sẽ ảnh hưởng tới những đâu trước khi viết dòng mã đầu tiên. Sáu tháng qua em thường trả lời được câu hỏi đó sau khi đã làm xong, và khoảng cách giữa sau khi làm xong và trước khi bắt đầu chính là khoảng cách em cần đi tiếp.
+
+Sáu tháng ở KiotViet không dạy em thêm nhiều cú pháp hay công cụ. Nó dạy em cách làm việc với một hệ thống mình không viết ra, đang có người dùng thật, và không cho phép mình làm hỏng. Đó là thứ khó tự học ở nhà nhất.
