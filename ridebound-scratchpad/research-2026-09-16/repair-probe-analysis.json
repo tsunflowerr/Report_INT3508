@@ -1,0 +1,45 @@
+{
+  "kind": "validated-same-state-waiting-pair-repair-negative-result",
+  "captureReceiptSha256": "3309a390ff62263fa2ef6daed95778c9d84efd3b4e145488878b3df8e4b28cf5",
+  "probeSha256": "f71405d7c7fd08f1dc6e304ea446d8b3e4a5211c555cdea62e24a40817fc4451",
+  "transcriptSha256": "834629accb420a92a6bee5ee67a9cd195ccd2ccaf2a998d5e7aa3521bd5e4e32",
+  "exactMatchedResponses": 750,
+  "rejectedStates": 16,
+  "epochs": [
+    20,
+    275,
+    304,
+    321,
+    334,
+    373,
+    374,
+    378,
+    388,
+    394,
+    406,
+    457,
+    458,
+    459,
+    460,
+    673
+  ],
+  "completeGenerationStates": 16,
+  "rescuedStates": 0,
+  "rawRetainedRepairCandidates": 1,
+  "headScreenRemoved": 5,
+  "physicalFirstWitnessCounts": {
+    "PICKUP_WINDOW": 1169,
+    "MAX_RIDE_TIME": 486
+  },
+  "hardFirstWitnessCounts": {
+    "COMMITMENT_PHASE_LOCK": 2,
+    "COMMITMENT_BUDGET_EXCEEDED": 3
+  },
+  "limitations": [
+    "One previously observed C1tight run; not held-out or closed-loop.",
+    "One waiting incumbent pair per repair; no onboard drop reordering, joint moves or reassignment.",
+    "Conservative leading same-node block screen is not full FleetPy locked-leg validation.",
+    "Fail-fast witness counts are neither minimal causes nor independent requests.",
+    "No rescue does not establish DARP infeasibility or rule out a different earlier trajectory."
+  ]
+}

@@ -1,0 +1,75 @@
+CONFIRM: initial expected 55,963 was not supported; preserved first probe failed only its final hardcoded expected denominator assertion after all 64 raw morning runs.
+RAW_COUNTER_REAGGREGATION: 64 C-arm runs; forced 0 / acknowledged 44,270; 88,540 parsed decision/decisionApplied frame SHA256 checks.
+SEMANTIC_ROW C-30 d20181112-s10-r1-w07: nextEpoch=719; raw_ack_count=718; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-30-d20181112-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-30 d20181112-s10-r2-w07: nextEpoch=689; raw_ack_count=688; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-30-d20181112-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-30 d20181112-s10-r3-w07: nextEpoch=792; raw_ack_count=791; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-30-d20181112-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-30 d20181112-s10-r4-w07: nextEpoch=715; raw_ack_count=714; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-30-d20181112-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-30 d20181113-s10-r1-w07: nextEpoch=587; raw_ack_count=586; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-30-d20181113-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-30 d20181113-s10-r2-w07: nextEpoch=567; raw_ack_count=566; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-30-d20181113-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-30 d20181113-s10-r3-w07: nextEpoch=695; raw_ack_count=694; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-30-d20181113-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-30 d20181113-s10-r4-w07: nextEpoch=754; raw_ack_count=753; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-30-d20181113-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-60 d20181112-s10-r1-w07: nextEpoch=719; raw_ack_count=718; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-60-d20181112-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-60 d20181112-s10-r2-w07: nextEpoch=689; raw_ack_count=688; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-60-d20181112-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-60 d20181112-s10-r3-w07: nextEpoch=792; raw_ack_count=791; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-60-d20181112-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-60 d20181112-s10-r4-w07: nextEpoch=720; raw_ack_count=719; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-60-d20181112-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-60 d20181113-s10-r1-w07: nextEpoch=587; raw_ack_count=586; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-60-d20181113-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-60 d20181113-s10-r2-w07: nextEpoch=567; raw_ack_count=566; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-60-d20181113-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-60 d20181113-s10-r3-w07: nextEpoch=695; raw_ack_count=694; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-60-d20181113-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-60 d20181113-s10-r4-w07: nextEpoch=754; raw_ack_count=753; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-60-d20181113-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-90 d20181112-s10-r1-w07: nextEpoch=736; raw_ack_count=735; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-90-d20181112-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-90 d20181112-s10-r2-w07: nextEpoch=689; raw_ack_count=688; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-90-d20181112-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-90 d20181112-s10-r3-w07: nextEpoch=792; raw_ack_count=791; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-90-d20181112-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-90 d20181112-s10-r4-w07: nextEpoch=720; raw_ack_count=719; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-90-d20181112-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-90 d20181113-s10-r1-w07: nextEpoch=594; raw_ack_count=593; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-90-d20181113-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-90 d20181113-s10-r2-w07: nextEpoch=567; raw_ack_count=566; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-90-d20181113-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-90 d20181113-s10-r3-w07: nextEpoch=686; raw_ack_count=685; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-90-d20181113-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-90 d20181113-s10-r4-w07: nextEpoch=754; raw_ack_count=753; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-90-d20181113-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-120 d20181112-s10-r1-w07: nextEpoch=736; raw_ack_count=735; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-120-d20181112-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-120 d20181112-s10-r2-w07: nextEpoch=689; raw_ack_count=688; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-120-d20181112-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-120 d20181112-s10-r3-w07: nextEpoch=792; raw_ack_count=791; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-120-d20181112-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-120 d20181112-s10-r4-w07: nextEpoch=720; raw_ack_count=719; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-120-d20181112-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-120 d20181113-s10-r1-w07: nextEpoch=609; raw_ack_count=608; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-120-d20181113-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-120 d20181113-s10-r2-w07: nextEpoch=567; raw_ack_count=566; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-120-d20181113-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-120 d20181113-s10-r3-w07: nextEpoch=686; raw_ack_count=685; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-120-d20181113-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-120 d20181113-s10-r4-w07: nextEpoch=754; raw_ack_count=753; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-120-d20181113-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-150 d20181112-s10-r1-w07: nextEpoch=736; raw_ack_count=735; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-150-d20181112-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-150 d20181112-s10-r2-w07: nextEpoch=689; raw_ack_count=688; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-150-d20181112-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-150 d20181112-s10-r3-w07: nextEpoch=792; raw_ack_count=791; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-150-d20181112-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-150 d20181112-s10-r4-w07: nextEpoch=720; raw_ack_count=719; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-150-d20181112-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-150 d20181113-s10-r1-w07: nextEpoch=609; raw_ack_count=608; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-150-d20181113-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-150 d20181113-s10-r2-w07: nextEpoch=567; raw_ack_count=566; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-150-d20181113-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-150 d20181113-s10-r3-w07: nextEpoch=686; raw_ack_count=685; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-150-d20181113-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-150 d20181113-s10-r4-w07: nextEpoch=754; raw_ack_count=753; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-150-d20181113-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-180 d20181112-s10-r1-w07: nextEpoch=736; raw_ack_count=735; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-180-d20181112-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-180 d20181112-s10-r2-w07: nextEpoch=689; raw_ack_count=688; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-180-d20181112-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-180 d20181112-s10-r3-w07: nextEpoch=792; raw_ack_count=791; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-180-d20181112-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-180 d20181112-s10-r4-w07: nextEpoch=720; raw_ack_count=719; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-180-d20181112-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-180 d20181113-s10-r1-w07: nextEpoch=609; raw_ack_count=608; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-180-d20181113-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-180 d20181113-s10-r2-w07: nextEpoch=567; raw_ack_count=566; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-180-d20181113-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-180 d20181113-s10-r3-w07: nextEpoch=686; raw_ack_count=685; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-180-d20181113-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-180 d20181113-s10-r4-w07: nextEpoch=754; raw_ack_count=753; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-180-d20181113-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-240 d20181112-s10-r1-w07: nextEpoch=736; raw_ack_count=735; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-240-d20181112-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-240 d20181112-s10-r2-w07: nextEpoch=689; raw_ack_count=688; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-240-d20181112-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-240 d20181112-s10-r3-w07: nextEpoch=792; raw_ack_count=791; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-240-d20181112-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-240 d20181112-s10-r4-w07: nextEpoch=720; raw_ack_count=719; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-240-d20181112-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-240 d20181113-s10-r1-w07: nextEpoch=604; raw_ack_count=603; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-240-d20181113-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-240 d20181113-s10-r2-w07: nextEpoch=567; raw_ack_count=566; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-240-d20181113-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-240 d20181113-s10-r3-w07: nextEpoch=686; raw_ack_count=685; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-240-d20181113-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-240 d20181113-s10-r4-w07: nextEpoch=754; raw_ack_count=753; summary_status=pass; source=C:\RideBoundData\research\tier3-w07x-v1\C-240-d20181113-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-300 d20181112-s10-r1-w07: nextEpoch=736; raw_ack_count=735; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-300-d20181112-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-300 d20181112-s10-r2-w07: nextEpoch=689; raw_ack_count=688; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-300-d20181112-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-300 d20181112-s10-r3-w07: nextEpoch=792; raw_ack_count=791; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-300-d20181112-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-300 d20181112-s10-r4-w07: nextEpoch=720; raw_ack_count=719; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-300-d20181112-s10-r4-w07\run-00.json
+SEMANTIC_ROW C-300 d20181113-s10-r1-w07: nextEpoch=604; raw_ack_count=603; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-300-d20181113-s10-r1-w07\run-00.json
+SEMANTIC_ROW C-300 d20181113-s10-r2-w07: nextEpoch=567; raw_ack_count=566; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-300-d20181113-s10-r2-w07\run-00.json
+SEMANTIC_ROW C-300 d20181113-s10-r3-w07: nextEpoch=686; raw_ack_count=685; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-300-d20181113-s10-r3-w07\run-00.json
+SEMANTIC_ROW C-300 d20181113-s10-r4-w07: nextEpoch=754; raw_ack_count=753; summary_status=pass; source=C:\RideBoundData\research\tier3-w07-v1\C-300-d20181113-s10-r4-w07\run-00.json
+ARM_TOTAL C-30 {"acked": 5510, "forced": 0, "runs": 8}
+ARM_TOTAL C-60 {"acked": 5515, "forced": 0, "runs": 8}
+ARM_TOTAL C-90 {"acked": 5530, "forced": 0, "runs": 8}
+ARM_TOTAL C-120 {"acked": 5545, "forced": 0, "runs": 8}
+ARM_TOTAL C-150 {"acked": 5545, "forced": 0, "runs": 8}
+ARM_TOTAL C-180 {"acked": 5545, "forced": 0, "runs": 8}
+ARM_TOTAL C-240 {"acked": 5540, "forced": 0, "runs": 8}
+ARM_TOTAL C-300 {"acked": 5540, "forced": 0, "runs": 8}
+CONFIRM_CHECK PASS: all 64 saved semantic epoch counts independently agree with raw acknowledged counts; denominator 44,270 confirmed.

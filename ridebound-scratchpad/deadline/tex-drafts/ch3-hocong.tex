@@ -1,0 +1,219 @@
+\subsection{Khung so sánh bốn họ cổng}
+\label{muc:hocong}
+
+Ba định lý trên so hai cơ sở tính của \emph{cùng một} cơ chế. Các công trình gần nhất lại dùng
+những ràng buộc lời hứa có hình thức khác: Schulz và Pfeiffer \cite{schulz2026} đặt một hạn chót
+tính từ lời hứa đầu tiên; một cửa sổ quanh lời hứa đầu gần với ``hộp tĩnh'' gồm cửa sổ thời gian
+và thời gian đi tối đa của Sharif Azadeh và cộng sự \cite{sharifazadeh2022}. Mục này đặt tất cả
+vào cùng một khung để so được, và rút ra kết quả trung tâm của chương.
+
+\paragraph{Đại lượng có dấu và đại lượng cộng dồn.} Xét một hành khách và tọa độ giờ trả. Tại mỗi
+lần công bố $t$ đặt
+\begin{equation}
+x_t = e_t - v_t, \qquad c_t = p_t - e_t, \qquad z_t = p_t - v_t,
+\end{equation}
+khi đó $d_t = |x_t|$, $A_t = |c_t|$, $B_t = |z_t|$, và đồng nhất \emph{có dấu} $z_t = x_t + c_t$
+luôn đúng --- bất đẳng thức \eqref{eq:phanra} chỉ xuất hiện khi lấy trị tuyệt đối. Gọi $p_0$ là
+lời hứa \emph{đầu tiên} của hành khách. Cộng dồn trên cùng lưới công bố:
+\begin{equation}
+C = \sum_t A_t, \quad X = \sum_t d_t, \quad V = \sum_t B_t, \quad
+M = \max_t |p_t - p_0|, \quad M^{+} = \max_t \max(0,\, p_t - p_0).
+\end{equation}
+$M^{+}$ là phần \emph{muộn} cực đại so với lời hứa đầu --- đúng đại lượng mà một hạn chót kiểu
+Schulz--Pfeiffer chặn.
+
+\begin{menhde}[Chuỗi đại lượng]
+\label{md:chuoi}
+Nếu chuỗi công bố liên tục, tức mỗi lần công bố so với lần ngay trước nó ($v_t = p_{t-1}$), thì
+\[
+\max(0,\, p_T - p_0) \;\le\; M^{+} \;\le\; M \;\le\; V \;\le\; C + X .
+\]
+\end{menhde}
+
+\begin{proof}
+Bất đẳng thức đầu và thứ hai là $\max(0,\cdot) \le |\cdot|$ lấy cực đại trên tiền tố. Với chuỗi
+liên tục, $p_t - p_0 = \sum_{s \le t} z_s$, nên $|p_t - p_0| \le \sum_{s \le t} |z_s| \le V$.
+Cuối cùng $|z_t| \le |c_t| + |x_t|$ ở từng lần công bố, cộng dồn lại được $V \le C + X$.
+\end{proof}
+
+Bản thân chuỗi bất đẳng thức này là kiến thức cơ bản, \emph{không} phải đóng góp; nó chỉ là công
+cụ cho định lý dưới đây.
+
+\paragraph{Bốn họ cổng.} Bảng \ref{bang:hocong} xếp bốn cách ràng buộc lời hứa theo đại lượng mà
+chúng kiểm ở mỗi lần công bố.
+
+\begin{table}[htbp]
+\centering
+\caption{Bốn họ cổng cam kết với trần $\kappa$}
+\label{bang:hocong}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Họ} & \textbf{Kiểm ở mỗi lần công bố} & \textbf{Tên gọi} & \textbf{Ví dụ}\\
+\midrule
+$C$ & $\sum_t A_t \le \kappa$ & theo hành vi & cơ sở hành vi của khóa luận\\
+$M^{+}$ & $p_t - p_0 \le \kappa$ & hạn chót một chiều & Schulz và Pfeiffer \cite{schulz2026}\\
+$M$ & $|p_t - p_0| \le \kappa$ & hạn chót hai chiều & cửa sổ quanh lời hứa đầu\\
+$V$ & $\sum_t B_t \le \kappa$ & theo kết quả & cơ sở kết quả của khóa luận\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Phạm vi của định lý và giả thiết (N).} Định lý dưới đây chỉ nói về \emph{phần cam kết}
+của bộ lọc. Tập phương án của một xe vẫn có thể rỗng, hoặc lần chạy vẫn có thể dừng, vì những ràng
+buộc \emph{không} thuộc cơ chế cam kết: cấu trúc lộ trình, sức chứa, và nhất là bất biến vòng đời
+khi xe đón muộn thật. Điều này đã xảy ra: dưới trôi dạt đo thật của cao điểm sáng (mục
+\ref{muc:troidat}), chính cơ sở hành vi với trần 30 giây dừng ở 11 trên 20 ô, và cả 11 lần dừng
+đều do bất biến cửa sổ đón của tầng miền (mục \ref{muc:batbien}) chứ không do cam kết. Cơ chế cụ
+thể: bộ sinh phương án miễn kiểm cửa sổ dịch vụ \emph{chỉ} cho phương án không làm gì
+(\texttt{ServiceQualityAllowance}; mọi phương án có thay đổi đều bị kiểm chặt), nên phương án này
+không bị loại vì cửa sổ; lần chạy dừng muộn hơn, khi xe thật sự tới điểm đón sau giờ đón muộn nhất
+và thao tác lên xe bị tầng miền từ chối (\texttt{RideRequest.Board}). Gọi \textbf{(N)} là giả
+thiết: \emph{tại kỷ nguyên đang xét, phương án không làm gì của xe đã qua mọi kiểm tra không thuộc
+cam kết.}
+
+\paragraph{Quỹ đạo dự phòng.} Xét quỹ đạo mà ở mọi kỷ nguyên xe giữ nguyên tuyến. Trên đó
+$p_t = e_t$, nên $c_t = 0$ với mọi $t$, và
+\[
+C_{\text{noop}} = 0, \qquad z_t = x_t, \qquad V_{\text{noop}} = X .
+\]
+
+\begin{dinhly}[Thứ tự khả thi của các họ cổng]
+\label{dl:hocong}
+Giả sử (N). Xét một hành khách.
+\begin{enumerate}[label=(\alph*),leftmargin=1cm,itemsep=2pt,topsep=3pt]
+\item \emph{Mọi quỹ đạo.} Với mọi $\kappa \ge 0$ và trên mọi quỹ đạo, cổng $C$ không bao giờ loại
+phương án không làm gì. Do đó cổng hành vi \emph{không bao giờ là nguyên nhân} làm rỗng tập phương
+án của một xe.
+\item \emph{Quỹ đạo dự phòng.} Trên quỹ đạo dự phòng với chuỗi công bố liên tục, ngưỡng nhỏ nhất
+bảo đảm phương án không làm gì không bị loại ở mọi kỷ nguyên là
+\[
+\kappa^{*}_{C} = 0 \;\le\; \kappa^{*}_{M^{+}} = M^{+}_{\text{noop}} \;\le\;
+\kappa^{*}_{M} = M_{\text{noop}} \;\le\; \kappa^{*}_{V} = X ,
+\]
+tức ba họ còn lại có thể loại phương án không làm gì, và ngưỡng an toàn của chúng tăng theo độ
+trôi dạt.
+\end{enumerate}
+\end{dinhly}
+
+\begin{proof}
+(a) Sổ cái trước kỷ nguyên $t$ thỏa $C_{t-1} \le \kappa$ vì lần công bố trước đã qua cổng. Phương
+án không làm gì có $c_t = 0$ nên $C_t = C_{t-1} \le \kappa$: cổng không loại nó, và theo (N) nó
+cũng qua mọi kiểm tra khác, nên tập phương án không bị làm rỗng \emph{vì cổng}. (b) Phương án không
+làm gì bị loại ngay tại lần công bố đầu tiên mà đại lượng được kiểm vượt $\kappa$, nên ngưỡng nhỏ
+nhất đúng bằng giá trị lớn nhất của đại lượng đó dọc quỹ đạo dự phòng (với $V$ là giá trị cuối, vì
+$V$ cộng dồn đơn điệu). Thứ tự giữa các ngưỡng là Mệnh đề \ref{md:chuoi} áp cho quỹ đạo có
+$C = 0$; bước $M \le V$ cần chuỗi công bố liên tục.
+\end{proof}
+
+Phần (a) chính là Định lý \ref{dl:hanhvi} phát biểu lại trong khung chung; phần mới là việc đặt ba họ còn lại
+--- trong đó có cơ chế của văn liệu --- vào cùng thước so. Chứng minh là \emph{sơ cấp}, và khóa
+luận nói thẳng như vậy: giá trị của định lý không nằm ở độ khó mà ở hai chỗ --- đặt các họ cổng
+trong văn liệu vào một khung để so được, và kiểm chứng rằng ranh giới nó vạch ra đúng với hệ thật.
+
+Câu phát biểu chính xác là: \emph{cổng hành vi không bao giờ là nguyên nhân khiến tập phương án
+rỗng}. Câu ``hệ thống dùng cổng hành vi không bao giờ kẹt'' là \emph{sai} --- 11 trên 20 ô ở trên
+là phản ví dụ.
+
+\begin{hequa}[Khi thời gian đi tất định]
+\label{hq:tatdinh}
+Nếu thời điểm tới của tuyến giữ nguyên không trôi --- thời gian di chuyển và thời gian thực thi
+đều tất định --- thì $x_t \equiv 0$, do đó $M^{+}_{\text{noop}} = M_{\text{noop}} = X = 0$ và cả
+bốn họ đều không bao giờ loại phương án không làm gì, với mọi $\kappa \ge 0$.
+\end{hequa}
+
+Trong mô hình của Schulz và Pfeiffer, thời gian đi giữa hai điểm dừng là một giá trị cố định cho
+mỗi cặp (mục 3.1 của bài), và bài khẳng định khách đã được nhận thì không bao giờ bị từ chối về
+sau. Hệ quả \ref{hq:tatdinh} nhất quán với điều đó: trong một mô hình thời gian đi tất định, hạn
+chót tính từ lời hứa đầu không thể tự nó làm rỗng tập phương án. Tính vô nghiệm chỉ xuất hiện khi
+lời hứa của tuyến giữ nguyên bị trôi --- điều nằm ngoài mô hình của họ.
+
+\begin{hequa}[Phụ thuộc chiều trôi]
+\label{hq:chieutroi}
+Trên quỹ đạo dự phòng với chuỗi công bố liên tục, $p_t - p_0 = \sum_{s \le t} x_s$, nên
+\[
+M^{+}_{\text{noop}} = \max_t \Big(\sum_{s \le t} x_s\Big)^{+}, \qquad
+M_{\text{noop}} = \max_t \Big|\sum_{s \le t} x_s\Big|, \qquad
+V_{\text{noop}} = \sum_t |x_t| .
+\]
+Nếu trôi \emph{bất lợi} (mọi $x_s \ge 0$, tắc đường tăng) thì
+$M^{+}_{\text{noop}} = M_{\text{noop}} = V_{\text{noop}}$: ba họ $M^{+}$, $M$, $V$ cùng vô nghiệm ở
+cùng một ngưỡng. Nếu trôi \emph{thuận lợi} (mọi $x_s \le 0$, tắc đường giảm) thì
+$M^{+}_{\text{noop}} = 0$: hạn chót một chiều an toàn với mọi $\kappa$, trong khi
+$M_{\text{noop}} = V_{\text{noop}}$ vẫn có thể lớn, nên hạn chót hai chiều và cổng kết quả vẫn có
+thể vô nghiệm. Cổng hành vi an toàn ở cả hai chiều.
+\end{hequa}
+
+Hệ quả này là chỗ làm cho định lý \emph{kiểm được} chứ không chỉ đúng. Một nhận định thô kiểu
+``hạn chót hỏng khi có trôi dạt'' không phân biệt được hai chiều; Định lý \ref{dl:hocong} cùng Hệ
+quả \ref{hq:chieutroi} đoán \emph{họ nào} hỏng theo \emph{chiều} trôi. Trên hệ thật $x_s$ không
+thuần một dấu --- nó còn gồm tiến độ thực và độ trễ thực thi của xe --- nên các đẳng thức trên chỉ
+đúng gần đúng, và mọi dự đoán phải tính từ quỹ đạo đo được của từng khách chứ không từ công thức.
+
+Hệ quả cũng có một mặt trái phải được báo cáo. Dưới hạn chót một chiều và trôi thuận lợi, một
+phương án chèn khách làm lời hứa muộn đi ($c_t > 0$) vẫn qua cổng khi $e_t - p_0$ đủ âm --- tức nhà
+điều hành được \emph{tiêu phần trôi thuận lợi} để dời khách, trong khi cổng hành vi tính đủ $c_t$.
+Vì vậy trong những khung giờ tắc đường giảm, hạn chót một chiều có thể phục vụ nhiều khách hơn trần
+hành vi cùng mức, đổi lại khách thấy lời hứa đi sớm rồi muộn lại. Đây là một đánh đổi thật giữa hai
+họ, không phải một ưu thế một chiều.
+
+\subsection{Khi nào chặn theo chuỗi khác chặn hai đầu}
+\label{muc:dondieu}
+
+\begin{menhde}[Bộ sinh chèn thuần]
+\label{md:dondieu}
+Xét một chuỗi công bố liên tục. Nếu mọi phương án được chọn đều có $p \ge e$ với mọi hành khách
+cũ, tức $c_t \ge 0$ ở mọi lần công bố, thì $C = \sum_t c_t$. Nếu thêm $x_t \equiv 0$ thì
+$C = V = p_T - p_0 = M^{+} = M$: trần theo chuỗi, trần theo hai đầu và trần theo hành vi là một.
+\end{menhde}
+
+\begin{proof}
+$c_t \ge 0$ cho $A_t = c_t$. Khi $x_t \equiv 0$ thì $z_t = c_t \ge 0$; với chuỗi liên tục
+$p_t - p_0 = \sum_{s \le t} z_s$, nên $p_t$ đơn điệu không giảm, $p_T - p_0 = \sum_t z_t = V = C$,
+và cực đại của $p_t - p_0$ đạt ở lần công bố cuối.
+\end{proof}
+
+Giả thiết của mệnh đề đúng trên hệ này ở mức đo được: dấu của $p - e$ dương ở cả $479$ lần công bố
+có $A > 0$ của B1 (mục \ref{muc:phanra}), vì bộ sinh chỉ chèn thêm. Trên panel tĩnh, số khách vượt
+một ngưỡng tính theo hai đầu và tính theo thành phần hành vi khác nhau không quá một khách trên
+$1.735$ ở mọi ngưỡng 30, 60, 120, 300 giây. Hệ quả thực hành: phát biểu ``chặn tổng biến thiên mạnh
+hơn chặn hai đầu'' đúng về toán nhưng \emph{rỗng} trên hệ này; nó chỉ có hiệu lực khi bộ sinh có thể
+kéo lời hứa sớm lên, tức khi có sắp xếp lại. Khóa luận vì vậy \emph{không} dùng tổng biến thiên làm
+điểm phân biệt chính.
+
+\subsection{Các phản ví dụ}
+
+Bảng \ref{bang:phanvidu} gom các tình huống nhỏ minh họa ranh giới của từng đại lượng. Đơn vị là
+giây; năm dòng đầu là ví dụ dựng tay, dòng cuối là một lần công bố thật.
+
+\begin{table}[htbp]
+\centering
+\caption{Phản ví dụ cho các đại lượng của khung bốn họ cổng}
+\label{bang:phanvidu}
+\small
+\begin{tabular}{@{}llp{6.4cm}@{}}
+\toprule
+\textbf{Tình huống} & \textbf{Kết quả} & \textbf{Minh họa điều gì}\\
+\midrule
+$v = 600,\ e = 600,\ p = 660$ & $x = 0,\ c = 60,\ z = 60$ & Quyết định thuần gây dời.\\
+$v = 600,\ e = 660,\ p = 660$ & $x = 60,\ c = 0,\ z = 60$ & Giữ tuyến mà lời hứa vẫn xấu đi: trần
+hành vi \emph{không} chặn cái khách thấy.\\
+$v = 600,\ e = 720,\ p = 600$ & $C = 120,\ V = 0$ & Sửa để giữ lời hứa bị trần hành vi phạt; chưa
+từng xảy ra trên panel ($0/479$).\\
+$p_0 = 600$; công bố $660$, $600$ & $E = 0,\ V = 120$ & Thước hai đầu mù với dao động.\\
+$p_0 = 600$; công bố $660$, $720$ & $E = 120,\ V = 120$ & Đơn điệu thì chuỗi bằng hai đầu.\\
+Ca thật (dưới) & $A = 90{,}244;\ d = 0{,}690;\ B = 89{,}554$ & Trôi thuận chiều hấp thụ một phần
+cú đẩy; hụt đúng $2d = 1{,}380$.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Dòng cuối là một lần công bố thật ở ô 14-r1 của nhánh B1, lúc thời điểm mô phỏng 00:06:36:
+$v = $ 00:15:09,943, $e = $ 00:15:09,253 và $p = $ 00:16:39,497 (giờ:phút:giây mô phỏng). Tuyến giữ
+nguyên đã sớm hơn lời hứa $0{,}690$ giây, rồi quyết định đẩy giờ trả muộn thêm $90{,}244$ giây;
+khách chỉ thấy $89{,}554$ giây. Đây cũng là một lần (H) hỏng ($A > B$), đúng loại ghi nhận ở bảng
+\ref{bang:dieukien-h}.
+
+Các kiểm chứng thực nghiệm của khung này nằm ở mục \ref{muc:troidat}, \ref{muc:haunghiem} và
+\ref{muc:hoito}. Ở thời điểm viết, chúng là \emph{chứng minh kèm giải thích hậu nghiệm} trên dữ
+liệu có sẵn, chưa phải thí nghiệm xác nhận có tiền đăng ký.

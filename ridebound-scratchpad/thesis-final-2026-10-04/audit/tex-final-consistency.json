@@ -1,0 +1,211 @@
+{
+ "fileCount": 19,
+ "labels": 40,
+ "references": 46,
+ "missingLabels": [],
+ "duplicateLabels": [],
+ "unusedLabels": [],
+ "citedKeys": [
+  "ackermann2025",
+  "alonsogonzalez2020",
+  "alonsomora2017",
+  "angelopoulos2023",
+  "bansal2019",
+  "cordeau2007",
+  "elmi2026",
+  "fielbaum2020",
+  "fielbaum2022scale",
+  "fleetpy2022",
+  "fleetpy2026",
+  "fleetpydata2025",
+  "gerzinic2023",
+  "haferkamp2024",
+  "kovacs2014",
+  "schmidt2026",
+  "schulz2026",
+  "sharifazadeh2022",
+  "sivagnanam2026",
+  "sridharan1987",
+  "sridharan1988",
+  "tellez2022",
+  "tlc",
+  "wang2026walking"
+ ],
+ "bibliographyCount": 24,
+ "missingCitations": [],
+ "uncitedBibliography": [],
+ "duplicateBibitems": [],
+ "displayCalls": [
+  {
+   "file": "noi-dung\\04-viet-tat.tex",
+   "type": "longtable",
+   "labels": [],
+   "called": false
+  },
+  {
+   "file": "noi-dung\\04-viet-tat.tex",
+   "type": "longtable",
+   "labels": [],
+   "called": false
+  },
+  {
+   "file": "noi-dung\\06-chuong2.tex",
+   "type": "table",
+   "labels": [
+    "bang:ranhgioivanlieu"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\07-chuong3.tex",
+   "type": "figure",
+   "labels": [
+    "hinh:bamoc"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\07-chuong3.tex",
+   "type": "table",
+   "labels": [
+    "bang:hocong"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\07-chuong3.tex",
+   "type": "table",
+   "labels": [
+    "bang:kientruc"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-cauhinh.tex",
+   "type": "table",
+   "labels": [
+    "bang:thamso"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-cauhinh.tex",
+   "type": "table",
+   "labels": [
+    "bang:phienban"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-kiemtra-phu.tex",
+   "type": "table",
+   "labels": [
+    "bang:kiemtra-thuocdo"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-kiemtra-phu.tex",
+   "type": "table",
+   "labels": [
+    "bang:kiemtra-hai-dau"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-kiemtra-phu.tex",
+   "type": "table",
+   "labels": [
+    "bang:kiemtra-am"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-nguon-ketqua.tex",
+   "type": "table",
+   "labels": [
+    "bang:nguonketqua"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-t38.tex",
+   "type": "table",
+   "labels": [
+    "bang:t38-phucvu"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-t38.tex",
+   "type": "figure",
+   "labels": [
+    "hinh:t38-cap"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-t38.tex",
+   "type": "figure",
+   "labels": [
+    "hinh:t38-diem"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-thietlap-va-h6.tex",
+   "type": "table",
+   "labels": [
+    "bang:lotrinh"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-thietlap-va-h6.tex",
+   "type": "table",
+   "labels": [
+    "bang:quytrach"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-thietlap-va-h6.tex",
+   "type": "table",
+   "labels": [
+    "bang:thang1"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-thietlap-va-h6.tex",
+   "type": "figure",
+   "labels": [
+    "hinh:ngansach"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-trongdiem-troidat.tex",
+   "type": "figure",
+   "labels": [
+    "hinh:cong-troidat"
+   ],
+   "called": true
+  },
+  {
+   "file": "noi-dung\\08-trongdiem-troidat.tex",
+   "type": "table",
+   "labels": [
+    "bang:w07x"
+   ],
+   "called": true
+  }
+ ],
+ "unresolvedLiteralLocations": [],
+ "mainTypography": {
+  "\\setmainfont{Times New Roman}": true,
+  "\\onehalfspacing": true,
+  "\\geometry{a4paper,left=3cm,right=2cm,top=2cm,bottom=2cm}": true,
+  "\\usepackage[fontsize=13pt]{fontsize}": true
+ }
+}

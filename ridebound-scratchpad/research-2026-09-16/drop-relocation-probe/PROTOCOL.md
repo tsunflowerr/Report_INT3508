@@ -1,0 +1,15 @@
+# Bounded same-state stop-relocation feasibility audit
+
+Declared before execution,2026-09-18. Input: all16rejected states from `retained-states-e1-rejected-r1`, exactly captured through original E1 Runner. No policies, repository code, source data or original artifacts are changed.
+
+Question: does relocating one incumbent dropoff, including an onboard rider's dropoff, then inserting the pending request create a valid acceptance that ordinary insertion and waiting-pair repair did not find?
+
+For every vehicle, retain the unchanged incumbent order as control, then remove/reinsert one mutable incumbent dropoff at every position. Insert the pending pickup/drop pair at all precedence-preserving positions. Preserve the original exact frozen prefix and complete leading same-node block; keep all existing stop fields, assignment and request lifecycle. Deduplicate exact stop orders. Core physical validator and full commitment validator are the original versioned E1 assemblies. This external enumerator proposes bounded audit routes only; it is not a new simulator/dispatcher and produces no closed-loop outcomes.
+
+No early stop on the first positive. Record complete counts, first physical/hard rejection witnesses, accepted route/schedule, moved request lifecycle and source hashes. Full contract must pass for any positive. Reproduce ordinary-insertion eligible accepting count as a control. Zero positives rejects this particular immediate rescue neighborhood on these states; it does not prove global infeasibility. Any positive only authorizes investigation of active-leg conformance and an efficient search mechanism, not a service-gain or novelty claim. Generic stop relocation is known routing local search.
+
+## Follow-up declared after negative single-drop audit, before all-orders run
+
+The single-drop audit found zero valid acceptances in16states. Inspection of before-state suffix lengths found a maximum of4stops. Run a separate `all-orders` audit enumerating every incumbent mutable-suffix permutation, then all pickup/drop positions. Hard bound6incumbent stops fails explicitly above the bound. Verify exact route count per vehicle as `n!*(n+1)*(n+2)/2`; no silent omissions or early positive stopping. Controls and the same frozen-prefix/head-block/assignment/earliest-schedule constraints remain. This can establish absence within this explicit finite route/schedule family, not general DARP infeasibility, arbitrary waiting-time optimization, active-leg equivalence or closed-loop impossibility. Preserve the single-drop output separately.
+
+The all-orders screened run was also negative. A further separate `audit-head` run evaluates even the routes removed by the conservative head-block screen, retaining a `preservesHead` flag for every valid route. This resolves whether the added conservative screen itself concealed a core-valid acceptance. It does not relax the core's frozen prefix, policy, physical constraints or validator, and never applies any route in FleetPy. A positive with `preservesHead=false` requires separate adapter/execution analysis; it is not an executable rescue claim.

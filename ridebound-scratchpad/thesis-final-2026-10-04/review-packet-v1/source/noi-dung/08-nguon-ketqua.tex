@@ -1,0 +1,62 @@
+\section{Nguồn kết quả và cách tái tính}
+
+
+Các bảng trong chương này được rút từ kết quả đã có; lần biên tập không chạy
+thêm thí nghiệm để thay một kết quả bất lợi. Bảng~\ref{bang:nguonketqua} chỉ
+rõ hồ sơ và tệp phân tích cho ba lớp bằng chứng trung tâm. Tên tệp được giữ
+để có thể tìm đúng nguồn trong gói nghiên cứu, thay vì chỉ tìm một bảng đã
+làm tròn trong PDF.
+
+\begin{table}[htbp]
+\centering
+\caption{Hồ sơ truy nguồn cho kết quả trung tâm. Các tệp kiểm lại là phân tích
+đọc dữ liệu đã ghi, không phải bộ chạy mô phỏng khác.}
+\label{bang:nguonketqua}
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\linewidth}{@{}p{2cm}XX@{}}
+\toprule
+\textbf{Nhóm} & \textbf{Hồ sơ kết quả hoặc kế hoạch} & \textbf{Tệp phân tích và đối chiếu}\\
+\midrule
+H6 chính & \path{wp9-confirmatory-result-2026-08-23.md}; biên bản từng ô B1/C1 &
+\path{recheck_h6_frontier.py}; \path{h6-raw-movement-recheck.json}\\[4pt]
+Thang trần & Biên bản từng ô trong \path{frontier-v1}; kết quả hai cửa sổ &
+\path{recheck_wide_service.py}; \path{service-budget-per-cell.csv}\\[4pt]
+Tầng 2 & \path{PREREGISTRATION.md}; \path{predictions.csv}; kết quả phân loại cuối &
+\path{classify.py}; \path{tier2-recomputed-report.txt}\\[4pt]
+W07, W07X & \path{W07-REPORT.md}; \path{W07X-PLAN.md}; \path{W07X-REPORT.md} &
+\path{w07x_analyze.py}; \path{w07x_mechanism.py}\\[4pt]
+T38 & \path{T38-PLAN.md}; \path{split-t38-v1.json}; \path{GAMMA-t38-v1.json} &
+\path{recheck_t38.py}; \path{check_trip_overlap.py}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Một lần chạy cần được ghim vào đầu vào chuẩn hóa, cấu hình chính sách, phiên
+bản runner và phiên bản adapter. Mã nguồn nhánh nghiên cứu được đọc tại
+commit \texttt{24aa747}; đây là mốc của hồ sơ nghiên cứu mới nhất dùng trong
+khóa luận, không thay thế các bản ghim riêng của H6 và tầng 2. Các kết quả
+cũ vẫn gắn với runner cũ. Không xây lại runner đã đóng băng rồi dùng cùng
+tên để đọc kết quả của một phiên bản khác.
+
+Với H6, dữ liệu gốc nằm trong các cây kết quả
+\path{wp9/confirmatory-h6-panela-v2} và \path{wp9/frontier-v1}. Mỗi ô giữ
+\path{transcript-00.ndjson} và \path{run-00.json}. Cần đọc lịch sử lời hứa
+ở điểm kiểm tra cuối, giữ nguyên các số mili giây, rồi cộng đúng tọa độ
+còn mở. Tỉ số trung tâm là tỉ số \emph{hai tổng trên toàn panel}; lấy trung
+bình các tỉ số từng khách sẽ trả lời một câu hỏi khác.
+
+Với T38, cây \path{research/tier3-t38-v1} giữ cả các lần lỗi hạ tầng. Phép
+tính dùng đúng 15 lần hiệu chỉnh và 170 lần kiểm tra hoàn tất đã chỉ định,
+không cộng lần thử lại vào cỡ mẫu. Kiểm giao nhau phải nối
+\path{selection-frame.json} qua \path{normalizer-configuration.json} tới
+CSV nguồn, rồi dùng định danh chuyến gốc. Băm của tệp chia, các CSV nguồn
+và danh sách chuyến giao nhau được giữ trong
+\path{t38-actual-trip-id-overlap.json}.
+
+Các hình được sinh bằng cùng các CSV/JSON đã kiểm, xuất PDF và SVG vector.
+Tệp \path{build_verified_figures.py} dựng bốn hình kết quả;
+\path{mechanism_figure.py} dựng ví dụ ba mốc và không được dùng như dữ
+liệu thực nghiệm. Gói biên tập giữ mã phân tích, bảng từng ô và hồ sơ kiểm
+trong thư mục \path{audit}. Tính lại một con số từ cùng biên bản kiểm phép
+trích xuất; nó không tạo thêm một mẫu thực nghiệm độc lập.

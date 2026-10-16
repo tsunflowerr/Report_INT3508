@@ -1,0 +1,91 @@
+{
+  "main_whitespace_word_count": 1332,
+  "limit": 1500,
+  "checked_local_file_line_links": 92,
+  "link_errors": [],
+  "read_only_inputs_and_no_simulation": true,
+  "outputs_created_exclusively_in_codex_work": true,
+  "known_citation_corrections": "ROUND12-ERRATA-CODEX.md",
+  "files": [
+    {
+      "name": "ROUND12-ERRATA-CODEX.md",
+      "bytes": 1878,
+      "sha256": "fdf90eb8f20bc17e6cd06ff0c967455e24ace50fc14d0fdad5361f8d31034201"
+    },
+    {
+      "name": "round12-evidence-audit.json",
+      "bytes": 20171,
+      "sha256": "32d6fdbcf6762fe51c4c6d54d5d6cd493292ff72dd4d1798471b35d1b821fd1a"
+    },
+    {
+      "name": "round12-evidence-audit.py",
+      "bytes": 4804,
+      "sha256": "ba816e8f18ef555afea1651e04909e492253824a9bdc682f4d0b42bd12cd757c"
+    },
+    {
+      "name": "round12-evidence-audit.txt",
+      "bytes": 2641,
+      "sha256": "b6a03eb90f3a5168bcc7a8422f27a66ed39774778b27cbceab74769372388061"
+    },
+    {
+      "name": "round12-fact-anchors.json",
+      "bytes": 50,
+      "sha256": "76cc544354b88f45e3d4b18c54d0970b2f28b2af4eb75b43552c55110ad23cf2"
+    },
+    {
+      "name": "ROUND12-FACTS-CODEX.md",
+      "bytes": 15645,
+      "sha256": "0fba0c8208a67a04eddf623ea11e4d99f2d098d730fe6e680f9ebb83ac7ee924"
+    },
+    {
+      "name": "round12-protocol-anchors.json",
+      "bytes": 50,
+      "sha256": "eced9cb0c149ffd3b15448170d163dc505b869b5a27d19b9f8a810cf00ea4082"
+    },
+    {
+      "name": "ROUND12-REPLAY-PROTOCOL-CODEX.md",
+      "bytes": 9038,
+      "sha256": "c6b9f215cc543a68a20035ae053e027cb3ea6281cb01d7b4e9fb710cc2d0902d"
+    },
+    {
+      "name": "round12-snapshot-proxy-check.json",
+      "bytes": 2758,
+      "sha256": "4ac2cb3e22eca10821731778420acb3ee2a6f2ce4321058c4906d87b7910371f"
+    },
+    {
+      "name": "round12-snapshot-proxy-check.py",
+      "bytes": 2960,
+      "sha256": "6bcd518fdb0bdc38ec853155a9557bf29003bdb466c6633e73f3c319334b6093"
+    },
+    {
+      "name": "round12-snapshot-proxy-check.txt",
+      "bytes": 438,
+      "sha256": "ead3276b850dcdc684737d9615d200d70080d8a661cb299b4cc389d02fd73c5e"
+    },
+    {
+      "name": "round12-source-anchors-v2.json",
+      "bytes": 175,
+      "sha256": "934c015c1e779f13ce8bb1613c3c23a127113a1fd8bdeccb4d81b7eafbc7bdd8"
+    },
+    {
+      "name": "round12-source-anchors.json",
+      "bytes": 191,
+      "sha256": "389a623971ef19599032778e8fbb82ab46b1a67a0de28e7632a50446be15b233"
+    },
+    {
+      "name": "ROUND12-SOURCES-CODEX-v2.md",
+      "bytes": 5738,
+      "sha256": "efb6ad7611ebe35bd8a3e5cf20c82db570fbc2685f814c33174b1a6ff8716c87"
+    },
+    {
+      "name": "ROUND12-SOURCES-CODEX.md",
+      "bytes": 9212,
+      "sha256": "b5216d123e6cd5bd2681b5c86c83f785a50952d26cbc6ca8e7e58637db6b929c"
+    },
+    {
+      "name": "STRONG-BASELINE-CODEX.md",
+      "bytes": 12240,
+      "sha256": "1d604ef8c4433ecdfc10170c53d4a3d5eeb42ccb2fa42a5208d882ba8052fbc5"
+    }
+  ]
+}

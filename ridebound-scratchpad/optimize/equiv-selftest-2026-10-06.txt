@@ -1,0 +1,6 @@
+# compare_equivalence.py self-test on C-30-d20181112-s10-r1-w07 (vs U-d20181112-s10-r1-w07)
+identical copy judged equivalent: True
+one decision time +1 ms detected: True
+one alight time +1 ms detected: True
+positive control C-30-d20181112-s10-r1-w07 vs U-d20181112-s10-r1-w07 differs: True ({'decisions': 'lengths 718/735, first difference at index 284', 'table': 'lengths 5204/5470, first difference at index 98', 'served': 'lengths 87/90, first difference at index 6', 'alighted': '32 riders differ', 'frames': 'lengths 2161/2212, first difference at index 20'})
+SELFTEST PASS

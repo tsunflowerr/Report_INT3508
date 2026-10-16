@@ -1,0 +1,152 @@
+﻿\chapter{Đặt vấn đề}
+
+\section{Lời hứa trong điều phối đi chung xe}
+
+Đi chung xe theo yêu cầu (on-demand ride-pooling) ghép các yêu cầu có thể phục vụ chung vào
+cùng một phương tiện. Bộ điều phối phải cân bằng cơ hội nhận khách mới với thời gian chờ,
+thời gian trên xe và sức chứa. Một hướng giải tiêu biểu là sinh các nhóm khách khả thi rồi
+chọn phương án gán nhóm cho xe bằng quy hoạch nguyên \cite{alonsomora2017}. Khi yêu cầu xuất
+hiện liên tục, việc cập nhật kế hoạch là một phần của quá trình vận hành.
+
+Mỗi kế hoạch còn tạo ra thông tin gửi tới hành khách: xe nào đến đón, đón ở đâu và dự kiến
+đến điểm trả lúc nào. Chèn một khách mới có thể làm thay đổi thông tin đã công bố cho khách
+cũ. Giữ thời gian chờ dưới mười phút chưa đồng nghĩa với giữ một giờ đón đã báo trước đó.
+Hai kế hoạch cùng thỏa cửa sổ phục vụ có thể tạo ra những chuỗi cập nhật rất khác nhau đối
+với người đang chờ xe.
+
+Chẳng hạn, một hành khách nhận các giờ đón 9:10, 9:13 rồi 9:11. So giờ cuối với giờ đầu cho
+chênh lệch một phút; cộng độ lớn hai lần cập nhật cho bốn phút. Đây là hai câu hỏi khác nhau:
+khách cuối cùng đến muộn bao nhiêu, và dự báo đã thay đổi bao nhiêu trong quá trình chờ.
+Ví dụ chỉ minh họa cách đo; khóa luận không mặc định mỗi giây cập nhật có cùng tác động tới
+tâm lý hoặc chi phí của hành khách.
+
+Độ tin cậy của thông tin này đã được nghiên cứu. Fielbaum và Alonso-Mora
+\cite{fielbaum2020} đo những thay đổi so với thông báo ban đầu và thử các quy tắc hạn chế
+chúng. Các nghiên cứu lựa chọn dịch vụ cũng cho thấy hành khách quan tâm tới thời gian chờ
+ngoài dự kiến \cite{alonsogonzalez2020,gerzinic2023}. Vì vậy, phát hiện bất ổn hoặc yêu cầu
+giữ lời hứa tự nó không phải đóng góp mới của khóa luận.
+
+Vấn đề cụ thể ở đây là xác định một nghĩa vụ mà bộ điều phối kiểm được trước khi công bố
+kế hoạch, đồng thời nói rõ nghĩa vụ ấy còn có ý nghĩa gì khi thời gian đi thay đổi. Nếu xe
+chạy chậm hơn, dự báo có thể xấu đi ngay cả khi bộ điều phối giữ nguyên tuyến. Nếu toàn bộ
+thay đổi đó bị tính vào một ngân sách cứng, phương án giữ tuyến cũng có thể bị loại. Nếu chỉ
+tính phần thay đổi do lựa chọn kế hoạch, hệ thống giữ được ngân sách hành vi nhưng hành
+khách vẫn có thể nhìn thấy một độ trễ lớn hơn ngân sách ấy.
+
+\begin{khungy}
+Khóa luận nghiên cứu lời hứa dưới dạng một đại lượng được định nghĩa, ghi sổ và kiểm chứng
+trong mô hình điều phối. Câu hỏi trung tâm là: hệ thống đang giới hạn thay đổi do quyết định
+của mình, hay đang giới hạn toàn bộ thay đổi mà hành khách nhìn thấy?
+\end{khungy}
+
+\section{Khoảng trống và câu hỏi nghiên cứu}
+
+Các cơ chế gần nhất bảo vệ những đối tượng khác nhau. Có cơ chế siết thời gian chờ theo dự
+báo; có cơ chế giữ độ chùng cho từng hành khách; có cơ chế đặt hạn chót từ thông báo đầu
+tiên \cite{fielbaum2020,elmi2026,schulz2026}. Chúng đều có thể kiểm tra khi chọn phương án.
+Do đó, khoảng trống được xét không phải là sự thiếu vắng mọi ràng buộc lời hứa trong văn liệu.
+Khóa luận tập trung vào quan hệ giữa cơ sở ghi sổ, lịch sử cập nhật và tính khả thi dưới
+trôi dạt, trong cùng một hệ thống thực nghiệm.
+
+RideBound lưu lịch sử cam kết theo từng hành khách. Ở mỗi quyết định, hệ thống đối chiếu
+ba mốc: thông tin đã công bố, thông tin thu được khi giữ tuyến cũ trên trạng thái hiện tại,
+và thông tin của phương án mới. Đối chiếu này xác định phần thay đổi gắn với lựa chọn
+phương án ngay tại trạng thái đó. Nó là một phép phân rã trong mô hình, không phải ước
+lượng tác động nhân quả tổng thể của chính sách lên giao thông hoặc hành vi người dùng.
+
+Từ cách đặt vấn đề ấy, khóa luận trả lời ba câu hỏi:
+
+\begin{enumerate}[leftmargin=1.2cm,itemsep=5pt,topsep=4pt]
+\item \textbf{RQ1 --- Có thể cưỡng chế đại lượng nào?} Một sổ cái theo hành khách cần lưu
+những gì để kiểm ngân sách trước khi chấp nhận phương án, và chứng cứ quyết định xác nhận
+được điều gì?
+\item \textbf{RQ2 --- Chi phí dịch vụ là bao nhiêu?} Khi giữ cùng bộ sinh phương án và
+cùng đầu vào, giảm biến động lời hứa đánh đổi bao nhiêu yêu cầu được phục vụ? Kết luận thay
+đổi ra sao khi đổi mức ngân sách hoặc cách đo?
+\item \textbf{RQ3 --- Trôi dạt và phục hồi thay đổi lời hứa thế nào?} Các cổng theo hành vi,
+hạn chót và biến động nhìn thấy khác nhau ở khả năng giữ phương án giữ tuyến ra sao? Khi
+phải phục hồi sau vi phạm, số khách được phục vụ còn phản ánh mức giữ lời hứa đến đâu?
+\end{enumerate}
+
+RQ1 cần đối chiếu mô hình, mã nguồn và chứng cứ từng quyết định. RQ2 cần so sánh ghép cặp,
+vì hai chính sách có thể phục vụ những tập khách khác nhau. RQ3 cần tách trạng thái cổng
+cam kết loại phương án khỏi trạng thái phương án đã vi phạm cửa sổ đón hoặc một bất biến
+vật lý. Cách tách này ngăn việc quy mọi lần hệ thống dừng cho cơ chế lời hứa.
+
+\section{Mục tiêu và đóng góp}
+
+Mục tiêu của khóa luận là xây dựng một cơ chế cam kết có thể kiểm tra trong điều phối cuốn
+chiếu, rồi đánh giá cả lợi ích đo được và chi phí của nó. Phần phương pháp sử dụng tổng biến
+thiên của các cập nhật, thay vì chỉ lưu chênh lệch giữa thông báo đầu và cuối. Ngân sách áp
+theo từng hành khách và từng chiều cam kết; một mức trung bình thấp không thay thế được
+kiểm tra trần của người chịu thay đổi lớn nhất.
+
+Khóa luận có ba nhóm đóng góp, với mức độ khẳng định khác nhau.
+
+\paragraph{Cơ chế vận hành và khả năng kiểm chứng.}
+RideBound hiện thực phép đối chiếu ba mốc, sổ cái tích lũy, các khóa cam kết và bộ kiểm tra
+phương án. Chứng cứ quyết định ghi ngân sách trước và sau cùng các lý do chấp nhận hoặc
+từ chối. Đây là đóng góp về mô hình hóa và hiện thực hệ thống: cùng một runner được gọi từ
+các bộ chuyển đổi mô phỏng để giữ thống nhất ngữ nghĩa. Kiểm chứng ở đây xác nhận điều kiện
+trong mô hình và dữ liệu đầu vào, không chứng nhận mọi giờ đến thực tế của dịch vụ.
+
+\paragraph{Khung so sánh có giả thiết rõ ràng.}
+Khóa luận đặt bốn họ cổng vào cùng một khung: tổng phần do quyết định, hạn chót một chiều,
+độ lệch hai chiều từ thông báo đầu, và tổng biến động nhìn thấy. Kết quả lý thuyết chỉ ra
+điều kiện mà cổng hành vi giữ được phương án giữ tuyến và các chiều trôi dạt có thể làm
+những cổng khác loại phương án đó. Giá trị nằm ở việc phát biểu và kiểm tra ranh giới của
+từng nghĩa vụ. Chứng minh là sơ cấp; nó không bảo đảm rằng toàn bộ bài toán luôn có nghiệm
+khi cửa sổ đón hoặc những ràng buộc vật lý đã hỏng.
+
+\paragraph{Bằng chứng ghép cặp và kết quả âm.}
+Thực nghiệm đo sự đánh đổi giữa biến động lời hứa và tỉ lệ phục vụ, sau đó kiểm tra tác động
+của trôi dạt và hai luật phục hồi. Các kết quả về giảm biến động được báo cùng phần nhu cầu
+không được phục vụ. Những lần dự đoán sai, cổng bị ép phải miễn trừ, hoặc phép so sánh không
+đạt điều kiện đều được giữ lại. Phần đối chiếu thước đo và đường cong đánh đổi với nghiên
+cứu trước là tái lập độc lập; nó không được tính thành phát hiện mới về sự tồn tại của
+bất ổn hay về việc giữ lời hứa có chi phí.
+
+Ranh giới tính mới được giới hạn ở tổ hợp sổ cái theo hành khách, phụ thuộc lịch sử nhiều
+lần cập nhật, ngân sách nhiều chiều và chứng cứ có thể kiểm tra, cùng khung phân tích cơ sở
+ghi sổ dưới trôi dạt. Chèn động, cập nhật giờ đến, giới hạn ETA, tái phân công, tính nhất quán
+giờ phục vụ, nhiều kế hoạch và trì hoãn cam kết đều có tiền lệ. Khóa luận cũng chưa có bằng
+chứng trực tiếp về tăng mức hài lòng, tăng phúc lợi hoặc cải thiện hiệu quả vận hành tổng thể.
+Chương 2 đối chiếu các cơ chế gần nhất để giữ ranh giới này cụ thể.
+
+\section{Phạm vi nghiên cứu}
+
+Nhu cầu thực nghiệm được dẫn xuất từ dữ liệu chuyến taxi Manhattan, thông qua bộ dữ liệu
+FleetPy \cite{fleetpy2026}. Các ô chính lấy từ năm ngày 14--18/11/2018, với bốn mẫu nhu cầu mỗi ngày. Mỗi ô
+dùng 108 yêu cầu; cấu hình đội xe và cửa sổ phục vụ được khóa theo từng thí nghiệm.
+Đây là các mẫu nhỏ để so sánh có kiểm soát, không phải phát lại toàn bộ nhu cầu taxi
+Manhattan. Mạng dẫn xuất là bao đóng thời gian đi giữa 96 điểm chọn, có tọa độ tổng hợp;
+nó không phải bản đồ 96 nút của mạng đường phố thật.
+
+Thời gian đi được xét ở nhiều chế độ: giữ cố định, áp hệ số theo thời gian từ dữ liệu,
+hoặc thêm nhiễu có kiểm soát. Dữ liệu hệ số giao thông theo ngày là chuỗi dùng chung cho
+mạng, không mô tả từng cung đường và không tạo ra một bộ mô phỏng giao thông vi mô. Cụm
+``chỉ giao thông đo thật'' trong chương thực nghiệm chỉ chế độ không thêm nhiễu tổng hợp,
+vẫn trong mô hình mạng dẫn xuất này.
+
+Các kết quả được phân tầng theo cách thiết kế thí nghiệm. Panel chính dùng để đánh giá
+chi phí và kiểm chứng cơ học. Các panel phát triển dùng để tìm và giải thích trường hợp
+phân kỳ. Một phép kiểm tra cuối chia 49 ô hợp lệ thành 15 ô hiệu chỉnh và 34 ô kiểm tra,
+với ba khung giờ. Các ô này vẫn dùng những ngày đã xuất hiện trong nghiên cứu, và một số
+khung giờ chồng lấn nhu cầu. Tách hiệu chỉnh với kiểm tra giảm việc dùng cùng kết quả để
+chọn ngưỡng và đánh giá ngưỡng; nó chưa tạo ra bằng chứng độc lập ở quần thể, ở thành phố
+khác hoặc trên dữ liệu triển khai mới.
+
+Toàn bộ so sánh trong khóa luận là so sánh nội bộ giữa những cấu hình được nêu rõ. Cùng
+hạt giống giúp phát lại một lần chạy; nó không biến mọi hành khách hoặc mọi quyết định
+thành mẫu độc lập. Chương 4 ghi đơn vị phân tích, mẫu số và quy tắc ghép cặp của từng kết
+quả. Các con số tuyệt đối không được xếp hạng trực tiếp với nghiên cứu có đội xe lớn hơn,
+mạng khác hoặc mô hình lựa chọn khách khác.
+
+\section{Tổ chức khóa luận}
+
+Chương 2 trình bày bài toán điều phối và phân biệt các cơ chế đo, giới hạn và công bố lời
+hứa trong văn liệu. Chương 3 xây dựng ba mốc, sổ cái, bốn họ cổng, các giả thiết của kết quả
+lý thuyết và kiến trúc kiểm chứng. Chương 4 trả lời ba câu hỏi nghiên cứu bằng kết quả chính
+và những kiểm tra thăm dò cần thiết, với giới hạn đặt cạnh bằng chứng. Chương 5 tổng hợp
+điều đã xác lập, điều còn chưa được chứng minh và những bước tiếp theo có thể kiểm tra.
+

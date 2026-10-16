@@ -1,0 +1,120 @@
+\documentclass[13pt,a4paper,oneside]{report}
+
+%==================== THU VIEN ====================
+\usepackage{fontspec}
+\usepackage[fontsize=13pt]{fontsize}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{siunitx}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds}
+
+%==================== TRANG & FONT ====================
+\geometry{a4paper,left=3cm,right=2cm,top=2cm,bottom=2cm}
+\setmainfont{Times New Roman}
+\onehalfspacing
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{2pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 3pt}
+\setlength{\intextsep}{12pt plus 2pt minus 3pt}
+\setlength{\abovecaptionskip}{7pt}
+
+% tieng Viet khong ngat tu
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=2500
+\emergencystretch=3em
+
+\definecolor{xanhkv}{RGB}{16,54,110}
+\definecolor{xamnhat}{RGB}{242,244,247}
+\definecolor{xamvien}{RGB}{170,178,189}
+
+%==================== DE MUC KIEU CHUONG ====================
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\Large}
+  {\chaptertitlename\ \thechapter.}{6pt}{\Large}
+\titlespacing*{\chapter}{0pt}{-18pt}{22pt}
+\renewcommand{\chaptername}{Chương}
+
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{0.6em}{}
+\titlespacing*{\section}{0pt}{16pt}{8pt}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\titleformat{\subsubsection}{\normalfont\bfseries\itshape}{\thesubsubsection.}{0.5em}{}
+\titlespacing*{\subsubsection}{0pt}{10pt}{5pt}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+%==================== MUC LUC ====================
+\renewcommand{\contentsname}{Mục lục}
+\renewcommand{\listfigurename}{Danh sách hình vẽ}
+\renewcommand{\listtablename}{Danh sách bảng}
+\renewcommand{\cftchapfont}{\bfseries}
+\renewcommand{\cftchappresnum}{Chương }
+\renewcommand{\cftchapaftersnum}{.}
+\setlength{\cftchapnumwidth}{2.6cm}
+\setlength{\cftbeforechapskip}{6pt}
+
+%==================== CAPTION ====================
+\renewcommand{\figurename}{Hình}
+\renewcommand{\tablename}{Bảng}
+\captionsetup{font=small,labelfont=bf,labelsep=period,justification=centering}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+
+%==================== HEADER / FOOTER ====================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+%==================== MOI TRUONG DINH LY ====================
+\newtheorem{dinhly}{Định lý}[chapter]
+\newtheorem{hequa}[dinhly]{Hệ quả}
+\newtheorem{menhde}[dinhly]{Mệnh đề}
+\theoremstyle{definition}
+\newtheorem{dinhnghia}{Định nghĩa}[chapter]
+
+% khung ghi chu
+\newenvironment{khungy}
+  {\par\vspace{6pt}\begin{list}{}{\leftmargin=1cm \rightmargin=0.4cm}\item[]\itshape}
+  {\end{list}\vspace{4pt}}
+
+\begin{document}
+
+\input{noi-dung/00-bia}
+
+\pagenumbering{roman}
+\input{noi-dung/01-loi-cam-on}
+\input{noi-dung/02-tom-tat}
+\input{noi-dung/03-muc-luc}
+\input{noi-dung/04-viet-tat}
+
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{noi-dung/05-chuong1}
+\input{noi-dung/06-chuong2}
+\input{noi-dung/07-chuong3}
+\input{noi-dung/08-chuong4}
+\input{noi-dung/09-chuong5}
+\input{noi-dung/10-tai-lieu}
+
+\end{document}

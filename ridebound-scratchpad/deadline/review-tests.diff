@@ -1,0 +1,1177 @@
+diff --git a/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs b/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs
+index b08d92b..9825746 100644
+--- a/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs
++++ b/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs
+@@ -2,6 +2,7 @@ using RideBound.Algorithms.Candidates;
+ using RideBound.Algorithms.Commitments;
+ using RideBound.Algorithms.Policies;
+ using RideBound.Application.Commitments;
++using RideBound.Application.Optimization;
+ using RideBound.Application.State;
+ using RideBound.Application.Travel;
+ using RideBound.Domain.Commitments;
+@@ -662,6 +663,301 @@ public sealed class ExactSmallCommitmentDifferentialTests
+         Assert.Equal(0, assessed.Witness.GeneratedCandidateCount);
+     }
+ 
++    [Fact]
++    public void C1_reports_a_rejected_safety_no_op_that_leaves_other_candidates_alive()
++    {
++        // The no-op keeps the route, so its drop ETA is the baseline. The rider's
++        // initial promise is placed exactly one insertion's delay LATER than that,
++        // and a zero-slack two-sided deadline then rejects the no-op (too early)
++        // while the insertion that causes exactly that delay survives. Before the
++        // diagnostic change the solver-backed path died later with a generic
++        // mapping error.
++        var (generated, set, noOp, context) = NoOpRejectedWhileAnInsertionSurvives();
++
++        var assessed = new HardVectorCandidateAssessor().AssessAndFilter(
++            context,
++            generated.VehicleCandidates!,
++            requireSafetyNoOp: true);
++
++        Assert.False(assessed.IsSuccess);
++        var witness = assessed.Witness!;
++        Assert.Equal(CommitmentFailureCodes.SafetyNoOpRejected, witness.Code);
++        Assert.Equal(noOp.CandidateId, witness.CandidateId);
++        Assert.Equal(AlgorithmTestData.VehicleOne, witness.VehicleId);
++        Assert.Equal(CommitmentFailureCodes.DeadlineExceeded, witness.UnderlyingCode);
++        Assert.Equal(CreateState(seed: 3).IncumbentId, witness.RequestId);
++        Assert.Equal("drop_eta_ms", witness.Dimension);
++        Assert.Equal(set.Candidates.Count, witness.GeneratedCandidateCount);
++        Assert.True(witness.GeneratedCandidateCount > witness.RejectedCandidateCount);
++        Assert.StartsWith(
++            "C1 rejected the safety no-op while other candidates survived. No-op rejection: ",
++            witness.Message,
++            StringComparison.Ordinal);
++        Assert.EndsWith(
++            "outside the initial-promise window.",
++            witness.Message,
++            StringComparison.Ordinal);
++        Assert.DoesNotContain("firstCode=", witness.Message, StringComparison.Ordinal);
++    }
++
++    [Fact]
++    public void A_caller_that_does_not_require_the_no_op_keeps_the_surviving_candidates()
++    {
++        // The legacy policies select without a no-op, so for them the same state is
++        // not a failure: the assessor returns what survived, exactly as before.
++        var (generated, _, noOp, context) = NoOpRejectedWhileAnInsertionSurvives();
++
++        var assessed = new HardVectorCandidateAssessor().AssessAndFilter(
++            context,
++            generated.VehicleCandidates!);
++
++        Assert.True(assessed.IsSuccess, assessed.Witness?.Message);
++        var retained = assessed.Batch!.FeasibleCandidateSets.Single().Candidates;
++        Assert.NotEmpty(retained);
++        Assert.DoesNotContain(retained, value => value.CandidateId == noOp.CandidateId);
++    }
++
++    [Fact]
++    public void The_solver_backed_policy_reports_the_rejected_no_op_instead_of_a_mapping_error()
++    {
++        var (_, _, _, context) = NoOpRejectedWhileAnInsertionSurvives();
++        var solverBudget = DeterministicSolverBudget.Create(1000, 1000, 1).Value!;
++        var executionBudget = DeterministicCandidateSelectionExecutionBudget.Create(
++            100_000,
++            100_000,
++            solverBudget).Value!;
++
++        var result = new SolverBackedRidePoolingPolicy(new UnreachableSolver()).Decide(
++            context,
++            CandidateGenerationOptions.ExactSmall,
++            new SolverBackedRidePoolingPolicyOptions(
++                RidePoolingPolicyKind.RideBoundHardVector,
++                executionBudget));
++
++        Assert.False(result.IsSuccess);
++        Assert.Equal(
++            RollingCostFailureCodes.CommitmentAssessmentFailed,
++            result.Witness!.Code);
++        Assert.StartsWith(
++            "C1 rejected the safety no-op while other candidates survived. No-op rejection: ",
++            result.Witness.Message,
++            StringComparison.Ordinal);
++        Assert.DoesNotContain("exactly one no-op option", result.Witness.Message, StringComparison.Ordinal);
++    }
++
++    [Fact]
++    public void A_budget_rule_can_reject_the_no_op_while_an_insertion_survives()
++    {
++        // Under the customer-visible basis the kept route is charged for moving the
++        // drop ETA away from the published promise. The promise sits one insertion's
++        // delay after the kept route, and the drop budget is one millisecond short of
++        // that delay: the no-op is over budget, the insertion that lands exactly on
++        // the promise is not.
++        var fixture = CreateState(seed: 3);
++        var generated = new InsertionCandidateGenerator().Generate(
++            fixture.State,
++            CandidateGenerationOptions.ExactSmall);
++        Assert.True(generated.IsSuccess, generated.Witness?.Message);
++        var noOp = generated.VehicleCandidates!.Single().Candidates.Single(value => value.IsNoOp);
++        var delay = SmallestPositiveDelay(fixture, generated.VehicleCandidates!.Single());
++        var policy = new CommitmentPolicy(
++            fixture.Policy.PolicyId,
++            CommitmentBudgetBasis.CustomerVisible,
++            CommitmentDimensionVocabulary.Ordered.Select(
++                dimension => new CommitmentDimensionLimit(
++                    dimension,
++                    dimension == CommitmentDimension.DropEtaTotalMs ? delay - 1 : null,
++                    CommitmentPhase.AllActive)),
++            new MaterialRevisionRule(1_000, null));
++        var context = PromiseContext(
++            fixture,
++            fixture.BaselineDrop.Milliseconds + delay,
++            policy);
++
++        var assessed = new HardVectorCandidateAssessor().AssessAndFilter(
++            context,
++            generated.VehicleCandidates!,
++            requireSafetyNoOp: true);
++
++        Assert.False(assessed.IsSuccess);
++        var witness = assessed.Witness!;
++        Assert.Equal(CommitmentFailureCodes.SafetyNoOpRejected, witness.Code);
++        Assert.Equal(noOp.CandidateId, witness.CandidateId);
++        Assert.Equal(CommitmentFailureCodes.BudgetExceeded, witness.UnderlyingCode);
++        Assert.EndsWith(
++            "No-op rejection: The candidate exceeds a hard commitment dimension.",
++            witness.Message,
++            StringComparison.Ordinal);
++    }
++
++    [Fact]
++    public void C1_fail_closed_cites_the_safety_no_op_when_every_candidate_is_rejected()
++    {
++        // An initial promise one millisecond EARLIER than the kept route and a
++        // zero-slack one-sided deadline: the no-op is already too late, and the
++        // insertion generator can only delay an incumbent further, so every
++        // candidate is rejected. The witness must now cite the no-op itself.
++        var (generated, set, noOp, ordinalFirst, context) = EveryCandidateRejected();
++
++        var assessed = new HardVectorCandidateAssessor().AssessAndFilter(
++            context,
++            generated.VehicleCandidates!,
++            requireSafetyNoOp: true);
++
++        Assert.False(assessed.IsSuccess);
++        var witness = assessed.Witness!;
++        Assert.Equal(CommitmentFailureCodes.VehicleHasNoFeasibleCandidate, witness.Code);
++        Assert.Equal(noOp.CandidateId, witness.CandidateId);
++        Assert.NotEqual(ordinalFirst.CandidateId, witness.CandidateId);
++        Assert.Equal(CommitmentFailureCodes.DeadlineExceeded, witness.UnderlyingCode);
++        Assert.Equal(set.Candidates.Count, witness.RejectedCandidateCount);
++        Assert.Contains(". No-op rejection: ", witness.Message, StringComparison.Ordinal);
++        Assert.EndsWith(
++            "beyond the initial-promise deadline.",
++            witness.Message,
++            StringComparison.Ordinal);
++    }
++
++    [Fact]
++    public void A_caller_that_does_not_require_the_no_op_still_cites_the_ordinal_first_rejection()
++    {
++        var (generated, _, _, ordinalFirst, context) = EveryCandidateRejected();
++
++        var assessed = new HardVectorCandidateAssessor().AssessAndFilter(
++            context,
++            generated.VehicleCandidates!);
++
++        Assert.False(assessed.IsSuccess);
++        var witness = assessed.Witness!;
++        Assert.Equal(CommitmentFailureCodes.VehicleHasNoFeasibleCandidate, witness.Code);
++        Assert.Equal(ordinalFirst.CandidateId, witness.CandidateId);
++        Assert.Contains(". First rejection: ", witness.Message, StringComparison.Ordinal);
++    }
++
++    private static (
++        CandidateGenerationResult Generated,
++        VehicleCandidateSet Set,
++        InsertionCandidate NoOp,
++        CommitmentMechanismContext Context) NoOpRejectedWhileAnInsertionSurvives()
++    {
++        var fixture = CreateState(seed: 3);
++        var generated = new InsertionCandidateGenerator().Generate(
++            fixture.State,
++            CandidateGenerationOptions.ExactSmall);
++        Assert.True(generated.IsSuccess, generated.Witness?.Message);
++        var set = generated.VehicleCandidates!.Single();
++        var noOp = set.Candidates.Single(value => value.IsNoOp);
++        var context = DeadlineContext(
++            fixture,
++            initialDropMs: fixture.BaselineDrop.Milliseconds + SmallestPositiveDelay(fixture, set),
++            twoSided: true);
++        return (generated, set, noOp, context);
++    }
++
++    private static (
++        CandidateGenerationResult Generated,
++        VehicleCandidateSet Set,
++        InsertionCandidate NoOp,
++        InsertionCandidate OrdinalFirst,
++        CommitmentMechanismContext Context) EveryCandidateRejected()
++    {
++        var fixture = CreateState(seed: 3);
++        var generated = new InsertionCandidateGenerator().Generate(
++            fixture.State,
++            CandidateGenerationOptions.ExactSmall);
++        Assert.True(generated.IsSuccess, generated.Witness?.Message);
++        var set = generated.VehicleCandidates!.Single();
++        var noOp = set.Candidates.Single(value => value.IsNoOp);
++        var ordinalFirst = set.Candidates
++            .OrderBy(value => value.CandidateId, StringComparer.Ordinal)
++            .First();
++        // The test only discriminates when the no-op is not also the ordinal first.
++        Assert.NotEqual(ordinalFirst.CandidateId, noOp.CandidateId);
++        var context = DeadlineContext(
++            fixture,
++            initialDropMs: fixture.BaselineDrop.Milliseconds - 1,
++            twoSided: false);
++        return (generated, set, noOp, ordinalFirst, context);
++    }
++
++    private static long SmallestPositiveDelay(Fixture fixture, VehicleCandidateSet set) =>
++        set.Candidates
++            .Where(value => !value.IsNoOp)
++            .Select(value => OracleEtas(fixture.State, SemanticKey(value), fixture.IncumbentId)
++                .Drop.Milliseconds - fixture.BaselineDrop.Milliseconds)
++            .Where(value => value > 0)
++            .Min();
++
++    /// <summary>The assessment fails before selection, so the solver is never called.</summary>
++    private sealed class UnreachableSolver : ICandidateSelectionSolver
++    {
++        public CandidateSelectionSolveResult Solve(
++            CandidateSelectionProblem problem,
++            DeterministicSolverBudget budget) =>
++            throw new InvalidOperationException("The solver must not be reached.");
++    }
++
++    private static CommitmentMechanismContext DeadlineContext(
++        Fixture fixture,
++        long initialDropMs,
++        bool twoSided) =>
++        PromiseContext(
++            fixture,
++            initialDropMs,
++            new CommitmentPolicy(
++                fixture.Policy.PolicyId,
++                CommitmentBudgetBasis.DecisionInduced,
++                CommitmentDimensionVocabulary.Ordered.Select(
++                    dimension => new CommitmentDimensionLimit(
++                        dimension,
++                        null,
++                        CommitmentPhase.AllActive)),
++                new MaterialRevisionRule(1_000, null),
++                dropEtaDeadlineSlack: new Duration(0),
++                dropEtaDeadlineTwoSided: twoSided));
++
++    /// <summary>
++    /// The incumbent's only ledger entry is an initial promise at the kept pickup
++    /// ETA and the given drop ETA; the policy is the one the incumbent booked.
++    /// </summary>
++    private static CommitmentMechanismContext PromiseContext(
++        Fixture fixture,
++        long initialDropMs,
++        CommitmentPolicy policy)
++    {
++        var incumbent = fixture.State.Run.Requests[fixture.IncumbentId];
++        var pickupStop = new StopId("incumbent-pickup");
++        var dropStop = new StopId("incumbent-drop");
++        var initial = new PromiseProjection(
++            incumbent.Id,
++            AlgorithmTestData.VehicleOne,
++            pickupStop,
++            incumbent.OriginNodeId,
++            dropStop,
++            incumbent.DestinationNodeId,
++            fixture.BaselinePickup,
++            new SimTime(initialDropMs),
++            [
++                new PromiseServiceToken(pickupStop, incumbent.Id, RouteStopKind.Pickup),
++                new PromiseServiceToken(dropStop, incumbent.Id, RouteStopKind.DropOff),
++            ]);
++        var ledger = CommitmentLedger.Empty.OpenInitial(
++            "oracle-initial-deadline",
++            initial,
++            1,
++            fixture.State.Run.SimulationTime,
++            "INITIAL_ACCEPTANCE",
++            2).Ledger!;
++
++        return new CommitmentMechanismContext(
++            fixture.BeforeEventState with { Commitments = ledger },
++            fixture.State with { Commitments = ledger },
++            new CommitmentPolicyCatalog([policy]),
++            NoDistances.Instance,
++            "c1-deadline",
++            1);
++    }
++
+     private static IReadOnlySet<string> RetainedKeys(
+         Fixture fixture,
+         IReadOnlyList<VehicleCandidateSet> candidates,
+diff --git a/tests/RideBound.Algorithms.Tests/Policies/EffectivePolicyFairnessTests.cs b/tests/RideBound.Algorithms.Tests/Policies/EffectivePolicyFairnessTests.cs
+index 584b7fa..2d56f54 100644
+--- a/tests/RideBound.Algorithms.Tests/Policies/EffectivePolicyFairnessTests.cs
++++ b/tests/RideBound.Algorithms.Tests/Policies/EffectivePolicyFairnessTests.cs
+@@ -87,6 +87,43 @@ public sealed class EffectivePolicyFairnessTests
+             Fingerprint(underTightBudget));
+     }
+ 
++    /// <summary>
++    /// The drop-ETA deadline is a research probe for the deadline family. Like every
++    /// cumulative limit it binds only the commitment arms: a baseline arm scored
++    /// against a deadline would silently stop being a baseline.
++    /// </summary>
++    [Theory]
++    [InlineData(RidePoolingPolicyKind.RollingCost)]
++    [InlineData(RidePoolingPolicyKind.RollingPenalty)]
++    [InlineData(RidePoolingPolicyKind.FixedFreezeHorizon)]
++    [InlineData(RidePoolingPolicyKind.NoReassignmentRepair)]
++    public void A_baseline_arm_never_inherits_a_configured_deadline(
++        RidePoolingPolicyKind kind)
++    {
++        var policy = EffectivePolicyFor(
++            kind,
++            deadlineSlackMs: 30_000,
++            deadlineTwoSided: true);
++
++        Assert.Null(policy.DropEtaDeadlineSlack);
++        Assert.False(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Theory]
++    [InlineData(RidePoolingPolicyKind.RideBoundHardVector)]
++    [InlineData(RidePoolingPolicyKind.CommitSoftHardHybrid)]
++    public void A_commitment_arm_keeps_a_configured_deadline(RidePoolingPolicyKind kind)
++    {
++        var policy = EffectivePolicyFor(
++            kind,
++            deadlineSlackMs: 30_000,
++            deadlineTwoSided: true);
++
++        Assert.Equal(
++            Fingerprint(ConfiguredPolicy(DropEtaHardLimit, 30_000, true)),
++            Fingerprint(policy));
++    }
++
+     [Fact]
+     public void B3_and_b4_keep_only_their_declared_mechanism_settings()
+     {
+@@ -135,6 +172,8 @@ public sealed class EffectivePolicyFairnessTests
+                 policy.FreezeHorizon?.Milliseconds.ToString() ?? "none",
+                 ((int)policy.FreezeHorizonLocks).ToString(),
+                 ((int)policy.FinalConfirmationLocks).ToString(),
++                policy.DropEtaDeadlineSlack?.Milliseconds.ToString() ?? "none",
++                policy.DropEtaDeadlineTwoSided.ToString(),
+             }.Concat(
+                 CommitmentDimensionVocabulary.Ordered.Select(
+                     dimension => string.Join(
+@@ -149,7 +188,9 @@ public sealed class EffectivePolicyFairnessTests
+ 
+     private static CommitmentPolicy EffectivePolicyFor(
+         RidePoolingPolicyKind kind,
+-        long? dropEtaHardLimit = DropEtaHardLimit)
++        long? dropEtaHardLimit = DropEtaHardLimit,
++        long? deadlineSlackMs = null,
++        bool deadlineTwoSided = false)
+     {
+         var request = AlgorithmTestData.PendingRequest("request-1");
+         var unadvanced = AlgorithmTestData.CreateState(
+@@ -168,7 +209,10 @@ public sealed class EffectivePolicyFairnessTests
+                 AlgorithmTestData.ScenarioId,
+                 new SimTime(0)),
+             state.ExpectedInitialTravelTimeSnapshotHash);
+-        var configured = ConfiguredPolicy(dropEtaHardLimit);
++        var configured = ConfiguredPolicy(
++            dropEtaHardLimit,
++            deadlineSlackMs,
++            deadlineTwoSided);
+         var solverBudget = DeterministicSolverBudget.Create(1000, 1000, 1).Value!;
+         var executionBudget =
+             DeterministicCandidateSelectionExecutionBudget.Create(
+@@ -198,7 +242,10 @@ public sealed class EffectivePolicyFairnessTests
+         return policy;
+     }
+ 
+-    private static CommitmentPolicy ConfiguredPolicy(long? dropEtaHardLimit) =>
++    private static CommitmentPolicy ConfiguredPolicy(
++        long? dropEtaHardLimit,
++        long? deadlineSlackMs = null,
++        bool deadlineTwoSided = false) =>
+         new(
+             PolicyId,
+             CommitmentBudgetBasis.DecisionInduced,
+@@ -211,7 +258,9 @@ public sealed class EffectivePolicyFairnessTests
+                     dimension == CommitmentDimension.VehicleSwitchCount
+                         ? CommitmentPhase.WaitingPickup
+                         : CommitmentPhase.AllActive)),
+-            new MaterialRevisionRule(1, 30_000));
++            new MaterialRevisionRule(1, 30_000),
++            dropEtaDeadlineSlack: deadlineSlackMs is long slack ? new Duration(slack) : null,
++            dropEtaDeadlineTwoSided: deadlineTwoSided);
+ 
+     /// <summary>
+     /// Each arm carries its own mandatory settings — B3 needs a freeze horizon and lock
+diff --git a/tests/RideBound.Domain.Tests/Commitments/CommitmentPolicyTests.cs b/tests/RideBound.Domain.Tests/Commitments/CommitmentPolicyTests.cs
+index 9b85e09..64e2e36 100644
+--- a/tests/RideBound.Domain.Tests/Commitments/CommitmentPolicyTests.cs
++++ b/tests/RideBound.Domain.Tests/Commitments/CommitmentPolicyTests.cs
+@@ -36,6 +36,48 @@ public sealed class CommitmentPolicyTests
+                 finalLocks: (PromiseLock)64));
+     }
+ 
++    [Fact]
++    public void Policy_has_no_deadline_by_default()
++    {
++        var policy = CreatePolicy(CommitmentBudgetBasis.DecisionInduced);
++
++        Assert.Null(policy.DropEtaDeadlineSlack);
++        Assert.False(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Fact]
++    public void Policy_keeps_the_configured_deadline()
++    {
++        var policy = CreateDeadlinePolicy(new Duration(30_000), twoSided: true);
++
++        Assert.Equal(new Duration(30_000), policy.DropEtaDeadlineSlack);
++        Assert.True(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Fact]
++    public void Policy_rejects_a_two_sided_deadline_without_a_slack()
++    {
++        var error = Assert.Throws<ArgumentException>(
++            () => CreateDeadlinePolicy(null, twoSided: true));
++
++        Assert.Equal("dropEtaDeadlineTwoSided", error.ParamName);
++    }
++
++    private static CommitmentPolicy CreateDeadlinePolicy(
++        Duration? slack,
++        bool twoSided) =>
++        new(
++            "validated-policy",
++            CommitmentBudgetBasis.DecisionInduced,
++            CommitmentDimensionVocabulary.Ordered.Select(
++                dimension => new CommitmentDimensionLimit(
++                    dimension,
++                    null,
++                    CommitmentPhase.AllActive)),
++            new MaterialRevisionRule(1, null),
++            dropEtaDeadlineSlack: slack,
++            dropEtaDeadlineTwoSided: twoSided);
++
+     private static CommitmentPolicy CreatePolicy(
+         CommitmentBudgetBasis budgetBasis,
+         Duration? freezeHorizon = null,
+diff --git a/tests/RideBound.Runner.Tests/Configuration/CommitmentPolicyConfigurationTests.cs b/tests/RideBound.Runner.Tests/Configuration/CommitmentPolicyConfigurationTests.cs
+index 31e157a..f969e0b 100644
+--- a/tests/RideBound.Runner.Tests/Configuration/CommitmentPolicyConfigurationTests.cs
++++ b/tests/RideBound.Runner.Tests/Configuration/CommitmentPolicyConfigurationTests.cs
+@@ -1,5 +1,6 @@
+ using System.Reflection;
+ using System.Text;
++using RideBound.Contracts.Serialization;
+ using RideBound.Domain.Commitments;
+ using RideBound.Domain.Common;
+ using RideBound.Runner.Configuration;
+@@ -94,6 +95,114 @@ public sealed class CommitmentPolicyConfigurationTests
+         Assert.Contains(expectedMessage, error.Message);
+     }
+ 
++    [Fact]
++    public void Drop_eta_deadline_is_read_when_present()
++    {
++        var configuration = CommitmentPolicyConfiguration.Decode(
++            PolicyJson("\"dropEtaDeadlineSlackMs\":30000,\"dropEtaDeadlineTwoSided\":true"));
++
++        Assert.True(configuration.TryGetPolicy("uniform-v1", out var policy));
++        Assert.Equal(new Duration(30_000), policy.DropEtaDeadlineSlack);
++        Assert.True(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Fact]
++    public void Drop_eta_deadline_is_one_sided_unless_asked()
++    {
++        var configuration = CommitmentPolicyConfiguration.Decode(
++            PolicyJson("\"dropEtaDeadlineSlackMs\":60000"));
++
++        Assert.True(configuration.TryGetPolicy("uniform-v1", out var policy));
++        Assert.Equal(new Duration(60_000), policy.DropEtaDeadlineSlack);
++        Assert.False(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Fact]
++    public void Drop_eta_deadline_is_disabled_when_absent()
++    {
++        var configuration = CommitmentPolicyConfiguration.Decode(PolicyJson(null));
++
++        Assert.True(configuration.TryGetPolicy("uniform-v1", out var policy));
++        Assert.Null(policy.DropEtaDeadlineSlack);
++        Assert.False(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Theory]
++    [InlineData("\"dropEtaDeadlineSlackMs\":0", "must be positive")]
++    [InlineData("\"dropEtaDeadlineSlackMs\":-1", "canonical non-negative integer")]
++    [InlineData(
++        "\"dropEtaDeadlineSlackMs\":30000,\"dropEtaDeadlineTwoSided\":\"yes\"",
++        "must be a boolean")]
++    [InlineData(
++        "\"dropEtaDeadlineSlackMs\":30000,\"dropEtaDeadlineTwoSided\":1",
++        "must be a boolean")]
++    [InlineData(
++        "\"dropEtaDeadlineTwoSided\":true",
++        "requires 'dropEtaDeadlineSlackMs'")]
++    [InlineData(
++        "\"dropEtaDeadlineSlack\":30000",
++        "Unknown field 'dropEtaDeadlineSlack'")]
++    public void Invalid_drop_eta_deadline_is_rejected(
++        string extraFields,
++        string expectedMessage)
++    {
++        var error = Assert.Throws<InvalidDataException>(
++            () => CommitmentPolicyConfiguration.Decode(PolicyJson(extraFields)));
++
++        Assert.Contains(expectedMessage, error.Message);
++    }
++
++    [Fact]
++    public void Drop_eta_deadline_given_as_a_string_is_rejected()
++    {
++        // The shared integer reader used for every integer field of this file
++        // (including freezeHorizonMs) calls TryGetInt64, which throws on a string
++        // element. The value is rejected either way; which exception type it raises
++        // is that reader's existing behaviour, so it is not pinned here.
++        Assert.ThrowsAny<Exception>(
++            () => CommitmentPolicyConfiguration.Decode(
++                PolicyJson("\"dropEtaDeadlineSlackMs\":\"30000\"")));
++    }
++
++    [Theory]
++    [InlineData("\"dropEtaDeadlineSlackMs\":null")]
++    [InlineData("\"dropEtaDeadlineSlackMs\":30000,\"dropEtaDeadlineTwoSided\":null")]
++    public void A_null_deadline_field_is_rejected_by_canonical_json(string extraFields)
++    {
++        // Canonicalisation rejects every JSON null before any field is read.
++        var error = Assert.Throws<CanonicalJsonException>(
++            () => CommitmentPolicyConfiguration.Decode(PolicyJson(extraFields)));
++
++        Assert.Contains("Null is not permitted", error.Message);
++    }
++
++    [Fact]
++    public void A_one_sided_flag_without_a_slack_leaves_the_deadline_disabled()
++    {
++        var configuration = CommitmentPolicyConfiguration.Decode(
++            PolicyJson("\"dropEtaDeadlineTwoSided\":false"));
++
++        Assert.True(configuration.TryGetPolicy("uniform-v1", out var policy));
++        Assert.Null(policy.DropEtaDeadlineSlack);
++        Assert.False(policy.DropEtaDeadlineTwoSided);
++    }
++
++    private static byte[] PolicyJson(string? extraFields)
++    {
++        var limits = string.Join(
++            ",",
++            CommitmentDimensionVocabulary.Ordered.Select(
++                value =>
++                    $"{{\"dimension\":\"{CommitmentDimensionVocabulary.ToProtocolValue(value)}\"," +
++                    "\"applicablePhases\":[\"accepted\"]}"));
++        var extra = extraFields is null ? string.Empty : "," + extraFields;
++        return Encoding.UTF8.GetBytes(
++            $"{{\"configurationVersion\":\"1.0.0\",\"policies\":[{{" +
++            "\"policyId\":\"uniform-v1\",\"budgetBasis\":\"decisionInduced\"," +
++            $"\"limits\":[{limits}],\"materialRevisionRule\":{{\"rawEtaThresholdMs\":1}}" +
++            $"{extra}}}],\"stopDistances\":[]}}");
++    }
++
+     private static string RepositoryRoot() =>
+         typeof(CommitmentPolicyConfigurationTests)
+             .Assembly
+diff --git a/tests/RideBound.Application.Tests/Commitments/CommitmentDeadlineValidatorTests.cs b/tests/RideBound.Application.Tests/Commitments/CommitmentDeadlineValidatorTests.cs
+new file mode 100644
+index 0000000..ecd8755
+--- /dev/null
++++ b/tests/RideBound.Application.Tests/Commitments/CommitmentDeadlineValidatorTests.cs
+@@ -0,0 +1,255 @@
++using RideBound.Application.Commitments;
++using RideBound.Application.Promises;
++using RideBound.Application.Scheduling;
++using RideBound.Application.State;
++using RideBound.Domain.Commitments;
++using RideBound.Domain.Common;
++using RideBound.Domain.Routes;
++using RideBound.Domain.Runs;
++using RideBound.Domain.Validation;
++using RideBound.Domain.Vehicles;
++
++namespace RideBound.Application.Tests.Commitments;
++
++/// <summary>
++/// The validator passes the rider's initial promise to the deadline rule. The candidate
++/// is always the safety no-op (the route is kept), so the decision itself moves nothing;
++/// only the kept route drifts between the initial promise and the reduced state.
++/// </summary>
++public sealed class CommitmentDeadlineValidatorTests
++{
++    // Pickup window [1000, 2000] ms, 100 ms per arc: at t = 1000 the kept route
++    // drops the rider at 1200 ms, at t = 1500 it drops at 1700 ms.
++    private const long Early = 1_000;
++    private const long Late = 1_500;
++
++    [Fact]
++    public void Adverse_drift_past_the_deadline_rejects_the_no_op()
++    {
++        var context = NoOpUnderDrift(promiseAt: Early, reducedAt: Late, Policy(slack: 400));
++
++        var result = new CommitmentDecisionValidator().Validate(context);
++
++        Assert.False(result.IsValid);
++        var witness = Assert.Single(result.Witnesses);
++        Assert.Equal(CommitmentValidationStage.Lock, witness.Stage);
++        Assert.Equal(CommitmentFailureCodes.DeadlineExceeded, witness.Code);
++        Assert.Equal(
++            "The candidate delays the drop ETA beyond the initial-promise deadline.",
++            witness.Message);
++        Assert.Equal("drop_eta_ms", witness.Dimension);
++        Assert.Equal("deadline_cap", witness.Rule);
++    }
++
++    [Fact]
++    public void Drift_exactly_on_the_deadline_keeps_the_no_op()
++    {
++        var context = NoOpUnderDrift(promiseAt: Early, reducedAt: Late, Policy(slack: 500));
++
++        Assert.True(new CommitmentDecisionValidator().Validate(context).IsValid);
++    }
++
++    [Fact]
++    public void Without_a_deadline_the_same_drift_keeps_the_no_op()
++    {
++        var context = NoOpUnderDrift(promiseAt: Early, reducedAt: Late, Policy(slack: null));
++
++        Assert.True(new CommitmentDecisionValidator().Validate(context).IsValid);
++    }
++
++    [Fact]
++    public void Favourable_drift_rejects_the_no_op_only_under_a_two_sided_deadline()
++    {
++        var twoSided = NoOpUnderDrift(
++            promiseAt: Late,
++            reducedAt: Early,
++            Policy(slack: 400, twoSided: true));
++        var oneSided = NoOpUnderDrift(
++            promiseAt: Late,
++            reducedAt: Early,
++            Policy(slack: 400));
++
++        var rejected = new CommitmentDecisionValidator().Validate(twoSided);
++        var kept = new CommitmentDecisionValidator().Validate(oneSided);
++
++        Assert.False(rejected.IsValid);
++        var witness = Assert.Single(rejected.Witnesses);
++        Assert.Equal(CommitmentFailureCodes.DeadlineExceeded, witness.Code);
++        Assert.Equal(
++            "The candidate moves the drop ETA outside the initial-promise window.",
++            witness.Message);
++        Assert.Equal("deadline_floor", witness.Rule);
++        Assert.True(kept.IsValid);
++    }
++
++    [Fact]
++    public void The_deadline_is_measured_from_the_first_promise_not_the_latest_revision()
++    {
++        // First promise drops at 1200 ms, a later revision republished 1700 ms, and the
++        // kept route still drops at 1700 ms. Against the revision the no-op moved 0 ms;
++        // against the first promise it moved 500 ms, past the 400 ms slack.
++        var context = NoOpUnderDrift(
++            promiseAt: Early,
++            reducedAt: Late,
++            Policy(slack: 400),
++            revisedAt: Late);
++
++        var result = new CommitmentDecisionValidator().Validate(context);
++
++        Assert.False(result.IsValid);
++        Assert.Equal(
++            CommitmentLockEvaluator.DeadlineCapRule,
++            Assert.Single(result.Witnesses).Rule);
++    }
++
++    [Fact]
++    public void A_revision_outside_the_slack_does_not_move_the_anchor()
++    {
++        // First promise drops at 1700 ms, a revision republished 1200 ms, and the kept
++        // route drops at 1700 ms again: 500 ms late against the revision, but exactly
++        // on the first promise, so the no-op is kept.
++        var context = NoOpUnderDrift(
++            promiseAt: Late,
++            reducedAt: Late,
++            Policy(slack: 400),
++            revisedAt: Early);
++
++        Assert.True(new CommitmentDecisionValidator().Validate(context).IsValid);
++    }
++
++    private static CommitmentPolicy Policy(long? slack, bool twoSided = false) =>
++        new(
++            ApplicationTestData.Request().CommitmentPolicyId,
++            CommitmentBudgetBasis.DecisionInduced,
++            CommitmentDimensionVocabulary.Ordered.Select(
++                dimension => new CommitmentDimensionLimit(
++                    dimension,
++                    null,
++                    CommitmentPhase.AllActive)),
++            new MaterialRevisionRule(1, null),
++            dropEtaDeadlineSlack: slack is long value ? new Duration(value) : null,
++            dropEtaDeadlineTwoSided: twoSided);
++
++    private static CommitmentValidationContext NoOpUnderDrift(
++        long promiseAt,
++        long reducedAt,
++        CommitmentPolicy policy,
++        long? revisedAt = null)
++    {
++        var request = ApplicationTestData.Request();
++        var route = RoutePlan.Create(
++            new PlanVersion(0),
++            0,
++            [],
++            [
++                new RouteStop(
++                    new StopId("pickup"),
++                    ApplicationTestData.NodeOne,
++                    RouteStopKind.Pickup,
++                    request.Id,
++                    new Duration(0)),
++                new RouteStop(
++                    new StopId("drop"),
++                    ApplicationTestData.NodeTwo,
++                    RouteStopKind.DropOff,
++                    request.Id,
++                    new Duration(0)),
++            ]).Value!;
++        var vehicle = VehicleState.Create(
++            ApplicationTestData.VehicleId,
++            4,
++            0,
++            new NodePosition(ApplicationTestData.NodeZero),
++            [],
++            [],
++            route,
++            1).Value!;
++        var run = RideBoundRun.Create(
++            ApplicationTestData.RunId,
++            ApplicationTestData.ScenarioId,
++            new SimTime(Early));
++        run = run.AddRequest(request).Value!;
++        run = run.BootstrapVehicle(vehicle).Value!;
++        run = run.AcceptRequest(request.Id, vehicle.Id).Value!;
++        run = run.AdvanceEpoch(1, new SimTime(Early)).Value!;
++        var travel = ApplicationTestData.Travel();
++
++        // The initial promise is the kept route projected at `promiseAt`.
++        var initial = Project(run, vehicle.Id, route, travel, request.Id, promiseAt);
++        var ledger = CommitmentLedger.Empty.OpenInitial(
++            "initial-publication",
++            initial,
++            1,
++            new SimTime(Early),
++            "INITIAL_ACCEPTANCE",
++            3).Ledger!;
++
++        // An optional revision republishes the kept route projected at `revisedAt`.
++        if (revisedAt is long revisionTime)
++        {
++            var revised = Project(run, vehicle.Id, route, travel, request.Id, revisionTime);
++            ledger = ledger.AppendRevision(
++                "revision-publication",
++                request.Id,
++                new PromiseVersion(1),
++                revised,
++                revised,
++                new ThreeWayPromiseDelta(
++                    CommitmentVector.Zero,
++                    CommitmentVector.Zero,
++                    CommitmentVector.Zero),
++                CommitmentBudgetBasis.DecisionInduced,
++                1,
++                new SimTime(Early),
++                "REPLAN",
++                3).Ledger!;
++            Assert.Equal(2, ledger.Histories[request.Id].Entries.Count);
++        }
++
++        var before = new OnlineState(
++            run,
++            travel,
++            4,
++            travel.SnapshotHash,
++            ledger);
++
++        // The exogenous projection is the same kept route projected at `reducedAt`.
++        var reducedRun = run.AdvanceEpoch(2, new SimTime(Math.Max(Early, reducedAt))).Value!;
++        var reduced = before with
++        {
++            Run = reducedRun,
++            NextEventSequence = 5,
++        };
++
++        return new CommitmentValidationContext(
++            before,
++            reduced,
++            reduced,
++            new CommitmentPolicyCatalog([policy]),
++            CommitmentValidatorFixtures.EmptyDistances.Instance,
++            "test-scope",
++            4);
++    }
++
++    private static PromiseProjection Project(
++        RideBoundRun run,
++        VehicleId vehicleId,
++        RoutePlan route,
++        ITravelTimeLookup travel,
++        RequestId requestId,
++        long at)
++    {
++        var schedule = new RouteScheduleProjector().Project(
++            run,
++            run.Vehicles[vehicleId],
++            route,
++            travel,
++            new SimTime(at)).Schedule!;
++        return new PromiseProjector().Project(
++            run,
++            run.Vehicles[vehicleId],
++            route,
++            schedule,
++            requestId).Value!;
++    }
++}
+diff --git a/tests/RideBound.Domain.Tests/Commitments/CommitmentDeadlineLockTests.cs b/tests/RideBound.Domain.Tests/Commitments/CommitmentDeadlineLockTests.cs
+new file mode 100644
+index 0000000..d36f2fc
+--- /dev/null
++++ b/tests/RideBound.Domain.Tests/Commitments/CommitmentDeadlineLockTests.cs
+@@ -0,0 +1,314 @@
++using RideBound.Domain.Commitments;
++using RideBound.Domain.Common;
++using RideBound.Domain.Requests;
++using RideBound.Domain.Routes;
++
++namespace RideBound.Domain.Tests.Commitments;
++
++/// <summary>
++/// Research probe for the deadline family. A deadline compares the candidate drop ETA
++/// with the rider's INITIAL promise, not with the exogenous projection, so exogenous
++/// drift alone can trip it on the safety no-op. Disabled unless a slack is configured.
++/// </summary>
++public sealed class CommitmentDeadlineLockTests
++{
++    private const long Anchor = 900_000;
++    private const long Slack = 30_000;
++
++    private static readonly RequestId Request = new("request-1");
++    private static readonly VehicleId Vehicle = new("vehicle-1");
++    private static readonly NodeId PickupNode = new("node-pickup");
++    private static readonly NodeId DropNode = new("node-drop");
++    private static readonly StopId PickupStop = new("stop-pickup");
++    private static readonly StopId DropStop = new("stop-drop");
++
++    [Fact]
++    public void Without_a_slack_no_deadline_witness_is_produced()
++    {
++        var far = Projection(Anchor + 10 * Slack);
++
++        var witnesses = Evaluate(Policy(slack: null), far, far, Projection(Anchor));
++
++        Assert.Empty(witnesses);
++    }
++
++    [Fact]
++    public void Without_a_slack_the_anchor_may_be_omitted()
++    {
++        var far = Projection(Anchor + 10 * Slack);
++
++        var witnesses = Evaluate(Policy(slack: null), far, far, anchor: null);
++
++        Assert.Empty(witnesses);
++    }
++
++    [Theory]
++    [InlineData(Anchor + Slack, false)]         // exactly on the deadline: allowed
++    [InlineData(Anchor + Slack + 1, true)]      // one millisecond past: violation
++    [InlineData(Anchor, false)]                 // unchanged
++    [InlineData(Anchor - Slack - 1, false)]     // one-sided: earlier is never a violation
++    [InlineData(0, false)]                      // one-sided: far earlier is never a violation
++    public void One_sided_deadline_rejects_only_a_drop_later_than_anchor_plus_slack(
++        long candidateDropMs,
++        bool expectViolation)
++    {
++        var exogenous = Projection(Anchor);
++        var candidate = Projection(candidateDropMs);
++
++        var witnesses = Evaluate(Policy(Slack), exogenous, candidate, Projection(Anchor));
++
++        if (expectViolation)
++        {
++            var witness = Assert.Single(witnesses);
++            Assert.Equal("drop_eta_ms", witness.Dimension);
++            Assert.Equal("deadline_cap", witness.Rule);
++            Assert.Equal(Request, witness.RequestId);
++        }
++        else
++        {
++            Assert.Empty(witnesses);
++        }
++    }
++
++    [Fact]
++    public void Drift_alone_trips_the_deadline_on_the_safety_no_op()
++    {
++        // The no-op keeps the route, so candidate == exogenous and the decision adds
++        // nothing. A lock never fires here; the deadline does, because the kept
++        // route already arrives later than the initial promise plus the slack.
++        var drifted = Projection(Anchor + Slack + 5_000);
++
++        var witnesses = Evaluate(Policy(Slack), drifted, drifted, Projection(Anchor));
++
++        var witness = Assert.Single(witnesses);
++        Assert.Equal("deadline_cap", witness.Rule);
++    }
++
++    [Fact]
++    public void A_deadline_without_an_anchor_fails_loudly()
++    {
++        var exogenous = Projection(Anchor);
++
++        var error = Assert.Throws<ArgumentException>(
++            () => Evaluate(Policy(Slack), exogenous, exogenous, anchor: null));
++
++        Assert.Equal("anchor", error.ParamName);
++    }
++
++    [Fact]
++    public void A_deadline_anchor_for_another_request_fails_loudly()
++    {
++        var exogenous = Projection(Anchor);
++        var foreign = Projection(Anchor, new RequestId("request-2"));
++
++        var error = Assert.Throws<ArgumentException>(
++            () => Evaluate(Policy(Slack), exogenous, exogenous, foreign));
++
++        Assert.Equal("anchor", error.ParamName);
++    }
++
++    [Theory]
++    [InlineData(Anchor - Slack, null)]                  // exactly on the floor: allowed
++    [InlineData(Anchor - Slack - 1, "deadline_floor")]  // one millisecond early: floor
++    [InlineData(Anchor + Slack, null)]                  // exactly on the cap: allowed
++    [InlineData(Anchor + Slack + 1, "deadline_cap")]    // one millisecond late: cap only
++    [InlineData(Anchor, null)]
++    public void Two_sided_deadline_is_a_window_around_the_initial_promise(
++        long candidateDropMs,
++        string? expectedRule)
++    {
++        var exogenous = Projection(Anchor);
++        var candidate = Projection(candidateDropMs);
++
++        var witnesses = Evaluate(
++            Policy(Slack, twoSided: true),
++            exogenous,
++            candidate,
++            Projection(Anchor));
++
++        if (expectedRule is null)
++        {
++            Assert.Empty(witnesses);
++        }
++        else
++        {
++            var witness = Assert.Single(witnesses);
++            Assert.Equal("drop_eta_ms", witness.Dimension);
++            Assert.Equal(expectedRule, witness.Rule);
++        }
++    }
++
++    [Fact]
++    public void Favourable_drift_trips_only_the_two_sided_deadline_on_the_no_op()
++    {
++        // Corollary on drift direction: when the kept route has become EARLIER than
++        // the initial promise by more than the slack, the two-sided deadline rejects
++        // the no-op, while the one-sided deadline stays safe in the same state.
++        var early = Projection(Anchor - Slack - 1);
++
++        var twoSided = Evaluate(Policy(Slack, twoSided: true), early, early, Projection(Anchor));
++        var oneSided = Evaluate(Policy(Slack), early, early, Projection(Anchor));
++
++        Assert.Equal("deadline_floor", Assert.Single(twoSided).Rule);
++        Assert.Empty(oneSided);
++    }
++
++    [Fact]
++    public void A_zero_slack_is_an_exact_deadline()
++    {
++        var anchor = Projection(Anchor);
++
++        Assert.Empty(Evaluate(Policy(0), anchor, Projection(Anchor), anchor));
++        Assert.Equal(
++            "deadline_cap",
++            Assert.Single(Evaluate(Policy(0), anchor, Projection(Anchor + 1), anchor)).Rule);
++    }
++
++    [Fact]
++    public void The_deadline_witness_follows_existing_lock_witnesses()
++    {
++        // Callers read the first witness as the reason for a prune, so a lock that
++        // fires must stay first; the deadline is appended after the lock witnesses.
++        var policy = Policy(Slack, finalConfirmationLocks: PromiseLock.DropEta);
++        var exogenous = Projection(Anchor);
++        var candidate = Projection(Anchor + Slack + 1);
++
++        var witnesses = Evaluate(policy, exogenous, candidate, Projection(Anchor));
++
++        Assert.Collection(
++            witnesses,
++            witness =>
++            {
++                Assert.Equal("drop_eta_ms", witness.Dimension);
++                Assert.Equal("final_confirmation", witness.Rule);
++            },
++            witness =>
++            {
++                Assert.Equal("drop_eta_ms", witness.Dimension);
++                Assert.Equal(CommitmentLockEvaluator.DeadlineCapRule, witness.Rule);
++            });
++    }
++
++    [Fact]
++    public void The_deadline_witness_follows_a_lock_on_a_later_sorting_dimension()
++    {
++        // "drop_eta_ms" sorts before "pickup_eta_ms", so without the append rule the
++        // deadline would displace a pickup lock from the first position.
++        var policy = Policy(Slack, finalConfirmationLocks: PromiseLock.PickupEta);
++        var exogenous = Projection(Anchor);
++        var candidate = Projection(Anchor + Slack + 1, pickupMs: 1);
++
++        var witnesses = Evaluate(policy, exogenous, candidate, Projection(Anchor));
++
++        Assert.Collection(
++            witnesses,
++            witness =>
++            {
++                Assert.Equal("pickup_eta_ms", witness.Dimension);
++                Assert.Equal("final_confirmation", witness.Rule);
++            },
++            witness =>
++            {
++                Assert.Equal("drop_eta_ms", witness.Dimension);
++                Assert.Equal(CommitmentLockEvaluator.DeadlineCapRule, witness.Rule);
++            });
++    }
++
++    [Fact]
++    public void A_zero_slack_two_sided_deadline_rejects_one_millisecond_early()
++    {
++        var anchor = Projection(Anchor);
++
++        Assert.Equal(
++            CommitmentLockEvaluator.DeadlineFloorRule,
++            Assert.Single(
++                Evaluate(Policy(0, twoSided: true), anchor, Projection(Anchor - 1), anchor))
++                .Rule);
++    }
++
++    [Fact]
++    public void Extreme_canonical_times_do_not_overflow()
++    {
++        var zero = Projection(0);
++        var max = Projection(DomainLimits.MaxCanonicalInteger);
++
++        Assert.Equal(
++            CommitmentLockEvaluator.DeadlineCapRule,
++            Assert.Single(Evaluate(Policy(Slack), zero, max, zero)).Rule);
++        Assert.Equal(
++            CommitmentLockEvaluator.DeadlineFloorRule,
++            Assert.Single(Evaluate(Policy(Slack, twoSided: true), max, zero, max)).Rule);
++        Assert.Empty(Evaluate(Policy(Slack), max, zero, max));
++    }
++
++    private static IReadOnlyList<CommitmentLockWitness> Evaluate(
++        CommitmentPolicy policy,
++        PromiseProjection exogenous,
++        PromiseProjection candidate,
++        PromiseProjection? anchor) =>
++        new CommitmentLockEvaluator().Evaluate(
++            WaitingRequest(),
++            Published(exogenous),
++            exogenous,
++            candidate,
++            new SimTime(0),
++            policy,
++            anchor);
++
++    private static CommitmentPolicy Policy(
++        long? slack,
++        bool twoSided = false,
++        PromiseLock finalConfirmationLocks = PromiseLock.None) =>
++        new(
++            "policy-1",
++            CommitmentBudgetBasis.DecisionInduced,
++            CommitmentDimensionVocabulary.Ordered.Select(
++                dimension => new CommitmentDimensionLimit(
++                    dimension,
++                    null,
++                    CommitmentPhase.AllActive)),
++            new MaterialRevisionRule(1, null),
++            finalConfirmationLocks: finalConfirmationLocks,
++            dropEtaDeadlineSlack: slack is long value ? new Duration(value) : null,
++            dropEtaDeadlineTwoSided: twoSided);
++
++    private static RideRequest WaitingRequest()
++    {
++        var request = RideRequest.CreatePending(
++            Request,
++            new SimTime(0),
++            PickupNode,
++            DropNode,
++            new SimTime(0),
++            new SimTime(600_000),
++            new Duration(3_600_000),
++            1,
++            "service-class-1",
++            "policy-1").Value!;
++        return request.Accept(Vehicle).Value!.ConfirmWaitingPickup().Value!;
++    }
++
++    private static PromiseProjection Projection(
++        long dropMs,
++        RequestId? requestId = null,
++        long pickupMs = 0)
++    {
++        var id = requestId ?? Request;
++        return new(
++            id,
++            Vehicle,
++            PickupStop,
++            PickupNode,
++            DropStop,
++            DropNode,
++            new SimTime(pickupMs),
++            new SimTime(dropMs),
++            [
++                new PromiseServiceToken(PickupStop, id, RouteStopKind.Pickup),
++                new PromiseServiceToken(DropStop, id, RouteStopKind.DropOff),
++            ]);
++    }
++
++    private static PublishedPromise Published(PromiseProjection projection) =>
++        new(new PromiseVersion(1), 1, new SimTime(0), projection);
++}

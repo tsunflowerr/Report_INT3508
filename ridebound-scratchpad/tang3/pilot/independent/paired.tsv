@@ -1,0 +1,13 @@
+world	cell	promisedC	promisedV	common	commonAbove60C	commonAbove60V	onlyC	onlyCAbove60	onlyV	onlyVAbove60
+W0	w08	97	97	97	0	0	0	0	0	0
+W1	w08	82	80	70	15	15	12	0	10	0
+W2	w08	86	79	74	28	21	12	4	5	3
+W3	w08	108	108	108	1	1	0	0	0	0
+W4	w08	94	90	82	11	5	12	1	8	0
+W5	w08	90	87	81	2	2	9	0	6	0
+W0	w17	95	95	95	0	0	0	0	0	0
+W1	w17	81	78	75	15	14	6	0	3	0
+W2	w17	79	69	66	26	26	13	10	3	3
+W3	w17	107	103	103	6	7	4	0	0	0
+W4	w17	87	86	75	12	7	12	0	11	1
+W5	w17	99	97	95	2	1	4	0	2	0

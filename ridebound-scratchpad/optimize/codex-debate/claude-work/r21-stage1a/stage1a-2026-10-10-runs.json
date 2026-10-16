@@ -1,0 +1,4116 @@
+[
+ {
+  "arm": "U",
+  "cell": "d20181114-s10-r3-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 47,
+   "rejected": 61
+  },
+  "promisedRiders": 47,
+  "alighted": 47,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 442,
+  "decisionFrames": 442,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 254
+  },
+  "latePickups": 4,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 442,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 47,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181114-s10-r3-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 75,
+   "rejected": 33
+  },
+  "promisedRiders": 75,
+  "alighted": 75,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 638,
+  "decisionFrames": 638,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 64
+  },
+  "latePickups": 1,
+  "sumDropC": 1068132,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 638,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 75,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181114-s10-r3-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 94,
+   "rejected": 14
+  },
+  "promisedRiders": 94,
+  "alighted": 94,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 766,
+  "decisionFrames": 766,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 693000,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 766,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 94,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181114-s10-r4-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 53,
+   "rejected": 55
+  },
+  "promisedRiders": 53,
+  "alighted": 53,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 479,
+  "decisionFrames": 479,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 251
+  },
+  "latePickups": 4,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 479,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 53,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181114-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 89,
+   "rejected": 19
+  },
+  "promisedRiders": 89,
+  "alighted": 89,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 731,
+  "decisionFrames": 731,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 105
+  },
+  "latePickups": 2,
+  "sumDropC": 218865,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 731,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 89,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181114-s10-r4-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 93,
+   "rejected": 15
+  },
+  "promisedRiders": 93,
+  "alighted": 93,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 756,
+  "decisionFrames": 756,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 499833,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 756,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 93,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181115-s10-r1-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r1-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 44,
+   "rejected": 64
+  },
+  "promisedRiders": 44,
+  "alighted": 44,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 421,
+  "decisionFrames": 421,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 118
+  },
+  "latePickups": 2,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 421,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 44,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181115-s10-r1-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r1-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 73,
+   "rejected": 35
+  },
+  "promisedRiders": 73,
+  "alighted": 73,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 621,
+  "decisionFrames": 621,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 153
+  },
+  "latePickups": 3,
+  "sumDropC": 737518,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 621,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 73,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181115-s10-r2-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r2-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 56,
+   "rejected": 52
+  },
+  "promisedRiders": 56,
+  "alighted": 56,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 499,
+  "decisionFrames": 499,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 509
+  },
+  "latePickups": 7,
+  "sumDropC": 139556,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 499,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 56,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181115-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 83,
+   "rejected": 25
+  },
+  "promisedRiders": 83,
+  "alighted": 83,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 694,
+  "decisionFrames": 694,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 32
+  },
+  "latePickups": 1,
+  "sumDropC": 266073,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 694,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 83,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181115-s10-r4-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r4-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 45,
+   "rejected": 63
+  },
+  "promisedRiders": 45,
+  "alighted": 45,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 428,
+  "decisionFrames": 428,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 256
+  },
+  "latePickups": 2,
+  "sumDropC": 126753,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 428,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 45,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181115-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 81,
+   "rejected": 27
+  },
+  "promisedRiders": 81,
+  "alighted": 81,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 678,
+  "decisionFrames": 678,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 138
+  },
+  "latePickups": 1,
+  "sumDropC": 539777,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 678,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 81,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181116-s10-r1-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 67,
+   "rejected": 41
+  },
+  "promisedRiders": 67,
+  "alighted": 67,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 583,
+  "decisionFrames": 583,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 132
+  },
+  "latePickups": 4,
+  "sumDropC": 29076,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 583,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 67,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181116-s10-r1-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 80,
+   "rejected": 28
+  },
+  "promisedRiders": 80,
+  "alighted": 80,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 671,
+  "decisionFrames": 671,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 94
+  },
+  "latePickups": 3,
+  "sumDropC": 167353,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 671,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 80,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181116-s10-r1-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 94,
+   "rejected": 14
+  },
+  "promisedRiders": 94,
+  "alighted": 94,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 759,
+  "decisionFrames": 759,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 747852,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 759,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 94,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181116-s10-r2-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 65,
+   "rejected": 43
+  },
+  "promisedRiders": 65,
+  "alighted": 65,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 559,
+  "decisionFrames": 559,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 103
+  },
+  "latePickups": 4,
+  "sumDropC": 169491,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 559,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 65,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181116-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 75,
+   "rejected": 33
+  },
+  "promisedRiders": 75,
+  "alighted": 75,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 632,
+  "decisionFrames": 632,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 78
+  },
+  "latePickups": 2,
+  "sumDropC": 897563,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 632,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 75,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181116-s10-r2-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 90,
+   "rejected": 18
+  },
+  "promisedRiders": 90,
+  "alighted": 90,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 736,
+  "decisionFrames": 736,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 1602243,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 736,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 90,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181116-s10-r4-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 68,
+   "rejected": 40
+  },
+  "promisedRiders": 68,
+  "alighted": 68,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 590,
+  "decisionFrames": 590,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 240
+  },
+  "latePickups": 2,
+  "sumDropC": 2716,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 590,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 68,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181116-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 74,
+   "rejected": 34
+  },
+  "promisedRiders": 74,
+  "alighted": 74,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 631,
+  "decisionFrames": 631,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 15
+  },
+  "latePickups": 0,
+  "sumDropC": 676061,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 631,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 74,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181116-s10-r4-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 66,
+   "rejected": 42
+  },
+  "promisedRiders": 66,
+  "alighted": 66,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 573,
+  "decisionFrames": 573,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 27
+  },
+  "latePickups": 1,
+  "sumDropC": 2264507,
+  "forecastActive": true,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 573,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 66,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181117-s10-r1-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r1-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 63,
+   "rejected": 45
+  },
+  "promisedRiders": 63,
+  "alighted": 63,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 549,
+  "decisionFrames": 549,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 95
+  },
+  "latePickups": 0,
+  "sumDropC": 549077,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 549,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 63,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181117-s10-r1-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r1-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 69,
+   "rejected": 39
+  },
+  "promisedRiders": 69,
+  "alighted": 69,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 591,
+  "decisionFrames": 591,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 757133,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 591,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 69,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181117-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 72,
+   "rejected": 36
+  },
+  "promisedRiders": 72,
+  "alighted": 72,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 617,
+  "decisionFrames": 617,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 112
+  },
+  "latePickups": 3,
+  "sumDropC": 353084,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 617,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 72,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181117-s10-r2-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r2-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 78,
+   "rejected": 30
+  },
+  "promisedRiders": 78,
+  "alighted": 78,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 651,
+  "decisionFrames": 651,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 1921273,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 651,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 78,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181117-s10-r3-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 71,
+   "rejected": 37
+  },
+  "promisedRiders": 71,
+  "alighted": 71,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 610,
+  "decisionFrames": 610,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 436
+  },
+  "latePickups": 1,
+  "sumDropC": 1580236,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 610,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 71,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181117-s10-r3-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 55,
+   "rejected": 53
+  },
+  "promisedRiders": 55,
+  "alighted": 55,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 499,
+  "decisionFrames": 499,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 762914,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 499,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 55,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181117-s10-r3-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 81,
+   "rejected": 27
+  },
+  "promisedRiders": 81,
+  "alighted": 81,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 678,
+  "decisionFrames": 678,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 35
+  },
+  "latePickups": 1,
+  "sumDropC": 1041174,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 678,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 81,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181118-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 67,
+   "rejected": 41
+  },
+  "promisedRiders": 67,
+  "alighted": 67,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 575,
+  "decisionFrames": 575,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 114
+  },
+  "latePickups": 1,
+  "sumDropC": 1238411,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 575,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 67,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181118-s10-r2-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r2-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 83,
+   "rejected": 25
+  },
+  "promisedRiders": 83,
+  "alighted": 83,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 688,
+  "decisionFrames": 688,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 4
+  },
+  "latePickups": 0,
+  "sumDropC": 634094,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 688,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 83,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181118-s10-r3-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r3-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 56,
+   "rejected": 52
+  },
+  "promisedRiders": 56,
+  "alighted": 56,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 501,
+  "decisionFrames": 501,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 896285,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 501,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 56,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181118-s10-r3-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r3-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 73,
+   "rejected": 35
+  },
+  "promisedRiders": 73,
+  "alighted": 73,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 623,
+  "decisionFrames": 623,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 42
+  },
+  "latePickups": 1,
+  "sumDropC": 1256763,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 623,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 73,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181118-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 71,
+   "rejected": 37
+  },
+  "promisedRiders": 71,
+  "alighted": 71,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 596,
+  "decisionFrames": 596,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 1
+  },
+  "latePickups": 1,
+  "sumDropC": 781160,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 596,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 71,
+  "judgeExamples": []
+ },
+ {
+  "arm": "U",
+  "cell": "d20181118-s10-r4-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r4-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 83,
+   "rejected": 25
+  },
+  "promisedRiders": 83,
+  "alighted": 83,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 695,
+  "decisionFrames": 695,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 1336013,
+  "forecastActive": false,
+  "pruneClassesOwn": {},
+  "dropWitnessLimits": {},
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {},
+  "judgeAckedDecisions": 695,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 83,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181114-s10-r3-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 47,
+   "rejected": 61
+  },
+  "promisedRiders": 47,
+  "alighted": 47,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 442,
+  "decisionFrames": 442,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 254
+  },
+  "latePickups": 4,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 9
+  },
+  "dropWitnessLimits": {
+   "30000": 9
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 9
+  },
+  "judgeAckedDecisions": 442,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 47,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181114-s10-r3-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 73,
+   "rejected": 35
+  },
+  "promisedRiders": 73,
+  "alighted": 73,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 621,
+  "decisionFrames": 621,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 7049,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 32
+  },
+  "dropWitnessLimits": {
+   "30000": 32
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 32
+  },
+  "judgeAckedDecisions": 621,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 73,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181114-s10-r3-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w17-rerun1",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 90,
+   "rejected": 18
+  },
+  "promisedRiders": 90,
+  "alighted": 90,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 740,
+  "decisionFrames": 740,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 5938,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 48
+  },
+  "dropWitnessLimits": {
+   "30000": 48
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 48
+  },
+  "judgeAckedDecisions": 740,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 90,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181114-s10-r4-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 53,
+   "rejected": 55
+  },
+  "promisedRiders": 53,
+  "alighted": 53,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 479,
+  "decisionFrames": 479,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 251
+  },
+  "latePickups": 4,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 7
+  },
+  "dropWitnessLimits": {
+   "30000": 7
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 7
+  },
+  "judgeAckedDecisions": 479,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 53,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181114-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 87,
+   "rejected": 21
+  },
+  "promisedRiders": 87,
+  "alighted": 87,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 718,
+  "decisionFrames": 718,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 105
+  },
+  "latePickups": 2,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 30
+  },
+  "dropWitnessLimits": {
+   "30000": 30
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 30
+  },
+  "judgeAckedDecisions": 718,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 87,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181114-s10-r4-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 89,
+   "rejected": 19
+  },
+  "promisedRiders": 89,
+  "alighted": 89,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 730,
+  "decisionFrames": 730,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 7493,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 54
+  },
+  "dropWitnessLimits": {
+   "30000": 54
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 54
+  },
+  "judgeAckedDecisions": 730,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 89,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181115-s10-r1-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r1-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 44,
+   "rejected": 64
+  },
+  "promisedRiders": 44,
+  "alighted": 44,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 421,
+  "decisionFrames": 421,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 118
+  },
+  "latePickups": 2,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 7
+  },
+  "dropWitnessLimits": {
+   "30000": 7
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 7
+  },
+  "judgeAckedDecisions": 421,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 44,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181115-s10-r1-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r1-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 70,
+   "rejected": 38
+  },
+  "promisedRiders": 70,
+  "alighted": 70,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 598,
+  "decisionFrames": 598,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 49
+  },
+  "latePickups": 2,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 22
+  },
+  "dropWitnessLimits": {
+   "30000": 22
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 22
+  },
+  "judgeAckedDecisions": 598,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 70,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181115-s10-r2-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r2-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 58,
+   "rejected": 50
+  },
+  "promisedRiders": 58,
+  "alighted": 58,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 514,
+  "decisionFrames": 514,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 380
+  },
+  "latePickups": 4,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 17
+  },
+  "dropWitnessLimits": {
+   "30000": 17
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 17
+  },
+  "judgeAckedDecisions": 514,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 58,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181115-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 80,
+   "rejected": 28
+  },
+  "promisedRiders": 80,
+  "alighted": 80,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 674,
+  "decisionFrames": 674,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 32
+  },
+  "latePickups": 1,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 17
+  },
+  "dropWitnessLimits": {
+   "30000": 17
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 17
+  },
+  "judgeAckedDecisions": 674,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 80,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181115-s10-r4-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r4-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 45,
+   "rejected": 63
+  },
+  "promisedRiders": 45,
+  "alighted": 45,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 428,
+  "decisionFrames": 428,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 272
+  },
+  "latePickups": 2,
+  "sumDropC": 14264,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 3
+  },
+  "dropWitnessLimits": {
+   "30000": 3
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 3
+  },
+  "judgeAckedDecisions": 428,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 45,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181115-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 79,
+   "rejected": 29
+  },
+  "promisedRiders": 79,
+  "alighted": 79,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 661,
+  "decisionFrames": 661,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 37
+  },
+  "latePickups": 2,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 19
+  },
+  "dropWitnessLimits": {
+   "30000": 19
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 19
+  },
+  "judgeAckedDecisions": 661,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 79,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181116-s10-r1-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 67,
+   "rejected": 41
+  },
+  "promisedRiders": 67,
+  "alighted": 67,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 583,
+  "decisionFrames": 583,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 132
+  },
+  "latePickups": 4,
+  "sumDropC": 29076,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 7
+  },
+  "dropWitnessLimits": {
+   "30000": 7
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 7
+  },
+  "judgeAckedDecisions": 583,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 67,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181116-s10-r1-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 81,
+   "rejected": 27
+  },
+  "promisedRiders": 81,
+  "alighted": 81,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 676,
+  "decisionFrames": 676,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 71
+  },
+  "latePickups": 2,
+  "sumDropC": 10804,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 10
+  },
+  "dropWitnessLimits": {
+   "30000": 10
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 10
+  },
+  "judgeAckedDecisions": 676,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 81,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181116-s10-r1-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 87,
+   "rejected": 21
+  },
+  "promisedRiders": 87,
+  "alighted": 87,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 713,
+  "decisionFrames": 713,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 27603,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 43
+  },
+  "dropWitnessLimits": {
+   "30000": 43
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 43
+  },
+  "judgeAckedDecisions": 713,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 87,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181116-s10-r2-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 62,
+   "rejected": 46
+  },
+  "promisedRiders": 62,
+  "alighted": 62,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 538,
+  "decisionFrames": 538,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 63
+  },
+  "latePickups": 2,
+  "sumDropC": 49950,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 9
+  },
+  "dropWitnessLimits": {
+   "30000": 9
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 9
+  },
+  "judgeAckedDecisions": 538,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 62,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181116-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 70,
+   "rejected": 38
+  },
+  "promisedRiders": 70,
+  "alighted": 70,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 600,
+  "decisionFrames": 600,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 66
+  },
+  "latePickups": 2,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 17
+  },
+  "dropWitnessLimits": {
+   "30000": 17
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 17
+  },
+  "judgeAckedDecisions": 600,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 70,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181116-s10-r2-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 82,
+   "rejected": 26
+  },
+  "promisedRiders": 82,
+  "alighted": 82,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 681,
+  "decisionFrames": 681,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 36
+  },
+  "dropWitnessLimits": {
+   "30000": 36
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 36
+  },
+  "judgeAckedDecisions": 681,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 82,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181116-s10-r4-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 68,
+   "rejected": 40
+  },
+  "promisedRiders": 68,
+  "alighted": 68,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 590,
+  "decisionFrames": 590,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 240
+  },
+  "latePickups": 2,
+  "sumDropC": 2716,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 5
+  },
+  "dropWitnessLimits": {
+   "30000": 5
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 5
+  },
+  "judgeAckedDecisions": 590,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 68,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181116-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 69,
+   "rejected": 39
+  },
+  "promisedRiders": 69,
+  "alighted": 69,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 599,
+  "decisionFrames": 599,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 16
+  },
+  "dropWitnessLimits": {
+   "30000": 16
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 16
+  },
+  "judgeAckedDecisions": 599,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 69,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181116-s10-r4-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 70,
+   "rejected": 38
+  },
+  "promisedRiders": 70,
+  "alighted": 70,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 598,
+  "decisionFrames": 598,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 24
+  },
+  "latePickups": 1,
+  "sumDropC": 65589,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 50
+  },
+  "dropWitnessLimits": {
+   "30000": 50
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 50
+  },
+  "judgeAckedDecisions": 598,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 70,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181117-s10-r1-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r1-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 62,
+   "rejected": 46
+  },
+  "promisedRiders": 62,
+  "alighted": 62,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 541,
+  "decisionFrames": 541,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 86
+  },
+  "latePickups": 0,
+  "sumDropC": 2910,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 14
+  },
+  "dropWitnessLimits": {
+   "30000": 14
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 14
+  },
+  "judgeAckedDecisions": 541,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 62,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181117-s10-r1-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r1-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 63,
+   "rejected": 45
+  },
+  "promisedRiders": 63,
+  "alighted": 63,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 548,
+  "decisionFrames": 548,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 75850,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 38
+  },
+  "dropWitnessLimits": {
+   "30000": 38
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 38
+  },
+  "judgeAckedDecisions": 548,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 63,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181117-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 74,
+   "rejected": 34
+  },
+  "promisedRiders": 74,
+  "alighted": 74,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 627,
+  "decisionFrames": 627,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 112
+  },
+  "latePickups": 3,
+  "sumDropC": 0,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 14
+  },
+  "dropWitnessLimits": {
+   "30000": 14
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 14
+  },
+  "judgeAckedDecisions": 627,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 74,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181117-s10-r2-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r2-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 69,
+   "rejected": 39
+  },
+  "promisedRiders": 69,
+  "alighted": 69,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 588,
+  "decisionFrames": 588,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 19890,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 44
+  },
+  "dropWitnessLimits": {
+   "30000": 44
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 44
+  },
+  "judgeAckedDecisions": 588,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 69,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181117-s10-r3-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 67,
+   "rejected": 41
+  },
+  "promisedRiders": 67,
+  "alighted": 67,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 581,
+  "decisionFrames": 581,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 117
+  },
+  "latePickups": 1,
+  "sumDropC": 1,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 21
+  },
+  "dropWitnessLimits": {
+   "30000": 21
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 21
+  },
+  "judgeAckedDecisions": 581,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 67,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181117-s10-r3-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 52,
+   "rejected": 56
+  },
+  "promisedRiders": 52,
+  "alighted": 52,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 478,
+  "decisionFrames": 478,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 8295,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 12
+  },
+  "dropWitnessLimits": {
+   "30000": 12
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 12
+  },
+  "judgeAckedDecisions": 478,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 52,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181117-s10-r3-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 77,
+   "rejected": 31
+  },
+  "promisedRiders": 77,
+  "alighted": 77,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 653,
+  "decisionFrames": 653,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 0,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 38
+  },
+  "dropWitnessLimits": {
+   "30000": 38
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 38
+  },
+  "judgeAckedDecisions": 653,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 77,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181118-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 62,
+   "rejected": 46
+  },
+  "promisedRiders": 62,
+  "alighted": 62,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 543,
+  "decisionFrames": 543,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 22
+  },
+  "latePickups": 1,
+  "sumDropC": 1,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 21
+  },
+  "dropWitnessLimits": {
+   "30000": 21
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 21
+  },
+  "judgeAckedDecisions": 543,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 62,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181118-s10-r2-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r2-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 78,
+   "rejected": 30
+  },
+  "promisedRiders": 78,
+  "alighted": 78,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 656,
+  "decisionFrames": 656,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 23461,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 51
+  },
+  "dropWitnessLimits": {
+   "30000": 51
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 51
+  },
+  "judgeAckedDecisions": 656,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 78,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181118-s10-r3-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r3-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 52,
+   "rejected": 56
+  },
+  "promisedRiders": 52,
+  "alighted": 52,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 477,
+  "decisionFrames": 477,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 8281,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 11
+  },
+  "dropWitnessLimits": {
+   "30000": 11
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 11
+  },
+  "judgeAckedDecisions": 477,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 52,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181118-s10-r3-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r3-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 70,
+   "rejected": 38
+  },
+  "promisedRiders": 70,
+  "alighted": 70,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 600,
+  "decisionFrames": 600,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 42
+  },
+  "latePickups": 1,
+  "sumDropC": 0,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 45
+  },
+  "dropWitnessLimits": {
+   "30000": 45
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 45
+  },
+  "judgeAckedDecisions": 600,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 70,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181118-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 64,
+   "rejected": 44
+  },
+  "promisedRiders": 64,
+  "alighted": 64,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 549,
+  "decisionFrames": 549,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 15
+  },
+  "latePickups": 1,
+  "sumDropC": 1,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 26
+  },
+  "dropWitnessLimits": {
+   "30000": 26
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 26
+  },
+  "judgeAckedDecisions": 549,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 64,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-30",
+  "cell": "d20181118-s10-r4-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r4-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 77,
+   "rejected": 31
+  },
+  "promisedRiders": 77,
+  "alighted": 77,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 656,
+  "decisionFrames": 656,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 1,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 52
+  },
+  "dropWitnessLimits": {
+   "30000": 52
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 52
+  },
+  "judgeAckedDecisions": 656,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 77,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181114-s10-r3-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 47,
+   "rejected": 61
+  },
+  "promisedRiders": 47,
+  "alighted": 47,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 442,
+  "decisionFrames": 442,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 254
+  },
+  "latePickups": 4,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 7
+  },
+  "dropWitnessLimits": {
+   "120000": 7
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 7
+  },
+  "judgeAckedDecisions": 442,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 47,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181114-s10-r3-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 71,
+   "rejected": 37
+  },
+  "promisedRiders": 71,
+  "alighted": 71,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 613,
+  "decisionFrames": 613,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 324732,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 15,
+   "cumulative-only": 1
+  },
+  "dropWitnessLimits": {
+   "120000": 16
+  },
+  "cumulativeOnlyOwn": [
+   {
+    "decisionHash": "97e7a540d994691cd0f7829442faf6c8f758b9474bc50c1cc269b8a060b5e465",
+    "newRequestIds": [
+     "rq-ebccd435e2ebc9c855aadd78099a397098d00b6e8db52dc6b4b715e8ad0b7c79"
+    ],
+    "witness": [
+     [
+      "rq-7cfd6335300df902a18021e43c851939ee2979b40bb3460c319f59ff30396d0d",
+      25844,
+      99027,
+      124871,
+      120000
+     ]
+    ]
+   }
+  ],
+  "pruneClassesJudge": {
+   "per-step-also": 15,
+   "cumulative-only": 1
+  },
+  "judgeAckedDecisions": 613,
+  "judgeDecisionsWithCumulativeOnly": 1,
+  "judgeRequestsWithCumulativeOnly": 1,
+  "judgeOfWhichFinallyRejected": 1,
+  "judgeServed": 71,
+  "judgeExamples": [
+   [
+    "C-120-d20181114-s10-r3-w08",
+    [
+     "rq-ebccd435e2ebc9c855aadd78099a397098d00b6e8db52dc6b4b715e8ad0b7c79"
+    ],
+    [
+     [
+      "rq-7cfd6335300df902a18021e43c851939ee2979b40bb3460c319f59ff30396d0d",
+      25844,
+      99027,
+      124871,
+      120000
+     ]
+    ]
+   ]
+  ]
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181114-s10-r3-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 93,
+   "rejected": 15
+  },
+  "promisedRiders": 93,
+  "alighted": 93,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 760,
+  "decisionFrames": 760,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 237166,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 22
+  },
+  "dropWitnessLimits": {
+   "120000": 22
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 22
+  },
+  "judgeAckedDecisions": 760,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 93,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181114-s10-r4-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 53,
+   "rejected": 55
+  },
+  "promisedRiders": 53,
+  "alighted": 53,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 479,
+  "decisionFrames": 479,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 251
+  },
+  "latePickups": 4,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 4
+  },
+  "dropWitnessLimits": {
+   "120000": 4
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 4
+  },
+  "judgeAckedDecisions": 479,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 53,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181114-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 89,
+   "rejected": 19
+  },
+  "promisedRiders": 89,
+  "alighted": 89,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 731,
+  "decisionFrames": 731,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 105
+  },
+  "latePickups": 2,
+  "sumDropC": 218865,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 13
+  },
+  "dropWitnessLimits": {
+   "120000": 13
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 13
+  },
+  "judgeAckedDecisions": 731,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 89,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181114-s10-r4-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 90,
+   "rejected": 18
+  },
+  "promisedRiders": 90,
+  "alighted": 90,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 736,
+  "decisionFrames": 736,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 56919,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 34
+  },
+  "dropWitnessLimits": {
+   "120000": 34
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 34
+  },
+  "judgeAckedDecisions": 736,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 90,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181115-s10-r1-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r1-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 44,
+   "rejected": 64
+  },
+  "promisedRiders": 44,
+  "alighted": 44,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 421,
+  "decisionFrames": 421,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 118
+  },
+  "latePickups": 2,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 3
+  },
+  "dropWitnessLimits": {
+   "120000": 3
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 3
+  },
+  "judgeAckedDecisions": 421,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 44,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181115-s10-r1-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r1-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 78,
+   "rejected": 30
+  },
+  "promisedRiders": 78,
+  "alighted": 78,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 652,
+  "decisionFrames": 652,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 42
+  },
+  "latePickups": 2,
+  "sumDropC": 198845,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 13,
+   "cumulative-only": 1
+  },
+  "dropWitnessLimits": {
+   "120000": 14
+  },
+  "cumulativeOnlyOwn": [
+   {
+    "decisionHash": "5b2ca6ae8c49671471f52330d5f84f13c7b078fdc499a6529ddf646a373cba15",
+    "newRequestIds": [
+     "rq-fe75a63d2e6d4fcb2776555e6dd663cba86d0ac9cd24224b028cd5f6cacab896"
+    ],
+    "witness": [
+     [
+      "rq-31a067b0fbee1f80806cf6c101245f713e0c684ebe538ec98715c87a291a0415",
+      58874,
+      91584,
+      150458,
+      120000
+     ]
+    ]
+   }
+  ],
+  "pruneClassesJudge": {
+   "per-step-also": 13,
+   "cumulative-only": 1
+  },
+  "judgeAckedDecisions": 652,
+  "judgeDecisionsWithCumulativeOnly": 1,
+  "judgeRequestsWithCumulativeOnly": 1,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 78,
+  "judgeExamples": [
+   [
+    "C-120-d20181115-s10-r1-w08",
+    [
+     "rq-fe75a63d2e6d4fcb2776555e6dd663cba86d0ac9cd24224b028cd5f6cacab896"
+    ],
+    [
+     [
+      "rq-31a067b0fbee1f80806cf6c101245f713e0c684ebe538ec98715c87a291a0415",
+      58874,
+      91584,
+      150458,
+      120000
+     ]
+    ]
+   ]
+  ]
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181115-s10-r2-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r2-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 58,
+   "rejected": 50
+  },
+  "promisedRiders": 58,
+  "alighted": 58,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 514,
+  "decisionFrames": 514,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 380
+  },
+  "latePickups": 4,
+  "sumDropC": 0,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 14
+  },
+  "dropWitnessLimits": {
+   "120000": 14
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 14
+  },
+  "judgeAckedDecisions": 514,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 58,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181115-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 83,
+   "rejected": 25
+  },
+  "promisedRiders": 83,
+  "alighted": 83,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 694,
+  "decisionFrames": 694,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 32
+  },
+  "latePickups": 1,
+  "sumDropC": 266073,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 9
+  },
+  "dropWitnessLimits": {
+   "120000": 9
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 9
+  },
+  "judgeAckedDecisions": 694,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 83,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181115-s10-r4-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r4-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 45,
+   "rejected": 63
+  },
+  "promisedRiders": 45,
+  "alighted": 45,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 428,
+  "decisionFrames": 428,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 256
+  },
+  "latePickups": 2,
+  "sumDropC": 126753,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 1
+  },
+  "dropWitnessLimits": {
+   "120000": 1
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 1
+  },
+  "judgeAckedDecisions": 428,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 45,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181115-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 81,
+   "rejected": 27
+  },
+  "promisedRiders": 81,
+  "alighted": 81,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 677,
+  "decisionFrames": 677,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 41
+  },
+  "latePickups": 1,
+  "sumDropC": 193287,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 10
+  },
+  "dropWitnessLimits": {
+   "120000": 10
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 10
+  },
+  "judgeAckedDecisions": 677,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 81,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181116-s10-r1-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 67,
+   "rejected": 41
+  },
+  "promisedRiders": 67,
+  "alighted": 67,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 583,
+  "decisionFrames": 583,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 132
+  },
+  "latePickups": 4,
+  "sumDropC": 29076,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 3
+  },
+  "dropWitnessLimits": {
+   "120000": 3
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 3
+  },
+  "judgeAckedDecisions": 583,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 67,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181116-s10-r1-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 81,
+   "rejected": 27
+  },
+  "promisedRiders": 81,
+  "alighted": 81,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 676,
+  "decisionFrames": 676,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 71
+  },
+  "latePickups": 2,
+  "sumDropC": 10804,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 5
+  },
+  "dropWitnessLimits": {
+   "120000": 5
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 5
+  },
+  "judgeAckedDecisions": 676,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 81,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181116-s10-r1-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 85,
+   "rejected": 23
+  },
+  "promisedRiders": 85,
+  "alighted": 85,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 697,
+  "decisionFrames": 697,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 96536,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 26
+  },
+  "dropWitnessLimits": {
+   "120000": 26
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 26
+  },
+  "judgeAckedDecisions": 697,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 85,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181116-s10-r2-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 65,
+   "rejected": 43
+  },
+  "promisedRiders": 65,
+  "alighted": 65,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 559,
+  "decisionFrames": 559,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 103
+  },
+  "latePickups": 4,
+  "sumDropC": 169491,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 5
+  },
+  "dropWitnessLimits": {
+   "120000": 5
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 5
+  },
+  "judgeAckedDecisions": 559,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 65,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181116-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 72,
+   "rejected": 36
+  },
+  "promisedRiders": 72,
+  "alighted": 72,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 613,
+  "decisionFrames": 613,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 88
+  },
+  "latePickups": 2,
+  "sumDropC": 217416,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 8
+  },
+  "dropWitnessLimits": {
+   "120000": 8
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 8
+  },
+  "judgeAckedDecisions": 613,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 72,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181116-s10-r2-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 83,
+   "rejected": 25
+  },
+  "promisedRiders": 83,
+  "alighted": 83,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 688,
+  "decisionFrames": 688,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 100639,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 26
+  },
+  "dropWitnessLimits": {
+   "120000": 26
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 26
+  },
+  "judgeAckedDecisions": 688,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 83,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181116-s10-r4-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 68,
+   "rejected": 40
+  },
+  "promisedRiders": 68,
+  "alighted": 68,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 590,
+  "decisionFrames": 590,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 240
+  },
+  "latePickups": 2,
+  "sumDropC": 2716,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 2
+  },
+  "dropWitnessLimits": {
+   "120000": 2
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 2
+  },
+  "judgeAckedDecisions": 590,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 68,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181116-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 71,
+   "rejected": 37
+  },
+  "promisedRiders": 71,
+  "alighted": 71,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 612,
+  "decisionFrames": 612,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 125036,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 12
+  },
+  "dropWitnessLimits": {
+   "120000": 12
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 12
+  },
+  "judgeAckedDecisions": 612,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 71,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181116-s10-r4-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 71,
+   "rejected": 37
+  },
+  "promisedRiders": 71,
+  "alighted": 71,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 605,
+  "decisionFrames": 605,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 27
+  },
+  "latePickups": 1,
+  "sumDropC": 168556,
+  "forecastActive": true,
+  "pruneClassesOwn": {
+   "per-step-also": 36
+  },
+  "dropWitnessLimits": {
+   "120000": 36
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 36
+  },
+  "judgeAckedDecisions": 605,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 71,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181117-s10-r1-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r1-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 61,
+   "rejected": 47
+  },
+  "promisedRiders": 61,
+  "alighted": 61,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 535,
+  "decisionFrames": 535,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 86
+  },
+  "latePickups": 0,
+  "sumDropC": 78554,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 9
+  },
+  "dropWitnessLimits": {
+   "120000": 9
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 9
+  },
+  "judgeAckedDecisions": 535,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 61,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181117-s10-r1-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r1-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 66,
+   "rejected": 42
+  },
+  "promisedRiders": 66,
+  "alighted": 66,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 570,
+  "decisionFrames": 570,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 316167,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 21
+  },
+  "dropWitnessLimits": {
+   "120000": 21
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 21
+  },
+  "judgeAckedDecisions": 570,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 66,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181117-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 75,
+   "rejected": 33
+  },
+  "promisedRiders": 75,
+  "alighted": 75,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 634,
+  "decisionFrames": 634,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 112
+  },
+  "latePickups": 3,
+  "sumDropC": 141924,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 8
+  },
+  "dropWitnessLimits": {
+   "120000": 8
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 8
+  },
+  "judgeAckedDecisions": 634,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 75,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181117-s10-r2-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r2-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 72,
+   "rejected": 36
+  },
+  "promisedRiders": 72,
+  "alighted": 72,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 607,
+  "decisionFrames": 607,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 14
+  },
+  "latePickups": 1,
+  "sumDropC": 384547,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 33
+  },
+  "dropWitnessLimits": {
+   "120000": 33
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 33
+  },
+  "judgeAckedDecisions": 607,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 72,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181117-s10-r3-w07",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w07",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 68,
+   "rejected": 40
+  },
+  "promisedRiders": 68,
+  "alighted": 68,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 588,
+  "decisionFrames": 588,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 117
+  },
+  "latePickups": 1,
+  "sumDropC": 104871,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 15
+  },
+  "dropWitnessLimits": {
+   "120000": 15
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 15
+  },
+  "judgeAckedDecisions": 588,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 68,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181117-s10-r3-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 54,
+   "rejected": 54
+  },
+  "promisedRiders": 54,
+  "alighted": 54,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 492,
+  "decisionFrames": 492,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 287399,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 6
+  },
+  "dropWitnessLimits": {
+   "120000": 6
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 6
+  },
+  "judgeAckedDecisions": 492,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 54,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181117-s10-r3-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 81,
+   "rejected": 27
+  },
+  "promisedRiders": 81,
+  "alighted": 81,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 680,
+  "decisionFrames": 680,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 199079,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 23
+  },
+  "dropWitnessLimits": {
+   "120000": 23
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 23
+  },
+  "judgeAckedDecisions": 680,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 81,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181118-s10-r2-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r2-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 64,
+   "rejected": 44
+  },
+  "promisedRiders": 64,
+  "alighted": 64,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 554,
+  "decisionFrames": 554,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 22
+  },
+  "latePickups": 1,
+  "sumDropC": 394197,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 11
+  },
+  "dropWitnessLimits": {
+   "120000": 11
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 11
+  },
+  "judgeAckedDecisions": 554,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 64,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181118-s10-r2-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r2-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 79,
+   "rejected": 29
+  },
+  "promisedRiders": 79,
+  "alighted": 79,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 663,
+  "decisionFrames": 663,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 228341,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 40
+  },
+  "dropWitnessLimits": {
+   "120000": 40
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 40
+  },
+  "judgeAckedDecisions": 663,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 79,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181118-s10-r3-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r3-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 53,
+   "rejected": 55
+  },
+  "promisedRiders": 53,
+  "alighted": 53,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 482,
+  "decisionFrames": 482,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 294703,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 6,
+   "cumulative-only": 1
+  },
+  "dropWitnessLimits": {
+   "120000": 7
+  },
+  "cumulativeOnlyOwn": [
+   {
+    "decisionHash": "c9fb376c2f4277ba39673f243e65e854944149962a537020b6a42f2ba74c3a58",
+    "newRequestIds": [
+     "rq-3e358915954c9c23fe14927283f55aeba6bdd926a27af04325b52ca19267f235"
+    ],
+    "witness": [
+     [
+      "rq-7f2c511678c6ae19255fdfeb155772c6504c4e65f96215352368d4456d3eb5ee",
+      105508,
+      99301,
+      204809,
+      120000
+     ]
+    ]
+   }
+  ],
+  "pruneClassesJudge": {
+   "per-step-also": 6,
+   "cumulative-only": 1
+  },
+  "judgeAckedDecisions": 482,
+  "judgeDecisionsWithCumulativeOnly": 1,
+  "judgeRequestsWithCumulativeOnly": 1,
+  "judgeOfWhichFinallyRejected": 1,
+  "judgeServed": 53,
+  "judgeExamples": [
+   [
+    "C-120-d20181118-s10-r3-w08",
+    [
+     "rq-3e358915954c9c23fe14927283f55aeba6bdd926a27af04325b52ca19267f235"
+    ],
+    [
+     [
+      "rq-7f2c511678c6ae19255fdfeb155772c6504c4e65f96215352368d4456d3eb5ee",
+      105508,
+      99301,
+      204809,
+      120000
+     ]
+    ]
+   ]
+  ]
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181118-s10-r3-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r3-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 71,
+   "rejected": 37
+  },
+  "promisedRiders": 71,
+  "alighted": 71,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 608,
+  "decisionFrames": 608,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 42
+  },
+  "latePickups": 1,
+  "sumDropC": 191273,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 30
+  },
+  "dropWitnessLimits": {
+   "120000": 30
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 30
+  },
+  "judgeAckedDecisions": 608,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 71,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181118-s10-r4-w08",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r4-w08",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 68,
+   "rejected": 40
+  },
+  "promisedRiders": 68,
+  "alighted": 68,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 577,
+  "decisionFrames": 577,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {
+   "exogenousServiceQuality": 15
+  },
+  "latePickups": 1,
+  "sumDropC": 273364,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 13
+  },
+  "dropWitnessLimits": {
+   "120000": 13
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 13
+  },
+  "judgeAckedDecisions": 577,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 68,
+  "judgeExamples": []
+ },
+ {
+  "arm": "C-120",
+  "cell": "d20181118-s10-r4-w17",
+  "run": "C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r4-w17",
+  "summaryStatus": "pass",
+  "run00Status": "succeeded",
+  "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+  "requests": 108,
+  "lifecycle": {
+   "completed": 80,
+   "rejected": 28
+  },
+  "promisedRiders": 80,
+  "alighted": 80,
+  "alightedWithoutPromise": 0,
+  "decisionsAcknowledged": 675,
+  "decisionFrames": 675,
+  "nonNormalCertificates": 0,
+  "ridersWithForcedBreach": 0,
+  "breaches": {},
+  "latePickups": 0,
+  "sumDropC": 278941,
+  "forecastActive": false,
+  "pruneClassesOwn": {
+   "per-step-also": 38
+  },
+  "dropWitnessLimits": {
+   "120000": 38
+  },
+  "cumulativeOnlyOwn": [],
+  "pruneClassesJudge": {
+   "per-step-also": 38
+  },
+  "judgeAckedDecisions": 675,
+  "judgeDecisionsWithCumulativeOnly": 0,
+  "judgeRequestsWithCumulativeOnly": 0,
+  "judgeOfWhichFinallyRejected": 0,
+  "judgeServed": 80,
+  "judgeExamples": []
+ }
+]

@@ -1,0 +1,119 @@
+﻿===== critic:plainreport
+E1. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:99-101 (the 'same ruler' paragraph), read against the table at line 70
+   PROBLEM: The numbers are right, but the paragraph gives the paper's rule 18,4% at 30 s on synthetic traffic, while the table three lines above gives 18,8% for the same thing. 18,8% is recovery rule (a) and 18,4% is rule (b), and the report only says which is which in a pointer to a later section. The wording 'xe ... trễ 17,7%' also reads as 'the vehicles were 17.7% late', when it means 17.7% of riders arrived more than 30 s after their first promised time.
+   EVIDENCE: Recomputed from sweep-jobs/noworse-jobs TSVs (synthetic W1,W2,W4, mean over 6 cells): C scored by the M+ rule = 0.1767, M+(a) = 0.1881, M+(b) = 0.1842. Sources: SWEEP-REPORT.md:77 (18,8% / 17,7%), 08-chuong4.tex:1195 (bang:quet 18,8 / 17,7) and 08-chuong4.tex:1312 (bang:quetb 18,4%).
+   FIX: Say it outright, for example: '17,7% khách của cách hứa khóa luận và 18,4% khách của cách hứa bài báo (khi dùng cách xử lý bế tắc mới ở mục sau; với cách cũ là 18,8% như trong bảng) đến muộn quá 30 giây so với giờ hẹn ban đầu.'
+
+E2. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:126-127 ('đường tắc thêm sau khi họ đã được nhận lên xe')
+   PROBLEM: 'Nhận lên xe' reads as 'after they got into the car'. For the report's own example rider that is false: the jam hit before the rider was picked up.
+   EVIDENCE: Mplus-120-W1-w08 (no-worse run), rider rq-f7fe63cb…: arrivalTimeMs 1554000 (25:54). The jam revision is at publishedAtMs 1800000 (30:00), with x = +250924 ms on drop and c = 0. Boarded (event_times) 32:32, alighted 41:09. W1.json base [1.0,1.0,1.6,…] puts the 1.6 factor in bin 2, which starts at 30:00.
+   FIX: Write 'sau khi họ đã đặt xe và được hứa giờ' (after booking and getting a promised time), not 'sau khi được nhận lên xe'.
+
+E3. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:121-122 ('Mỗi khách trễ ngồi trên xe bao lâu thì mọi lần quyết định trong thời gian đó đều bị đánh dấu')
+   PROBLEM: Forced marking does not start when the rider gets in. It starts when the promise becomes impossible to keep, which can be before pickup, and lasts until drop-off. Also, '~17 per rider' is total forced decisions divided by riders, not a count per rider: one forced decision can involve several late riders at once.
+   EVIDENCE: Example rider (Mplus-120-W1-w08 no-worse run): 62 forced-breach records running from 30:00 to 41:09; 8 of them are before boarding at 32:32. The ratio is 3789 non-normal decisions / 224 riders = 16.9 (recomputed from noworse-jobs-2026-09-26.tsv).
+   FIX: Write 'từ lúc lời hứa của khách không còn giữ được cho tới khi khách xuống xe…' and 'tính bình quân khoảng 17 lần quyết định bị đánh dấu cho mỗi khách trễ'.
+
+E4. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:150-151 ('Tắc đường là một hệ số chung cho cả thành phố mỗi 15 phút')
+   PROBLEM: This is wrong for the pairwise-noise world W4. It also contradicts the report's own line 34-35 ('tắc lệch ngẫu nhiên giữa các cặp điểm').
+   EVIDENCE: pilot/worlds/W4.json: sigma 0.08, shockRate 0.02. world_v1.py:8-13 and :76-81 define the factor per OD pair, f(od,b) = base(b)*exp(L(od,b))*(1+S(od,b)). Only W0-W3 and W5 have sigma 0 and shockRate 0 (a single scalar per bin).
+   FIX: 'Trừ kiểu tắc lệch ngẫu nhiên, tắc đường là một hệ số chung cho cả thành phố, đổi mỗi 15 phút.'
+
+E5. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:39-40 ('Một người kiểm tra độc lập tự viết chương trình riêng… và ra đúng cùng các con số')
+   PROBLEM: Overstated on three counts. (1) The checker was another AI agent, not a person. (2) It checked the T3.6 smoke episodes and the T3.7 pilot, not the 156-run sweep or the 28 no-worse runs this report presents. (3) In the pilot check one figure did not match and had to be corrected.
+   EVIDENCE: evidence/README.md:25 ('do một agent khác viết từ đặc tả'). evidence/README.md:28-42 (two smoke episodes). T3.7-BAO-CAO-THI-DIEM.md:258-262 ('7/8 khớp chính xác… 1 lệch: … 265 s…, không phải 149 s'). SWEEP-REPORT.md §2 and §7 mention no independent re-implementation for the sweep.
+   FIX: 'Ở giai đoạn thử nghiệm trước, một chương trình kiểm tra viết độc lập (bởi một agent khác) tính lại các con số từ dữ liệu gốc; nó tìm ra một chỗ sai, và chỗ đó đã được sửa. Các lần chạy quét ở đây dùng lại chính công cụ kiểm tra đã được đối chiếu đó.'
+
+E6. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:126 ('Chúng tôi xem lại 10 khách bị thất hứa. Cả 10 người…')
+   PROBLEM: None of the listed sources contain the figure '10 khách'. It is not said which 10 riders were reviewed. A full recount supports a stronger claim, but not quite 'all'.
+   EVIDENCE: Grep for '10 khách' across tang3 and the thesis finds only unrelated hits. Recount over the 22 M+(b) treatment runs (audit_vep + event_times): 222 riders with A > x; 220 have system-caused part C_r = 0; 2 (Mplus-30-W4-d20181112-s10-r1-w08) have 0 < C_r ≤ 9.3 s; none has C_r > x.
+   FIX: Replace with a figure that can be traced: 'Trong 222 khách bị thất hứa ở 22 lần chạy có bế tắc, 220 người không bị hệ thống làm trễ giây nào; 2 người còn lại bị hệ thống làm trễ tối đa khoảng 9 giây.' Also cite the script that produced it.
+
+E7. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:138-139 ('Hai cách chỉ khác nhau khi đường tắc thêm đột ngột')
+   PROBLEM: Overstated. The two rules also differ on the real, gradual traffic at 30 s: the paper's rule broke its promise to 2.2% of morning riders, while the thesis rule broke 0%.
+   EVIDENCE: sweep-view-2026-09-26.txt:95 (W5 w08, x=30: M+ A>x 0.022). Report line 88 and SWEEP-REPORT.md:200. The real 12/11 morning factor rises gradually, with a largest 15-min step of 7.1% in 8-10h (recomputed from 2018-11-12_tt_factors.csv).
+   FIX: 'Hai cách khác nhau rõ khi đường tắc thêm đột ngột; với tắc đường thật, chỉ khác chút ít ở mức hứa 30 giây.'
+
+E8. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:94 ('Xe chậm đi 60% ngay trong 15 phút')
+   PROBLEM: A factor of 1.6 means the trip takes 60% longer, i.e. speed falls to 62.5% (37.5% slower), not '60% slower'. The figure also belongs to the one-shock world only, yet the sentence applies it to all synthetic jams.
+   EVIDENCE: pilot/worlds/W1.json base [1.0, 1.0, 1.6, 1.3, 1.1, 1.0]; W2.json base steps are 1.0→1.5 (+50%) and 1.1→1.5 (+36%). Thesis 08-chuong4.tex:1374 correctly says 'Ở thế giới một cú sốc, hệ số tăng 60%'.
+   FIX: 'Ở kiểu một cú tắc đột ngột, thời gian đi tăng 60% chỉ trong 15 phút…'
+
+E9. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:95-96 ('…và chưa được đối chiếu với số liệu thật')
+   PROBLEM: This contradicts the sentence just before it, which does compare the synthetic jams with real data (16%). It also drops the thesis caveat that the real data does show large rises over a whole hour, so what is untested is only how sudden the jump is.
+   EVIDENCE: 08-chuong4.tex:1379-1382 ('…tới 29–50% trong một giờ… điều chưa có bằng chứng là tính đột ngột… không phải độ lớn tổng'). Recomputed largest 60-min rise from the factor CSVs for 12-16/11: 36.0, 45.5, 50.1, 48.0, 28.8%.
+   FIX: 'Dữ liệu thật cũng có lúc tăng tới 29–50% trong một giờ, nhưng chưa có bước nhảy 60% chỉ trong 15 phút như vậy.'
+
+E10. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:65 ('6 kịch bản'), 76 ('mỗi kiểu 2 kịch bản') vs 144 ('Mới chạy trên hai kịch bản của một ngày')
+   PROBLEM: The word 'kịch bản' is used for two different things. Line 42 defines it as one 2-hour time window, and there are only 2 such windows in total. The '6 kịch bản' on line 65 is 2 windows × 3 kinds of traffic.
+   EVIDENCE: SWEEP-REPORT.md:8 and :70-71 (8 drift cells = 4 worlds × 2 cells; synthetic = W1, W2, W4 with 6 cells); sweep_analyze CELLS = 2 cells.
+   FIX: Write '6 lượt chạy (2 kịch bản × 3 kiểu tắc)', and 'mỗi kiểu chạy trên 2 kịch bản'.
+
+E11. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:120 ('Con số "bị ép ở 24% số lần quyết định" nghe lớn')
+   PROBLEM: The report quotes this figure as if the reader had already seen it, but it appears nowhere earlier. 'Bị ép' (forced) and 'lần quyết định' (the dispatcher's decision steps) are never explained. The 24% also covers only the 22 runs that had deadlocks, under rule (b).
+   EVIDENCE: Recomputed from noworse-jobs-2026-09-26.tsv (22 treatment rows): 3789 non-normal / 15528 decisions = 24.4%; 224 riders with a forced breach; 1874 served. Source: SWEEP-REPORT.md:105-107.
+   FIX: First explain it, e.g.: 'Hệ thống ra quyết định điều xe nhiều lần mỗi phút; một quyết định bị gọi là "bị ép" khi có xe không còn lựa chọn nào giữ được lời hứa. Trong 22 lần chạy có bế tắc, 24% số quyết định là quyết định bị ép…'
+
+E12. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:107-108 ('xe vẫn được nhận thêm khách, miễn là việc đó không làm người đang trễ trễ thêm giây nào')
+   PROBLEM: The description of rule (b) is missing one of its two conditions: the new route must not break any promise the old route kept. As written, it sounds as if only the late rider is protected.
+   EVIDENCE: SWEEP-REPORT.md:138-140 ('mọi cổng mà tuyến mới vi phạm thì tuyến cũ cũng đã vi phạm, và trên từng cổng đó tuyến mới không tệ hơn'); 08-chuong4.tex:1284-1285.
+   FIX: '…miễn là tuyến mới không làm vỡ thêm lời hứa nào khác, và không làm người đang trễ trễ thêm.'
+
+E13. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:118 ('Vậy khoảng chênh nhỏ trước đó đến từ cách xử lý bế tắc cũ, không phải từ bản thân cách hứa.')
+   PROBLEM: This is stated as a firm cause. The evidence is one run per cell, rule (b) was added after the predictions were locked, and the sources themselves say 1–2 rider differences carry no statistical meaning. Rule (b) also sometimes lowers the count (82→79), which the report does not mention.
+   EVIDENCE: SWEEP-REPORT.md:136 (A1 is an amendment made after sealing, descriptive only), :174-175 (Mplus-120-W1-w17: (a) 82, (b) 79), :190 ('Các chênh lệch 1–2 khách không có ý nghĩa thống kê'); 08-chuong4.tex:1400-1401.
+   FIX: 'Điều này gợi ý rằng khoảng chênh nhỏ… đến từ cách xử lý bế tắc cũ (cách xử lý mới được thêm sau khi đã khóa dự đoán, và mỗi kịch bản mới chạy một lần).'
+
+E14. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:127 ('lúc mà không hệ thống nào biết trước được')
+   PROBLEM: Overstated. It was this system that could not see the jam coming, because its forecast just assumes the current road condition will continue. A system that forecasts future traffic could in principle have anticipated it.
+   EVIDENCE: world_v1.py:123-125 (CurrentConditionForecast: the factor of the current bin 'held flat for the future'; it never reads future bins).
+   FIX: '…lúc mà hệ thống không thể biết trước (nó chỉ dự báo theo tình trạng đường hiện tại).'
+
+E15. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:34 ('tắc và thông xen kẽ')
+   PROBLEM: Slightly inaccurate. The repeated-shock world alternates between heavy and lighter congestion (1.5 and 1.1); the road is never fully clear again until the last step.
+   EVIDENCE: pilot/worlds/W2.json base [1.0, 1.5, 1.1, 1.5, 1.1, 1.5, 1.1, 1.0]; 08-chuong4.tex:1218 ('1,5 và 1,1 luân phiên mỗi 15 phút').
+   FIX: 'tắc nặng và tắc nhẹ xen kẽ mỗi 15 phút'.
+
+E16. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:152 ('chưa qua được bộ kiểm tra chính thức của dự án')
+   PROBLEM: 'Chưa qua được' reads as 'failed the check'. In fact the traffic-changing runs are simply outside what the project's official validator covers, and all of them completed with status pass.
+   EVIDENCE: SWEEP-REPORT.md:28 (156/156 status: pass, v/e/p audit correct for all 156) and :144 (28/28); 08-chuong4.tex:1125 ('các lần chạy có trôi dạt không qua bộ kiểm chứng của dự án').
+   FIX: 'Bộ kiểm tra chính thức của dự án chưa hỗ trợ tắc đường thay đổi, nên các lần chạy này chưa được nó kiểm và được xem là kết quả thăm dò.'
+
+E17. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:3-4 (header note)
+   PROBLEM: The header says every number comes from SWEEP-REPORT §4a/§4b/§7/§8 and the TSVs. That is not true for the rider example (taken from the run transcripts), the '10 khách' figure (no source) or the independent-checker claim (from the pilot documents). Line 3 is also an internal note ('Người dùng muốn đưa nội dung này vào báo cáo') that must be removed before the text goes into the thesis.
+   EVIDENCE: The example times 25:54/36:58/41:09 appear only in this file (grep over E:\Code\Report_INT3508). I recomputed them from C:\RideBoundData\research\tier3-sweep-noworse-v1\Mplus-120-W1-d20181112-s10-r1-w08\transcript-00.ndjson.
+   FIX: List the transcript as the source of the example, give a source for the rider count, and delete line 3.
+
+E18. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:144 ('khoảng tin cậy thống kê') and :156 ('tính mức bảo đảm theo xác suất')
+   PROBLEM: Jargon a lay reader will not follow.
+   EVIDENCE: The document says of itself (line 3) that it is written for readers who know nothing about the project.
+   FIX: For line 144: 'mỗi kịch bản mới chạy một lần, nên chưa biết các chênh lệch 1–2 khách có phải do ngẫu nhiên hay không'. For line 156: 'tính xem lời hứa được giữ trong bao nhiêu phần trăm trường hợp'.
+
+E19. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:18-19 (the thesis promise: 'không tự làm bạn trễ quá x giây vì ghép thêm người')
+   PROBLEM: A small simplification. C_r adds up every change the dispatcher makes to the promised drop time, earlier as well as later, and from any dispatch decision, not only from adding passengers.
+   EVIDENCE: sweep_analyze.py:9 ('C_r = sum |p - e| over the rider's drop revisions') and :60-71.
+   FIX: 'Hệ thống sẽ không tự ý làm giờ trả của bạn xê dịch quá x giây (ví dụ vì ghép thêm người)…' — or keep the simple version and add one sentence of explanation.
+
+E20. WHERE: TANG3-BAO-CAO-DE-HIEU-2026-09-29.md:137 ('không bao giờ đẩy hệ thống vào bế tắc')
+   PROBLEM: Stated more broadly than the evidence: it holds by the theorem and in 0 of 72 runs, but only on the data tested.
+   EVIDENCE: SWEEP-REPORT.md:42 (D3: 0/72 jobs); 08-chuong4.tex:1152-1153 (Định lý).
+   FIX: '…theo định lý và trong cả 72 lần chạy, chưa lần nào đẩy hệ thống vào bế tắc'.
+
+M1. The paper's own Hamburg data was not run; the only data is Manhattan | The limitations list compares against Schulz and Pfeiffer but never says their dataset was not used | SWEEP-REPORT.md:203-204; 08-chuong4.tex:1396
+M2. Recovery rule (b) was added after the predictions were locked, so its results are descriptive, not tests of a locked prediction | The report states the conclusion that the old deadlock handling caused the gap without this caveat | SWEEP-REPORT.md:136 (A1, sau niêm phong, mô tả); 08-chuong4.tex:1285-1286, 1400-1401
+M3. Other differences from the paper that apply to both rules: pickup windows and maximum ride time exist, and switching vehicles is not allowed | The limitation at lines 148-149 mentions only the rider-choice model and the insertion algorithm | SWEEP-REPORT.md:19-24
+M4. On real traffic, scoring both rules with the paper's ruler gives the same number: at 30 s the thesis rule also scores 1.1% (2.2% in the morning), equal to the paper's rule | This is the clearest evidence for the 'same ruler' point, yet the report gives only the synthetic 17.7/18.4 | 08-chuong4.tex:1188 (bang:quet real 30 s: 1,1% / 1,1%); SWEEP-REPORT.md:84, :200
+M5. Real data also shows large cumulative rises of 29–50% within an hour (12–16/11) | Without it, the comparison of 60% vs 16% per step suggests the synthetic jams are unrealistic in total size, not just in suddenness | 08-chuong4.tex:1380-1382; recomputed from *_tt_factors.csv (36.0/45.5/50.1/48.0/28.8%)
+M6. The days behind the 47–66% / 15–23% ranges (12–16/11) and the value on the day actually run (12/11: 47.8% vs 17.6%) | Line 147 says only 'trong cùng dữ liệu thật', but the ranges cover five weekdays and only 12/11 was run | SWEEP-REPORT.md:206-208; recomputed from 2018-11-1[2-6]_tt_factors.csv
+M7. The served count under the old recovery rule (a) in the 22 deadlocked runs (1864), shown next to 1874/1873 | Without the (a) figure, the reader cannot see what rule (b) changed | SWEEP-REPORT.md:168; noworse-jobs-2026-09-26.tsv (sum a_M1_completed = 1864, recomputed)
+U: Every number in the first two tables (lines 55-74) matches my recompute from sweep-jobs-2026-09-26.tsv and matches SWEEP-REPORT §4a and thesis bang:quet: real U 192, 189/189 1.1%, 190/190, 190/191, 192/192; synthetic U 523, 508/503 18.8%, 509/503 14.7%, 513/513 10.1%, 522/524 1.0%, 523/523 0%; the thesis rule 0% everywhere.
+U: Every figure and every rounding in the per-world table (lines 78-85) matches per_world.py and bang:quet-kieu: U 201/167/166/215/190/192; the paper's rule under (a) at 30/60/120/300 s: W1 12.3/12.3/7.8/3.0, W2 28.8/25.2/21.4/0, W4 15.3/6.6/1.1/0, W5 1.1/0/0/0, which round to the integers shown.
+U: 17.7% (thesis rule scored by the paper's rule, mean 0.1767) and 18.4% (the paper's rule under (b), mean 0.1842) match my recompute, along with 508/508, 509/509 and 514/513 under (b). I could not decide whether a mean over cells or a mean over riders is the better choice; the rider-weighted values are 17.5% and 18.3%.
+U: Verified from the TSV: 1874/1873 (and 1864 under (a)), 224 riders, 3789/15528 = 24.4%, 16.9 decisions per rider, 49 no-worse decisions. Verified from transcripts: 19/22 identical fleet-action sequences; the three that differ are Mplus-120-W4-w08, Mplus-120-W4-w17 and Mplus-30-W4-w17.
+U: The rider example matches exactly: booked 25:54 (arrivalTimeMs 1554000), promised 36:58.483, deadline 38:58.483, arrived 41:09.432, A = 250.949 s, C_r = 0. Under C-120 (E:\RideBoundData\research\tier3-sweep-v1\C-120-W1-d20181112-s10-r1-w08), same arrival and C_r = 0. The rider boarded at 32:32, after the jam at 30:00.
+U: The 47–66% and 15–23% rises and the 8.3–16.2% vs 3.7–7.1% largest steps are confirmed from the factor CSVs, counting the window end bin (09:00 / 10:00). Excluding the end bin gives 45–62% and 12.5–22%. The largest 15-min step across all times of day on 11–18/11 is 16.2% (14/11, 07:15), so 'khoảng 16%' holds.
+U: Not verified: that all 3789 forced decisions are caused only by the 224 riders (line 120). I did not map each forced decision back to specific riders.
+U: Not verified in Runner code: that under rule (a) a stuck vehicle takes no new riders until the late rider is dropped off (line 106), and that late pickups are now recorded instead of raising an error (lines 28-29).
+U: The 'Còn chưa làm' items at lines 153-157 (compare again with the app-time promise; probability-based guarantee; official confirmation run) are not in any of the listed sources.
+U: The '96 chosen points' comes only from SWEEP-REPORT.md:210; I did not count the nodes.
+U: I did not check the Tier-2 background at lines 11-14 against sources.

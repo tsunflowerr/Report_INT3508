@@ -1,0 +1,46 @@
+% Round 42 — sửa từ r31-ch5/10-chuong5-v2.tex; không sửa các bản trước.
+% Nguồn ghép: Ch4A v5-v3, Ch4B v11-v2; quyết định và kiểm tra ở r42-LOG.md.
+\chapter{Kết luận}
+\label{chuong:ketluan}
+
+Khóa luận đã đặc tả, cài đặt và đánh giá trên mô phỏng trần phần dời giờ trả do điều phối của từng hành khách. Chương này tổng kết ba phần của độ lệch so với lời hứa đầu: phần tính cho điều phối, phần được hồ sơ tắc đường lịch sử giải thích và phần còn lại; sau đó nêu hạn chế và hướng phát triển.
+% EV: A01; A06; X3-12; B01
+
+\section{Tổng kết theo ba phần}
+\label{muc:c5-tongket}
+
+\textbf{Phần tính cho điều phối:} luật C giới hạn tổng độ lớn các lần bộ điều phối dời giờ trả của mỗi khách đã được nhận trong cả chuyến. Mỗi lần dời được đo so với giờ trả tính lại khi giữ nguyên kế hoạch cũ; mốc này đã có ở Hörl và Zwick, trong công thức 7~\cite{horl2022}. Trên mô phỏng FleetPy với 34 kịch bản và 3.672 yêu cầu của tập kiểm tra chính, không khách nào trong 2.338 khách của luật C trần 30 giây vượt trần. Tổng dời lớn nhất là 29,2 giây, so với 590,1 giây khi không trần. Luật C phục vụ 2.338 lượt so với 2.434 của điều phối không trần: ít hơn 96 lượt và ít hơn 242 khách đi chung. So với lời hứa đầu không dự báo, luật C có 2.262 lượt không trễ quá một phút, hơn 31 lượt so với 2.231 của điều phối không trần. Ở ngưỡng hai phút, luật C ít hơn 5 lượt, 2.327 so với 2.332; các số tính trên 3.672 yêu cầu. Luật hạn chót 30 giây cũng phục vụ 2.338 lượt. Đo cùng ngưỡng tới muộn hơn lời hứa đầu không dự báo quá 30 giây, luật C có 292 và luật hạn chót có 289 trong 2.338 khách; mỗi luật có khách như vậy ở 28 trong 34 kịch bản. Hai nhóm khách không hoàn toàn giống nhau. Ở ngưỡng này hai luật gần ngang nhau. Luật hạn chót hứa cả độ trễ so với lời hứa đầu, còn luật C chỉ hứa phần dời do điều phối; trần không bảo đảm giờ đến thực tế. Nới trần lên 120 giây cho 2.387 lượt phục vụ, 2.255 lượt không trễ quá một phút và 2.366 lượt không trễ quá hai phút trên 3.672 yêu cầu, một điểm đo thêm trên đường đánh đổi. Trong 524 bản ghi phương án bị trần loại ở mức này, 3 chỉ vượt trần khi cộng phần khách đã dùng; với trần 30 giây, không bản ghi nào như vậy trong 845 bản ghi. Phần cộng dồn có đổi kết quả phục vụ hay không thì chưa đo.
+% EV: A06; A13; A01; A02; J01; J03; B01; B09; C20; N-23; C01; C02; N-20; C08; C4A-01; N-21; C04; A22; K05; N-06; L1a-02; K36; N-08; L1a-06; E01; E09
+
+\textbf{Phần được hồ sơ tắc đường lịch sử giải thích:} trên 21 kịch bản ngày thường, lời hứa theo dự báo giảm số khách trễ quá một phút của luật C trần 30 giây từ 68 xuống 2 trong 1.471 khách được phục vụ, gộp theo khách. Mỗi cách hứa được so với lời hứa đầu của chính nó. Đây là phép tính lại lời hứa trên các lần chạy đã ghi, không đổi quyết định điều phối. Lợi ích không riêng của luật C: luật hạn chót 30 giây cũng giảm từ 66 xuống 2 khách trễ trong 1.471 khách được phục vụ. Trên cả 3.672 yêu cầu của tập kiểm tra chính, khi tính lại lời hứa theo dự báo, luật C có 2.328 lượt không trễ quá một phút. Cách đệm 30 giây, tức cộng thêm 30 giây vào mọi lời hứa theo dự báo của điều phối không trần, cũng cho đúng 2.328 lượt. Ở ngưỡng hai phút, cách đệm cho 2.366 lượt, so với 2.338 của luật C; phần hơn đi cùng 96 lượt phục vụ thêm, không phải ít khách trễ hơn. Đổi lại, lời hứa của cách đệm dài thêm trung bình 37,2 giây, so với 7,4 giây của luật C, gộp theo khách được phục vụ. Cách đệm có 44 trong 2.434 khách tới sớm quá một phút, so với 4 trong 2.338 khách của luật C. Vì vậy, số lượt không trễ ở một ngưỡng chưa đủ để chọn giữa trần và đệm.
+% EV: F17; F04; N4B8-01; F03; N4B8-02; C09; C10; N-16; N-18; N-19; K06; K51
+
+\textbf{Phần còn lại:} sổ theo từng khách chia số giây trễ thành ba phần trên, nên cho biết dự báo đang dùng còn chưa giải thích được bao nhiêu. Trong 6.217 giây trễ của 68 khách ngày thường nói trên, có 82 giây tính cho điều phối, 5.353 giây được hồ sơ lịch sử giải thích và 783 giây còn lại. Chiều tuyết 15/11/2018, với 8 kịch bản, cho thấy giới hạn của dự báo: số khách trễ quá một phút chỉ giảm từ 41 xuống 34 trong 601 khách được phục vụ. Trong 3.445,9 giây trễ của 41 khách đó, 8,6 giây tính cho điều phối, 251,5 giây được hồ sơ lịch sử giải thích và 3.185,9 giây còn lại. Các thành phần và tổng được làm tròn riêng. Sổ là phép chia theo mô hình và dự báo đang dùng; phần còn lại không được hiểu là phần không thể biết trước, và sổ không xác định lỗi của từng bên.
+% EV: F09; N4B8-11; F13; B20; N4B-05; K04; K19; X3-12
+
+\section{Hạn chế}
+\label{muc:c5-hanche}
+
+Các hạn chế ở mục~\ref{muc:c4-thaoluan} giới hạn cách đọc kết quả. Mô phỏng có tải thấp và một hệ số tắc đường chung toàn thành phố, nên cái giá 96 lượt phục vụ và mức trễ sau dự báo chỉ áp cho thiết lập này. Tập kiểm tra chính có 34 kịch bản phụ thuộc nhau thuộc 5 ngày, mỗi kịch bản chạy một lần. Ngưỡng phân tích và cách chia tập được chọn sau khi xem dữ liệu phát triển; mức 120 giây được chọn sau khi xem tập kiểm tra chính. Các kết quả là thăm dò. Chưa đo phản ứng của khách hay giá trị của trần với hãng xe, nên chưa thể chọn trần theo lợi ích thực tế. Bộ chọn ưu tiên chi phí chưa được chạy thành lần mô phỏng đầy đủ; luật giới hạn từng lần dời chưa được cài đặt. Chưa biết đánh đổi đổi thế nào theo bộ chọn và phần cộng dồn có đổi kết quả không.
+% EV: I01; I02; B06; B12; I04; I05; B11; I06; C4A-11; I07; I10; D20; H02; H12; K18; E09; K08
+
+Khóa luận kế thừa nghiên cứu trước. Fielbaum và Alonso-Mora~\cite{fielbaum2020} đã đo thay đổi của giờ hứa và kiểm soát lời hứa giờ đón khi gán khách. Hörl và Zwick~\cite{horl2022} đã tính lại giờ trả trên tuyến đang gán theo tắc đường hiện tại; khóa luận dùng mốc tương tự. Schulz và Pfeiffer~\cite{schulz2026} đã đặt hạn chót từ lời hứa đầu. Đối chứng ở đây chỉ mượn thành phần hạn chót ở mức 30--60 giây trên tập kiểm tra chính, thay vì 900 giây mặc định của bài đó. Chèn khách động và đánh đổi giữa phục vụ với ổn định cũng đã có tiền lệ. Phần của khóa luận là đặc tả, cài đặt, kiểm trần chung cho mọi khách đã nhận trên tổng phần dời do điều phối cả chuyến, không nới theo tắc đường, kèm sổ theo từng khách, và đo cái giá của trần.
+% EV: J06; J08; J01; J03; J05; J10; J11; J38; K30; K31
+
+\section{Hướng phát triển}
+\label{muc:c5-huongphattrien}
+
+Thứ nhất, cần chạy bốn tổ hợp giữa hai thứ tự tiêu chí của bộ chọn, ưu tiên ổn định như hiện nay và ưu tiên chi phí kế hoạch, với hai cấu hình điều phối không trần và luật C trần 30 giây trên 34 kịch bản của tập kiểm tra chính. Trước khi so sánh, bộ chạy dựng lại phải cho đúng kết quả đã lưu trên một số kịch bản. Phép thử cần báo lượt phục vụ, lượt trễ, lượt không trễ và khách đi chung để biết đánh đổi còn giữ không khi bộ chọn đổi. Phép sàng lọc ở mục~\ref{muc:c4-vaitro} chưa trả lời được câu hỏi này.
+% EV: H12; H02; H10; K18; I13; OUTLINE-V2 §7.2; ROUND42 (trạng thái chưa chạy)
+
+Thứ hai, cần cài đặt và chạy luật giới hạn từng lần dời cạnh luật C, để biết việc cộng dồn có đổi kết quả hay không. Cũng cần chạy làm đối chứng hạn chót nới theo giờ trả tính lại khi giữ nguyên kế hoạch, một biến thể dựng từ công thức 7 của Hörl và Zwick (Phụ lục~\ref{phuluc:B}). Phép so này kiểm vai trò của mốc cập nhật thay cho lời hứa đầu.
+% EV: E09; E08; A22; K27; J03; J05 (hướng đề xuất)
+
+Thứ ba, cần kiểm dự báo cho ngày có sự kiện, chỉ dùng dữ liệu đã có tại thời điểm hứa và trên nhiều sự kiện độc lập. Số khách trễ phải được báo cùng số khách tới sớm và độ dài thêm của lời hứa.
+% EV: B26; I11; F14; K20; K21; C10; C11 (hướng đề xuất)
+
+Thứ tư, cần mở rộng phép đo sang tải cao hơn, tắc đường riêng trên từng đoạn đường và mô hình phản ứng của khách, cùng chi phí và ngưỡng chấp nhận cụ thể của hãng xe.
+% EV: I02; I04; B12; I07; I10; D20 (hướng đề xuất)
+
+Thứ năm, cần thử trần theo độ dài chuyến và sửa phép kiểm giờ đón để phù hợp với lời hứa theo dự báo. Mỗi cấu hình cần được chạy mô phỏng đầy đủ, không suy số khách được phục vụ từ phép sàng lọc trên các lần chạy cũ.
+% EV: D18; F07; I13; K11; J25 (hướng đề xuất)

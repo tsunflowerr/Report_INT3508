@@ -1,0 +1,1284 @@
+[
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181114-s10-r1-b1-tight-s7",
+    "transcriptSha256": "5f281865d346afa063a70561ada58387079474daf63b6b449bfbe59b2df4be54",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 288,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 99,
+      "epochsWithMultipleMaxAcceptanceAssignments": 84,
+      "acceptingEpochsWithMultipleAssignments": 84,
+      "acceptingEpochsWithMultipleSemanticAssignments": 84,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 9,
+        "accepted": 1,
+        "alternatives": 4,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181114-s10-r2-b1-tight-s7",
+    "transcriptSha256": "897e21e788ca383a0a16bf4f9fd6c8d9c31f3288cf08d84462ed93b53f073172",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 216,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 94,
+      "epochsWithMultipleMaxAcceptanceAssignments": 78,
+      "acceptingEpochsWithMultipleAssignments": 78,
+      "acceptingEpochsWithMultipleSemanticAssignments": 78,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181114-s10-r3-b1-tight-s7",
+    "transcriptSha256": "4a59f07d4d940edc5e6df00083c9d5f62279ee295f75bfe4752068e9c52294f8",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 94,
+      "epochsWithMultipleMaxAcceptanceAssignments": 75,
+      "acceptingEpochsWithMultipleAssignments": 75,
+      "acceptingEpochsWithMultipleSemanticAssignments": 75,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181114-s10-r4-b1-tight-s7",
+    "transcriptSha256": "cae0c2a46fae49855117771a45382b2c0c700752e30b5cbbc37a765fc8e8f97d",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 256,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 101,
+      "epochsWithMultipleMaxAcceptanceAssignments": 87,
+      "acceptingEpochsWithMultipleAssignments": 87,
+      "acceptingEpochsWithMultipleSemanticAssignments": 87,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 8,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 9,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181115-s10-r1-b1-tight-s7",
+    "transcriptSha256": "e2fd7d845fa24748009ff9077347a7914f6689e46ad838ad1548f2f680f638d6",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 162,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 88,
+      "epochsWithMultipleMaxAcceptanceAssignments": 72,
+      "acceptingEpochsWithMultipleAssignments": 72,
+      "acceptingEpochsWithMultipleSemanticAssignments": 72,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 4,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181115-s10-r2-b1-tight-s7",
+    "transcriptSha256": "935c5a9a89bf1a74d789ea6366772ae1cfef5a226f76208aa44f19aea867f5d6",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 256,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 97,
+      "epochsWithMultipleMaxAcceptanceAssignments": 86,
+      "acceptingEpochsWithMultipleAssignments": 86,
+      "acceptingEpochsWithMultipleSemanticAssignments": 86,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 2,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181115-s10-r3-b1-tight-s7",
+    "transcriptSha256": "7c0681cb2b74ccbe3d8932dbceba132bb9dddf462d87b4a6a044c18b837d6b41",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 89,
+      "epochsWithMultipleMaxAcceptanceAssignments": 66,
+      "acceptingEpochsWithMultipleAssignments": 66,
+      "acceptingEpochsWithMultipleSemanticAssignments": 66,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 7,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181115-s10-r4-b1-tight-s7",
+    "transcriptSha256": "c852aa579602524d4f5450d68f2b7cac155a1734022a4ee502f31f7d9a392313",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 96,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 97,
+      "epochsWithMultipleMaxAcceptanceAssignments": 78,
+      "acceptingEpochsWithMultipleAssignments": 78,
+      "acceptingEpochsWithMultipleSemanticAssignments": 78,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181116-s10-r1-b1-tight-s7",
+    "transcriptSha256": "5bd303e21c5968a21c64ebaa3248e24bfb6e38bb5760a5df5805254f26516572",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 89,
+      "epochsWithMultipleMaxAcceptanceAssignments": 68,
+      "acceptingEpochsWithMultipleAssignments": 68,
+      "acceptingEpochsWithMultipleSemanticAssignments": 68,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 4,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181116-s10-r2-b1-tight-s7",
+    "transcriptSha256": "c1d5ea31367a64ea9ee502d73f8be2002d89a8a816019d882153ef0d78e7cd3e",
+    "counts": {
+      "pendingEpochs": 107,
+      "largestCartesianProduct": 288,
+      "enumeratedEpochs": 107,
+      "epochsAcceptingAtLeastOne": 90,
+      "epochsWithMultipleMaxAcceptanceAssignments": 72,
+      "acceptingEpochsWithMultipleAssignments": 72,
+      "acceptingEpochsWithMultipleSemanticAssignments": 72,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 3,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 3,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181116-s10-r3-b1-tight-s7",
+    "transcriptSha256": "646ba999cbd249a7f82ab3b648c0049a39d9552e09a8f7ddae6a40a335d4ffad",
+    "counts": {
+      "pendingEpochs": 107,
+      "largestCartesianProduct": 64,
+      "enumeratedEpochs": 107,
+      "epochsAcceptingAtLeastOne": 86,
+      "epochsWithMultipleMaxAcceptanceAssignments": 61,
+      "acceptingEpochsWithMultipleAssignments": 61,
+      "acceptingEpochsWithMultipleSemanticAssignments": 61,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181116-s10-r4-b1-tight-s7",
+    "transcriptSha256": "34fabb19e66fcf6151c518f87010e5ab4050e47c8f606fcc568a1ed30a345199",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 83,
+      "epochsWithMultipleMaxAcceptanceAssignments": 65,
+      "acceptingEpochsWithMultipleAssignments": 65,
+      "acceptingEpochsWithMultipleSemanticAssignments": 65,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 8,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181117-s10-r1-b1-tight-s7",
+    "transcriptSha256": "0e040b337584462dd0383bb9a07576651db417ec5be5a64116cf822d32691742",
+    "counts": {
+      "pendingEpochs": 107,
+      "largestCartesianProduct": 32,
+      "enumeratedEpochs": 107,
+      "epochsAcceptingAtLeastOne": 79,
+      "epochsWithMultipleMaxAcceptanceAssignments": 45,
+      "acceptingEpochsWithMultipleAssignments": 45,
+      "acceptingEpochsWithMultipleSemanticAssignments": 45,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 4,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 6,
+        "accepted": 1,
+        "alternatives": 2,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181117-s10-r2-b1-tight-s7",
+    "transcriptSha256": "63b94cd870ca61332e8c84d05435da18f32074a34cd6c7471a78adcec09347ed",
+    "counts": {
+      "pendingEpochs": 107,
+      "largestCartesianProduct": 96,
+      "enumeratedEpochs": 107,
+      "epochsAcceptingAtLeastOne": 83,
+      "epochsWithMultipleMaxAcceptanceAssignments": 62,
+      "acceptingEpochsWithMultipleAssignments": 62,
+      "acceptingEpochsWithMultipleSemanticAssignments": 62,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 7,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181117-s10-r3-b1-tight-s7",
+    "transcriptSha256": "537f856ba865a523138300c162b6a89c7fd5d8a27c3fe5db417d585415a77f68",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 64,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 65,
+      "epochsWithMultipleMaxAcceptanceAssignments": 43,
+      "acceptingEpochsWithMultipleAssignments": 43,
+      "acceptingEpochsWithMultipleSemanticAssignments": 43,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 7,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181117-s10-r4-b1-tight-s7",
+    "transcriptSha256": "33d3ac97d4067069b3218f377cedeb7fb096927daa2ca8ac7d73bbd3739246b2",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 81,
+      "epochsWithMultipleMaxAcceptanceAssignments": 60,
+      "acceptingEpochsWithMultipleAssignments": 60,
+      "acceptingEpochsWithMultipleSemanticAssignments": 60,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181118-s10-r1-b1-tight-s7",
+    "transcriptSha256": "fb3dbbcd5009681aa9e1eaef6a02ac93e18a2992132db402ca77bbd7f9c333f3",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 72,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 80,
+      "epochsWithMultipleMaxAcceptanceAssignments": 64,
+      "acceptingEpochsWithMultipleAssignments": 64,
+      "acceptingEpochsWithMultipleSemanticAssignments": 64,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 3,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181118-s10-r2-b1-tight-s7",
+    "transcriptSha256": "ae59e6e15048968826de485a504601a7b63d46eaafc0c60e1598b360c7d11e86",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 48,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 74,
+      "epochsWithMultipleMaxAcceptanceAssignments": 46,
+      "acceptingEpochsWithMultipleAssignments": 46,
+      "acceptingEpochsWithMultipleSemanticAssignments": 46,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 3,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181118-s10-r3-b1-tight-s7",
+    "transcriptSha256": "5e6724ee2674bef2ce1d96da24aa4faaed42ac97c5d02dd70e58243ecac1947d",
+    "counts": {
+      "pendingEpochs": 105,
+      "largestCartesianProduct": 24,
+      "enumeratedEpochs": 105,
+      "epochsAcceptingAtLeastOne": 68,
+      "epochsWithMultipleMaxAcceptanceAssignments": 33,
+      "acceptingEpochsWithMultipleAssignments": 33,
+      "acceptingEpochsWithMultipleSemanticAssignments": 33,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 3,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "b1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181118-s10-r4-b1-tight-s7",
+    "transcriptSha256": "3ad5575a5e6d72d7f81d3c05cf9a8121408a7e4c1b2303e2dabca1caff6025d7",
+    "counts": {
+      "pendingEpochs": 107,
+      "largestCartesianProduct": 336,
+      "enumeratedEpochs": 107,
+      "epochsAcceptingAtLeastOne": 86,
+      "epochsWithMultipleMaxAcceptanceAssignments": 64,
+      "acceptingEpochsWithMultipleAssignments": 64,
+      "acceptingEpochsWithMultipleSemanticAssignments": 64,
+      "epochsWithUtilizationObjective": 0,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 0,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 7,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181114-s10-r1-c1-tight-s7",
+    "transcriptSha256": "834629accb420a92a6bee5ee67a9cd195ccd2ccaf2a998d5e7aa3521bd5e4e32",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 92,
+      "epochsWithMultipleMaxAcceptanceAssignments": 74,
+      "acceptingEpochsWithMultipleAssignments": 74,
+      "acceptingEpochsWithMultipleSemanticAssignments": 74,
+      "epochsWithUtilizationObjective": 107,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 107,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 9,
+        "accepted": 1,
+        "alternatives": 4,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181114-s10-r2-c1-tight-s7",
+    "transcriptSha256": "f9f031c45f71d31f87ccbd42569d2dbb89e39fa7f392fd9d9b2b9c11da9a9bee",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 87,
+      "epochsWithMultipleMaxAcceptanceAssignments": 65,
+      "acceptingEpochsWithMultipleAssignments": 65,
+      "acceptingEpochsWithMultipleSemanticAssignments": 65,
+      "epochsWithUtilizationObjective": 107,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 107,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181114-s10-r3-c1-tight-s7",
+    "transcriptSha256": "ac4772995a554bda9bc40ca0be9ce0a72cd2a523635404baedc61ffc25d9581e",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 86,
+      "epochsWithMultipleMaxAcceptanceAssignments": 57,
+      "acceptingEpochsWithMultipleAssignments": 57,
+      "acceptingEpochsWithMultipleSemanticAssignments": 57,
+      "epochsWithUtilizationObjective": 107,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 107,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181114-s10-r4-c1-tight-s7",
+    "transcriptSha256": "882db1014fb6e5b2ddecca8393a8f424c92b445e2cf5b34fe0e4fb08ce26f4a6",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 256,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 94,
+      "epochsWithMultipleMaxAcceptanceAssignments": 79,
+      "acceptingEpochsWithMultipleAssignments": 79,
+      "acceptingEpochsWithMultipleSemanticAssignments": 79,
+      "epochsWithUtilizationObjective": 107,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 107,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 8,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181115-s10-r1-c1-tight-s7",
+    "transcriptSha256": "9faf9b9bea801ddf8a4ce6a7a5ffcae0246c6668f2f1432055856fa406674618",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 54,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 78,
+      "epochsWithMultipleMaxAcceptanceAssignments": 52,
+      "acceptingEpochsWithMultipleAssignments": 52,
+      "acceptingEpochsWithMultipleSemanticAssignments": 52,
+      "epochsWithUtilizationObjective": 105,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 105,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 4,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181115-s10-r2-c1-tight-s7",
+    "transcriptSha256": "478a050a347dcaf9eb1fec1ee1c3a5b863e1cf5686497cbec53b7890570b7d1a",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 192,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 93,
+      "epochsWithMultipleMaxAcceptanceAssignments": 76,
+      "acceptingEpochsWithMultipleAssignments": 76,
+      "acceptingEpochsWithMultipleSemanticAssignments": 76,
+      "epochsWithUtilizationObjective": 107,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 107,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 2,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181115-s10-r3-c1-tight-s7",
+    "transcriptSha256": "5042eb92ca9e7a67d821acaddb39f08a6c57597a2f481dc1686f74066ffa8eab",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 79,
+      "epochsWithMultipleMaxAcceptanceAssignments": 57,
+      "acceptingEpochsWithMultipleAssignments": 57,
+      "acceptingEpochsWithMultipleSemanticAssignments": 57,
+      "epochsWithUtilizationObjective": 105,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 105,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 7,
+        "accepted": 1,
+        "alternatives": 7,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181115-s10-r4-c1-tight-s7",
+    "transcriptSha256": "715412827994129e26e5af64536a62d0a079a22132a432f9df0e8b88031f3f1c",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 64,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 87,
+      "epochsWithMultipleMaxAcceptanceAssignments": 67,
+      "acceptingEpochsWithMultipleAssignments": 67,
+      "acceptingEpochsWithMultipleSemanticAssignments": 67,
+      "epochsWithUtilizationObjective": 105,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 105,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181116-s10-r1-c1-tight-s7",
+    "transcriptSha256": "a0d9c1ff930a7e707642a6512e84f6ebd9c44d2912b2ba3966d878a5d7906f5b",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 84,
+      "epochsWithMultipleMaxAcceptanceAssignments": 65,
+      "acceptingEpochsWithMultipleAssignments": 65,
+      "acceptingEpochsWithMultipleSemanticAssignments": 65,
+      "epochsWithUtilizationObjective": 105,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 105,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 4,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181116-s10-r2-c1-tight-s7",
+    "transcriptSha256": "f6c32d8391491b65d51c94374513892561af24296a4f3aa95dd0ea33f640dabf",
+    "counts": {
+      "pendingEpochs": 107,
+      "largestCartesianProduct": 64,
+      "enumeratedEpochs": 107,
+      "epochsAcceptingAtLeastOne": 75,
+      "epochsWithMultipleMaxAcceptanceAssignments": 45,
+      "acceptingEpochsWithMultipleAssignments": 45,
+      "acceptingEpochsWithMultipleSemanticAssignments": 45,
+      "epochsWithUtilizationObjective": 106,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 106,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 3,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 3,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181116-s10-r3-c1-tight-s7",
+    "transcriptSha256": "13e0380f0f04730ab08b77f3a692743b84b3de6050f4a258f2fd306a1b10bbc9",
+    "counts": {
+      "pendingEpochs": 107,
+      "largestCartesianProduct": 64,
+      "enumeratedEpochs": 107,
+      "epochsAcceptingAtLeastOne": 84,
+      "epochsWithMultipleMaxAcceptanceAssignments": 56,
+      "acceptingEpochsWithMultipleAssignments": 56,
+      "acceptingEpochsWithMultipleSemanticAssignments": 56,
+      "epochsWithUtilizationObjective": 106,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 106,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181116-s10-r4-c1-tight-s7",
+    "transcriptSha256": "cc413224ce6b9339a5826573fc671ce3056931009dc7d756d247304436ea1976",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 77,
+      "epochsWithMultipleMaxAcceptanceAssignments": 51,
+      "acceptingEpochsWithMultipleAssignments": 51,
+      "acceptingEpochsWithMultipleSemanticAssignments": 51,
+      "epochsWithUtilizationObjective": 107,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 107,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 8,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181117-s10-r1-c1-tight-s7",
+    "transcriptSha256": "7c48be3f8453f5b2f24ff07fd5453abb3c0c7de1fdaf53553419dc2e95c64773",
+    "counts": {
+      "pendingEpochs": 107,
+      "largestCartesianProduct": 36,
+      "enumeratedEpochs": 107,
+      "epochsAcceptingAtLeastOne": 73,
+      "epochsWithMultipleMaxAcceptanceAssignments": 38,
+      "acceptingEpochsWithMultipleAssignments": 38,
+      "acceptingEpochsWithMultipleSemanticAssignments": 38,
+      "epochsWithUtilizationObjective": 106,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 106,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 4,
+        "utilizationValues": [
+          1000000
+        ]
+      },
+      {
+        "epoch": 7,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181117-s10-r2-c1-tight-s7",
+    "transcriptSha256": "104c8ef423d3a0c22e3001c212118104cb9db56d2b6965ee862d008a7094706b",
+    "counts": {
+      "pendingEpochs": 107,
+      "largestCartesianProduct": 64,
+      "enumeratedEpochs": 107,
+      "epochsAcceptingAtLeastOne": 81,
+      "epochsWithMultipleMaxAcceptanceAssignments": 49,
+      "acceptingEpochsWithMultipleAssignments": 49,
+      "acceptingEpochsWithMultipleSemanticAssignments": 49,
+      "epochsWithUtilizationObjective": 106,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 106,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 7,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181117-s10-r3-c1-tight-s7",
+    "transcriptSha256": "fb4b34168ba9d16826d880db9439cafdc18254a34fc142bacd9d0594a27189fd",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 64,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 60,
+      "epochsWithMultipleMaxAcceptanceAssignments": 28,
+      "acceptingEpochsWithMultipleAssignments": 28,
+      "acceptingEpochsWithMultipleSemanticAssignments": 28,
+      "epochsWithUtilizationObjective": 105,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 105,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 7,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181117-s10-r4-c1-tight-s7",
+    "transcriptSha256": "19a46e70b2445d8d4681e03c569c399e25ef00987d27fc734e2419ec2666dea0",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 128,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 71,
+      "epochsWithMultipleMaxAcceptanceAssignments": 42,
+      "acceptingEpochsWithMultipleAssignments": 42,
+      "acceptingEpochsWithMultipleSemanticAssignments": 42,
+      "epochsWithUtilizationObjective": 107,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 107,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 6,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181118-s10-r1-c1-tight-s7",
+    "transcriptSha256": "0337be2a78f23e900bd5e8c9efa37b261317af454dbcadbd1772a22c10e6e2a5",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 64,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 70,
+      "epochsWithMultipleMaxAcceptanceAssignments": 40,
+      "acceptingEpochsWithMultipleAssignments": 40,
+      "acceptingEpochsWithMultipleSemanticAssignments": 40,
+      "epochsWithUtilizationObjective": 107,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 107,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 3,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181118-s10-r2-c1-tight-s7",
+    "transcriptSha256": "c9a245fa5730f3c6c2b3fcd83b97f82838c8ec7a32a05166718ff994be18520b",
+    "counts": {
+      "pendingEpochs": 108,
+      "largestCartesianProduct": 32,
+      "enumeratedEpochs": 108,
+      "epochsAcceptingAtLeastOne": 67,
+      "epochsWithMultipleMaxAcceptanceAssignments": 39,
+      "acceptingEpochsWithMultipleAssignments": 39,
+      "acceptingEpochsWithMultipleSemanticAssignments": 39,
+      "epochsWithUtilizationObjective": 107,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 107,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 3,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181118-s10-r3-c1-tight-s7",
+    "transcriptSha256": "128753aede4bfd9fdfe9dd7451ee390637f62abf9adf185322474c3b1eaf4e71",
+    "counts": {
+      "pendingEpochs": 106,
+      "largestCartesianProduct": 16,
+      "enumeratedEpochs": 106,
+      "epochsAcceptingAtLeastOne": 62,
+      "epochsWithMultipleMaxAcceptanceAssignments": 29,
+      "acceptingEpochsWithMultipleAssignments": 29,
+      "acceptingEpochsWithMultipleSemanticAssignments": 29,
+      "epochsWithUtilizationObjective": 105,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 105,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 3,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 4,
+        "accepted": 1,
+        "alternatives": 4,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  },
+  {
+    "arm": "c1",
+    "directory": "E:\\RideBoundData\\wp13\\e1-retained-portfolio-panel-a\\p-d20181118-s10-r4-c1-tight-s7",
+    "transcriptSha256": "49a8904bbe2e0a30853c5805f7d1748c5b8f3b1028d800823c4f535692b39544",
+    "counts": {
+      "pendingEpochs": 107,
+      "largestCartesianProduct": 64,
+      "enumeratedEpochs": 107,
+      "epochsAcceptingAtLeastOne": 71,
+      "epochsWithMultipleMaxAcceptanceAssignments": 36,
+      "acceptingEpochsWithMultipleAssignments": 36,
+      "acceptingEpochsWithMultipleSemanticAssignments": 36,
+      "epochsWithUtilizationObjective": 106,
+      "utilizationConstantAcrossMaxAcceptanceAssignments": 106,
+      "utilizationCanDistinguishMaxAcceptanceAssignments": 0
+    },
+    "examples": [
+      {
+        "epoch": 2,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": []
+      },
+      {
+        "epoch": 7,
+        "accepted": 1,
+        "alternatives": 5,
+        "utilizationValues": [
+          1000000
+        ]
+      }
+    ]
+  }
+]

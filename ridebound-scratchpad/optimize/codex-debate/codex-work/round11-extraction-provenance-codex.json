@@ -1,0 +1,233 @@
+{
+  "archive": "E:\\RideBoundData\\wp6\\objects\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan.zip",
+  "archive_sha256_not_recomputed": "d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e path identity only",
+  "fixtures": [
+    {
+      "cell": "d20181112-s10-r1-w08",
+      "scenario_sha256": "9f9c177d806875eba9edb8f247405317fa809347bb6f3957818ee225c0147cd4",
+      "member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_1.csv",
+      "zip_member_crc": 696781291,
+      "source_ordinal_offset": 0,
+      "selected": 108
+    },
+    {
+      "cell": "d20181112-s10-r1-w17",
+      "scenario_sha256": "b8c57b09cc643641b2f7d50cdabf96fa348b61fefe15e5a9931bf900758a244f",
+      "member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_1.csv",
+      "zip_member_crc": 696781291,
+      "source_ordinal_offset": 0,
+      "selected": 108
+    },
+    {
+      "cell": "d20181112-s10-r2-w08",
+      "scenario_sha256": "aeac0b15efca5345064bad400025606c5ab9d794a2ebf5a10f1eab2575562108",
+      "member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_2.csv",
+      "zip_member_crc": 2860255017,
+      "source_ordinal_offset": 0,
+      "selected": 108
+    },
+    {
+      "cell": "d20181112-s10-r2-w17",
+      "scenario_sha256": "8fc38fde100fd459ff7554e82e17174a105d450d9bfadf043ac1309269b1d3b3",
+      "member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_2.csv",
+      "zip_member_crc": 2860255017,
+      "source_ordinal_offset": 0,
+      "selected": 108
+    },
+    {
+      "cell": "d20181112-s10-r3-w08",
+      "scenario_sha256": "3c173e626c7a1d4abb99d8f6dabe9123450bcb111e142b1daf9cd627842a4410",
+      "member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_3.csv",
+      "zip_member_crc": 2082546128,
+      "source_ordinal_offset": 0,
+      "selected": 108
+    },
+    {
+      "cell": "d20181112-s10-r3-w17",
+      "scenario_sha256": "76a581ff37c53d0a75ac7dc642d5d89cd9380081e1274b14310f33a636052793",
+      "member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_3.csv",
+      "zip_member_crc": 2082546128,
+      "source_ordinal_offset": 0,
+      "selected": 108
+    },
+    {
+      "cell": "d20181112-s10-r4-w08",
+      "scenario_sha256": "3871c42e58fff92bcaa9ce0de6efc1dded209f0c40a346cd8828663b72019e91",
+      "member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv",
+      "zip_member_crc": 402280827,
+      "source_ordinal_offset": 0,
+      "selected": 108
+    },
+    {
+      "cell": "d20181112-s10-r4-w17",
+      "scenario_sha256": "794802a5087a7c479cca959d21ba35766f1f9685982d9b7ecb6ea1d772e10cda",
+      "member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv",
+      "zip_member_crc": 402280827,
+      "source_ordinal_offset": 0,
+      "selected": 108
+    }
+  ],
+  "fit_selected_rows": 648,
+  "cal_selected_rows": 216,
+  "fit_unique_original_ids": 629,
+  "cal_unique_original_ids": 216,
+  "overlap_original_ids": 11,
+  "overlap_pairs": [
+    {
+      "request_id": "3212940",
+      "fit_cell": "d20181112-s10-r3-w08",
+      "cal_cell": "d20181112-s10-r4-w08",
+      "fit_stable_subject": "req-187e41a00f75fab46ba3040f71c3d0cf",
+      "cal_stable_subject": "req-9d78a2bc79c18ecfd70623a219f8d7c4",
+      "fit_ordinal": 20976,
+      "cal_ordinal": 4486,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "df0bdceff430ce04058d577c75b2c6b5a211c5f217e79e3633ff705323e2c8c5",
+      "cal_source_row_sha256": "df0bdceff430ce04058d577c75b2c6b5a211c5f217e79e3633ff705323e2c8c5",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_3.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    },
+    {
+      "request_id": "3218675",
+      "fit_cell": "d20181112-s10-r3-w08",
+      "cal_cell": "d20181112-s10-r4-w08",
+      "fit_stable_subject": "req-e85e1a5168d89be3810d60ae789e6ee9",
+      "cal_stable_subject": "req-591fcc9cd0814788352ec4b9d65bff57",
+      "fit_ordinal": 5067,
+      "cal_ordinal": 20688,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "a0a04212916177220d575144ae3f18c44461a9fa92443dffdf2975b799a15ad8",
+      "cal_source_row_sha256": "a0a04212916177220d575144ae3f18c44461a9fa92443dffdf2975b799a15ad8",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_3.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    },
+    {
+      "request_id": "3222010",
+      "fit_cell": "d20181112-s10-r1-w08",
+      "cal_cell": "d20181112-s10-r4-w08",
+      "fit_stable_subject": "req-160a12a9fb5638b82357c0d577e7d571",
+      "cal_stable_subject": "req-50bae0ae61445ce858b5b572d41504a5",
+      "fit_ordinal": 1730,
+      "cal_ordinal": 10333,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "a22595450c3cb9fb59ef802eb56d6d4de60075b0071b1e315714a8f9983068b4",
+      "cal_source_row_sha256": "a22595450c3cb9fb59ef802eb56d6d4de60075b0071b1e315714a8f9983068b4",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_1.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    },
+    {
+      "request_id": "3228410",
+      "fit_cell": "d20181112-s10-r2-w08",
+      "cal_cell": "d20181112-s10-r4-w08",
+      "fit_stable_subject": "req-ccb5692b7a42e723cb51eb2d1a6317a1",
+      "cal_stable_subject": "req-2a005bf676249b858565c8007e08fdb1",
+      "fit_ordinal": 9569,
+      "cal_ordinal": 19643,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "2047967371b5d9d06a0757734f2cd3f62a27257185cfb8b889cc935a5e42f365",
+      "cal_source_row_sha256": "2047967371b5d9d06a0757734f2cd3f62a27257185cfb8b889cc935a5e42f365",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_2.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    },
+    {
+      "request_id": "3229318",
+      "fit_cell": "d20181112-s10-r2-w08",
+      "cal_cell": "d20181112-s10-r4-w08",
+      "fit_stable_subject": "req-23118cc555dce87d11ded23a87bba8d0",
+      "cal_stable_subject": "req-49f36801dc6c24e6ae9755f8d4de9c6e",
+      "fit_ordinal": 3197,
+      "cal_ordinal": 13579,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "3f5dd7547726ba3b31ade9885d4da8a9b1fb55168bb92c1a34054994bd167b58",
+      "cal_source_row_sha256": "3f5dd7547726ba3b31ade9885d4da8a9b1fb55168bb92c1a34054994bd167b58",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_2.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    },
+    {
+      "request_id": "3229612",
+      "fit_cell": "d20181112-s10-r2-w08",
+      "cal_cell": "d20181112-s10-r4-w08",
+      "fit_stable_subject": "req-acf5a9d991a86e943b3caf73b7e428a3",
+      "cal_stable_subject": "req-d80a45f8143679472c84025af50bc35e",
+      "fit_ordinal": 7028,
+      "cal_ordinal": 14650,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "727b1a0521352a1fee7b2c218c6979451daa0b0ce1822ac0798322685690d977",
+      "cal_source_row_sha256": "727b1a0521352a1fee7b2c218c6979451daa0b0ce1822ac0798322685690d977",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_2.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    },
+    {
+      "request_id": "3232267",
+      "fit_cell": "d20181112-s10-r3-w08",
+      "cal_cell": "d20181112-s10-r4-w08",
+      "fit_stable_subject": "req-dd50f82b879d6732859fdaec0a5395cd",
+      "cal_stable_subject": "req-4e44230322b94aefcbcf4b002b0dc268",
+      "fit_ordinal": 5548,
+      "cal_ordinal": 14482,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "8ef7c8290e3eba7a3e6380b287afc28560ef3a2efe127aa492802bec0a69b3f7",
+      "cal_source_row_sha256": "8ef7c8290e3eba7a3e6380b287afc28560ef3a2efe127aa492802bec0a69b3f7",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_3.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    },
+    {
+      "request_id": "3233063",
+      "fit_cell": "d20181112-s10-r2-w08",
+      "cal_cell": "d20181112-s10-r4-w08",
+      "fit_stable_subject": "req-4004f74254161d0dd9ca91330db84a4f",
+      "cal_stable_subject": "req-582740ef229d46a5a89e6424cb9f4240",
+      "fit_ordinal": 10353,
+      "cal_ordinal": 3899,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "296d19caccb0a359a8da9b2980482225b614f915231f8962ae85eeb8755267b5",
+      "cal_source_row_sha256": "296d19caccb0a359a8da9b2980482225b614f915231f8962ae85eeb8755267b5",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_2.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    },
+    {
+      "request_id": "3234082",
+      "fit_cell": "d20181112-s10-r1-w08",
+      "cal_cell": "d20181112-s10-r4-w08",
+      "fit_stable_subject": "req-5aadee03fa677b57205323387660c431",
+      "cal_stable_subject": "req-a6324c427e6e6363eed90a817a9050ca",
+      "fit_ordinal": 1887,
+      "cal_ordinal": 1008,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "7aefbc627a9796fbad183bf7f9c4a80b2ef53ab9a4aa8a777fbf6f597e48cd89",
+      "cal_source_row_sha256": "7aefbc627a9796fbad183bf7f9c4a80b2ef53ab9a4aa8a777fbf6f597e48cd89",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_1.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    },
+    {
+      "request_id": "3346430",
+      "fit_cell": "d20181112-s10-r2-w17",
+      "cal_cell": "d20181112-s10-r4-w17",
+      "fit_stable_subject": "req-c518db78a20f2bf6287660429ab3f727",
+      "cal_stable_subject": "req-8b8a181eac04baf126e4a860ca48264b",
+      "fit_ordinal": 3726,
+      "cal_ordinal": 8398,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "68c4c38bf5553d0e4550755d10082ab99591fc6cb0ab4187364c77ead7077229",
+      "cal_source_row_sha256": "68c4c38bf5553d0e4550755d10082ab99591fc6cb0ab4187364c77ead7077229",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_2.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    },
+    {
+      "request_id": "3350441",
+      "fit_cell": "d20181112-s10-r1-w17",
+      "cal_cell": "d20181112-s10-r4-w17",
+      "fit_stable_subject": "req-a5c5ab1408aa2174c2b46055b906c269",
+      "cal_stable_subject": "req-006ebd653974b94e8f9d68c2bdc669ce",
+      "fit_ordinal": 3482,
+      "cal_ordinal": 3096,
+      "full_source_row_equal": true,
+      "fit_source_row_sha256": "0d680140124fdb0cfbf8af17b0edacdb9d43beb8d2b2d370d7717ff5325a2a70",
+      "cal_source_row_sha256": "0d680140124fdb0cfbf8af17b0edacdb9d43beb8d2b2d370d7717ff5325a2a70",
+      "fit_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_1.csv",
+      "cal_member": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-12_sample_10_4.csv"
+    }
+  ],
+  "full_source_row_equality_pairs": 11,
+  "scope": "Selected-demand provenance only; served-label inclusion requires runtime/source mapping. Source trip IDs/rows recovered directly from original zip member using event sourceRecordOrdinal and validated arrival-time offset."
+}

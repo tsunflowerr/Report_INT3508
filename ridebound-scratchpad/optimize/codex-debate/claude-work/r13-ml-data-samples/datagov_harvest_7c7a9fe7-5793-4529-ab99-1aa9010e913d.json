@@ -1,0 +1,47 @@
+{
+  "@type": "dcat:Dataset",
+  "accessLevel": "public",
+  "contactPoint": {
+    "@type": "vcard:Contact",
+    "fn": "Jonathan Levy",
+    "hasEmail": "mailto:no-reply@data.cityofchicago.org"
+  },
+  "description": "Taxi trips, starting January 2024, reported to the City of Chicago in its role as a regulatory agency.  To protect privacy but allow for aggregate analyses, the Taxi ID is consistent for any given taxi medallion number but does not show the number, Census Tracts are suppressed in some cases, and times are rounded to the nearest 15 minutes. <b> For earlier trips, see the link in the Featured Content section below.</b>\r\n\r\nDue to the data reporting process, not all trips are reported but the City believes that most are.",
+  "distribution": [
+    {
+      "@type": "dcat:Distribution",
+      "describedBy": "https://data.cityofchicago.org/api/views/ajtu-isnz/columns.json",
+      "describedByType": "application/json",
+      "downloadURL": "https://data.cityofchicago.org/api/v3/views/ajtu-isnz/query.json?accessType=DOWNLOAD",
+      "mediaType": "application/json"
+    },
+    {
+      "@type": "dcat:Distribution",
+      "describedBy": "https://data.cityofchicago.org/api/views/ajtu-isnz/columns.xml",
+      "describedByType": "application/xml",
+      "downloadURL": "https://data.cityofchicago.org/api/v3/views/ajtu-isnz/export.xml?accessType=DOWNLOAD",
+      "mediaType": "application/xml"
+    },
+    {
+      "@type": "dcat:Distribution",
+      "downloadURL": "https://data.cityofchicago.org/api/v3/views/ajtu-isnz/export.csv?accessType=DOWNLOAD",
+      "mediaType": "text/csv"
+    }
+  ],
+  "identifier": "https://data.cityofchicago.org/api/views/ajtu-isnz",
+  "issued": "2024-02-07",
+  "keyword": [
+    "taxis",
+    "transportation"
+  ],
+  "landingPage": "https://data.cityofchicago.org/d/ajtu-isnz",
+  "modified": "2026-07-15",
+  "publisher": {
+    "@type": "org:Organization",
+    "name": "data.cityofchicago.org"
+  },
+  "theme": [
+    "Transportation"
+  ],
+  "title": "Taxi Trips (2024-)"
+}

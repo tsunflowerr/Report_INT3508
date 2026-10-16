@@ -1,0 +1,236 @@
+{
+  "inputs": {
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex": {
+      "sha256": "c0f7aeeb6cee8d96dd517a629e5bfecd619e9fdd00b7d276a3e2bc1ae324e00e",
+      "physical_lines": 450
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\08-chuong4-phanA-v4.tex": {
+      "sha256": "f26f2d6d0f3afd78f328b77c686fc8e52430f5bbcc9bf0627b77e1251941c17e",
+      "physical_lines": 764
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex": {
+      "sha256": "74cf47ccfabe497ec5d9fa292b15789a39dac86e4144fa82d2f5991828099ffb",
+      "physical_lines": 744
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\06-chuong2-v4.tex": {
+      "sha256": "b1f1f6bc87ab7e2e50113b66e068202d3e72050f4576c54cf2dbc9b46f3d35da",
+      "physical_lines": 265
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\reviews\\CH4B-REVISION-LOG.md": {
+      "sha256": "3ea9792d4b5b4045d70e6fd045861ae0496bd91d236c98087fda51da2c318177",
+      "physical_lines": 319
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\evidence\\EVIDENCE-REGISTER-ADDENDUM-6-CH4B-v8.md": {
+      "sha256": "ce6c447dc36ea7b6e9dbac464af947344b5777272e76eeaab25f604152bfe701",
+      "physical_lines": 79
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\evidence\\checks-ch4b-v8\\ADDENDUM-6-ERRATA-2026-10-12.md": {
+      "sha256": "df7def6ea370b0be9164c167da49a34e27e47991be835ac7785f52b20b3e323e",
+      "physical_lines": 13
+    }
+  },
+  "references": [
+    {
+      "line": 21,
+      "target": "bang:rangbuoc",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:125"
+      ]
+    },
+    {
+      "line": 25,
+      "target": "bang:c4-sangloc",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex:37"
+      ]
+    },
+    {
+      "line": 80,
+      "target": "bang:c4-dubao",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex:93"
+      ]
+    },
+    {
+      "line": 80,
+      "target": "muc:dubao",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:494"
+      ]
+    },
+    {
+      "line": 127,
+      "target": "hinh:c4-so",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex:175"
+      ]
+    },
+    {
+      "line": 131,
+      "target": "bang:c4-tran120",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\08-chuong4-phanA-v4.tex:560"
+      ]
+    },
+    {
+      "line": 136,
+      "target": "muc:c4-thaoluan",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex:388"
+      ]
+    },
+    {
+      "line": 171,
+      "target": "eq:so",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:610"
+      ]
+    },
+    {
+      "line": 186,
+      "target": "bang:c4-nghiavu",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\08-chuong4-phanA-v4.tex:306"
+      ]
+    },
+    {
+      "line": 226,
+      "target": "bang:c4-dem",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex:236"
+      ]
+    },
+    {
+      "line": 287,
+      "target": "bang:c4-nghiavu",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\08-chuong4-phanA-v4.tex:306"
+      ]
+    },
+    {
+      "line": 309,
+      "target": "hinh:c4-so",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex:175"
+      ]
+    },
+    {
+      "line": 312,
+      "target": "bang:c4-tuyet",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex:322"
+      ]
+    },
+    {
+      "line": 347,
+      "target": "eq:so",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:610"
+      ]
+    },
+    {
+      "line": 360,
+      "target": "nx:giunguyen",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:373"
+      ]
+    },
+    {
+      "line": 366,
+      "target": "muc:gioihan",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:702"
+      ]
+    },
+    {
+      "line": 370,
+      "target": "muc:doichung",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:403"
+      ]
+    },
+    {
+      "line": 375,
+      "target": "muc:kiemtra",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:719"
+      ]
+    },
+    {
+      "line": 382,
+      "target": "phuluc:C",
+      "definitions": []
+    },
+    {
+      "line": 393,
+      "target": "bang:c4-phanbotre",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\08-chuong4-phanA-v4.tex:356"
+      ]
+    },
+    {
+      "line": 433,
+      "target": "muc:c4-dubao",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex:77"
+      ]
+    },
+    {
+      "line": 433,
+      "target": "muc:c4-dem",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex:215"
+      ]
+    },
+    {
+      "line": 442,
+      "target": "muc:c4-congdon",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\08-chuong4-phanA-v4.tex:693"
+      ]
+    },
+    {
+      "line": 446,
+      "target": "muc:doichung",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:403"
+      ]
+    }
+  ],
+  "duplicates": {},
+  "forbidden": [],
+  "undefined": [
+    {
+      "line": 382,
+      "target": "phuluc:C",
+      "definitions": []
+    }
+  ],
+  "removed_label_inbound": [],
+  "common_served_cohort": {
+    "common": 2207,
+    "U_forecast_pad30": {
+      "late60": 94,
+      "late120": 59,
+      "early60": 40,
+      "timely60": 2113,
+      "timely120": 2148
+    },
+    "C30_forecast": {
+      "late60": 9,
+      "late120": 0,
+      "early60": 4,
+      "timely60": 2198,
+      "timely120": 2207
+    }
+  },
+  "ch5_rewrite_candidates": [],
+  "page_ruler": {
+    "prose_tokens_from_notes": 3483,
+    "table_figure_pages_from_notes": 2.55,
+    "pages": 13.104545454545455,
+    "cut_tokens_needed_for_11": 694.5000000000005,
+    "all_notes_section4_cut_tokens": 540,
+    "pages_after_all_nominal_cuts": 11.468181818181819
+  }
+}

@@ -1,0 +1,5 @@
+# initializeRun (adapterToRunner)
+  manifest.binarySha256 = 17a9dfcfd85c6ceb814dace28f31e8d4cb78746dbc0a9825db726eb47fb1cfee
+  manifest.coreCommitSha = 38d517d8a9382811e50ac3db408a56d2c3897551
+  manifest.policyId = rolling-cost
+  manifest.simulator.upstreamCommitSha = 053aa9d4fcfde91c5d303435d5748f9206c071b0

@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "25_change_rows": true,
+    "correct_attempt4_anchor": true,
+    "correct_calibration_anchor": true,
+    "correct_runner_anchor": true,
+    "separate_B_cohorts": true,
+    "part_B_120s_handoff": true,
+    "word_growth_lt_3": true,
+    "40_resolved_refs": true,
+    "source_preserved": true,
+    "body_tables_retained": true,
+    "prior_v2_retained": true,
+    "tex_hash_matches": true,
+    "no_build_or_simulation": true
+  },
+  "tex_sha256": "b2978f741056f3ee2e1e92a3671cd51404492374d2bfd100796417ded746306b",
+  "notes_sha256": "f4c7760618098a32b00fd175ece88356e16a425978ea18da7d28334a0f64de61",
+  "change_count": 25,
+  "new_counts": [
+    {
+      "section": "Mở chương",
+      "prose": 122,
+      "floats": 198
+    },
+    {
+      "section": "4.1",
+      "prose": 920,
+      "floats": 859
+    },
+    {
+      "section": "4.2",
+      "prose": 1174,
+      "floats": 364
+    },
+    {
+      "section": "4.3",
+      "prose": 748,
+      "floats": 183
+    },
+    {
+      "section": "4.4",
+      "prose": 853,
+      "floats": 644
+    },
+    {
+      "section": "4.5",
+      "prose": 685,
+      "floats": 114
+    }
+  ]
+}

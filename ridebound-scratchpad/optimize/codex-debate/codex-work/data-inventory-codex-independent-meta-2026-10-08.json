@@ -1,0 +1,14 @@
+{
+  "enumerated_file_count": 71789,
+  "counts_by_kind": {
+    "run-attempt": 2008,
+    "partial-or-bundle-only": 214,
+    "protocol-output-no-run-json": 68
+  },
+  "explicit_repeat_records": 2008,
+  "primary_run00_count": 1991,
+  "primary_experiment_count": 51,
+  "completed_unknown": 3,
+  "duplicate_declared_groups": 56,
+  "notes": "Preserved all streamed explicit rows after interrupted no-run-json extraction. Every no-run-json marker directory retained with outcome unknown, not omitted."
+}

@@ -1,0 +1,223 @@
+{
+ "sourceIdentifier": "(day, sourceRecordOrdinal), selected disposition from original selection-frame.json",
+ "calibrationRowsUnique": 1575,
+ "testRowsUnique": 3541,
+ "crossPartitionOverlapUnique": 43,
+ "byDay": [
+  {
+   "day": 14,
+   "calRows": 624,
+   "testRows": 626,
+   "overlap": 13
+  },
+  {
+   "day": 15,
+   "calRows": 205,
+   "testRows": 610,
+   "overlap": 8
+  },
+  {
+   "day": 16,
+   "calRows": 314,
+   "testRows": 932,
+   "overlap": 12
+  },
+  {
+   "day": 17,
+   "calRows": 216,
+   "testRows": 732,
+   "overlap": 3
+  },
+  {
+   "day": 18,
+   "calRows": 216,
+   "testRows": 641,
+   "overlap": 7
+  }
+ ],
+ "pairs": [
+  {
+   "calib": "d20181114-s10-r1-w07",
+   "test": "d20181114-s10-r4-w07",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181114-s10-r1-w07",
+   "test": "d20181114-s10-r4-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181114-s10-r1-w08",
+   "test": "d20181114-s10-r4-w07",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181114-s10-r1-w08",
+   "test": "d20181114-s10-r4-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181114-s10-r1-w17",
+   "test": "d20181114-s10-r3-w07",
+   "sharedSourceRows": 2
+  },
+  {
+   "calib": "d20181114-s10-r1-w17",
+   "test": "d20181114-s10-r3-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181114-s10-r1-w17",
+   "test": "d20181114-s10-r4-w17",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181114-s10-r2-w07",
+   "test": "d20181114-s10-r3-w07",
+   "sharedSourceRows": 2
+  },
+  {
+   "calib": "d20181114-s10-r2-w07",
+   "test": "d20181114-s10-r4-w17",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181114-s10-r2-w08",
+   "test": "d20181114-s10-r3-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181114-s10-r2-w08",
+   "test": "d20181114-s10-r4-w17",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181114-s10-r2-w17",
+   "test": "d20181114-s10-r3-w17",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181114-s10-r2-w17",
+   "test": "d20181114-s10-r4-w17",
+   "sharedSourceRows": 2
+  },
+  {
+   "calib": "d20181115-s10-r3-w07",
+   "test": "d20181115-s10-r1-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181115-s10-r3-w07",
+   "test": "d20181115-s10-r2-w07",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181115-s10-r3-w07",
+   "test": "d20181115-s10-r4-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181115-s10-r3-w08",
+   "test": "d20181115-s10-r1-w07",
+   "sharedSourceRows": 2
+  },
+  {
+   "calib": "d20181115-s10-r3-w08",
+   "test": "d20181115-s10-r1-w08",
+   "sharedSourceRows": 2
+  },
+  {
+   "calib": "d20181115-s10-r3-w08",
+   "test": "d20181115-s10-r2-w07",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181115-s10-r3-w08",
+   "test": "d20181115-s10-r2-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181116-s10-r3-w07",
+   "test": "d20181116-s10-r2-w17",
+   "sharedSourceRows": 2
+  },
+  {
+   "calib": "d20181116-s10-r3-w07",
+   "test": "d20181116-s10-r4-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181116-s10-r3-w08",
+   "test": "d20181116-s10-r1-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181116-s10-r3-w08",
+   "test": "d20181116-s10-r1-w17",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181116-s10-r3-w08",
+   "test": "d20181116-s10-r2-w08",
+   "sharedSourceRows": 4
+  },
+  {
+   "calib": "d20181116-s10-r3-w08",
+   "test": "d20181116-s10-r2-w17",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181116-s10-r3-w08",
+   "test": "d20181116-s10-r4-w07",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181116-s10-r3-w17",
+   "test": "d20181116-s10-r1-w17",
+   "sharedSourceRows": 2
+  },
+  {
+   "calib": "d20181117-s10-r4-w08",
+   "test": "d20181117-s10-r1-w17",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181117-s10-r4-w08",
+   "test": "d20181117-s10-r2-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181117-s10-r4-w17",
+   "test": "d20181117-s10-r1-w08",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181118-s10-r1-w08",
+   "test": "d20181118-s10-r2-w17",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181118-s10-r1-w08",
+   "test": "d20181118-s10-r3-w17",
+   "sharedSourceRows": 1
+  },
+  {
+   "calib": "d20181118-s10-r1-w08",
+   "test": "d20181118-s10-r4-w17",
+   "sharedSourceRows": 2
+  },
+  {
+   "calib": "d20181118-s10-r1-w17",
+   "test": "d20181118-s10-r2-w08",
+   "sharedSourceRows": 2
+  },
+  {
+   "calib": "d20181118-s10-r1-w17",
+   "test": "d20181118-s10-r2-w17",
+   "sharedSourceRows": 1
+  }
+ ],
+ "status": "INVALID_IDENTIFIER_DIAGNOSTIC_DO_NOT_CITE",
+ "reason": "SourceRecordOrdinal is local to each different sample demand CSV. Day plus ordinal is not a trip identity.",
+ "supersededBy": "t38-actual-trip-id-overlap.json"
+}

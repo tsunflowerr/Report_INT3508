@@ -1,0 +1,636 @@
+[
+  {
+    "key": "alonsomora2017",
+    "status": "VERIFIED",
+    "metadata": "Javier Alonso-Mora; Samitha Samaranayake; Alex Wallar; Emilio Frazzoli; Daniela Rus. On-demand high-capacity ride-sharing via dynamic trip-vehicle assignment. Proceedings of the National Academy of Sciences 114(3):462–467 (2017). DOI 10.1073/pnas.1611675114.",
+    "url": "https://www.pnas.org/doi/full/10.1073/pnas.1611675114",
+    "notes": "Publisher opened: ordered five authors, exact title, issue, page range and DOI match old bibliography. Main text eq.1, constraints and 30-second batch/reassignment rules support C2-10. A 2018 correction (https://www.pnas.org/doi/10.1073/pnas.1721622115) was also opened: it corrects mean travel distance in Fig.5D and SI figures/table2; the cited assignment/constraint text is unaffected. Original DOI remains the bibliography identity.",
+    "tex": "\\bibitem{alonsomora2017}\nJ.~Alonso-Mora, S.~Samaranayake, A.~Wallar, E.~Frazzoli, and D.~Rus.\n\\newblock On-demand high-capacity ride-sharing via dynamic trip-vehicle assignment.\n\\newblock \\emph{Proceedings of the National Academy of Sciences}, 114(3):462--467, 2017.\n\\newblock \\url{https://doi.org/10.1073/pnas.1611675114}",
+    "register_ids": [
+      "J17",
+      "C2-10"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "fielbaum2020",
+    "status": "VERIFIED",
+    "metadata": "Andrés Fielbaum; Javier Alonso-Mora. Unreliability in ridesharing systems: Measuring changes in users’ times due to new requests. Transportation Research Part C: Emerging Technologies 121:102831 (2020). DOI 10.1016/j.trc.2020.102831.",
+    "url": "https://pure.tudelft.nl/ws/files/84615509/1_s2.0_S0968090X2030735X_main.pdf",
+    "notes": "Official TU Delft final published PDF opened, including cover citation and article first page. Old bibliography metadata matches. Body defines operator/user causes and first-announced waiting/detour; section6 controls unreliability, so this source is not merely retrospective measurement. TU Delft PDF has a repository cover: physical PDF page = printed article page +1.",
+    "tex": "\\bibitem{fielbaum2020}\nA.~Fielbaum and J.~Alonso-Mora.\n\\newblock Unreliability in ridesharing systems: Measuring changes in users' times due to new requests.\n\\newblock \\emph{Transportation Research Part C: Emerging Technologies}, 121:102831, 2020.\n\\newblock \\url{https://doi.org/10.1016/j.trc.2020.102831}",
+    "register_ids": [
+      "J06",
+      "J07",
+      "J08",
+      "J09",
+      "C2-06"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "fielbaum2022scale",
+    "status": "CORRECTED",
+    "metadata": "Andrés Fielbaum; Alejandro Tirachini; Javier Alonso-Mora. Economies and diseconomies of scale in on-demand ridepooling systems. Economics of Transportation 34:100313 (2023). DOI 10.1016/j.ecotra.2023.100313.",
+    "url": "https://ris.utwente.nl/ws/portalfiles/portal/306113346/1_s2.0_S2212012223000138_main.pdf",
+    "notes": "Final published PDF p1 opened on official University of Twente repository. Old title 'Economies and diseconomies of scale in on-demand ridepooling systems and comparison with public transport' → final title without suffix. Incomplete 'Economics of Transportation, 2023' → 34:100313; add DOI. Legacy key year is retained, but final reference year is 2023. Do not use guessed DOI10.1016/j.ecotra.2022.100287. Not currently cited by final Ch2v4; planned/legacy role must be decided from root inventory.",
+    "tex": "\\bibitem{fielbaum2022scale}\nA.~Fielbaum, A.~Tirachini, and J.~Alonso-Mora.\n\\newblock Economies and diseconomies of scale in on-demand ridepooling systems.\n\\newblock \\emph{Economics of Transportation}, 34:100313, 2023.\n\\newblock \\url{https://doi.org/10.1016/j.ecotra.2023.100313}",
+    "register_ids": [
+      "C2-24"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "fleetpy2022",
+    "status": "CORRECTED",
+    "metadata": "Roman Engelhardt; Florian Dandl; Arslan-Ali Syed; Yunfei Zhang; Fabian Fehn; Fynn Wolf; Klaus Bogenberger. FleetPy: A Modular Open-Source Simulation Tool for Mobility On-Demand Services. arXiv:2207.14246v1 (28 July 2022). DOI 10.48550/arXiv.2207.14246.",
+    "url": "https://arxiv.org/abs/2207.14246",
+    "notes": "Official arXiv abstract opened. Seven authors, order/title/year/arXivID confirmed. Old third-author initial A.~Syed → A.-A.~Syed (Arslan-Ali); add archival DOI URL in place of using GitHub as sole reference link. This preprint has a different title and author list from the 2026 journal paper; keep identities distinct. Final Ch2 cites engelhardt2026.",
+    "tex": "\\bibitem{fleetpy2022}\nR.~Engelhardt, F.~Dandl, A.-A.~Syed, Y.~Zhang, F.~Fehn, F.~Wolf, and K.~Bogenberger.\n\\newblock FleetPy: A Modular Open-Source Simulation Tool for Mobility On-Demand Services.\n\\newblock arXiv:2207.14246, 2022.\n\\newblock \\url{https://doi.org/10.48550/arXiv.2207.14246}",
+    "register_ids": [
+      "J18"
+    ],
+    "body_status": "METADATA/ABSTRACT ONLY"
+  },
+  {
+    "key": "engelhardt2026",
+    "status": "VERIFIED",
+    "metadata": "Roman Engelhardt; Florian Dandl; Arslan Ali Syed; Chenhao Ding; Santiago Alvarez-Ossorio Martinez; Yunfei Zhang; Hoda Hamdy; Joel Brodersen; Zhipu Chen; Klaus Bogenberger. FleetPy: an open source simulator for reproducible research on mobility-on-demand services. European Transport Research Review 18(1):52 (2026). DOI 10.1186/s12544-026-00823-3.",
+    "url": "https://link.springer.com/article/10.1186/s12544-026-00823-3",
+    "notes": "Publisher full text opened, version of record15July2026; ten ordered authors, article52, volume18 confirmed. Issue1 corroborated by official TUM author bibliography https://www.mos.ed.tum.de/vt/mitarbeiter-innen/dr-ing-dandl-florian/ (opened). Ch2BIB and C2-11 metadata agree. Body section3.1 confirms4,410nodes/9,574edges, week11–18Nov2018,1,807,255trips and hourly travel-time factors. Use canonical engelhardt2026 key, not a second alias for same journal paper.",
+    "tex": "\\bibitem{engelhardt2026}\nR.~Engelhardt, F.~Dandl, A.~A.~Syed, C.~Ding, S.~Alvarez-Ossorio Martinez, Y.~Zhang, H.~Hamdy,\nJ.~Brodersen, Z.~Chen, and K.~Bogenberger.\n\\newblock FleetPy: an open source simulator for reproducible research on mobility-on-demand services.\n\\newblock \\emph{European Transport Research Review}, 18(1):52, 2026.\n\\newblock \\url{https://doi.org/10.1186/s12544-026-00823-3}",
+    "register_ids": [
+      "J18",
+      "C2-11"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "schulz2026",
+    "status": "VERIFIED",
+    "metadata": "Arne Schulz; Christian Pfeiffer. Efficient insertion and reoptimization algorithms for a customer-oriented dynamic dial-a-ride problem. OR Spectrum 48(2):541–586 (2026). DOI 10.1007/s00291-026-00847-0.",
+    "url": "https://link.springer.com/article/10.1007/s00291-026-00847-0 ; https://link.springer.com/journal/291/volumes-and-issues/48-2",
+    "notes": "All existing metadata correct; add missing issue2 as a verified completion, not an error. Publisher article and official issue page both opened. Add missing issue: old48:541–586 →48(2):541–586. Other metadata unchanged; online2February2026, issueJune2026. Body section3.1 states deadline l_i = B_i + l fixed just after offer acceptance; section6.2 gives l=900s. Matches Ch2BIB/C2-07.",
+    "tex": "\\bibitem{schulz2026}\nA.~Schulz and C.~Pfeiffer.\n\\newblock Efficient insertion and reoptimization algorithms for a customer-oriented dynamic dial-a-ride problem.\n\\newblock \\emph{OR Spectrum}, 48(2):541--586, 2026.\n\\newblock \\url{https://doi.org/10.1007/s00291-026-00847-0}",
+    "register_ids": [
+      "J10",
+      "C2-07"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "elmi2026",
+    "status": "VERIFIED",
+    "metadata": "Amir Elmi; Emily Moylan; Javier Alonso-Mora; Andres Fielbaum. Improving ridepooling reliability using shareability shadows. Transportation Research Part C: Emerging Technologies 192:105897 (2026). DOI 10.1016/j.trc.2026.105897.",
+    "url": "https://research.tudelft.nl/en/publications/improving-ridepooling-reliability-using-shareability-shadows/",
+    "notes": "Official TU Delft portal opened: four authors/order, exact title, volume192/article105897/year/DOI match old bibliography and Ch2BIB. Independently read existing TU Delft final PDF using local pdftotext: printed p5 defines constant arc times and initial residual waiting/delay slack; p12 uniform slack control and passenger-specific0%/100% control; p13 guaranteed fixed time for zero-slack passengers. J12 body now VERIFIED. Probe script/output saved r32-bib/core-body-probe-v2.ps1 and core-body-probe-output-v2.txt. Direct PDF web fetch blocked, but existing primary PDF was read.",
+    "tex": "\\bibitem{elmi2026}\nA.~Elmi, E.~Moylan, J.~Alonso-Mora, and A.~Fielbaum.\n\\newblock Improving ridepooling reliability using shareability shadows.\n\\newblock \\emph{Transportation Research Part C: Emerging Technologies}, 192:105897, 2026.\n\\newblock \\url{https://doi.org/10.1016/j.trc.2026.105897}",
+    "register_ids": [
+      "J12",
+      "C2-08"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "laupichler2026",
+    "status": "VERIFIED",
+    "metadata": "Moritz Laupichler; Robin Andre; Kim Kandler; Peter Sanders; Peter Vortisch. Advancing Dynamic Ride-Pooling Simulation – A Highly Scalable Dispatcher. arXiv:2605.11798v1 (12 May 2026). DOI 10.48550/arXiv.2605.11798.",
+    "url": "https://arxiv.org/abs/2605.11798 ; https://arxiv.org/pdf/2605.11798",
+    "notes": "Official arXiv abstract and full PDF opened. Metadata agrees with Ch2BIB/C2-09. Mt-KaRRi is dispatcher name, not paper title. PDF p5 explicitly bounds previously accepted trip time by alpha*T_accepted+beta; p27 AppendixB.2 choosesalpha=1.4,beta=10min. J32 body independently verified.",
+    "tex": "\\bibitem{laupichler2026}\nM.~Laupichler, R.~Andre, K.~Kandler, P.~Sanders, and P.~Vortisch.\n\\newblock Advancing Dynamic Ride-Pooling Simulation -- A Highly Scalable Dispatcher.\n\\newblock arXiv:2605.11798, 2026.\n\\newblock \\url{https://doi.org/10.48550/arXiv.2605.11798}",
+    "register_ids": [
+      "J32",
+      "C2-09"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "wang2026",
+    "status": "VERIFIED",
+    "metadata": "Xinyu Wang; Andres Fielbaum. Where should the last passenger be dropped off? Anticipatory walking in ridepooling. Transportation Research Part C: Emerging Technologies 187:105645 (2026). DOI 10.1016/j.trc.2026.105645.",
+    "url": "https://andresfielbaum.com/on-demand-ridepooling/ ; https://www.sciencedirect.com/science/article/pii/S0968090X26001336 (publisher search result read; direct full-text fetch failed)",
+    "notes": "Proposed new key for plannedJ16; no existing key found. Bibliographic identity VERIFIED via opened author's official publication list and publisher search result containing DOI,title,two ordered authors,June2026,volume187/article105645. Publisher highlights/abstract mention an alternative no-walking schedule and a reverting mechanism. CANNOT VERIFY(full body): direct publisher,DOI,/abs and PDF fetches failed; no official full text found. Do not upgrade J16 detailed reference-schedule/no-worse interpretation from UNVERIFIED based on abstract alone. Metadata may be retained as planned reference, but body details must remain missing evidence until full text is read.",
+    "tex": "\\bibitem{wang2026}\nX.~Wang and A.~Fielbaum.\n\\newblock Where should the last passenger be dropped off? Anticipatory walking in ridepooling.\n\\newblock \\emph{Transportation Research Part C: Emerging Technologies}, 187:105645, 2026.\n\\newblock \\url{https://doi.org/10.1016/j.trc.2026.105645}",
+    "register_ids": [
+      "J16"
+    ],
+    "body_status": "CANNOT VERIFY"
+  },
+  {
+    "key": "ding2025",
+    "status": "VERIFIED",
+    "metadata": "Chenhao Ding; Florian Dandl; Klaus Bogenberger. Predicting Offers for Mobility-on-Demand Services: A Machine Learning-Based Approach. 104th Annual Meeting of the Transportation Research Board (2025). Manuscript dated12November2024,24PDFpages. No DOI, volume/issue or published page range verified.",
+    "url": "https://mediatum.ub.tum.de/doc/1765899/1765899.pdf ; https://www.mos.ed.tum.de/vt/mitarbeiter-innen/dr-ing-dandl-florian/",
+    "notes": "Proposed new key for plannedJ41. Official TUM full manuscript successfully opened(24pages): title and three ordered authors onp1,date12Nov2024. Official TUM author bibliography lists104thTRBAnnualMeeting2025; official TRB2025sessions program also identifiesTRBAM-25-06187. Use2025conference year, distinguish2024manuscript date. Bodyp7 explicitly uses FleetPy requests/fleet-state as inputs and realized service as target values; J41 now VERIFIED. No DOI or proceedings page range invented;24pages is manuscript length, not a published page range.",
+    "tex": "\\bibitem{ding2025}\nC.~Ding, F.~Dandl, and K.~Bogenberger.\n\\newblock Predicting Offers for Mobility-on-Demand Services: A Machine Learning-Based Approach.\n\\newblock In \\emph{104th Annual Meeting of the Transportation Research Board}, 2025.\n\\newblock \\url{https://mediatum.ub.tum.de/doc/1765899/1765899.pdf}",
+    "register_ids": [
+      "J41"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "sridharan1987",
+    "status": "VERIFIED",
+    "metadata": "V. Sridharan; William L. Berry; V. Udayabhanu. Freezing the Master Production Schedule Under Rolling Planning Horizons. Management Science 33(9):1137–1149 (1987). DOI 10.1287/mnsc.33.9.1137.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.33.9.1137",
+    "notes": "Ordered authors, title, issue, year and article pages independently checked on INFORMS article page. Legacy metadata matches.",
+    "register_ids": [
+      "J26",
+      "C2-21"
+    ],
+    "tex": "\\bibitem{sridharan1987}\nV.~Sridharan, W.~L. Berry, and V.~Udayabhanu.\n\\newblock Freezing the master production schedule under rolling planning horizons.\n\\newblock \\emph{Management Science}, 33(9):1137--1149, 1987.\n\\newblock \\url{https://doi.org/10.1287/mnsc.33.9.1137}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "kovacs2014",
+    "status": "VERIFIED",
+    "metadata": "Attila A. Kovacs; Bruce L. Golden; Richard F. Hartl; Sophie N. Parragh. Vehicle routing problems in which consistency considerations are important: A survey. Networks 64(3):192–213 (2014). DOI 10.1002/net.21565.",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/net.21565",
+    "notes": "Ordered authors and metadata checked on Wiley DOI page. Legacy matches.",
+    "register_ids": [
+      "J26",
+      "C2-20"
+    ],
+    "tex": "\\bibitem{kovacs2014}\nA.~A. Kovacs, B.~L. Golden, R.~F. Hartl, and S.~N. Parragh.\n\\newblock Vehicle routing problems in which consistency considerations are important: A survey.\n\\newblock \\emph{Networks}, 64(3):192--213, 2014.\n\\newblock \\url{https://doi.org/10.1002/net.21565}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "cordeau2007",
+    "status": "VERIFIED",
+    "metadata": "Jean-François Cordeau; Gilbert Laporte. The dial-a-ride problem: models and algorithms. Annals of Operations Research 153(1):29–46 (2007). DOI 10.1007/s10479-007-0170-8.",
+    "url": "https://link.springer.com/article/10.1007/s10479-007-0170-8",
+    "notes": "Ordered authors, title, volume, pages and DOI independently checked on Springer. Legacy matches. Issue 1 also identified in publisher citation metadata.",
+    "register_ids": [],
+    "tex": "\\bibitem{cordeau2007}\nJ.-F. Cordeau and G.~Laporte.\n\\newblock The dial-a-ride problem: models and algorithms.\n\\newblock \\emph{Annals of Operations Research}, 153(1):29--46, 2007.\n\\newblock \\url{https://doi.org/10.1007/s10479-007-0170-8}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "toth2014",
+    "status": "VERIFIED",
+    "metadata": "Paolo Toth; Daniele Vigo (editors). Vehicle Routing: Problems, Methods, and Applications. Second edition. Society for Industrial and Applied Mathematics, 2014. DOI 10.1137/1.9781611973594.",
+    "url": "https://epubs.siam.org/doi/book/10.1137/1.9781611973594",
+    "notes": "Book page verifies edition/year/DOI; front-matter page https://epubs.siam.org/doi/10.1137/1.9781611973594.fm explicitly gives editors in this order. No total page count added because publisher book-summary and contents differ.",
+    "register_ids": [],
+    "tex": "\\bibitem{toth2014}\nP.~Toth and D.~Vigo, editors.\n\\newblock \\emph{Vehicle Routing: Problems, Methods, and Applications}.\n\\newblock SIAM, 2nd edition, 2014.\n\\newblock \\url{https://doi.org/10.1137/1.9781611973594}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "groer2009",
+    "status": "VERIFIED",
+    "metadata": "Chris Groër; Bruce Golden; Edward Wasil. The Consistent Vehicle Routing Problem. Manufacturing & Service Operations Management 11(4):630–643 (2009). DOI 10.1287/msom.1080.0243.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/msom.1080.0243",
+    "notes": "Keep issue year 2009: publisher says Volume 11, Issue 4, Fall 2009 and copyright 2009. Online date is 4 December 2008; automatic Cite as uses 2008. Legacy issue-year citation is valid.",
+    "register_ids": [],
+    "tex": "\\bibitem{groer2009}\nC.~Gro{\\\"e}r, B.~Golden, and E.~Wasil.\n\\newblock The consistent vehicle routing problem.\n\\newblock \\emph{Manufacturing \\& Service Operations Management}, 11(4):630--643, 2009.\n\\newblock \\url{https://doi.org/10.1287/msom.1080.0243}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "blackburn1986",
+    "status": "VERIFIED",
+    "metadata": "Joseph D. Blackburn; Dean H. Kropp; Robert A. Millen. A Comparison of Strategies to Dampen Nervousness in MRP Systems. Management Science 32(4):413–429 (1986). DOI 10.1287/mnsc.32.4.413.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.32.4.413",
+    "notes": "Ordered authors and all legacy metadata independently checked on publisher page.",
+    "register_ids": [],
+    "tex": "\\bibitem{blackburn1986}\nJ.~D. Blackburn, D.~H. Kropp, and R.~A. Millen.\n\\newblock A comparison of strategies to dampen nervousness in MRP systems.\n\\newblock \\emph{Management Science}, 32(4):413--429, 1986.\n\\newblock \\url{https://doi.org/10.1287/mnsc.32.4.413}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "agatz2012",
+    "status": "VERIFIED",
+    "metadata": "Niels Agatz; Alan Erera; Martin Savelsbergh; Xing Wang. Optimization for dynamic ride-sharing: A review. European Journal of Operational Research 223(2):295–303 (2012). DOI 10.1016/j.ejor.2012.05.028.",
+    "url": "https://repub.eur.nl/pub/34909",
+    "notes": "ScienceDirect search result supplied publisher metadata, but direct page returned 403. Independently opened Erasmus institutional repository confirms ordered authors, exact title, volume, issue, pages, year and DOI. Repository includes longer initials N.A.H./A.L./M.W.P.; legacy first-name initials are valid abbreviations.",
+    "register_ids": [],
+    "tex": "\\bibitem{agatz2012}\nN.~Agatz, A.~Erera, M.~Savelsbergh, and X.~Wang.\n\\newblock Optimization for dynamic ride-sharing: A review.\n\\newblock \\emph{European Journal of Operational Research}, 223(2):295--303, 2012.\n\\newblock \\url{https://doi.org/10.1016/j.ejor.2012.05.028}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "li2025",
+    "status": "CORRECTED",
+    "metadata": "Xinling Li; Meshal Alharbi; Daniele Gammelli; James Harrison; Filipe Rodrigues; Maximilian Schiffer; Marco Pavone; Emilio Frazzoli; Jinhua Zhao; Gioele Zardini. Reproducibility in the Control of Autonomous Mobility-on-Demand Systems. arXiv:2506.07345v2 (2025). DOI 10.48550/arXiv.2506.07345.",
+    "url": "https://arxiv.org/abs/2506.07345",
+    "notes": "Legacy D. Li → X. Li; A. Alharbi → M. Alharbi. Remaining ordered names match. First submitted 9 June 2025, v2 dated 30 December 2025. No journal venue asserted on opened arXiv record.",
+    "register_ids": [],
+    "tex": "\\bibitem{li2025}\nX.~Li, M.~Alharbi, D.~Gammelli, J.~Harrison, F.~Rodrigues, M.~Schiffer, M.~Pavone, E.~Frazzoli, J.~Zhao, and G.~Zardini.\n\\newblock Reproducibility in the control of autonomous mobility-on-demand systems.\n\\newblock arXiv:2506.07345v2, 2025.\n\\newblock \\url{https://arxiv.org/abs/2506.07345}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "sharifazadeh2022",
+    "status": "VERIFIED",
+    "metadata": "Sh. Sharif Azadeh; Bilge Atasoy; Moshe E. Ben-Akiva; M. Bierlaire; M.Y. Maknoon. Choice-driven dial-a-ride problem for demand responsive mobility service. Transportation Research Part B: Methodological 161:128–149 (2022). DOI 10.1016/j.trb.2022.04.008.",
+    "url": "https://dspace.mit.edu/entities/publication/024805a3-e5f5-4a58-8519-096c34e2b525",
+    "notes": "Opened MIT official repository verifies authors/title/year/venue/DOI and explicitly names 1-s2.0-S0191261522000716-main.pdf, final published version. Independently extracted first page of C:/PDF/Paper/1-s2.0-S0191261522000716-main.pdf using pdftotext: same title, ordered names, 161 (2022) 128–149 and DOI. This local file is not Hörl–Zwick. Legacy metadata matches.",
+    "register_ids": [
+      "C2-01"
+    ],
+    "tex": "\\bibitem{sharifazadeh2022}\nSh.~Sharif Azadeh, B.~Atasoy, M.~E. Ben-Akiva, M.~Bierlaire, and M.~Y. Maknoon.\n\\newblock Choice-driven dial-a-ride problem for demand responsive mobility service.\n\\newblock \\emph{Transportation Research Part B: Methodological}, 161:128--149, 2022.\n\\newblock \\url{https://doi.org/10.1016/j.trb.2022.04.008}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "sivagnanam2026",
+    "status": "VERIFIED",
+    "metadata": "Amutheezan Sivagnanam; Ayan Mukhopadhyay; Samitha Samaranayake; Abhishek Dubey; Aron Laszka. Dynamic Vehicle Routing Problem with Prompt Confirmation of Advance Requests. Proceedings – 17th ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS 2026), pp. 48–57. IEEE, 2026. DOI 10.1109/ICCPS68698.2026.00012.",
+    "url": "https://pure.psu.edu/en/publications/dynamic-vehicle-routing-problem-with-prompt-confirmation-of-advan/",
+    "notes": "Independently opened Penn State official publication record supplies ordered authors, venue, IEEE publisher, year, pp.48–57 and DOI. Also opened arXiv:2603.07422v2 and author-hosted https://aronlaszka.com/papers/sivagnanam2026dynamic.pdf (first page explicitly says published in ICCPS2026). Legacy is correct but omitted pages/DOI; additions are verified.",
+    "register_ids": [],
+    "tex": "\\bibitem{sivagnanam2026}\nA.~Sivagnanam, A.~Mukhopadhyay, S.~Samaranayake, A.~Dubey, and A.~Laszka.\n\\newblock Dynamic vehicle routing problem with prompt confirmation of advance requests.\n\\newblock In \\emph{Proceedings of the 17th ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS)}, pages 48--57. IEEE, 2026.\n\\newblock \\url{https://doi.org/10.1109/ICCPS68698.2026.00012}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "haferkamp2024",
+    "status": "VERIFIED",
+    "metadata": "Jarmo Haferkamp. Design of multi-optional pickup time offers in ride-sharing systems. EURO Journal on Transportation and Logistics 13:100134 (2024). DOI 10.1016/j.ejtl.2024.100134.",
+    "url": "https://www.econstor.eu/handle/10419/325197",
+    "notes": "Publisher search record agrees but direct ScienceDirect/DOI fetch failed. Independently opened official EconStor journal repository supplies author/title/year/volume/article/DOI; it labels issue1 and pp1–13, but final draft conservatively uses article100134 as publisher journal record does. Legacy correct; DOI added. Metadata verification does not independently verify body claim J13.",
+    "register_ids": [
+      "J13"
+    ],
+    "tex": "\\bibitem{haferkamp2024}\nJ.~Haferkamp.\n\\newblock Design of multi-optional pickup time offers in ride-sharing systems.\n\\newblock \\emph{EURO Journal on Transportation and Logistics}, 13:100134, 2024.\n\\newblock \\url{https://doi.org/10.1016/j.ejtl.2024.100134}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "schmidt2026",
+    "status": "VERIFIED",
+    "metadata": "Lina Schmidt; Julian Golak; Arne Schulz; Malte Fliedner. Optimal Service Commitments in Traveling Salesman Problems with Stochastic Demand. arXiv:2609.11950v1 (2026). URL https://arxiv.org/abs/2609.11950.",
+    "url": "https://arxiv.org/abs/2609.11950",
+    "notes": "Opened official arXiv record verifies authors/title/year/identifier. Record unusually reports submitted28July2026 despite2609 identifier; do not infer dates from identifier. It marks arXiv DOI pending registration; draft uses confirmed URL and does not assert resolved DOI.",
+    "register_ids": [
+      "J42"
+    ],
+    "tex": "\\bibitem{schmidt2026}\nL.~Schmidt, J.~Golak, A.~Schulz, and M.~Fliedner.\n\\newblock Optimal service commitments in traveling salesman problems with stochastic demand.\n\\newblock arXiv:2609.11950v1, 2026.\n\\newblock \\url{https://arxiv.org/abs/2609.11950}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "zalesak2025",
+    "status": "VERIFIED",
+    "metadata": "Matthew Zalesak; Hins Hu; Samitha Samaranayake. Ride-pool Assignment Algorithms: Modern Implementation and Swapping Heuristics. arXiv:2504.10649v1 (2025). DOI 10.48550/arXiv.2504.10649.",
+    "url": "https://arxiv.org/abs/2504.10649",
+    "notes": "Ordered authors/title/identifier/year independently checked on arXiv record. Legacy matches.",
+    "register_ids": [],
+    "tex": "\\bibitem{zalesak2025}\nM.~Zalesak, H.~Hu, and S.~Samaranayake.\n\\newblock Ride-pool assignment algorithms: Modern implementation and swapping heuristics.\n\\newblock arXiv:2504.10649v1, 2025.\n\\newblock \\url{https://arxiv.org/abs/2504.10649}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "agarwal2019",
+    "status": "VERIFIED",
+    "metadata": "Naman Agarwal; Brian Bullins; Elad Hazan; Sham Kakade; Karan Singh. Online Control with Adversarial Disturbances. Proceedings of the 36th International Conference on Machine Learning, Proceedings of Machine Learning Research 97:111–119 (2019).",
+    "url": "https://proceedings.mlr.press/v97/agarwal19c.html",
+    "notes": "Publisher PMLR page independently verifies ordered authors/title/venue/year/volume/pages. Legacy matches; no DOI supplied by publisher and none invented.",
+    "register_ids": [],
+    "tex": "\\bibitem{agarwal2019}\nN.~Agarwal, B.~Bullins, E.~Hazan, S.~Kakade, and K.~Singh.\n\\newblock Online control with adversarial disturbances.\n\\newblock In \\emph{Proceedings of the 36th International Conference on Machine Learning}, PMLR 97:111--119, 2019.\n\\newblock \\url{https://proceedings.mlr.press/v97/agarwal19c.html}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "chen2018",
+    "status": "VERIFIED",
+    "metadata": "Niangjun Chen; Gautam Goel; Adam Wierman. Smoothed Online Convex Optimization in High Dimensions via Online Balanced Descent. Proceedings of the 31st Conference On Learning Theory, Proceedings of Machine Learning Research 75:1574–1594 (2018).",
+    "url": "https://proceedings.mlr.press/v75/chen18b.html",
+    "notes": "Ordered authors and all legacy metadata verified on publisher PMLR page. Correct primary page is chen18b, not chen18a (different work). No DOI supplied and none invented.",
+    "register_ids": [],
+    "tex": "\\bibitem{chen2018}\nN.~Chen, G.~Goel, and A.~Wierman.\n\\newblock Smoothed online convex optimization in high dimensions via online balanced descent.\n\\newblock In \\emph{Proceedings of the 31st Conference On Learning Theory}, PMLR 75:1574--1594, 2018.\n\\newblock \\url{https://proceedings.mlr.press/v75/chen18b.html}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "borodin1992",
+    "status": "VERIFIED",
+    "metadata": "Allan Borodin; Nathan Linial; Michael E. Saks. An optimal on-line algorithm for metrical task system. Journal of the ACM 39(4):745–763 (1992). DOI 10.1145/146585.146588.",
+    "url": "https://www.sigmod.org/publications/dblp/db/journals/jacm/jacm39.html",
+    "notes": "ACM DL/DOI fetch failed403. Opened ACM SIGMOD-hosted JACM bibliography, Volume39 Number4 October1992, with ordered authors, exact singular title, pages and Electronic Edition DOI link; also opened MIT JACM bibliography https://projects.csail.mit.edu/jacm/References/borodinls1992:745.html confirming metadata. Legacy matches.",
+    "register_ids": [],
+    "tex": "\\bibitem{borodin1992}\nA.~Borodin, N.~Linial, and M.~E. Saks.\n\\newblock An optimal on-line algorithm for metrical task system.\n\\newblock \\emph{Journal of the ACM}, 39(4):745--763, 1992.\n\\newblock \\url{https://doi.org/10.1145/146585.146588}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "ackermann2025",
+    "status": "VERIFIED",
+    "metadata": "Christian Ackermann; Julia Rieck. Multiple plan approach for a dynamic dial-a-ride problem. OR Spectrum 47(3):781–815 (2025). DOI 10.1007/s00291-025-00809-y.",
+    "url": "https://link.springer.com/article/10.1007/s00291-025-00809-y",
+    "notes": "Opened publisher full article and official Volume47 Issue3 contents page https://link.springer.com/journal/291/volumes-and-issues/47-3. Authors/title/year/pages/DOI and issue checked. Bibliographic verification only; does not certify every component of register body claim J14.",
+    "register_ids": [
+      "J14"
+    ],
+    "tex": "\\bibitem{ackermann2025}\nC.~Ackermann and J.~Rieck.\n\\newblock Multiple plan approach for a dynamic dial-a-ride problem.\n\\newblock \\emph{OR Spectrum}, 47(3):781--815, 2025.\n\\newblock \\url{https://doi.org/10.1007/s00291-025-00809-y}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "tellez2022",
+    "status": "VERIFIED",
+    "metadata": "Oscar Tellez; Samuel Vercraene; Fabien Lehuédé; Olivier Péton; Thibaud Monteiro. The time-consistent dial-a-ride problem. Networks 79(4):452–478 (2022). DOI 10.1002/net.22063.",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/net.22063",
+    "notes": "Ordered authors/title/volume/issue/pages/DOI checked on publisher page (heading specifies2022). First online11June2021; retain journal issue year2022. Publisher abstract explicitly calls this a multiperiod dial-a-ride problem and defines consistency across planning horizon; metadata verification does not substitute for all body details J15.",
+    "register_ids": [
+      "J15"
+    ],
+    "tex": "\\bibitem{tellez2022}\nO.~Tellez, S.~Vercraene, F.~Lehu{\\'e}d{\\'e}, O.~P{\\'e}ton, and T.~Monteiro.\n\\newblock The time-consistent dial-a-ride problem.\n\\newblock \\emph{Networks}, 79(4):452--478, 2022.\n\\newblock \\url{https://doi.org/10.1002/net.22063}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "gschwind2019",
+    "status": "VERIFIED",
+    "metadata": "Timo Gschwind; Michael Drexl. Adaptive Large Neighborhood Search with a Constant-Time Feasibility Test for the Dial-a-Ride Problem. Transportation Science 53(2):480–491 (2019). DOI 10.1287/trsc.2018.0837.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/trsc.2018.0837",
+    "notes": "Ordered authors/title/volume/issue/pages/year/DOI checked on INFORMS article page. Published online14January2019, issueMarch–April2019. DOI contains2018 but is not publication year. Publisher abstract calls insertion-feasibility check exact amortized constant-time; use amortized if describing the guarantee rather than unqualified constant-time. The local-code comparison in J40 was not rechecked.",
+    "register_ids": [
+      "J40"
+    ],
+    "tex": "\\bibitem{gschwind2019}\nT.~Gschwind and M.~Drexl.\n\\newblock Adaptive large neighborhood search with a constant-time feasibility test for the dial-a-ride problem.\n\\newblock \\emph{Transportation Science}, 53(2):480--491, 2019.\n\\newblock \\url{https://doi.org/10.1287/trsc.2018.0837}",
+    "body_status": "BIBLIOGRAPHIC METADATA ONLY"
+  },
+  {
+    "key": "gerzinic2023",
+    "status": "VERIFIED",
+    "metadata": "Nejc Geržinič; Oded Cats; Niels van Oort; Sascha Hoogendoorn-Lanser; Michel Bierlaire; Serge Hoogendoorn. An instance-based learning approach for evaluating the perception of ride-hailing waiting time variability. Travel Behaviour and Society 33:100616 (2023). DOI 10.1016/j.tbs.2023.100616.",
+    "url": "https://research.tudelft.nl/en/publications/an-instance-based-learning-approach-for-evaluating-the-perception/ ; https://arxiv.org/abs/2301.04982",
+    "notes": "Official TU Delft journal record independently opened and confirms all metadata in old bibliography; no correction needed. Official arXiv preprint page also opened and links the published DOI. Do not replace final-journal reference with arXiv merely because Elsevier redirect and repository PDF fetching failed. Abstract concerns waiting-time variability (936 stated-preference responses), not a verified20–25EUR/hour valuation claim; the latter remains unverified.",
+    "tex": "\\bibitem{gerzinic2023}\nN.~Geržinič, O.~Cats, N.~van Oort, S.~Hoogendoorn-Lanser, M.~Bierlaire, and S.~Hoogendoorn.\n\\newblock An instance-based learning approach for evaluating the perception of ride-hailing waiting time variability.\n\\newblock \\emph{Travel Behaviour and Society}, 33:100616, 2023.\n\\newblock \\url{https://doi.org/10.1016/j.tbs.2023.100616}",
+    "register_ids": [
+      "K35"
+    ],
+    "body_status": "METADATA/ABSTRACT ONLY"
+  },
+  {
+    "key": "alonsogonzalez2020",
+    "status": "CORRECTED",
+    "metadata": "M. J. Alonso-González, N. van Oort, O. Cats, S. Hoogendoorn-Lanser, and S. Hoogendoorn. Value of time and reliability for urban pooled on-demand services. Transportation Research Part C: Emerging Technologies, 115:102621, 2020.",
+    "url": "https://repository.tudelft.nl/file/File_1217abf5-bc01-4227-ba39-21878929e291?preview=1",
+    "notes": "Old authors M.J. Alonso-González, S. van Cranenburgh, O. Cats, N. van Oort, S. Hoogendoorn → María J. Alonso-González, Niels van Oort, Oded Cats, Sascha Hoogendoorn-Lanser, Serge Hoogendoorn. Read final-published article first page, not only repository cover. DOI10.1016/j.trc.2020.102621. Independently agrees with C2-18.",
+    "tex": "\\bibitem{alonsogonzalez2020}\nM.~J. Alonso-González, N.~van Oort, O.~Cats, S.~Hoogendoorn-Lanser, and S.~Hoogendoorn.\n\\newblock Value of time and reliability for urban pooled on-demand services.\n\\newblock \\emph{Transportation Research Part C: Emerging Technologies}, 115:102621, 2020.\n\\newblock \\url{https://doi.org/10.1016/j.trc.2020.102621}",
+    "register_ids": [
+      "J24",
+      "C2-18"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "wardman2026",
+    "status": "VERIFIED",
+    "metadata": "M. Wardman, P. Murphy, M. Ojeda-Cabral, A. Mitrani, K. Neki, and R. M. Humphreys. Value of time multipliers for walk time, wait time, service headway, displacement time, reliability and congested travel time: review and meta-analysis of worldwide evidence. Transportation Research Part A: Policy and Practice, 207:104925, 2026.",
+    "url": "https://eprints.whiterose.ac.uk/id/eprint/239301/1/1-s2.0-S0965856426000662-main.pdf",
+    "notes": "Read institutional final PDF first page: Mark Wardman, Paul Murphy, Manuel Ojeda-Cabral, Alex Mitrani, Kazuyuki Neki, Richard Martin Humphreys, in order. DOI10.1016/j.tra.2026.104925. Online8March2026. Metadata agrees with C2-17; no issue assigned in article.",
+    "tex": "\\bibitem{wardman2026}\nM.~Wardman, P.~Murphy, M.~Ojeda-Cabral, A.~Mitrani, K.~Neki, and R.~M.~Humphreys.\n\\newblock Value of time multipliers for walk time, wait time, service headway, displacement time, reliability and congested travel time: review and meta-analysis of worldwide evidence.\n\\newblock \\emph{Transportation Research Part A: Policy and Practice}, 207:104925, 2026.\n\\newblock \\url{https://doi.org/10.1016/j.tra.2026.104925}",
+    "register_ids": [
+      "J23",
+      "C2-17"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "leonardi2024",
+    "status": "VERIFIED",
+    "metadata": "P. Leonardi, V. Torrisi, A. Araldo, and M. Ignaccolo. Data-driven assessment for the predictability of On-Demand Responsive Transit. arXiv:2411.11899v1, 2024. EURO Working Group on Transportation, Lund, tháng 9/2024.",
+    "url": "https://arxiv.org/abs/2411.11899",
+    "notes": "Pierfrancesco Leonardi, Vincenza Torrisi, Andrea Araldo, Matteo Ignaccolo. Submitted14November2024; official arXiv comments identify EWGT September2024. DOI10.48550/arXiv.2411.11899. Preserve the exact2024version read for C2-13. A later2026Transportmetrica A title differs; publisher DOI10.1080/23249935.2026.2650136 was attempted but direct fetch failed in root, so do not silently replace the version or invent journal pagination.",
+    "tex": "\\bibitem{leonardi2024}\nP.~Leonardi, V.~Torrisi, A.~Araldo, and M.~Ignaccolo.\n\\newblock Data-driven assessment for the predictability of On-Demand Responsive Transit.\n\\newblock arXiv:2411.11899v1, 2024. EURO Working Group on Transportation, Lund, tháng 9/2024.\n\\newblock \\url{https://doi.org/10.48550/arXiv.2411.11899}",
+    "register_ids": [
+      "J21",
+      "C2-13"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "lu2024",
+    "status": "VERIFIED",
+    "metadata": "C. Lu and N. Kühnel. To Wait or to Cruise: The Trade-Off Between Waiting Time and Detours for Service Efficiency in Ride-pooling Systems. Bản tiền ấn, Technische Universität Berlin, DepositOnce, 2024.",
+    "url": "https://depositonce.tu-berlin.de/items/fa1164ba-ed61-4775-a1ac-253d80e1758a",
+    "notes": "Chengqi Lu, Nico Kühnel. Official DepositOnce page: issued1October2024; deposited14October2024; submitted preprint, DOI10.14279/depositonce-21472. Metadata agrees with C2-14. Later final2025Case Studies on Transport Policy21:101499, DOI10.1016/j.cstp.2025.101499, discovered on official publisher search index; direct DOI/full text fetch failed in root. Cite exact2024version until the final passages are checked.",
+    "tex": "\\bibitem{lu2024}\nC.~Lu and N.~Kühnel.\n\\newblock To Wait or to Cruise: The Trade-Off Between Waiting Time and Detours for Service Efficiency in Ride-pooling Systems.\n\\newblock Bản tiền ấn, Technische Universität Berlin, DepositOnce, 2024.\n\\newblock \\url{https://doi.org/10.14279/depositonce-21472}",
+    "register_ids": [
+      "J22",
+      "C2-14"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "hu2022",
+    "status": "VERIFIED",
+    "metadata": "X. Hu, T. Binaykiya, E. Frank, and O. Cirit. DeeprETA: An ETA Post-processing System at Scale. arXiv:2206.02127v1, 2022.",
+    "url": "https://arxiv.org/abs/2206.02127 ; https://arxiv.org/html/2206.02127v1",
+    "notes": "Ordered authors Xinyu Hu, Tanmay Binaykiya, Eric Frank, Olcay Cirit. Submitted5June2022; DOI10.48550/arXiv.2206.02127; no journal-ref. Full official HTML read: user-facing quantiles/expectiles and residual correction of route-engine ETA. The replacement of the blog by a full paper is valid. The correct current DeepETA blog URL was reachable in this audit, so its alleged dead link does not invalidate hu2022.",
+    "tex": "\\bibitem{hu2022}\nX.~Hu, T.~Binaykiya, E.~Frank, and O.~Cirit.\n\\newblock DeeprETA: An ETA Post-processing System at Scale.\n\\newblock arXiv:2206.02127v1, 2022.\n\\newblock \\url{https://doi.org/10.48550/arXiv.2206.02127}",
+    "register_ids": [
+      "J35",
+      "C2-15"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "molenbruch2017",
+    "status": "CORRECTED",
+    "metadata": "Y. Molenbruch, K. Braekers, and A. Caris. Operational effects of service level variations for the dial-a-ride problem. Central European Journal of Operations Research, 25(1):71–90, 2017.",
+    "url": "https://link.springer.com/article/10.1007/s10100-015-0422-7",
+    "notes": "Register J25 year2015 → journal issue year2017. Published online5October2015, issueMarch2017. Authors Yves Molenbruch, Kris Braekers, An Caris; DOI10.1007/s10100-015-0422-7. Ch2BIB and C2-12 already use correct2017; no correction to that writer entry. Do not create molenbruch2015 alias.",
+    "tex": "\\bibitem{molenbruch2017}\nY.~Molenbruch, K.~Braekers, and A.~Caris.\n\\newblock Operational effects of service level variations for the dial-a-ride problem.\n\\newblock \\emph{Central European Journal of Operations Research}, 25(1):71--90, 2017.\n\\newblock \\url{https://doi.org/10.1007/s10100-015-0422-7}",
+    "register_ids": [
+      "J25",
+      "C2-12"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "bansal2019",
+    "status": "VERIFIED",
+    "metadata": "P. Bansal, Y. Liu, R. Daziano, and S. Samaranayake. Can Mobility-on-Demand services do better after discerning reliability preferences of riders? arXiv:1904.07987v1, 2019.",
+    "url": "https://arxiv.org/abs/1904.07987",
+    "notes": "Ordered authors Prateek Bansal, Yang Liu, Ricardo Daziano, Samitha Samaranayake; official arXiv submitted16April2019. Existing reference matches apart from harmless title capitalisation. Archival DOI10.48550/arXiv.1904.07987; no journal pagination claimed. Legacy only; not an active or planned citation.",
+    "tex": "\\bibitem{bansal2019}\nP.~Bansal, Y.~Liu, R.~Daziano, and S.~Samaranayake.\n\\newblock Can Mobility-on-Demand services do better after discerning reliability preferences of riders?\n\\newblock arXiv:1904.07987v1, 2019.\n\\newblock \\url{https://arxiv.org/abs/1904.07987}",
+    "register_ids": [],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "syed2021",
+    "status": "VERIFIED",
+    "metadata": "A. A. Syed, F. Dandl, B. Kaltenhäuser, and K. Bogenberger. Density Based Distribution Model for Repositioning Strategies of Ride Hailing Services. Frontiers in Future Transportation, 2:681451, 2021.",
+    "url": "https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2021.681451/full",
+    "notes": "Arslan Ali Syed, Florian Dandl, Bernd Kaltenhäuser, Klaus Bogenberger; publisher full text opened;14June2021; DOI10.3389/ffutr.2021.681451. J19 identifies paper correctly. No thesis-specific forecast formula verified here. Register-only; not added to draft without a citation.",
+    "tex": "\\bibitem{syed2021}\nA.~A.~Syed, F.~Dandl, B.~Kaltenhäuser, and K.~Bogenberger.\n\\newblock Density Based Distribution Model for Repositioning Strategies of Ride Hailing Services.\n\\newblock \\emph{Frontiers in Future Transportation}, 2:681451, 2021.\n\\newblock \\url{https://doi.org/10.3389/ffutr.2021.681451}",
+    "register_ids": [
+      "J19"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "gardner1985",
+    "status": "VERIFIED",
+    "metadata": "E. S. Gardner, Jr., and E. McKenzie. Forecasting Trends in Time Series. Management Science, 31(10):1237–1246, 1985.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.31.10.1237",
+    "notes": "Publisher names Everette S. Gardner, Jr., Ed. McKenzie; printedOctober1985; DOI10.1287/mnsc.31.10.1237. J20 metadata confirmed. Register-only, not planned in outline Ch1–Ch2 or cited in scanned drafts.",
+    "tex": "\\bibitem{gardner1985}\nE.~S.~Gardner, Jr., and E.~McKenzie.\n\\newblock Forecasting Trends in Time Series.\n\\newblock \\emph{Management Science}, 31(10):1237--1246, 1985.\n\\newblock \\url{https://doi.org/10.1287/mnsc.31.10.1237}",
+    "register_ids": [
+      "J20"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "uberxshare",
+    "status": "VERIFIED",
+    "metadata": "Uber. Share a Ride with UberX Share - Save Up to 20%. Trang sản phẩm UberX Share; không ghi năm xuất bản. Truy cập ngày 13/10/2026.",
+    "url": "https://www.uber.com/us/en/ride/uberx-share/",
+    "notes": "Official page opened13October2026. FAQ explicitly qualifies arrival times and states8minutes average added time. No per-rider8minute guarantee inferred. Corporate author; volume/issue/pages/DOI not applicable. Proposed canonical key for outline J28.",
+    "tex": "\\bibitem{uberxshare}\nUber.\n\\newblock Share a Ride with UberX Share - Save Up to 20%.\n\\newblock Trang sản phẩm UberX Share; không ghi năm xuất bản. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://www.uber.com/us/en/ride/uberx-share/}",
+    "register_ids": [
+      "J28"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "moiaexpress",
+    "status": "VERIFIED",
+    "metadata": "MOIA. MOIA Express booking. Trung tâm trợ giúp MOIA; không ghi năm xuất bản. Truy cập ngày 13/10/2026.",
+    "url": "https://help.moia.io/hc/en-us/articles/360020795318-MOIA-Express-booking",
+    "notes": "Official help page opened; optional paid upgrade and shorter arrival window confirmed. No quantified width or deterministic arrival guarantee given. Corporate author, no DOI or pagination. Proposed canonical key for planned J31.",
+    "tex": "\\bibitem{moiaexpress}\nMOIA.\n\\newblock MOIA Express booking.\n\\newblock Trung tâm trợ giúp MOIA; không ghi năm xuất bản. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://help.moia.io/hc/en-us/articles/360020795318-MOIA-Express-booking}",
+    "register_ids": [
+      "J31"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "doordash2024",
+    "status": "VERIFIED",
+    "metadata": "C. Zhang, L. Warne, Z. Jiang, Q. Xu, H. Jenq, J. Luo, and P. Varma. Improving ETAs with multi-task models, deep learning, and probabilistic forecasts. DoorDash, ngày 12/3/2024. Truy cập ngày 13/10/2026.",
+    "url": "https://careersatdoordash.com/blog/improving-etas-with-multi-task-models-deep-learning-and-probabilistic-forecasts/",
+    "notes": "Official byline order Chi Zhang, Lewis Warne, Ziqi Jiang, Qingyang Xu, Hubert Jenq, Jianzhe Luo, Pradeep Varma. Publisher date12March2024. Read two-layer distribution-prediction and decision architecture and ETA consistency guardrail. Proposed key for J35 DoorDash example; no DOI,volume,issue,pages.",
+    "tex": "\\bibitem{doordash2024}\nC.~Zhang, L.~Warne, Z.~Jiang, Q.~Xu, H.~Jenq, J.~Luo, and P.~Varma.\n\\newblock Improving ETAs with multi-task models, deep learning, and probabilistic forecasts.\n\\newblock DoorDash, ngày 12/3/2024. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://careersatdoordash.com/blog/improving-etas-with-multi-task-models-deep-learning-and-probabilistic-forecasts/}",
+    "register_ids": [
+      "J35"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "deepeta2022",
+    "status": "VERIFIED",
+    "metadata": "T. Binaykiya, X. Hu, O. Cirit, and R. Hora. DeepETA: How Uber Predicts Arrival Times Using Deep Learning. Uber, ngày 10/2/2022. Truy cập ngày 13/10/2026.",
+    "url": "https://www.uber.com/us/en/blog/deepeta-how-uber-predicts-arrival-times/",
+    "notes": "Official byline Tanmay Binaykiya, Xinyu Hu, Olcay Cirit, Ramit Hora; date10February2022. Correct current URL opened successfully; this differs from the dead URL reported by Ch2 writer. Do not add a redundant blog bibitem: hu2022 fulfils the Uber technical-source role and is the version cited by Ch2.",
+    "tex": "\\bibitem{deepeta2022}\nT.~Binaykiya, X.~Hu, O.~Cirit, and R.~Hora.\n\\newblock DeepETA: How Uber Predicts Arrival Times Using Deep Learning.\n\\newblock Uber, ngày 10/2/2022. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://www.uber.com/us/en/blog/deepeta-how-uber-predicts-arrival-times/}",
+    "register_ids": [
+      "J35"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "ortools",
+    "status": "CORRECTED",
+    "metadata": "L. Perron and V. Furnon. OR-Tools, phiên bản 9.15. Google, 2026. Gói Google.OrTools 9.15.6755; truy cập ngày 13/10/2026.",
+    "url": "https://developers.google.com/optimization/support/cite ; https://github.com/google/or-tools/releases/tag/v9.15 ; https://www.nuget.org/packages/Google.OrTools/9.15.6755",
+    "notes": "Old unversioned software year2024 → explicitly version9.15(2026). Official suite citation authors Laurent Perron, Vincent Furnon; official release/NuGet dated12January2026. Read C:/Code/RideBound-noworse/src/RideBound.Solvers.OrTools/RideBound.Solvers.OrTools.csproj:9: package9.15.6755. This verifies current project dependency, not every historical binary. No DOI/pages. Keep suite key, do not mislabel as routing library or CP-SAT-specific paper.",
+    "tex": "\\bibitem{ortools}\nL.~Perron and V.~Furnon.\n\\newblock OR-Tools, phiên bản 9.15.\n\\newblock Google, 2026. Gói Google.OrTools 9.15.6755; truy cập ngày 13/10/2026.\n\\newblock \\url{https://developers.google.com/optimization}",
+    "register_ids": [],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "tlc",
+    "status": "VERIFIED",
+    "metadata": "New York City Taxi \\& Limousine Commission. TLC Trip Record Data. Trang dữ liệu; không ghi năm xuất bản. Truy cập ngày 13/10/2026.",
+    "url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+    "notes": "Official title and corporate author opened independently. No volume/issue/pages/DOI; add current access date. C2-16 writer12October2026 access is valid for that earlier retrieval; this entry records this audit13October2026.",
+    "tex": "\\bibitem{tlc}\nNew York City Taxi \\& Limousine Commission.\n\\newblock TLC Trip Record Data.\n\\newblock Trang dữ liệu; không ghi năm xuất bản. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page}",
+    "register_ids": [
+      "C2-16"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "horl2022",
+    "status": "CORRECTED",
+    "metadata": "S. Hörl and F. Zwick. Traffic uncertainty in on-demand high-capacity ride-pooling. Trong 101st Annual Meeting of the Transportation Research Board, Washington, D.C., tháng 1/2022. ETH Zurich Research Collection, 2022.",
+    "url": "https://www.ivt.ethz.ch/en/vpl/publications/working-papers.html ; https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/561639/ab1659.pdf?isAllowed=y&sequence=1",
+    "notes": "Sebastian Hörl, Felix Zwick, in order; ETH AB1659 and repository cover agree2022conference paper; DOI10.3929/ethz-b-000561639. Brief candidate Elsevier file → Sharif Azadeh2022, not Hörl–Zwick. Correct local ETH PDF confirmed independently;17physical pages including cover,16numbered manuscript pages. Equation7 and constraints9–10 match manuscriptp8. No verified journal version found; do not invent journal volume or proceedings pagination. See HORL-ZWICK-RESOLUTION.md.",
+    "tex": "\\bibitem{horl2022}\nS.~Hörl and F.~Zwick.\n\\newblock Traffic uncertainty in on-demand high-capacity ride-pooling.\n\\newblock Trong \\emph{101st Annual Meeting of the Transportation Research Board}, Washington, D.C., tháng 1/2022. ETH Zurich Research Collection, 2022.\n\\newblock \\url{https://doi.org/10.3929/ethz-b-000561639}",
+    "register_ids": [
+      "J01",
+      "J02",
+      "J03",
+      "J04",
+      "J05",
+      "C2-01",
+      "C2-04"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "yu2022",
+    "status": "VERIFIED",
+    "metadata": "Q. Yu, Y. Zhang, and Y.-P. Zhou. Delay Information in Virtual Queues: A Large-Scale Field Experiment on a Major Ride-Sharing Platform. Management Science, 68(8):5745–5757, 2022.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2022.4448",
+    "notes": "Qiuping Yu,Yiming Zhang,Yong-Pin Zhou; publisher metadata and abstract opened independently. DOI10.1287/mnsc.2022.4448; online8June2022,issueAugust2022. Confirms C2-19 bibliographic identity and abstract scope only; do not imply full-body reading.",
+    "tex": "\\bibitem{yu2022}\nQ.~Yu, Y.~Zhang, and Y.-P.~Zhou.\n\\newblock Delay Information in Virtual Queues: A Large-Scale Field Experiment on a Major Ride-Sharing Platform.\n\\newblock \\emph{Management Science}, 68(8):5745--5757, 2022.\n\\newblock \\url{https://doi.org/10.1287/mnsc.2022.4448}",
+    "register_ids": [
+      "J33",
+      "C2-19"
+    ],
+    "body_status": "ABSTRACT ONLY"
+  },
+  {
+    "key": "cohen2022",
+    "status": "VERIFIED",
+    "metadata": "M. C. Cohen, M. D. Fiszer, and B. J. Kim. Frustration-Based Promotions: Field Experiments in Ride-Sharing. Management Science, 68(4):2432–2464, 2022.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2021.3991",
+    "notes": "Maxime C.Cohen,Michael D.Fiszer,Baek Jung Kim. Publisher issueApril2022; first online31August2021, so2021in DOI/online citation does not change issue year2022. DOI10.1287/mnsc.2021.3991. J27 register-only; abstract/metadata read, not used to extend business-value claims.",
+    "tex": "\\bibitem{cohen2022}\nM.~C.~Cohen, M.~D.~Fiszer, and B.~J.~Kim.\n\\newblock Frustration-Based Promotions: Field Experiments in Ride-Sharing.\n\\newblock \\emph{Management Science}, 68(4):2432--2464, 2022.\n\\newblock \\url{https://doi.org/10.1287/mnsc.2021.3991}",
+    "register_ids": [
+      "J27"
+    ],
+    "body_status": "ABSTRACT ONLY"
+  },
+  {
+    "key": "watkins2011",
+    "status": "VERIFIED",
+    "metadata": "K. E. Watkins, B. Ferris, A. Borning, G. S. Rutherford, and D. Layton. Where Is My Bus? Impact of mobile real-time information on the perceived and actual wait time of transit riders. Transportation Research Part A: Policy and Practice, 45(8):839–848, 2011.",
+    "url": "https://ojp-content.s3.us-east-2.amazonaws.com/NHI/Old/BaseImages/2014/04/d.pdf",
+    "notes": "Full article first page opened: Kari Edison Watkins,Brian Ferris,Alan Borning,G.Scott Rutherford,David Layton. DOI10.1016/j.tra.2011.06.010. J37 paper identified as this article, not the separate Ferris-first2011TRB report. Register-only; no new thesis claim inserted.",
+    "tex": "\\bibitem{watkins2011}\nK.~E.~Watkins, B.~Ferris, A.~Borning, G.~S.~Rutherford, and D.~Layton.\n\\newblock Where Is My Bus? Impact of mobile real-time information on the perceived and actual wait time of transit riders.\n\\newblock \\emph{Transportation Research Part A: Policy and Practice}, 45(8):839--848, 2011.\n\\newblock \\url{https://doi.org/10.1016/j.tra.2011.06.010}",
+    "register_ids": [
+      "J37"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "uberdelayed2026",
+    "status": "VERIFIED",
+    "metadata": "Uber. Introducing Delayed Ride Guarantee. Uber, ngày 3/8/2026. Truy cập ngày 13/10/2026.",
+    "url": "https://www.uber.com/us/en/blog/delay-ride-guarantee/",
+    "notes": "Official current page dated3August2026. Driver fare adjustment after eligible pickup-to-dropoff trip overruns; matched shared rides excluded. J29 optional source, not an arrival-time guarantee for passengers. No DOI or pagination. Do not infer original launch date from current page date.",
+    "tex": "\\bibitem{uberdelayed2026}\nUber.\n\\newblock Introducing Delayed Ride Guarantee.\n\\newblock Uber, ngày 3/8/2026. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://www.uber.com/us/en/blog/delay-ride-guarantee/}",
+    "register_ids": [
+      "J29"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "lyftscheduled",
+    "status": "VERIFIED",
+    "metadata": "Lyft. Scheduled rides for riders. Trung tâm trợ giúp Lyft; không ghi năm xuất bản. Truy cập ngày 13/10/2026.",
+    "url": "https://help.lyft.com/hc/en-us/all/articles/115013078668-Scheduled-rides-for-passengers",
+    "notes": "Official help page opened; eligible scheduled rides to airport have tiered Lyft Credits. J30 register-only; market eligibility matters, and pickup promise is distinct from dropoff. No DOI,pagination,publication date invented.",
+    "tex": "\\bibitem{lyftscheduled}\nLyft.\n\\newblock Scheduled rides for riders.\n\\newblock Trung tâm trợ giúp Lyft; không ghi năm xuất bản. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://help.lyft.com/hc/en-us/all/articles/115013078668-Scheduled-rides-for-passengers}",
+    "register_ids": [
+      "J30"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "lyftpatent2024",
+    "status": "VERIFIED",
+    "metadata": "R. M. Ali, N. C. Bhupalam, N. R. Chainani, V. C.-j. Chang, C. C. Chheda, P. Gerstoft, I. Lobel, J. Luo, S. Martin, G.-B. Richard de Capele d'Hautpoul, and A. M. Weinstein. Systems and methods for enhanced transportation dispatch. Bằng sáng chế US12182741B2, ngày 31/12/2024; Lyft Inc.",
+    "url": "https://patents.google.com/patent/US12182741B2/en",
+    "notes": "Published grant reproduction opened. Ordered inventor names: Rafah Mujtaba Ali; Nihar Chandra Bhupalam; Neil Rajiv Chainani; Vincent Chih-jye Chang; Chirag Chhagan Chheda; Philip Gerstoft; Ilan Lobel; Jianzhe Luo; Sebastien Martin; Guy-Baptiste Richard de Capele d'Hautpoul; Alexander Michael Weinstein. J34 register-only. No journal/DOI/pages; document identity verified, no legal-status or claim-scope conclusion.",
+    "tex": "\\bibitem{lyftpatent2024}\nR.~M.~Ali, N.~C.~Bhupalam, N.~R.~Chainani, V.~C.-j.~Chang, C.~C.~Chheda, P.~Gerstoft, I.~Lobel, J.~Luo, S.~Martin, G.-B.~Richard de Capele d'Hautpoul, and A.~M.~Weinstein.\n\\newblock Systems and methods for enhanced transportation dispatch.\n\\newblock Bằng sáng chế US12182741B2, ngày 31/12/2024; Lyft Inc.\n\\newblock \\url{https://patents.google.com/patent/US12182741B2/en}",
+    "register_ids": [
+      "J34"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "ecfr37131",
+    "status": "CANNOT VERIFY",
+    "metadata": "49 CFR §37.131, Service criteria for complementary paratransit. Current-edition text and full publication metadata not independently retrieved.",
+    "url": "https://www.ecfr.gov/current/title-49/subtitle-A/part-37/subpart-F/section-37.131",
+    "notes": "J36 current primary page now redirects to Federal Register request-access page. Tried official URL; do not upgrade register claim from an inaccessible current text or infer current wording from an older FTA report. Optional register-only source; no bibitem included.",
+    "tex": "",
+    "register_ids": [
+      "J36"
+    ],
+    "body_status": "CANNOT VERIFY"
+  }
+]

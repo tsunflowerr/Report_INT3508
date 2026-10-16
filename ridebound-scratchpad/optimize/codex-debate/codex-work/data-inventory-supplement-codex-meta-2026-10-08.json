@@ -1,0 +1,14 @@
+{
+  "counts_by_kind": {
+    "ledger-attempt": 447,
+    "legacy-run-store-record": 90,
+    "fleetpy-calibration-csv-run": 40,
+    "fleetpy-initial-state-fixture": 20
+  },
+  "exact_file_duplicate_groups": 18,
+  "missing_ledger_terminals": 203,
+  "fleetpy_completed_by_arm": {
+    "AlonsoMora": 1750,
+    "InsertionHeuristic": 1724
+  }
+}

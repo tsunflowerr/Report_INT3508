@@ -1,0 +1,72 @@
+{
+  "deliverables": {
+    "09-chuong4-phanB-v11-v2.tex": {
+      "sha256": "5d4ac193aa47e7205e6d645303a68b601f702ad807d0624dc527d4a1766102c1",
+      "bytes": 44390
+    },
+    "09-chuong4-phanB-v11-CHANGES-v2.md": {
+      "sha256": "d08077a1fdcc427f9fff4377f492b2a4700c8491a8dd82561433b465367ca94a",
+      "bytes": 47354
+    }
+  },
+  "changes": 33,
+  "word_counts": [
+    {
+      "section": "4.6",
+      "title": "Vai trò của trần và thứ tự tiêu chí của bộ chọn",
+      "prose": 345,
+      "floats": 204
+    },
+    {
+      "section": "4.7",
+      "title": "Lời hứa theo dự báo",
+      "prose": 1150,
+      "floats": 317
+    },
+    {
+      "section": "4.8",
+      "title": "So với cách đệm lời hứa",
+      "prose": 788,
+      "floats": 225
+    },
+    {
+      "section": "4.9",
+      "title": "Khi dự báo không đủ: chiều tuyết 15/11/2018",
+      "prose": 275,
+      "floats": 244
+    },
+    {
+      "section": "4.10",
+      "title": "Kiểm tra tính hợp lệ của kết quả",
+      "prose": 433,
+      "floats": 0
+    },
+    {
+      "section": "4.11",
+      "title": "Thảo luận và hạn chế",
+      "prose": 792,
+      "floats": 0
+    }
+  ],
+  "total_prose": 3783,
+  "tex_identical_to_reviewed_candidate": true,
+  "notes_decimal_localization": {
+    "**0.939774**": "**0,939774**",
+    "**0.966457**": "**0,966457**"
+  },
+  "input_hashes_unchanged": true,
+  "references": 25,
+  "distinct_ref_targets": 21,
+  "undefined": [],
+  "two_float_contents_preserved": true,
+  "no_build": true,
+  "independent_audit": {
+    "file": "agent-final-audit-v2.md",
+    "sha256": "cc51e3d60911c95dce272dde30323a4e91893768d6819f159d43754d15aa5a40"
+  },
+  "handoff": [
+    "Ch3 counter scope, test date/evidence and cumulative terminology",
+    "Appendix C attempt-4 single-run results",
+    "Assembly notes, final input paths and build layout verification"
+  ]
+}

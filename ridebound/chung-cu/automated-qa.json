@@ -1,0 +1,575 @@
+{
+  "pdfSha256": "26c8dea1334e68091b421a831bf14e809e76a396e0444b75398d662a8921dd69",
+  "pages": 77,
+  "renderCount": 77,
+  "logIssues": [],
+  "outsidePageChars": 0,
+  "internalStageLabels": [],
+  "sectionPages": [
+    {
+      "page": 9,
+      "text": "3.5 Lời hứa theo dự báo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24\n3.6 Sổ theo từng khách . . . . . . . . . . "
+    },
+    {
+      "page": 11,
+      "text": "Danh sách bảng\n1.1 Chỗ đứng của khóa luận so với các công trình gần nhất . . . . . . . . . . 4\n2.1 Ràng buộc dịch vụ ở nghiên cứu "
+    },
+    {
+      "page": 56,
+      "text": "4.6. Vai trò của trần và thứ tự tiêu chí của bộ chọn\n4.6.1. Vì sao cần đổi thứ tự ưu tiên?\nCác kết quả trước mục này dùng bộ chọn "
+    },
+    {
+      "page": 67,
+      "text": "Chương 5.\nKết luận\nKhóa luận đã đặc tả, cài đặt và đánh giá trên mô phỏng một trần cho tổng phần dời giờ\ntrả do điều phối của từng"
+    },
+    {
+      "page": 68,
+      "text": "đo đúng giờ.\nTrần 120 giây dưới ưu tiên ổn định phục vụ 2.387 lượt, có 2.255 lượt không muộn\nquá một phút và 2.366 lượt không muộn"
+    },
+    {
+      "page": 76,
+      "text": "D. So sánh thứ tự chọn phương án và chứng cứ bổ sung\nPhép so ở mục 4.6 bổ sung 68 lượt ưu tiên chi phí trên cùng tập kiểm tra chín"
+    }
+  ],
+  "diagnostics": [
+    {
+      "page": 1,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 236,
+      "outside": []
+    },
+    {
+      "page": 2,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 196,
+      "outside": []
+    },
+    {
+      "page": 3,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 270,
+      "outside": []
+    },
+    {
+      "page": 4,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 591,
+      "outside": []
+    },
+    {
+      "page": 5,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 434,
+      "outside": []
+    },
+    {
+      "page": 6,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1448,
+      "outside": []
+    },
+    {
+      "page": 7,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1660,
+      "outside": []
+    },
+    {
+      "page": 8,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1232,
+      "outside": []
+    },
+    {
+      "page": 9,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1715,
+      "outside": []
+    },
+    {
+      "page": 10,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 401,
+      "outside": []
+    },
+    {
+      "page": 11,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1707,
+      "outside": []
+    },
+    {
+      "page": 12,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1049,
+      "outside": []
+    },
+    {
+      "page": 13,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1248,
+      "outside": []
+    },
+    {
+      "page": 14,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1847,
+      "outside": []
+    },
+    {
+      "page": 15,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1673,
+      "outside": []
+    },
+    {
+      "page": 16,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1511,
+      "outside": []
+    },
+    {
+      "page": 17,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2187,
+      "outside": []
+    },
+    {
+      "page": 18,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2315,
+      "outside": []
+    },
+    {
+      "page": 19,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1835,
+      "outside": []
+    },
+    {
+      "page": 20,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1693,
+      "outside": []
+    },
+    {
+      "page": 21,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1589,
+      "outside": []
+    },
+    {
+      "page": 22,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2094,
+      "outside": []
+    },
+    {
+      "page": 23,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2101,
+      "outside": []
+    },
+    {
+      "page": 24,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2250,
+      "outside": []
+    },
+    {
+      "page": 25,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1302,
+      "outside": []
+    },
+    {
+      "page": 26,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2149,
+      "outside": []
+    },
+    {
+      "page": 27,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 791,
+      "outside": []
+    },
+    {
+      "page": 28,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1657,
+      "outside": []
+    },
+    {
+      "page": 29,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1428,
+      "outside": []
+    },
+    {
+      "page": 30,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1699,
+      "outside": []
+    },
+    {
+      "page": 31,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1470,
+      "outside": []
+    },
+    {
+      "page": 32,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1269,
+      "outside": []
+    },
+    {
+      "page": 33,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1507,
+      "outside": []
+    },
+    {
+      "page": 34,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1766,
+      "outside": []
+    },
+    {
+      "page": 35,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1945,
+      "outside": []
+    },
+    {
+      "page": 36,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1845,
+      "outside": []
+    },
+    {
+      "page": 37,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2099,
+      "outside": []
+    },
+    {
+      "page": 38,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1803,
+      "outside": []
+    },
+    {
+      "page": 39,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1849,
+      "outside": []
+    },
+    {
+      "page": 40,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1882,
+      "outside": []
+    },
+    {
+      "page": 41,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1293,
+      "outside": []
+    },
+    {
+      "page": 42,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1584,
+      "outside": []
+    },
+    {
+      "page": 43,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1731,
+      "outside": []
+    },
+    {
+      "page": 44,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1990,
+      "outside": []
+    },
+    {
+      "page": 45,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2062,
+      "outside": []
+    },
+    {
+      "page": 46,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2056,
+      "outside": []
+    },
+    {
+      "page": 47,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1884,
+      "outside": []
+    },
+    {
+      "page": 48,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2200,
+      "outside": []
+    },
+    {
+      "page": 49,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1756,
+      "outside": []
+    },
+    {
+      "page": 50,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2289,
+      "outside": []
+    },
+    {
+      "page": 51,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1979,
+      "outside": []
+    },
+    {
+      "page": 52,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1901,
+      "outside": []
+    },
+    {
+      "page": 53,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1740,
+      "outside": []
+    },
+    {
+      "page": 54,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1814,
+      "outside": []
+    },
+    {
+      "page": 55,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2080,
+      "outside": []
+    },
+    {
+      "page": 56,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1801,
+      "outside": []
+    },
+    {
+      "page": 57,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2121,
+      "outside": []
+    },
+    {
+      "page": 58,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1873,
+      "outside": []
+    },
+    {
+      "page": 59,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2134,
+      "outside": []
+    },
+    {
+      "page": 60,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1938,
+      "outside": []
+    },
+    {
+      "page": 61,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2071,
+      "outside": []
+    },
+    {
+      "page": 62,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2024,
+      "outside": []
+    },
+    {
+      "page": 63,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1890,
+      "outside": []
+    },
+    {
+      "page": 64,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1950,
+      "outside": []
+    },
+    {
+      "page": 65,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1834,
+      "outside": []
+    },
+    {
+      "page": 66,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 379,
+      "outside": []
+    },
+    {
+      "page": 67,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1930,
+      "outside": []
+    },
+    {
+      "page": 68,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2028,
+      "outside": []
+    },
+    {
+      "page": 69,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1682,
+      "outside": []
+    },
+    {
+      "page": 70,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1573,
+      "outside": []
+    },
+    {
+      "page": 71,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1717,
+      "outside": []
+    },
+    {
+      "page": 72,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 488,
+      "outside": []
+    },
+    {
+      "page": 73,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1567,
+      "outside": []
+    },
+    {
+      "page": 74,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 1764,
+      "outside": []
+    },
+    {
+      "page": 75,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2045,
+      "outside": []
+    },
+    {
+      "page": 76,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 2042,
+      "outside": []
+    },
+    {
+      "page": 77,
+      "width": 595.28,
+      "height": 841.89,
+      "chars": 674,
+      "outside": []
+    }
+  ]
+}

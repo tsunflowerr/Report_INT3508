@@ -1,0 +1,450 @@
+% =====================================================================================================
+% Chương 4, PHẦN B (mục 4.6–4.11) — bản sửa v10 (2026-10-12), BẢN DÙNG ĐỂ GHÉP. v10 = v9 cộng sáu chỗ sửa lời: đơn vị
+% của "lựa chọn", vật so ở "Thứ nhất", "Bảng ... cho kết quả phát lại", "cùng 15 kịch bản", "đồ thị rút gọn",
+% "thời gian đi thẳng". v9 = v8 với năm anchor FR đã sửa. v8, v9 giữ nguyên, không dùng. Theo ba bản nhận xét của v7: Codex R29,
+% kiểm chứng sự kiện R27, người đọc ngoài ngành và giảng viên R27. Lý do từng thay đổi: reviews/CH4B-REVISION-LOG.md;
+% ghi chú: drafts/09-chuong4-phanB-v8-NOTES.md. Các bản 1–7 giữ nguyên, không dùng.
+% Nối ngay sau 08-chuong4-phanA-v4.tex trong cùng \input{noi-dung/08-chuong4}; không có \chapter mới.
+% Mỗi dòng "% EV:" trỏ tới EVIDENCE-REGISTER.md (A01…K52), EVIDENCE-REGISTER-ADDENDUM-1.md (N-xx, L1a-xx, mục 0.x),
+% EVIDENCE-REGISTER-ADDENDUM-2-CH3.md (X3-xx), EVIDENCE-REGISTER-ADDENDUM-3-CH4B.md (N4B-xx),
+% EVIDENCE-REGISTER-ADDENDUM-4-CH4A.md (C4A-xx) hoặc EVIDENCE-REGISTER-ADDENDUM-6-CH4B-v8.md (N4B8-xx; script chỉ đọc
+% evidence/checks-ch4b-v8/ch4b_v8_check.py, output ch4b-v8-check-2026-10-12.txt, phần A/B/C gọi là "check A/B/C").
+% Không dùng gói mới: hình vẽ bằng TikZ thường; danh sách dùng enumitem như chương 3.
+% =====================================================================================================
+
+% -----------------------------------------------------------------------------------------------------
+\section{Vai trò của trần và thứ tự tiêu chí của bộ chọn}
+\label{muc:c4-vaitro}
+
+Điều phối không trần và luật C trần 30 giây dùng cùng bộ chọn ưu tiên ổn định; hai tệp chính sách cam kết của chúng
+chỉ khác nhau ở trần giờ trả. Còn mở là đánh đổi giữa số lượt phục vụ và số lượt trễ có giữ nguyên không nếu bộ chọn
+bỏ tiêu chí ổn định (tiêu chí 3, Bảng~\ref{bang:rangbuoc}) để xét ngay chi phí kế hoạch. Phép thử trả lời câu hỏi này
+chưa được chạy trên tập kiểm tra chính.
+% EV: A08; H01 (NEW:12: hai tệp chỉ khác /policies/0/limits/1/hardLimit); A14; X3-07; H02; H12 và REG mục L (L02–L05 chưa có kết quả); OUTLINE §7.2
+
+Bằng chứng hiện có chỉ là phép sàng lọc trên tập tắc đường cố định (Bảng~\ref{bang:c4-sangloc}). Ở mỗi lượt quyết định
+đã ghi, một chương trình viết riêng giải lại bài toán chọn trên đúng các phương án đã ghi nhưng bỏ tiêu chí 3; các lượt
+sau vẫn đi theo lựa chọn cũ. Với thứ tự gốc, chương trình cho đúng lựa chọn đã ghi ở mọi lượt quyết định của năm cấu
+hình trên tập này.
+% EV: N4B-01 (thứ tự còn lại: WPCHK:32); H10; H03 và N4B8-10 (PV:1-7; q4_cost_first_reselect.py:13-19, 131-138: giải lại đủ mọi mức đã ghi rồi so selectedCandidateIds; NEW:7; 12.663 + 12.525 + 12.364 + 12.325 + 12.960 = 62.837 của U, C-120, C-60, C-30 và ghép tự do; cùng mã chạy hai lần, không phải hai bản cài đặt độc lập); N4B-02
+
+\begin{table}[htbp]
+\centering
+\caption{Phép sàng lọc bỏ tiêu chí ổn định của bộ chọn trên tập tắc đường cố định (16 kịch bản mỗi cấu hình; bộ chạy
+cũ, nên kết quả không suy ra cho tập kiểm tra chính). U: điều phối không trần; C-30: luật C trần 30 giây. Mỗi cột dùng
+các lượt quyết định đã ghi của chính cấu hình đó, nên hai cột là hai tập tình huống khác nhau. Chi phí kế hoạch là thời
+lượng còn lại của các tuyến dự kiến, không phải chi phí vận hành.}
+\label{bang:c4-sangloc}
+\small
+\begin{tabular}{@{}p{9.4cm}rr@{}}
+\toprule
+\textbf{Chỉ số} & \textbf{U} & \textbf{C-30}\\
+\midrule
+Lượt quyết định có yêu cầu mới & 1.714 & 1.715\\
+Lượt đổi lựa chọn khi bỏ tiêu chí ổn định & 445 (25,96\%) & 104 (6,06\%)\\
+% EV: H04 (445/1.714; 104/1.715; WP17:6-7,20-21)
+\midrule
+\multicolumn{3}{@{}l}{\textit{Chi phí kế hoạch giảm (\%), ba cách tính}}\\
+Trung bình trên các lượt đổi lựa chọn & 7,79 & 8,00\\
+Trung bình trên mọi lượt có yêu cầu mới & 2,02 & 0,49\\
+Phần giảm tính trên tổng chi phí kế hoạch của mọi lượt quyết định, kể cả lượt không có yêu cầu mới & 0,3069 & 0,0794\\
+% EV: H05 (NEW:6; PV:2,5: 114.720.189 / 37.380.402.107 và 28.288.261 / 35.606.312.123 trên 12.663 và 12.325 lượt); K15; A16; I09
+\midrule
+\multicolumn{3}{@{}l}{\textit{Phần dời giờ trả do điều phối tăng thêm, cộng trên mọi khách của đội xe, ở các lượt đổi lựa chọn (s)}}\\
+Trung vị & 90,8 & 12,5\\
+Lớn nhất & 390,8 & 35,5\\
+% EV: H06 (WP17:8,22; PV:2,5); K17
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách đọc bảng: khi không trần, bỏ tiêu chí ổn định làm lựa chọn đổi ở 445 trong 1.714 lượt có yêu cầu mới, và ở các
+lượt đó chi phí kế hoạch giảm trung bình 7,79\%. Tính trên tổng chi phí kế hoạch của mọi lượt, phần giảm chỉ là
+0,31\%, và 0,08\% với trần 30 giây.
+% EV: H04; H05 (PV:2,5); K15
+
+Số yêu cầu được nhận không đổi ở mọi lượt, đúng theo cách đặt thứ tự: tiêu chí nhận yêu cầu đứng trước tiêu chí 3. Hai
+cột đo trên hai tập tình huống khác nhau, nên tỉ lệ đổi thấp hơn dưới trần 30 giây chỉ gợi ý rằng trần để lại cho bộ chọn
+ít cơ hội đổi hơn. Mức 35,5 giây ở trần 30 giây là tổng của hai khách, mỗi khách 17,77 giây.
+% EV: H04 (accepted_changes 0 ở mọi cấu hình, PV:2-6; tỉ lệ ở trần 120 và 60 giây, 325/1.715 và 173/1.716, WP17:11,16, cắt khỏi thân bài vì ngân sách trang); N4B8-10 (Q4:15-19: tiêu chí 2 giữ trong cả hai thứ tự; Bảng rangbuoc); K16; H06; K17 (CASE: hai khách, mỗi khách 17.770 ms)
+
+Phép sàng lọc không cho biết số lượt phục vụ và đúng giờ khi cả lần chạy đi theo lựa chọn mới. Khóa luận vì vậy chưa
+tách được phần của trần và phần của bộ chọn; chương kết luận đặt phép thử này lên đầu các hướng phát triển.
+% EV: H10; H02; K18; I12; B17; OUTLINE §7.2 (câu dự phòng, tách hai chỗ: "chưa được chạy" ở đoạn đầu)
+
+% -----------------------------------------------------------------------------------------------------
+\section{Lời hứa theo dự báo}
+\label{muc:c4-dubao}
+
+Trên 21 kịch bản ngày thường có dự báo, số khách của luật C trần 30 giây tới muộn hơn lời hứa đầu quá một phút giảm từ
+68 xuống 2 trong 1.471 khách được phục vụ (Bảng~\ref{bang:c4-dubao}). Lời hứa theo dự báo (mục~\ref{muc:dubao}) được
+tính lại trên các lần chạy đã ghi; mỗi cách hứa được so với lời hứa đầu của chính nó.
+% EV: F17; F04; N4B8-01 (check A: 68 → 2 trên 1.471); F03 (chỉ vế phát lại); FFA:8-13
+
+Đối chứng thứ hai là đệm tỉ lệ: mỗi lời hứa đầu được kéo dài một tỉ lệ cố định của khoảng từ lúc hứa tới giờ trả đã
+hứa. Tỉ lệ được chọn theo từng khung giờ, trên chính các khách này, để tổng phần kéo dài bằng của lời hứa theo dự báo.
+% EV: N4B-03 (FFA:15-17: lời hứa đệm = P0 + k_w(P0 − t0), k_w = Σ(D0 − P0)/Σ(P0 − t0) trên mọi khách C-30 của khung w ở 21 kịch bản, tính từ lời hứa; FA:2)
+
+\begin{table}[htbp]
+\centering
+\caption{Khách của luật C trần 30 giây trên 21 kịch bản ngày thường có dự báo, theo ba cách hứa: lời hứa đầu không dự
+báo, đệm tỉ lệ và lời hứa đầu theo dự báo; mỗi cách so với lời hứa đầu của chính nó. Khối trên là số đếm gộp theo khách;
+dòng cuối là trung bình theo kịch bản của tỉ lệ trễ, mỗi kịch bản tính như nhau.}
+\label{bang:c4-dubao}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Nhóm kịch bản} & \textbf{Phục vụ} & \textbf{Không dự báo} & \textbf{Đệm tỉ lệ} & \textbf{Dự báo}\\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Số khách tới muộn hơn lời hứa đầu quá 60 s}}\\
+Cả 21 kịch bản & 1.471 & 68 & 22 & 2\\
+Khung 7 giờ (8 kịch bản) & 444 & 60 & 17 & 1\\
+Khung 8 giờ (8 kịch bản) & 609 & 8 & 5 & 1\\
+Khung 17 giờ (5 kịch bản) & 418 & 0 & 0 & 0\\
+\multicolumn{5}{@{}l}{\textit{Số khách tới sớm hơn lời hứa đầu quá 60 s}}\\
+Cả 21 kịch bản & 1.471 & 0 & 0 & 1\\
+% EV: N4B8-01 (check A: CELLS, share × served từng kịch bản, phần dư 0); N4B8-08 (FFA:139-141 tính E_pad; sửa N4B-03: đệm tỉ lệ có đo tới sớm, bằng 0); F17
+\midrule
+\multicolumn{2}{@{}l}{Tỉ lệ trễ quá 60 s, trung bình theo kịch bản (\%)} & 6,01 & 1,94 & 0,17\\
+% EV: F04 (FA:8); N4B-03 (FA:8: pad 0,0194)
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách đọc bảng: ở khung 7 giờ, 60 trong 444 khách trễ quá một phút khi không dự báo, 17 khi đệm tỉ lệ và 1 khi có dự
+báo.
+% EV: N4B8-01
+
+Tính trung bình theo kịch bản, tỉ lệ trễ giảm 5,84 điểm phần trăm. Gom 21 kịch bản thành 8 nhóm theo ngày và khung giờ,
+khoảng tin cậy 95\% theo phân phối Student là từ 1,15 đến 10,54 điểm phần trăm. So với đệm tỉ lệ, chênh lệch là
+$-1{,}77$ điểm phần trăm, khoảng từ $-3{,}62$ đến $+0{,}07$, tức có chứa 0: chưa thể nói dự báo tốt hơn cách đệm này.
+Các khoảng chỉ dựa trên ba buổi sáng đã được xem trước, và mọi hồ sơ dự báo đều có ngày 12/11 trong các ngày nguồn.
+% EV: F04; F05 (FA:33,36: dY −5,844 [−10,542; −1,146]; dPad −1,775 [−3,620; +0,071]; FFA cluster_t: tầng = khung giờ, cụm = ngày–khung, df = 8 − 3 = 5); F11 (FR:97-98; factor_nowcast_screen.py:21-22: 14 ← 12, 13; 15, 16 ← 12, 13, 14); FR:170-171; I05; K24
+
+Lợi ích không riêng của luật C. Với dự báo, luật hạn chót và luật trần độ dời khách thấy 30 giây cũng giảm từ 66 xuống
+2 khách trễ. Điều phối không trần giảm từ 129 xuống 63 trong 1.512 khách, nhưng 28 khách trễ ở khung 17 giờ không đổi,
+trong khi luật C ở khung này không có ai. Theo sổ, 86,1\% số giây trễ của 68 khách trễ khi không dự báo thuộc phần được
+hồ sơ lịch sử giải thích (Hình~\ref{hinh:c4-so}); dự báo và trần nhắm vào hai phần khác nhau của sổ.
+% EV: F08; K37; N4B8-02 (check A: M⁺-30 66 → 2 trên 1.471; V-30 66 → 2 trên 1.470; U 129 → 63 trên 1.512; U khung 17 giờ 28 → 28 trên 437; C-30 khung 17 giờ 0 trên 418); F09 (FA:30; RX:3); eq:so; K04
+
+Giá của dự báo là lời hứa giờ trả dài thêm 13,7 giây (khung 7 giờ 27,8 giây) và lời hứa giờ đón 3,2 giây, trung bình
+theo kịch bản. Trên cả 34 kịch bản, khách trễ của luật C giảm từ 76 xuống 10 trong 2.338 (Bảng~\ref{bang:c4-tran120}).
+% EV: F06 (FR:67-69; FA:8-9); C06 (76); C09 (10 trên 34 kịch bản); N-16; F02; N-28 (13 kịch bản cuối tuần không có dự báo; độ dài thêm gộp 7,37 s, N4B-10, nằm ở bang:c4-tran120 và bang:c4-dem)
+
+Kết quả 2 trong 1.471 khách đạt được trong điều kiện thuận lợi cho dự báo theo giờ trong ngày, không phải hiệu quả ngoài
+đời. Tắc đường là một hệ số chung cho cả thành phố. Với luật C, kéo dài lời hứa theo đúng hệ số sẽ xảy ra cho giờ trả khớp trong vòng 2 giây ở cả 2.305 khách
+không bị điều phối dời. Phép kiểm giờ đón cũng chưa dùng lời hứa này (mục~\ref{muc:c4-thaoluan}).
+% EV: I02 (FR:167-169: mức tốt nhất cho loại dự báo theo giờ trong ngày trong mô phỏng gần như tất định); F10 (FA:28; RX:8: 34 kịch bản); B06; F07; X3-11
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,font=\footnotesize,
+  nhan/.style={font=\scriptsize,inner sep=1.5pt}]
+% Thanh trên: ngày thường. Độ dài 11 cm = 6.217,4 s; ranh giới 0,1445 và 9,6145 cm (FA:30).
+\draw[fill=black!75] (0,1.6) rectangle (0.1445,2.2);
+\draw[fill=black!20] (0.1445,1.6) rectangle (9.6145,2.2);
+\draw[fill=white] (9.6145,1.6) rectangle (11,2.2);
+\node at (4.88,1.9) {5.353 s (86,1\%)};
+\node[align=center,nhan] at (10.307,1.9) {783 s\\(12,6\%)};
+\draw (0.072,2.2)--(0.072,2.45);
+\node[nhan,anchor=south west] at (0.0,2.45) {82 s (1,3\%)};
+\node[anchor=east,align=right] at (-0.15,1.9) {Ngày thường, 21 kịch bản\\68 khách, 6.217 s};
+% Thanh dưới: chiều tuyết. Độ dài 11 cm = 3.445,9 s; ranh giới 0,0273 và 0,8302 cm (NEW:5).
+\draw[fill=black!75] (0,0) rectangle (0.0273,0.6);
+\draw[fill=black!20] (0.0273,0) rectangle (0.8302,0.6);
+\draw[fill=white] (0.8302,0) rectangle (11,0.6);
+\node at (5.915,0.3) {3.185,9 s (92,5\%)};
+% v8: nhãn 8,6 s đặt phía trên thanh tuyết (khoảng trống giữa hai thanh) để đường dẫn của nhãn 251,5 s không cắt chữ.
+\draw (0.014,0.6)--(0.014,0.85);
+\node[nhan,anchor=south west] at (-0.02,0.85) {8,6 s (0,25\%)};
+\draw (0.43,0)--(0.43,-0.2);
+\node[nhan,anchor=north west] at (0.39,-0.2) {251,5 s (7,3\%)};
+\node[anchor=east,align=right] at (-0.15,0.3) {Chiều tuyết, 8 kịch bản\\41 khách, 3.445,9 s};
+% Chú giải (ba ô cách nhau đủ để chữ không chồng lên nhau)
+\draw[fill=black!75] (0,-1.25) rectangle (0.3,-1.0);
+\node[anchor=west] at (0.35,-1.125) {phần tính cho điều phối};
+\draw[fill=black!20] (4.0,-1.25) rectangle (4.3,-1.0);
+\node[anchor=west] at (4.35,-1.125) {phần được hồ sơ lịch sử giải thích};
+\draw[fill=white] (9.6,-1.25) rectangle (9.9,-1.0);
+\node[anchor=west] at (9.95,-1.125) {phần còn lại};
+\end{tikzpicture}
+\caption{Số giây trễ chia thành ba phần theo sổ của từng khách (công thức~\eqref{eq:so}), với luật C trần 30 giây và các
+khách tới muộn hơn lời hứa đầu không dự báo quá 60 giây: 68 khách của 21 kịch bản ngày thường và 41 khách của 8 kịch
+bản chiều tuyết 15/11/2018. Mỗi thanh dài bằng 100\% số giây trễ của nhóm đó. Phần được hồ sơ lịch sử giải thích phụ
+thuộc dự báo đang dùng; phần còn lại là phần dự báo này chưa giải thích được, không phải phần không thể biết trước.}
+\label{hinh:c4-so}
+\end{figure}
+% EV (ngày thường): F09; N4B8-11 (FA:30 và CELLS: 81,742 + 5.352,646 + 783,018 = 6.217,406 s; các nhãn làm tròn độc lập, nên tổng của nhãn có thể lệch 0,1 s); RX:3 (1,3 / 86,1 / 12,6%)
+% EV (chiều tuyết): F13; N4B-05 (NEW:5: 8,566 / 251,496 / 3.445,933 s; RP1:24-26: 7,3%; SNOW:10: 92,5%; FR:104,186); N4B8-12 ([A] 8,566 / 3.445,933 = 0,25%)
+% Tọa độ: x = giây / tổng × 11 cm (tính tay; xem NOTES v7 mục 4).
+
+\textbf{Đưa dự báo vào bộ điều phối.} Phép thử chạy luật C và luật hạn chót 30 giây trên 16 kịch bản khung 7 và 8 giờ.
+Thời gian đi của bộ điều phối được nhân thêm mức tăng dự báo trung bình của khung 15 phút hiện tại và khung kế tiếp. Có
+3 trong 32 lần chạy dừng vì FleetPy tính rằng xe sẽ tới điểm đón muộn hơn giờ đón muộn nhất chưa tới 3 giây. Luật C
+không có quyết định bị ép ở 14 lần chạy hoàn tất. Luật hạn chót bị ép ở 47,6\% lượt quyết định ở 15 lần chạy hoàn tất,
+so với 62,8\% ở các lần chạy không đưa dự báo vào trên cùng 15 kịch bản. Tỉ lệ khách bị nó phá lời hứa ở khung 7 giờ giảm từ 39,0\% xuống 11,0\% (các
+tỉ lệ đều trung bình theo kịch bản), nên các số của Bảng~\ref{bang:c4-nghiavu} phụ thuộc cách hứa. Khóa luận chỉ dùng
+dự báo ở lời hứa báo cho khách; kết luận này chỉ áp cho cách đã thử.
+% EV: F12; X3-29 (W13:85-89); N4B8-06 (K = 2: run_forecast.py:9,72; configs/forecast-k2-2018-11-1{4,5,6}.json:1; preflight_world_v1_3.py:85-89; FR:117; R26 Q9); N4B-07 (RX:9,11-15; FR:120-121,124,138,157: C hoàn tất 14, luật hạn chót 15; 47,6 và 62,8% trên cùng 15 kịch bản); C14; FR:141-146
+
+\textbf{Học máy.} Ba mô hình học một lần rồi giữ nguyên ước lượng phân vị 90 của độ trễ so với lời hứa theo dự báo (mức
+mà 90\% khách giống vậy không vượt) từ thông tin đã có ở thời điểm hứa. Đó là cây quyết định tăng cường theo gradient
+(gradient boosting), mô hình ấy khi bỏ hai biến trạng thái xe (số khách khác đã gán và đang trên xe), và hồi quy phân vị
+tuyến tính. Mỗi khách được cộng vào lời hứa theo dự báo một phần đệm tỉ lệ với mức ước lượng; đối chứng cộng cùng một
+khoảng cho mọi khách. Cả hai được chỉnh trên ngày hiệu chỉnh để lời hứa dài thêm trung bình 30 giây so với lời hứa không
+dự báo, nên trên ngày kiểm mức này có thể khác. Phép thử dùng hồ sơ dự báo cố định của ngày
+12--13/11 và kiểm trên 15, 16/11 khung 7 giờ và 13/11 của tập tắc đường cố định, các ngày đã được xem trước. Mô hình
+chỉ được coi là tốt hơn khi, so với đối chứng, thỏa cả bốn điều kiện:
+\begin{itemize}[leftmargin=1.2cm,itemsep=0pt,topsep=2pt]
+\item tỉ lệ khách trễ quá một phút thấp hơn;
+\item độ dài thêm trung bình không hơn quá 1 giây;
+\item phân vị 90 của độ dài thêm không hơn quá 15 giây;
+\item tỉ lệ khách tới sớm quá một phút không hơn quá 1 điểm phần trăm.
+\end{itemize}
+% EV: G01; G02; G03; N4B-08; N4B8-04 (MLS:9-10 các ngày đã xem; 19-23, 67-68 hai biến trạng thái; 37-39 hồ sơ cố định 12–13/11; 41-61 chia ngày; 63-69 ba mô hình; 71-82 chỉnh trên ngày hiệu chỉnh, F = D0 + ρ·w, đối chứng D0 + (E − mean δ), không chỉnh lại khi kiểm; 91-95 bốn điều kiện; MLT: đối chứng của U dài thêm 37,219 / 31,772 s ở 15/11 / 16/11)
+
+Không mô hình nào thỏa đủ bốn điều kiện. Với luật C, đối chứng và mô hình đều không có khách trễ (147 và 197 khách).
+Với điều phối không trần, mô hình cây tăng cường chỉ bớt 1 trong 2 khách trễ ở ngày 15/11 (145 khách), không bớt ai ở
+ngày 16/11 (200 khách), và không thỏa điều kiện thứ hai, thứ ba. Với ghép tự do, khách trễ giảm từ 104 xuống 94 trong 807
+nhưng 57 khách tới sớm quá một phút, so với 0 khi đệm đều. Bỏ hai biến trạng thái xe không đổi số khách trễ ở hai phép
+so này.
+% EV: G05–G10; N4B8-03 (check B: C-30 0/147, 0/197; U 2 → 1 trên 145, 1 → 1 trên 200; FREE 104 → 94 trên 807, sớm 57 so với 0; bỏ trạng thái xe 1/145 và 94/807); ML:6-7,14-15,21,45-53,67-69 (độ dài thêm +4,4 / +3,8 s; phân vị 90 +21,8 / +21,7 s); K40
+
+% -----------------------------------------------------------------------------------------------------
+\section{So với cách đệm lời hứa}
+\label{muc:c4-dem}
+
+Khi có dự báo, cộng thêm 30 giây vào mọi lời hứa của điều phối không trần cũng cho 2.328 lượt không trễ quá một phút
+trên 3.672 yêu cầu, bằng luật C trần 30 giây có dự báo; ở ngưỡng hai phút là 2.366 so với 2.338. Hai cách này cho hai
+thứ khác nhau. Đệm kéo dài lời hứa, trung bình 37,2 thay vì 7,4 giây, nên ít khách bị tính là trễ. Nhưng đệm không đổi
+quyết định điều phối: vẫn có 174 khách bị điều phối dời giờ trả, một khách tới 590,1 giây (gần 10 phút). Luật C, theo cách
+xây dựng luật, giới hạn phần dời này của từng khách ở nhiều nhất 29,2 giây, kể cả ở các kịch bản cuối tuần không có dự
+báo; đổi lại, nó phục vụ ít hơn 96 lượt.
+% EV: C10; N-16; N-18; K06; K51; C20; N-23; N-28 (cuối tuần 29,2 s); C02; A06 (theo cách xây dựng; không bảo đảm giờ đến: A22, K05); RD §8; khớp câu trỏ của phần A v4 mục 4.2 (C10)
+
+Cách đệm là phát lại trên các lần chạy của điều phối không trần, nên hai bên được so trên hai nhóm khách khác nhau, chỉ
+chung 2.207 khách. Bảng~\ref{bang:c4-dem} xếp các cách hứa thành ba khối có lời hứa dài thêm gần bằng nhau.
+% EV: C10 (phát lại, không phải đối chứng ghép cặp); ADDENDUM-1 phần đầu (quy tắc đệm D = D0 + k); C04
+
+\begin{table}[htbp]
+\centering
+\caption{Các cách hứa khi có dự báo trên tập kiểm tra chính (34 kịch bản, 3.672 yêu cầu mỗi cấu hình; dự báo chỉ có ở
+21 kịch bản ngày thường). U: điều phối không trần; C-$B$: luật C trần $B$ giây; trong ngoặc là số khách được phục vụ.
+Số đếm gộp; trễ và tới sớm tính trong số khách được phục vụ, so với lời hứa của chính cách hứa; hai cột ``không trễ
+quá'' tính trên 3.672 yêu cầu; độ dài thêm là trung bình gộp theo khách được phục vụ. Đệm không đổi quyết định điều
+phối, nên hàng của U và hàng của C là các nhóm khách khác nhau.}
+\label{bang:c4-dem}
+\small
+\begin{tabular}{@{}p{4.6cm}rrrrr@{}}
+\toprule
+\textbf{Cách hứa} &
+\textbf{\begin{tabular}[b]{@{}r@{}}Trễ\\ quá 60 s\end{tabular}} &
+\textbf{\begin{tabular}[b]{@{}r@{}}Không trễ\\ quá 60 s\end{tabular}} &
+\textbf{\begin{tabular}[b]{@{}r@{}}Không trễ\\ quá 120 s\end{tabular}} &
+\textbf{\begin{tabular}[b]{@{}r@{}}Tới sớm\\ quá 60 s\end{tabular}} &
+\textbf{\begin{tabular}[b]{@{}r@{}}Dài thêm\\ (s)\end{tabular}}\\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Không đệm (dài thêm khoảng 7 giây)}}\\
+U, dự báo (2.434) & 137 & 2.297 & 2.347 & 8 & 7,18\\
+C-30, dự báo (2.338) & 10 & 2.328 & 2.338 & 4 & 7,37\\
+C-120, dự báo (2.387) & 65 & 2.322 & 2.379 & 2 & 7,27\\
+% EV: N-16; N-03; C09; N-06; L1a-03; N4B-09 (sớm 8 / 4 / 2)
+\midrule
+\multicolumn{6}{@{}l}{\textit{Đệm 30 giây (dài thêm khoảng 37 giây)}}\\
+U, dự báo, đệm 30 s (2.434) & 106 & 2.328 & 2.366 & 44 & 37,18\\
+C-30, dự báo, đệm 30 s (2.338) & 2 & 2.336 & 2.338 & 44 & 37,37\\
+% EV: C10; N-02; N-16
+\midrule
+\multicolumn{6}{@{}l}{\textit{Đệm 60 giây (dài thêm khoảng 67 giây)}}\\
+U, dự báo, đệm 60 s (2.434) & 87 & 2.347 & 2.386 & 1.033 & 67,18\\
+% EV: C11; N-16
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách đọc bảng: với đệm 30 giây trên điều phối không trần, 106 trong 2.434 khách tới muộn hơn lời hứa đã đệm quá 60
+giây, nên có 2.328 lượt không trễ quá 60 giây trên 3.672 yêu cầu; 44 khách tới sớm quá 60 giây.
+% EV: C10; N-16
+
+\textbf{Vai trò của từng thành phần.} Thứ nhất, ở cùng độ dài lời hứa, luật C hơn cách đệm ở ngưỡng một phút và kém ở
+ngưỡng hai phút: khi cùng đệm 30 giây, 2.336 so với 2.328 lượt và 2.338 so với 2.366 lượt. Muốn bằng luật C ở ngưỡng một phút,
+cách đệm phải làm lời hứa dài thêm gấp khoảng năm lần.
+% EV: N-17; N-18 (37,1833 / 7,3671 = 5,05); N-16
+
+Thứ hai, lời hứa dài thì ít trễ nhưng nhiều khách tới sớm: 44 khách với cách đệm 30 giây và 1.033 khách với cách đệm 60
+giây, so với 4 khách với luật C có dự báo. Số lượt tới trong khoảng $\pm$60 giây quanh lời hứa là 2.284 với cách đệm 30
+giây, so với 2.324 với luật C, trên 3.672 yêu cầu.
+% EV: C10; C11; N-04 (±60 s = phục vụ − trễ60 − sớm60, ADD1:92); N4B-09 (ADD1:84-89)
+
+Thứ ba, cách đệm 30 giây vẫn có 68 khách trễ quá hai phút, 11 khách quá năm phút và 1 khách quá mười phút; luật C có
+dự báo không có ai trễ quá hai phút. Cách đệm hơn 28 lượt ở ngưỡng hai phút vì phục vụ nhiều hơn 96 lượt, không phải vì
+ít khách trễ hơn.
+% EV: N-01 (68 / 11 / 1 so với 0 / 0 / 0; ADD1:15,19); N-19 (2.366 − 2.338 = 28 = 96 − 68)
+
+Khi phát lại cùng lời hứa theo dự báo, luật hạn chót 30 giây cũng có 2.338 lượt phục vụ và 2.328 lượt không trễ quá
+một phút. Vì phép phát lại không đổi các lần chạy, nghĩa vụ của luật này vẫn tính từ lời hứa đầu không dự báo. Theo
+nghĩa vụ đó, nó bị ép ở 41,3\% lượt quyết định và có khách bị phá lời hứa ở 28 trong 34 kịch bản, còn luật C không có
+(Bảng~\ref{bang:c4-nghiavu}).
+% EV: N-16 (M⁺-30 + dự báo 2.338 / 10 / 2.328 / 2.338, ADD1:29); C13 (41,3% trung bình theo kịch bản); N-21 (phá hứa của M⁺-30 = A − p₀ > 30 s với lời hứa không dự báo; C-30 0/34, 0 quyết định bị ép); X3-16
+
+Trần 120 giây có dự báo, với lời hứa chỉ dài thêm 7,27 giây, cho 2.379 lượt không trễ quá hai phút, nhiều hơn 2.366
+của cách đệm 30 giây, nhưng 2.322 lượt ở ngưỡng một phút, ít hơn 2.328. Đây là một điểm đo thêm trên một tập khách khác,
+không phải mức trần tốt nhất.
+% EV: N-06; N-16; N-18; N-10; K36
+
+\textbf{Khi nào chọn trần, khi nào chọn đệm.} Nếu hãng xe chỉ tính số lượt không trễ quá hai phút và chấp nhận lời hứa
+dài hơn cùng nhiều khách tới sớm hơn, đệm trên điều phối không trần không kém luật C, lại phục vụ thêm 96 lượt. Nếu cần
+giới hạn phần dời do ghép thêm khách cho từng người, kể cả khi không có dự báo, luật C làm được điều này, đổi lại 96
+lượt phục vụ và 242 khách đi chung. Hai cách dùng chung được; chọn cách nào là quyết định của hãng xe, không phải kết
+luận của thực nghiệm.
+% EV: N-19; C02; N-20; N-02 (hàng C-30 có dự báo và đệm 30 s); D20; I07; I10; K38; K51
+
+% -----------------------------------------------------------------------------------------------------
+\section{Khi dự báo không đủ: chiều tuyết 15/11/2018}
+\label{muc:c4-tuyet}
+
+Trên 601 khách được phục vụ của 8 kịch bản chiều tuyết 15/11/2018 (luật C trần 30 giây), lời hứa theo dự báo chỉ giảm
+số khách trễ quá một phút từ 41 xuống 34. Tính trung bình theo kịch bản, tỉ lệ này giảm từ 7,19\% xuống 5,94\%. Theo
+sổ, trong 3.445,9 giây trễ của 41 khách, 8,6 giây tính cho điều phối và 251,5 giây được hồ sơ lịch sử giải thích
+(Hình~\ref{hinh:c4-so}).
+% EV: F13; K25; B20; N4B-05 (NEW:5)
+
+Bảng~\ref{bang:c4-tuyet} cho kết quả phát lại vài cách hứa dùng thêm hệ số tắc đường của chính ngày tuyết. Cách ``trộn'' lấy trung
+bình nhân của mức tăng theo hồ sơ lịch sử và mức tăng của hệ số cùng ngày từ khung 15 phút trước sang khung hiện tại.
+% EV: F14; K20; K21; N4B-06 (factor_nowcast_screen.py:14-20 quy tắc thông tin, 28-29: MOM = (f(k0)/f(k0−1))^(b−b0), BLEND = √(HIST·MOM); RP1:7-20; NEW:5)
+
+\begin{table}[htbp]
+\centering
+\caption{Phát lại các cách hứa trên 8 kịch bản chiều tuyết 15/11/2018 (luật C trần 30 giây, 601 khách được phục vụ).
+Cột ``khách trễ'' đếm gộp số khách tới muộn hơn lời hứa đầu quá 60 giây; cột cuối là độ dài thêm trung bình theo kịch
+bản. Không cách hứa nào trong bảng có khách tới sớm quá 60 giây. Mọi cách hứa đều tính lại sau khi chạy, trên một ngày
+đã được xem trước khi thiết kế các cách này; hai hàng ``có buổi sáng'' chỉ để tham khảo.}
+\label{bang:c4-tuyet}
+\small
+\begin{tabular}{@{}p{3.4cm}p{6.6cm}rr@{}}
+\toprule
+\textbf{Cách hứa} & \textbf{Thông tin dùng lúc hứa} &
+\textbf{\begin{tabular}[b]{@{}r@{}}Khách\\ trễ\end{tabular}} &
+\textbf{\begin{tabular}[b]{@{}r@{}}Dài thêm\\ (s)\end{tabular}}\\
+\midrule
+Không dự báo & Thời gian đi hiện tại & 41 & 0\\
+Theo dự báo & Hồ sơ tắc đường của các ngày nguồn & 34 & 2,0\\
+Trộn trong khung & Thêm hệ số cùng ngày đã có trong khung giờ & 21 & 8,5\\
+Trộn có buổi sáng & Thêm hệ số cùng ngày từ 6 giờ; thiết kế thử không cho khung chiều dùng dữ liệu này & 19 & 9,5\\
+Trộn có buổi sáng, trễ một khung & Như hàng trên, nhưng mức tăng gần nhất chỉ lấy từ các khung đã kết thúc; hệ số của
+khung hiện tại vẫn dùng giá trị đúng & 29 & 9,0\\
+Đệm tỉ lệ & Tỉ lệ chọn để tổng phần kéo dài bằng của hàng ``trộn trong khung'', trên chính ngày tuyết & 27 & 8,3\\
+Hệ số thật & Hệ số sau lúc hứa, không có ở thời điểm hứa & 0 & 18,8\\
+\bottomrule
+\end{tabular}
+\end{table}
+% EV: F14 (RP1:7-20; NEW:5); N4B-06 (định nghĩa; cột dài thêm là trung bình theo kịch bản, RP1:6, rider_nowcast_replay.py:96-106); K20; K21; factor_nowcast_screen.py:17-20 (hàng trễ một khung cũng dùng thông tin từ 06:00); N4B8-09 (RP1:7-20: E60 0,00% ở mọi hàng ⇒ 0 khách tới sớm ở mọi kịch bản [A])
+
+Cách đọc bảng: khi trộn hồ sơ lịch sử với xu hướng trong khung giờ, 21 trong 601 khách tới muộn hơn lời hứa quá một
+phút, với lời hứa dài thêm trung bình 8,5 giây.
+% EV: F14; N4B-06
+
+Phép phát lại này tách số giây trễ theo cách cộng có giới hạn, khác phần có dấu của công thức~\eqref{eq:so}. Phần kéo
+dài của mỗi khách chỉ được tính tới phần trễ còn lại sau khi trừ phần tính cho điều phối. Theo cách cộng này, cách trộn
+có buổi sáng giải thích thêm 886,9 giây, tức 25,7\% của 3.445,9 giây trễ; 2.299,0 giây (66,7\%) chưa được giải thích
+bằng các cách đã thử. Theo trạm Central Park (NOAA), từ 9/2018 đến 12/2019 chỉ có 5 đợt tuyết từ 25,4 mm trở lên, kể
+cả đợt này; muốn kiểm cách hứa cho ngày bất thường cần thêm nhiều đợt khác.
+% EV: F15 (NEW:5; RP1:24-35); N4B8-07 (rider_nowcast_replay.py:14-15, 113: explained = Σ clip(D − P0, 0, A − P0 − dispatch); RP1:29: phần vượt 6 s; với hồ sơ lịch sử phần vượt 0 nên hai cách cộng trùng nhau, N4B-05); K19; I11; B26 (NEW:9; WX:1-3: tệp NOAA GHCN-D trạm Central Park; WX17:1-4; ghép ngày cách nhau ≤ 2)
+
+% -----------------------------------------------------------------------------------------------------
+\section{Kiểm tra tính hợp lệ của kết quả}
+\label{muc:c4-hople}
+
+Trên 34 kịch bản của tập kiểm tra chính, không khách nào vượt trần: tổng dời lớn nhất là 29,2 giây với trần 30 giây và
+118,9 giây với trần 120 giây. Không lượt quyết định nào bị ép, 0 trong 20.101 và 0 trong 20.435 lượt. Đây là phép kiểm cài
+đặt: dưới giả thiết (N), Nhận xét~\ref{nx:giunguyen} đã cho trước các số 0 này, và điều phối không trần cũng có 0
+trong 20.760 lượt.
+% EV: C20; N-07; X3-16 (0/20.101; 0/20.435; U 0/20.760); N-21; A22; chương 3, nx:giunguyen và đoạn sau nó (L_r ≤ B được giữ khi (N) đúng ở mọi lượt)
+
+Bộ đếm của bộ sinh được đọc ở điều phối không trần, luật C trần 30, 120 giây và luật hạn chót 30 giây. Ở cả bốn cấu
+hình, không phương án nào bị bỏ vì giới hạn 100 phương án mỗi xe hay giới hạn số bước tìm cách chèn. Giới hạn 2 yêu cầu
+mới mỗi lượt chỉ để một yêu cầu sang lượt sau ở mỗi cấu hình. Các số này không đo mọi giới hạn tính toán (mục~\ref{muc:gioihan}): giới hạn
+của bước kiểm, của bộ giải, một bộ đếm khác của bộ sinh và các bộ đếm ở tập tắc đường cố định chưa được đọc.
+% EV: N-25 (ADD1:119-122: 34 lần chạy mỗi cấu hình); N4B-11 (GEN:54-95, 236-246, 298-345; CandidateModels.cs:68-82, 100-118: điều kiện đầy đủ còn gồm OmittedRepairRequestCount, chưa đọc); X3-17; X3-03; X3-32; C4A-18 (tập tắc đường cố định: giới hạn chưa kiểm); K34 thu hẹp (N4B8-13)
+
+Như mục~\ref{muc:doichung} đã nêu, mức dùng trần lớn nhất của tiêu chí 3 bằng 100\% ở mọi lượt có ghi tiêu chí này:
+3.503, 3.506 và 3.504 lượt khi không trần, với trần 30 và 120 giây.
+% EV: A15; N-25 (ADD1:119-121); A07; X3-07 (chương 3 mục doichung nêu hệ quả: tiêu chí 3 chỉ tác dụng qua tổng phần dời)
+
+Các số đếm chính của tập kiểm tra chính được ít nhất hai chương trình đọc dữ liệu viết riêng tính lại và khớp nhau
+(mục~\ref{muc:kiemtra}). Phép so gồm cả từng khách ở 7.159 khách được phục vụ của điều phối không trần và luật C trần
+30, 120 giây; riêng số khách đi chung chỉ được một quy tắc đếm. Theo bản ghi khởi tạo, 8 lần chạy chiều tuyết dùng cùng
+bản bộ chạy đã lưu và cùng cấu hình với các lần chạy luật C trần 30 giây của tập kiểm tra chính, kể cả luật phục hồi
+không tệ hơn.
+% EV: N4B-14 (ADD1:66-78); K41; C19; N-09 (đi chung: Codex không đếm lại); N4B8-05 (check C: 8 lần chạy chiều tuyết và 51 lần chạy C-30 của T3.8 cùng binarySha256 a631038b…, coreCommitSha 1ce15e92…, policyConfigurationHash a2f11a3a…; sha256 runner-tier3-v2/RideBound.Runner.dll khớp; wp4-tier3-v2.json:7 no-worse-than-reference-v1; R26 Q8)
+
+Chạy lại trên đúng mã nguồn đã dựng bộ chạy, 1.024 trong 1.025 kiểm thử tự động đạt, và kiểm thử còn lại đạt khi chạy
+riêng trong điều kiện nó đòi (Phụ lục~\ref{phuluc:C}). Các phép kiểm trên không cho biết mô phỏng giống thực tế đến
+đâu.
+% EV: N4B-13 (TR; TLOG:43-105; TDIRTY:1-6; chi tiết kiểu xuống dòng LF và tệp chưa ghi nhận chuyển sang Phụ lục C); I13; A28; I01; K41
+
+% -----------------------------------------------------------------------------------------------------
+\section{Thảo luận và hạn chế}
+\label{muc:c4-thaoluan}
+
+Với một hãng xe, các kết quả trên là các điểm trên một đường đánh đổi, không phải một khuyến nghị. So với điều phối
+không trần, luật C trần 30 giây phục vụ ít hơn 96 lượt và có ít hơn 242 khách đi chung; đổi lại, phần dời do điều phối
+của mỗi khách không quá 30 giây và số lượt trễ thấp hơn ở cả bốn ngưỡng đã đo, trên hai nhóm khách khác nhau
+(Bảng~\ref{bang:c4-phanbotre}). Khóa luận không đo giá trị của các điều này với khách hay hãng xe.
+% EV: C02; N-20; C20; N-24; C04; D20; I10; K38 (không kể 0 quyết định bị ép là phần luật C đổi được: X3-16, U cũng 0/20.760)
+
+Một phép tính hòa vốn giả định cho thấy cách đọc các điểm này. Gọi $k$ là chi phí của hãng xe cho mỗi lượt trễ quá một
+phút và $m$ là biên lợi nhuận mỗi chuyến. Với 96 lượt phục vụ ít hơn và 127 lượt trễ ít hơn, luật C chỉ có lợi hơn khi
+$k > 0{,}756\,m$, tức $96/127$. Phép tính bỏ qua mọi yếu tố khác và so hai nhóm khách khác nhau; khóa luận không có giá trị thật
+nào của $k$ hay $m$.
+% EV: C29 (R15:231-235; 96/127 = 0,756); K35; C28; C04; I10
+
+Các hạn chế dưới đây chia theo bốn nhóm; mỗi ý nêu điều chưa làm và kết luận chịu ảnh hưởng.
+
+\textbf{Mô hình mô phỏng.}
+\begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+\item Mọi kết quả đến từ FleetPy với một hệ số tắc đường chung cho cả thành phố, mức nền lấy lúc 00:00, nên mô phỏng gần
+như không có yếu tố ngẫu nhiên. Các kết quả, kể cả mức trễ còn lại sau dự báo, không cho biết hiệu quả khi vận hành thật.
+\item Thời gian dừng đón, trả bằng 0 giây (kiểm trên 3 lần chạy mẫu), so với 30 giây mỗi khách trong nghiên cứu điển hình
+của FleetPy~\cite{engelhardt2026}, và đồ thị rút gọn chỉ có 96 nút. Phần dời do điều phối và cái giá 96 lượt vì vậy chỉ áp cho
+thiết lập này. Giả thuyết chưa kiểm: khi dừng lâu hơn hay tải cao hơn, trần chặn nhiều phương án và mất nhiều lượt phục
+vụ hơn.
+\item Không có phản ứng của khách và không gán lại xe cho khách đã nhận, nên số lượt phục vụ không tính khách bỏ đi, và
+chưa biết cái giá của trần khi được gán lại xe.
+\end{itemize}
+% EV: I01; B01; B06; B07; I02; F10; B05 (SERV:2-4: kiểm trên 3 lần chạy mẫu; FLEET:423-424); J18; B03; K48; B12; I07; X3-39; câu giả thuyết không có dòng sổ (OUTLINE 4.11 cho phép một câu, ghi rõ là giả thuyết)
+
+\textbf{Dữ liệu và thiết kế thực nghiệm.}
+\begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+\item 34 kịch bản của tập kiểm tra chính phụ thuộc nhau, thuộc 5 ngày, mỗi kịch bản chạy một lần; các phép đếm theo
+kịch bản là mô tả, không phải kiểm định.
+\item Các kết quả dùng lại dữ liệu đã xem. Ngưỡng phân tích và cách chia tập được chọn sau khi xem tập buổi sáng và các
+đợt chạy thử trước đó. Mức 120 giây được chọn sau khi xem kết quả của điều phối không trần và luật C trần 30 giây trên
+chính tập kiểm tra chính. Chiều tuyết và các ngày kiểm học máy cũng đã được xem, nên mọi kết quả là thăm dò.
+\item Tải thấp: 0,535 khách trên xe kể cả lúc xe rỗi khi không trần, so với khoảng 1,33 trong nghiên cứu điển hình của
+FleetPy. Ở 49 kịch bản dựng từ dữ liệu thật, chuyến được chọn ngắn hơn mọi chuyến đủ điều kiện (trung vị thời gian đi thẳng 165
+so với 196 giây). Kết quả không suy ra cho tải cao hay chuyến dài hơn.
+\end{itemize}
+% EV: B09; I05; B11; I06; C4A-11 (mức 120 giây, như phần A v4 mục c4-thamdo); MLS:9-10; I11; B12 (LOAD:2-3; FLEET:447-449); J18; B13 (SEL6:2-4: 49/49 kịch bản)
+
+\textbf{Tích hợp.}
+\begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+\item Bộ điều phối vẫn kiểm giờ đón bằng giờ không dự báo, nên 34 trong 1.471 khách được báo giờ đón muộn hơn giờ đón
+muộn nhất. Các số có dự báo ở mục~\ref{muc:c4-dubao} và~\ref{muc:c4-dem} chưa tính việc sửa phép kiểm này.
+\item Bộ chạy dựng lại từ mã nguồn có thể khác bản đã lưu, nên lần chạy mới phải cho đúng kết quả cũ trước khi so với
+các số ở đây.
+\end{itemize}
+% EV: F07 (RX:2; FR:70); I13; A28; R18 B24 (qua REG A28)
+
+\textbf{Phạm vi kết luận.}
+\begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+\item Bộ chọn ưu tiên chi phí chưa được chạy thành lần mô phỏng đầy đủ, và luật mỗi lần một trần chưa được cài đặt
+(mục~\ref{muc:c4-congdon}). Chưa tách được phần của trần với phần của bộ chọn, và chưa biết phần cộng dồn có đổi kết quả
+hay không.
+\item Luật hạn chót chỉ mượn thành phần hạn chót của Schulz và Pfeiffer~\cite{schulz2026}, với 30 và 60 giây trên tập
+kiểm tra chính và 30--300 giây trên tập buổi sáng; mức mặc định của bài đó là 900 giây. Hạn chót nới kiểu Hörl và
+Zwick~\cite{horl2022} (mục~\ref{muc:doichung}) chưa được chạy. Các phép so không nói về phương pháp của các tác giả đó.
+\item Mức 30 giây không phải ngưỡng cảm nhận hay chuẩn ngành, và không có dữ liệu về mức khách sẵn lòng trả cho lời
+hứa ổn định hơn; vì vậy không mức trần nào được chọn là tốt nhất.
+\end{itemize}
+% EV: H02; H12; K18; E09; K08; J10; J11; X3-28 (luật hạn chót 30–300 s ở tập buổi sáng; chương 3 Bảng luat); K27; D20; K52; K36

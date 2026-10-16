@@ -1,0 +1,51 @@
+== Diagnostics (population cells) ==
+C-30 {'alightedNotInLedger': 0, 'badSha': 0, 'dupLedgerIds': 0, 'entriesWzero': 1459, 'promised': 1471}
+U {'alightedNotInLedger': 0, 'badSha': 0, 'dupLedgerIds': 0, 'entriesWzero': 1498, 'promised': 1512}
+
+== k_w (promises only, C-30 riders of the population cells of window w) ==
+k_w07 = 0.0336954   (all promised riders incl. unserved: 0.0336954)
+k_w08 = 0.0098642   (all promised riders incl. unserved: 0.0098642)
+k_w17 = 0.0001443   (all promised riders incl. unserved: 0.0001443)
+
+Exact(Fraction) vs float classification differences: 0 []
+
+== C-30 (cell means) ==
+group  n  Y_naive  Y_disp  Y_pad   E_naive  E_disp  Vis_naive Vis_disp ext_s
+w07     8 0.1444  0.0027  0.0424  0.0000   0.0020  0.1707    0.0174   27.8
+w08     8 0.0135  0.0018  0.0086  0.0000   0.0000  0.0256    0.0104   8.1
+w17     5 0.0000  0.0000  0.0000  0.0000   0.0000  0.0000    0.0000   0.1
+all21  21 0.0601  0.0017  0.0194  0.0000   0.0008  0.0748    0.0106   13.7
+
+== U (cell means) ==
+group  n  Y_naive  Y_disp  E_naive E_disp Vis_naive Vis_disp ext_s
+w07     8 0.1511  0.0096  0.0000  0.0019 0.1753    0.0217   27.8
+w08     8 0.0617  0.0505  0.0000  0.0000 0.0716    0.0603   8.2
+w17     5 0.0676  0.0676  0.0000  0.0000 0.0697    0.0697   0.1
+all21  21 0.0972  0.0390  0.0000  0.0007 0.1107    0.0478   13.8
+
+== Oracle (C-30, 21 cells) ==
+served C-30 riders: 1471; dispatch part == 0: 1452; |A - S_true| <= 2 s: 1452/1452; max |A - S_true| among them = 1.649 s
+(variant: every revision has p == e: 1452/1452)
+
+== Lateness ledger (C-30 riders with A - P0 > 60 s, 21 cells) ==
+riders 68; total A-P0 = 6217.4 s = dispatch 81.7 + anticipated 5352.6 + unanticipated 783.0
+
+== Inference (C-30, 21 cells; stratified day-window cluster bootstrap, B=10000) ==
+primary: a fresh random.Random(20261007) for each statistic
+dY: point -5.844 pp  interval [-8.779, -3.232] pp
+dVis: point -6.418 pp  interval [-8.286, -4.305] pp
+dPad: point -1.775 pp  interval [-2.829, -0.679] pp
+variant: one random.Random(20261007) consumed sequentially dY -> dVis -> dPad
+dY: interval [-8.779, -3.232] pp
+dVis: interval [-8.286, -4.305] pp
+dPad: interval [-2.829, -0.679] pp
+
+per day-window dY (C-30, pp):
+  w07 2018-11-14: -13.107 (2 cells)
+  w07 2018-11-15: -21.880 (3 cells)
+  w07 2018-11-16: -7.169 (3 cells)
+  w08 2018-11-14: -1.370 (2 cells)
+  w08 2018-11-15: -1.315 (3 cells)
+  w08 2018-11-16: -0.895 (3 cells)
+  w17 2018-11-14: +0.000 (2 cells)
+  w17 2018-11-16: +0.000 (3 cells)

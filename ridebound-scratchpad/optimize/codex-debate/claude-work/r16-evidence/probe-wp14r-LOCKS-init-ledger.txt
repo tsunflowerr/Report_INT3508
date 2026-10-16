@@ -1,0 +1,339 @@
+# probe_init_and_ledger.py E:/RideBoundData/wp14r/development-v6-ledger/w14-d20181112-s10-r1-w08-c1-nobudget-s7/attempt-01/output/transcript-00.ndjson
+# (a) initializeRun (adapterToRunner), truncated
+{
+ "manifest": {
+  "adapter": {
+   "adapterId": "fleetpy-ridebound",
+   "adapterVersion": "1.0.0"
+  },
+  "binarySha256": "17a9dfcfd85c6ceb814dace28f31e8d4cb78746dbc0a9825db726eb47fb1cfee",
+  "capabilitySelection": {
+   "capabilities": [
+    "dynamicTravelTimes",
+    "exactEventOrdering",
+    "... 3 items"
+   ],
+   "maxFleetSize": 5000,
+   "maxRequestCount": 100000,
+   "positionModel": "directedEdgeProgress",
+   "status": "accepted"
+  },
+  "coreCommitSha": "38d517d8a9382811e50ac3db408a56d2c3897551",
+  "costUnitId": "abstract-generalized-cost-v1",
+  "graphSnapshotHash": "8be1c5c4fc4da0a1db4984e4065a3ca26ced472b8633c6214a6dbbe538878836",
+  "masterSeed": 7,
+  "policyConfigurationHash": "79ed526bf3561723f6d481ee599048449aa03be8f90b75340435bca854717ff9",
+  "policyId": "ridebound-hard-vector",
+  "policyVersion": "wp14-development-v1",
+  "protocolVersion": "1.0.0",
+  "scenarioContentHash": "4eb99000918711c3daa1bbc5f2a6b30adb65867e24885347354b39fe1a0b6715",
+  "simulator": {
+   "simulatorId": "fleetpy",
+   "simulatorVersion": "1.0.2",
+   "upstreamCommitSha": "053aa9d4fcfde91c5d303435d5748f9206c071b0"
+  },
+  "sourceUnitConversions": [
+   {
+    "canonicalUnit": "millisecond",
+    "quantity": "time",
+    "roundingRule": "roundTiesToEven",
+    "sourceUnit": "second"
+   },
+   {
+    "canonicalUnit": "millimeter",
+    "quantity": "distance",
+    "roundingRule": "roundTiesToEven",
+    "sourceUnit": "meter"
+   }
+  ],
+  "travelTimeSnapshotHash": "7007b27644a2110d95773fdeb0bd11ce9c9017c83da342da4a51692bdeec5cce"
+ }
+}
+# (b) first decision frame with an action outside accept/reject/promise
+  actions: list[8]
+  actions[0].decisionType = "vehiclePlanUpdated"
+  actions[0].payload: dict
+  actions[0].payload.candidateId = "candidate-v1-d03b845920ecbfcc01430e3f7b9e25599698798138c0f4d1f8d527d50c730ee8"
+  actions[0].payload.route: dict
+  actions[0].payload.route.executedStopCount = 0
+  actions[0].payload.route.frozenPrefix: list[0]
+  actions[0].payload.route.mutableSuffix: list[0]
+  actions[0].payload.route.planVersion = 0
+  actions[0].payload.vehicleId = "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+  certificate: dict
+  certificate.body: dict
+  certificate.body.certificateVersion = "1.0.0"
+  certificate.body.inputStateHash = "00caf3eb08c679dea5762c272293c29b26b442476099ac0761f7e41c33f924b6"
+  certificate.body.normalOperation = true
+  certificate.body.physicalPlanCount = 8
+  certificate.body.promiseCount = 0
+  certificate.body.proposedStateHash = "c8d529ad3ffe0764de479c1cf815fccdb5d482c99e5b41317647ddb5b2c8d9df"
+  certificate.body.publicationIds: list[0]
+  certificate.body.validatorVersion = "commitment-validator-v1"
+  certificate.body.witnesses: list[0]
+  certificate.reasonCode = "VALIDATED"
+  certificate.status = "produced"
+  decisionHash = "9447254529b8c1c37bc2a9dfe37be753bd6efe525293718015e4cfecafdd6d1c"
+  previousDecisionHash = "0000000000000000000000000000000000000000000000000000000000000000"
+  reasonCode = "ACCEPTED"
+  solver: dict
+  solver.executionEvidence: dict
+  solver.executionEvidence.candidatePortfolio: dict
+  solver.executionEvidence.candidatePortfolio.candidates: list[8]
+  solver.executionEvidence.candidatePortfolio.candidates[0].candidateId = "candidate-v1-d03b845920ecbfcc01430e3f7b9e25599698798138c0f4d1f8d527d50c730ee8"
+  solver.executionEvidence.candidatePortfolio.candidates[0].isNoOp = true
+  solver.executionEvidence.candidatePortfolio.candidates[0].newRequestIds: list[0]
+  solver.executionEvidence.candidatePortfolio.candidates[0].objectiveContributions: list[10]
+  solver.executionEvidence.candidatePortfolio.candidates[0].policyEligibility = "eligible"
+  solver.executionEvidence.candidatePortfolio.candidates[0].relocatedWaitMs = 0
+  solver.executionEvidence.candidatePortfolio.candidates[0].route: dict
+  solver.executionEvidence.candidatePortfolio.candidates[0].route.executedStopCount = 0
+  solver.executionEvidence.candidatePortfolio.candidates[0].route.frozenPrefix: list[0]
+  solver.executionEvidence.candidatePortfolio.candidates[0].route.mutableSuffix: list[0]
+  solver.executionEvidence.candidatePortfolio.candidates[0].route.planVersion = 0
+  solver.executionEvidence.candidatePortfolio.candidates[0].schedule: dict
+  solver.executionEvidence.candidatePortfolio.candidates[0].schedule.operationalCost = 0
+  solver.executionEvidence.candidatePortfolio.candidates[0].schedule.stops: list[0]
+  solver.executionEvidence.candidatePortfolio.candidates[0].scheduleStrategy = "earliestFeasible"
+  solver.executionEvidence.candidatePortfolio.candidates[0].vehicleId = "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+  solver.executionEvidence.candidatePortfolio.generatedCandidateCount = 8
+  solver.executionEvidence.candidatePortfolio.objectiveProfile = "hardVector"
+  solver.executionEvidence.candidatePortfolio.policyEligibleCandidateCount = 8
+  solver.executionEvidence.candidatePortfolio.portfolioVersion = "1.0.0"
+  solver.executionEvidence.candidatePortfolio.schemaId = "https://ridebound.local/schemas/wp13/v1/runner-retained-candidate-portfolio-evidence.schema.json"
+  solver.executionEvidence.candidatePortfolio.selectedCandidateIds: list[8]
+  solver.executionEvidence.candidatePortfolio.selectionProblem: dict
+  solver.executionEvidence.candidatePortfolio.selectionProblem.objectiveLevels: list[10]
+  solver.executionEvidence.candidatePortfolio.selectionProblem.objectiveLevels[0].aggregation = "sum"
+  solver.executionEvidence.candidatePortfolio.selectionProblem.objectiveLevels[0].levelIndex = 0
+  solver.executionEvidence.candidatePortfolio.selectionProblem.objectiveLevels[0].name = "accepted-request-count"
+  solver.executionEvidence.candidatePortfolio.selectionProblem.objectiveLevels[0].sense = "maximize"
+  solver.executionEvidence.candidatePortfolio.selectionProblem.requestIds: list[0]
+  solver.executionEvidence.candidatePortfolio.selectionProblem.vehicleIds: list[8]
+  solver.executionEvidence.evidenceVersion = "1.2.0"
+  solver.executionEvidence.generation: dict
+  solver.executionEvidence.generation.consideredRequestCount = 0
+  solver.executionEvidence.generation.exogenousServiceQualityBreaches: list[0]
+  solver.executionEvidence.generation.omissions: list[0]
+  solver.executionEvidence.generation.omittedRequestCount = 0
+  solver.executionEvidence.generation.totalPendingRequestCount = 0
+  solver.executionEvidence.generation.vehicleLosses: list[8]
+  solver.executionEvidence.generation.vehicleLosses[0].candidateCapApplied = false
+  solver.executionEvidence.generation.vehicleLosses[0].consideredRepairRequestCount = 0
+  solver.executionEvidence.generation.vehicleLosses[0].eligibleRepairRequestCount = 0
+  solver.executionEvidence.generation.vehicleLosses[0].evaluatedCandidatePathCount = 0
+  solver.executionEvidence.generation.vehicleLosses[0].explorationWorkUnits = 1
+  solver.executionEvidence.generation.vehicleLosses[0].omissionCountWasSaturated = false
+  solver.executionEvidence.generation.vehicleLosses[0].omittedFeasibleCandidateCountByCap = 0
+  solver.executionEvidence.generation.vehicleLosses[0].omittedRepairRequestCount = 0
+  solver.executionEvidence.generation.vehicleLosses[0].omittedUnexpandedCandidatePathCount = 0
+  solver.executionEvidence.generation.vehicleLosses[0].physicallyOrSchedulePrunedCount = 0
+  solver.executionEvidence.generation.vehicleLosses[0].retainedCandidateCount = 1
+  solver.executionEvidence.generation.vehicleLosses[0].uniqueFeasibleCandidateCountBeforeCap = 1
+  solver.executionEvidence.generation.vehicleLosses[0].vehicleId = "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+  solver.executionEvidence.generation.vehicleLosses[0].workBudgetExhausted = false
+  solver.executionEvidence.prunedCandidates: list[0]
+  solver.executionEvidence.selection: dict
+  solver.executionEvidence.selection.consumedGenerationWorkUnits = 8
+  solver.executionEvidence.selection.consumedValidationWorkUnits = 9
+  solver.executionEvidence.selection.executionPath = "validatedIncumbent"
+  solver.executionEvidence.selection.fallbackValidationAttempts = 0
+  solver.executionEvidence.selection.finalSolveStatus = "optimal"
+  solver.executionEvidence.selection.finalSolverDiagnostics: dict
+  solver.executionEvidence.selection.finalSolverDiagnostics.consumedDeterministicTimeMicros = 1
+  solver.executionEvidence.selection.finalSolverDiagnostics.consumedWorkUnits = 0
+  solver.executionEvidence.selection.finalSolverDiagnostics.detailCode = "ORTOOLS_OPTIMAL_CONSTANT_LEVELS_SKIPPED"
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds: list[10]
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].bestBound = 0
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].gapDenominator = 1
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].gapNumerator = 0
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].incumbentValue = 0
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].isProvenOptimal = true
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].levelIndex = 0
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].objectiveName = "accepted-request-count"
+  solver.executionEvidence.selection.omissionCountWasSaturated = false
+  solver.executionEvidence.selection.omittedCandidateCount = 0
+  solver.executionEvidence.selection.primaryIncumbentRejected = false
+  solver.executionEvidence.selection.primarySolveStatus = "optimal"
+  solver.executionEvidence.selection.primarySolverDiagnostics: dict
+  solver.executionEvidence.selection.primarySolverDiagnostics.consumedDeterministicTimeMicros = 1
+  solver.executionEvidence.selection.primarySolverDiagnostics.consumedWorkUnits = 0
+  solver.executionEvidence.selection.primarySolverDiagnostics.detailCode = "ORTOOLS_OPTIMAL_CONSTANT_LEVELS_SKIPPED"
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds: list[10]
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].bestBound = 0
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].gapDenominator = 1
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].gapNumerator = 0
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].incumbentValue = 0
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].isProvenOptimal = true
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].levelIndex = 0
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].objectiveName = "accepted-request-count"
+  solver.executionEvidence.selection.validationWitnesses: list[0]
+  solver.status = "completed"
+  stateAfterHash = "c8d529ad3ffe0764de479c1cf815fccdb5d482c99e5b41317647ddb5b2c8d9df"
+  stateBeforeHash = "00caf3eb08c679dea5762c272293c29b26b442476099ac0761f7e41c33f924b6"
+  status = "produced"
+  example other action: {"decisionType": "vehiclePlanUpdated", "payload": {"candidateId": "candidate-v1-d03b845920ecbfcc01430e3f7b9e25599698798138c0f4d1f8d527d50c730ee8", "route": {"executedStopCount": 0, "frozenPrefix": [], "mutableSuffix": [], "planVersion": 0}, "vehicleId": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"}}
+# action decisionType counts over all decision frames: {'vehiclePlanUpdated': 317, 'requestAccepted': 103, 'promisePublished': 2971, 'requestRejected': 5}
+# onlineState keys: appliedEpoch, commitmentLedger, expectedInitialTravelTimeSnapshotHash, incidentLedger, nextEventSeq, requests, runId, scenarioId, simulationTimeMs, travelTimes, vehicles
+# request record keys: actualPickupTimeMs, arrivalTimeMs, assignedVehicleId, commitmentPolicyId, destinationNodeId, earliestPickupMs, latestPickupMs, lifecycle, maxRideTimeMs, originNodeId, partySize, requestId, serviceClass
+# (c) one non-initial ledger entry
+{
+ "budgetAfter": {
+  "dropEtaTotalMs": 0,
+  "dropStopRelocationMm": 0,
+  "dropStopSwitchCount": 0,
+  "incumbentOrderInversionCount": 0,
+  "materialEtaRevisionCount": 0,
+  "pickupEtaTotalMs": 0,
+  "pickupStopRelocationMm": 0,
+  "pickupStopSwitchCount": 0,
+  "prePickupInsertedStopCount": 0,
+  "vehicleSwitchCount": 0
+ },
+ "budgetBasis": "decisionInduced",
+ "budgetBefore": {
+  "dropEtaTotalMs": 0,
+  "dropStopRelocationMm": 0,
+  "dropStopSwitchCount": 0,
+  "incumbentOrderInversionCount": 0,
+  "materialEtaRevisionCount": 0,
+  "pickupEtaTotalMs": 0,
+  "pickupStopRelocationMm": 0,
+  "pickupStopSwitchCount": 0,
+  "prePickupInsertedStopCount": 0,
+  "vehicleSwitchCount": 0
+ },
+ "deltas": {
+  "decisionInduced": {
+   "dropEtaTotalMs": 0,
+   "dropStopRelocationMm": 0,
+   "dropStopSwitchCount": 0,
+   "incumbentOrderInversionCount": 0,
+   "materialEtaRevisionCount": 0,
+   "pickupEtaTotalMs": 0,
+   "pickupStopRelocationMm": 0,
+   "pickupStopSwitchCount": 0,
+   "prePickupInsertedStopCount": 0,
+   "vehicleSwitchCount": 0
+  },
+  "exogenous": {
+   "dropEtaTotalMs": 31,
+   "dropStopRelocationMm": 0,
+   "dropStopSwitchCount": 0,
+   "incumbentOrderInversionCount": 0,
+   "materialEtaRevisionCount": 0,
+   "pickupEtaTotalMs": 31,
+   "pickupStopRelocationMm": 0,
+   "pickupStopSwitchCount": 0,
+   "prePickupInsertedStopCount": 0,
+   "vehicleSwitchCount": 0
+  },
+  "visible": {
+   "dropEtaTotalMs": 31,
+   "dropStopRelocationMm": 0,
+   "dropStopSwitchCount": 0,
+   "incumbentOrderInversionCount": 0,
+   "materialEtaRevisionCount": 0,
+   "pickupEtaTotalMs": 31,
+   "pickupStopRelocationMm": 0,
+   "pickupStopSwitchCount": 0,
+   "prePickupInsertedStopCount": 0,
+   "vehicleSwitchCount": 0
+  }
+ },
+ "exogenousProjection": {
+  "dropEtaMs": 7113898,
+  "dropNodeId": "node-883b3a29c0e6c4c070aac1fc723fa3d84e9776fbbc16efb7a129df84d74a2d90",
+  "dropStopId": "rb-d-4a5a0c810da60236bb95179c0234efb0790988c52b852f6cca5cd9f6c652f638",
+  "pickupEtaMs": 6792681,
+  "pickupNodeId": "node-937404e168323582f98a2f17c12ba6ee3c69a2cc5338e0202bc951dc88adbf1c",
+  "pickupStopId": "rb-p-85add493778d7e32facbb151b7c22bb8fa5fb3e83ca659b9c04a062e800f8e72",
+  "requestId": "rq-0145b5ee877675601bf724a7d51cb92dba27aa000e3fe9673be83822f63eead4",
+  "serviceOrder": [
+   {
+    "kind": "dropOff",
+    "requestId": "rq-51eb401f4920b3a4442e643be69b9c9421b9b1b91143abe5e347a380cccc1213",
+    "stopId": "rb-d-8eeff65b5cb8ebe9ac5c1cedf9c46071258f630a9df6a3815a2681926ff49e83"
+   },
+   {
+    "kind": "pickup",
+    "requestId": "rq-0145b5ee877675601bf724a7d51cb92dba27aa000e3fe9673be83822f63eead4",
+    "stopId": "rb-p-85add493778d7e32facbb151b7c22bb8fa5fb3e83ca659b9c04a062e800f8e72"
+   },
+   {
+    "kind": "dropOff",
+    "requestId": "rq-0145b5ee877675601bf724a7d51cb92dba27aa000e3fe9673be83822f63eead4",
+    "stopId": "rb-d-4a5a0c810da60236bb95179c0234efb0790988c52b852f6cca5cd9f6c652f638"
+   }
+  ],
+  "vehicleId": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+ },
+ "kind": "revision",
+ "previousPromise": {
+  "projection": {
+   "dropEtaMs": 7113929,
+   "dropNodeId": "node-883b3a29c0e6c4c070aac1fc723fa3d84e9776fbbc16efb7a129df84d74a2d90",
+   "dropStopId": "rb-d-4a5a0c810da60236bb95179c0234efb0790988c52b852f6cca5cd9f6c652f638",
+   "pickupEtaMs": 6792712,
+   "pickupNodeId": "node-937404e168323582f98a2f17c12ba6ee3c69a2cc5338e0202bc951dc88adbf1c",
+   "pickupStopId": "rb-p-85add493778d7e32facbb151b7c22bb8fa5fb3e83ca659b9c04a062e800f8e72",
+   "requestId": "rq-0145b5ee877675601bf724a7d51cb92dba27aa000e3fe9673be83822f63eead4",
+   "serviceOrder": [
+    {
+     "kind": "dropOff",
+     "requestId": "rq-51eb401f4920b3a4442e643be69b9c9421b9b1b91143abe5e347a380cccc1213",
+     "stopId": "rb-d-8eeff65b5cb8ebe9ac5c1cedf9c46071258f630a9df6a3815a2681926ff49e83"
+    },
+    {
+     "kind": "pickup",
+     "requestId": "rq-0145b5ee877675601bf724a7d51cb92dba27aa000e3fe9673be83822f63eead4",
+     "stopId": "rb-p-85add493778d7e32facbb151b7c22bb8fa5fb3e83ca659b9c04a062e800f8e72"
+    },
+    {
+     "kind": "dropOff",
+     "requestId": "rq-0145b5ee877675601bf724a7d51cb92dba27aa000e3fe9673be83822f63eead4",
+     "stopId": "rb-d-4a5a0c810da60236bb95179c0234efb0790988c52b852f6cca5cd9f6c652f638"
+    }
+   ],
+   "vehicleId": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+  },
+  "publishedAtMs": 6357000,
+  "publishedEpoch": 654,
+  "version": 1
+ },
+ "publicationId": "promise-b8f2e116ab6afaafe57d0f4093f31af4cc8671dc93846d3a66f935cd0cad4ccb",
+ "publishedPromise": {
+  "projection": {
+   "dropEtaMs": 7113898,
+   "dropNodeId": "node-883b3a29c0e6c4c070aac1fc723fa3d84e9776fbbc16efb7a129df84d74a2d90",
+   "dropStopId": "rb-d-4a5a0c810da60236bb95179c0234efb0790988c52b852f6cca5cd9f6c652f638",
+   "pickupEtaMs": 6792681,
+   "pickupNodeId": "node-937404e168323582f98a2f17c12ba6ee3c69a2cc5338e0202bc951dc88adbf1c",
+   "pickupStopId": "rb-p-85add493778d7e32facbb151b7c22bb8fa5fb3e83ca659b9c04a062e800f8e72",
+   "requestId": "rq-0145b5ee877675601bf724a7d51cb92dba27aa000e3fe9673be83822f63eead4",
+   "serviceOrder": [
+    {
+     "kind": "dropOff",
+     "requestId": "rq-51eb401f4920b3a4442e643be69b9c9421b9b1b91143abe5e347a380cccc1213",
+     "stopId": "rb-d-8eeff65b5cb8ebe9ac5c1cedf9c46071258f630a9df6a3815a2681926ff49e83"
+    },
+    {
+     "kind": "pickup",
+     "requestId": "rq-0145b5ee877675601bf724a7d51cb92dba27aa000e3fe9673be83822f63eead4",
+     "stopId": "rb-p-85add493778d7e32facbb151b7c22bb8fa5fb3e83ca659b9c04a062e800f8e72"
+    },
+    {
+     "kind": "dropOff",
+     "requestId": "rq-0145b5ee877675601bf724a7d51cb92dba27aa000e3fe9673be83822f63eead4",
+     "stopId": "rb-d-4a5a0c810da60236bb95179c0234efb0790988c52b852f6cca5cd9f6c652f638"
+    }
+   ],
+   "vehicleId": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+  },
+  "publishedAtMs": 6370599,
+  "publishedEpoch": 655,
+  "version": 2
+ },
+ "reasonCode": "ONLINE_REPLAN",
+ "sourceEventSeq": 3114
+}

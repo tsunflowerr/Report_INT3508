@@ -1,0 +1,479 @@
+{
+  "scope": "Check newly incorporated thesis numbers against preserved extraction outputs.\n\nRead-only on the study and thesis sources. This is arithmetic verification, not\nan independent decoder of raw simulation transcripts or forecast profiles.\n",
+  "allPassed": true,
+  "checkCount": 47,
+  "checks": [
+    {
+      "name": "preserved result inventory: results/STAGE1B-RESULTS.md",
+      "actual": "0da5cf9fc2250c9c1dee218a2d4d8e07f90e09d9809d6c7c70b058bd741437ea",
+      "expected": "0da5cf9fc2250c9c1dee218a2d4d8e07f90e09d9809d6c7c70b058bd741437ea",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: results/stage1b-report.txt",
+      "actual": "00e8a80eef4f7864575c71d2a5a5a3432991639cf3cb4b203cbc22d24dc46eb9",
+      "expected": "00e8a80eef4f7864575c71d2a5a5a3432991639cf3cb4b203cbc22d24dc46eb9",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: results/stage1b-riders.tsv",
+      "actual": "687e20ed56867033a4c1ee3e4315c7295662b07fa18ce074fdf1545d1018ab8d",
+      "expected": "687e20ed56867033a4c1ee3e4315c7295662b07fa18ce074fdf1545d1018ab8d",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: results/stage1b-runs.json",
+      "actual": "9414aef855c163c5d05f2e15c37694c11d4f48707306fba5a7ced6021d4feb9d",
+      "expected": "9414aef855c163c5d05f2e15c37694c11d4f48707306fba5a7ced6021d4feb9d",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: evidence/analysis-independent-arithmetic-check.json",
+      "actual": "2fb6739bb546b41c6de2a2cc11cef14585ce54d1aea3dadb607ddffdb6ab0889",
+      "expected": "2fb6739bb546b41c6de2a2cc11cef14585ce54d1aea3dadb607ddffdb6ab0889",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: verify-stage1b-arithmetic.py",
+      "actual": "37be0af40543d319b0d4e5bba54d57e57151e8f2f8bfb764d17ee04e26a74e60",
+      "expected": "37be0af40543d319b0d4e5bba54d57e57151e8f2f8bfb764d17ee04e26a74e60",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: evidence/main-final-admission.json",
+      "actual": "f988d16688903651a3931647cd3ee1541d771e537b9cadf7c9ffaa8ee5c95559",
+      "expected": "f988d16688903651a3931647cd3ee1541d771e537b9cadf7c9ffaa8ee5c95559",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: evidence/analysis-extract-started.json",
+      "actual": "d66824a611923e820340f8c6194e68e8e757de48f076264f3fda17c24d4b9961",
+      "expected": "d66824a611923e820340f8c6194e68e8e757de48f076264f3fda17c24d4b9961",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: evidence/analysis-extract-finished.json",
+      "actual": "ec516ee7949b4e1e199ee9f8f315b3be605ff2cf7f8c9fe99bd66d50b81ec1f9",
+      "expected": "ec516ee7949b4e1e199ee9f8f315b3be605ff2cf7f8c9fe99bd66d50b81ec1f9",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: evidence/analysis-report-started.json",
+      "actual": "ab9def663d3bfdb6f0166adec3af07145929b83ee848fdd294f0de7e069fda63",
+      "expected": "ab9def663d3bfdb6f0166adec3af07145929b83ee848fdd294f0de7e069fda63",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: evidence/analysis-report-finished.json",
+      "actual": "96645249752a0bbea85f5531d40d079d3f2af7097f903c1711fe761e1447661d",
+      "expected": "96645249752a0bbea85f5531d40d079d3f2af7097f903c1711fe761e1447661d",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: invoke-locked-analysis.ps1",
+      "actual": "55abdec00cb0c75d30254bc25b41884e825950a7b26076052fbe8ba6991cda4a",
+      "expected": "55abdec00cb0c75d30254bc25b41884e825950a7b26076052fbe8ba6991cda4a",
+      "passed": true
+    },
+    {
+      "name": "preserved result inventory: evidence/analysis-completion.json",
+      "actual": "785845273f4e3bc94d2d35f9ee1f309da45fd3f46ce30299230eb3f11db88a50",
+      "expected": "785845273f4e3bc94d2d35f9ee1f309da45fd3f46ce30299230eb3f11db88a50",
+      "passed": true
+    },
+    {
+      "name": "table: Lượt phục vụ",
+      "actual": [
+        "2.434",
+        "2.338",
+        "2.502",
+        "2.364"
+      ],
+      "expected": [
+        "2.434",
+        "2.338",
+        "2.502",
+        "2.364"
+      ],
+      "passed": true
+    },
+    {
+      "name": "table: Muộn quá một phút",
+      "actual": [
+        "203",
+        "76",
+        "379",
+        "72"
+      ],
+      "expected": [
+        "203",
+        "76",
+        "379",
+        "72"
+      ],
+      "passed": true
+    },
+    {
+      "name": "table: Không muộn quá một phút",
+      "actual": [
+        "2.231",
+        "2.262",
+        "2.123",
+        "2.292"
+      ],
+      "expected": [
+        "2.231",
+        "2.262",
+        "2.123",
+        "2.292"
+      ],
+      "passed": true
+    },
+    {
+      "name": "table: Không muộn quá hai phút",
+      "actual": [
+        "2.332",
+        "2.327",
+        "2.280",
+        "2.353"
+      ],
+      "expected": [
+        "2.332",
+        "2.327",
+        "2.280",
+        "2.353"
+      ],
+      "passed": true
+    },
+    {
+      "name": "table: Không muộn quá năm phút",
+      "actual": [
+        "2.416",
+        "2.338",
+        "2.466",
+        "2.364"
+      ],
+      "expected": [
+        "2.416",
+        "2.338",
+        "2.466",
+        "2.364"
+      ],
+      "passed": true
+    },
+    {
+      "name": "table: Khách hoàn thành có đi chung",
+      "actual": [
+        "555",
+        "313",
+        "1.027",
+        "432"
+      ],
+      "expected": [
+        "555",
+        "313",
+        "1.027",
+        "432"
+      ],
+      "passed": true
+    },
+    {
+      "name": "table: Khách bị sửa giờ trả do điều phối",
+      "actual": [
+        "174",
+        "33",
+        "434",
+        "106"
+      ],
+      "expected": [
+        "174",
+        "33",
+        "434",
+        "106"
+      ],
+      "passed": true
+    },
+    {
+      "name": "table: Trong đó, bị sửa từ hai lần",
+      "actual": [
+        "12",
+        "0",
+        "50",
+        "2"
+      ],
+      "expected": [
+        "12",
+        "0",
+        "50",
+        "2"
+      ],
+      "passed": true
+    },
+    {
+      "name": "table: Đón muộn theo giới hạn dịch vụ",
+      "actual": [
+        "51",
+        "43",
+        "39",
+        "44"
+      ],
+      "expected": [
+        "51",
+        "43",
+        "39",
+        "44"
+      ],
+      "passed": true
+    },
+    {
+      "name": "table: Muộn quá một phút khi lời hứa có dự báo",
+      "actual": [
+        "137",
+        "10",
+        "318",
+        "11"
+      ],
+      "expected": [
+        "137",
+        "10",
+        "318",
+        "11"
+      ],
+      "passed": true
+    },
+    {
+      "name": "table: Tổng dời lớn nhất của một khách (s)",
+      "actual": [
+        "590,1",
+        "29,2",
+        "709,1",
+        "29,7"
+      ],
+      "expected": [
+        "590,1",
+        "29,2",
+        "709,1",
+        "29,7"
+      ],
+      "passed": true
+    },
+    {
+      "name": "capped selector contrast: served",
+      "actual": 26,
+      "expected": 26,
+      "passed": true
+    },
+    {
+      "name": "capped selector contrast: shared",
+      "actual": 119,
+      "expected": 119,
+      "passed": true
+    },
+    {
+      "name": "capped selector contrast: late60",
+      "actual": -4,
+      "expected": -4,
+      "passed": true
+    },
+    {
+      "name": "capped selector contrast: timely60",
+      "actual": 30,
+      "expected": 30,
+      "passed": true
+    },
+    {
+      "name": "capped selector contrast: exposed",
+      "actual": 73,
+      "expected": 73,
+      "passed": true
+    },
+    {
+      "name": "capped selector contrast: repeated",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "name": "capped selector contrast: pickup",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "capped selector contrast: forecastLate",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "cost-first cap contrast: served",
+      "actual": -138,
+      "expected": -138,
+      "passed": true
+    },
+    {
+      "name": "cost-first cap contrast: shared",
+      "actual": -595,
+      "expected": -595,
+      "passed": true
+    },
+    {
+      "name": "cost-first cap contrast: late60",
+      "actual": -307,
+      "expected": -307,
+      "passed": true
+    },
+    {
+      "name": "cost-first cap contrast: timely60",
+      "actual": 169,
+      "expected": 169,
+      "passed": true
+    },
+    {
+      "name": "stable revised percentage",
+      "actual": "1.41",
+      "expected": "1.41",
+      "passed": true
+    },
+    {
+      "name": "cost-first revised percentage",
+      "actual": "4.48",
+      "expected": "4.48",
+      "passed": true
+    },
+    {
+      "name": "cost-first forecast extension seconds",
+      "actual": "7.30",
+      "expected": "7.30",
+      "passed": true
+    },
+    {
+      "name": "uncapped cost-first forecast extension seconds",
+      "actual": "7.02",
+      "expected": "7.02",
+      "passed": true
+    },
+    {
+      "name": "cost-first initial horizon median seconds",
+      "actual": 809.642,
+      "expected": 809.642,
+      "passed": true
+    },
+    {
+      "name": "stable initial horizon median seconds",
+      "actual": 815.06,
+      "expected": 815.06,
+      "passed": true
+    },
+    {
+      "name": "cost-first hypothetical 120s rider histories",
+      "actual": 7,
+      "expected": 7,
+      "passed": true
+    },
+    {
+      "name": "C30 cumulative-only prune records",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "preserved arithmetic checks pass",
+      "actual": [
+        true,
+        83
+      ],
+      "expected": [
+        true,
+        83
+      ],
+      "passed": true
+    },
+    {
+      "name": "no internal stage labels in visible thesis source",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "name": "no old/new selector framing",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "SF-U": {
+      "served": 2434,
+      "shared": 555,
+      "exposed": 174,
+      "repeated": 12,
+      "pickup": 51,
+      "forecastLate": 137,
+      "maxC": 590133,
+      "witnesses120": 4,
+      "extension": 7.183331055723637,
+      "medianHorizon": 816.298,
+      "late60": 203,
+      "timely60": 2231,
+      "late120": 102,
+      "timely120": 2332,
+      "late300": 18,
+      "timely300": 2416
+    },
+    "SF-C30": {
+      "served": 2338,
+      "shared": 313,
+      "exposed": 33,
+      "repeated": 0,
+      "pickup": 43,
+      "forecastLate": 10,
+      "maxC": 29239,
+      "witnesses120": 0,
+      "extension": 7.3671234456626165,
+      "medianHorizon": 815.06,
+      "late60": 76,
+      "timely60": 2262,
+      "late120": 11,
+      "timely120": 2327,
+      "late300": 0,
+      "timely300": 2338
+    },
+    "CF-U": {
+      "served": 2502,
+      "shared": 1027,
+      "exposed": 434,
+      "repeated": 50,
+      "pickup": 39,
+      "forecastLate": 318,
+      "maxC": 709119,
+      "witnesses120": 7,
+      "extension": 7.016823406480754,
+      "medianHorizon": 801.328,
+      "late60": 379,
+      "timely60": 2123,
+      "late120": 222,
+      "timely120": 2280,
+      "late300": 36,
+      "timely300": 2466
+    },
+    "CF-C30": {
+      "served": 2364,
+      "shared": 432,
+      "exposed": 106,
+      "repeated": 2,
+      "pickup": 44,
+      "forecastLate": 11,
+      "maxC": 29657,
+      "witnesses120": 0,
+      "extension": 7.296805486981071,
+      "medianHorizon": 809.642,
+      "late60": 72,
+      "timely60": 2292,
+      "late120": 11,
+      "timely120": 2353,
+      "late300": 0,
+      "timely300": 2364
+    }
+  }
+}

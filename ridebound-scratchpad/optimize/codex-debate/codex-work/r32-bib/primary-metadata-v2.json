@@ -1,0 +1,182 @@
+[
+  {
+    "doi": "10.1002/net.21565",
+    "url_opened": "https://api.crossref.org/works/10.1002%2Fnet.21565",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1002/net.22063",
+    "url_opened": "https://api.crossref.org/works/10.1002%2Fnet.22063",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1007/s00291-025-00809-y",
+    "url_opened": "https://api.crossref.org/works/10.1007%2Fs00291-025-00809-y",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1007/s00291-026-00847-0",
+    "url_opened": "https://api.crossref.org/works/10.1007%2Fs00291-026-00847-0",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1007/s10100-015-0422-7",
+    "url_opened": "https://api.crossref.org/works/10.1007%2Fs10100-015-0422-7",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1007/s10479-007-0170-8",
+    "url_opened": "https://api.crossref.org/works/10.1007%2Fs10479-007-0170-8",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.cstp.2025.101499",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.cstp.2025.101499",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.ecotra.2023.100313",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.ecotra.2023.100313",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.ejor.2012.05.028",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.ejor.2012.05.028",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.tbs.2023.100616",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.tbs.2023.100616",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.tra.2011.06.010",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.tra.2011.06.010",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.tra.2026.104925",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.tra.2026.104925",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.trb.2022.04.008",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.trb.2022.04.008",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.trc.2020.102621",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.trc.2020.102621",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.trc.2020.102831",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.trc.2020.102831",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.trc.2026.105645",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.trc.2026.105645",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1016/j.trc.2026.105897",
+    "url_opened": "https://api.crossref.org/works/10.1016%2Fj.trc.2026.105897",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1073/pnas.1611675114",
+    "url_opened": "https://api.crossref.org/works/10.1073%2Fpnas.1611675114",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1080/23249935.2026.2650136",
+    "url_opened": "https://api.crossref.org/works/10.1080%2F23249935.2026.2650136",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1137/1.9781611973594",
+    "url_opened": "https://api.crossref.org/works/10.1137%2F1.9781611973594",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1145/146585.146588",
+    "url_opened": "https://api.crossref.org/works/10.1145%2F146585.146588",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1186/s12544-026-00823-3",
+    "url_opened": "https://api.crossref.org/works/10.1186%2Fs12544-026-00823-3",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1287/mnsc.2021.3991",
+    "url_opened": "https://api.crossref.org/works/10.1287%2Fmnsc.2021.3991",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1287/mnsc.2022.4448",
+    "url_opened": "https://api.crossref.org/works/10.1287%2Fmnsc.2022.4448",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1287/mnsc.31.10.1237",
+    "url_opened": "https://api.crossref.org/works/10.1287%2Fmnsc.31.10.1237",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1287/mnsc.32.4.413",
+    "url_opened": "https://api.crossref.org/works/10.1287%2Fmnsc.32.4.413",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1287/mnsc.33.9.1137",
+    "url_opened": "https://api.crossref.org/works/10.1287%2Fmnsc.33.9.1137",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1287/msom.1080.0243",
+    "url_opened": "https://api.crossref.org/works/10.1287%2Fmsom.1080.0243",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.1287/trsc.2018.0837",
+    "url_opened": "https://api.crossref.org/works/10.1287%2Ftrsc.2018.0837",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "doi": "10.3389/ffutr.2021.681451",
+    "url_opened": "https://api.crossref.org/works/10.3389%2Fffutr.2021.681451",
+    "status": "FETCH FAILED",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  }
+]

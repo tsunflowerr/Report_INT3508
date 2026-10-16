@@ -1,0 +1,3 @@
+Written [R19-CODEX.md](R19-CODEX.md), [independent analyzer](R19-stage1a-analyze-v3.py), and supporting verification files inside `codex-work`.
+
+The review checks 139 claim groups and recommends major revision. Stage 1a’s design matches the approved study, with timing/provenance qualifications. The analyzer passed preparation checks but remains unrun: only 8/34 runs had passing summaries at the final check. No existing files or running jobs were changed.

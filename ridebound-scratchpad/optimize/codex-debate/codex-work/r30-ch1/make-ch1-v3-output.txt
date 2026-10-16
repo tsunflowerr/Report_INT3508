@@ -1,0 +1,1 @@
+Created final 05-chuong1-v3.tex exclusively; preserved v1/v2. Corrected contribution counting is in verify_ch1_v3.py.

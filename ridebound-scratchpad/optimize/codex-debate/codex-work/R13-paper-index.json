@@ -1,0 +1,1415 @@
+[
+  {
+    "pdf": "C:\\PDF\\Paper\\1-s2.0-S0191261522000716-main.pdf",
+    "pdf_sha256": "b0a5fda9dafdc7faa49d0b727e84410f0c4fe688376021951bc6e95b6fd183b7",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\1-s2.0-S0191261522000716-main.txt",
+    "pages": 22,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 73
+      },
+      {
+        "pdf_page": 3,
+        "line": 128
+      },
+      {
+        "pdf_page": 4,
+        "line": 209
+      },
+      {
+        "pdf_page": 5,
+        "line": 292
+      },
+      {
+        "pdf_page": 6,
+        "line": 356
+      },
+      {
+        "pdf_page": 7,
+        "line": 433
+      },
+      {
+        "pdf_page": 8,
+        "line": 539
+      },
+      {
+        "pdf_page": 9,
+        "line": 642
+      },
+      {
+        "pdf_page": 10,
+        "line": 742
+      },
+      {
+        "pdf_page": 11,
+        "line": 846
+      },
+      {
+        "pdf_page": 12,
+        "line": 927
+      },
+      {
+        "pdf_page": 13,
+        "line": 1024
+      },
+      {
+        "pdf_page": 14,
+        "line": 1108
+      },
+      {
+        "pdf_page": 15,
+        "line": 1184
+      },
+      {
+        "pdf_page": 16,
+        "line": 1294
+      },
+      {
+        "pdf_page": 17,
+        "line": 1376
+      },
+      {
+        "pdf_page": 18,
+        "line": 1502
+      },
+      {
+        "pdf_page": 19,
+        "line": 1599
+      },
+      {
+        "pdf_page": 20,
+        "line": 1655
+      },
+      {
+        "pdf_page": 21,
+        "line": 1687
+      },
+      {
+        "pdf_page": 22,
+        "line": 1767
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\1-s2.0-S0965856426000662-main.pdf",
+    "pdf_sha256": "9b6591cffb56f2315666612569426298475d203147d45f26c0bf220f83db6798",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\1-s2.0-S0965856426000662-main.txt",
+    "pages": 22,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 65
+      },
+      {
+        "pdf_page": 3,
+        "line": 134
+      },
+      {
+        "pdf_page": 4,
+        "line": 208
+      },
+      {
+        "pdf_page": 5,
+        "line": 274
+      },
+      {
+        "pdf_page": 6,
+        "line": 315
+      },
+      {
+        "pdf_page": 7,
+        "line": 356
+      },
+      {
+        "pdf_page": 8,
+        "line": 429
+      },
+      {
+        "pdf_page": 9,
+        "line": 503
+      },
+      {
+        "pdf_page": 10,
+        "line": 604
+      },
+      {
+        "pdf_page": 11,
+        "line": 716
+      },
+      {
+        "pdf_page": 12,
+        "line": 809
+      },
+      {
+        "pdf_page": 13,
+        "line": 882
+      },
+      {
+        "pdf_page": 14,
+        "line": 957
+      },
+      {
+        "pdf_page": 15,
+        "line": 1038
+      },
+      {
+        "pdf_page": 16,
+        "line": 1113
+      },
+      {
+        "pdf_page": 17,
+        "line": 1190
+      },
+      {
+        "pdf_page": 18,
+        "line": 1261
+      },
+      {
+        "pdf_page": 19,
+        "line": 1336
+      },
+      {
+        "pdf_page": 20,
+        "line": 1388
+      },
+      {
+        "pdf_page": 21,
+        "line": 1466
+      },
+      {
+        "pdf_page": 22,
+        "line": 1534
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\21020283-3476 (1).pdf",
+    "pdf_sha256": "3a72ce30286381af6e8e618a58007858eab704c53c766543ba332e471799c023",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\21020283-3476 (1).txt",
+    "pages": 65,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 25
+      },
+      {
+        "pdf_page": 3,
+        "line": 57
+      },
+      {
+        "pdf_page": 4,
+        "line": 77
+      },
+      {
+        "pdf_page": 5,
+        "line": 91
+      },
+      {
+        "pdf_page": 6,
+        "line": 146
+      },
+      {
+        "pdf_page": 7,
+        "line": 187
+      },
+      {
+        "pdf_page": 8,
+        "line": 203
+      },
+      {
+        "pdf_page": 9,
+        "line": 247
+      },
+      {
+        "pdf_page": 10,
+        "line": 290
+      },
+      {
+        "pdf_page": 11,
+        "line": 334
+      },
+      {
+        "pdf_page": 12,
+        "line": 368
+      },
+      {
+        "pdf_page": 13,
+        "line": 409
+      },
+      {
+        "pdf_page": 14,
+        "line": 453
+      },
+      {
+        "pdf_page": 15,
+        "line": 487
+      },
+      {
+        "pdf_page": 16,
+        "line": 514
+      },
+      {
+        "pdf_page": 17,
+        "line": 566
+      },
+      {
+        "pdf_page": 18,
+        "line": 627
+      },
+      {
+        "pdf_page": 19,
+        "line": 688
+      },
+      {
+        "pdf_page": 20,
+        "line": 729
+      },
+      {
+        "pdf_page": 21,
+        "line": 760
+      },
+      {
+        "pdf_page": 22,
+        "line": 798
+      },
+      {
+        "pdf_page": 23,
+        "line": 819
+      },
+      {
+        "pdf_page": 24,
+        "line": 866
+      },
+      {
+        "pdf_page": 25,
+        "line": 907
+      },
+      {
+        "pdf_page": 26,
+        "line": 971
+      },
+      {
+        "pdf_page": 27,
+        "line": 1022
+      },
+      {
+        "pdf_page": 28,
+        "line": 1074
+      },
+      {
+        "pdf_page": 29,
+        "line": 1131
+      },
+      {
+        "pdf_page": 30,
+        "line": 1183
+      },
+      {
+        "pdf_page": 31,
+        "line": 1242
+      },
+      {
+        "pdf_page": 32,
+        "line": 1272
+      },
+      {
+        "pdf_page": 33,
+        "line": 1326
+      },
+      {
+        "pdf_page": 34,
+        "line": 1378
+      },
+      {
+        "pdf_page": 35,
+        "line": 1429
+      },
+      {
+        "pdf_page": 36,
+        "line": 1473
+      },
+      {
+        "pdf_page": 37,
+        "line": 1533
+      },
+      {
+        "pdf_page": 38,
+        "line": 1586
+      },
+      {
+        "pdf_page": 39,
+        "line": 1633
+      },
+      {
+        "pdf_page": 40,
+        "line": 1684
+      },
+      {
+        "pdf_page": 41,
+        "line": 1730
+      },
+      {
+        "pdf_page": 42,
+        "line": 1762
+      },
+      {
+        "pdf_page": 43,
+        "line": 1821
+      },
+      {
+        "pdf_page": 44,
+        "line": 1851
+      },
+      {
+        "pdf_page": 45,
+        "line": 1865
+      },
+      {
+        "pdf_page": 46,
+        "line": 1888
+      },
+      {
+        "pdf_page": 47,
+        "line": 1930
+      },
+      {
+        "pdf_page": 48,
+        "line": 1953
+      },
+      {
+        "pdf_page": 49,
+        "line": 1969
+      },
+      {
+        "pdf_page": 50,
+        "line": 1999
+      },
+      {
+        "pdf_page": 51,
+        "line": 2032
+      },
+      {
+        "pdf_page": 52,
+        "line": 2055
+      },
+      {
+        "pdf_page": 53,
+        "line": 2070
+      },
+      {
+        "pdf_page": 54,
+        "line": 2085
+      },
+      {
+        "pdf_page": 55,
+        "line": 2100
+      },
+      {
+        "pdf_page": 56,
+        "line": 2142
+      },
+      {
+        "pdf_page": 57,
+        "line": 2179
+      },
+      {
+        "pdf_page": 58,
+        "line": 2205
+      },
+      {
+        "pdf_page": 59,
+        "line": 2232
+      },
+      {
+        "pdf_page": 60,
+        "line": 2268
+      },
+      {
+        "pdf_page": 61,
+        "line": 2308
+      },
+      {
+        "pdf_page": 62,
+        "line": 2348
+      },
+      {
+        "pdf_page": 63,
+        "line": 2381
+      },
+      {
+        "pdf_page": 64,
+        "line": 2430
+      },
+      {
+        "pdf_page": 65,
+        "line": 2481
+      }
+    ],
+    "extract_stderr": "Syntax Warning: Mismatch between font type and embedded font file\r\nSyntax Warning: Mismatch between font type and embedded font file\r\nSyntax Warning: Mismatch between font type and embedded font file\r\n"
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\2508.04811v1.pdf",
+    "pdf_sha256": "e4a630ac5d8d4c0e1e140e3938492561ebf1cb356338ffa7aeb69a56ec66f1b1",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\2508.04811v1.txt",
+    "pages": 9,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 64
+      },
+      {
+        "pdf_page": 3,
+        "line": 119
+      },
+      {
+        "pdf_page": 4,
+        "line": 199
+      },
+      {
+        "pdf_page": 5,
+        "line": 295
+      },
+      {
+        "pdf_page": 6,
+        "line": 367
+      },
+      {
+        "pdf_page": 7,
+        "line": 442
+      },
+      {
+        "pdf_page": 8,
+        "line": 507
+      },
+      {
+        "pdf_page": 9,
+        "line": 579
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\BregniA._DAvinoM.SchiraldiM.M.pdf",
+    "pdf_sha256": "30b5fa8e6637625f5a8f6684a90ba7bb84d9ab4d3c4329312cbc310f522dc7f6",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\BregniA._DAvinoM.SchiraldiM.M.txt",
+    "pages": 4,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 36
+      },
+      {
+        "pdf_page": 3,
+        "line": 58
+      },
+      {
+        "pdf_page": 4,
+        "line": 124
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\FreezingtheMPSMgtScipaper.pdf",
+    "pdf_sha256": "103faa84e164a9854f1086961d1bd2ca30c9716ac643c13ef3f530b1569f94e1",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\FreezingtheMPSMgtScipaper.txt",
+    "pages": 14,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 75
+      },
+      {
+        "pdf_page": 3,
+        "line": 134
+      },
+      {
+        "pdf_page": 4,
+        "line": 193
+      },
+      {
+        "pdf_page": 5,
+        "line": 289
+      },
+      {
+        "pdf_page": 6,
+        "line": 377
+      },
+      {
+        "pdf_page": 7,
+        "line": 446
+      },
+      {
+        "pdf_page": 8,
+        "line": 515
+      },
+      {
+        "pdf_page": 9,
+        "line": 575
+      },
+      {
+        "pdf_page": 10,
+        "line": 636
+      },
+      {
+        "pdf_page": 11,
+        "line": 673
+      },
+      {
+        "pdf_page": 12,
+        "line": 736
+      },
+      {
+        "pdf_page": 13,
+        "line": 806
+      },
+      {
+        "pdf_page": 14,
+        "line": 843
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\Networks - 2014 - Kovacs - Vehicle routing problems in which consistency considerations are important  A survey.pdf",
+    "pdf_sha256": "c7b036869e35202b7c6abd30caf330535c7e1a0857114a128bcc3a36ba06f522",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\Networks - 2014 - Kovacs - Vehicle routing problems in which consistency considerations are important  A survey.txt",
+    "pages": 22,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 60
+      },
+      {
+        "pdf_page": 3,
+        "line": 118
+      },
+      {
+        "pdf_page": 4,
+        "line": 186
+      },
+      {
+        "pdf_page": 5,
+        "line": 252
+      },
+      {
+        "pdf_page": 6,
+        "line": 287
+      },
+      {
+        "pdf_page": 7,
+        "line": 343
+      },
+      {
+        "pdf_page": 8,
+        "line": 408
+      },
+      {
+        "pdf_page": 9,
+        "line": 445
+      },
+      {
+        "pdf_page": 10,
+        "line": 511
+      },
+      {
+        "pdf_page": 11,
+        "line": 575
+      },
+      {
+        "pdf_page": 12,
+        "line": 617
+      },
+      {
+        "pdf_page": 13,
+        "line": 656
+      },
+      {
+        "pdf_page": 14,
+        "line": 703
+      },
+      {
+        "pdf_page": 15,
+        "line": 768
+      },
+      {
+        "pdf_page": 16,
+        "line": 805
+      },
+      {
+        "pdf_page": 17,
+        "line": 870
+      },
+      {
+        "pdf_page": 18,
+        "line": 941
+      },
+      {
+        "pdf_page": 19,
+        "line": 1006
+      },
+      {
+        "pdf_page": 20,
+        "line": 1088
+      },
+      {
+        "pdf_page": 21,
+        "line": 1169
+      },
+      {
+        "pdf_page": 22,
+        "line": 1249
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\OperationalEffectsofServiceLevelVariations-publication151005.pdf",
+    "pdf_sha256": "b33f56ccb33c9ed088f3ebbaae0c1873c6dda16710703f43aa857058afdd3410",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\OperationalEffectsofServiceLevelVariations-publication151005.txt",
+    "pages": 22,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 20
+      },
+      {
+        "pdf_page": 3,
+        "line": 41
+      },
+      {
+        "pdf_page": 4,
+        "line": 88
+      },
+      {
+        "pdf_page": 5,
+        "line": 144
+      },
+      {
+        "pdf_page": 6,
+        "line": 200
+      },
+      {
+        "pdf_page": 7,
+        "line": 256
+      },
+      {
+        "pdf_page": 8,
+        "line": 311
+      },
+      {
+        "pdf_page": 9,
+        "line": 368
+      },
+      {
+        "pdf_page": 10,
+        "line": 423
+      },
+      {
+        "pdf_page": 11,
+        "line": 463
+      },
+      {
+        "pdf_page": 12,
+        "line": 503
+      },
+      {
+        "pdf_page": 13,
+        "line": 540
+      },
+      {
+        "pdf_page": 14,
+        "line": 601
+      },
+      {
+        "pdf_page": 15,
+        "line": 656
+      },
+      {
+        "pdf_page": 16,
+        "line": 694
+      },
+      {
+        "pdf_page": 17,
+        "line": 753
+      },
+      {
+        "pdf_page": 18,
+        "line": 794
+      },
+      {
+        "pdf_page": 19,
+        "line": 833
+      },
+      {
+        "pdf_page": 20,
+        "line": 889
+      },
+      {
+        "pdf_page": 21,
+        "line": 944
+      },
+      {
+        "pdf_page": 22,
+        "line": 999
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\s00291-025-00812-3.pdf",
+    "pdf_sha256": "624d6b93d8eda4ce68fffa1bb7a45b9fe2fdc9f7a0d0c5aa6f4994920deefad6",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\s00291-025-00812-3.txt",
+    "pages": 27,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 53
+      },
+      {
+        "pdf_page": 3,
+        "line": 106
+      },
+      {
+        "pdf_page": 4,
+        "line": 154
+      },
+      {
+        "pdf_page": 5,
+        "line": 206
+      },
+      {
+        "pdf_page": 6,
+        "line": 259
+      },
+      {
+        "pdf_page": 7,
+        "line": 310
+      },
+      {
+        "pdf_page": 8,
+        "line": 355
+      },
+      {
+        "pdf_page": 9,
+        "line": 407
+      },
+      {
+        "pdf_page": 10,
+        "line": 461
+      },
+      {
+        "pdf_page": 11,
+        "line": 513
+      },
+      {
+        "pdf_page": 12,
+        "line": 564
+      },
+      {
+        "pdf_page": 13,
+        "line": 611
+      },
+      {
+        "pdf_page": 14,
+        "line": 667
+      },
+      {
+        "pdf_page": 15,
+        "line": 737
+      },
+      {
+        "pdf_page": 16,
+        "line": 790
+      },
+      {
+        "pdf_page": 17,
+        "line": 811
+      },
+      {
+        "pdf_page": 18,
+        "line": 865
+      },
+      {
+        "pdf_page": 19,
+        "line": 901
+      },
+      {
+        "pdf_page": 20,
+        "line": 956
+      },
+      {
+        "pdf_page": 21,
+        "line": 1001
+      },
+      {
+        "pdf_page": 22,
+        "line": 1050
+      },
+      {
+        "pdf_page": 23,
+        "line": 1059
+      },
+      {
+        "pdf_page": 24,
+        "line": 1119
+      },
+      {
+        "pdf_page": 25,
+        "line": 1194
+      },
+      {
+        "pdf_page": 26,
+        "line": 1268
+      },
+      {
+        "pdf_page": 27,
+        "line": 1341
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\s00291-026-00847-0.pdf",
+    "pdf_sha256": "9a4d4997cdecc7242521ff733f8d474b6b57dc1856ce261734b7923b25a8c8d7",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\s00291-026-00847-0.txt",
+    "pages": 46,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 57
+      },
+      {
+        "pdf_page": 3,
+        "line": 116
+      },
+      {
+        "pdf_page": 4,
+        "line": 169
+      },
+      {
+        "pdf_page": 5,
+        "line": 224
+      },
+      {
+        "pdf_page": 6,
+        "line": 281
+      },
+      {
+        "pdf_page": 7,
+        "line": 336
+      },
+      {
+        "pdf_page": 8,
+        "line": 390
+      },
+      {
+        "pdf_page": 9,
+        "line": 443
+      },
+      {
+        "pdf_page": 10,
+        "line": 499
+      },
+      {
+        "pdf_page": 11,
+        "line": 558
+      },
+      {
+        "pdf_page": 12,
+        "line": 649
+      },
+      {
+        "pdf_page": 13,
+        "line": 734
+      },
+      {
+        "pdf_page": 14,
+        "line": 795
+      },
+      {
+        "pdf_page": 15,
+        "line": 866
+      },
+      {
+        "pdf_page": 16,
+        "line": 947
+      },
+      {
+        "pdf_page": 17,
+        "line": 1001
+      },
+      {
+        "pdf_page": 18,
+        "line": 1048
+      },
+      {
+        "pdf_page": 19,
+        "line": 1088
+      },
+      {
+        "pdf_page": 20,
+        "line": 1149
+      },
+      {
+        "pdf_page": 21,
+        "line": 1176
+      },
+      {
+        "pdf_page": 22,
+        "line": 1205
+      },
+      {
+        "pdf_page": 23,
+        "line": 1257
+      },
+      {
+        "pdf_page": 24,
+        "line": 1310
+      },
+      {
+        "pdf_page": 25,
+        "line": 1338
+      },
+      {
+        "pdf_page": 26,
+        "line": 1366
+      },
+      {
+        "pdf_page": 27,
+        "line": 1417
+      },
+      {
+        "pdf_page": 28,
+        "line": 1476
+      },
+      {
+        "pdf_page": 29,
+        "line": 1534
+      },
+      {
+        "pdf_page": 30,
+        "line": 1563
+      },
+      {
+        "pdf_page": 31,
+        "line": 1618
+      },
+      {
+        "pdf_page": 32,
+        "line": 1674
+      },
+      {
+        "pdf_page": 33,
+        "line": 1698
+      },
+      {
+        "pdf_page": 34,
+        "line": 1744
+      },
+      {
+        "pdf_page": 35,
+        "line": 1841
+      },
+      {
+        "pdf_page": 36,
+        "line": 1905
+      },
+      {
+        "pdf_page": 37,
+        "line": 1968
+      },
+      {
+        "pdf_page": 38,
+        "line": 1994
+      },
+      {
+        "pdf_page": 39,
+        "line": 2047
+      },
+      {
+        "pdf_page": 40,
+        "line": 2086
+      },
+      {
+        "pdf_page": 41,
+        "line": 2142
+      },
+      {
+        "pdf_page": 42,
+        "line": 2197
+      },
+      {
+        "pdf_page": 43,
+        "line": 2238
+      },
+      {
+        "pdf_page": 44,
+        "line": 2317
+      },
+      {
+        "pdf_page": 45,
+        "line": 2392
+      },
+      {
+        "pdf_page": 46,
+        "line": 2476
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\Scale_analysis_for_on-demand_ridepooling_systems_a.pdf",
+    "pdf_sha256": "b1612b135fad27059730ec401195a5207184ead16c96ef741fcb18ada892ad17",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\Scale_analysis_for_on-demand_ridepooling_systems_a.txt",
+    "pages": 30,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 51
+      },
+      {
+        "pdf_page": 3,
+        "line": 98
+      },
+      {
+        "pdf_page": 4,
+        "line": 142
+      },
+      {
+        "pdf_page": 5,
+        "line": 189
+      },
+      {
+        "pdf_page": 6,
+        "line": 237
+      },
+      {
+        "pdf_page": 7,
+        "line": 284
+      },
+      {
+        "pdf_page": 8,
+        "line": 331
+      },
+      {
+        "pdf_page": 9,
+        "line": 383
+      },
+      {
+        "pdf_page": 10,
+        "line": 436
+      },
+      {
+        "pdf_page": 11,
+        "line": 479
+      },
+      {
+        "pdf_page": 12,
+        "line": 527
+      },
+      {
+        "pdf_page": 13,
+        "line": 589
+      },
+      {
+        "pdf_page": 14,
+        "line": 621
+      },
+      {
+        "pdf_page": 15,
+        "line": 670
+      },
+      {
+        "pdf_page": 16,
+        "line": 710
+      },
+      {
+        "pdf_page": 17,
+        "line": 738
+      },
+      {
+        "pdf_page": 18,
+        "line": 771
+      },
+      {
+        "pdf_page": 19,
+        "line": 816
+      },
+      {
+        "pdf_page": 20,
+        "line": 864
+      },
+      {
+        "pdf_page": 21,
+        "line": 900
+      },
+      {
+        "pdf_page": 22,
+        "line": 935
+      },
+      {
+        "pdf_page": 23,
+        "line": 959
+      },
+      {
+        "pdf_page": 24,
+        "line": 999
+      },
+      {
+        "pdf_page": 25,
+        "line": 1031
+      },
+      {
+        "pdf_page": 26,
+        "line": 1078
+      },
+      {
+        "pdf_page": 27,
+        "line": 1187
+      },
+      {
+        "pdf_page": 28,
+        "line": 1249
+      },
+      {
+        "pdf_page": 29,
+        "line": 1362
+      },
+      {
+        "pdf_page": 30,
+        "line": 1437
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\Unreliability_in_ridesharing_systems_Measuring_cha.pdf",
+    "pdf_sha256": "23bad026caea9de06d9c155ab575bfc8837433670b237e695b0629eb7438dfbb",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\Unreliability_in_ridesharing_systems_Measuring_cha.txt",
+    "pages": 20,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 65
+      },
+      {
+        "pdf_page": 3,
+        "line": 118
+      },
+      {
+        "pdf_page": 4,
+        "line": 188
+      },
+      {
+        "pdf_page": 5,
+        "line": 270
+      },
+      {
+        "pdf_page": 6,
+        "line": 329
+      },
+      {
+        "pdf_page": 7,
+        "line": 414
+      },
+      {
+        "pdf_page": 8,
+        "line": 486
+      },
+      {
+        "pdf_page": 9,
+        "line": 566
+      },
+      {
+        "pdf_page": 10,
+        "line": 636
+      },
+      {
+        "pdf_page": 11,
+        "line": 715
+      },
+      {
+        "pdf_page": 12,
+        "line": 734
+      },
+      {
+        "pdf_page": 13,
+        "line": 752
+      },
+      {
+        "pdf_page": 14,
+        "line": 788
+      },
+      {
+        "pdf_page": 15,
+        "line": 813
+      },
+      {
+        "pdf_page": 16,
+        "line": 897
+      },
+      {
+        "pdf_page": 17,
+        "line": 971
+      },
+      {
+        "pdf_page": 18,
+        "line": 1047
+      },
+      {
+        "pdf_page": 19,
+        "line": 1118
+      },
+      {
+        "pdf_page": 20,
+        "line": 1216
+      }
+    ],
+    "extract_stderr": ""
+  },
+  {
+    "pdf": "C:\\PDF\\Paper\\Value_of_time_and_reliability_for_urban_pooled_on-.pdf",
+    "pdf_sha256": "a254e73a6e58f097aacc7e66e6e776cf3a34eca38d8805c3ce1047d3b49b82b7",
+    "text": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r13-paper-text\\Value_of_time_and_reliability_for_urban_pooled_on-.txt",
+    "pages": 21,
+    "page_anchors": [
+      {
+        "pdf_page": 1,
+        "line": 5
+      },
+      {
+        "pdf_page": 2,
+        "line": 64
+      },
+      {
+        "pdf_page": 3,
+        "line": 138
+      },
+      {
+        "pdf_page": 4,
+        "line": 210
+      },
+      {
+        "pdf_page": 5,
+        "line": 235
+      },
+      {
+        "pdf_page": 6,
+        "line": 253
+      },
+      {
+        "pdf_page": 7,
+        "line": 324
+      },
+      {
+        "pdf_page": 8,
+        "line": 400
+      },
+      {
+        "pdf_page": 9,
+        "line": 476
+      },
+      {
+        "pdf_page": 10,
+        "line": 557
+      },
+      {
+        "pdf_page": 11,
+        "line": 636
+      },
+      {
+        "pdf_page": 12,
+        "line": 712
+      },
+      {
+        "pdf_page": 13,
+        "line": 826
+      },
+      {
+        "pdf_page": 14,
+        "line": 906
+      },
+      {
+        "pdf_page": 15,
+        "line": 991
+      },
+      {
+        "pdf_page": 16,
+        "line": 1060
+      },
+      {
+        "pdf_page": 17,
+        "line": 1128
+      },
+      {
+        "pdf_page": 18,
+        "line": 1201
+      },
+      {
+        "pdf_page": 19,
+        "line": 1277
+      },
+      {
+        "pdf_page": 20,
+        "line": 1345
+      },
+      {
+        "pdf_page": 21,
+        "line": 1465
+      }
+    ],
+    "extract_stderr": ""
+  }
+]

@@ -1,0 +1,23 @@
+SOURCE E:\Code\Report_INT3508\ridebound-scratchpad\tang3\sweep\sweep-jobs-2026-09-26.tsv
+Measured-traffic C sweep subset: 12
+C4A-08 C-30 d20181112-s10-r1-w08 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-30-W5-d20181112-s10-r1-w08\summary.json
+C4A-08 C-60 d20181112-s10-r1-w08 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-60-W5-d20181112-s10-r1-w08\summary.json
+C4A-08 C-120 d20181112-s10-r1-w08 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-120-W5-d20181112-s10-r1-w08\summary.json
+C4A-08 C-300 d20181112-s10-r1-w08 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-300-W5-d20181112-s10-r1-w08\summary.json
+C4A-08 C-600 d20181112-s10-r1-w08 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-600-W5-d20181112-s10-r1-w08\summary.json
+C4A-08 C-900 d20181112-s10-r1-w08 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-900-W5-d20181112-s10-r1-w08\summary.json
+C4A-08 C-30 d20181112-s10-r1-w17 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-30-W5-d20181112-s10-r1-w17\summary.json
+C4A-08 C-60 d20181112-s10-r1-w17 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-60-W5-d20181112-s10-r1-w17\summary.json
+C4A-08 C-120 d20181112-s10-r1-w17 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-120-W5-d20181112-s10-r1-w17\summary.json
+C4A-08 C-300 d20181112-s10-r1-w17 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-300-W5-d20181112-s10-r1-w17\summary.json
+C4A-08 C-600 d20181112-s10-r1-w17 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-600-W5-d20181112-s10-r1-w17\summary.json
+C4A-08 C-900 d20181112-s10-r1-w17 requests=108 status=pass source=E:\RideBoundData\research\tier3-sweep-v1\C-900-W5-d20181112-s10-r1-w17\summary.json
+
+SOURCE E:\Code\Report_INT3508\ridebound-scratchpad\optimize\codex-debate\codex-work\r34-ch4a-verify\main-obligations-v4.tsv
+Mplus-30 w07: scenarios=9 breach=181/509 forced=3447/4564 own_mean=36.53328799% forced_mean=75.62034639%
+Mplus-30 w08: scenarios=14 breach=100/977 forced=3935/8376 own_mean=10.86559324% forced_mean=47.78993395%
+Mplus-30 w17: scenarios=11 breach=8/852 forced=328/7163 own_mean=1.03542483% forced_mean=4.99493341%
+
+Hand example: 10/100=10%; (5/10+5/90)/2=27.77777777777778%
+Morning C60 figure: x=(661-658)*0.36=1.08; y=47*0.05=2.35
+C30-to-C120 timely60 differences fixed/morning/main: 6/2/-7

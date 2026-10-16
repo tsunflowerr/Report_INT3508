@@ -1,0 +1,159 @@
+[
+  {
+    "key": "sridharan1987",
+    "status": "VERIFIED",
+    "metadata": "V. Sridharan; William L. Berry; V. Udayabhanu. Freezing the Master Production Schedule Under Rolling Planning Horizons. Management Science 33(9):1137–1149 (1987). DOI 10.1287/mnsc.33.9.1137.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.33.9.1137",
+    "notes": "Ordered authors, title, issue, year and article pages independently checked on INFORMS article page. Legacy metadata matches.",
+    "register_ids": [
+      "J26",
+      "C2-21"
+    ],
+    "tex": "\\bibitem{sridharan1987}\nV.~Sridharan, W.~L. Berry, and V.~Udayabhanu.\n\\newblock Freezing the master production schedule under rolling planning horizons.\n\\newblock \\emph{Management Science}, 33(9):1137--1149, 1987.\n\\newblock \\url{https://doi.org/10.1287/mnsc.33.9.1137}\n"
+  },
+  {
+    "key": "kovacs2014",
+    "status": "VERIFIED",
+    "metadata": "Attila A. Kovacs; Bruce L. Golden; Richard F. Hartl; Sophie N. Parragh. Vehicle routing problems in which consistency considerations are important: A survey. Networks 64(3):192–213 (2014). DOI 10.1002/net.21565.",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/net.21565",
+    "notes": "Ordered authors and metadata checked on Wiley DOI page. Legacy matches.",
+    "register_ids": [
+      "J26",
+      "C2-20"
+    ],
+    "tex": "\\bibitem{kovacs2014}\nA.~A. Kovacs, B.~L. Golden, R.~F. Hartl, and S.~N. Parragh.\n\\newblock Vehicle routing problems in which consistency considerations are important: A survey.\n\\newblock \\emph{Networks}, 64(3):192--213, 2014.\n\\newblock \\url{https://doi.org/10.1002/net.21565}\n"
+  },
+  {
+    "key": "cordeau2007",
+    "status": "VERIFIED",
+    "metadata": "Jean-François Cordeau; Gilbert Laporte. The dial-a-ride problem: models and algorithms. Annals of Operations Research 153(1):29–46 (2007). DOI 10.1007/s10479-007-0170-8.",
+    "url": "https://link.springer.com/article/10.1007/s10479-007-0170-8",
+    "notes": "Ordered authors, title, volume, pages and DOI independently checked on Springer. Legacy matches. Issue 1 also identified in publisher citation metadata.",
+    "register_ids": [],
+    "tex": "\\bibitem{cordeau2007}\nJ.-F. Cordeau and G.~Laporte.\n\\newblock The dial-a-ride problem: models and algorithms.\n\\newblock \\emph{Annals of Operations Research}, 153(1):29--46, 2007.\n\\newblock \\url{https://doi.org/10.1007/s10479-007-0170-8}\n"
+  },
+  {
+    "key": "toth2014",
+    "status": "VERIFIED",
+    "metadata": "Paolo Toth; Daniele Vigo (editors). Vehicle Routing: Problems, Methods, and Applications. Second edition. Society for Industrial and Applied Mathematics, 2014. DOI 10.1137/1.9781611973594.",
+    "url": "https://epubs.siam.org/doi/book/10.1137/1.9781611973594",
+    "notes": "Book page verifies edition/year/DOI; front-matter page https://epubs.siam.org/doi/10.1137/1.9781611973594.fm explicitly gives editors in this order. No total page count added because publisher book-summary and contents differ.",
+    "register_ids": [],
+    "tex": "\\bibitem{toth2014}\nP.~Toth and D.~Vigo, editors.\n\\newblock \\emph{Vehicle Routing: Problems, Methods, and Applications}.\n\\newblock SIAM, 2nd edition, 2014.\n\\newblock \\url{https://doi.org/10.1137/1.9781611973594}\n"
+  },
+  {
+    "key": "groer2009",
+    "status": "VERIFIED",
+    "metadata": "Chris Groër; Bruce Golden; Edward Wasil. The Consistent Vehicle Routing Problem. Manufacturing & Service Operations Management 11(4):630–643 (2009). DOI 10.1287/msom.1080.0243.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/msom.1080.0243",
+    "notes": "Keep issue year 2009: publisher says Volume 11, Issue 4, Fall 2009 and copyright 2009. Online date is 4 December 2008; automatic Cite as uses 2008. Legacy issue-year citation is valid.",
+    "register_ids": [],
+    "tex": "\\bibitem{groer2009}\nC.~Gro{\\\"e}r, B.~Golden, and E.~Wasil.\n\\newblock The consistent vehicle routing problem.\n\\newblock \\emph{Manufacturing \\& Service Operations Management}, 11(4):630--643, 2009.\n\\newblock \\url{https://doi.org/10.1287/msom.1080.0243}\n"
+  },
+  {
+    "key": "blackburn1986",
+    "status": "VERIFIED",
+    "metadata": "Joseph D. Blackburn; Dean H. Kropp; Robert A. Millen. A Comparison of Strategies to Dampen Nervousness in MRP Systems. Management Science 32(4):413–429 (1986). DOI 10.1287/mnsc.32.4.413.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.32.4.413",
+    "notes": "Ordered authors and all legacy metadata independently checked on publisher page.",
+    "register_ids": [],
+    "tex": "\\bibitem{blackburn1986}\nJ.~D. Blackburn, D.~H. Kropp, and R.~A. Millen.\n\\newblock A comparison of strategies to dampen nervousness in MRP systems.\n\\newblock \\emph{Management Science}, 32(4):413--429, 1986.\n\\newblock \\url{https://doi.org/10.1287/mnsc.32.4.413}\n"
+  },
+  {
+    "key": "agatz2012",
+    "status": "VERIFIED",
+    "metadata": "Niels Agatz; Alan Erera; Martin Savelsbergh; Xing Wang. Optimization for dynamic ride-sharing: A review. European Journal of Operational Research 223(2):295–303 (2012). DOI 10.1016/j.ejor.2012.05.028.",
+    "url": "https://repub.eur.nl/pub/34909",
+    "notes": "ScienceDirect search result supplied publisher metadata, but direct page returned 403. Independently opened Erasmus institutional repository confirms ordered authors, exact title, volume, issue, pages, year and DOI. Repository includes longer initials N.A.H./A.L./M.W.P.; legacy first-name initials are valid abbreviations.",
+    "register_ids": [],
+    "tex": "\\bibitem{agatz2012}\nN.~Agatz, A.~Erera, M.~Savelsbergh, and X.~Wang.\n\\newblock Optimization for dynamic ride-sharing: A review.\n\\newblock \\emph{European Journal of Operational Research}, 223(2):295--303, 2012.\n\\newblock \\url{https://doi.org/10.1016/j.ejor.2012.05.028}\n"
+  },
+  {
+    "key": "li2025",
+    "status": "CORRECTED",
+    "metadata": "Xinling Li; Meshal Alharbi; Daniele Gammelli; James Harrison; Filipe Rodrigues; Maximilian Schiffer; Marco Pavone; Emilio Frazzoli; Jinhua Zhao; Gioele Zardini. Reproducibility in the Control of Autonomous Mobility-on-Demand Systems. arXiv:2506.07345v2 (2025). DOI 10.48550/arXiv.2506.07345.",
+    "url": "https://arxiv.org/abs/2506.07345",
+    "notes": "Legacy D. Li → X. Li; A. Alharbi → M. Alharbi. Remaining ordered names match. First submitted 9 June 2025, v2 dated 30 December 2025. No journal venue asserted on opened arXiv record.",
+    "register_ids": [],
+    "tex": "\\bibitem{li2025}\nX.~Li, M.~Alharbi, D.~Gammelli, J.~Harrison, F.~Rodrigues, M.~Schiffer, M.~Pavone, E.~Frazzoli, J.~Zhao, and G.~Zardini.\n\\newblock Reproducibility in the control of autonomous mobility-on-demand systems.\n\\newblock arXiv:2506.07345v2, 2025.\n\\newblock \\url{https://arxiv.org/abs/2506.07345}\n"
+  },
+  {
+    "key": "sharifazadeh2022",
+    "status": "VERIFIED",
+    "metadata": "Sh. Sharif Azadeh; Bilge Atasoy; Moshe E. Ben-Akiva; M. Bierlaire; M.Y. Maknoon. Choice-driven dial-a-ride problem for demand responsive mobility service. Transportation Research Part B: Methodological 161:128–149 (2022). DOI 10.1016/j.trb.2022.04.008.",
+    "url": "https://dspace.mit.edu/entities/publication/024805a3-e5f5-4a58-8519-096c34e2b525",
+    "notes": "Opened MIT official repository verifies authors/title/year/venue/DOI and explicitly names 1-s2.0-S0191261522000716-main.pdf, final published version. Independently extracted first page of C:/PDF/Paper/1-s2.0-S0191261522000716-main.pdf using pdftotext: same title, ordered names, 161 (2022) 128–149 and DOI. This local file is not Hörl–Zwick. Legacy metadata matches.",
+    "register_ids": [
+      "C2-01"
+    ],
+    "tex": "\\bibitem{sharifazadeh2022}\nSh.~Sharif Azadeh, B.~Atasoy, M.~E. Ben-Akiva, M.~Bierlaire, and M.~Y. Maknoon.\n\\newblock Choice-driven dial-a-ride problem for demand responsive mobility service.\n\\newblock \\emph{Transportation Research Part B: Methodological}, 161:128--149, 2022.\n\\newblock \\url{https://doi.org/10.1016/j.trb.2022.04.008}\n"
+  },
+  {
+    "key": "sivagnanam2026",
+    "status": "VERIFIED",
+    "metadata": "Amutheezan Sivagnanam; Ayan Mukhopadhyay; Samitha Samaranayake; Abhishek Dubey; Aron Laszka. Dynamic Vehicle Routing Problem with Prompt Confirmation of Advance Requests. Proceedings – 17th ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS 2026), pp. 48–57. IEEE, 2026. DOI 10.1109/ICCPS68698.2026.00012.",
+    "url": "https://pure.psu.edu/en/publications/dynamic-vehicle-routing-problem-with-prompt-confirmation-of-advan/",
+    "notes": "Independently opened Penn State official publication record supplies ordered authors, venue, IEEE publisher, year, pp.48–57 and DOI. Also opened arXiv:2603.07422v2 and author-hosted https://aronlaszka.com/papers/sivagnanam2026dynamic.pdf (first page explicitly says published in ICCPS2026). Legacy is correct but omitted pages/DOI; additions are verified.",
+    "register_ids": [],
+    "tex": "\\bibitem{sivagnanam2026}\nA.~Sivagnanam, A.~Mukhopadhyay, S.~Samaranayake, A.~Dubey, and A.~Laszka.\n\\newblock Dynamic vehicle routing problem with prompt confirmation of advance requests.\n\\newblock In \\emph{Proceedings of the 17th ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS)}, pages 48--57. IEEE, 2026.\n\\newblock \\url{https://doi.org/10.1109/ICCPS68698.2026.00012}\n"
+  },
+  {
+    "key": "haferkamp2024",
+    "status": "VERIFIED",
+    "metadata": "Jarmo Haferkamp. Design of multi-optional pickup time offers in ride-sharing systems. EURO Journal on Transportation and Logistics 13:100134 (2024). DOI 10.1016/j.ejtl.2024.100134.",
+    "url": "https://www.econstor.eu/handle/10419/325197",
+    "notes": "Publisher search record agrees but direct ScienceDirect/DOI fetch failed. Independently opened official EconStor journal repository supplies author/title/year/volume/article/DOI; it labels issue1 and pp1–13, but final draft conservatively uses article100134 as publisher journal record does. Legacy correct; DOI added. Metadata verification does not independently verify body claim J13.",
+    "register_ids": [
+      "J13"
+    ],
+    "tex": "\\bibitem{haferkamp2024}\nJ.~Haferkamp.\n\\newblock Design of multi-optional pickup time offers in ride-sharing systems.\n\\newblock \\emph{EURO Journal on Transportation and Logistics}, 13:100134, 2024.\n\\newblock \\url{https://doi.org/10.1016/j.ejtl.2024.100134}\n"
+  },
+  {
+    "key": "schmidt2026",
+    "status": "VERIFIED",
+    "metadata": "Lina Schmidt; Julian Golak; Arne Schulz; Malte Fliedner. Optimal Service Commitments in Traveling Salesman Problems with Stochastic Demand. arXiv:2609.11950v1 (2026). URL https://arxiv.org/abs/2609.11950.",
+    "url": "https://arxiv.org/abs/2609.11950",
+    "notes": "Opened official arXiv record verifies authors/title/year/identifier. Record unusually reports submitted28July2026 despite2609 identifier; do not infer dates from identifier. It marks arXiv DOI pending registration; draft uses confirmed URL and does not assert resolved DOI.",
+    "register_ids": [
+      "J42"
+    ],
+    "tex": "\\bibitem{schmidt2026}\nL.~Schmidt, J.~Golak, A.~Schulz, and M.~Fliedner.\n\\newblock Optimal service commitments in traveling salesman problems with stochastic demand.\n\\newblock arXiv:2609.11950v1, 2026.\n\\newblock \\url{https://arxiv.org/abs/2609.11950}\n"
+  },
+  {
+    "key": "zalesak2025",
+    "status": "VERIFIED",
+    "metadata": "Matthew Zalesak; Hins Hu; Samitha Samaranayake. Ride-pool Assignment Algorithms: Modern Implementation and Swapping Heuristics. arXiv:2504.10649v1 (2025). DOI 10.48550/arXiv.2504.10649.",
+    "url": "https://arxiv.org/abs/2504.10649",
+    "notes": "Ordered authors/title/identifier/year independently checked on arXiv record. Legacy matches.",
+    "register_ids": [],
+    "tex": "\\bibitem{zalesak2025}\nM.~Zalesak, H.~Hu, and S.~Samaranayake.\n\\newblock Ride-pool assignment algorithms: Modern implementation and swapping heuristics.\n\\newblock arXiv:2504.10649v1, 2025.\n\\newblock \\url{https://arxiv.org/abs/2504.10649}\n"
+  },
+  {
+    "key": "agarwal2019",
+    "status": "VERIFIED",
+    "metadata": "Naman Agarwal; Brian Bullins; Elad Hazan; Sham Kakade; Karan Singh. Online Control with Adversarial Disturbances. Proceedings of the 36th International Conference on Machine Learning, Proceedings of Machine Learning Research 97:111–119 (2019).",
+    "url": "https://proceedings.mlr.press/v97/agarwal19c.html",
+    "notes": "Publisher PMLR page independently verifies ordered authors/title/venue/year/volume/pages. Legacy matches; no DOI supplied by publisher and none invented.",
+    "register_ids": [],
+    "tex": "\\bibitem{agarwal2019}\nN.~Agarwal, B.~Bullins, E.~Hazan, S.~Kakade, and K.~Singh.\n\\newblock Online control with adversarial disturbances.\n\\newblock In \\emph{Proceedings of the 36th International Conference on Machine Learning}, PMLR 97:111--119, 2019.\n\\newblock \\url{https://proceedings.mlr.press/v97/agarwal19c.html}\n"
+  },
+  {
+    "key": "chen2018",
+    "status": "VERIFIED",
+    "metadata": "Niangjun Chen; Gautam Goel; Adam Wierman. Smoothed Online Convex Optimization in High Dimensions via Online Balanced Descent. Proceedings of the 31st Conference On Learning Theory, Proceedings of Machine Learning Research 75:1574–1594 (2018).",
+    "url": "https://proceedings.mlr.press/v75/chen18b.html",
+    "notes": "Ordered authors and all legacy metadata verified on publisher PMLR page. Correct primary page is chen18b, not chen18a (different work). No DOI supplied and none invented.",
+    "register_ids": [],
+    "tex": "\\bibitem{chen2018}\nN.~Chen, G.~Goel, and A.~Wierman.\n\\newblock Smoothed online convex optimization in high dimensions via online balanced descent.\n\\newblock In \\emph{Proceedings of the 31st Conference On Learning Theory}, PMLR 75:1574--1594, 2018.\n\\newblock \\url{https://proceedings.mlr.press/v75/chen18b.html}\n"
+  },
+  {
+    "key": "borodin1992",
+    "status": "VERIFIED",
+    "metadata": "Allan Borodin; Nathan Linial; Michael E. Saks. An optimal on-line algorithm for metrical task system. Journal of the ACM 39(4):745–763 (1992). DOI 10.1145/146585.146588.",
+    "url": "https://www.sigmod.org/publications/dblp/db/journals/jacm/jacm39.html",
+    "notes": "ACM DL/DOI fetch failed403. Opened ACM SIGMOD-hosted JACM bibliography, Volume39 Number4 October1992, with ordered authors, exact singular title, pages and Electronic Edition DOI link; also opened MIT JACM bibliography https://projects.csail.mit.edu/jacm/References/borodinls1992:745.html confirming metadata. Legacy matches.",
+    "register_ids": [],
+    "tex": "\\bibitem{borodin1992}\nA.~Borodin, N.~Linial, and M.~E. Saks.\n\\newblock An optimal on-line algorithm for metrical task system.\n\\newblock \\emph{Journal of the ACM}, 39(4):745--763, 1992.\n\\newblock \\url{https://doi.org/10.1145/146585.146588}\n"
+  }
+]
+

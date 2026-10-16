@@ -1,0 +1,27 @@
+{
+  "E30_rows": 95,
+  "numeric_comparisons_per_version": 665,
+  "versions": {
+    "canonical": {
+      "mismatches": 36,
+      "max_abs_difference": 2.4337295757289894
+    },
+    "stored": {
+      "mismatches": 7,
+      "max_abs_difference": 0.0006899999999347983
+    },
+    "stored-reported-formula": {
+      "mismatches": 0,
+      "max_abs_difference": 0.0004917379348512441
+    }
+  },
+  "verdicts": {
+    "ML1": true,
+    "ML2": false,
+    "ML3": false,
+    "ML4": true,
+    "ML5": false
+  },
+  "all_verdicts_match": true,
+  "kill_match": true
+}

@@ -1,0 +1,9 @@
+# initializeRun (adapterToRunner)
+  manifest.binarySha256 = a631038b6ea4850ffa29be2d5e4058fba2e57b725ee568075686d7a43c6f5fac
+  manifest.coreCommitSha = 1ce15e92d2c1459d4254bbbcd581529197257fb2
+  manifest.policyId = ridebound-hard-vector
+  manifest.simulator.upstreamCommitSha = 053aa9d4fcfde91c5d303435d5748f9206c071b0
+# first budget-pruned candidate
+  keys: candidateId, code, commitmentWitnesses, newRequestIds, vehicleId
+  record: {"candidateId": "candidate-v1-1f19413ba4ef7ab886e7ebe92d3f6f223feb1032c99275ec5163e2f7db7b4ac3", "code": "COMMITMENT_BUDGET_EXCEEDED", "commitmentWitnesses": [{"after": 151774, "before": 0, "code": "COMMITMENT_BUDGET_EXCEEDED", "delta": 151774, "dimension": "drop_eta_total_ms", "limit": 30000, "requestId": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001", "stage": "budget", "vehicleId": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"}], "newRequestIds": ["rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec"], "vehicleId": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"}
+  executionEvidence keys: evidenceVersion, generation, prunedCandidates, selection

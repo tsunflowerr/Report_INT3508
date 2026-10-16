@@ -1,0 +1,2795 @@
+{
+  "kind": "same-state-repair-conservative-leading-block-screen-original-E1-core",
+  "limitation": "Not executed in FleetPy; screen alone does not prove exact locked-leg equivalence; no closed-loop gain claim",
+  "repairRequestCap": 4,
+  "rows": [
+    {
+      "epoch": 20,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 128,
+        "MAX_RIDE_TIME": 12
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 102,
+            "EvaluatedCandidatePathCount": 95,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 95,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 2,
+            "ConsideredRepairRequestCount": 2,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 16.7731,
+      "inputStateSha256": "9fd92358730bd2f7a9f76ba80ed855ac66282a58484950ce0ac1f250ec2607fb",
+      "valid": []
+    },
+    {
+      "epoch": 275,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 1,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 91,
+        "MAX_RIDE_TIME": 24
+      },
+      "retainedHardPrunes": {
+        "COMMITMENT_PHASE_LOCK": 1
+      },
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 102,
+            "EvaluatedCandidatePathCount": 95,
+            "UniqueFeasibleCandidateCountBeforeCap": 2,
+            "RetainedCandidateCount": 2,
+            "PhysicallyOrSchedulePrunedCount": 94,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 15.0854,
+      "inputStateSha256": "7a2c9323fd7cbe48212c8e7908a631b2d8d228c6ee33b30b62fe79967a7b796a",
+      "valid": []
+    },
+    {
+      "epoch": 304,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 73,
+        "MAX_RIDE_TIME": 52
+      },
+      "retainedHardPrunes": {
+        "COMMITMENT_BUDGET_EXCEEDED": 1
+      },
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 2,
+            "RetainedCandidateCount": 2,
+            "PhysicallyOrSchedulePrunedCount": 5,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 102,
+            "EvaluatedCandidatePathCount": 95,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 95,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [
+          {
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            },
+            "RequestId": {
+              "Value": "rq-026f4c36a37235c8c181ccc7327e2bcd12b618469c8a580eb443bef9e7d4fba6"
+            },
+            "Code": "MAX_RIDE_TIME",
+            "Dimension": "maxRideTimeMs",
+            "ContractualMilliseconds": 338415,
+            "ExogenousMilliseconds": 338473
+          }
+        ],
+        "IsComplete": true
+      },
+      "elapsedMs": 13.8016,
+      "inputStateSha256": "9994cce975ecb05341e9322383c4d02f306f2a4a556afc97829f864000511ada",
+      "valid": []
+    },
+    {
+      "epoch": 321,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 30,
+        "MAX_RIDE_TIME": 36
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [
+          {
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            },
+            "RequestId": {
+              "Value": "rq-026f4c36a37235c8c181ccc7327e2bcd12b618469c8a580eb443bef9e7d4fba6"
+            },
+            "Code": "MAX_RIDE_TIME",
+            "Dimension": "maxRideTimeMs",
+            "ContractualMilliseconds": 338415,
+            "ExogenousMilliseconds": 338617
+          }
+        ],
+        "IsComplete": true
+      },
+      "elapsedMs": 9.543,
+      "inputStateSha256": "a764e13f76c2e06f1ce6ee012fa0ccc9d7bcf968d3eec1a12a2b5695fbb644ce",
+      "valid": []
+    },
+    {
+      "epoch": 334,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 23,
+        "MAX_RIDE_TIME": 8
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 5.1873,
+      "inputStateSha256": "43311e3d4f08e9fedce0dc32029f7a7138a754b7e790bfc5d49dce2e2e4653d2",
+      "valid": []
+    },
+    {
+      "epoch": 373,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 117,
+        "MAX_RIDE_TIME": 61
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 102,
+            "EvaluatedCandidatePathCount": 95,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 95,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 2,
+            "ConsideredRepairRequestCount": 2,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 11.603,
+      "inputStateSha256": "1153e57af9ba32c5497bbac94d57c19b29ec9a94425a12a692fdd67810a85ced",
+      "valid": []
+    },
+    {
+      "epoch": 374,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 138,
+        "MAX_RIDE_TIME": 39
+      },
+      "retainedHardPrunes": {
+        "COMMITMENT_BUDGET_EXCEEDED": 1
+      },
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 102,
+            "EvaluatedCandidatePathCount": 95,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 95,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 2,
+            "ConsideredRepairRequestCount": 2,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 2,
+            "RetainedCandidateCount": 2,
+            "PhysicallyOrSchedulePrunedCount": 5,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 9.4026,
+      "inputStateSha256": "c67305a320d38ed9ca29dd8c7bda73e02ec24fc247487d1dd4a630da2c7ad308",
+      "valid": []
+    },
+    {
+      "epoch": 378,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 142,
+        "MAX_RIDE_TIME": 34
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 102,
+            "EvaluatedCandidatePathCount": 95,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 95,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 2,
+            "ConsideredRepairRequestCount": 2,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 8.447,
+      "inputStateSha256": "2210e355973692821cadb063ecddb955d810053d1aba015f0e88298fe2697d8e",
+      "valid": []
+    },
+    {
+      "epoch": 388,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 2,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 38,
+        "MAX_RIDE_TIME": 45
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 3,
+            "RetainedCandidateCount": 3,
+            "PhysicallyOrSchedulePrunedCount": 30,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 4.5415,
+      "inputStateSha256": "8d9212178f0d8cffa14025dcc481c72fbc7885d13a613b5e308fb7e2abcbfc83",
+      "valid": []
+    },
+    {
+      "epoch": 394,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 1,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 48,
+        "MAX_RIDE_TIME": 14
+      },
+      "retainedHardPrunes": {
+        "COMMITMENT_BUDGET_EXCEEDED": 1
+      },
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 3,
+            "RetainedCandidateCount": 3,
+            "PhysicallyOrSchedulePrunedCount": 4,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 4.4706,
+      "inputStateSha256": "426ec39613cfd5cc990577a9cd17e670272d215bc9619a209c2e201cf838cc34",
+      "valid": []
+    },
+    {
+      "epoch": 406,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 35,
+        "MAX_RIDE_TIME": 2
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 2.4608,
+      "inputStateSha256": "8d6d56adb693a82c50799967c176e788db8ac7a56d06bb4bc9bf43b15c939769",
+      "valid": []
+    },
+    {
+      "epoch": 457,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 49,
+        "MAX_RIDE_TIME": 40
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 4.8383,
+      "inputStateSha256": "a988be9fcc8765cad179dd99367b3e837e92deec01359b8f707d77319b9e4806",
+      "valid": []
+    },
+    {
+      "epoch": 458,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 49,
+        "MAX_RIDE_TIME": 39
+      },
+      "retainedHardPrunes": {
+        "COMMITMENT_PHASE_LOCK": 1
+      },
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 2,
+            "RetainedCandidateCount": 2,
+            "PhysicallyOrSchedulePrunedCount": 31,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 5.0099,
+      "inputStateSha256": "102d252a999dc403118f39c1716fc52db330e44a1e5f9e579ec0d507059dac83",
+      "valid": []
+    },
+    {
+      "epoch": 459,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 2,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 55,
+        "MAX_RIDE_TIME": 32
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 3,
+            "RetainedCandidateCount": 3,
+            "PhysicallyOrSchedulePrunedCount": 4,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 6.0541,
+      "inputStateSha256": "17a3032c61b440a4853ca0867d3e7e41e1704a80f97bf233a509149d3660c1d5",
+      "valid": []
+    },
+    {
+      "epoch": 460,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 59,
+        "MAX_RIDE_TIME": 30
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 4.6856,
+      "inputStateSha256": "01db74f2a1f7aed0041ab56e75cd7b12e6e866b5a9730bace34f408ca1101ec8",
+      "valid": []
+    },
+    {
+      "epoch": 673,
+      "status": "complete",
+      "baselineAccept": 0,
+      "rawRepairCandidateCount": 0,
+      "headScreenRemoved": 0,
+      "safeHardAccept": 0,
+      "generatedPhysicalPrunes": {
+        "PICKUP_WINDOW": 94,
+        "MAX_RIDE_TIME": 18
+      },
+      "retainedHardPrunes": {},
+      "newAcceptOpportunity": false,
+      "generationComplete": true,
+      "diagnostics": {
+        "TotalPendingRequestCount": 1,
+        "ConsideredRequestCount": 1,
+        "OmittedRequestCount": 0,
+        "VehicleLosses": [
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 36,
+            "EvaluatedCandidatePathCount": 32,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 32,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 8,
+            "EvaluatedCandidatePathCount": 6,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 6,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 1,
+            "ConsideredRepairRequestCount": 1,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 3,
+            "EvaluatedCandidatePathCount": 1,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 1,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+            }
+          },
+          {
+            "ExplorationWorkUnits": 5,
+            "EvaluatedCandidatePathCount": 3,
+            "UniqueFeasibleCandidateCountBeforeCap": 1,
+            "RetainedCandidateCount": 1,
+            "PhysicallyOrSchedulePrunedCount": 3,
+            "OmittedUnexpandedCandidatePathCount": 0,
+            "OmittedFeasibleCandidateCountByCap": 0,
+            "WorkBudgetExhausted": false,
+            "CandidateCapApplied": false,
+            "OmissionCountWasSaturated": false,
+            "EligibleRepairRequestCount": 0,
+            "ConsideredRepairRequestCount": 0,
+            "OmittedRepairRequestCount": 0,
+            "VehicleId": {
+              "Value": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+            }
+          }
+        ],
+        "Omissions": [],
+        "ExogenousServiceQualityBreaches": [],
+        "IsComplete": true
+      },
+      "elapsedMs": 9.8799,
+      "inputStateSha256": "4798e2959add05de673cb23d774e9c0b4b5def4783bc152571df21764f6a4060",
+      "valid": []
+    }
+  ]
+}

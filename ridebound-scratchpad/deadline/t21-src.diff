@@ -1,0 +1,351 @@
+diff --git a/src/RideBound.Algorithms/Commitments/HardVectorCandidateAssessor.cs b/src/RideBound.Algorithms/Commitments/HardVectorCandidateAssessor.cs
+index 3b5f7b2..9c1e2f2 100644
+--- a/src/RideBound.Algorithms/Commitments/HardVectorCandidateAssessor.cs
++++ b/src/RideBound.Algorithms/Commitments/HardVectorCandidateAssessor.cs
+@@ -185,9 +185,21 @@ public sealed class HardVectorCandidateAssessor
+                         warning.HasApplicableWarning));
+             }
+ 
++            // The safety no-op is the one candidate whose rejection says why a vehicle
++            // lost its fallback. Identify it only when the set is well formed (exactly
++            // one no-op); otherwise the selection model reports the malformed set.
++            var noOps = set.Candidates.Where(value => value.IsNoOp).ToArray();
++            var noOpPrune = noOps.Length == 1
++                ? hardPruned.FirstOrDefault(
++                    value => value.CandidateId == noOps[0].CandidateId)
++                : null;
++
+             if (retained.Count == 0)
+             {
+-                var first = hardPruned
++                // Report the no-op's own rejection when there is one, so the cause of
++                // an empty set is attributable; the ordinal first candidate is usually
++                // not the no-op, because candidate ids are content hashes.
++                var first = noOpPrune ?? hardPruned
+                     .OrderBy(value => value.CandidateId, StringComparer.Ordinal)
+                     .FirstOrDefault();
+                 var firstValidation = first is not null
+@@ -215,6 +227,33 @@ public sealed class HardVectorCandidateAssessor
+                         hardPruned.Count));
+             }
+ 
++            if (noOpPrune is not null)
++            {
++                // A rule removed the safety no-op but kept another candidate. The
++                // selection model needs exactly one no-op per vehicle, so this state
++                // used to die later as a generic model-mapping failure. Failing here
++                // with the no-op's own rejection changes no successful run.
++                var noOpValidation = hardValidationWitnesses.TryGetValue(
++                    noOpPrune.CandidateId,
++                    out var noOpWitness)
++                    ? noOpWitness
++                    : null;
++                return HardVectorCandidateAssessmentResult.Failure(
++                    new CommitmentAssessmentWitness(
++                        CommitmentFailureCodes.SafetyNoOpRejected,
++                        "C1 rejected the safety no-op while other candidates survived. " +
++                        $"No-op rejection: {noOpPrune.Message}",
++                        noOpPrune.CandidateId,
++                        set.VehicleId,
++                        noOpValidation?.RequestId,
++                        noOpValidation?.Dimension,
++                        noOpPrune.Code,
++                        noOpValidation?.Before,
++                        noOpValidation?.After,
++                        set.Candidates.Count,
++                        hardPruned.Count));
++            }
++
+             outputSets.Add(
+                 new VehicleCandidateSet(
+                     set.VehicleId,
+diff --git a/src/RideBound.Application/Commitments/CommitmentDecisionValidator.cs b/src/RideBound.Application/Commitments/CommitmentDecisionValidator.cs
+index f4f6eb8..afa2dc0 100644
+--- a/src/RideBound.Application/Commitments/CommitmentDecisionValidator.cs
++++ b/src/RideBound.Application/Commitments/CommitmentDecisionValidator.cs
+@@ -344,25 +344,58 @@ public sealed class CommitmentDecisionValidator
+                 return ProjectionFailure(exogenousProjection.Failure!, request);
+             }
+ 
++            var initialEntry = priorHistory.Entries[0];
++
++            if (initialEntry.Kind != CommitmentLedgerEntryKind.InitialPromise)
++            {
++                return Invalid(
++                    CommitmentValidationStage.Ledger,
++                    CommitmentFailureCodes.LedgerConflict,
++                    "The first ledger entry of a rider must be the initial promise.",
++                    request.AssignedVehicleId,
++                    request.Id,
++                    "promiseVersion");
++            }
++
+             var lockWitnesses = _lockEvaluator.Evaluate(
+                 request,
+                 priorHistory.Current.PublishedPromise,
+                 exogenousProjection.Value!,
+                 candidateProjection.Value!,
+                 context.CandidateState.Run.SimulationTime,
+-                policy);
++                policy,
++                anchor: initialEntry.PublishedPromise.Projection);
+ 
+             if (lockWitnesses.Count != 0)
+             {
+                 var lockFailures = lockWitnesses.Select(
+-                    value => new CommitmentValidationWitness(
+-                        CommitmentValidationStage.Lock,
+-                        CommitmentFailureCodes.PhaseLock,
+-                        "The candidate changes a phase-locked promise field.",
+-                        request.AssignedVehicleId,
+-                        value.RequestId,
+-                        value.Dimension,
+-                        value.Rule));
++                    value => value.Rule switch
++                    {
++                        "deadline_cap" => new CommitmentValidationWitness(
++                            CommitmentValidationStage.Lock,
++                            CommitmentFailureCodes.DeadlineExceeded,
++                            "The candidate delays the drop ETA beyond the initial-promise deadline.",
++                            request.AssignedVehicleId,
++                            value.RequestId,
++                            value.Dimension,
++                            value.Rule),
++                        "deadline_floor" => new CommitmentValidationWitness(
++                            CommitmentValidationStage.Lock,
++                            CommitmentFailureCodes.DeadlineExceeded,
++                            "The candidate moves the drop ETA outside the initial-promise window.",
++                            request.AssignedVehicleId,
++                            value.RequestId,
++                            value.Dimension,
++                            value.Rule),
++                        _ => new CommitmentValidationWitness(
++                            CommitmentValidationStage.Lock,
++                            CommitmentFailureCodes.PhaseLock,
++                            "The candidate changes a phase-locked promise field.",
++                            request.AssignedVehicleId,
++                            value.RequestId,
++                            value.Dimension,
++                            value.Rule),
++                    });
+ 
+                 if (collected is null)
+                 {
+diff --git a/src/RideBound.Domain/Commitments/CommitmentLockEvaluator.cs b/src/RideBound.Domain/Commitments/CommitmentLockEvaluator.cs
+index 5c48314..4f8cde0 100644
+--- a/src/RideBound.Domain/Commitments/CommitmentLockEvaluator.cs
++++ b/src/RideBound.Domain/Commitments/CommitmentLockEvaluator.cs
+@@ -16,7 +16,8 @@ public sealed class CommitmentLockEvaluator
+         PromiseProjection exogenous,
+         PromiseProjection candidate,
+         SimTime evaluationTime,
+-        CommitmentPolicy policy)
++        CommitmentPolicy policy,
++        PromiseProjection? anchor = null)
+     {
+         ArgumentNullException.ThrowIfNull(request);
+         ArgumentNullException.ThrowIfNull(previous);
+@@ -77,6 +78,11 @@ public sealed class CommitmentLockEvaluator
+                 policy.RatchetLocks);
+         }
+ 
++        if (policy.DropEtaDeadlineSlack is Duration slack)
++        {
++            AddDeadlineWitness(witnesses, request, candidate, anchor, slack, policy);
++        }
++
+         return witnesses
+             .Distinct()
+             .OrderBy(value => value.Dimension, StringComparer.Ordinal)
+@@ -137,6 +143,50 @@ public sealed class CommitmentLockEvaluator
+         }
+     }
+ 
++    /// <summary>
++    /// Every lock above compares the candidate with the exogenous projection, so
++    /// exogenous drift never trips a lock. The deadline compares it with the
++    /// rider's initial promise instead, so drift alone can trip it, including on
++    /// the safety no-op. It is a gate that lives next to the locks, not a lock.
++    /// </summary>
++    private static void AddDeadlineWitness(
++        ICollection<CommitmentLockWitness> witnesses,
++        RideRequest request,
++        PromiseProjection candidate,
++        PromiseProjection? anchor,
++        Duration slack,
++        CommitmentPolicy policy)
++    {
++        if (anchor is null)
++        {
++            throw new ArgumentException(
++                "A drop ETA deadline requires the initial promise anchor.",
++                nameof(anchor));
++        }
++
++        if (anchor.RequestId != request.Id)
++        {
++            throw new ArgumentException(
++                "Deadline anchor identity must match the request.",
++                nameof(anchor));
++        }
++
++        // Both values are canonical non-negative integers below 2^53, so the
++        // difference and its negation fit in a long.
++        var shift = candidate.DropEta.Milliseconds - anchor.DropEta.Milliseconds;
++
++        if (shift > slack.Milliseconds)
++        {
++            witnesses.Add(
++                new CommitmentLockWitness(request.Id, "drop_eta_ms", "deadline_cap"));
++        }
++        else if (policy.DropEtaDeadlineTwoSided && -shift > slack.Milliseconds)
++        {
++            witnesses.Add(
++                new CommitmentLockWitness(request.Id, "drop_eta_ms", "deadline_floor"));
++        }
++    }
++
+     /// <summary>
+     /// An exact lock rejects any movement. A ratcheted lock rejects only movement
+     /// that makes the promise later, so the decision may still improve it.
+diff --git a/src/RideBound.Domain/Commitments/CommitmentPolicy.cs b/src/RideBound.Domain/Commitments/CommitmentPolicy.cs
+index 36b9abf..87abb79 100644
+--- a/src/RideBound.Domain/Commitments/CommitmentPolicy.cs
++++ b/src/RideBound.Domain/Commitments/CommitmentPolicy.cs
+@@ -134,7 +134,9 @@ public sealed class CommitmentPolicy
+         Duration? freezeHorizon = null,
+         PromiseLock freezeHorizonLocks = PromiseLock.None,
+         PromiseLock finalConfirmationLocks = PromiseLock.None,
+-        PromiseLock ratchetLocks = PromiseLock.None)
++        PromiseLock ratchetLocks = PromiseLock.None,
++        Duration? dropEtaDeadlineSlack = null,
++        bool dropEtaDeadlineTwoSided = false)
+     {
+         ArgumentNullException.ThrowIfNull(limits);
+         ArgumentNullException.ThrowIfNull(materialRevisionRule);
+@@ -193,6 +195,13 @@ public sealed class CommitmentPolicy
+                 "Only pickup and drop ETA locks can be relaxed to a ratchet.");
+         }
+ 
++        if (dropEtaDeadlineTwoSided && dropEtaDeadlineSlack is null)
++        {
++            throw new ArgumentException(
++                "A two-sided deadline requires a deadline slack.",
++                nameof(dropEtaDeadlineTwoSided));
++        }
++
+         BudgetBasis = budgetBasis;
+         _limits = materialized.ToFrozenDictionary(value => value.Dimension);
+         MaterialRevisionRule = materialRevisionRule;
+@@ -200,6 +209,8 @@ public sealed class CommitmentPolicy
+         FreezeHorizonLocks = freezeHorizonLocks;
+         FinalConfirmationLocks = finalConfirmationLocks;
+         RatchetLocks = ratchetLocks;
++        DropEtaDeadlineSlack = dropEtaDeadlineSlack;
++        DropEtaDeadlineTwoSided = dropEtaDeadlineTwoSided;
+     }
+ 
+     public string PolicyId { get; }
+@@ -227,4 +238,19 @@ public sealed class CommitmentPolicy
+     /// Empty by default, so a lock keeps its exact-equality meaning.
+     /// </summary>
+     public PromiseLock RatchetLocks { get; }
++
++    /// <summary>
++    /// Deadline on the drop ETA, measured from the rider's FIRST published promise
++    /// (the deadline style of Schulz and Pfeiffer, 2026). Unlike every lock, this
++    /// compares the candidate with the initial promise rather than with the
++    /// exogenous projection, so exogenous drift alone can trip it, including on the
++    /// safety no-op. Research probe; null disables the rule.
++    /// </summary>
++    public Duration? DropEtaDeadlineSlack { get; }
++
++    /// <summary>
++    /// When true the deadline is a window: the drop ETA may not move earlier than
++    /// the initial promise by more than the slack either. Requires a slack.
++    /// </summary>
++    public bool DropEtaDeadlineTwoSided { get; }
+ }
+diff --git a/src/RideBound.Domain/Commitments/CommitmentVector.cs b/src/RideBound.Domain/Commitments/CommitmentVector.cs
+index 4fc26df..a9e3c7c 100644
+--- a/src/RideBound.Domain/Commitments/CommitmentVector.cs
++++ b/src/RideBound.Domain/Commitments/CommitmentVector.cs
+@@ -142,6 +142,13 @@ public static class CommitmentFailureCodes
+     public const string BudgetExceeded = "COMMITMENT_BUDGET_EXCEEDED";
+     public const string PhaseLock = "COMMITMENT_PHASE_LOCK";
+ 
++    /// <summary>
++    /// The candidate moves the drop ETA outside the deadline measured from the
++    /// rider's initial promise. Unlike a phase lock, which compares with the
++    /// exogenous projection, a deadline can be tripped by exogenous drift alone.
++    /// </summary>
++    public const string DeadlineExceeded = "COMMITMENT_DEADLINE_EXCEEDED";
++
+     /// <summary>
+     /// A treatment assessment rejected every generated candidate for one
+     /// vehicle, including the safety no-op. This is fail-closed: the run stops
+@@ -150,4 +157,12 @@ public static class CommitmentFailureCodes
+     /// </summary>
+     public const string VehicleHasNoFeasibleCandidate =
+         "C1_VEHICLE_HAS_NO_FEASIBLE_CANDIDATE";
++
++    /// <summary>
++    /// A treatment assessment rejected the safety no-op of a vehicle while other
++    /// candidates survived. The selection model requires exactly one no-op per
++    /// vehicle, so this state cannot be solved; it is reported here with the
++    /// no-op's own rejection instead of failing later as a generic mapping error.
++    /// </summary>
++    public const string SafetyNoOpRejected = "COMMITMENT_SAFETY_NOOP_REJECTED";
+ }
+diff --git a/src/RideBound.Runner/Configuration/CommitmentPolicyConfiguration.cs b/src/RideBound.Runner/Configuration/CommitmentPolicyConfiguration.cs
+index 12eb0c3..159108a 100644
+--- a/src/RideBound.Runner/Configuration/CommitmentPolicyConfiguration.cs
++++ b/src/RideBound.Runner/Configuration/CommitmentPolicyConfiguration.cs
+@@ -25,7 +25,9 @@ public sealed class CommitmentPolicyConfiguration :
+         "freezeHorizonMs",
+         "freezeHorizonLocks",
+         "finalConfirmationLocks",
+-        "ratchetLocks");
++        "ratchetLocks",
++        "dropEtaDeadlineSlackMs",
++        "dropEtaDeadlineTwoSided");
+     private static readonly IReadOnlySet<string> LimitFields = Fields(
+         "dimension",
+         "hardLimit",
+@@ -163,6 +165,25 @@ public sealed class CommitmentPolicyConfiguration :
+         var displayBucket = OptionalPositiveInteger(
+             revision,
+             "displayBucketWidthMs");
++        var deadlineSlack = OptionalPositiveInteger(
++            element,
++            "dropEtaDeadlineSlackMs");
++        var deadlineTwoSided = element.TryGetProperty(
++                "dropEtaDeadlineTwoSided",
++                out var twoSided)
++            && twoSided.ValueKind switch
++            {
++                JsonValueKind.True => true,
++                JsonValueKind.False => false,
++                _ => throw new InvalidDataException(
++                    "'dropEtaDeadlineTwoSided' must be a boolean."),
++            };
++
++        if (deadlineTwoSided && deadlineSlack is null)
++        {
++            throw new InvalidDataException(
++                "'dropEtaDeadlineTwoSided' requires 'dropEtaDeadlineSlackMs'.");
++        }
+ 
+         return new CommitmentPolicy(
+             Text(element, "policyId"),
+@@ -180,7 +201,9 @@ public sealed class CommitmentPolicyConfiguration :
+                 : null,
+             ReadLocks(element, "freezeHorizonLocks"),
+             ReadLocks(element, "finalConfirmationLocks"),
+-            ReadLocks(element, "ratchetLocks"));
++            ReadLocks(element, "ratchetLocks"),
++            deadlineSlack is long slack ? new Duration(slack) : null,
++            deadlineTwoSided);
+     }
+ 
+     private static CommitmentDimensionLimit ReadLimit(JsonElement element)

@@ -1,0 +1,856 @@
+{
+  "counts": {
+    "A": 81,
+    "M": 55,
+    "CANNOT CHECK": 1,
+    "R": 4
+  },
+  "rows": [
+    {
+      "id": "H1",
+      "decision": "A",
+      "evidence": "A06; B01; Ch4A:muc:c4-thietlap",
+      "change": "Đổi đo trần thành đánh giá trên mô phỏng, nêu đối tượng."
+    },
+    {
+      "id": "H2",
+      "decision": "A",
+      "evidence": "X3-12; Ch3:eq:so",
+      "change": "Mở chương giới thiệu đủ ba phần của độ lệch so lời hứa đầu."
+    },
+    {
+      "id": "H3",
+      "decision": "A",
+      "evidence": "A06; A13; Ch3:eq:luatc",
+      "change": "Nêu khách đã được nhận, bộ điều phối dời và tổng cả chuyến."
+    },
+    {
+      "id": "H4",
+      "decision": "A",
+      "evidence": "J01; J03; Ch3:muc:doichung",
+      "change": "Nói mốc đã có ở Hörl–Zwick; giữ trích dẫn công thức 7."
+    },
+    {
+      "id": "H5",
+      "decision": "A",
+      "evidence": "C08; Ch4A:243–245; check:numbers.main_raw_rows",
+      "change": "Gọi tên luật C và điều phối không trần ở từng số."
+    },
+    {
+      "id": "H6",
+      "decision": "M",
+      "evidence": "C4A-01; N-21; C04; Ch4A:355–360",
+      "change": "Đặt 292/2.338 và 289/2.338, mỗi luật 28/34, cạnh nhau; chỉ kết luận ở ngưỡng30s, khác nhóm khách."
+    },
+    {
+      "id": "H7",
+      "decision": "A",
+      "evidence": "N-08; L1a-06; E01; E09; Ch4A:muc:c4-congdon",
+      "change": "Giải nghĩa bản ghi phương án bị trần loại; không suy tác dụng lên phục vụ."
+    },
+    {
+      "id": "H8",
+      "decision": "M",
+      "evidence": "F17; N4B8-01; Ch4B:80–107",
+      "change": "Nêu rõ khách C-30, mẫu số1.471, gộp theo khách; mỗi cách so với lời hứa đầu của chính nó."
+    },
+    {
+      "id": "H9",
+      "decision": "A",
+      "evidence": "F03; Ch4B:80–83",
+      "change": "Gọi rõ tính lại lời hứa, quyết định điều phối giữ nguyên."
+    },
+    {
+      "id": "H10",
+      "decision": "M",
+      "evidence": "C10; N-16; Ch4B:bang:c4-dem",
+      "change": "Giải nghĩa đệm; giữ cả điều kiện lời hứa theo dự báo."
+    },
+    {
+      "id": "H11",
+      "decision": "A",
+      "evidence": "C10; N-18; check:U_forecast_pad30,C30_forecast",
+      "change": "Gắn 37,2 với đệm, 7,4 với C, trung bình gộp theo khách."
+    },
+    {
+      "id": "H12",
+      "decision": "A",
+      "evidence": "X3-12; F09; Ch4B:hinh:c4-so",
+      "change": "Giải nghĩa sổ chia số giây trễ thành ba phần."
+    },
+    {
+      "id": "H13",
+      "decision": "M",
+      "evidence": "N4B8-11; Ch4B:182; check:numbers.rounding",
+      "change": "Thêm82s; nêu làm tròn riêng vì82+5.353+783=6.218, khác nhãn tổng6.217."
+    },
+    {
+      "id": "H14",
+      "decision": "A",
+      "evidence": "F13; B20; Ch4B:muc:c4-tuyet",
+      "change": "Thêm15/11/2018,8kịch bản và41→34/601."
+    },
+    {
+      "id": "H15",
+      "decision": "M",
+      "evidence": "I01; I02; I04; B12; B05; Ch4B:muc:c4-thaoluan",
+      "change": "Nối giới hạn với kết luận; không dùng chi tiết dừng0giây như đã kiểm mọi lần."
+    },
+    {
+      "id": "H16",
+      "decision": "A",
+      "evidence": "H12; E09; Ch4B:459–464",
+      "change": "Nêu bộ chọn ưu tiên chi phí chưa chạy đầy đủ; luật từng lần chưa cài."
+    },
+    {
+      "id": "H17",
+      "decision": "A",
+      "evidence": "H02; K18; E09",
+      "change": "Đổi giá trị tăng thêm sang câu hỏi phần cộng dồn có đổi kết quả không."
+    },
+    {
+      "id": "H18",
+      "decision": "M",
+      "evidence": "J38; K30; K31",
+      "change": "Viết khóa luận kế thừa, không định lượng phần lớn ý nền khi không có phép đếm."
+    },
+    {
+      "id": "H19",
+      "decision": "M",
+      "evidence": "J06; J08; Ch2:muc:c2-dolech",
+      "change": "Thu hẹp tiền lệ kiểm soát lời hứa giờ đón khi gán khách."
+    },
+    {
+      "id": "H20",
+      "decision": "A",
+      "evidence": "J01; J03; Ch3:460–469",
+      "change": "Đúng đại lượng giờ trả trên tuyến cũ; nói dùng mốc tương tự."
+    },
+    {
+      "id": "H21",
+      "decision": "A",
+      "evidence": "H02; H12; OUTLINE §7.2; ROUND42",
+      "change": "Giải nghĩa hai thứ tự ưu tiên, bốn tổ hợp, giữ đầu5.3 và trạng thái chưa chạy."
+    },
+    {
+      "id": "H22",
+      "decision": "A",
+      "evidence": "I13; A28; Ch3:733–735",
+      "change": "Nói một số kịch bản để đối chiếu, không gọi lẫn với tập kiểm tra chính."
+    },
+    {
+      "id": "H23",
+      "decision": "A",
+      "evidence": "H10; H12",
+      "change": "Viết câu hỏi đánh đổi còn giữ không khi bộ chọn đổi."
+    },
+    {
+      "id": "H24",
+      "decision": "A",
+      "evidence": "E09; A22; J05",
+      "change": "Dùng tên phần cộng dồn và mốc giữ nguyên; thêm dẫn tới B."
+    },
+    {
+      "id": "H25",
+      "decision": "A",
+      "evidence": "F14; K20; K21",
+      "change": "Chỉ dùng dữ liệu đã có tại thời điểm hứa."
+    },
+    {
+      "id": "H26",
+      "decision": "A",
+      "evidence": "H10; D18; K11",
+      "change": "Đòi mỗi cấu hình chạy mô phỏng đầy đủ, không suy lượt phục vụ từ sàng lọc."
+    },
+    {
+      "id": "H27",
+      "decision": "M",
+      "evidence": "C4A-15; TEX08:136–137; K33; Ch4A:muc:c4-thamdo",
+      "change": "A nêu30s và thành phần gói; giữ bỏ bảng kết quả tĩnh."
+    },
+    {
+      "id": "H28",
+      "decision": "A",
+      "evidence": "A22; X3-27; Ch3:366–379",
+      "change": "Tách p=e và phạm vi phép kiểm giờ trả; không suy mọi ràng buộc."
+    },
+    {
+      "id": "H29",
+      "decision": "M",
+      "evidence": "J03; J05; A22; Ch3:460–469",
+      "change": "Gọi biến thể do khóa luận dựng từ công thức7; suy luận, chưa chạy."
+    },
+    {
+      "id": "H30",
+      "decision": "M",
+      "evidence": "A22; A10; A11; J03; J05",
+      "change": "Tách chứng minh C và hạn chót nới; không quy mọi đổi của e riêng cho tắc đường."
+    },
+    {
+      "id": "H31",
+      "decision": "M",
+      "evidence": "A06; A09; A11; X3-33; Ch3:428–458",
+      "change": "Nêu tổng abs(c), tổng abs(z); hạn chót kiểm từng cập nhật, không chỉ cuối."
+    },
+    {
+      "id": "H32",
+      "decision": "A",
+      "evidence": "B02; B08; SPLIT:15–65; check:scenario_lists",
+      "change": "Giải nghĩa mã, mẫu10%, mọi cặp mẫu×khung."
+    },
+    {
+      "id": "H33",
+      "decision": "M",
+      "evidence": "A26; B10; RUN38:42–44; Ch4A:107–110; C17",
+      "change": "Chỉ nói vai trò trong khóa luận; không phủ nhận mục đích gốc đã có bằng chứng."
+    },
+    {
+      "id": "H34",
+      "decision": "A",
+      "evidence": "B15; B17; RUNW07:33–34",
+      "change": "Ghi rõ12–13/11 cho cả sáng và cố định."
+    },
+    {
+      "id": "H35",
+      "decision": "M",
+      "evidence": "X3-19; DOC08:20–29; q4_cost_first_reselect.py:34",
+      "change": "Giữ ánh xạ LOCKS/B1/C1 theo yêu cầu gốc; bổ sung năm mã thư mục."
+    },
+    {
+      "id": "H36",
+      "decision": "A",
+      "evidence": "A28; N4B8-05; R26 Q8",
+      "change": "Gọi tên bản bộ chạy, phiên bản nguồn và mã lõi."
+    },
+    {
+      "id": "H37",
+      "decision": "M",
+      "evidence": "WP4:7; R26 Q8",
+      "change": "Giữ tệp cấu hình và nghĩa luật phục hồi; diễn đạt gọn trong C."
+    },
+    {
+      "id": "H38",
+      "decision": "M",
+      "evidence": "R26 Q1–Q2; actual_fleetpy_medium_preflight.py:569–581,595–637",
+      "change": "Giữ đủ: hết yêu cầu tương lai, yêu cầu đang xử lý và hành trình xe."
+    },
+    {
+      "id": "H39",
+      "decision": "M",
+      "evidence": "C06; C08; F06; N4B-14; ADD1:66–78",
+      "change": "Viết câu; số lượt là hiệu hai số đếm, không chia thành tỉ lệ; so khớp chỉ các trường đã so."
+    },
+    {
+      "id": "H40",
+      "decision": "M",
+      "evidence": "TESTRUN:14–18,35–56; fullrun log:1–6,27–71; check:test_attempts",
+      "change": "Cập nhật13/10 full1.025/1.025, bản sao dùng lại, hai điều kiện và các lượt cũ."
+    },
+    {
+      "id": "B1",
+      "decision": "M",
+      "evidence": "TESTRUN:14–18,35–56; log fullrun:1–6,27–71",
+      "change": "Nhận kết quả lượt4; nêu dùng lại bản sao lượt3, giữ đầy đủ các kết quả trước."
+    },
+    {
+      "id": "B2",
+      "decision": "M",
+      "evidence": "C4A-01; C08; N-20; C20; N-21; C04; E01; check:main_raw_rows",
+      "change": "Thêm các vế bất lợi và vật so; giới hạn gần ngang ở30s và khác nhóm khách."
+    },
+    {
+      "id": "B3",
+      "decision": "M",
+      "evidence": "I06; C4A-11; I01–I05; B05; H12; E09",
+      "change": "Nêu tính thăm dò và ảnh hưởng hạn chế; bỏ chi tiết dừng0s có phạm vi chưa đủ."
+    },
+    {
+      "id": "B4",
+      "decision": "M",
+      "evidence": "A26; B10; Ch4A:107–110; Ch3:725–735; I13; C17",
+      "change": "Nêu15lần chỉ dùng kiểm sổ trong khóa luận; thêm điều kiện bản dựng lại, không phủ nhận mục đích lịch sử."
+    },
+    {
+      "id": "B5",
+      "decision": "M",
+      "evidence": "C4A-15; TEX08:136–137; K29,K33,K34",
+      "change": "A đáp nguồn30s, sửa đích c4-thamdo; không nói khóa luận không dùng bất cứ số nào vì vẫn dùng30s."
+    },
+    {
+      "id": "N1",
+      "decision": "M",
+      "evidence": "N4B8-01,02,11; C10; N-19; F13; check:rounding",
+      "change": "Ba phần dễ đọc; bổ sung mẫu số1.471 cho hạn chót và chú thích làm tròn."
+    },
+    {
+      "id": "N2",
+      "decision": "M",
+      "evidence": "RUN38:51–55; RUNW07:35–43; RW7X:35–40,77–79; LAD:1–6; R26Q8",
+      "change": "Bổ sung đầu vào và mã thư mục; tên chứa mã trước-s7, không kết thúc bằng mã; giữ LOCKS/B1/C1."
+    },
+    {
+      "id": "N3",
+      "decision": "M",
+      "evidence": "A28; R26Q1–Q2,Q8; N4B-14; SPEC:28–63; C08",
+      "change": "Viết đủ nghĩa; đúng điều kiện kết thúc, số đếm/mẫu số, giới hạn trường7159; không nhận kiểm kê chưa bao giờ làm lại."
+    },
+    {
+      "id": "N4",
+      "decision": "M",
+      "evidence": "J08; J01; J05; H10; H12; E09; A22; OUTLINE §7.2",
+      "change": "Tiền lệ giờ đón được thu hẹp; hai thứ tự, năm hướng, tham chiếuB; giữ chưa chạy."
+    },
+    {
+      "id": "N5",
+      "decision": "M",
+      "evidence": "Ch3:374–379,428–469; A22; A06; A09; J05",
+      "change": "Lr theo khách; tách hai phép chứng minh; C cộng abs(c), hạn chót kiểm từng cập nhật."
+    },
+    {
+      "id": "S1",
+      "decision": "A",
+      "evidence": "main.tex:115–119; PL preamble",
+      "change": "Ghi nơi ghép09-chuong5 và11-phuluc sau tài liệu; không thêm appendix lần nữa."
+    },
+    {
+      "id": "S2",
+      "decision": "A",
+      "evidence": "OUTLINE §1; Ch3:bang:luat",
+      "change": "Ký hiệu luật trong câu số lần chạy được viết bằng lời; mã thư mục giữ nguyên để tra cứu."
+    },
+    {
+      "id": "S3",
+      "decision": "A",
+      "evidence": "STYLE §5.2(6); RUN38:51–55",
+      "change": "Giải nghĩa gốc đường dẫn ngay đầu C."
+    },
+    {
+      "id": "S4",
+      "decision": "M",
+      "evidence": "B17; một bản tin FREE cố định core38d517d; audit C",
+      "change": "Xác nhận mã cũ trong LOG; văn bản giữ thông tin bộ chạy cũ, không thêm một mã không cần cho lập luận."
+    },
+    {
+      "id": "S5",
+      "decision": "M",
+      "evidence": "run_forecast.py:44,67,71–74; q4_cost_first_reselect.py:32–35,178–182; ml_pilot_extract.py:9–28",
+      "change": "Bổ sung gốc thí nghiệm phụ. Thư mục MplusF thứ17 là phép phát triểnS1, không phải kịch bản chính thứ17."
+    },
+    {
+      "id": "S6",
+      "decision": "M",
+      "evidence": "ROUND42 inputs; check:input_files",
+      "change": "Dùng Ch4A-v5-v3 và Ch4B-v11-v2, không lấyv10 làm bản ghép."
+    },
+    {
+      "id": "S7",
+      "decision": "CANNOT CHECK",
+      "evidence": "ROUND42 §Length; ASSEMBLY trial build; check:word_counts",
+      "change": "Đếm theo500tiếng/trang; không biên dịch nên chưa xác nhận số trang và vị trí bảng thật."
+    },
+    {
+      "id": "S8",
+      "decision": "A",
+      "evidence": "OUTLINE §2(6)",
+      "change": "Thống nhất tập kiểm tra chính."
+    },
+    {
+      "id": "S9",
+      "decision": "R",
+      "evidence": "I11; F13; K19; K38; yêu cầu ba đoạn5.1",
+      "change": "Bỏ hai câu tổng kết tùy chọn: lặp ba đoạn; chưa có cách hứa tốt cho ngày bất thường quá rộng so bằng chứng."
+    },
+    {
+      "id": "S10",
+      "decision": "A",
+      "evidence": "J01; J05",
+      "change": "Bổ sung EV cho mốc giữ nguyên và khác biệt theo định nghĩa."
+    },
+    {
+      "id": "Q5-01",
+      "decision": "A",
+      "evidence": "J01, J03; Ch3:459–461; ASSEMBLY (R32: công thức 7 khớp bản thảo tr. 8)",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-02",
+      "decision": "A",
+      "evidence": "B09; Ch4A:125",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-03",
+      "decision": "A",
+      "evidence": "C01, C02; Ch4A:243–244, 275–276",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-04",
+      "decision": "A",
+      "evidence": "C20, N-21; Ch4A:242, 426",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-05",
+      "decision": "A",
+      "evidence": "C08; Ch4A:275–276",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-06",
+      "decision": "A",
+      "evidence": "C01; Ch4A:277",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-07",
+      "decision": "M",
+      "evidence": "N-21; Ch4A:327",
+      "change": "Số28/34 đúng; bổ sung292/289 và cùng mẫu số, tránh so nghĩa vụ khác nhau."
+    },
+    {
+      "id": "Q5-08",
+      "decision": "A",
+      "evidence": "N-06, L1a-02; Ch4A:580, 585–586",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-09",
+      "decision": "A",
+      "evidence": "N-08, L1a-06; Ch4A:739",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-10",
+      "decision": "M",
+      "evidence": "F17, F04, N4B8-01; Ch4B:79–80, 100",
+      "change": "Giữ68→2/1.471, nêu rõ khách của luật C và lời hứa riêng của từng cách."
+    },
+    {
+      "id": "Q5-11",
+      "decision": "A",
+      "evidence": "C09, N-16; Ch4A:593; Ch4B:249",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-12",
+      "decision": "A",
+      "evidence": "C10, N-16; Ch4B:254",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-13",
+      "decision": "A",
+      "evidence": "C10, N-16; Ch4B:249, 254",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-14",
+      "decision": "M",
+      "evidence": "C10, N-18; Ch4B:219",
+      "change": "37,2vs7,4 đúng; chú thích review37,37 là hàng C có đệm, không phải C không đệm7,37."
+    },
+    {
+      "id": "Q5-15",
+      "decision": "A",
+      "evidence": "C10, N-16; Ch4B:249, 254",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-16",
+      "decision": "M",
+      "evidence": "F09, N4B8-11; Ch4B:147–151",
+      "change": "Thêm82s và làm tròn độc lập; không ép ba nhãn nguyên cộng bằng nhãn tổng."
+    },
+    {
+      "id": "Q5-17",
+      "decision": "A",
+      "evidence": "F13, B20; Ch4B:306–307",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-18",
+      "decision": "M",
+      "evidence": "F13, N4B-05; Ch4B:156–162, 308–309",
+      "change": "Các số đã làm tròn có tổng3.446,0, không bằng3.445,9 đúng tuyệt đối; giữ số và nêu làm tròn riêng."
+    },
+    {
+      "id": "Q5-19",
+      "decision": "A",
+      "evidence": "I05, B11; Ch4B:419–420",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-20",
+      "decision": "M",
+      "evidence": "H12, E09",
+      "change": "Nói luật từng lần còn chưa cài đặt; bộ chọn chưa chạy mô phỏng đầy đủ."
+    },
+    {
+      "id": "Q5-21",
+      "decision": "A",
+      "evidence": "J06, J08, J01, J10, J38",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "Q5-22",
+      "decision": "A",
+      "evidence": "H12; OUTLINE §7.2; Ch4B:19–22, 71–72",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-01",
+      "decision": "A",
+      "evidence": "A06, A22; Ch3:374–379",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-02",
+      "decision": "A",
+      "evidence": "A10; Ch3:455–456",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-03",
+      "decision": "A",
+      "evidence": "A11, A12; Ch3:428–433",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-04",
+      "decision": "A",
+      "evidence": "A22, J05, K27; Ch3:463–466",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-05",
+      "decision": "A",
+      "evidence": "A01",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-06",
+      "decision": "A",
+      "evidence": "A01, A12",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-07",
+      "decision": "A",
+      "evidence": "A01, A12",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-08",
+      "decision": "A",
+      "evidence": "đại số",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-09",
+      "decision": "A",
+      "evidence": "B08, B09",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-10",
+      "decision": "A",
+      "evidence": "B08",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-11",
+      "decision": "A",
+      "evidence": "B15, B17, B20; Ch4A:129–135",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-12",
+      "decision": "M",
+      "evidence": "C17, RUN38:42–44",
+      "change": "15lần C-30 đúng; chỉ mô tả vai trò kiểm sổ trong khóa luận, không kể phép hiệu chỉnh phụ."
+    },
+    {
+      "id": "QP-13",
+      "decision": "A",
+      "evidence": "R26 Q8; RW7X:35–40; RW7X:35–40,77–79; danh sách configs đã mở",
+      "change": "Đã mở RW7X:35–40,77–79 và configs/C-90,150,180,240: không còn phần chưa kiểm."
+    },
+    {
+      "id": "QP-14",
+      "decision": "A",
+      "evidence": "DOC08:20–29; X3-19",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-15",
+      "decision": "A",
+      "evidence": "OUTLINE §5 4.4; q4_cost_first_reselect.py:34; r17-wp14r-check.txt:5",
+      "change": "LOCKS đã kiểm trực tiếp; giữ ánh xạ ngắn cùng tên thư mục."
+    },
+    {
+      "id": "QP-16",
+      "decision": "A",
+      "evidence": "B10, L1a-01",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-17",
+      "decision": "A",
+      "evidence": "B15, B16, X3-28, C4A-07",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-18",
+      "decision": "A",
+      "evidence": "B17, X3-19",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-19",
+      "decision": "M",
+      "evidence": "B20, N-26, R26 Q8",
+      "change": "Chọn tám thư mục đúng ngày15/11, r1–4×w14/15; không lấy mọi C-30 trong gốc."
+    },
+    {
+      "id": "QP-20",
+      "decision": "A",
+      "evidence": "A28; R26 Q8 (cả 8 bản tin khởi tạo của tuyết); Ch4A:58, 94",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-21",
+      "decision": "A",
+      "evidence": "R26 Q8 (WP4:7)",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-22",
+      "decision": "A",
+      "evidence": "R26 Q2 (34 lần chạy C-120 dài 118,0–154,9 phút mô phỏng)",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-23",
+      "decision": "A",
+      "evidence": "B10, L1a-01, C4A-07, H13, B20; Ch4A:127–136",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-24",
+      "decision": "A",
+      "evidence": "C4A-17; ADD1:6",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-25",
+      "decision": "A",
+      "evidence": "B19, C4A-20; Ch4A:149",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "QP-26",
+      "decision": "M",
+      "evidence": "C06, C08, F06; Ch4A:156–160, 183–184",
+      "change": "Giữ số lượt=phục vụ−trễ và mẫu số riêng; không biến số lượt thành thương."
+    },
+    {
+      "id": "QP-27",
+      "decision": "M",
+      "evidence": "TESTRUN:14–18, 53–56; log `…-dirty-fullrun-2026-10-13.log` (9 dòng Passed, tổng 1.025, `exit=0`); ASSEMBLY dòng 1–3; check:numbers.test_attempts (cộng năm log thô)",
+      "change": "Số12/10 đúng lịch sử, không phải số sai; bổ sung lượt toàn bộ13/10 mới nhất, giữ các lượt trước."
+    },
+    {
+      "id": "QP-28",
+      "decision": "A",
+      "evidence": "TESTRUN:43–49; `StrictBagItBundleTests.cs:32`",
+      "change": "Xác nhận lại với bản hiện hành và nguồn ghi ở cột bằng chứng; giữ số/nhận định đúng."
+    },
+    {
+      "id": "LAB-1",
+      "decision": "A",
+      "evidence": "check:labels; Ch1→chuong:ketluan",
+      "change": "Giữ nhãn chương, có câu trỏ và giải được."
+    },
+    {
+      "id": "LAB-2",
+      "decision": "M",
+      "evidence": "check:labels; Ch4A:muc:c4-thamdo; C4A-15",
+      "change": "A tồn tại và nay đáp nguồn trần30s."
+    },
+    {
+      "id": "LAB-3",
+      "decision": "M",
+      "evidence": "check:labels.new_references_to_B",
+      "change": "Giữ B và thêm câu trỏ từ hướng thứ hai của5.3."
+    },
+    {
+      "id": "LAB-4",
+      "decision": "M",
+      "evidence": "Ch3:724,735; Ch4B:398–401; TESTRUN lượt4",
+      "change": "C đáp bản dựng lại và kiểm thử mới; ghi riêng ngày cũ Ch3 phải sửa khi ghép."
+    },
+    {
+      "id": "LAB-5",
+      "decision": "A",
+      "evidence": "check:labels",
+      "change": "Ba nhãn mục5.1–5.3 không trùng; không bắt buộc phải có câu trỏ."
+    },
+    {
+      "id": "LAB-6",
+      "decision": "A",
+      "evidence": "check:labels; PL preamble",
+      "change": "Ba bảng có nhãn, dẫn và đích liên kết riêng; A/B/C và B.1,C.1,C.2 giữ nguyên."
+    },
+    {
+      "id": "REF-1",
+      "decision": "A",
+      "evidence": "Ch4B:muc:c4-thaoluan; check:labels",
+      "change": "Dẫn hạn chế đúng nội dung."
+    },
+    {
+      "id": "REF-2",
+      "decision": "M",
+      "evidence": "Ch4A:muc:c4-thamdo; C4A-15",
+      "change": "Đổi A từ c4-taptu sang c4-thamdo."
+    },
+    {
+      "id": "REF-3",
+      "decision": "A",
+      "evidence": "PL:bang:pl-giunguyen",
+      "change": "Câu dẫn bảng B đúng."
+    },
+    {
+      "id": "REF-4",
+      "decision": "A",
+      "evidence": "Ch3:muc:giunguyen",
+      "change": "Dẫn đúng giả thiết(N)."
+    },
+    {
+      "id": "REF-5",
+      "decision": "A",
+      "evidence": "Ch3:muc:bamoc",
+      "change": "Dẫn đúng v,e,p trong chú thích."
+    },
+    {
+      "id": "REF-6",
+      "decision": "A",
+      "evidence": "PL:bang:pl-danhsach",
+      "change": "Dẫn đúng danh sách đã so khớp34/15."
+    },
+    {
+      "id": "REF-7",
+      "decision": "A",
+      "evidence": "PL:bang:pl-goc",
+      "change": "Dẫn đúng gốc/cấu hình."
+    },
+    {
+      "id": "REF-8",
+      "decision": "A",
+      "evidence": "BIB bibitem horl2022,fielbaum2020,schulz2026; check:labels",
+      "change": "Ba khóa trích dẫn đều có ở danh mục hiện hành."
+    },
+    {
+      "id": "G1",
+      "decision": "M",
+      "evidence": "TESTRUN lượt4; check:test_attempts",
+      "change": "Nhận yêu cầu cập nhật; các số12/10 vẫn đúng lịch sử, không gọi chúng là phép đếm sai."
+    },
+    {
+      "id": "G2",
+      "decision": "M",
+      "evidence": "C4A-01; C08; C20; N-20",
+      "change": "Thêm vế công bằng, vế bất lợi và mô phỏng; giới hạn ngưỡng so sánh."
+    },
+    {
+      "id": "G3",
+      "decision": "A",
+      "evidence": "Ch4A→A; Ch3→C; check:labels",
+      "change": "Đáp câu trỏ A/C; thêm câu trỏ B."
+    },
+    {
+      "id": "G4",
+      "decision": "A",
+      "evidence": "H1–H40 đối chiếu bản nền; STYLE §2",
+      "change": "Giải nghĩa ba phần, đệm, sổ, bộ chọn và mã; sửa lối câu cụt."
+    },
+    {
+      "id": "G5",
+      "decision": "M",
+      "evidence": "Ch5 cấu trúc; C17; Ch4A:107–110; BIB",
+      "change": "Giữ năm hướng và EV/khóa; bỏ mục đích phụ vì phạm vi, không vì câu đó chứa từ chủ sở hữu cấm."
+    },
+    {
+      "id": "L2.1-D",
+      "decision": "M",
+      "evidence": "C4A-01; C08; C20; N-20; C04",
+      "change": "Đoạn điều phối có đủ vật so, −96/−242/−5, cùng thước292/289; không bảo đảm giờ đến."
+    },
+    {
+      "id": "L2.1-F",
+      "decision": "M",
+      "evidence": "N4B8-01,02; N-19; C10",
+      "change": "Dự báo không riêng C, mẫu số riêng; đệm hơn ở120s đi cùng phục vụ thêm."
+    },
+    {
+      "id": "L2.1-L",
+      "decision": "M",
+      "evidence": "N4B8-11; F13; N4B-05",
+      "change": "Đủ ba thành phần và41→34; nêu làm tròn riêng."
+    },
+    {
+      "id": "L2.2",
+      "decision": "M",
+      "evidence": "I06; C4A-11; E09; J05; B05; J08",
+      "change": "Thăm dò, ảnh hưởng kết luận, chưa cài luật từng lần; thu hẹp tiền lệ/chi tiết dừng."
+    },
+    {
+      "id": "L2.3",
+      "decision": "A",
+      "evidence": "OUTLINE §7.2; ROUND42; check:structure",
+      "change": "Giữ đúng năm hướng; selector×cap đầu, không có giờ công."
+    },
+    {
+      "id": "L2.4",
+      "decision": "M",
+      "evidence": "SPLIT; RUN38; R26; N4B-14; TESTRUN; I13",
+      "change": "C đủ bảy nội dung; sửa phạm vi người đọc/đếm/số mới, bổ sung đầu vào và thí nghiệm phụ."
+    },
+    {
+      "id": "L2.5",
+      "decision": "M",
+      "evidence": "C4A-15; K29,K33,K34; r31-NOTES §5A",
+      "change": "Giữ A làm nguồn tham số; tiếp tục bỏ bảng tĩnh thiếu output."
+    },
+    {
+      "id": "L2.6",
+      "decision": "M",
+      "evidence": "A22; J05; A06; A09; Ch3:374–469",
+      "change": "B giữ điều kiện, đúng ghi công, tổng cả chuyến và hạn chót từng lượt; có câu trỏ."
+    },
+    {
+      "id": "L2.7",
+      "decision": "M",
+      "evidence": "C4A-01; C08; N-20; A22; C17; STYLE",
+      "change": "Khắc phục bỏ sót và cách gọi phần cộng dồn; không coi mục đích hiệu chỉnh lịch sử là dữ kiện sai."
+    },
+    {
+      "id": "ALT-A",
+      "decision": "R",
+      "evidence": "ROUND42 labels; Ch4A→phuluc:A; C4A-15",
+      "change": "Bác phương án bỏ A rồi đổi chữ B/C: A còn cần để đáp nguồn30s; không sửa ngoài thư mục."
+    },
+    {
+      "id": "P1-NODAY",
+      "decision": "R",
+      "evidence": "F13; B20; Ch4B:muc:c4-tuyet",
+      "change": "Bác câu chưa có ngày sự kiện: đã có chiều tuyết15/11 với8kịch bản; chỉ thiếu nhiều sự kiện độc lập mới."
+    },
+    {
+      "id": "B2-BRIEF",
+      "decision": "R",
+      "evidence": "ROUND31 brief nguyên văn §Content; ROUND42 fairness",
+      "change": "Bác lý do briefR31 nêu đích danh toàn bộ vế thêm: R31 chỉ chỉ rõ−96vàđệm hòa; vẫn áp dụng vế thêm vì bằng chứng vàR42."
+    }
+  ]
+}

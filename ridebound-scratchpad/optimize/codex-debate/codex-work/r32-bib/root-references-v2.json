@@ -1,0 +1,287 @@
+[
+  {
+    "key": "alonsogonzalez2020",
+    "status": "CORRECTED",
+    "metadata": "M. J. Alonso-González, N. van Oort, O. Cats, S. Hoogendoorn-Lanser, and S. Hoogendoorn. Value of time and reliability for urban pooled on-demand services. Transportation Research Part C: Emerging Technologies, 115:102621, 2020.",
+    "url": "https://repository.tudelft.nl/file/File_1217abf5-bc01-4227-ba39-21878929e291?preview=1",
+    "notes": "Old authors M.J. Alonso-González, S. van Cranenburgh, O. Cats, N. van Oort, S. Hoogendoorn → María J. Alonso-González, Niels van Oort, Oded Cats, Sascha Hoogendoorn-Lanser, Serge Hoogendoorn. Read final-published article first page, not only repository cover. DOI10.1016/j.trc.2020.102621. Independently agrees with C2-18.",
+    "tex": "\\bibitem{alonsogonzalez2020}\nM.~J. Alonso-González, N.~van Oort, O.~Cats, S.~Hoogendoorn-Lanser, and S.~Hoogendoorn.\n\\newblock Value of time and reliability for urban pooled on-demand services.\n\\newblock \\emph{Transportation Research Part C: Emerging Technologies}, 115:102621, 2020.\n\\newblock \\url{https://doi.org/10.1016/j.trc.2020.102621}",
+    "register_ids": [
+      "J24",
+      "C2-18"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "wardman2026",
+    "status": "VERIFIED",
+    "metadata": "M. Wardman, P. Murphy, M. Ojeda-Cabral, A. Mitrani, K. Neki, and R. M. Humphreys. Value of time multipliers for walk time, wait time, service headway, displacement time, reliability and congested travel time: review and meta-analysis of worldwide evidence. Transportation Research Part A: Policy and Practice, 207:104925, 2026.",
+    "url": "https://eprints.whiterose.ac.uk/id/eprint/239301/1/1-s2.0-S0965856426000662-main.pdf",
+    "notes": "Read institutional final PDF first page: Mark Wardman, Paul Murphy, Manuel Ojeda-Cabral, Alex Mitrani, Kazuyuki Neki, Richard Martin Humphreys, in order. DOI10.1016/j.tra.2026.104925. Online8March2026. Metadata agrees with C2-17; no issue assigned in article.",
+    "tex": "\\bibitem{wardman2026}\nM.~Wardman, P.~Murphy, M.~Ojeda-Cabral, A.~Mitrani, K.~Neki, and R.~M.~Humphreys.\n\\newblock Value of time multipliers for walk time, wait time, service headway, displacement time, reliability and congested travel time: review and meta-analysis of worldwide evidence.\n\\newblock \\emph{Transportation Research Part A: Policy and Practice}, 207:104925, 2026.\n\\newblock \\url{https://doi.org/10.1016/j.tra.2026.104925}",
+    "register_ids": [
+      "J23",
+      "C2-17"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "leonardi2024",
+    "status": "VERIFIED",
+    "metadata": "P. Leonardi, V. Torrisi, A. Araldo, and M. Ignaccolo. Data-driven assessment for the predictability of On-Demand Responsive Transit. arXiv:2411.11899v1, 2024. EURO Working Group on Transportation, Lund, tháng 9/2024.",
+    "url": "https://arxiv.org/abs/2411.11899",
+    "notes": "Pierfrancesco Leonardi, Vincenza Torrisi, Andrea Araldo, Matteo Ignaccolo. Submitted14November2024; official arXiv comments identify EWGT September2024. DOI10.48550/arXiv.2411.11899. Preserve the exact2024version read for C2-13. A later2026Transportmetrica A title differs; publisher DOI10.1080/23249935.2026.2650136 was attempted but direct fetch failed in root, so do not silently replace the version or invent journal pagination.",
+    "tex": "\\bibitem{leonardi2024}\nP.~Leonardi, V.~Torrisi, A.~Araldo, and M.~Ignaccolo.\n\\newblock Data-driven assessment for the predictability of On-Demand Responsive Transit.\n\\newblock arXiv:2411.11899v1, 2024. EURO Working Group on Transportation, Lund, tháng 9/2024.\n\\newblock \\url{https://doi.org/10.48550/arXiv.2411.11899}",
+    "register_ids": [
+      "J21",
+      "C2-13"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "lu2024",
+    "status": "VERIFIED",
+    "metadata": "C. Lu and N. Kühnel. To Wait or to Cruise: The Trade-Off Between Waiting Time and Detours for Service Efficiency in Ride-pooling Systems. Bản tiền ấn, Technische Universität Berlin, DepositOnce, 2024.",
+    "url": "https://depositonce.tu-berlin.de/items/fa1164ba-ed61-4775-a1ac-253d80e1758a",
+    "notes": "Chengqi Lu, Nico Kühnel. Official DepositOnce page: issued1October2024; deposited14October2024; submitted preprint, DOI10.14279/depositonce-21472. Metadata agrees with C2-14. Later final2025Case Studies on Transport Policy21:101499, DOI10.1016/j.cstp.2025.101499, discovered on official publisher search index; direct DOI/full text fetch failed in root. Cite exact2024version until the final passages are checked.",
+    "tex": "\\bibitem{lu2024}\nC.~Lu and N.~Kühnel.\n\\newblock To Wait or to Cruise: The Trade-Off Between Waiting Time and Detours for Service Efficiency in Ride-pooling Systems.\n\\newblock Bản tiền ấn, Technische Universität Berlin, DepositOnce, 2024.\n\\newblock \\url{https://doi.org/10.14279/depositonce-21472}",
+    "register_ids": [
+      "J22",
+      "C2-14"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "hu2022",
+    "status": "VERIFIED",
+    "metadata": "X. Hu, T. Binaykiya, E. Frank, and O. Cirit. DeeprETA: An ETA Post-processing System at Scale. arXiv:2206.02127v1, 2022.",
+    "url": "https://arxiv.org/abs/2206.02127 ; https://arxiv.org/html/2206.02127v1",
+    "notes": "Ordered authors Xinyu Hu, Tanmay Binaykiya, Eric Frank, Olcay Cirit. Submitted5June2022; DOI10.48550/arXiv.2206.02127; no journal-ref. Full official HTML read: user-facing quantiles/expectiles and residual correction of route-engine ETA. The replacement of the blog by a full paper is valid. The correct current DeepETA blog URL was reachable in this audit, so its alleged dead link does not invalidate hu2022.",
+    "tex": "\\bibitem{hu2022}\nX.~Hu, T.~Binaykiya, E.~Frank, and O.~Cirit.\n\\newblock DeeprETA: An ETA Post-processing System at Scale.\n\\newblock arXiv:2206.02127v1, 2022.\n\\newblock \\url{https://doi.org/10.48550/arXiv.2206.02127}",
+    "register_ids": [
+      "J35",
+      "C2-15"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "molenbruch2017",
+    "status": "CORRECTED",
+    "metadata": "Y. Molenbruch, K. Braekers, and A. Caris. Operational effects of service level variations for the dial-a-ride problem. Central European Journal of Operations Research, 25(1):71–90, 2017.",
+    "url": "https://link.springer.com/article/10.1007/s10100-015-0422-7",
+    "notes": "Register J25 year2015 → journal issue year2017. Published online5October2015, issueMarch2017. Authors Yves Molenbruch, Kris Braekers, An Caris; DOI10.1007/s10100-015-0422-7. Ch2BIB and C2-12 already use correct2017; no correction to that writer entry. Do not create molenbruch2015 alias.",
+    "tex": "\\bibitem{molenbruch2017}\nY.~Molenbruch, K.~Braekers, and A.~Caris.\n\\newblock Operational effects of service level variations for the dial-a-ride problem.\n\\newblock \\emph{Central European Journal of Operations Research}, 25(1):71--90, 2017.\n\\newblock \\url{https://doi.org/10.1007/s10100-015-0422-7}",
+    "register_ids": [
+      "J25",
+      "C2-12"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "bansal2019",
+    "status": "VERIFIED",
+    "metadata": "P. Bansal, Y. Liu, R. Daziano, and S. Samaranayake. Can Mobility-on-Demand services do better after discerning reliability preferences of riders?. arXiv:1904.07987v1, 2019.",
+    "url": "https://arxiv.org/abs/1904.07987",
+    "notes": "Ordered authors Prateek Bansal, Yang Liu, Ricardo Daziano, Samitha Samaranayake; official arXiv submitted16April2019. Existing reference matches apart from harmless title capitalisation. Archival DOI10.48550/arXiv.1904.07987; no journal pagination claimed. Legacy only; not an active or planned citation.",
+    "tex": "\\bibitem{bansal2019}\nP.~Bansal, Y.~Liu, R.~Daziano, and S.~Samaranayake.\n\\newblock Can Mobility-on-Demand services do better after discerning reliability preferences of riders?.\n\\newblock arXiv:1904.07987v1, 2019.\n\\newblock \\url{https://arxiv.org/abs/1904.07987}",
+    "register_ids": [],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "syed2021",
+    "status": "VERIFIED",
+    "metadata": "A. A. Syed, F. Dandl, B. Kaltenhäuser, and K. Bogenberger. Density Based Distribution Model for Repositioning Strategies of Ride Hailing Services. Frontiers in Future Transportation, 2:681451, 2021.",
+    "url": "https://www.frontiersin.org/journals/future-transportation/articles/10.3389/ffutr.2021.681451/full",
+    "notes": "Arslan Ali Syed, Florian Dandl, Bernd Kaltenhäuser, Klaus Bogenberger; publisher full text opened;14June2021; DOI10.3389/ffutr.2021.681451. J19 identifies paper correctly. No thesis-specific forecast formula verified here. Register-only; not added to draft without a citation.",
+    "tex": "\\bibitem{syed2021}\nA.~A.~Syed, F.~Dandl, B.~Kaltenhäuser, and K.~Bogenberger.\n\\newblock Density Based Distribution Model for Repositioning Strategies of Ride Hailing Services.\n\\newblock \\emph{Frontiers in Future Transportation}, 2:681451, 2021.\n\\newblock \\url{https://doi.org/10.3389/ffutr.2021.681451}",
+    "register_ids": [
+      "J19"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "gardner1985",
+    "status": "VERIFIED",
+    "metadata": "E. S. Gardner, Jr., and E. McKenzie. Forecasting Trends in Time Series. Management Science, 31(10):1237–1246, 1985.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.31.10.1237",
+    "notes": "Publisher names Everette S. Gardner, Jr., Ed. McKenzie; printedOctober1985; DOI10.1287/mnsc.31.10.1237. J20 metadata confirmed. Register-only, not planned in outline Ch1–Ch2 or cited in scanned drafts.",
+    "tex": "\\bibitem{gardner1985}\nE.~S.~Gardner, Jr., and E.~McKenzie.\n\\newblock Forecasting Trends in Time Series.\n\\newblock \\emph{Management Science}, 31(10):1237--1246, 1985.\n\\newblock \\url{https://doi.org/10.1287/mnsc.31.10.1237}",
+    "register_ids": [
+      "J20"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "uberxshare",
+    "status": "VERIFIED",
+    "metadata": "Uber. Share a Ride with UberX Share - Save Up to 20%. Trang sản phẩm UberX Share; không ghi năm xuất bản. Truy cập ngày 13/10/2026.",
+    "url": "https://www.uber.com/us/en/ride/uberx-share/",
+    "notes": "Official page opened13October2026. FAQ explicitly qualifies arrival times and states8minutes average added time. No per-rider8minute guarantee inferred. Corporate author; volume/issue/pages/DOI not applicable. Proposed canonical key for outline J28.",
+    "tex": "\\bibitem{uberxshare}\nUber.\n\\newblock Share a Ride with UberX Share - Save Up to 20%.\n\\newblock Trang sản phẩm UberX Share; không ghi năm xuất bản. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://www.uber.com/us/en/ride/uberx-share/}",
+    "register_ids": [
+      "J28"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "moiaexpress",
+    "status": "VERIFIED",
+    "metadata": "MOIA. MOIA Express booking. Trung tâm trợ giúp MOIA; không ghi năm xuất bản. Truy cập ngày 13/10/2026.",
+    "url": "https://help.moia.io/hc/en-us/articles/360020795318-MOIA-Express-booking",
+    "notes": "Official help page opened; optional paid upgrade and shorter arrival window confirmed. No quantified width or deterministic arrival guarantee given. Corporate author, no DOI or pagination. Proposed canonical key for planned J31.",
+    "tex": "\\bibitem{moiaexpress}\nMOIA.\n\\newblock MOIA Express booking.\n\\newblock Trung tâm trợ giúp MOIA; không ghi năm xuất bản. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://help.moia.io/hc/en-us/articles/360020795318-MOIA-Express-booking}",
+    "register_ids": [
+      "J31"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "doordash2024",
+    "status": "VERIFIED",
+    "metadata": "C. Zhang, L. Warne, Z. Jiang, Q. Xu, H. Jenq, J. Luo, and P. Varma. Improving ETAs with multi-task models, deep learning, and probabilistic forecasts. DoorDash, ngày 12/3/2024. Truy cập ngày 13/10/2026.",
+    "url": "https://careersatdoordash.com/blog/improving-etas-with-multi-task-models-deep-learning-and-probabilistic-forecasts/",
+    "notes": "Official byline order Chi Zhang, Lewis Warne, Ziqi Jiang, Qingyang Xu, Hubert Jenq, Jianzhe Luo, Pradeep Varma. Publisher date12March2024. Read two-layer distribution-prediction and decision architecture and ETA consistency guardrail. Proposed key for J35 DoorDash example; no DOI,volume,issue,pages.",
+    "tex": "\\bibitem{doordash2024}\nC.~Zhang, L.~Warne, Z.~Jiang, Q.~Xu, H.~Jenq, J.~Luo, and P.~Varma.\n\\newblock Improving ETAs with multi-task models, deep learning, and probabilistic forecasts.\n\\newblock DoorDash, ngày 12/3/2024. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://careersatdoordash.com/blog/improving-etas-with-multi-task-models-deep-learning-and-probabilistic-forecasts/}",
+    "register_ids": [
+      "J35"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "deepeta2022",
+    "status": "VERIFIED",
+    "metadata": "T. Binaykiya, X. Hu, O. Cirit, and R. Hora. DeepETA: How Uber Predicts Arrival Times Using Deep Learning. Uber, ngày 10/2/2022. Truy cập ngày 13/10/2026.",
+    "url": "https://www.uber.com/us/en/blog/deepeta-how-uber-predicts-arrival-times/",
+    "notes": "Official byline Tanmay Binaykiya, Xinyu Hu, Olcay Cirit, Ramit Hora; date10February2022. Correct current URL opened successfully; this differs from the dead URL reported by Ch2 writer. Do not add a redundant blog bibitem: hu2022 fulfils the Uber technical-source role and is the version cited by Ch2.",
+    "tex": "\\bibitem{deepeta2022}\nT.~Binaykiya, X.~Hu, O.~Cirit, and R.~Hora.\n\\newblock DeepETA: How Uber Predicts Arrival Times Using Deep Learning.\n\\newblock Uber, ngày 10/2/2022. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://www.uber.com/us/en/blog/deepeta-how-uber-predicts-arrival-times/}",
+    "register_ids": [
+      "J35"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "ortools",
+    "status": "CORRECTED",
+    "metadata": "L. Perron and V. Furnon. OR-Tools, phiên bản 9.15. Google, 2026. Gói Google.OrTools 9.15.6755; truy cập ngày 13/10/2026.",
+    "url": "https://developers.google.com/optimization/support/cite ; https://github.com/google/or-tools/releases/tag/v9.15 ; https://www.nuget.org/packages/Google.OrTools/9.15.6755",
+    "notes": "Old unversioned software year2024 → explicitly version9.15(2026). Official suite citation authors Laurent Perron, Vincent Furnon; official release/NuGet dated12January2026. Read C:/Code/RideBound-noworse/src/RideBound.Solvers.OrTools/RideBound.Solvers.OrTools.csproj:9: package9.15.6755. This verifies current project dependency, not every historical binary. No DOI/pages. Keep suite key, do not mislabel as routing library or CP-SAT-specific paper.",
+    "tex": "\\bibitem{ortools}\nL.~Perron and V.~Furnon.\n\\newblock OR-Tools, phiên bản 9.15.\n\\newblock Google, 2026. Gói Google.OrTools 9.15.6755; truy cập ngày 13/10/2026.\n\\newblock \\url{https://developers.google.com/optimization}",
+    "register_ids": [],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "tlc",
+    "status": "VERIFIED",
+    "metadata": "New York City Taxi \\& Limousine Commission. TLC Trip Record Data. Trang dữ liệu; không ghi năm xuất bản. Truy cập ngày 13/10/2026.",
+    "url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+    "notes": "Official title and corporate author opened independently. No volume/issue/pages/DOI; add current access date. C2-16 writer12October2026 access is valid for that earlier retrieval; this entry records this audit13October2026.",
+    "tex": "\\bibitem{tlc}\nNew York City Taxi \\& Limousine Commission.\n\\newblock TLC Trip Record Data.\n\\newblock Trang dữ liệu; không ghi năm xuất bản. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page}",
+    "register_ids": [
+      "C2-16"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "horl2022",
+    "status": "CORRECTED",
+    "metadata": "S. Hörl and F. Zwick. Traffic uncertainty in on-demand high-capacity ride-pooling. Trong 101st Annual Meeting of the Transportation Research Board, Washington, D.C., tháng 1/2022. ETH Zurich Research Collection, 2022.",
+    "url": "https://www.ivt.ethz.ch/en/vpl/publications/working-papers.html ; https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/561639/ab1659.pdf?isAllowed=y&sequence=1",
+    "notes": "Sebastian Hörl, Felix Zwick, in order; ETH AB1659 and repository cover agree2022conference paper; DOI10.3929/ethz-b-000561639. Brief candidate Elsevier file → Sharif Azadeh2022, not Hörl–Zwick. Correct local ETH PDF confirmed independently;17physical pages including cover,16numbered manuscript pages. Equation7 and constraints9–10 match manuscriptp8. No verified journal version found; do not invent journal volume or proceedings pagination. See HORL-ZWICK-RESOLUTION.md.",
+    "tex": "\\bibitem{horl2022}\nS.~Hörl and F.~Zwick.\n\\newblock Traffic uncertainty in on-demand high-capacity ride-pooling.\n\\newblock Trong \\emph{101st Annual Meeting of the Transportation Research Board}, Washington, D.C., tháng 1/2022. ETH Zurich Research Collection, 2022.\n\\newblock \\url{https://doi.org/10.3929/ethz-b-000561639}",
+    "register_ids": [
+      "J01",
+      "J02",
+      "J03",
+      "J04",
+      "J05",
+      "C2-01",
+      "C2-04"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "yu2022",
+    "status": "VERIFIED",
+    "metadata": "Q. Yu, Y. Zhang, and Y.-P. Zhou. Delay Information in Virtual Queues: A Large-Scale Field Experiment on a Major Ride-Sharing Platform. Management Science, 68(8):5745–5757, 2022.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2022.4448",
+    "notes": "Qiuping Yu,Yiming Zhang,Yong-Pin Zhou; publisher metadata and abstract opened independently. DOI10.1287/mnsc.2022.4448; online8June2022,issueAugust2022. Confirms C2-19 bibliographic identity and abstract scope only; do not imply full-body reading.",
+    "tex": "\\bibitem{yu2022}\nQ.~Yu, Y.~Zhang, and Y.-P.~Zhou.\n\\newblock Delay Information in Virtual Queues: A Large-Scale Field Experiment on a Major Ride-Sharing Platform.\n\\newblock \\emph{Management Science}, 68(8):5745--5757, 2022.\n\\newblock \\url{https://doi.org/10.1287/mnsc.2022.4448}",
+    "register_ids": [
+      "J33",
+      "C2-19"
+    ],
+    "body_status": "ABSTRACT ONLY"
+  },
+  {
+    "key": "cohen2022",
+    "status": "VERIFIED",
+    "metadata": "M. C. Cohen, M. D. Fiszer, and B. J. Kim. Frustration-Based Promotions: Field Experiments in Ride-Sharing. Management Science, 68(4):2432–2464, 2022.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2021.3991",
+    "notes": "Maxime C.Cohen,Michael D.Fiszer,Baek Jung Kim. Publisher issueApril2022; first online31August2021, so2021in DOI/online citation does not change issue year2022. DOI10.1287/mnsc.2021.3991. J27 register-only; abstract/metadata read, not used to extend business-value claims.",
+    "tex": "\\bibitem{cohen2022}\nM.~C.~Cohen, M.~D.~Fiszer, and B.~J.~Kim.\n\\newblock Frustration-Based Promotions: Field Experiments in Ride-Sharing.\n\\newblock \\emph{Management Science}, 68(4):2432--2464, 2022.\n\\newblock \\url{https://doi.org/10.1287/mnsc.2021.3991}",
+    "register_ids": [
+      "J27"
+    ],
+    "body_status": "ABSTRACT ONLY"
+  },
+  {
+    "key": "watkins2011",
+    "status": "VERIFIED",
+    "metadata": "K. E. Watkins, B. Ferris, A. Borning, G. S. Rutherford, and D. Layton. Where Is My Bus? Impact of mobile real-time information on the perceived and actual wait time of transit riders. Transportation Research Part A: Policy and Practice, 45(8):839–848, 2011.",
+    "url": "https://ojp-content.s3.us-east-2.amazonaws.com/NHI/Old/BaseImages/2014/04/d.pdf",
+    "notes": "Full article first page opened: Kari Edison Watkins,Brian Ferris,Alan Borning,G.Scott Rutherford,David Layton. DOI10.1016/j.tra.2011.06.010. J37 paper identified as this article, not the separate Ferris-first2011TRB report. Register-only; no new thesis claim inserted.",
+    "tex": "\\bibitem{watkins2011}\nK.~E.~Watkins, B.~Ferris, A.~Borning, G.~S.~Rutherford, and D.~Layton.\n\\newblock Where Is My Bus? Impact of mobile real-time information on the perceived and actual wait time of transit riders.\n\\newblock \\emph{Transportation Research Part A: Policy and Practice}, 45(8):839--848, 2011.\n\\newblock \\url{https://doi.org/10.1016/j.tra.2011.06.010}",
+    "register_ids": [
+      "J37"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "uberdelayed2026",
+    "status": "VERIFIED",
+    "metadata": "Uber. Introducing Delayed Ride Guarantee. Uber, ngày 3/8/2026. Truy cập ngày 13/10/2026.",
+    "url": "https://www.uber.com/us/en/blog/delay-ride-guarantee/",
+    "notes": "Official current page dated3August2026. Driver fare adjustment after eligible pickup-to-dropoff trip overruns; matched shared rides excluded. J29 optional source, not an arrival-time guarantee for passengers. No DOI or pagination. Do not infer original launch date from current page date.",
+    "tex": "\\bibitem{uberdelayed2026}\nUber.\n\\newblock Introducing Delayed Ride Guarantee.\n\\newblock Uber, ngày 3/8/2026. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://www.uber.com/us/en/blog/delay-ride-guarantee/}",
+    "register_ids": [
+      "J29"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "lyftscheduled",
+    "status": "VERIFIED",
+    "metadata": "Lyft. Scheduled rides for riders. Trung tâm trợ giúp Lyft; không ghi năm xuất bản. Truy cập ngày 13/10/2026.",
+    "url": "https://help.lyft.com/hc/en-us/all/articles/115013078668-Scheduled-rides-for-passengers",
+    "notes": "Official help page opened; eligible scheduled rides to airport have tiered Lyft Credits. J30 register-only; market eligibility matters, and pickup promise is distinct from dropoff. No DOI,pagination,publication date invented.",
+    "tex": "\\bibitem{lyftscheduled}\nLyft.\n\\newblock Scheduled rides for riders.\n\\newblock Trung tâm trợ giúp Lyft; không ghi năm xuất bản. Truy cập ngày 13/10/2026.\n\\newblock \\url{https://help.lyft.com/hc/en-us/all/articles/115013078668-Scheduled-rides-for-passengers}",
+    "register_ids": [
+      "J30"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "lyftpatent2024",
+    "status": "VERIFIED",
+    "metadata": "R. M. Ali, N. C. Bhupalam, N. R. Chainani, V. C.-j. Chang, C. C. Chheda, P. Gerstoft, I. Lobel, J. Luo, S. Martin, G.-B. Richard de Capele d'Hautpoul, and A. M. Weinstein. Systems and methods for enhanced transportation dispatch. Bằng sáng chế US12182741B2, ngày 31/12/2024; Lyft Inc.",
+    "url": "https://patents.google.com/patent/US12182741B2/en",
+    "notes": "Published grant reproduction opened. Ordered inventor names: Rafah Mujtaba Ali; Nihar Chandra Bhupalam; Neil Rajiv Chainani; Vincent Chih-jye Chang; Chirag Chhagan Chheda; Philip Gerstoft; Ilan Lobel; Jianzhe Luo; Sebastien Martin; Guy-Baptiste Richard de Capele d'Hautpoul; Alexander Michael Weinstein. J34 register-only. No journal/DOI/pages; document identity verified, no legal-status or claim-scope conclusion.",
+    "tex": "\\bibitem{lyftpatent2024}\nR.~M.~Ali, N.~C.~Bhupalam, N.~R.~Chainani, V.~C.-j.~Chang, C.~C.~Chheda, P.~Gerstoft, I.~Lobel, J.~Luo, S.~Martin, G.-B.~Richard de Capele d'Hautpoul, and A.~M.~Weinstein.\n\\newblock Systems and methods for enhanced transportation dispatch.\n\\newblock Bằng sáng chế US12182741B2, ngày 31/12/2024; Lyft Inc.\n\\newblock \\url{https://patents.google.com/patent/US12182741B2/en}",
+    "register_ids": [
+      "J34"
+    ],
+    "body_status": "METADATA VERIFIED"
+  },
+  {
+    "key": "ecfr37131",
+    "status": "CANNOT VERIFY",
+    "metadata": "49 CFR §37.131, Service criteria for complementary paratransit. Current-edition text and full publication metadata not independently retrieved.",
+    "url": "https://www.ecfr.gov/current/title-49/subtitle-A/part-37/subpart-F/section-37.131",
+    "notes": "J36 current primary page now redirects to Federal Register request-access page. Tried official URL; do not upgrade register claim from an inaccessible current text or infer current wording from an older FTA report. Optional register-only source; no bibitem included.",
+    "tex": "",
+    "register_ids": [
+      "J36"
+    ],
+    "body_status": "CANNOT VERIFY"
+  }
+]

@@ -1,0 +1,10 @@
+- **Q1:** Event-driven dispatch; 613 rounds in the checked cell. Created the [full report](E:/Code/Report_INT3508/ridebound-scratchpad/optimize/codex-debate/codex-work/R26-CH3-OPEN-QUESTIONS-CODEX.md).
+- **Q2:** Main C-120 runs span 118.02–154.93 simulated minutes.
+- **Q3:** Complete 15-revision trace retained; script and output unchanged; no unchanged-p/increased-allowance-use case found in the checked panel.
+- **Q4:** Policy meanings verified; naming origins **CANNOT ANSWER**.
+- **Q5:** Selector order verified; written motivation **CANNOT ANSWER**.
+- **Q6:** Whole-run wall time, not decision-call latency; Windows recorded, full hardware specification unavailable.
+- **Q7:** Cause of the observed −1 ms moves **CANNOT ANSWER**.
+- **Q8:** All eight snow runs used runner-tier3-v2 and no-worse-than-reference-v1 recovery.
+- **Q9:** Enabled configurations use K=2; sham K=1; OFF has no configured K.
+- **Q10:** [TRB 2022](https://www.ivt.ethz.ch/en/vpl/publications/working-papers.html), equation (7), manuscript pages 1–16; proceedings pagination **CANNOT ANSWER**.

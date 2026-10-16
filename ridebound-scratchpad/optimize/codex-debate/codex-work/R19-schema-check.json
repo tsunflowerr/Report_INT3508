@@ -1,0 +1,11 @@
+{
+  "scope": "schema compatibility on one archived C30 baseline, no C120 outputs or analyzer main",
+  "checks": [
+    "all decision acknowledgement identities match",
+    "certificate normalOperation is boolean",
+    "prune collection exists",
+    "terminal ledger/completed/alighted sets match",
+    "published projection equals acknowledged action",
+    "signed/absolute delta and cumulative before/after ledger agree"
+  ]
+}

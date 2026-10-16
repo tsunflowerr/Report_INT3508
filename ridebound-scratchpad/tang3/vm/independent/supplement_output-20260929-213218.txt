@@ -1,0 +1,26 @@
+## Promise publications vs actual drop-off time, W5 w08
+C-30: completed=90; last promise dropEta == actual alight time: 90; last publication at/after alight: 90; publications at/after alight: 90; moved>30s all pubs=11/90; moved>30s using only pubs strictly before alight=11/90 (0.1222)
+V-30b: completed=90; last promise dropEta == actual alight time: 90; last publication at/after alight: 90; publications at/after alight: 90; moved>30s all pubs=11/90; moved>30s using only pubs strictly before alight=11/90 (0.1222)
+
+## V-30b vs C-30 W4 w08 first divergent decision
+decisions compared=771 differing per-decision fleet lists=65 first index=634
+  idx 634: C-30 simT=6394000 types=['requestAccepted', 'vehiclePlanUpdated'] | V-30b simT=6394000 types=['requestRejected'] normal=False witnesses(stage,code)=Counter({('forcedReference', 'COMMITMENT_BUDGET_EXCEEDED'): 7})
+  idx 635: C-30 simT=6394000 types=[] | V-30b simT=6399787 types=['vehiclePlanUpdated'] normal=False witnesses(stage,code)=Counter({('forcedReference', 'COMMITMENT_BUDGET_EXCEEDED'): 7})
+  idx 636: C-30 simT=6399787 types=['vehiclePlanUpdated'] | V-30b simT=6399787 types=[] normal=False witnesses(stage,code)=Counter({('forcedReference', 'COMMITMENT_BUDGET_EXCEEDED'): 7})
+  V-30b W4 w08 indices of acked decisions with forcedNoWorse witnesses: [169, 199, 272, 304, 342, 398, 413, 429, 452, 454, 491, 521, 552, 554, 574, 579, 641, 668, 670, 690, 708]
+
+## forcedNoWorse decisions in V-30b cells whose fleet actions equal C-30
+  W1 w08: forcedNoWorse decisions=8, of which per-decision fleet actions identical to C-30=8
+  W1 w17: forcedNoWorse decisions=11, of which per-decision fleet actions identical to C-30=11
+  W2 w08: forcedNoWorse decisions=23, of which per-decision fleet actions identical to C-30=23
+  W2 w17: forcedNoWorse decisions=11, of which per-decision fleet actions identical to C-30=11
+  W3 w08: forcedNoWorse decisions=2, of which per-decision fleet actions identical to C-30=2
+  W3 w17: forcedNoWorse decisions=14, of which per-decision fleet actions identical to C-30=14
+  W4 w08: forcedNoWorse decisions=21, of which per-decision fleet actions identical to C-30=16
+  W4 w17: forcedNoWorse decisions=16, of which per-decision fleet actions identical to C-30=16
+  W5 w08: forcedNoWorse decisions=9, of which per-decision fleet actions identical to C-30=9
+  W5 w17: forcedNoWorse decisions=3, of which per-decision fleet actions identical to C-30=3
+
+## passengerAlighted multiplicity (raw rescan)
+C-30: requests with alight events=90, max events per request=1, total=90
+V-30b: requests with alight events=90, max events per request=1, total=90

@@ -1,0 +1,239 @@
+\section{Kiểm tra T38: dịch vụ, miễn trừ và biên nhìn thấy}
+\label{muc:t38}
+\label{muc:biendukien-t38}
+
+\subsection{Thiết kế được cố định trước tập kiểm tra}
+
+T38 chuyển từ tập ô phát triển sang ngày 14--18/11, bốn mẫu mỗi ngày, ba khung
+07:00--09:00, 08:00--10:00 và 17:00--19:00. Nó hỏi hai điều: cổng hành vi còn
+giữ số khách gần các cổng khác khi phục hồi hay không, và một khoảng dự phòng
+ước lượng trước có bao phần nhìn thấy trong các ô còn lại hay không. Mỗi ô
+vẫn có 108 yêu cầu, 8 xe và mạng nhỏ 96 nút. Biến thiên thời gian đi lấy từ
+chuỗi thực; không có kịch bản khuếch đại tổng hợp trong đợt này.
+
+Kế hoạch T38 được ghi trong Git ở commit \texttt{323a8d9}, trước lần hiệu chỉnh
+đầu tiên ngày 01/10/2026. Tệp khoảng dự phòng được ghi ở commit
+\texttt{19517b0}, trước lần kiểm tra đầu tiên. Những mốc này xác nhận thứ tự
+cố định kế hoạch và ngưỡng, không biến thiết kế thành xác nhận độc lập:
+các trần, biên chấp nhận và cách chia được chọn sau khi đã xem các đợt phát triển.
+Tập ô ngày 14--18/11 cũng từng được dùng ở tầng 2 với phiên bản thế giới khác.
+Trong khóa luận, T38 được gọi là \emph{thăm dò có kế hoạch cố định trước tập kiểm tra}.
+
+Kế hoạch dự kiến 60 ô. Mười một ô không dựng được vì vượt trần số nút của
+công cụ chuẩn hóa: bốn ô tối ngày 15/11, ba ô sáng 07:00 ngày 17/11 và bốn ô
+sáng 07:00 ngày 18/11. Loại ô xảy ra ở bước dựng đầu vào, không theo kết quả
+dịch vụ. Dù vậy, nó làm thay đổi thành phần ngày và khung giờ; kết quả không
+đại diện cho toàn bộ 60 ô dự kiến.
+
+Bốn mẫu của mỗi ngày được chia theo nhóm $(\text{ngày},\text{mẫu})$, với hạt
+giống chia 20261001. Toàn bộ khung của cùng nhóm nằm cùng một phía. Có 15 ô
+hiệu chỉnh thuộc sáu nhóm và 34 ô kiểm tra thuộc 14 nhóm. Số ô sáng 07:00,
+sáng 08:00 và tối trong hiệu chỉnh là 4, 6, 5; trong kiểm tra là 9, 14, 11.
+Một ô hiệu chỉnh đã được đọc trong phép chạy thử, nên không được gọi toàn
+bộ tập hiệu chỉnh là dữ liệu chưa từng được xem.
+
+\subsection{Giao nhau của chuyến nguồn và đơn vị phân tích}
+
+
+Tách nhóm không đủ để khẳng định các chuyến ở hai phía rời nhau. Các tệp mẫu
+nhu cầu khác nhau vẫn có thể chứa cùng chuyến taxi gốc. Lần biên tập này nối
+108 bản ghi được chọn của mỗi ô về 20 tệp CSV gốc, dùng cặp ngày và
+\texttt{request\_id} trong CSV để nhận diện chuyến, rồi kiểm thời điểm yêu cầu
+và hai điểm đầu--cuối. Kết quả có \textbf{75 chuyến nguồn chung giữa hiệu chỉnh
+và kiểm tra}; các trường gốc trùng nhau. Số chuyến riêng biệt là 1.574 ở hiệu
+chỉnh và 3.505 ở kiểm tra. Số thứ tự dòng chỉ có nghĩa trong một tệp mẫu,
+nên không được dùng riêng số đó làm định danh chuyến.
+
+Giao nhau này không làm phép cộng số khách hoặc kiểm sổ cái sai. Nó làm yếu
+cách diễn giải phần kiểm tra như dữ liệu độc lập với hiệu chỉnh. Các ô cũng
+chia sẻ ngày, hệ số thời gian đi và một phần nhu cầu. Vì thế đơn vị báo cáo
+là ô, đơn vị nhóm khi chia là ngày--mẫu, còn đơn vị khách trong các tổng không
+phải các quan sát độc lập cho một kiểm định về quần thể.
+
+Các khoảng 95\% được báo trong T38 dùng 10.000 lần lấy lại mẫu có hoàn lại
+theo \emph{ô ghép cặp}, hạt giống 20261002. Cùng một chỉ số ô được lấy cho hai
+nhánh trong mỗi lần. Cách này giữ cặp so sánh nhưng chưa xử lý phụ thuộc giữa
+các ô cùng ngày hoặc chuyến nguồn. Khóa luận giữ chúng để đọc độ phân tán theo
+quy tắc phân tích đã ghi; không coi đó là khoảng suy luận đã hiệu chỉnh theo
+cụm hay bằng chứng tương đương trong quần thể. Không thêm kiểm định mới lên
+dữ liệu chưa đáp ứng giả thiết độc lập.
+
+\subsection{Số phục vụ gần nhau, nghĩa vụ khác nhau}
+
+Tập kiểm tra có 34 ô, tức $34\times108=3.672$ yêu cầu mỗi nhánh. Mỗi ô chạy năm
+nhánh: $U$, $C$-30, $M^{+}$-30, $M^{+}$-60 và $V$-30. Bảng~\ref{bang:t38-phucvu}
+giữ tổng phục vụ và hai loại gánh khác nhau. Các tỉ lệ ở hai dòng giữa là
+trung bình không trọng số của tỉ lệ từng ô; không phải gộp theo khách.
+
+\begin{table}[htbp]
+\centering
+\caption{Kết quả T38 trên 34 ô kiểm tra. ``Vượt lời hứa riêng'' dùng đại lượng
+của chính cổng; tỉ lệ quyết định miễn trừ có mẫu số khác tỉ lệ khách.}
+\label{bang:t38-phucvu}
+\small
+\begin{tabularx}{\linewidth}{@{}Xrrrr@{}}
+\toprule
+\textbf{Đại lượng} & \textbf{$C$-30} & \textbf{$M^{+}$-30} & \textbf{$M^{+}$-60} & \textbf{$V$-30}\\
+\midrule
+Yêu cầu hoàn tất & 2.338 & 2.338 & 2.347 & 2.336\\
+Tỉ lệ miễn trừ (\%) & 0,0 & 41,3 & 22,5 & 53,8\\
+Khách vượt lời hứa riêng (\%) & 0,0 & 14,5 & 4,2 & 21,6\\
+Ô có khách vượt lời hứa riêng & 0/34 & 28/34 & 22/34 & 34/34\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Tổng của $C$-30 bằng $M^{+}$-30 và hơn $V$-30 hai khách. Chênh theo ô có thể
+theo cả hai chiều, như Hình~\ref{hinh:t38-cap}. Trung bình $C-M^{+}$ là 0,000
+khách mỗi ô, khoảng lấy lại mẫu $[-0{,}147;\,0{,}118]$; $C-V$ là 0,059,
+khoảng $[-0{,}118;\,0{,}206]$. Chênh tuyệt đối lớn nhất ở một ô là hai khách.
+Theo quy tắc đã đặt của đợt này, các khoảng nằm trong biên $\pm2$ khách mỗi ô.
+Kết quả hỗ trợ sự gần nhau trong tập ô, không hỗ trợ ``$C$ phục vụ nhiều hơn''.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{hinh/t38_paired_final.pdf}
+\caption{Chênh số hoàn tất ghép cặp trên 34 ô T38. Mỗi dấu biểu diễn một ô;
+trùng vị trí là nhiều ô có cùng chênh. Không lấy số lần chạy chính sách làm
+số mẫu độc lập. Chi phí so với $U$ phân tán hơn chênh giữa các cổng.}
+\label{hinh:t38-cap}
+\end{figure}
+
+So với $U$, chi phí vẫn tồn tại. $U$ hoàn tất 2.434 yêu cầu, hơn $C$-30 96.
+Chênh trên tổng yêu cầu là $96/3.672\times100=2{,}61$ \emph{điểm phần trăm};
+nếu lấy số khách $U$ làm mẫu số thì giảm tương đối 3,94\%. Không được gọi
+cả hai là cùng một ``2,6\%''. Chênh trung bình là 2,824 khách mỗi ô, khoảng
+lấy lại mẫu $[1{,}794;\,3{,}824]$, nằm dưới trần chi phí dịch vụ năm khách mỗi ô của kế hoạch.
+Trần này là lựa chọn thăm dò sau phát triển, không phải mức chi phí đã được
+người vận hành hay hành khách chấp thuận.
+
+Chi phí không đồng đều: $U-C$ trải từ $-4$ đến $+9$ khách, và 21/34 ô có độ
+lớn chênh quá hai. Tổng thiếu của $C$ so với $U$ ở ba khung là 5, 39 và 52
+khách. $M^{+}$-60 phục vụ hơn $C$-30 chín khách; đây là mô tả ngoài phép so
+tương đương ở trần 30 giây, không được dùng để thay đổi giả thuyết sau khi
+đọc kết quả.
+
+Khác biệt lớn hơn nằm ở gánh phục hồi. Không quyết định nào của $C$ có miễn
+trừ trên cả 49 ô hiệu chỉnh và kiểm tra; giá trị sổ giờ trả lớn nhất là
+29,239 giây. Các cổng kia thường xuyên phải miễn trừ và vẫn có khách vượt
+đại lượng đã hứa. Tuy nhiên, ``0\%'' của $C$ là kiểm tuân thủ một nghĩa vụ
+hành vi hẹp, không phải tỉ lệ đến muộn bằng không. $C$-30 và $M^{+}$-30 có
+cùng toàn bộ chuỗi hành động ở 30/34 ô; $C$-30 và $V$-30 ở 27/34. Không thể
+suy ra cùng số phục vụ thì cùng khách được phục vụ hoặc cùng mọi giờ đến.
+
+Nếu gộp theo khách, tỉ lệ vượt lời hứa riêng của $M^{+}$-30 là
+$289/2.338=12{,}4\%$ và của $M^{+}$-60 là $79/2.347=3{,}4\%$,
+khác với 14,5\% và 4,2\% trong bảng. Việc giữ mẫu số và cách gộp giúp tránh
+biến một sự khác nhau về trọng số thành mâu thuẫn kết quả.
+
+Chỉ số chung E2 có trung bình theo ô 5,78\% với $C$-30 và 5,70\% với
+$M^{+}$-30 hoặc $V$-30. Chênh là 0,000857 theo thang tỉ lệ, tức 0,0857
+điểm phần trăm; khoảng lấy lại mẫu là $[-0{,}0082;\,0{,}2218]$ điểm.
+Nó nằm trong biên 0,02 theo thang tỉ lệ của kế hoạch, tức hai điểm phần trăm.
+Đây là kiểm trên một thước đo chung, không là xác nhận về hài lòng của người dùng.
+
+\subsection{Khoảng dự phòng từ phần thay đổi khi giữ tuyến}
+
+Đối với mỗi ô hiệu chỉnh $j$, điểm số $S_j$ là tổng biến động giữ tuyến lớn
+nhất theo khách đã được hứa, trên tọa độ giờ trả. Nếu một khách đã được hứa
+chưa hoàn tất thì quy tắc gán điểm vô hạn; không có trường hợp đó trong 185
+lần chạy hợp lệ. Lấy cực đại theo khách làm điểm của \emph{cả ô}, thay vì
+hiệu chỉnh một tỉ lệ theo từng lần sửa ETA.
+
+Quy tắc phân vị lấy cảm hứng từ dự báo conformal chia mẫu
+\cite{angelopoulos2023} đặt $\alpha=0{,}1$, với $n=15$ ô hiệu chỉnh:
+\begin{equation}
+ k=\left\lceil(n+1)(1-\alpha)\right\rceil=15,\qquad
+ \gamma=S_{(15)}=222{,}259\ \text{s}.
+\end{equation}
+Ở đây $S_{(15)}$ là điểm thứ 15 khi xếp tăng dần, tức điểm lớn nhất. Nó thuộc
+ô ngày 14/11, mẫu 2, khung 07:00; điểm cao thứ hai là 165,116 giây. Một ô
+quyết định toàn bộ khoảng dự phòng nên ước lượng khá nhạy với thành phần hiệu chỉnh.
+
+Khi phần giữ tuyến của mọi khách trong ô không quá $\gamma$, trần hành vi
+$\beta=30$ giây và bất đẳng thức ở Mục~\ref{muc:biendukien} cho
+$V_r\le\beta+\gamma=252{,}259$ giây đối với chuỗi lời hứa giờ trả được đo.
+Đây là biên có điều kiện cho \emph{biến động lời hứa}, không phải giới hạn
+trễ đến nơi so với giờ hẹn đầu. Biên dùng tổng độ lớn nên còn tính cả cập
+nhật sớm hơn; nó không thể thay một thỏa thuận mức dịch vụ
+(Service Level Agreement, SLA) về giờ trả thực tế.
+
+Trong dự báo conformal, bảo đảm độ phủ biên yêu cầu tính trao đổi được của
+các điểm hiệu chỉnh và điểm mới. T38 chưa chứng minh giả thiết này; các ô
+khác khung và chia sẻ ngày, chuyến nguồn. Vì thế công thức phân vị vẫn tính
+được nhưng khóa luận không nhận bảo đảm 90\% cho quần thể. Thứ tự niêm phong
+chỉ chứng minh không sửa $\gamma$ sau khi xem tập kiểm tra.
+
+\subsection{Độ phủ quan sát và một trường hợp ngoài biên}
+
+Hình~\ref{hinh:t38-diem} trình bày toàn bộ điểm của 15 ô hiệu chỉnh và 34 ô
+kiểm tra. Hai điểm kiểm tra vượt $\gamma$: ngày 14/11, mẫu 3, khung 07:00
+có 252,492 giây; ngày 15/11, mẫu 2, cùng khung có 226,400 giây. Tần suất
+điểm không vượt ngưỡng là $32/34=94{,}1\%$. Riêng 07:00--09:00 là
+$7/9=77{,}8\%$; các khung khác là 14/14 và 11/11. Độ phủ chung cao hơn
+không loại được sự thiếu phủ tại khung sáng sớm.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{hinh/t38_scores_final.pdf}
+\caption{Điểm số theo ô trong T38, tách hiệu chỉnh và kiểm tra. Đường ngưỡng
+$\gamma=222{,}259$ giây được cố định trước tập kiểm tra. Điểm số là phần giữ
+tuyến lớn nhất theo khách trong một ô, khác với biến động nhìn thấy $V$.}
+\label{hinh:t38-diem}
+\end{figure}
+
+Vượt $\gamma$ không tự động có nghĩa $V$ vượt $\beta+\gamma$. Trong hai ô
+vừa nêu, giá trị hành vi lớn nhất bằng không. Ô 226,400 giây vẫn nằm dưới
+biên nhìn thấy 252,259 giây; ô 252,492 giây vượt biên đúng 0,233 giây.
+Do đó có 32/34 ô được phủ theo \emph{điểm giữ tuyến}, nhưng 33/34 ô không có
+khách vượt \emph{biên nhìn thấy}. Ở 32 ô được phủ theo điểm, $V$ lớn nhất là
+216,005 giây và không có ngoại lệ đối với bất đẳng thức. Hai mẫu số giống
+nhau không làm hai sự kiện này trở thành cùng một chỉ số.
+
+Theo kế hoạch, tiêu chí không quá ba ô vượt điểm và biên không quá 300 giây
+đều đạt. Tuy nhiên, 300 giây là ngưỡng hữu dụng chọn sau phát triển; biên
+252,259 giây không đạt mốc tham chiếu 120 giây. Một khoảng rộng có thể dễ
+phủ hơn nhưng ít giá trị hứa hẹn hơn. Khóa luận giữ cả hai mốc để người đọc
+đánh giá, thay vì chỉ chọn mốc cho kết quả đạt.
+
+Cận trên Clopper--Pearson một phía 95\% đã báo cho 2/34 là 17,4\%, không
+nằm dưới 10\%. Cận này còn dựa trên mô hình nhị thức với các lần thử độc
+lập; phụ thuộc giữa các ô khiến không thể dùng nó như cận đã được bảo đảm
+cho thiết kế T38. Nó được giữ như giá trị danh nghĩa của phép tính ban đầu,
+không là kết luận về tỉ lệ vi phạm trong quần thể.
+
+\subsection{Độ tin cậy thực thi và điều được phép kết luận}
+
+Tổng 185 lần chạy được dùng gồm 15 hiệu chỉnh và 170 kiểm tra. Hai lần chạy
+lỗi hạ tầng được chạy lại, một do máy ngủ và một do quá hạn phản hồi; thư mục lỗi
+được giữ. Phân tích chỉ dùng lần chạy lại hoàn tất theo quy tắc đã ghi.
+Mỗi nhánh có cùng băm cấu hình trên mọi ô; các nhánh dùng cùng băm kiểm kê kho mã
+(inventory) và cùng chuỗi hệ số đúng mốc 900 giây. Băm kiểm kê bao gồm commit Git,
+đường dẫn, kích thước và nội dung các tệp được Git theo dõi hoặc chưa theo dõi nhưng
+không bị bỏ qua. Bản kiểm độc lập đọc quyết định và sự
+kiện xuống xe từ biên bản, rồi tái tính lịch sử ba mốc trong điểm kiểm tra
+cuối. Đối chiếu $|x|$, $|c|$, $|z|$ ở 382.006 lần sửa giờ trả không có sai
+khác trong phạm vi đó. Lần biên tập còn giải mã và tái kiểm băm các điểm
+kiểm tra cuối, không chỉ chép lại bảng báo cáo.
+
+Số phục vụ được đọc từ lịch sử vòng đời ở điểm kiểm tra cuối. Tệp tổng kết
+không cung cấp một trường số phục vụ độc lập thứ hai; không thể gọi phép
+đối chiếu đó là hai phép đo độc lập về dịch vụ. Kiểm băm bảo vệ tính toàn
+vẹn của khung ghi, không chứng minh mô hình đã phản ánh giao thông thực.
+
+Đợt này cho phép ghi nhận đón muộn tới 60 giây để tiếp tục mô phỏng. Có 43
+lần đón muộn ở $C$-30, 44 ở $M^{+}$-30 và $V$-30; độ muộn lớn nhất của
+các nhánh là 59,745 giây. Chúng không được miễn trừ bằng sổ hành vi: đây là
+quy tắc thực thi riêng của phiên bản thí nghiệm. Vì vậy 0 quyết định miễn
+trừ của $C$ không nói rằng mọi điều kiện đón nghiêm ngặt ban đầu đều thỏa.
+
+Bảy trong tám dự đoán niêm phong của T38 đúng. Dự đoán sai yêu cầu
+$M^{+}$-30 có không quá ba ô tối với khách vượt hạn chót, nhưng thực tế là
+5/11. Việc dự đoán được niêm phong không loại nhu cầu báo các thất bại;
+nó chỉ làm chúng có thể được kiểm và không sửa lại sau kết quả.
+
+Kết luận của T38 có phạm vi hẹp: trên tập ô đã dựng, số khách của các cổng
+30 giây gần nhau, cổng hành vi không cần miễn trừ, và khoảng dự phòng cố
+định bao phần nhìn thấy trong hầu hết ô. Nó không sửa thất bại của H6,
+không chứng minh độc lập giữa hiệu chỉnh và kiểm tra, không bảo đảm 90\%
+cho quần thể, và không xác nhận một lời hứa 120 giây ngoài sổ hành vi.

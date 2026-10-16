@@ -1,0 +1,1389 @@
+diff --git a/src/RideBound.Algorithms/Commitments/HardVectorCandidateAssessor.cs b/src/RideBound.Algorithms/Commitments/HardVectorCandidateAssessor.cs
+index 08cde88..cfbba63 100644
+--- a/src/RideBound.Algorithms/Commitments/HardVectorCandidateAssessor.cs
++++ b/src/RideBound.Algorithms/Commitments/HardVectorCandidateAssessor.cs
+@@ -88,12 +88,20 @@ public sealed class HardVectorCandidateAssessor
+     /// as a forced option instead of failing the vehicle. Any other rejection keeps
+     /// the fail-closed behaviour.
+     /// </param>
++    /// <param name="forcedNoWorse">
++    /// Exploratory no-worse-than-reference recovery (off by default; requires
++    /// <paramref name="forcedReferenceRecovery"/>). On a vehicle whose no-op was kept as forced,
++    /// every other candidate the validator rejected is validated again under the no-worse rule;
++    /// one that passes is kept as a forced option too, so the vehicle can still serve a new rider
++    /// when that does not make any overrun of the kept route worse.
++    /// </param>
+     public HardVectorCandidateAssessmentResult AssessAndFilter(
+         CommitmentMechanismContext context,
+         IReadOnlyList<VehicleCandidateSet> rawCandidateSets,
+         ICommitmentWarningProfileProvider? warningProfiles = null,
+         bool requireSafetyNoOp = false,
+-        bool forcedReferenceRecovery = false)
++        bool forcedReferenceRecovery = false,
++        bool forcedNoWorse = false)
+     {
+         ArgumentNullException.ThrowIfNull(context);
+         ArgumentNullException.ThrowIfNull(rawCandidateSets);
+@@ -105,6 +113,13 @@ public sealed class HardVectorCandidateAssessor
+                 nameof(forcedReferenceRecovery));
+         }
+ 
++        if (forcedNoWorse && !forcedReferenceRecovery)
++        {
++            throw new ArgumentException(
++                "No-worse recovery extends forced-reference recovery, so it requires it.",
++                nameof(forcedNoWorse));
++        }
++
+         var outputSets = new List<VehicleCandidateSet>(rawCandidateSets.Count);
+         var assessments = new List<HardVectorCandidateAssessment>();
+         var forcedVehicles = new List<VehicleId>();
+@@ -241,11 +256,12 @@ public sealed class HardVectorCandidateAssessor
+                 && noOpPrune is not null
+                 && hardValidationWitnesses.ContainsKey(noOpPrune.CandidateId))
+             {
+-                var forced = AssessForcedNoOp(
++                var forced = AssessForcedCandidate(
+                     context,
+                     noOps[0],
+                     set.VehicleId,
+-                    warningProfiles);
++                    warningProfiles,
++                    noWorse: false);
+ 
+                 if (forced.Witness is not null)
+                 {
+@@ -255,15 +271,53 @@ public sealed class HardVectorCandidateAssessor
+                 if (forced.Assessment is not null)
+                 {
+                     retained.Add(noOps[0]);
+-                    retained.Sort(
+-                        (left, right) => StringComparer.Ordinal.Compare(
+-                            left.CandidateId,
+-                            right.CandidateId));
+                     pruned.Remove(noOpPrune);
+                     hardPruned.Remove(noOpPrune);
+                     assessments.Add(forced.Assessment);
+                     forcedVehicles.Add(set.VehicleId);
+                     noOpPrune = null;
++
++                    if (forcedNoWorse)
++                    {
++                        // Only validator rejections can be relaxed; a candidate that could not be
++                        // applied, or failed physically, stays pruned. Ordinal order keeps it
++                        // deterministic.
++                        foreach (var prune in hardPruned
++                                     .Where(value => hardValidationWitnesses.ContainsKey(value.CandidateId))
++                                     .OrderBy(value => value.CandidateId, StringComparer.Ordinal)
++                                     .ToArray())
++                        {
++                            var candidate = set.Candidates.Single(
++                                value => value.CandidateId == prune.CandidateId);
++                            var relaxed = AssessForcedCandidate(
++                                context,
++                                candidate,
++                                set.VehicleId,
++                                warningProfiles,
++                                noWorse: true);
++
++                            if (relaxed.Witness is not null)
++                            {
++                                return Failure(relaxed.Witness, candidate, set.VehicleId);
++                            }
++
++                            if (relaxed.Assessment is null)
++                            {
++                                continue;
++                            }
++
++                            retained.Add(candidate);
++                            pruned.Remove(prune);
++                            hardPruned.Remove(prune);
++                            hardValidationWitnesses.Remove(prune.CandidateId);
++                            assessments.Add(relaxed.Assessment);
++                        }
++                    }
++
++                    retained.Sort(
++                        (left, right) => StringComparer.Ordinal.Compare(
++                            left.CandidateId,
++                            right.CandidateId));
+                 }
+             }
+ 
+@@ -354,15 +408,17 @@ public sealed class HardVectorCandidateAssessor
+     }
+ 
+     /// <summary>
+-    /// Validates the rejected no-op again with its vehicle named as forced-reference.
+-    /// Returns no assessment when the validator still rejects it (the rejection was not
+-    /// a deadline or budget gate), and a witness only for a ranking failure.
++    /// Validates a rejected candidate again with its vehicle named as forced-reference: the
++    /// no-op (kept route, <paramref name="noWorse"/> false) or, under no-worse recovery, a
++    /// changed route of the same vehicle. Returns no assessment when the validator still rejects
++    /// it, and a witness only for a ranking failure.
+     /// </summary>
+-    private ForcedNoOpResult AssessForcedNoOp(
++    private ForcedNoOpResult AssessForcedCandidate(
+         CommitmentMechanismContext context,
+         InsertionCandidate noOp,
+         VehicleId vehicleId,
+-        ICommitmentWarningProfileProvider? warningProfiles)
++        ICommitmentWarningProfileProvider? warningProfiles,
++        bool noWorse)
+     {
+         var updated = CandidateStateApplicator.Apply(
+             context.ReducedState.Run,
+@@ -387,7 +443,8 @@ public sealed class HardVectorCandidateAssessor
+                 InitialPromiseTrigger: context.InitialPromiseTrigger,
+                 CollectAllCommitmentWitnesses:
+                     context.CollectAllCommitmentWitnesses,
+-                ForcedReferenceVehicles: new[] { vehicleId }.ToFrozenSet()));
++                ForcedReferenceVehicles: new[] { vehicleId }.ToFrozenSet(),
++                ForcedNoWorse: noWorse));
+ 
+         if (!validation.IsValid || validation.ForcedExemptions.Count == 0)
+         {
+diff --git a/src/RideBound.Algorithms/Policies/SolverBackedRidePoolingPolicy.cs b/src/RideBound.Algorithms/Policies/SolverBackedRidePoolingPolicy.cs
+index ab02747..4c10a27 100644
+--- a/src/RideBound.Algorithms/Policies/SolverBackedRidePoolingPolicy.cs
++++ b/src/RideBound.Algorithms/Policies/SolverBackedRidePoolingPolicy.cs
+@@ -82,10 +82,17 @@ public sealed record SolverBackedRidePoolingPolicyOptions
+         PromiseLock freezeLocks = PromiseLock.None,
+         int maximumRepairRequestsConsideredPerVehicle = 0,
+         bool captureCandidatePortfolioEvidence = false,
+-        bool forcedReferenceRecovery = false)
++        bool forcedReferenceRecovery = false,
++        bool forcedNoWorseRecovery = false)
+     {
+         ArgumentNullException.ThrowIfNull(executionBudget);
+ 
++        if (forcedNoWorseRecovery && !forcedReferenceRecovery)
++        {
++            throw new ArgumentException(
++                "No-worse recovery extends forced-reference recovery, so it requires it.");
++        }
++
+         if (!Enum.IsDefined(policyKind)
+             || policyKind == RidePoolingPolicyKind.LeastCommitmentConsensus)
+         {
+@@ -145,6 +152,7 @@ public sealed record SolverBackedRidePoolingPolicyOptions
+             maximumRepairRequestsConsideredPerVehicle;
+         CaptureCandidatePortfolioEvidence = captureCandidatePortfolioEvidence;
+         ForcedReferenceRecovery = forcedReferenceRecovery;
++        ForcedNoWorseRecovery = forcedNoWorseRecovery;
+     }
+ 
+     public RidePoolingPolicyKind PolicyKind { get; }
+@@ -166,6 +174,13 @@ public sealed record SolverBackedRidePoolingPolicyOptions
+     /// the run.
+     /// </summary>
+     public bool ForcedReferenceRecovery { get; }
++
++    /// <summary>
++    /// Exploratory no-worse-than-reference extension of <see cref="ForcedReferenceRecovery"/>
++    /// (off by default): a forced vehicle may also choose a changed route that makes none of the
++    /// kept route's gate overruns worse, so it can still serve a new rider.
++    /// </summary>
++    public bool ForcedNoWorseRecovery { get; }
+ }
+ 
+ public sealed record SolverBackedPolicyDecision(
+@@ -315,7 +330,8 @@ public sealed class SolverBackedRidePoolingPolicy
+                                 ? warningProfiles
+                                 : null,
+                         requireSafetyNoOp: true,
+-                        forcedReferenceRecovery: policyOptions.ForcedReferenceRecovery);
++                        forcedReferenceRecovery: policyOptions.ForcedReferenceRecovery,
++                        forcedNoWorse: policyOptions.ForcedNoWorseRecovery);
+ 
+                     if (!assessed.IsSuccess)
+                     {
+@@ -357,7 +373,8 @@ public sealed class SolverBackedRidePoolingPolicy
+             effectivePolicies,
+             _commitmentValidator,
+             _physicalValidator,
+-            forcedReferenceVehicles);
++            forcedReferenceVehicles,
++            policyOptions.ForcedNoWorseRecovery);
+         var selected = _selector.Select(
+             candidates,
+             profile,
+@@ -424,8 +441,9 @@ public sealed class SolverBackedRidePoolingPolicy
+     }
+ 
+     /// <summary>
+-    /// The vehicles whose selected plan is a forced no-op; null when none is, so a run
+-    /// without a forced selection carries exactly the decision it had before.
++    /// The vehicles whose selected plan is a forced option (the kept no-op or, under no-worse
++    /// recovery, a changed route); null when none is, so a run without a forced selection
++    /// carries exactly the decision it had before.
+     /// </summary>
+     private static IReadOnlySet<VehicleId>? SelectedForcedVehicles(
+         FleetSelection selection,
+@@ -549,7 +567,8 @@ public sealed class SolverBackedRidePoolingPolicy
+         ICommitmentPolicyProvider effectivePolicies,
+         CommitmentDecisionValidator commitmentValidator,
+         PhysicalPlanValidator physicalValidator,
+-        IReadOnlySet<VehicleId>? forcedReferenceVehicles) : IFleetSelectionValidator
++        IReadOnlySet<VehicleId>? forcedReferenceVehicles,
++        bool forcedNoWorse) : IFleetSelectionValidator
+     {
+         public CandidateSelectionValidationResult Validate(FleetSelection selection)
+         {
+@@ -588,7 +607,8 @@ public sealed class SolverBackedRidePoolingPolicy
+                     context.SourceEventSequence,
+                     RevisionReasonCode: "WP4_SOLVER_SELECTION",
+                     InitialPromiseTrigger: context.InitialPromiseTrigger,
+-                    ForcedReferenceVehicles: forcedReferenceVehicles));
++                    ForcedReferenceVehicles: forcedReferenceVehicles,
++                    ForcedNoWorse: forcedNoWorse));
+             return validated.IsValid
+                 ? CandidateSelectionValidationResult.Valid()
+                 : CandidateSelectionValidationResult.Invalid(
+diff --git a/src/RideBound.Application/Commitments/CommitmentDecisionValidator.cs b/src/RideBound.Application/Commitments/CommitmentDecisionValidator.cs
+index fb0bd00..9de7983 100644
+--- a/src/RideBound.Application/Commitments/CommitmentDecisionValidator.cs
++++ b/src/RideBound.Application/Commitments/CommitmentDecisionValidator.cs
+@@ -57,7 +57,8 @@ public sealed record CommitmentValidationContext(
+     InitialPromiseTrigger InitialPromiseTrigger =
+         InitialPromiseTrigger.InitialAcceptance,
+     bool CollectAllCommitmentWitnesses = false,
+-    IReadOnlySet<VehicleId>? ForcedReferenceVehicles = null);
++    IReadOnlySet<VehicleId>? ForcedReferenceVehicles = null,
++    bool ForcedNoWorse = false);
+ 
+ public enum InitialPromiseTrigger
+ {
+@@ -94,12 +95,14 @@ public sealed record PromisePublication(
+ 
+ /// <summary>
+ /// One rider on a forced-reference vehicle whose kept route a commitment gate rejected in
+-/// this decision, with the sorted, distinct gate codes.
++/// this decision, with the sorted, distinct gate codes. <paramref name="NoWorse"/> is true when
++/// the decision changed the vehicle's route under no-worse-than-reference recovery.
+ /// </summary>
+ public sealed record ForcedReferenceExemption(
+     RequestId RequestId,
+     VehicleId VehicleId,
+-    IReadOnlyList<string> WitnessCodes);
++    IReadOnlyList<string> WitnessCodes,
++    bool NoWorse = false);
+ 
+ public sealed record CommitmentDecisionValidationResult
+ {
+@@ -409,9 +412,33 @@ public sealed class CommitmentDecisionValidator
+             // A vehicle named as forced-reference keeps its route although a gate rejects it:
+             // its deadline and budget overruns become an exemption instead of a rejection. A
+             // phase lock cannot fire on a kept route; if one did, the breach factory rejects it.
+-            var forcedCodes = IsForcedReference(context, request)
++            // Under no-worse recovery a changed route of that vehicle is exempted only for gates the
++            // kept route also overruns, and only by no more than the kept route would.
++            var keptRoute = IsForcedReference(context, request);
++            var noWorseRoute = !keptRoute && IsForcedNoWorse(context, request);
++            var forcedCodes = keptRoute || noWorseRoute
+                 ? new List<string>()
+                 : null;
++            NoWorseReference? reference = noWorseRoute
++                ? KeptRouteReference(
++                    request,
++                    priorHistory,
++                    exogenousProjection.Value!,
++                    context,
++                    policy,
++                    anchor)
++                : null;
++
++            if (noWorseRoute && reference is null)
++            {
++                return Invalid(
++                    CommitmentValidationStage.Projection,
++                    CommitmentFailureCodes.LedgerConflict,
++                    "The kept-route reference of a no-worse candidate could not be evaluated.",
++                    request.AssignedVehicleId,
++                    request.Id,
++                    "forcedNoWorse");
++            }
+ 
+             if (lockWitnesses.Count != 0)
+             {
+@@ -444,9 +471,14 @@ public sealed class CommitmentDecisionValidator
+                             value.Rule),
+                     });
+ 
+-                if (forcedCodes is not null)
++                var exempted = forcedCodes is not null
++                    && (!noWorseRoute
++                        || lockWitnesses.All(
++                            value => reference!.AllowsLock(value, candidateProjection.Value!)));
++
++                if (exempted)
+                 {
+-                    forcedCodes.AddRange(lockFailures.Select(value => value.Code));
++                    forcedCodes!.AddRange(lockFailures.Select(value => value.Code));
+                 }
+                 else if (collected is null)
+                 {
+@@ -501,9 +533,13 @@ public sealed class CommitmentDecisionValidator
+                         Delta: value.Delta,
+                         After: value.After));
+ 
+-                if (forcedCodes is not null)
++                var exempted = forcedCodes is not null
++                    && (!noWorseRoute
++                        || budget.Witnesses.All(value => reference!.AllowsBudget(value)));
++
++                if (exempted)
+                 {
+-                    forcedCodes.AddRange(budgetFailures.Select(value => value.Code));
++                    forcedCodes!.AddRange(budgetFailures.Select(value => value.Code));
+                 }
+                 else if (collected is null)
+                 {
+@@ -565,11 +601,18 @@ public sealed class CommitmentDecisionValidator
+                     .Distinct(StringComparer.Ordinal)
+                     .Order(StringComparer.Ordinal)
+                     .ToArray();
++                // A changed route whose projection for this rider equals the kept one publishes
++                // exactly the kept route's promise, so it is recorded as a kept-route breach.
++                var noWorseRecord = noWorseRoute
++                    && !CommitmentBreachRecord.ProjectionsEqual(
++                        exogenousProjection.Value!,
++                        candidateProjection.Value!);
+                 forcedExemptions.Add(
+                     new ForcedReferenceExemption(
+                         request.Id,
+                         request.AssignedVehicleId!.Value,
+-                        Array.AsReadOnly(codes)));
++                        Array.AsReadOnly(codes),
++                        noWorseRoute));
+ 
+                 // A breach is an event. With the promise unchanged and the rider in the same
+                 // lifecycle phase as before this batch, the gates see the same inputs as at the
+@@ -577,7 +620,8 @@ public sealed class CommitmentDecisionValidator
+                 // phase change can make another hard limit apply, so it always records; the
+                 // code comparison is a defence the current gates cannot trigger on their own.
+                 var latest = incidents.Breaches.LastOrDefault(
+-                    value => value.Kind == CommitmentBreachKind.ForcedReference
++                    value => (value.Kind is CommitmentBreachKind.ForcedReference
++                            or CommitmentBreachKind.ForcedNoWorse)
+                         && value.RequestId == request.Id);
+                 var samePhase = context.BeforeEventState.Run.Requests.TryGetValue(
+                         request.Id,
+@@ -601,19 +645,33 @@ public sealed class CommitmentDecisionValidator
+ 
+                 try
+                 {
+-                    breach = CommitmentBreachRecord.CreateForcedReference(
+-                        CreateForcedBreachId(context, request.Id),
+-                        request.Id,
+-                        priorHistory.Current.PublishedPromise,
+-                        exogenousProjection.Value!,
+-                        candidateProjection.Value!,
+-                        calculated.Deltas,
+-                        budgetBefore,
+-                        budgetAfter,
+-                        forcedCodes,
+-                        context.SourceEventSequence,
+-                        context.CandidateState.Run.AppliedEpoch,
+-                        context.CandidateState.Run.SimulationTime);
++                    breach = noWorseRecord
++                        ? CommitmentBreachRecord.CreateForcedNoWorse(
++                            CreateForcedBreachId(context, request.Id),
++                            request.Id,
++                            priorHistory.Current.PublishedPromise,
++                            exogenousProjection.Value!,
++                            candidateProjection.Value!,
++                            calculated.Deltas,
++                            budgetBefore,
++                            budgetAfter,
++                            forcedCodes,
++                            context.SourceEventSequence,
++                            context.CandidateState.Run.AppliedEpoch,
++                            context.CandidateState.Run.SimulationTime)
++                        : CommitmentBreachRecord.CreateForcedReference(
++                            CreateForcedBreachId(context, request.Id),
++                            request.Id,
++                            priorHistory.Current.PublishedPromise,
++                            exogenousProjection.Value!,
++                            candidateProjection.Value!,
++                            calculated.Deltas,
++                            budgetBefore,
++                            budgetAfter,
++                            forcedCodes,
++                            context.SourceEventSequence,
++                            context.CandidateState.Run.AppliedEpoch,
++                            context.CandidateState.Run.SimulationTime);
+                 }
+                 catch (ArgumentException error)
+                 {
+@@ -667,6 +725,94 @@ public sealed class CommitmentDecisionValidator
+         && context.ReducedState.Run.Vehicles.TryGetValue(vehicleId, out var reduced)
+         && candidate.Route.IsSemanticallyEqual(reduced.Route);
+ 
++    /// <summary>
++    /// True only under no-worse recovery, for a request on a forced-reference vehicle whose
++    /// candidate route differs from its reduced route.
++    /// </summary>
++    private static bool IsForcedNoWorse(
++        CommitmentValidationContext context,
++        RideRequest request) =>
++        context.ForcedNoWorse
++        && context.ForcedReferenceVehicles is { Count: > 0 } forced
++        && request.AssignedVehicleId is VehicleId vehicleId
++        && forced.Contains(vehicleId)
++        && context.CandidateState.Run.Vehicles.TryGetValue(vehicleId, out var candidate)
++        && context.ReducedState.Run.Vehicles.TryGetValue(vehicleId, out var reduced)
++        && !candidate.Route.IsSemanticallyEqual(reduced.Route);
++
++    /// <summary>
++    /// Evaluates the kept route (the exogenous projection published as it is) against the same
++    /// gates, so a changed route can be compared with it. Null when the deltas cannot be formed.
++    /// </summary>
++    private NoWorseReference? KeptRouteReference(
++        RideRequest request,
++        RiderCommitmentHistory priorHistory,
++        PromiseProjection exogenous,
++        CommitmentValidationContext context,
++        CommitmentPolicy policy,
++        PromiseProjection? anchor)
++    {
++        var keptLocks = _lockEvaluator.Evaluate(
++            request,
++            priorHistory.Current.PublishedPromise,
++            exogenous,
++            exogenous,
++            context.CandidateState.Run.SimulationTime,
++            policy,
++            anchor);
++        var keptDeltas = _deltaCalculator.Calculate(
++            priorHistory.Current.PublishedPromise,
++            exogenous,
++            exogenous,
++            policy.MaterialRevisionRule,
++            context.StopDistances);
++
++        if (!keptDeltas.IsSuccess)
++        {
++            return null;
++        }
++
++        var keptCharged = policy.BudgetBasis == CommitmentBudgetBasis.DecisionInduced
++            ? keptDeltas.Deltas!.DecisionInduced
++            : keptDeltas.Deltas!.Visible;
++        var keptBudget = _budgetEvaluator.Evaluate(
++            request.Id,
++            request.Lifecycle,
++            priorHistory.Current.BudgetAfter,
++            keptCharged,
++            policy);
++        return new NoWorseReference(exogenous, keptLocks, keptBudget.Witnesses);
++    }
++
++    /// <summary>
++    /// The kept route's gate overruns for one rider. A changed route may be exempted for a
++    /// deadline only if the kept route overruns the same side and the changed route is not
++    /// further out on that side; for a budget dimension only if the kept route also exceeds it
++    /// and the changed route's total is not larger. Phase locks are never exempted.
++    /// </summary>
++    private sealed class NoWorseReference(
++        PromiseProjection kept,
++        IReadOnlyCollection<CommitmentLockWitness> keptLocks,
++        IReadOnlyCollection<CommitmentBudgetWitness> keptBudget)
++    {
++        public bool AllowsLock(CommitmentLockWitness witness, PromiseProjection candidate) =>
++            witness.Rule switch
++            {
++                CommitmentLockEvaluator.DeadlineCapRule =>
++                    keptLocks.Any(value => value.Rule == CommitmentLockEvaluator.DeadlineCapRule)
++                    && candidate.DropEta.Milliseconds <= kept.DropEta.Milliseconds,
++                CommitmentLockEvaluator.DeadlineFloorRule =>
++                    keptLocks.Any(value => value.Rule == CommitmentLockEvaluator.DeadlineFloorRule)
++                    && candidate.DropEta.Milliseconds >= kept.DropEta.Milliseconds,
++                _ => false,
++            };
++
++        public bool AllowsBudget(CommitmentBudgetWitness witness) =>
++            keptBudget.Any(
++                value => StringComparer.Ordinal.Equals(value.Dimension, witness.Dimension)
++                    && witness.After <= value.After);
++    }
++
+     private static string CreateForcedBreachId(
+         CommitmentValidationContext context,
+         RequestId requestId)
+diff --git a/src/RideBound.Domain/Incidents/OperationalIncidentLedger.cs b/src/RideBound.Domain/Incidents/OperationalIncidentLedger.cs
+index 807c37a..27367bb 100644
+--- a/src/RideBound.Domain/Incidents/OperationalIncidentLedger.cs
++++ b/src/RideBound.Domain/Incidents/OperationalIncidentLedger.cs
+@@ -181,6 +181,15 @@ public enum CommitmentBreachKind
+     /// by how much; the ledger is charged exactly as for any other publication and is never reset.
+     /// </summary>
+     ForcedReference,
++
++    /// <summary>
++    /// Exploratory "no worse than reference" recovery: on a vehicle whose kept route a gate
++    /// rejected, the run chose a changed route of the same vehicle that overruns the same gates by
++    /// no more than the kept route would. The published projection is the changed route's, so it
++    /// differs from the kept (exogenous) one; the ledger is charged as for any publication. The
++    /// "no more than" comparison needs the rider's anchor and policy, so the validator enforces it.
++    /// </summary>
++    ForcedNoWorse,
+ }
+ 
+ public sealed record CommitmentBreachRecord
+@@ -350,6 +359,32 @@ public sealed record CommitmentBreachRecord
+                     nameof(witnessCodes));
+             }
+         }
++        else if (kind == CommitmentBreachKind.ForcedNoWorse)
++        {
++            // A changed route of the same vehicle: an unchanged one is a ForcedReference record.
++            // The budget is charged by the policy's basis, as for any other publication.
++            var decisionAfter = budgetBefore.Add(deltas.DecisionInduced);
++            var visibleAfter = budgetBefore.Add(deltas.Visible);
++
++            if (incidentId is not null
++                || serviceWitnesses.Length != 0
++                || ProjectionEquals(exogenousProjection, safetyProjection)
++                || exogenousProjection.VehicleId != safetyProjection.VehicleId
++                || (!decisionAfter.IsSuccess || decisionAfter.Value != attemptedBudgetAfter)
++                    && (!visibleAfter.IsSuccess || visibleAfter.Value != attemptedBudgetAfter))
++            {
++                throw new ArgumentException(
++                    "A no-worse forced breach changes the route of the same vehicle and charges the " +
++                    "budget by the policy's basis.");
++            }
++
++            if (witnesses.Any(value => !ForcedReferenceWitnessCodes.Contains(value)))
++            {
++                throw new ArgumentException(
++                    "A no-worse forced breach names only commitment-gate codes.",
++                    nameof(witnessCodes));
++            }
++        }
+         else
+         {
+             if (incidentId is null || serviceWitnesses.Length != 0)
+@@ -468,6 +503,40 @@ public sealed record CommitmentBreachRecord
+             recordedEpoch,
+             recordedAt);
+ 
++    /// <param name="exogenousProjection">The projection of the reduced (kept) route.</param>
++    /// <param name="publishedProjection">
++    /// The projection published for the changed route; it must differ from the exogenous one.
++    /// </param>
++    public static CommitmentBreachRecord CreateForcedNoWorse(
++        string breachId,
++        RequestId requestId,
++        PublishedPromise previousPromise,
++        PromiseProjection exogenousProjection,
++        PromiseProjection publishedProjection,
++        ThreeWayPromiseDelta deltas,
++        CommitmentVector budgetBefore,
++        CommitmentVector budgetAfter,
++        IEnumerable<string> witnessCodes,
++        long sourceEventSequence,
++        long recordedEpoch,
++        SimTime recordedAt) =>
++        new(
++            breachId,
++            CommitmentBreachKind.ForcedNoWorse,
++            null,
++            requestId,
++            previousPromise,
++            exogenousProjection,
++            publishedProjection,
++            deltas,
++            budgetBefore,
++            budgetAfter,
++            witnessCodes,
++            [],
++            sourceEventSequence,
++            recordedEpoch,
++            recordedAt);
++
+     public static CommitmentBreachRecord CreateExogenousServiceQuality(
+         string breachId,
+         RequestId requestId,
+@@ -505,6 +574,16 @@ public sealed record CommitmentBreachRecord
+             recordedAt);
+     }
+ 
++    /// <summary>Field-by-field equality of two projections, as the breach invariants use it.</summary>
++    public static bool ProjectionsEqual(
++        PromiseProjection left,
++        PromiseProjection right)
++    {
++        ArgumentNullException.ThrowIfNull(left);
++        ArgumentNullException.ThrowIfNull(right);
++        return ProjectionEquals(left, right);
++    }
++
+     private static bool ProjectionEquals(
+         PromiseProjection left,
+         PromiseProjection right) =>
+@@ -680,7 +759,8 @@ public sealed class OperationalIncidentLedger
+         }
+ 
+         if (breach.Kind is CommitmentBreachKind.ExogenousServiceQuality
+-            or CommitmentBreachKind.ForcedReference)
++            or CommitmentBreachKind.ForcedReference
++            or CommitmentBreachKind.ForcedNoWorse)
+         {
+             return IncidentLedgerResult.Success(
+                 new OperationalIncidentLedger(
+diff --git a/src/RideBound.Runner/Configuration/Wp4RunnerConfiguration.cs b/src/RideBound.Runner/Configuration/Wp4RunnerConfiguration.cs
+index f802cfb..1cf9820 100644
+--- a/src/RideBound.Runner/Configuration/Wp4RunnerConfiguration.cs
++++ b/src/RideBound.Runner/Configuration/Wp4RunnerConfiguration.cs
+@@ -51,6 +51,12 @@ public sealed class Wp4RunnerConfiguration : ICommitmentWarningProfileProvider
+     public const string ForcedReferenceRecovery = "forced-reference-v1";
+     public const string FailClosedRecovery = "fail-closed";
+ 
++    /// <summary>
++    /// Exploratory extension of `forced-reference-v1`: a forced vehicle may also choose a changed
++    /// route that makes none of the kept route's gate overruns worse (no worse than reference).
++    /// </summary>
++    public const string NoWorseRecovery = "no-worse-than-reference-v1";
++
+     /// <summary>
+     /// ADR-076 (exploratory). Optional; omitted means a boarding after the latest pickup
+     /// fails the batch, as before. `record-v1` accepts it as a fact and records it. The
+@@ -218,7 +224,8 @@ public sealed class Wp4RunnerConfiguration : ICommitmentWarningProfileProvider
+             source.FreezeLocks,
+             source.MaximumRepairRequestsConsideredPerVehicle,
+             source.CaptureCandidatePortfolioEvidence,
+-            source.ForcedReferenceRecovery);
++            source.ForcedReferenceRecovery,
++            source.ForcedNoWorseRecovery);
+     }
+ 
+     public static Wp4RunnerConfiguration Decode(
+@@ -321,17 +328,18 @@ public sealed class Wp4RunnerConfiguration : ICommitmentWarningProfileProvider
+             hasMultiple,
+             hasWarnings);
+ 
+-        var forcedReferenceRecovery = root.TryGetProperty(
++        var (forcedReferenceRecovery, forcedNoWorseRecovery) = root.TryGetProperty(
+             "commitmentRecovery",
+             out _)
+                 ? Text(root, "commitmentRecovery") switch
+                 {
+-                    FailClosedRecovery => false,
+-                    ForcedReferenceRecovery => true,
++                    FailClosedRecovery => (false, false),
++                    ForcedReferenceRecovery => (true, false),
++                    NoWorseRecovery => (true, true),
+                     _ => throw new InvalidDataException(
+                         "Unknown commitmentRecovery."),
+                 }
+-                : false;
++                : (false, false);
+ 
+         if (forcedReferenceRecovery
+             && (!hasSolver
+@@ -339,8 +347,8 @@ public sealed class Wp4RunnerConfiguration : ICommitmentWarningProfileProvider
+                     or RidePoolingPolicyKind.CommitSoftHardHybrid)))
+         {
+             throw new InvalidDataException(
+-                "commitmentRecovery 'forced-reference-v1' requires the solver-backed "
+-                + "C1 or C2 policy.");
++                $"commitmentRecovery '{Text(root, "commitmentRecovery")}' requires the "
++                + "solver-backed C1 or C2 policy.");
+         }
+ 
+         // A late boarding is an observation, not a policy decision, so every policy may
+@@ -401,7 +409,8 @@ public sealed class Wp4RunnerConfiguration : ICommitmentWarningProfileProvider
+                 freezeLocks,
+                 repairCap,
+                 solverExecutionEvidenceProfile is not null,
+-                forcedReferenceRecovery);
++                forcedReferenceRecovery,
++                forcedNoWorseRecovery);
+         }
+ 
+         if (hasMultiple)
+diff --git a/src/RideBound.Runner/Online/OnlineStateCanonicalizer.cs b/src/RideBound.Runner/Online/OnlineStateCanonicalizer.cs
+index de636a2..bec5065 100644
+--- a/src/RideBound.Runner/Online/OnlineStateCanonicalizer.cs
++++ b/src/RideBound.Runner/Online/OnlineStateCanonicalizer.cs
+@@ -466,6 +466,9 @@ public static class OnlineStateCanonicalizer
+                 case CommitmentBreachKind.ForcedReference:
+                     writer.WriteString("kind", "forcedReference");
+                     break;
++                case CommitmentBreachKind.ForcedNoWorse:
++                    writer.WriteString("kind", "forcedNoWorse");
++                    break;
+                 default:
+                     throw new InvalidOperationException("Unknown commitment breach kind.");
+             }
+diff --git a/src/RideBound.Runner/Online/OnlineStateCheckpointCodec.cs b/src/RideBound.Runner/Online/OnlineStateCheckpointCodec.cs
+index 0e15b54..53e2f9d 100644
+--- a/src/RideBound.Runner/Online/OnlineStateCheckpointCodec.cs
++++ b/src/RideBound.Runner/Online/OnlineStateCheckpointCodec.cs
+@@ -403,6 +403,27 @@ public static class OnlineStateCheckpointCodec
+                     Integer(value, "recordedEpoch"),
+                     new SimTime(Integer(value, "recordedAtMs")));
+             }
++            else if (value.TryGetProperty("kind", out kind)
++                && kind.GetString() == "forcedNoWorse")
++            {
++                // The changed route's projection is stored as the safety projection; the factory
++                // rejects a record whose two projections are equal or on different vehicles.
++                breach = CommitmentBreachRecord.CreateForcedNoWorse(
++                    Text(value, "breachId"),
++                    requestId,
++                    previousPromise,
++                    exogenousProjection,
++                    ReadPromiseProjection(value.GetProperty("safetyProjection")),
++                    deltas,
++                    budgetBefore,
++                    ReadVector(value.GetProperty("attemptedBudgetAfter")),
++                    value.GetProperty("witnessCodes")
++                        .EnumerateArray()
++                        .Select(item => item.GetString()!),
++                    Integer(value, "sourceEventSeq"),
++                    Integer(value, "recordedEpoch"),
++                    new SimTime(Integer(value, "recordedAtMs")));
++            }
+             else if (value.TryGetProperty("kind", out kind))
+             {
+                 if (kind.GetString() != "exogenousServiceQuality")
+diff --git a/src/RideBound.Runner/Protocol/RunnerSession.cs b/src/RideBound.Runner/Protocol/RunnerSession.cs
+index 99a5ed5..aba219d 100644
+--- a/src/RideBound.Runner/Protocol/RunnerSession.cs
++++ b/src/RideBound.Runner/Protocol/RunnerSession.cs
+@@ -966,7 +966,9 @@ public sealed class RunnerSession
+                         _wp4Configuration?.InitialPromiseTrigger
+                             ?? InitialPromiseTrigger.InitialAcceptance,
+                     ForcedReferenceVehicles:
+-                        decision.Decision.ForcedReferenceVehicles));
++                        decision.Decision.ForcedReferenceVehicles,
++                    ForcedNoWorse:
++                        _wp4Configuration?.SolverPolicyOptions?.ForcedNoWorseRecovery == true));
+ 
+             if (!validation.IsValid)
+             {
+@@ -1089,6 +1091,8 @@ public sealed class RunnerSession
+     /// ADR-075: every decision that keeps a gate-rejected route is certified as
+     /// non-normal operation, with one witness per breached gate code of each rider,
+     /// including a decision that repeats an exemption without a new breach record.
++    /// Under no-worse recovery a rider exempted on a changed route is certified with the stage
++    /// `forcedNoWorse`, so a kept (frozen) vehicle stays distinguishable from one still serving.
+     /// </summary>
+     private static CertificateWitnessContract[] ForcedBreachWitnesses(
+         IReadOnlyList<ForcedReferenceExemption> exemptions) =>
+@@ -1097,7 +1101,7 @@ public sealed class RunnerSession
+             .SelectMany(
+                 exemption => exemption.WitnessCodes.Select(
+                     code => new CertificateWitnessContract(
+-                        "forcedReference",
++                        exemption.NoWorse ? "forcedNoWorse" : "forcedReference",
+                         code,
+                         exemption.VehicleId.Value,
+                         exemption.RequestId.Value)))
+diff --git a/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs b/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs
+index f59d989..19413ba 100644
+--- a/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs
++++ b/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs
+@@ -7,6 +7,7 @@ using RideBound.Application.State;
+ using RideBound.Application.Travel;
+ using RideBound.Domain.Commitments;
+ using RideBound.Domain.Common;
++using RideBound.Domain.Incidents;
+ using RideBound.Domain.Routes;
+ using RideBound.Domain.Validation;
+ 
+@@ -1161,6 +1162,109 @@ public sealed class ExactSmallCommitmentDifferentialTests
+         Assert.Equal("forced-reference-count", solver.LastProblem!.ObjectiveLevels[0].Name);
+     }
+ 
++    [Fact]
++    public void No_worse_recovery_also_keeps_the_insertions_that_do_not_delay_the_late_rider()
++    {
++        // The state where every candidate is rejected because drift alone put the incumbent past
++        // its deadline. Under (a) only the no-op survives. Under no-worse recovery an insertion
++        // that leaves the incumbent's drop no later than the kept route survives too, as a forced
++        // option; insertions that delay the incumbent stay pruned by the deadline.
++        var (generated, set, noOp, _, context) = EveryCandidateRejected();
++        var kept = new HardVectorCandidateAssessor().AssessAndFilter(
++            context,
++            generated.VehicleCandidates!,
++            requireSafetyNoOp: true,
++            forcedReferenceRecovery: true);
++
++        var relaxed = new HardVectorCandidateAssessor().AssessAndFilter(
++            context,
++            generated.VehicleCandidates!,
++            requireSafetyNoOp: true,
++            forcedReferenceRecovery: true,
++            forcedNoWorse: true);
++
++        Assert.True(relaxed.IsSuccess, relaxed.Witness?.Message);
++        var output = relaxed.Batch!.FeasibleCandidateSets.Single();
++        Assert.Equal(
++            [noOp.CandidateId],
++            kept.Batch!.FeasibleCandidateSets.Single().Candidates.Select(value => value.CandidateId));
++        Assert.Contains(output.Candidates, value => !value.IsNoOp);
++        Assert.Contains(output.Candidates, value => value.CandidateId == noOp.CandidateId);
++        Assert.All(
++            output.Candidates,
++            value => Assert.True(relaxed.Batch.Assessments[value.CandidateId].IsForcedReference));
++        Assert.Equal([AlgorithmTestData.VehicleOne], relaxed.Batch.ForcedReferenceVehicles);
++        Assert.Equal(set.Candidates.Count, output.Candidates.Count + output.PrunedCandidates.Count(
++            value => value.Code == CommitmentFailureCodes.DeadlineExceeded));
++        Assert.Contains(
++            output.PrunedCandidates,
++            value => value.Code == CommitmentFailureCodes.DeadlineExceeded);
++    }
++
++    [Fact]
++    public void The_solver_backed_policy_serves_the_new_rider_under_no_worse_recovery()
++    {
++        // Under (a) the vehicle is frozen on its kept route; under no-worse recovery it accepts the
++        // new rider on a route that does not delay the late incumbent, and validating the decision
++        // the way the Runner does records one no-worse breach for the incumbent.
++        var (_, _, _, _, context) = EveryCandidateRejected();
++        var solver = new EnumeratingSolver();
++        var frozen = new SolverBackedRidePoolingPolicy(solver).Decide(
++            context,
++            CandidateGenerationOptions.ExactSmall,
++            HardVectorOptions(forcedReferenceRecovery: true));
++        Assert.True(frozen.IsSuccess, frozen.Witness?.Message);
++        Assert.True(frozen.Decision!.Decision.VehiclePlans.Single().Candidate.IsNoOp);
++
++        var result = new SolverBackedRidePoolingPolicy(solver).Decide(
++            context,
++            CandidateGenerationOptions.ExactSmall,
++            HardVectorOptions(forcedReferenceRecovery: true, forcedNoWorseRecovery: true));
++
++        Assert.True(result.IsSuccess, result.Witness?.Message);
++        var decision = result.Decision!.Decision;
++        Assert.False(decision.VehiclePlans.Single().Candidate.IsNoOp);
++        Assert.Equal([AlgorithmTestData.VehicleOne], decision.ForcedReferenceVehicles!);
++        Assert.Equal("forced-reference-count", solver.LastProblem!.ObjectiveLevels[0].Name);
++
++        var validator = new CommitmentDecisionValidator();
++        Assert.False(
++            validator.Validate(RunnerLikeContext(context, decision, decision.ForcedReferenceVehicles))
++                .IsValid);
++        var validated = validator.Validate(
++            RunnerLikeContext(context, decision, decision.ForcedReferenceVehicles, noWorse: true));
++        Assert.True(validated.IsValid, validated.Witnesses.FirstOrDefault()?.Message);
++        var breach = Assert.Single(validated.ForcedBreaches);
++        Assert.Equal(CommitmentBreachKind.ForcedNoWorse, breach.Kind);
++        Assert.Equal(CreateState(seed: 3).IncumbentId, breach.RequestId);
++        Assert.Equal([CommitmentFailureCodes.DeadlineExceeded], breach.WitnessCodes);
++        Assert.True(
++            breach.SafetyProjection.DropEta.Milliseconds
++                <= breach.ExogenousProjection.DropEta.Milliseconds);
++    }
++
++    [Fact]
++    public void No_worse_recovery_requires_forced_reference_recovery()
++    {
++        var (generated, _, _, context) = NoOpRejectedWhileAnInsertionSurvives();
++        var budget = DeterministicCandidateSelectionExecutionBudget.Create(
++            100_000,
++            100_000,
++            DeterministicSolverBudget.Create(1000, 1000, 1).Value!).Value!;
++
++        Assert.Throws<ArgumentException>(
++            () => new HardVectorCandidateAssessor().AssessAndFilter(
++                context,
++                generated.VehicleCandidates!,
++                requireSafetyNoOp: true,
++                forcedNoWorse: true));
++        Assert.Throws<ArgumentException>(
++            () => new SolverBackedRidePoolingPolicyOptions(
++                RidePoolingPolicyKind.RideBoundHardVector,
++                budget,
++                forcedNoWorseRecovery: true));
++    }
++
+     [Fact]
+     public void Forced_recovery_is_rejected_for_a_policy_other_than_C1_or_C2()
+     {
+@@ -1243,20 +1347,23 @@ public sealed class ExactSmallCommitmentDifferentialTests
+             .Min();
+ 
+     private static SolverBackedRidePoolingPolicyOptions HardVectorOptions(
+-        bool forcedReferenceRecovery) =>
++        bool forcedReferenceRecovery,
++        bool forcedNoWorseRecovery = false) =>
+         new(
+             RidePoolingPolicyKind.RideBoundHardVector,
+             DeterministicCandidateSelectionExecutionBudget.Create(
+                 100_000,
+                 100_000,
+                 DeterministicSolverBudget.Create(100_000, 100_000, 1).Value!).Value!,
+-            forcedReferenceRecovery: forcedReferenceRecovery);
++            forcedReferenceRecovery: forcedReferenceRecovery,
++            forcedNoWorseRecovery: forcedNoWorseRecovery);
+ 
+     /// <summary>The validation the Runner applies to a policy decision.</summary>
+     private static CommitmentValidationContext RunnerLikeContext(
+         CommitmentMechanismContext context,
+         RollingCostDecision decision,
+-        IReadOnlySet<VehicleId>? forced) =>
++        IReadOnlySet<VehicleId>? forced,
++        bool noWorse = false) =>
+         new(
+             context.BeforeEventState,
+             context.ReducedState,
+@@ -1266,7 +1373,8 @@ public sealed class ExactSmallCommitmentDifferentialTests
+             context.PublicationScope,
+             context.SourceEventSequence,
+             InitialPromiseTrigger: context.InitialPromiseTrigger,
+-            ForcedReferenceVehicles: forced);
++            ForcedReferenceVehicles: forced,
++            ForcedNoWorse: noWorse);
+ 
+     /// <summary>
+     /// Exact lexicographic enumeration of every one-option-per-vehicle assignment; it
+diff --git a/tests/RideBound.Application.Tests/Commitments/CommitmentDeadlineValidatorTests.cs b/tests/RideBound.Application.Tests/Commitments/CommitmentDeadlineValidatorTests.cs
+index c0f9de3..87d4bd5 100644
+--- a/tests/RideBound.Application.Tests/Commitments/CommitmentDeadlineValidatorTests.cs
++++ b/tests/RideBound.Application.Tests/Commitments/CommitmentDeadlineValidatorTests.cs
+@@ -347,6 +347,186 @@ public sealed class CommitmentDeadlineValidatorTests
+         Assert.Same(context.CandidateState.Incidents, result.ValidatedState!.Incidents);
+     }
+ 
++    [Fact]
++    public void No_worse_recovery_keeps_a_changed_route_that_keeps_the_late_riders_drop()
++    {
++        // The route a kept-route exemption refuses above (a waypoint after the drop) keeps the late
++        // rider's drop at 1700 ms, so under no-worse recovery it is exempted, not rejected.
++        var context = WithCandidateRoute(
++                NoOpUnderDrift(promiseAt: Early, reducedAt: Late, Policy(slack: 400)),
++                AppendAfterDrop)
++            with
++            {
++                ForcedReferenceVehicles = new HashSet<VehicleId> { ApplicationTestData.VehicleId },
++                ForcedNoWorse = true,
++            };
++
++        var result = new CommitmentDecisionValidator().Validate(context);
++
++        Assert.True(result.IsValid, string.Join("; ", result.Witnesses.Select(w => w.Message)));
++        var breach = Assert.Single(result.ForcedBreaches);
++        Assert.Equal(CommitmentBreachKind.ForcedNoWorse, breach.Kind);
++        Assert.Equal([CommitmentFailureCodes.DeadlineExceeded], breach.WitnessCodes);
++        Assert.False(
++            CommitmentBreachRecord.ProjectionsEqual(breach.ExogenousProjection, breach.SafetyProjection));
++        Assert.True(Assert.Single(result.ForcedExemptions).NoWorse);
++        Assert.Equal(
++            new SimTime(1_700),
++            Assert.Single(result.Publications).Entry.PublishedPromise.Projection.DropEta);
++    }
++
++    [Fact]
++    public void No_worse_recovery_rejects_a_changed_route_that_delays_the_late_rider_further()
++    {
++        // A 300 ms stop before the drop moves the late rider from 1700 to 2000 ms: worse than the
++        // kept route, so it stays rejected by the deadline, with no breach.
++        var context = WithCandidateRoute(
++                NoOpUnderDrift(promiseAt: Early, reducedAt: Late, Policy(slack: 400)),
++                DelayBeforeDrop)
++            with
++            {
++                ForcedReferenceVehicles = new HashSet<VehicleId> { ApplicationTestData.VehicleId },
++                ForcedNoWorse = true,
++            };
++
++        var result = new CommitmentDecisionValidator().Validate(context);
++
++        Assert.False(result.IsValid);
++        Assert.Empty(result.ForcedBreaches);
++        Assert.Equal(CommitmentFailureCodes.DeadlineExceeded, Assert.Single(result.Witnesses).Code);
++    }
++
++    [Fact]
++    public void No_worse_recovery_never_exempts_a_rider_whose_kept_route_meets_the_deadline()
++    {
++        // No drift: the kept route drops at 1200 ms, inside 1200 + 100 ms. The changed route drops at
++        // 1500 ms. The kept route overruns nothing, so there is nothing the changed route may match.
++        var context = WithCandidateRoute(
++                NoOpUnderDrift(promiseAt: Early, reducedAt: Early, Policy(slack: 100)),
++                DelayBeforeDrop)
++            with
++            {
++                ForcedReferenceVehicles = new HashSet<VehicleId> { ApplicationTestData.VehicleId },
++                ForcedNoWorse = true,
++            };
++
++        var result = new CommitmentDecisionValidator().Validate(context);
++
++        Assert.False(result.IsValid);
++        Assert.Empty(result.ForcedBreaches);
++        Assert.Equal(CommitmentFailureCodes.DeadlineExceeded, Assert.Single(result.Witnesses).Code);
++    }
++
++    [Fact]
++    public void No_worse_recovery_under_the_visible_basis_allows_no_more_than_the_kept_overrun()
++    {
++        // Visible basis, 400 ms cap, 500 ms drift: the kept route charges 500 ms. A changed route that
++        // keeps the drop charges the same 500 ms and is exempted; one that adds 300 ms charges 800 ms
++        // and stays rejected.
++        var visible = new CommitmentPolicy(
++            ApplicationTestData.Request().CommitmentPolicyId,
++            CommitmentBudgetBasis.CustomerVisible,
++            CommitmentDimensionVocabulary.Ordered.Select(
++                dimension => new CommitmentDimensionLimit(
++                    dimension,
++                    dimension == CommitmentDimension.DropEtaTotalMs ? 400 : null,
++                    CommitmentPhase.AllActive)),
++            new MaterialRevisionRule(1, null));
++        var forced = new HashSet<VehicleId> { ApplicationTestData.VehicleId };
++        var baseline = NoOpUnderDrift(promiseAt: Early, reducedAt: Late, visible);
++        var same = WithCandidateRoute(baseline, AppendAfterDrop)
++            with { ForcedReferenceVehicles = forced, ForcedNoWorse = true };
++        var worse = WithCandidateRoute(baseline, DelayBeforeDrop)
++            with { ForcedReferenceVehicles = forced, ForcedNoWorse = true };
++
++        var kept = new CommitmentDecisionValidator().Validate(same);
++        var rejected = new CommitmentDecisionValidator().Validate(worse);
++
++        Assert.True(kept.IsValid, string.Join("; ", kept.Witnesses.Select(w => w.Message)));
++        var breach = Assert.Single(kept.ForcedBreaches);
++        Assert.Equal(CommitmentBreachKind.ForcedNoWorse, breach.Kind);
++        Assert.Equal([CommitmentFailureCodes.BudgetExceeded], breach.WitnessCodes);
++        Assert.Equal(500, breach.AttemptedBudgetAfter.DropEtaTotalMs);
++        Assert.False(rejected.IsValid);
++        Assert.Equal(CommitmentFailureCodes.BudgetExceeded, Assert.Single(rejected.Witnesses).Code);
++    }
++
++    [Fact]
++    public void No_worse_recovery_records_an_unchanged_route_as_a_kept_route_breach()
++    {
++        var context = NoOpUnderDrift(promiseAt: Early, reducedAt: Late, Policy(slack: 400))
++            with
++            {
++                ForcedReferenceVehicles = new HashSet<VehicleId> { ApplicationTestData.VehicleId },
++                ForcedNoWorse = true,
++            };
++
++        var result = new CommitmentDecisionValidator().Validate(context);
++
++        Assert.True(result.IsValid, string.Join("; ", result.Witnesses.Select(w => w.Message)));
++        Assert.Equal(CommitmentBreachKind.ForcedReference, Assert.Single(result.ForcedBreaches).Kind);
++        Assert.False(Assert.Single(result.ForcedExemptions).NoWorse);
++    }
++
++    [Fact]
++    public void No_worse_recovery_applies_only_to_a_named_forced_vehicle()
++    {
++        var context = WithCandidateRoute(
++                NoOpUnderDrift(promiseAt: Early, reducedAt: Late, Policy(slack: 400)),
++                AppendAfterDrop)
++            with { ForcedNoWorse = true };
++
++        var result = new CommitmentDecisionValidator().Validate(context);
++
++        Assert.False(result.IsValid);
++        Assert.Empty(result.ForcedBreaches);
++        Assert.Equal(CommitmentFailureCodes.DeadlineExceeded, Assert.Single(result.Witnesses).Code);
++    }
++
++    private static CommitmentValidationContext WithCandidateRoute(
++        CommitmentValidationContext context,
++        Func<RoutePlan, RoutePlan> change)
++    {
++        var vehicle = context.CandidateState.Run.Vehicles[ApplicationTestData.VehicleId];
++        var run = context.CandidateState.Run
++            .UpdateVehicleRoute(ApplicationTestData.VehicleId, change(vehicle.Route)).Value!;
++        return context with { CandidateState = context.CandidateState with { Run = run } };
++    }
++
++    /// <summary>A waypoint after the drop: the rider's drop ETA is unchanged.</summary>
++    private static RoutePlan AppendAfterDrop(RoutePlan route) =>
++        RoutePlan.Create(
++            new PlanVersion(route.Version.Value + 1),
++            route.ExecutedStopCount,
++            route.FrozenPrefix,
++            route.MutableSuffix.Append(
++                new RouteStop(
++                    new StopId("after-drop"),
++                    ApplicationTestData.NodeZero,
++                    RouteStopKind.Waypoint,
++                    null,
++                    new Duration(0)))).Value!;
++
++    /// <summary>A 300 ms waypoint at the pickup node just before the drop: the drop is 300 ms later.</summary>
++    private static RoutePlan DelayBeforeDrop(RoutePlan route)
++    {
++        var stops = route.MutableSuffix.ToList();
++        var drop = stops.FindIndex(value => value.Kind == RouteStopKind.DropOff);
++        stops.Insert(
++            drop,
++            new RouteStop(
++                new StopId("before-drop"),
++                ApplicationTestData.NodeOne,
++                RouteStopKind.Waypoint,
++                null,
++                new Duration(300)));
++        return RoutePlan.Create(
++            new PlanVersion(route.Version.Value + 1),
++            route.ExecutedStopCount,
++            route.FrozenPrefix,
++            stops).Value!;
++    }
++
+     private static CommitmentPolicy Policy(long? slack, bool twoSided = false) =>
+         new(
+             ApplicationTestData.Request().CommitmentPolicyId,
+diff --git a/tests/RideBound.Domain.Tests/Incidents/OperationalIncidentLedgerTests.cs b/tests/RideBound.Domain.Tests/Incidents/OperationalIncidentLedgerTests.cs
+index 45ba791..fd460c1 100644
+--- a/tests/RideBound.Domain.Tests/Incidents/OperationalIncidentLedgerTests.cs
++++ b/tests/RideBound.Domain.Tests/Incidents/OperationalIncidentLedgerTests.cs
+@@ -345,6 +345,73 @@ public sealed class OperationalIncidentLedgerTests
+             once.AppendBreach(breach).Failure?.Code);
+     }
+ 
++    [Fact]
++    public void No_worse_breach_records_a_changed_route_of_the_same_vehicle_without_an_incident()
++    {
++        // Kept route drops at 20 000 ms; the changed route drops earlier, at 19 990 ms: 10 ms of
++        // decision-induced change on top of the 40 ms drift, charged under the visible basis.
++        var drift = CommitmentTestData.Vector(CommitmentDimension.DropEtaTotalMs, 40);
++        var decision = CommitmentTestData.Vector(CommitmentDimension.DropEtaTotalMs, 10);
++        var visible = CommitmentTestData.Vector(CommitmentDimension.DropEtaTotalMs, 30);
++        var breach = NoWorse(
++            new ThreeWayPromiseDelta(drift, decision, visible),
++            before: 25,
++            after: 55,
++            [CommitmentFailureCodes.DeadlineExceeded],
++            CommitmentTestData.Projection(dropEta: 19_990));
++
++        var appended = OperationalIncidentLedger.Empty.AppendBreach(breach);
++
++        Assert.True(appended.IsSuccess, appended.Failure?.Message);
++        var stored = Assert.Single(appended.Ledger!.Breaches);
++        Assert.Equal(CommitmentBreachKind.ForcedNoWorse, stored.Kind);
++        Assert.Null(stored.IncidentId);
++        Assert.False(stored.NormalOperation);
++        Assert.Equal(19_990, stored.SafetyProjection.DropEta.Milliseconds);
++    }
++
++    [Fact]
++    public void No_worse_breach_rejects_an_unchanged_route_and_another_vehicle()
++    {
++        var drift = CommitmentTestData.Vector(CommitmentDimension.DropEtaTotalMs, 40);
++        var deltas = new ThreeWayPromiseDelta(drift, CommitmentVector.Zero, drift);
++
++        // An unchanged route is a kept-route (ForcedReference) record, not a no-worse one.
++        Assert.Throws<ArgumentException>(
++            () => NoWorse(deltas, 25, 25, [CommitmentFailureCodes.DeadlineExceeded],
++                CommitmentTestData.Projection()));
++        // The changed route belongs to the same vehicle: a reassignment is never no-worse.
++        Assert.Throws<ArgumentException>(
++            () => NoWorse(deltas, 25, 25, [CommitmentFailureCodes.DeadlineExceeded],
++                CommitmentTestData.Projection(TestData.VehicleTwo, dropEta: 19_990)));
++    }
++
++    [Fact]
++    public void No_worse_breach_rejects_foreign_codes_and_a_charge_outside_both_bases()
++    {
++        var drift = CommitmentTestData.Vector(CommitmentDimension.DropEtaTotalMs, 40);
++        var deltas = new ThreeWayPromiseDelta(drift, CommitmentVector.Zero, drift);
++        var changed = CommitmentTestData.Projection(dropEta: 19_990);
++
++        Assert.Throws<ArgumentException>(
++            () => NoWorse(deltas, 25, 25, [CommitmentFailureCodes.PhaseLock], changed));
++        Assert.Throws<ArgumentException>(
++            () => NoWorse(deltas, 25, 26, [CommitmentFailureCodes.DeadlineExceeded], changed));
++    }
++
++    [Fact]
++    public void Projection_equality_is_field_by_field()
++    {
++        Assert.True(
++            CommitmentBreachRecord.ProjectionsEqual(
++                CommitmentTestData.Projection(),
++                CommitmentTestData.Projection()));
++        Assert.False(
++            CommitmentBreachRecord.ProjectionsEqual(
++                CommitmentTestData.Projection(),
++                CommitmentTestData.Projection(dropEta: 19_990)));
++    }
++
+     [Fact]
+     public void A_late_pickup_is_after_the_window_and_recorded_once_per_rider()
+     {
+@@ -451,6 +518,35 @@ public sealed class OperationalIncidentLedgerTests
+             new SimTime(2_000));
+     }
+ 
++    private static CommitmentBreachRecord NoWorse(
++        ThreeWayPromiseDelta deltas,
++        long before,
++        long after,
++        IEnumerable<string> witnessCodes,
++        PromiseProjection published)
++    {
++        var kept = CommitmentTestData.Projection();
++        var previous = new PublishedPromise(
++            new PromiseVersion(1),
++            1,
++            new SimTime(1_000),
++            kept);
++
++        return CommitmentBreachRecord.CreateForcedNoWorse(
++            "no-worse-breach-1",
++            TestData.RequestOne,
++            previous,
++            kept,
++            published,
++            deltas,
++            CommitmentTestData.Vector(CommitmentDimension.DropEtaTotalMs, before),
++            CommitmentTestData.Vector(CommitmentDimension.DropEtaTotalMs, after),
++            witnessCodes,
++            11,
++            2,
++            new SimTime(2_000));
++    }
++
+     private static CommitmentBreachRecord Breach(
+         IncidentId incidentId,
+         long attemptedPickupEta = 11,
+diff --git a/tests/RideBound.Runner.Tests/Online/OnlineStateCheckpointCodecTests.cs b/tests/RideBound.Runner.Tests/Online/OnlineStateCheckpointCodecTests.cs
+index 07ad1f0..a93f0fa 100644
+--- a/tests/RideBound.Runner.Tests/Online/OnlineStateCheckpointCodecTests.cs
++++ b/tests/RideBound.Runner.Tests/Online/OnlineStateCheckpointCodecTests.cs
+@@ -275,6 +275,68 @@ public sealed class OnlineStateCheckpointCodecTests
+         Assert.False(OnlineStateCheckpointCodec.Decode(movedDocument.RootElement).IsSuccess);
+     }
+ 
++    [Fact]
++    public void No_worse_breach_round_trips_with_its_own_kind_and_is_tamper_checked()
++    {
++        var (run, projection, promises, travel) = SingleRiderState();
++        var requestId = projection.RequestId;
++        // The changed route publishes a drop 5 ms later than the kept one.
++        var changed = new PromiseProjection(
++            projection.RequestId,
++            projection.VehicleId,
++            projection.PickupStopId,
++            projection.PickupNodeId,
++            projection.DropStopId,
++            projection.DropNodeId,
++            projection.PickupEta,
++            new SimTime(projection.DropEta.Milliseconds + 5),
++            projection.ServiceOrder);
++        var drift = new CommitmentVector(0, 40, 0, 0, 0, 0, 0, 0, 0, 0);
++        var decision = new CommitmentVector(0, 5, 0, 0, 0, 0, 0, 0, 0, 0);
++        var visible = new CommitmentVector(0, 45, 0, 0, 0, 0, 0, 0, 0, 0);
++        var incidents = OperationalIncidentLedger.Empty.AppendBreach(
++            CommitmentBreachRecord.CreateForcedNoWorse(
++                "no-worse-breach-1",
++                requestId,
++                promises.Histories[requestId].Current.PublishedPromise,
++                projection,
++                changed,
++                new ThreeWayPromiseDelta(drift, decision, visible),
++                CommitmentVector.Zero,
++                visible,
++                [CommitmentFailureCodes.DeadlineExceeded],
++                3,
++                1,
++                new SimTime(2))).Ledger!;
++        var state = new OnlineState(run, travel, 5, travel.SnapshotHash, promises, incidents);
++        var canonical = OnlineStateCanonicalizer.Canonicalize(state);
++        using var document = JsonDocument.Parse(canonical);
++
++        var decoded = OnlineStateCheckpointCodec.Decode(document.RootElement);
++
++        Assert.True(decoded.IsSuccess, decoded.Error);
++        var breach = Assert.Single(decoded.State!.Incidents.Breaches);
++        Assert.Equal(CommitmentBreachKind.ForcedNoWorse, breach.Kind);
++        Assert.Equal(canonical, OnlineStateCanonicalizer.Canonicalize(decoded.State));
++        Assert.Equal(
++            "forcedNoWorse",
++            document.RootElement.GetProperty("incidentLedger").GetProperty("breaches")[0]
++                .GetProperty("kind").GetString());
++
++        // Relabelled as a kept-route breach, the two different projections are rejected.
++        var relabelled = JsonNode.Parse(document.RootElement.GetRawText())!;
++        relabelled["incidentLedger"]!["breaches"]![0]!["kind"] = "forcedReference";
++        using var relabelledDocument = JsonDocument.Parse(relabelled.ToJsonString());
++        Assert.False(OnlineStateCheckpointCodec.Decode(relabelledDocument.RootElement).IsSuccess);
++
++        // A no-worse record whose route is in fact unchanged is rejected.
++        var unchanged = JsonNode.Parse(document.RootElement.GetRawText())!;
++        unchanged["incidentLedger"]!["breaches"]![0]!["safetyProjection"] =
++            JsonNode.Parse(unchanged["incidentLedger"]!["breaches"]![0]!["exogenousProjection"]!.ToJsonString());
++        using var unchangedDocument = JsonDocument.Parse(unchanged.ToJsonString());
++        Assert.False(OnlineStateCheckpointCodec.Decode(unchangedDocument.RootElement).IsSuccess);
++    }
++
+     [Fact]
+     public void A_late_pickup_round_trips_only_with_its_matching_record()
+     {
+diff --git a/tests/RideBound.Runner.Tests/Online/Wp4RunnerIntegrationTests.cs b/tests/RideBound.Runner.Tests/Online/Wp4RunnerIntegrationTests.cs
+index 60dd89f..fccd5e2 100644
+--- a/tests/RideBound.Runner.Tests/Online/Wp4RunnerIntegrationTests.cs
++++ b/tests/RideBound.Runner.Tests/Online/Wp4RunnerIntegrationTests.cs
+@@ -719,6 +719,62 @@ public sealed class Wp4RunnerIntegrationTests
+             actual.Actions.Select(value => value.GetRawText()));
+     }
+ 
++    [Fact]
++    public void No_worse_recovery_extends_forced_reference_and_keeps_a_lone_kept_route()
++    {
++        // With one booked rider and no other candidate, no-worse recovery has nothing to relax:
++        // the decision is the kept route, exactly as under forced-reference-v1, and it restores.
++        var commitment = DeadlineCommitmentConfiguration(slackMs: 1);
++        var configuration = HardVectorConfiguration(
++            commitment,
++            recovery: "no-worse-than-reference-v1");
++        Assert.True(configuration.SolverPolicyOptions!.ForcedReferenceRecovery);
++        Assert.True(configuration.SolverPolicyOptions.ForcedNoWorseRecovery);
++        Assert.False(
++            HardVectorConfiguration(commitment, recovery: "forced-reference-v1")
++                .SolverPolicyOptions!.ForcedNoWorseRecovery);
++
++        var setup = CreateSession(configuration, commitmentConfiguration: commitment);
++        var decision = DecisionPayloadCodec.Decode(
++            DriftBookedRider(setup, progressPermille: 1).Payload);
++
++        Assert.True(decision.IsSuccess, decision.Error?.Message);
++        var body = decision.Value!.Certificate.Body!;
++        Assert.False(body.NormalOperation);
++        Assert.Equal("forcedReference", Assert.Single(body.Witnesses).Stage);
++        _ = setup.Session.Process(
++            DecisionApplied(3, 1_050, decision.Value.DecisionHash.Value));
++        Assert.Equal(
++            RideBound.Domain.Incidents.CommitmentBreachKind.ForcedReference,
++            Assert.Single(setup.Session.CommittedOnlineState!.Incidents.Breaches).Kind);
++
++        var checkpoint = setup.Session.Process(CheckpointRequest()).Response!;
++        var restored = CreateSession(configuration, commitmentConfiguration: commitment);
++        Assert.Equal(
++            "restore",
++            restored.Session.Process(RestoreRequest(checkpoint.Payload))
++                .Response?.MessageType.Value);
++    }
++
++    [Fact]
++    public void No_worse_recovery_is_rejected_outside_the_solver_backed_C1_and_C2()
++    {
++        var commitment = CommitmentConfiguration();
++        var json = File.ReadAllText(Path.Combine(
++                RepositoryRoot(),
++                "benchmarks",
++                "configurations",
++                "wp4-rolling-cost-boundary-v1.json"))
++            .Replace(
++                "\"policyVersion\": \"wp4-boundary-v1\"",
++                "\"policyVersion\": \"wp4-boundary-v1\",\n  "
++                + "\"commitmentRecovery\": \"no-worse-than-reference-v1\"",
++                StringComparison.Ordinal);
++
++        Assert.Throws<InvalidDataException>(
++            () => Wp4RunnerConfiguration.Decode(Encoding.UTF8.GetBytes(json), commitment));
++    }
++
+     [Fact]
+     public void Forced_reference_recovery_is_rejected_outside_the_solver_backed_C1_and_C2()
+     {

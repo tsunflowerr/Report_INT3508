@@ -1,0 +1,1390 @@
+\chapter{Thực nghiệm và đánh giá}
+
+Chương này được tổ chức theo \emph{khẳng định} chứ không theo thứ tự các đợt chạy. Bảng
+\ref{bang:lotrinh} nối mỗi khẳng định với mục chứng minh nó, để người đọc theo dõi được lập
+luận mà không cần nhớ lịch sử thực nghiệm.
+
+\begin{table}[htbp]
+\centering
+\caption{Lộ trình chương: mỗi khẳng định và nơi nó được kiểm chứng}
+\label{bang:lotrinh}
+\small
+\begin{tabular}{@{}p{9.6cm}l@{}}
+\toprule
+\textbf{Khẳng định} & \textbf{Mục}\\
+\midrule
+Phần lớn xáo trộn mà hành khách chịu là do hệ thống tự gây ra, không phải do đường sá. & 4.2\\
+Trần cam kết cưỡng chế được, và cái giá của nó đo được theo từng mức chặt chẽ. & 4.3\\
+Cơ sở hành vi luôn khả thi; cơ sở kết quả có thể vô nghiệm và không bao giờ hơn. & 4.4, 4.7\\
+Kết luận không phụ thuộc lựa chọn thước đo. & 4.5\\
+Hình thức của lời bảo đảm chỉ có nghĩa nếu bộ sinh phương án thực thi được nó. & 4.6\\
+Thước đo của văn liệu mù ở chế độ cam kết. & 4.8\\
+Giá của lời hứa tăng theo mức tự do, trên toàn thang ngân sách. & 4.9\\
+Kết quả không phải sản phẩm phụ của việc cắt ngắn tìm kiếm. & 4.11\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Thiết lập thực nghiệm}
+\label{muc:thietlap}
+
+\subsection{Dữ liệu và bộ dữ liệu thử}
+
+Dữ liệu là bộ chuyến đi taxi công khai của Manhattan do Taxi \& Limousine Commission của New
+York phát hành, đã được chuẩn hóa và đóng gói trong bộ FleetPy \cite{fleetpy2022} theo giấy
+phép CC-BY. Từ bộ này, khóa luận dựng một panel gồm 20 ô thực nghiệm: năm ngày làm việc từ 14
+đến 18 tháng 11 năm 2018, mỗi ngày bốn lần lấy mẫu độc lập.
+
+\begin{table}[htbp]
+\centering
+\caption{Tham số của mỗi ô thực nghiệm}
+\label{bang:thamso}
+\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Tham số} & \textbf{Giá trị}\\
+\midrule
+Khung thời gian & 08:00--10:00 giờ New York\\
+Số yêu cầu & 108\\
+Số xe & 8\\
+Sức chứa mỗi xe & 4 chỗ\\
+Cửa sổ đón $\Omega$ & 600 giây\\
+Ràng buộc thời gian trên xe & $1{,}5 \times$ thời gian đi thẳng\\
+Số nút mạng đường & 96\\
+Hạt giống & 7 (cố định ở mọi lần chạy)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Tổng cộng panel có $20 \times 108 = 2{.}160$ yêu cầu. Toàn bộ thực nghiệm dùng chung một hạt
+giống nên hoàn toàn tất định: chạy lại cùng cấu hình cho ra cùng kết quả tới từng bit, điều này
+đã được xác nhận qua các cấu hình đối chứng.
+
+\subsection{Quy mô thực nghiệm}
+
+Bảng \ref{bang:quymo} tổng hợp toàn bộ khối lượng thực nghiệm đã thực hiện.
+
+\begin{table}[htbp]
+\centering
+\caption{Tổng hợp các đợt thực nghiệm}
+\label{bang:quymo}
+\small
+\begin{tabular}{@{}lrrp{5.6cm}@{}}
+\toprule
+\textbf{Đợt} & \textbf{Lần chạy} & \textbf{Dung lượng} & \textbf{Mục đích}\\
+\midrule
+Panel niêm phong & 60 & 3{,}39 GB & Hai cấu hình gốc B1 và C1\\
+Đường biên & 141 & 7{,}77 GB & Chín cấu hình cam kết\\
+Cơ sở kết quả & 44 & 2{,}58 GB & So sánh hai cơ sở tính\\
+Thí nghiệm ratchet & 80 & 4{,}30 GB & Bảo đảm một chiều, bộ chạy riêng\\
+Trần cửa sổ đón & 40 & 3{,}06 GB & Nới cửa sổ 600 lên 900 giây\\
+Trôi dạt (cửa sổ 600 s) & 46 & 2{,}58 GB & Bơm tắc đường đo thật, $k \in \{0,1,2\}$\\
+Trôi dạt (cửa sổ 900 s) & 15 & 1{,}10 GB & Biến thể của đợt trên\\
+Trôi dạt mức phân số & 12 & 1{,}22 GB & Mức trung gian $k = 0{,}5$\\
+Mặt cong hai chiều & 80 & 6{,}03 GB & Thang ngân sách ở cửa sổ 900 s\\
+Đặt trước ngân sách & 20 & 1{,}20 GB & Tầng cảnh báo trong hàm mục tiêu\\
+Bộ sinh biết sắp xếp lại & 20 & 0{,}39 GB & Sửa chữa cùng xe, hạn mức bốn khách\\
+\midrule
+\textbf{Tổng} & \textbf{558} & \textbf{33{,}62 GB} & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Các cấu hình được so sánh}
+
+Cấu hình \textbf{B1} là đường cơ sở không cam kết: hệ thống tối ưu tự do, không có sổ cái, không
+có trần. Cần lưu ý B1 \emph{không phải} là một đường cơ sở cho phép tái gán tự do --- việc
+chuyển một hành khách đã nhận sang xe khác bị cấm ở mọi cấu hình bởi một ràng buộc vật lý riêng.
+Nghĩa là con số quy trách ở mục \ref{muc:quytrach} chỉ tính phần do \emph{đổi lịch trình}, chưa tính phần do
+\emph{đổi xe} mà một hệ thống cho phép tái gán sẽ còn cộng thêm.
+
+Cấu hình \textbf{C1} là cấu hình cam kết đầy đủ: trần 30 giây cho tổng độ dời giờ trả, khóa cứng
+xe và hai điểm dừng, giờ đón cố định từ lúc xác nhận. Bảy cấu hình còn lại nằm giữa hai cực này
+và tạo thành hai thang đo được mô tả ở mục \ref{muc:duongbien}.
+
+\section{Quy trách: ai gây ra xáo trộn}
+\label{muc:quytrach}
+
+\subsection{Con số trung tâm}
+
+Câu hỏi đầu tiên và cơ bản nhất: trong toàn bộ lượng dịch chuyển giờ hẹn mà hành khách nhìn
+thấy, bao nhiêu phần là do bộ điều phối tự gây ra, bao nhiêu phần là do thế giới vật lý?
+
+Kết quả, đo trên toàn bộ 40 ô của hai cấu hình gốc bằng cách đọc lại biên bản đầy đủ:
+
+\begin{table}[htbp]
+\centering
+\caption{Phân rã lượng dịch chuyển giờ hẹn theo nguyên nhân}
+\label{bang:quytrach}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Đại lượng} & \textbf{B1} & \textbf{C1} & \textbf{Chênh}\\
+\midrule
+Hành khách được phục vụ & 1.735 & 1.581 & $-154$\\
+Tỉ lệ phục vụ & $80{,}32\%$ & $73{,}19\%$ & $-7{,}13$ pp\\
+Số lần công bố lời hứa & 54.311 & 45.542 & $-8.769$\\
+\midrule
+Dịch chuyển khách nhìn thấy & 83.587 s & 9.332 s & $-74.255$ s\\
+\quad --- do quyết định của nhà xe & 74.443 s & 128 s & $-74.315$ s\\
+\quad --- do trôi dạt vật lý & 9.203 s & 9.204 s & $+1$ s\\
+\midrule
+\textbf{Tỉ lệ do nhà xe gây ra} & \textbf{89{,}06\%} & \textbf{1{,}37\%} & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Con số $89{,}06\%$ là kết quả chính của mục này. Nó nói rằng trong một hệ ride-pooling tối ưu
+liên tục theo lối kinh điển, gần chín phần mười sự bất định mà hành khách trải nghiệm về giờ
+giấc \emph{là do hệ thống tự tạo ra}, không phải do thế giới vật lý. Và vì bộ sinh phương án
+chỉ chèn thêm, toàn bộ 74.443 giây đó là dịch chuyển theo hướng xấu đi --- không có lần nào
+tốt lên.
+
+\subsection{Nhóm chứng tự nhiên}
+
+Điều làm con số trên đáng tin là sự tồn tại của một nhóm chứng nội tại. Phần trôi dạt vật lý
+giữa hai cấu hình gần như bằng nhau: 9.203 so với 9.204 giây. Thế giới vật lý cư xử như nhau ở
+cả hai nhánh, còn khác biệt nằm trọn trong hành vi của bộ điều phối.
+
+Tuy vậy, cần phát biểu điều này cho đúng. Khi mở rộng sang cấu hình thứ ba, độ lệch của thành
+phần ngoại sinh lên tới $5{,}4\%$, nên việc hai con số của riêng cặp B1/C1 khớp nhau tới
+$0{,}02\%$ là may mắn chứ không phải quy luật. Phát biểu chính xác là:
+
+\begin{khungy}
+Qua sáu cấu hình rất khác nhau, trôi dạt vật lý dao động trong biên độ $5{,}6\%$ và không có xu
+hướng, trong khi xáo trộn do nhà điều hành gây ra thay đổi 580 lần. Hai đại lượng phản ứng hoàn
+toàn khác nhau với chính sách --- đó chính là điều phép phân rã ba mốc cần chứng minh.
+\end{khungy}
+
+\subsection{Thiệt hại tập trung chứ không dàn đều}
+
+Bảng \ref{bang:taptrung} cho thấy một đặc điểm quan trọng: thiệt hại không dàn đều mà dồn vào
+một cái đuôi mỏng.
+
+\begin{table}[htbp]
+\centering
+\caption{Phân bố thiệt hại trên hành khách}
+\label{bang:taptrung}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+& \textbf{B1} & \textbf{C1}\\
+\midrule
+Hành khách được phục vụ & 1.735 & 1.581\\
+Khách từng bị dời do nhà xe & 403 ($23{,}2\%$) & 11 ($0{,}7\%$)\\
+Tổng số lần dời & 479 & 11\\
+Trung bình mỗi lần dời & 155 s & 11{,}6 s\\
+Hành khách chịu thiệt nặng nhất & \textbf{840{,}9 s} & 27{,}6 s\\
+Phân vị 99 & 536{,}4 s & 0{,}0 s\\
+Phân vị 95 & 264{,}6 s & 0{,}0 s\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ba điều đọc được từ bảng này. Thứ nhất, ba phần tư hành khách không hề bị ảnh hưởng --- vấn đề
+nằm ở một cái đuôi mỏng. Thứ hai, mỗi lần bộ điều phối đổi ý, nó dời giờ đã báo trung bình 155
+giây; đây không phải chuyện nhích vài giây mà mỗi lần là hơn hai phút rưỡi. Thứ ba, hành khách
+chịu thiệt nặng nhất bị dời tổng cộng gần mười bốn phút mà hệ thống vẫn tính là phục vụ thành
+công, vì mọi mốc vẫn nằm trong cửa sổ $\Omega$ và $\Delta$ hợp lệ.
+
+Điểm thứ ba là minh họa cụ thể nhất cho hạn chế thứ nhất đã nêu ở mục 1.2, và nó cũng cho thấy
+vì sao một số hạng cộng gộp trong hàm mục tiêu là không đủ: khi cộng gộp, mười bốn phút của một
+người bị pha loãng trong 1.735 người.
+
+\subsection{Độ khít của phép phân rã}
+
+Vì cả ba đại lượng đều là tổng trị tuyệt đối, bất đẳng thức tam giác chỉ cho $B \le A + d$.
+Bảng \ref{bang:cong-khit} kiểm tra độ hụt thực tế.
+
+\begin{table}[htbp]
+\centering
+\caption{Độ khít của phân rã $B \le A + d$ trên sáu cấu hình (đơn vị: giây)}
+\label{bang:cong-khit}
+\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+\textbf{Cấu hình} & $A$ & $d$ & $A+d$ & $B$ & \textbf{hụt} & \textbf{hụt \%}\\
+\midrule
+B1 & 74.443 & 9.203 & 83.646 & 83.587 & 58 & $0{,}07\%$\\
+nobudget & 22.485 & 9.703 & 32.188 & 32.176 & 12 & $0{,}04\%$\\
+budget300 & 15.809 & 9.641 & 25.450 & 25.441 & 9 & $0{,}03\%$\\
+budget120 & 5.063 & 9.260 & 14.324 & 14.318 & 5 & $0{,}04\%$\\
+budget60 & 1.109 & 9.184 & 10.293 & 10.291 & 1 & $0{,}01\%$\\
+C1 & 128 & 9.204 & 9.332 & 9.332 & 0 & $\mathbf{0{,}00\%}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Độ hụt tối đa là $0{,}07\%$ và bằng đúng không ở C1 sau khi làm tròn.
+
+Con số gộp này dễ bị đọc quá mạnh, nên mục \ref{muc:phanra} đã kiểm tra lại ở mức \emph{từng lần
+công bố} thay vì trên tổng (bảng \ref{bang:khit-tung-lan}). Kết quả mịn hơn và khác về chất: dấu
+bằng đúng ở $99{,}58\%$ số lần công bố, nhưng phần lớn con số đó đến từ việc \emph{một trong hai}
+thành phần bằng không --- điều xảy ra ở $99{,}12\%$ số lần, khiến phép kiểm trở nên tầm thường.
+Giới hạn ở 476 lần công bố mà cả $A$ và $d$ đều khác không, dấu bằng chỉ đúng $52{,}1\%$; trong
+228 lần còn lại, trôi dạt \emph{thuận chiều} đã hấp thụ một phần cú đẩy của bộ điều phối, cho
+$B = A - d$ thay vì $B = A + d$. Độ hụt lớn nhất trong một lần công bố là $1{,}38$ giây.
+
+Tổng phần hụt vẫn chỉ là $0{,}0748\%$ trên nhánh B1, nhỏ hơn sàn nhiễu quỹ đạo hai bậc độ lớn,
+nên không kết luận định lượng nào trong chương này thay đổi. Nhưng cách phát biểu thì phải đổi:
+đây là một \emph{bất đẳng thức có độ khít đo được}, không phải một đẳng thức.
+
+Một lưu ý về cách phát biểu: vì phép phân rã không phải một phân hoạch chính xác, không nên nói
+``$89{,}06\%$ lượng xáo trộn \emph{được gây ra bởi} bộ điều phối'' mà nên nói ``phần do bộ điều
+phối gây ra \emph{bằng} $89{,}06\%$ lượng khách nhìn thấy'' --- một tỉ số, đúng theo nghĩa đen.
+Sai khác chỉ $0{,}07\%$ nên kết luận không đổi, nhưng cách nói cần chính xác.
+
+\section{Đường biên: giá của cam kết}
+\label{muc:duongbien}
+
+\subsection{Thiết kế hai thang}
+
+Để đo giá của cam kết một cách có kiểm soát, chín cấu hình được xếp thành hai thang cắt nhau
+tại C1. Thang thứ nhất giữ nguyên mọi khóa và chỉ thay đổi trần ngân sách giờ trả. Thang thứ
+hai giữ trần ở 30 giây và thay đổi cách bảo vệ giờ đón.
+
+\subsection{Thang ngân sách}
+
+\begin{table}[htbp]
+\centering
+\caption{Thang ngân sách giờ trả --- đường biên giữa phục vụ và ổn định}
+\label{bang:thang1}
+\small
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+\textbf{Cấu hình} & \textbf{Lời hứa} & \textbf{Phục vụ} & \textbf{vs B1} & \textbf{Xáo trộn} & \textbf{Tệ nhất} & \textbf{Bị dời}\\
+\midrule
+B1 & không hứa gì & 1.735 & 0 & 74.443 s & 841 s & 403\\
+nobudget & khóa xe + điểm & 1.655 & $-3{,}70$ & 22.485 s & 595 s & 142\\
+budget300 & $+$ trần 300 s & 1.641 & $-4{,}35$ & 15.809 s & 291 s & 128\\
+budget120 & $+$ trần 120 s & 1.608 & $-5{,}88$ & 5.063 s & 119 s & 76\\
+budget60 & $+$ trần 60 s & 1.579 & $-7{,}22$ & 1.109 s & 59 s & 34\\
+C1 & $+$ trần 30 s & 1.581 & $-7{,}13$ & 128 s & 28 s & 11\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Đây là bảng trung tâm của khóa luận. Đọc từ trên xuống, nó cho thấy chính xác cái giá của từng
+mức chặt chẽ. Bốn nhận xét đáng chú ý.
+
+\textbf{Trần luôn được tôn trọng.} Ở mỗi cấu hình, hành khách chịu thiệt nặng nhất đều nằm dưới
+trần: 291 dưới 300, 119 dưới 120, 59 dưới 60, và 27{,}6 dưới 30. Đây là bằng chứng rằng lời hứa
+cưỡng chế được chứ không chỉ là chỉ tiêu mong muốn.
+
+\textbf{Phần đắt nhất là quyết định cam kết chút nào đó.} Bước từ B1 sang nobudget --- chỉ khóa
+danh tính xe và hai điểm dừng, chưa hứa một chữ nào về thời gian --- đã ngốn $3{,}70$ điểm phần
+trăm, tức hơn nửa tổng chi phí $7{,}13$ pp.
+
+\textbf{Điểm gãy nằm ở 300 giây.} Với $4{,}35$ pp, hệ thống mua được lời hứa ``giờ trả không xê
+dịch quá năm phút'' --- chỉ thêm $0{,}65$ pp so với việc chỉ khóa danh tính, mà cắt đôi trường
+hợp tệ nhất từ 595 xuống 291 giây.
+
+\textbf{Hiệu suất mua sự ổn định giảm dần.} Số giây ổn định mua được trên mỗi chuyến phải hy
+sinh lần lượt là 649, 624, 546, 470, 483 --- giảm đều cho tới khi chạm sàn nhiễu ở hai điểm cuối.
+
+\subsection{Cảnh báo phương pháp luận: độ nhạy quỹ đạo}
+
+Bảng \ref{bang:thang1} chứa một điều bất thường cần giải thích: cấu hình budget60 phục vụ 1.579
+hành khách còn C1 với trần chặt hơn lại phục vụ 1.581. Trần chặt hơn cho kết quả tốt hơn.
+
+Kiểm tra từng ô cho thấy 11 trên 20 ô khác nhau giữa hai cấu hình, và khác theo \emph{cả hai
+chiều}; 8 trên 20 ô vi phạm thứ tự đơn điệu. Đây không phải nhiễu thống kê --- mọi lần chạy dùng
+cùng hạt giống và hoàn toàn tất định. Đây là \emph{độ nhạy quỹ đạo}: ràng buộc chặt hơn làm thay
+đổi phương án nào được chọn ở những bước sớm, và khác biệt đó lan truyền qua chuỗi quyết định
+tiếp theo. Tất định nhưng thực tế không dự đoán được, theo cùng cơ chế khiến một thuật toán tham
+lam không cho nghiệm tối ưu toàn cục.
+
+Hệ quả bắt buộc là phải công bố một sàn nhiễu. Độ tán ở mức ô là $\pm 1$ đến $\pm 4$ hành khách
+trên khoảng 80, nên trên bảng 20 ô, \emph{chênh lệch dưới khoảng $\pm 7$ hành khách, tức
+$\pm 0{,}3$ điểm phần trăm, không diễn giải được}.
+
+\begin{table}[htbp]
+\centering
+\caption{Áp dụng sàn nhiễu cho các bước trên thang ngân sách}
+\label{bang:sannhieu}
+\small
+\begin{tabular}{@{}lrl@{}}
+\toprule
+\textbf{Bước} & \textbf{Chênh lệch} & \textbf{Kết luận}\\
+\midrule
+$\infty \to 300$ s & $0{,}65$ pp (14 khách) & vừa đủ trên sàn\\
+$300 \to 120$ s & $1{,}53$ pp (33 khách) & kết quả thật\\
+$120 \to 60$ s & $1{,}34$ pp (29 khách) & kết quả thật\\
+$60 \to 30$ s & $0{,}09$ pp (2 khách) & \textbf{thuần nhiễu quỹ đạo}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Không có bước kiểm tra từng ô này, báo cáo đã có thể kết luận rằng ``siết từ 60 xuống 30 giây
+tiết kiệm được hai chuyến'' --- một kết luận vô nghĩa. Đây là một trong những bài học phương
+pháp quan trọng nhất rút ra được trong quá trình thực hiện.
+
+\subsection{Thang bảo vệ giờ đón}
+
+\begin{table}[htbp]
+\centering
+\caption{Thang bảo vệ giờ đón --- sáu cơ chế rơi vào hai hành vi}
+\label{bang:thang2}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+\textbf{Cấu hình} & \textbf{Cách bảo vệ giờ đón} & \textbf{Phục vụ} & \textbf{vs B1} & \textbf{Xáo trộn} & \textbf{Tệ nhất}\\
+\midrule
+nopickuplock & không bảo vệ & 1.583 & $-7{,}04$ & 187 s & 34 s\\
+freeze300 & hàng rào 300 s & 1.583 & $-7{,}04$ & 187 s & 34 s\\
+freeze600 & hàng rào 600 s & 1.581 & $-7{,}13$ & 128 s & 28 s\\
+C1 & khóa khi xác nhận & 1.581 & $-7{,}13$ & 128 s & 28 s\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Thang này cho một kết quả bất ngờ: bốn cơ chế khác nhau chỉ sinh ra \emph{hai} bộ số. Lý do được
+làm rõ bằng một phép đo bổ sung. Quét 19.539 lần công bố lời hứa và tính khoảng cách từ lúc công
+bố tới lúc đón:
+
+\begin{table}[htbp]
+\centering
+\caption{Thời điểm các lần công bố lời hứa so với giờ đón}
+\label{bang:thoidiem}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Thời điểm công bố} & \textbf{Số lần} & \textbf{Tỉ lệ}\\
+\midrule
+Khách đã lên xe & 9.057 & $46{,}4\%$\\
+Còn 0--300 giây & 7.199 & $36{,}8\%$\\
+Còn 300--600 giây & 3.283 & $16{,}8\%$\\
+Còn hơn 600 giây & \textbf{0} & $\mathbf{0{,}0\%}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ba hệ quả. Thứ nhất, \emph{hàng rào 600 giây không bao giờ mở}, vì tầm đặt chỗ của kịch bản đúng
+bằng 600 giây; mọi hàng rào từ 600 giây trở lên đều tương đương khóa vĩnh viễn. Đây là một giới
+hạn phạm vi phải ghi rõ: khóa luận không kết luận được gì về hàng rào dài hơn tầm đặt chỗ. Thứ
+hai, \emph{hàng rào 300 giây tương đương không khóa}, vì trong 300 giây cuối xe đã cam kết và
+đang trên đường, giờ đón vốn không còn chỗ xê dịch. Thứ ba, $46{,}4\%$ số lần công bố xảy ra sau
+khi khách đã lên xe nên chúng chỉ nói về giờ trả --- đây là lời giải thích cơ học cho sự bất đối
+xứng giữa hai thang: ngân sách giờ trả chi phối gần một nửa khối lượng công bố nên đắt, còn khóa
+giờ đón chỉ chạm vào phần đầu vốn đã chật nên rẻ.
+
+Ba kết quả độc lập --- chi phí thang một, chi phí thang hai, và phân bố thời điểm công bố ---
+khớp vào cùng một lời giải thích.
+
+\section{So sánh hai cơ sở tính}
+\label{muc:haicoso}
+
+Mục này kiểm chứng thực nghiệm ba định lý ở mục 3.5.
+
+\subsection{Kết quả ở cùng mức ngân sách}
+
+\begin{table}[htbp]
+\centering
+\caption{Cơ sở hành vi so với cơ sở kết quả ở cùng trần}
+\label{bang:coso}
+\small
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+\textbf{Trần} & \textbf{Hành vi khả thi} & \textbf{Kết quả khả thi} & \textbf{Phục vụ trên các ô chung}\\
+\midrule
+30 s & \textbf{20/20} & 16/20 & hành vi 1.294 --- kết quả 1.294 --- chênh \textbf{0}\\
+120 s & \textbf{20/20} & 16/20 & hành vi 1.267 --- kết quả 1.266 --- chênh $-1$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Kết quả khớp chính xác với lý thuyết. Định lý 3.1 dự đoán cơ sở hành vi không bao giờ bị làm
+rỗng --- quan sát được 20/20 ô ở cả hai trần. Định lý 3.2 dự đoán cơ sở kết quả có thể vô nghiệm
+--- quan sát được 4/20 ô hỏng, với đúng thông báo lỗi ``đã loại mọi phương án sinh ra cho xe
+này''. Định lý 3.3 dự đoán cơ sở kết quả không phục vụ nhiều hơn --- quan sát được chênh lệch 0
+và $-1$ hành khách.
+
+\subsection{Nới trần không chữa được, chỉ dời chỗ đau}
+
+Một câu hỏi tự nhiên là liệu nới trần có làm cơ sở kết quả hết vô nghiệm không. Bảng
+\ref{bang:doicho} cho câu trả lời.
+
+\begin{table}[htbp]
+\centering
+\caption{Tập ô vô nghiệm dưới cơ sở kết quả, ở hai mức trần}
+\label{bang:doicho}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Trần} & \textbf{Các ô vô nghiệm}\\
+\midrule
+30 s & 16-r2, \textbf{16-r4}, 17-r1, 17-r3\\
+120 s & 14-r4, 15-r2, \textbf{16-r4}, 17-r4\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Nới trần gấp bốn lần vẫn hỏng đúng bốn ô, nhưng là một \emph{tập ô khác}, giao nhau ở đúng một
+ô. Đó là sự dời chỗ chứ không phải sự chữa lành.
+
+\subsection{Diễn giải}
+
+Kết hợp lý thuyết và thực nghiệm cho một kết luận thiết kế dứt khoát. Lý thuyết nói cơ sở hành
+vi luôn khả thi, cơ sở kết quả có thể vô nghiệm, và cơ sở kết quả không bao giờ hơn. Thực nghiệm
+nói thêm một điều mà lý thuyết không nói: \emph{khi cơ sở kết quả khả thi thì nó cũng chẳng cho
+thêm gì} --- chênh 0 và $-1$ hành khách.
+
+\begin{khungy}
+Nếu muốn hứa với hành khách một cách cưỡng chế được, phải hứa về \emph{hành vi của mình} ---
+``tôi sẽ không tự dời giờ của bạn quá $\beta$'' --- chứ không thể hứa về \emph{kết quả} ---
+``giờ của bạn sẽ không đổi quá $\beta$''. Lời hứa thứ hai nghe hay hơn nhưng không giữ được, vì
+một phần của nó nằm ngoài tầm kiểm soát của người hứa. Và nó không mua thêm được gì cả.
+\end{khungy}
+
+\section{Độ vững với cách đo}
+\label{muc:dovung}
+
+\subsection{Vì sao phải kiểm tra}
+
+RideBound mặc định dùng một thành viên của họ thước đo bất ổn: tổng tuyến tính không trọng số.
+Như mục 2.3 đã nêu, văn liệu hoạch định sản xuất cung cấp cả một họ thước đo cho phép đặt trọng
+số khác nhau theo vị trí trên chân trời kế hoạch và dùng cả biểu thức bậc hai. Nếu thứ hạng các
+cấu hình đổi khi đổi thước đo thì chính điều đó là một phát hiện.
+
+\subsection{Kết quả}
+
+\begin{table}[htbp]
+\centering
+\caption{Chín thước đo áp dụng song song trên sáu cấu hình}
+\label{bang:chinthuoc}
+\footnotesize
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+\textbf{Thước đo} & \textbf{B1} & \textbf{nobudget} & \textbf{300 s} & \textbf{120 s} & \textbf{60 s} & \textbf{30 s}\\
+\midrule
+Tuyến tính $\sum|\delta|$ & 74.443 & 22.485 & 15.809 & 5.063 & 1.109 & 128\\
+Bậc hai $\sqrt{\sum \delta^2}$ & 4.502 & 2.288 & 1.590 & 649 & 227 & 52\\
+Trọng số bậc thang & 180.824 & 58.841 & 40.943 & 13.129 & 2.975 & 300\\
+Trọng số cận kề & 41.571 & 13.618 & 9.541 & 3.214 & 728 & 77\\
+Đếm số lần dời & 479 & 155 & 135 & 79 & 34 & 11\\
+Khách tệ nhất & 841 & 595 & 291 & 119 & 59 & 28\\
+Phân vị 99 & 536 & 331 & 218 & 101 & 39 & 0\\
+Phân vị 95 & 265 & 115 & 83 & 0 & 0 & 0\\
+Số khách bị dời & 403 & 142 & 128 & 76 & 34 & 11\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cả chín thước đo đơn điệu trên cả sáu cấu hình, không một ngoại lệ. Kết luận chính của khóa luận
+không phụ thuộc vào lựa chọn cách đo.
+
+Tuy nhiên, \emph{độ lớn} thì lệch tới khoảng 300 lần. Thước tuyến tính nói C1 tốt hơn B1 khoảng
+585 lần; thước đếm số lần nói 43 lần; thước khách-tệ-nhất nói 30 lần. Cùng dữ liệu, cùng hướng,
+hai bậc độ lớn khác nhau. Hệ quả thực hành là không được quảng cáo con số 585 lần; phải báo cáo
+cả họ thước đo và nói rõ con số nào ứng với câu hỏi nào.
+
+\subsection{Bất đối xứng giữa ba đại lượng}
+
+Phân tích trên dẫn tới một quan sát mà chúng tôi coi là kết quả phương pháp trung tâm.
+
+\begin{table}[htbp]
+\centering
+\caption{Ba đại lượng phản ứng khác hẳn nhau với chính sách}
+\label{bang:batdoixung}
+\small
+\begin{tabular}{@{}lp{9.4cm}@{}}
+\toprule
+\textbf{Đại lượng} & \textbf{Phản ứng với chính sách}\\
+\midrule
+Độ ổn định lời hứa & Đơn điệu tuyệt đối, 9 thước đo, 0 ngoại lệ, trải 175 lần.\\
+Trôi dạt vật lý & Gần như bất biến, biên độ $\pm 5{,}6\%$, không có xu hướng.\\
+Tỉ lệ phục vụ & Nhạy quỹ đạo, vi phạm đơn điệu ở 8/20 ô, sàn nhiễu $\pm 0{,}3$ pp.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Phép phân rã ba mốc tách được một đại lượng \emph{phản ứng sạch với chính sách} khỏi một đại
+lượng \emph{không phản ứng}, trong khi thước đo truyền thống --- tỉ lệ phục vụ --- lại là thứ
+nhiễu nhất trong ba. Một báo cáo chỉ dựa vào tỉ lệ phục vụ rất dễ đọc nhầm nhiễu thành kết quả.
+
+\section{Thí nghiệm phụ: bảo đảm một chiều}
+\label{muc:ratchet}
+
+\subsection{Vì sao phải tách riêng}
+
+Hai cấu hình dùng cơ chế bảo đảm một chiều không chạy được trên bộ chạy đã niêm phong. Nguyên
+nhân xác định được: bộ chạy niêm phong được dựng ngày 22 tháng 8 năm 2026, còn tính năng ratchet
+vào mã nguồn ngày 4 tháng 9 --- sau mười ba ngày. Bộ chạy không biết trường cấu hình đó nên
+thoát ngay ở bước bắt tay.
+
+Vì kết quả được ghim theo băm nhị phân bộ chạy, không thể chỉ đơn giản dựng bộ chạy mới rồi trộn
+số liệu vào bảng chính. Giải pháp là một thí nghiệm phụ tách bạch: dựng bộ chạy mới trong thư
+mục riêng, chạy cả hai cấu hình điều trị \emph{và} hai cấu hình đối chứng đã biết kết quả trên
+bộ chạy cũ. Nếu hai đối chứng tái lập đúng, số liệu điều trị đọc được trên cùng thang.
+
+\subsection{Kiểm chứng bộ chạy mới}
+
+\begin{table}[htbp]
+\centering
+\caption{Hai cấu hình đối chứng tái lập kết quả của bộ chạy niêm phong}
+\label{bang:doichung}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Đối chứng} & \textbf{Bộ chạy mới} & \textbf{Bộ chạy niêm phong} & \textbf{Ô sai lệch}\\
+\midrule
+reference (khóa cứng) & 1.581 & 1.581 & \textbf{0/20}\\
+nopickuplock (không khóa) & 1.583 & 1.583 & \textbf{0/20}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Hai cấu hình ở hai cực của thang, tái lập từng ô một. Bộ chạy mới tương đương về hành vi.
+
+\subsection{Kết quả và lời giải thích}
+
+\begin{table}[htbp]
+\centering
+\caption{Bảo đảm một chiều so với khóa cứng hai chiều}
+\label{bang:ratchet}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+& \textbf{nopickuplock} & \textbf{ratchet} & \textbf{khóa cứng}\\
+\midrule
+Phục vụ & 1.583 & \textbf{1.581} & 1.581\\
+Xáo trộn do quyết định & 187 s & \textbf{128 s} & 128 s\\
+Số lần dời & 13 & \textbf{11} & 11\\
+Khách tệ nhất & 34{,}4 s & \textbf{27{,}6 s} & 27{,}6 s\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Bảo đảm một chiều cho kết quả \emph{giống hệt} khóa cứng hai chiều, không lệch một chữ số. Lời
+giải thích có thể rút ra chỉ từ ba con số trong bảng: cấu hình thả tự do cho 59 giây xê dịch giờ
+đón do quyết định ($187 - 128$), cấu hình ratchet cho 0 giây, vậy \emph{toàn bộ 59 giây đó đều
+là xấu đi}. Nếu có phần nào là cải thiện, ratchet đã cho qua.
+
+Nguyên nhân mang tính cơ học: bộ sinh phương án chỉ chèn thêm, không bỏ bớt, nên chỉ có thể đẩy
+lùi giờ đón của khách cũ chứ không bao giờ kéo sớm lên. Quyền ``được phép cải thiện'' mà ratchet
+trao là một quyền không bao giờ dùng được. Điều này khớp với kết quả đã biết
+$\mathtt{decisionMovedEarlier} = 0$ trên 421.752 lần sửa.
+
+Kết quả này có ý nghĩa đối chiếu văn liệu trực tiếp, vì ratchet chính là cơ chế Alonso-Mora và
+cộng sự sử dụng:
+
+\begin{khungy}
+Trong một bộ điều phối dựa trên chèn, bảo đảm một chiều nghiêm ngặt \emph{đúng bằng} khóa cứng.
+Nó trông mềm hơn nhưng không mềm hơn chút nào. Hình thức của một lời bảo đảm chỉ có ý nghĩa
+trong chừng mực bộ sinh phương án có thể thực thi nó; một bảo đảm nới lỏng theo hướng mà thuật
+toán không bao giờ đi được thì không nới lỏng gì cả.
+\end{khungy}
+
+Cuối cùng, cần ghi nhận vai trò của cơ chế chứng cứ. Nếu chỉ nhìn bảng tổng hợp, việc sáu cấu
+hình rơi vào hai bộ số trông hệt như một lỗi sao chép cấu hình. Chỉ nhờ băm ngữ nghĩa và tóm
+lược công bố khác nhau ở toàn bộ 20/20 ô mới biết đó là những lần chạy thật, đi qua những chuỗi
+lời hứa khác nhau, và về đích cùng một chỗ.
+
+\section{Thí nghiệm trôi dạt thật}
+\label{muc:troidat}
+
+\subsection{Động cơ}
+
+Ba định lý ở mục 3.5 đúng nhưng gần như rỗng trên panel chính, vì một lý do được phát hiện muộn
+trong quá trình thực hiện: bộ dữ liệu thử có \emph{đúng một ảnh chụp thời gian di chuyển} cho cả
+hai giờ mô phỏng. Kiểm tra trực tiếp xác nhận điều này ở ba tầng --- trường
+\texttt{travelSnapshots} có độ dài 1, toàn bộ 108 sự kiện đều thuộc loại ``yêu cầu xuất hiện'',
+và quét toàn bộ biên bản một lần chạy chỉ thấy một định danh ảnh chụp duy nhất.
+
+Nghĩa là trôi dạt $d$ đo được trên panel chính \emph{không đến từ tắc đường} mà đến từ độ trễ
+thực thi: xe di chuyển theo bước rời rạc và có thời gian dừng đón trả, nên khi chiếu lại cùng
+một lộ trình từ vị trí thật hiện tại thì giờ đến lệch đi một chút. Đó là lý do $d$ nhỏ --- trung
+vị $4{,}9$ giây, tối đa $39{,}9$ giây. Đây là \emph{cận dưới} của trôi dạt, không phải giá trị
+điển hình của một hệ thật.
+
+Thí nghiệm này bơm trôi dạt thật vào để kiểm chứng ba định lý trong chế độ mà chúng có ý nghĩa.
+
+\subsection{Cách bơm trôi dạt}
+
+Trôi dạt không phải nhiễu nhân tạo. Bộ dữ liệu FleetPy Manhattan có sẵn hệ số thời gian di
+chuyển \emph{đo thật}, mười lăm phút một mốc, riêng cho từng ngày. Trong khung 08:00--10:00 của
+panel, cao điểm sáng làm thời gian di chuyển tăng từ $17\%$ đến $26\%$ tùy ngày, và tăng đơn
+điệu. Hệ số được áp dụng theo công thức
+
+\begin{equation}
+f_k(t) = \left( \frac{f_{\text{thật}}(t_0 + t)}{f_{\text{thật}}(t_0)} \right)^{k}
+\end{equation}
+
+trong đó $k$ là mức khuếch đại: $k=0$ tái lập chính xác đường cơ sở phẳng, $k=1$ là ngày thật,
+$k=2$ nhân đôi độ lệch. Việc chuẩn hóa theo mốc đầu khung bảo đảm $f_k(0) = 1$ tuyệt đối, điều
+này cần thiết vì hệ thống kiểm tra ở bước khởi tạo rằng bộ định tuyến tái tạo đúng thời gian di
+chuyển của bộ dữ liệu thử; trôi dạt chỉ tích lũy \emph{sau} phép kiểm tra đó.
+
+\subsection{Trôi dạt đo được}
+
+\begin{table}[htbp]
+\centering
+\caption{Trôi dạt tích lũy trên mỗi hành khách ở ba mức}
+\label{bang:troidat}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Mức} & $d$ \textbf{p50} & $d$ \textbf{p90} & $d$ \textbf{max} & \textbf{\% khách vượt trần 30 s vì riêng $d$}\\
+\midrule
+$k=0$ phẳng & $4{,}9$ s & $10{,}8$ s & $39{,}9$ s & $0{,}2\%$\\
+$k=1$ Manhattan thật & $14{,}1$ s & $47{,}4$ s & $150{,}7$ s & $\mathbf{22{,}8\%}$\\
+$k=2$ nhân đôi & $10{,}9$ s & $69{,}9$ s & $157{,}0$ s & $20{,}3\%$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Con số cột cuối là mấu chốt: dưới tắc đường Manhattan thật, gần một phần tư số hành khách tích
+lũy hơn 30 giây trôi dạt \emph{thuần túy do giao thông}. Dưới cơ sở kết quả, ngân sách của những
+người đó bị thủng vì thời tiết --- nhà điều hành bị tính phí cho việc không làm gì.
+
+Cần ghi kèm một lưu ý: số liệu $k=1$ và $k=2$ chỉ tính trên những ô sống sót qua bức tường mô tả
+ở mục \ref{muc:batbien}, nên có thiên lệch sống sót. Con số $k=0$ là trên đủ 20 ô.
+
+\subsection{Kết quả chính}
+
+Điều quan trọng nhất trong thí nghiệm này là việc phân loại nguyên nhân hỏng. Đếm số lần hỏng
+thôi là không đủ --- phải mở biên bản lỗi của từng lần chạy.
+
+\begin{table}[htbp]
+\centering
+\caption{Phân loại kết quả theo nguyên nhân thật}
+\label{bang:phanloai}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Cấu hình} & \textbf{Chạy được} & \textbf{Vô nghiệm do cam kết} & \textbf{Hỏng do ràng buộc vật lý}\\
+\midrule
+hành vi, $k=0$ & 20 & \textbf{0} & 0\\
+kết quả, $k=0$ & 16 & \textbf{4} & 0\\
+hành vi, $k=1$ & 9 & \textbf{0} & 11\\
+kết quả, $k=1$ & 0 & \textbf{19} & 1\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Kết quả xác nhận cả ba định lý trong chế độ có trôi dạt thật.
+
+\textbf{Định lý 3.1 đứng vững.} Cơ sở hành vi có đúng \emph{không} lần vô nghiệm do cam kết ở
+mọi mức trôi dạt. Mười một lần hỏng ở $k=1$ thuộc một loại hoàn toàn khác --- một bất biến miền
+của mô hình, mô tả ở mục \ref{muc:batbien} --- và loại lỗi ấy đập vào cả hai cơ sở như nhau. Nếu chỉ đếm số
+lần hỏng mà không mở biên bản, kết luận rút ra sẽ là ``định lý sai'', ngược hoàn toàn.
+
+\textbf{Định lý 3.2 được xác nhận và mạnh hơn dự kiến.} Cơ sở kết quả vô nghiệm 4/20 ô khi trôi
+dạt ở mức cận dưới, và \emph{19/20 ô} dưới tắc đường Manhattan thật. Ở mức đó, điều phối viên
+không còn \emph{bất kỳ} quyết định hợp lệ nào, kể cả không làm gì.
+
+\subsection{Quy trách dưới trôi dạt thật}
+
+Một phép đo bổ sung, thực hiện trên cùng chín ô mà cả hai mức đều chạy được, cho thấy phần đóng
+góp của nhà điều hành teo lại thế nào khi thế giới ồn hơn.
+
+\begin{table}[htbp]
+\centering
+\caption{Quy trách dưới chế độ cam kết, so hai mức trôi dạt (9 ô chung)}
+\label{bang:quytrach-troidat}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Mức} & \textbf{Do nhà xe} & \textbf{Do đường} & \textbf{Khách thấy} & \textbf{\% do nhà xe}\\
+\midrule
+$k=0$ phẳng & 71 s & 3.984 s & 4.056 s & $1{,}76\%$\\
+$k=1$ Manhattan thật & 27 s & 12.155 s & 12.182 s & $\mathbf{0{,}22\%}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Tỉ lệ 450 trên 1. Tính lời hứa theo kết quả nghĩa là bắt nhà điều hành chịu trách nhiệm cho
+12.155 giây tắc đường để kiểm soát 27 giây hành vi của chính mình. Đây là lập luận nghĩa vụ
+phương tiện ở mục 2.4, giờ đã có số: cơ sở kết quả không chỉ \emph{bất khả thi} mà còn
+\emph{bất công}.
+
+\subsection{Thang trôi dạt ba điểm}
+
+Để kiểm tra xem kết quả trên có phải hiện tượng ngưỡng hay là một xu hướng liên tục, một mức
+trung gian $k = 0{,}5$ được bổ sung. Mức này làm thời gian di chuyển tăng $8{,}3\%$ đến
+$12{,}2\%$ tùy ngày, tức đúng một nửa độ lệch lô-ga-rít của ngày thật.
+
+\begin{table}[htbp]
+\centering
+\caption{Thang trôi dạt ba điểm --- tính khả thi của hai cơ sở}
+\label{bang:thang-troidat}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Mức} & $d$ \textbf{p50} & $d$ \textbf{p90} & \textbf{\% khách vượt 30 s} & \textbf{Hành vi} & \textbf{Kết quả}\\
+\midrule
+$k=0$ phẳng & $4{,}9$ s & $10{,}8$ s & $0{,}2\%$ & \textbf{0/20} & 4/20\\
+$k=0{,}5$ & $9{,}8$ s & $27{,}6$ s & $7{,}9\%$ & \textbf{0/20} & 17/20\\
+$k=1$ thật & $14{,}1$ s & $47{,}4$ s & $22{,}8\%$ & \textbf{0/20} & 19/20\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Hai cột cuối là số ô \emph{vô nghiệm do ràng buộc cam kết}. Cơ sở hành vi giữ nguyên số không ở
+cả ba mức --- Định lý 3.1 đúng ở mọi mức trôi dạt. Cơ sở kết quả tăng đơn điệu từ 4 lên 17 rồi
+19 ô. Đây là một thang ba điểm chứ không phải một quan sát ngưỡng.
+
+\subsection{Vì sao không thể so tỉ lệ phục vụ --- một lập luận số học}
+
+Thí nghiệm này cho kết quả về \emph{tính khả thi} nhưng không cho kết quả về \emph{tỉ lệ phục
+vụ}, và lý do sâu hơn một trở ngại kỹ thuật. Ban đầu chúng tôi cho rằng chỉ cần tìm một mức
+trôi dạt trung gian là sẽ có đủ ô mà cả hai cơ sở cùng chạy được. Dữ liệu bác bỏ điều đó.
+
+Một ô là khả thi dưới cơ sở kết quả khi \emph{không một hành khách nào} trong ô có trôi dạt tích
+lũy vượt trần. Nếu tỉ lệ hành khách vượt trần là $p$ và mỗi ô có $n$ hành khách thì, với giả
+thiết độc lập xấp xỉ,
+
+\begin{equation}
+P(\text{ô khả thi}) \approx (1-p)^{\,n}, \qquad n \approx 80
+\end{equation}
+
+\begin{table}[htbp]
+\centering
+\caption{Mô hình khả thi cấp ô đối chiếu với quan sát}
+\label{bang:mohinh-kha-thi}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Mức} & $p$ & $(1-p)^{80}$ & \textbf{Dự đoán ô khả thi} & \textbf{Quan sát}\\
+\midrule
+$k=0$ & $0{,}2\%$ & $0{,}8520$ & $17{,}0$ & 16/20\\
+$k=0{,}5$ & $7{,}9\%$ & $0{,}0014$ & $0{,}0$ & 0/17\\
+$k=1$ & $22{,}8\%$ & $0{,}0000$ & $0{,}0$ & 0/19\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Mô hình khớp với quan sát ở cả ba mức. Đọc ngược lại, để một nửa số ô còn khả thi thì cần
+$p \le 0{,}86\%$, và để $80\%$ số ô còn khả thi thì cần $p \le 0{,}28\%$ --- tức gần như đúng
+mức trôi dạt của panel phẳng, nơi $p = 0{,}2\%$. Không tồn tại mức trôi dạt nào vừa đủ lớn để
+hai cơ sở tách nhau, vừa đủ nhỏ để còn nhiều ô chung.
+
+Kết luận là phép so sánh tỉ lệ phục vụ trên tập ô chung \emph{không thể lấy được về mặt cấu
+trúc}, và điều đó tự nó là một phát hiện:
+
+\begin{khungy}
+Hệ quả của Định lý 3.3 biểu hiện theo kiểu \emph{phân loại} chứ không theo kiểu \emph{biên}.
+Cơ sở kết quả không phục vụ ít hơn vài hành khách trên các ô chung --- nó mất nguyên cả ô. Với
+khoảng 80 hành khách mỗi ô, khả thi cấp ô sụp theo hàm mũ $(1-p)^{n}$ ngay khi $p$ rời khỏi
+lân cận của không.
+\end{khungy}
+
+Nói cách khác, ở mức trôi dạt nhỏ hai cơ sở gần như trùng nhau vì dải khác biệt rộng đúng $d$
+mà $d$ quá nhỏ so với cú nhảy điển hình 130 giây (Hệ quả 3.4); ở mức trôi dạt thật thì cơ sở
+kết quả mất trắng. \emph{Không có khoảng giữa.} Đây là câu trả lời đầy đủ cho câu hỏi ở mục
+3.5.4, chỉ có điều nó không phải câu trả lời mà chúng tôi dự kiến khi thiết kế thí nghiệm.
+
+\section{Phép thử trần cửa sổ đón và một bất biến miền}
+\label{muc:cuaso}
+
+\subsection{Động cơ}
+
+Phân tích nguyên nhân loại bỏ phương án cho thấy cửa sổ đón chiếm ưu thế áp đảo.
+
+\begin{table}[htbp]
+\centering
+\caption{Nguyên nhân loại bỏ phương án ứng viên (cấu hình B1, 20 ô)}
+\label{bang:nguyennhan}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Nguyên nhân} & \textbf{Số lần} & \textbf{Tỉ lệ}\\
+\midrule
+Quá cửa sổ đón & 94.021 & $78{,}64\%$\\
+Quá thời gian trên xe & 25.300 & $21{,}16\%$\\
+Quá sức chứa & 239 & $0{,}20\%$\\
+\midrule
+Tổng & 119.560 & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Tuy nhiên, ``phương án bị loại'' khác với ``hành khách bị từ chối''. Một hành khách chỉ bị từ
+chối khi \emph{mọi} phương án cho người đó đều hỏng. Tách riêng 425 hành khách bị từ chối cho
+một bức tranh khác hẳn: cả 425 đều có phương án chết vì cửa sổ, và phần vượt cửa sổ \emph{nhỏ
+nhất} của mỗi người có trung vị chỉ $44{,}4$ giây, trong khi trung vị trên toàn bộ phương án bị
+loại là $309{,}7$ giây. Nói cách khác, đa số phương án hỏng nặng, nhưng phương án tốt nhất của
+mỗi hành khách bị từ chối thì chỉ lỡ trong gang tấc.
+
+\subsection{Kết quả phép thử trần}
+
+Để kiểm tra xem cửa sổ hay dung lượng đội xe mới là ràng buộc thật, cửa sổ được nới từ 600 lên
+900 giây và hai cấu hình gốc được chạy lại.
+
+\begin{table}[htbp]
+\centering
+\caption{Phép thử trần: nới cửa sổ đón từ 600 lên 900 giây}
+\label{bang:tran}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Cấu hình} & \textbf{Cửa sổ 600 s} & \textbf{Cửa sổ 900 s} & \textbf{Chênh}\\
+\midrule
+B1 (không hứa) & 1.735 & 1.938 & $+203$ ($+9{,}40$ pp)\\
+C1 (hứa 30 s) & 1.581 & 1.753 & $+172$ ($+7{,}96$ pp)\\
+\midrule
+Giá của lời hứa & $-7{,}13$ pp & $-8{,}56$ pp & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Kết quả bác bỏ giả thuyết ban đầu của chúng tôi. Dự đoán là khi cửa sổ thôi chặn, chi phí của
+cam kết sẽ co lại; thực tế nó \emph{nở ra}, từ $7{,}13$ lên $8{,}56$ điểm phần trăm. Cơ chế
+tương đối rõ: cửa sổ rộng hơn cho bộ tối ưu nhiều lựa chọn hơn, nên cũng nhiều cơ hội dời lời
+hứa hơn, và trần vì thế cắn đau hơn.
+
+Phát biểu tổng quát rút ra được, và nó khớp với con số $+11{,}1$ điểm phần trăm mà Fielbaum và
+Alonso-Mora đo được trong một hệ 2.000 xe --- tự do hơn hẳn hệ 8 xe của khóa luận:
+
+\begin{khungy}
+Giá của một lời hứa không phải hằng số. Nó tăng theo mức tự do của nhà điều hành.
+\end{khungy}
+
+\subsection{Mặt cong hai chiều}
+\label{muc:matcong}
+
+Phát biểu trên rút ra từ đúng hai điểm --- cấu hình không cam kết và cấu hình trần 30 giây ---
+nên nó là một quan sát chứ chưa phải một quy luật. Để kiểm tra, toàn bộ thang ngân sách được
+chạy lại ở cửa sổ 900 giây, cho một mặt cong hai chiều: giá của cam kết như một hàm của cả trần
+$\beta$ lẫn mức tự do.
+
+\begin{table}[htbp]
+\centering
+\caption{Mặt cong giá của cam kết trên hai mức tự do}
+\label{bang:matcong}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\multirow{2}{*}{\textbf{Trần $\beta$}} & \multicolumn{2}{c}{\textbf{Cửa sổ 600 s}} & \multicolumn{2}{c}{\textbf{Cửa sổ 900 s}} & \multirow{2}{*}{\textbf{Chênh}}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & phục vụ & vs B1 & phục vụ & vs B1 & \\
+\midrule
+không trần & 1.655 & $-3{,}70$ & 1.837 & $-4{,}68$ & $-0{,}97$\\
+300 s & 1.641 & $-4{,}35$ & 1.835 & $-4{,}77$ & $-0{,}42$\\
+120 s & 1.608 & $-5{,}88$ & 1.794 & $-6{,}67$ & $-0{,}79$\\
+60 s & 1.579 & $-7{,}22$ & 1.761 & $-8{,}19$ & $-0{,}97$\\
+30 s & 1.581 & $-7{,}13$ & 1.753 & $-8{,}56$ & $\mathbf{-1{,}44}$\\
+\midrule
+B1 (không hứa gì) & 1.735 & --- & 1.938 & --- & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cột cuối âm ở \emph{cả năm} mức trần: nới tự do làm lời hứa đắt hơn ở mọi độ chặt, không chỉ ở
+một điểm. Bốn trong năm giá trị nằm rõ trên sàn nhiễu $\pm 0{,}3$ điểm phần trăm; riêng mức
+300 giây với $-0{,}42$ pp (9 hành khách) chỉ vừa đủ trên sàn và không nên diễn giải riêng lẻ.
+
+Đáng chú ý hơn là hình dạng. Trên chính thang ngân sách, từ 300 xuống 30 giây, độ chênh tăng
+đơn điệu: $-0{,}42 \to -0{,}79 \to -0{,}97 \to -1{,}44$ điểm phần trăm. Trần càng chặt thì việc
+cho nhà điều hành thêm tự do càng đắt.
+
+\begin{khungy}
+Tự do của nhà điều hành và độ chặt của lời hứa \emph{tương tác} với nhau chứ không cộng độc
+lập. Một trần 30 giây tốn thêm $1{,}44$ điểm phần trăm khi cửa sổ nới từ 600 lên 900 giây,
+trong khi một trần 300 giây chỉ tốn thêm $0{,}42$ điểm.
+\end{khungy}
+
+Cơ chế giải thích khá trực tiếp và khớp với hình dạng đường biên ở mục \ref{muc:duongbien}: cửa sổ rộng hơn cho bộ tối ưu nhiều
+phương án hơn, mà mỗi phương án đều là một cơ hội dời lời hứa. Với trần lỏng, phần lớn các cơ
+hội đó vẫn lọt; với trần chặt, chúng bị cắt, nên phần tự do tăng thêm bị lãng phí nhiều hơn.
+
+Kết quả này có giá trị thực hành trực tiếp: nó nói rằng không thể chọn trần $\beta$ độc lập với
+mức tự do của hệ thống. Một trần hợp lý cho đội xe lớn, mạng thoáng sẽ đắt hơn đáng kể so với
+cùng trần đó trên đội xe nhỏ, mạng chật.
+
+Phép đo chất lượng dịch vụ đóng đinh thêm một điểm nữa. Nới cửa sổ làm chờ trung vị của cấu
+hình C1 tăng từ 407 lên 636 giây, tức bộ tối ưu tiêu gần hết phần nới thêm vào việc bắt khách
+chờ. Quy ra, mỗi hành khách cứu thêm được tốn 2.421 giây chờ cộng thêm trên toàn hệ, trong đó
+chỉ 579 giây là của chính người đó --- phần còn lại áp lên người khác. Với hệ số định giá ở mục
+2.5, đây là một món hời tồi, và hướng nới cửa sổ đồng loạt bị loại bỏ.
+
+\subsection{Một bất biến miền chặn tắc đường}
+\label{muc:batbien}
+
+Thí nghiệm trôi dạt làm lộ ra một giới hạn của chính hệ thống. Khi tắc đường làm xe đang trên
+đường đón đến muộn hơn cửa sổ đã chấp nhận lúc nhận khách, hệ thống báo lỗi và dừng. Nguồn gốc
+là một bất biến trong tầng miền: khi hành khách lên xe, nếu thời điểm đón nằm ngoài khoảng
+$[\text{sớm nhất}, \text{muộn nhất}]$ thì thao tác thất bại. Đây là bất biến \emph{miền} chứ
+không phải chính sách --- nó bắn bất kể cơ sở tính nào đang dùng, bất kể nguyên nhân gì.
+
+Đáng chú ý là nới cửa sổ \emph{không} cứu được: thử lại toàn bộ trên bộ dữ liệu cửa sổ 900 giây
+vẫn hỏng 20/20 ô với đúng lỗi đó, vì như vừa nêu, bộ tối ưu tiêu hết phần nới. Phát biểu tổng
+quát:
+
+\begin{khungy}
+Một cửa sổ đón cố định, được chấp nhận trước khi cao điểm hình thành, thì sau đó không giữ nổi
+--- bất kể điều phối làm gì. Và nới cửa sổ không tạo ra khoảng đệm, vì bộ tối ưu luôn lập kế
+hoạch sát mép bất kỳ cửa sổ nào được cho.
+\end{khungy}
+
+Hệ quả cho mô hình: hệ thống hiện chưa biểu diễn được trạng thái mà riêng giao thông đã phá vỡ
+một cửa sổ đón đã cam kết. Đây là ranh giới của chính hệ thống, do thực nghiệm lộ ra, và được
+ghi nhận như một hạn chế ở mục 5.2.
+
+\section{Đối chiếu với Fielbaum và Alonso-Mora (2020)}
+\label{muc:doichieu}
+
+\subsection{Cài đặt thước đo của họ trên dữ liệu của mình}
+
+Vì công trình \cite{fielbaum2020} là hàng xóm gần nhất, khóa luận cài đặt lại chính thước đo
+của họ --- công thức (2.5) --- trên biên bản của mình, để so sánh sòng phẳng trên cùng dữ liệu.
+Việc này khả thi vì cả hai đại lượng cần thiết đều rút được từ chuỗi lời hứa đã công bố.
+
+\begin{table}[htbp]
+\centering
+\caption{Thước đo hai đầu của văn liệu so với thước đo chuỗi của khóa luận}
+\label{bang:doichieu}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+& \textbf{B1} & \textbf{C1}\\
+\midrule
+$P(\Delta D > 0)$ & $0{,}2329$ & $0{,}0076$\\
+$E(\Delta D \mid \Delta D > 0)$ & $160{,}4$ s & $10{,}5$ s\\
+Thước hai đầu (giờ trả) & 64.814 s & 126 s\\
+Thước chuỗi của khóa luận (giờ trả) & 71.529 s & 6.822 s\\
+\textbf{Tỉ số chuỗi / hai đầu} & $\mathbf{1{,}1\times}$ & $\mathbf{54{,}1\times}$\\
+Khách bị chấm 0 dù thực tế bị dời & 663 ($38{,}2\%$) & 774 ($\mathbf{49{,}0\%}$)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ba điều rút ra, và thứ tự của chúng quan trọng.
+
+\textbf{Trên B1, hai thước gần như trùng nhau.} Tỉ số $1{,}1$ lần. Đây là một phép \emph{kiểm
+định chéo} cho thước đo của khóa luận: nó không bịa ra chuyển động. Trong chế độ không ràng buộc,
+lời hứa trôi đơn điệu ra xa nên hiệu hai đầu xấp xỉ độ dài đường đi.
+
+\textbf{Trên C1, hai thước lệch 54 lần.} Vì chế độ cam kết ép bộ tối ưu kéo lời hứa quay về gần
+giá trị đã công bố, mà thước hai đầu chỉ nhìn hai điểm nên không thấy đường đi. Nói cách khác,
+thước đo của văn liệu \emph{mù đúng ở chế độ mà khóa luận nghiên cứu}.
+
+\textbf{Thước đếm của họ không phân biệt được hai cấu hình.} Số lần dự báo tăng trung bình là
+$14{,}99$ ở B1 và $13{,}45$ ở C1, trong khi hai cấu hình cách nhau $7{,}13$ điểm phần trăm dịch
+vụ. Tuy nhiên phải kèm cảnh báo: hệ thống của khóa luận công bố lại lời hứa khoảng 30 lần mỗi
+hành khách, còn hệ của họ cập nhật mỗi phút nên chỉ khoảng 5 lần. Chỉ được so B1 với C1 trong
+nội bộ dữ liệu của mình, không được so trực tiếp với con số in trong bài của họ.
+
+\subsection{Hình dạng của kết quả}
+
+Cặp $1{,}1\times$ và $54{,}1\times$ có một hình dạng đáng chú ý: thước đo của khóa luận
+\emph{quy về} thước đo của văn liệu trong chính chế độ mà văn liệu nghiên cứu, và chỉ tách ra ở
+chế độ họ chưa có. Đó là quan hệ giữa một trường hợp tổng quát và một trường hợp riêng, chứ
+không phải hai thước đo mâu thuẫn. Nếu chúng lệch nhau ở mọi chế độ thì mới đáng ngờ.
+
+\subsection{Đối chiếu ở mức cơ chế}
+
+Ngoài thước đo, khóa luận cũng cài đặt lại \emph{cơ chế} của họ. Kịch bản ``kiểm soát hoàn
+toàn'' trong bài của họ --- đánh dấu hành khách là không thể bị từ chối và siết thời gian chờ
+tối đa xuống bằng đúng giờ đã báo --- chính là cơ chế ratchet ở mục \ref{muc:ratchet}, và về bản chất là cơ
+sở kết quả với trần bằng không.
+
+\begin{table}[htbp]
+\centering
+\caption{So sánh tương đối giá của việc kiểm soát}
+\label{bang:sosanh-tuongdoi}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+& \textbf{Gốc} & \textbf{Siết chặt} & \textbf{Tuyệt đối} & \textbf{Tương đối}\\
+\midrule
+Fielbaum \& Alonso-Mora (2020) & $34{,}5\%$ & $45{,}6\%$ & $+11{,}1$ pp & $1{,}32\times$\\
+Khóa luận này (B1 $\to$ C1) & $19{,}68\%$ & $26{,}81\%$ & $+7{,}13$ pp & $1{,}36\times$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Đọc bảng này cần trung thực. Tính theo điểm phần trăm thì cơ chế của khóa luận rẻ hơn, nhưng
+tính theo \emph{tỉ lệ} thì nhỉnh hơn một chút về phía xấu. Đây là một \emph{tái lập độc lập}
+chứ không phải một chiến thắng: trên một thực thể nhỏ hơn 185 lần, cùng cơ chế cho cùng kết luận
+định tính với hệ số gần như trùng. Với tiêu chí minh chứng định lượng, tái lập trên thực thể độc
+lập là điểm cộng thật; nó không phải là bằng chứng vượt trội.
+
+\subsection{Phần trùng và phần không trùng}
+
+Để tránh mọi hiểu lầm, bảng \ref{bang:trung} liệt kê rõ ranh giới.
+
+\begin{table}[htbp]
+\centering
+\caption{Ranh giới với công trình gần nhất}
+\label{bang:trung}
+\small
+\begin{tabular}{@{}p{7.2cm}cc@{}}
+\toprule
+\textbf{Nội dung} & \textbf{2020} & \textbf{Khóa luận}\\
+\midrule
+Khái niệm lời hứa công bố bị xê dịch & có & có\\
+Đo độ lớn dịch chuyển trên từng hành khách & có & có\\
+Đếm số lần dự báo bị đổi & có & có\\
+Phân loại nguyên nhân (định tính, bằng lời) & có & có\\
+Đường cong đánh đổi ổn định--phục vụ & có (3 điểm) & có (9 điểm)\\
+Cơ chế ratchet trên giờ đón & có & có\\
+\midrule
+Trần số cưỡng chế được trên xê dịch cộng dồn & \textbf{không} & \textbf{có}\\
+Dạng cộng dồn theo chuỗi (độ lớn $\times$ chuỗi) & \textbf{không} & \textbf{có}\\
+Phân rã nhân quả định lượng theo từng quyết định & \textbf{không} & \textbf{có}\\
+Phân biệt hai cơ sở tính và ba định lý & \textbf{không} & \textbf{có}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Sáu dòng đầu là phần trùng, và khóa luận coi đó là \emph{nền} chứ không phải đóng góp. Bốn dòng
+sau là phần khác biệt. Đáng chú ý là chính các tác giả kết thúc mục 6 của bài mình bằng câu
+``điều này càng cho thấy cần những ý tưởng tinh vi hơn để kiểm soát bất ổn'' --- tức là họ gọi
+tên chính chỗ trống mà khóa luận này lấp vào.
+
+\section{Phúc lợi: điểm hòa vốn}
+\label{muc:phucloi}
+
+Mục này quy đổi kết quả kỹ thuật sang ngôn ngữ phúc lợi, với đầy đủ cảnh báo.
+
+Lượng thời gian bất ngờ mà cam kết tránh được là 74.255 giây, tức $20{,}63$ giờ. Số chuyến phải
+hy sinh để tránh được nó là 154. Vậy mỗi chuyến bị hy sinh đổi lấy 482 giây --- khoảng tám phút
+--- thời gian bất ngờ tránh được cho tập thể.
+
+\begin{table}[htbp]
+\centering
+\caption{Điểm hòa vốn theo mức định giá thời gian bất ngờ}
+\label{bang:hoavon}
+\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Định giá thời gian bất ngờ} & \textbf{Giá trị hòa vốn của một chuyến}\\
+\midrule
+$7{,}88$ EUR/h (giá trị thời gian trên xe, cận dưới) & $1{,}06$ EUR\\
+$10{,}80$ EUR/h (cận trên) & $1{,}45$ EUR\\
+$20{,}00$ EUR/h (chờ bất ngờ, cận dưới) & $2{,}68$ EUR\\
+$25{,}00$ EUR/h (chờ bất ngờ, cận trên) & $3{,}35$ EUR\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách phát biểu trung thực là: với mức định giá thời gian bất ngờ đã công bố trong văn liệu, hệ
+thống có cam kết vượt hệ thống không cam kết về phúc lợi khi thặng dư của một chuyến ghép biên
+thấp hơn khoảng $2{,}7$--$3{,}4$ EUR. Vì những chuyến bị từ chối là những chuyến khó phục vụ
+nhất, tức gần điểm bàng quan nhất, thặng dư biên của chúng theo định nghĩa là nhỏ.
+
+Đây là một \emph{ngưỡng}, không phải một tuyên bố chiến thắng. Ba giả định cần ghi rõ: phép tính
+coi mọi chuyến bị mất có cùng giá trị thặng dư, đó là đơn giản hóa; đại lượng đo là tổng dịch
+chuyển tích lũy chứ không phải sai số cuối cùng, nên phải gọi đúng tên là \emph{độ xáo trộn của
+lời hứa} chứ không phải \emph{độ trễ}; và như mục 2.5 đã nêu, giá trị độ tin cậy đo được trong
+bối cảnh này thấp hơn giá trị thời gian, nên lập luận phúc lợi ở đây kém chắc chắn hơn phần kỹ
+thuật khá nhiều.
+
+\section{Chứng cứ về tính không giả tạo}
+\label{muc:chungcu}
+
+Một phản biện tự nhiên với mọi kết quả dạng ``ràng buộc làm giảm hiệu năng'' là: có thể hiệu
+năng giảm không phải vì ràng buộc mà vì tìm kiếm bị cắt ngắn. Khóa luận kiểm tra điều này trực
+tiếp trên toàn bộ 40 lần chạy của hai cấu hình gốc.
+
+\begin{table}[htbp]
+\centering
+\caption{Kiểm tra tìm kiếm không bị cắt ngắn}
+\label{bang:khonggiatao}
+\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Chỉ báo} & \textbf{Giá trị}\\
+\midrule
+Tỉ lệ lần quyết định cạn ngân sách tìm kiếm & $0\%$\\
+Tỉ lệ lần quyết định chạm trần số ứng viên & $0\%$\\
+Số phương án khả thi bị bỏ sót do trần & 0\\
+Số nhánh chưa được mở rộng & 0\\
+Tỉ lệ loại bỏ do ràng buộc vật lý & $94\%$\\
+Tỉ lệ loại bỏ do ràng buộc cam kết & $1{,}1\%$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Không gian tìm kiếm chưa bao giờ bị cắt ngắn, và ràng buộc cam kết chỉ chiếm $1{,}1\%$ tổng số
+lần loại bỏ --- một ràng buộc \emph{hẹp nhưng đòn bẩy cao}. Nghĩa là chênh lệch tỉ lệ phục vụ
+giữa các cấu hình phản ánh đúng tác động của cam kết, không phải sản phẩm phụ của giới hạn tính
+toán.
+
+\section{Bộ sinh phương án biết đến lời hứa}
+\label{muc:bosinh}
+
+Toàn bộ kết quả từ đầu chương đến đây đều dùng một bộ sinh phương án \emph{không} biết gì về
+lời hứa: nó sinh ra các phương án theo tiêu chí vật lý và lịch trình, rồi cổng cam kết mới xóa
+đi những phương án vi phạm. Câu hỏi tự nhiên tiếp theo là liệu có thu được gì nếu bộ sinh biết
+trước về ngân sách, thay vì để cổng dọn dẹp phía sau. Mục này trả lời bằng phép đo, và câu trả
+lời phần lớn là không --- nhưng lý do \emph{tại sao} không lại là một kết quả có giá trị riêng.
+
+\subsection{Ba mức can thiệp và điều kiện để chúng có ý nghĩa}
+
+Chúng tôi tách ý tưởng ``sinh phương án có ý thức về cam kết'' thành ba mức, xếp theo mức độ
+xâm lấn tăng dần, vì mỗi mức đòi hỏi một điều kiện khác nhau của dữ liệu để có tác dụng.
+
+\textbf{Mức A --- xếp hạng vị trí chèn.} Bộ sinh vẫn sinh đủ, nhưng ưu tiên những vị trí chèn
+làm tiêu ít ngân sách nhất. Mức này chỉ có ý nghĩa nếu mỗi quyết định thực sự có nhiều hơn một
+phương án để xếp hạng.
+
+\textbf{Mức B --- cắt tỉa sớm.} Bộ sinh tính một cận dưới cho chi phí ngân sách của cả một
+nhánh và bỏ nhánh đó ngay nếu cận dưới đã vượt trần. Mức này chỉ có ý nghĩa nếu hiện có phương
+án bị bỏ sót vì hết thời gian hoặc hết chỗ, hoặc nếu tốc độ đang là vấn đề.
+
+\textbf{Mức C --- đặt trước ngân sách.} Không động vào bộ sinh; thay vào đó chèn một tầng
+\emph{cảnh báo} vào hàm mục tiêu từ điển của bài toán đóng gói tập hợp, để một phương án còn
+trong trần cứng nhưng đã vượt ngưỡng cảnh báo thấp hơn sẽ bị hạ bậc. Ý đồ là làm hệ thống tiêu
+ngân sách một cách dè dặt, để dành chỗ cho yêu cầu đến sau.
+
+\subsection{Tập lựa chọn mỏng đến mức nào}
+
+Điều kiện của mức A và mức B đều là mệnh đề về dữ liệu, nên đo được trước khi viết một dòng mã
+nào. Hệ thống đã ghi sẵn chẩn đoán cần thiết cho mỗi xe ở mỗi vòng quyết định, trong nhánh
+\texttt{executionEvidence/generation/vehicleLosses}. Bảng \ref{bang:mong} tổng hợp trên toàn bộ
+panel 20 ô đã niêm phong, cả hai nhánh, tổng cộng $217.736$ quyết định cấp xe.
+
+\begin{table}[htbp]
+\centering
+\caption{Độ mỏng của tập lựa chọn trên toàn panel niêm phong}
+\label{bang:mong}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Đại lượng} & \textbf{B1 (không hứa)} & \textbf{C1 (trần 30 s)}\\
+\midrule
+Số quyết định cấp xe & 113.064 & 104.672\\
+Ứng viên khả thi trước trần / xe & 1,044 & 1,047\\
+Ứng viên được giữ lại / xe & 1,044 & 1,047\\
+Bị loại vì vật lý hoặc lịch trình / xe & 1,057 & 0,956\\
+\midrule
+Số lần chạm trần số ứng viên & 0 & 0\\
+Số lần cạn ngân sách tính toán & 0 & 0\\
+Ứng viên khả thi bị bỏ do trần & 0 & 0\\
+Nhánh chưa khai triển bị bỏ & 0 & 0\\
+\midrule
+Quyết định chỉ có \emph{một} ứng viên & $96{,}04\%$ & $95{,}87\%$\\
+Quyết định có từ hai ứng viên trở lên & $3{,}96\%$ & $4{,}13\%$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Hai dòng quan trọng nhất là hai dòng bằng nhau: số ứng viên trước trần và số ứng viên sau trần
+giống hệt nhau tới ba chữ số thập phân. Bộ giữ ứng viên có cài đặt một trần số lượng, nhưng
+trần ấy \emph{chưa bao giờ} chạm trong hai trăm nghìn quyết định.
+
+Hệ quả rất trực tiếp. Mức A là phép toán rỗng: với một ứng viên thì không có gì để xếp hạng, và
+việc xếp hạng chỉ có thể tác động lên khoảng bốn phần trăm số quyết định, nơi mà chín phần mười
+trường hợp tập chỉ có đúng hai phần tử. Mức B cũng là phép toán rỗng: không có ứng viên khả thi
+nào từng bị bỏ, không có nhánh nào chưa được khai triển, nên cắt tỉa sớm không tiết kiệm được
+gì; và không có lần nào cạn ngân sách tính toán, nên cũng không có vấn đề tốc độ để giải quyết.
+
+Điều này cũng trả lời một câu hỏi bỏ ngỏ từ chương 3: các kết quả của khóa luận có phải là hệ
+quả của việc tìm kiếm bị cắt ngắn hay không. Câu trả lời là không --- tìm kiếm chưa bao giờ bị
+cắt. Ràng buộc siết chặt nằm ở tầng vật lý, đúng như phân tích nguyên nhân bị loại đã chỉ ra.
+
+\subsection{Bộ sinh biết sắp xếp lại: một bất biến thứ hai}
+
+Mục 4 của danh sách hướng mở là một bộ sinh có thể \emph{sắp xếp lại} thứ tự các điểm dừng của
+hành khách cũ, chứ không chỉ chèn thêm vào giữa. Hóa ra hệ thống đã có sẵn cơ chế ấy: một bộ
+dựng mầm sửa chữa lấy một hành khách đang chờ, gỡ cả cặp đón--trả của người đó ra khỏi đuôi khả
+biến, rồi chèn lại cặp ấy vào mọi vị trí còn giữ được thứ tự đón trước trả. Một nhánh thực
+nghiệm với hạn mức bốn hành khách mỗi xe đã được chạy trên cùng panel, cùng bộ chạy, cùng hạt
+giống.
+
+Trước hết, cơ chế này \emph{thực sự} sắp xếp lại, và đó không phải điều hiển nhiên: bộ sinh chèn
+thuần chưa một lần đảo thứ tự trong toàn bộ dữ liệu của khóa luận. Bảng \ref{bang:sapxep} cho
+thấy sự khác biệt.
+
+\begin{table}[htbp]
+\centering
+\caption{Hành vi của bộ sinh chèn thuần và bộ sinh biết sắp xếp lại}
+\label{bang:sapxep}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Nhánh} & \textbf{Ô} & \textbf{Cập nhật} & \textbf{Sắp lại} & \textbf{Đẩy chặng đầu} & \textbf{Đóng băng sớm}\\
+\midrule
+B1 --- chèn thuần & 20 & 5.328 & 0 & 57 \ ($1{,}07\%$) & 0\\
+C1 --- chèn thuần, trần 30 s & 20 & 4.864 & 0 & 17 \ ($0{,}35\%$) & 0\\
+b4 --- biết sắp xếp lại & 20 & 1.978 & 245 & 150 \ ($7{,}58\%$) & 0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Chiều \texttt{incumbentOrderInversionCount} của vector ngân sách, vốn luôn bằng không trong mọi
+thực nghiệm trước, nay bị tính phí 116 lần với tổng 120 đơn vị. Cơ chế hoạt động đúng như thiết
+kế.
+
+Nhưng nhánh này \textbf{hỏng trên 18 trên 20 ô}, với cùng một mã lỗi:
+\texttt{LOCKED\_LEG\_MISMATCH} tại chặng đang chạy của một xe. Nguyên nhân là một bất biến thứ
+hai của mô hình, khác với bất biến cửa sổ đón ở mục \ref{muc:batbien}, và đáng ghi lại vì nó
+phản ánh một bất đồng khái niệm chứ không phải một lỗi cài đặt.
+
+Phía mô hình miền, một điểm dừng chuyển từ đuôi khả biến sang tiền tố đóng băng \emph{khi xe
+tới nơi}. Không có chuyển trạng thái nào cho tình huống ``xe đã xuất phát hướng tới''. Phía bộ
+mô phỏng, chặng đang chạy bị khóa ngay khi xe lăn bánh, và mọi kế hoạch thay thế có chặng đầu
+khác đi đều bị từ chối. Giữa lúc xuất phát và lúc tới, điểm dừng đích nằm ở vị trí đầu của đuôi
+khả biến, và bộ sinh biết sắp xếp lại coi nó là sửa được.
+
+Cột cuối của bảng \ref{bang:sapxep} xác nhận điều này ở dạng trực tiếp nhất: trên $12.170$ lần
+cập nhật kế hoạch của cả ba nhánh, hệ thống \emph{chưa một lần} đóng băng một điểm dừng trước
+khi xe tới, mặc dù kiểu dữ liệu lộ trình cho phép trạng thái đó. Bộ sinh chèn thuần không bao
+giờ làm lộ bất đồng này vì nó đẩy chặng đầu rất hiếm --- khoảng một phần trăm số lần cập nhật.
+Bộ sinh biết sắp xếp lại đẩy chặng đầu bảy phần trăm, và với khoảng một trăm lần cập nhật mỗi
+ô thì việc bắt gặp một chiếc xe đang giữa đường gần như chắc chắn xảy ra.
+
+Chỗ đáng suy nghĩ là bất biến này nói cùng một điều với luận điểm trung tâm của khóa luận, chỉ
+trên một trục khác. Phép phân rã ba mốc ở chương 3 vạch ranh giới giữa phần nhà điều hành còn
+đổi được và phần thế giới vật lý đã cố định, và nó vạch ranh giới ấy \emph{theo thời gian}: mốc
+ngoại sinh tính chính xác kế hoạch cũ sẽ ra sao nếu không ai can thiệp. Tiền tố đóng băng vạch
+đúng ranh giới ấy \emph{theo cấu trúc lộ trình}: điểm dừng nào đã hết sửa được. Và phát hiện ở
+đây là hệ thống đang vạch ranh giới thứ hai sai chỗ --- ở lúc xe tới thay vì lúc xe xuất phát.
+Sai lệch ấy vô hại với bộ sinh chèn thuần và chỉ lộ ra khi có một cơ chế thật sự muốn sắp xếp
+lại. Nói cách khác, hai bất biến chặn hai hướng cải tiến ở mục này và mục \ref{muc:batbien} đều
+là cùng một câu hỏi ``cái gì đã ngoài tầm kiểm soát'', đặt một lần theo thời gian và một lần
+theo thứ tự.
+
+Trên ô duy nhất chạy trọn vẹn, kết quả cũng đáng ghi: nhánh biết sắp xếp lại phục vụ 99 hành
+khách, đúng bằng B1, trong khi C1 phục vụ 92. Cần nói rõ rằng nhánh này chạy với toàn bộ trần
+cam kết bị tháo bỏ --- hàm chọn chính sách đưa nó về hồ sơ mục tiêu chi phí thuần và dựng lại
+mọi chính sách với trần rỗng --- nên nó so được với B1 chứ không so được với C1. Đọc như vậy thì
+kết luận là: thêm khả năng sắp xếp lại vào một bộ điều phối vốn đã tự do hoàn toàn thu được đúng
+không hành khách nào. Cỡ mẫu một ô nên đây là chỉ dấu chứ chưa phải kết luận, nhưng nó phù hợp
+với phát hiện trung tâm rằng ràng buộc siết chặt là cửa sổ đón chứ không phải thứ tự điểm dừng.
+
+Một câu hỏi tự nhiên là liệu việc đóng băng chặng đang chạy có làm cơ chế sắp xếp lại mất hết ý
+nghĩa hay không. Phân loại $245$ lần sắp xếp lại quan sát được cho thấy không: $102$ lần
+($41{,}6\%$) diễn ra hoàn toàn phía sau chặng đang chạy và vẫn hợp lệ dưới một phép đóng băng
+như vậy; $134$ lần ($54{,}7\%$) là đúng những nước đi đang làm sập chương trình; $9$ lần còn lại
+rơi vào trường hợp chặng đầu vừa được phục vụ xong. Nghĩa là bước sửa này lấy đi khoảng một nửa
+láng giềng nhưng giữ lại một nửa --- đủ để câu hỏi còn đáng hỏi.
+
+Cuối cùng, tổ hợp mà mục 4 thực sự cần --- sắp xếp lại \emph{cộng với} lời hứa có biên --- hiện
+không diễn đạt được: bộ đọc cấu hình từ chối trường sửa chữa khi chính sách không phải nhánh
+b4. Muốn trả lời câu hỏi ấy phải sửa mã nguồn ở ba chỗ theo đúng thứ tự: thêm chuyển trạng thái
+đóng băng chặng đang bay ở tầng miền, cho chính sách vector cứng nhận hạn mức sửa chữa, và nới
+điều kiện kiểm tra cấu hình. Chúng tôi chuyển việc này sang chương hướng phát triển, kèm ghi chú
+rằng bằng chứng ở đoạn trên gợi ý phần thưởng nhiều khả năng bằng không.
+
+\subsection{Đặt trước ngân sách: chạy được nhưng không đổi được gì}
+
+Mức C là hạng mục duy nhất chạy được ngay trên hệ thống hiện có, vì cơ chế cần thiết đã được
+cài đặt: một hồ sơ mục tiêu lai mềm--cứng chèn thêm một tầng \emph{cảnh báo} vào giữa, cho ra
+thứ tự từ điển
+
+\begin{center}
+\texttt{worst-hard-utilization} $\;>\;$ \texttt{warning-excess} $\;>\;$
+\texttt{revision} $\;>\;$ \texttt{cost}
+\end{center}
+
+Ngưỡng cảnh báo bắt buộc phải thấp hơn trần cứng, nên phép ghép khả dụng là ngưỡng 60 giây với
+trần 120 giây. Nhánh đối chứng --- cùng trần 120 giây nhưng không có tầng cảnh báo --- đã có
+trong thang ngân sách ở mục \ref{muc:duongbien}, nên chỉ cần chạy thêm 20 ô nhánh điều trị trên
+cùng bộ chạy, cùng fixture, cùng hạt giống.
+
+Kết quả là hai nhánh \textbf{trùng khớp tới từng quyết định} trên cả hai mươi ô. Cả hai phục vụ
+$1.608$ trên $2.160$ hành khách, tức giá lời hứa $-5{,}88$ điểm phần trăm ở cả hai nhánh, không
+một ô nào lệch dù một hành khách. Nhưng điểm đáng nói không nằm ở con số phục vụ: trùng khớp cả
+ở chuỗi kế hoạch được gán cho từng xe, ở tập lời hứa công bố trong từng khung quyết định, ở chuỗi
+mã lý do, và ở cả chín thước đo bất ổn của mục \ref{muc:dovung} --- $47.118$ lần công bố, tổng
+xáo trộn do quyết định $5.063{,}3$ giây, hành khách bị dịch nặng nhất $119{,}0$ giây, tất cả
+giống nhau tới từng chữ số. Bám ngữ nghĩa niêm phong của hai nhánh \emph{có} khác nhau, nhưng
+khác vì nhánh lai ghi thêm chứng cứ cảnh báo và phát các lần công bố theo thứ tự khác bên trong
+cùng một khung --- không vì một quyết định nào đổi.
+
+Câu hỏi thú vị là \emph{vì sao}. Một tầng trong hàm mục tiêu từ điển có thể vô hiệu theo hai
+cách rất khác nhau: giá trị của nó luôn bằng không, tức ngưỡng chưa bao giờ bị chạm; hoặc giá
+trị có biến thiên nhưng một tầng cao hơn đã phân định xong mọi so sánh. Bảng \ref{bang:tang},
+đọc từ chứng cứ solver, cho thấy đây là trường hợp thứ hai.
+
+\begin{table}[htbp]
+\centering
+\caption{Các tầng mục tiêu của bài toán đóng gói tập hợp ở nhánh mức C}
+\label{bang:tang}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Tầng mục tiêu} & \textbf{Số lần} & \textbf{Khác 0} & \textbf{Tỉ lệ}\\
+\midrule
+\texttt{accepted-request-count} & 4.264 & 519 & $12{,}2\%$\\
+\texttt{operational-cost} & 4.264 & 4.240 & $99{,}4\%$\\
+\texttt{worst-hard-utilization-ppm} & 4.240 & 4.240 & $\mathbf{100{,}00\%}$\\
+\texttt{warning-excess:drop\_eta\_total\_ms} & 4.240 & 810 & $19{,}1\%$\\
+chín chiều cảnh báo còn lại & 4.240 & 0 & $0\%$\\
+\texttt{revision:drop\_eta\_total\_ms} & 4.240 & 21 & $0{,}5\%$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ngưỡng 60 giây \emph{có} bị chạm, trong $19{,}1\%$ số quyết định. Nhưng tầng ngay phía trên nó
+khác không trong \emph{toàn bộ} số quyết định. Trong một thứ tự từ điển, một tầng chỉ được lên
+tiếng khi mọi tầng trên nó đã hòa; tầng trên ở đây thì hầu như không bao giờ hòa, vì nó đo mức
+tiêu ngân sách tệ nhất theo phần triệu --- một thang \emph{liên tục} của đúng cái đại lượng mà
+ngưỡng cảnh báo chỉ chia thành hai bậc.
+
+Đây là kết quả mà chúng tôi cho là có giá trị hơn một phép thử thất bại thông thường: ý tưởng
+đặt trước ngân sách không sai, nó \emph{đã} nằm trong hệ thống ở dạng mạnh hơn. Cực tiểu hóa mức
+tiêu tệ nhất chính là ``tiêu dè dặt'', và nó thực hiện việc đó mịn hơn bất kỳ ngưỡng nào. Một
+tầng ngưỡng đặt bên dưới một tầng liên tục cùng ý nghĩa là dư thừa về mặt cấu trúc, không phải
+vì dữ liệu không thuận. Muốn mức C có tác dụng thật thì phải hoặc đưa tầng cảnh báo lên
+\emph{trên} tầng liên tục, hoặc bỏ tầng liên tục khỏi hồ sơ lai --- cả hai đều làm hệ thống tệ
+hơn theo chính thước đo mà khóa luận dùng, nên chúng tôi không theo.
+
+\section{Các hướng đã thử và lý do từ bỏ}
+\label{muc:dathu}
+
+Phần này ghi lại những hướng đã được cân nhắc nghiêm túc và bị loại bỏ bằng dữ liệu. Chúng tôi
+giữ lại vì tin rằng chúng có giá trị không kém những hướng đã thành công, và vì việc loại bỏ
+sớm bằng phép đo rẻ tiền là một phần của phương pháp.
+
+\textbf{Đệm ETA đồng loạt.} Ý tưởng là báo cho khách một giờ muộn hơn thực tế để có chỗ hấp thụ
+biến động. Phép đo cho thấy cần tổng cộng 265.000 giây đệm để tránh 22.485 giây xáo trộn --- tỉ
+lệ 12 trên 1. Loại bỏ.
+
+\textbf{Hứa theo hạn chót thay vì theo điểm.} Thay vì hứa ``đón lúc 9:10'', hứa ``đón trước
+9:15''. Phân tích cho thấy đây chính xác là cửa sổ $\Omega$ và $\Delta$ đã có sẵn, nên không
+phải cơ chế mới.
+
+\textbf{Sinh phương án có ý thức về cam kết.} Ý tưởng là để bộ sinh tránh ngay từ đầu những
+phương án sẽ vượt trần. Phép đo phân bố mức vượt trần cho thấy phân vị 10 đã là 31 giây trên
+trần 30 giây, tức phần lớn phương án vượt rất xa; nới trần lên 60 giây chỉ thu hồi được
+$9{,}9\%$. Mục \ref{muc:bosinh} tách ý tưởng này thành ba mức và bác bỏ hai mức đầu bằng phép
+đo trên toàn panel.
+
+\textbf{Sắp xếp lại thứ tự hành khách cũ.} Đo được \emph{không một lần} đảo thứ tự nào trong
+toàn bộ dữ liệu của bộ sinh chèn thuần, và một phép thử mở rộng láng giềng gấp $8{,}3$ lần cho
+$98{,}63\%$ trường hợp vô nghiệm và không thu hồi được hành khách nào. Mục \ref{muc:bosinh}
+kiểm tra tiếp bằng chính cơ chế sắp xếp lại đã có sẵn trong hệ thống, và tìm ra một bất biến
+thứ hai chặn hướng này lại.
+
+\textbf{Cổng mềm thay cho cổng cứng.} Ý tưởng là thay vì xóa phương án vượt trần, chỉ phạt điểm.
+Kiểm tra mã nguồn cho thấy cơ chế hiện có \emph{không} gỡ cổng cứng: phương án chỉ được chấm
+điểm cảnh báo \emph{sau khi} đã qua cổng cứng, nên cơ chế thu hồi mà chúng tôi kỳ vọng không tồn
+tại. Ngoài ra, một cổng mềm thật sự sẽ biến lời hứa từ cưỡng chế được thành thống kê, tức đánh
+đổi mất Định lý 3.1 --- tài sản chính của khóa luận.
+
+\textbf{Cửa sổ đón thương lượng có chọn lọc.} Đây là hướng còn sống sót lâu nhất và được bàn kỹ
+nhất. Ý tưởng là khi một hành khách sắp bị từ chối vì lỡ cửa sổ, thay vì từ chối thì thương
+lượng một lần rồi khóa lời hứa. Phép thử trần ở mục \ref{muc:cuaso} cho thấy trần dịch vụ tồn tại
+($+172$ hành khách) nhưng cách nới đồng loạt lấy phần đó bằng cách đẩy mọi người chờ thêm 229
+giây. Cách nới có chọn lọc theo định nghĩa không làm vậy, nên hướng này \emph{chưa} bị bác bỏ;
+tuy nhiên nó đòi hỏi sửa mã nguồn và mở rộng phát biểu vấn đề sang kiểm soát tiếp nhận, nên
+được chuyển sang chương hướng phát triển.
+
+\section{Hạn chế của thực nghiệm}
+\label{muc:hanche}
+
+Cuối chương, chúng tôi liệt kê các hạn chế đã biết.
+
+\textbf{Quy mô nhỏ.} 108 yêu cầu và 8 xe mỗi ô là nhỏ hơn nhiều so với các thực nghiệm quy mô
+Manhattan. Các con số tuyệt đối không so trực tiếp được với văn liệu; chỉ so sánh nội bộ giữa
+các cấu hình mới có ý nghĩa.
+
+\textbf{Trôi dạt ở panel chính là cận dưới.} Như mục \ref{muc:troidat} đã nêu, panel gốc có đồ thị thời gian
+di chuyển tĩnh. Kết luận ``hai cơ sở gần như không khác nhau về số hành khách'' là tính chất của
+panel đó, không phải của bài toán; thí nghiệm bơm trôi dạt đã bù một phần nhưng chưa trọn vẹn.
+
+\textbf{Không có kết quả về tỉ lệ phục vụ dưới trôi dạt thật.} Bất biến miền ở mục \ref{muc:batbien} chặn phần
+này.
+
+\textbf{Hàng rào dài hơn tầm đặt chỗ chưa kiểm chứng được.} Vì tầm đặt chỗ đúng 600 giây, mọi
+hàng rào từ mức đó trở lên đều tương đương khóa vĩnh viễn.
+
+\textbf{Lập luận phúc lợi kém chắc chắn hơn phần kỹ thuật.} Nó phụ thuộc vào hệ số định giá từ
+một bối cảnh địa lý khác và vào giả định về thặng dư biên của chuyến bị mất.
+
+\textbf{Chưa cho phép tái gán hành khách sang xe khác.} Mọi cấu hình đều cấm điều này, nên con
+số quy trách $89{,}06\%$ chưa tính phần do đổi xe.

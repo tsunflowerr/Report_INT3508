@@ -1,0 +1,58 @@
+﻿\chapter*{Danh mục từ viết tắt và ký hiệu}
+\addcontentsline{toc}{chapter}{Danh mục từ viết tắt và ký hiệu}
+
+\noindent\textbf{Từ viết tắt và tên cấu hình}
+
+\begin{longtable}{@{}p{2.4cm}p{12.4cm}@{}}
+\toprule
+\textbf{Viết tắt} & \textbf{Cụm từ đầy đủ và ý nghĩa}\\
+\midrule
+\endhead
+DARP & Dial-a-Ride Problem: bài toán đưa đón theo yêu cầu.\\
+ETA & Estimated Time of Arrival: giờ đến dự kiến.\\
+SLA & Service Level Agreement: thỏa thuận mức dịch vụ.\\
+TLC & Taxi \& Limousine Commission: cơ quan cung cấp dữ liệu taxi New York.\\
+NDJSON & Newline-Delimited JSON: mỗi dòng chứa một đối tượng JSON trong biên bản.\\
+SHA-256 & Secure Hash Algorithm 256-bit: hàm băm dùng kiểm tính toàn vẹn.\\
+RQ & Research Question: câu hỏi nghiên cứu.\\
+pp & Percentage point: điểm phần trăm, dùng báo chênh lệch hai tỉ lệ.\\
+B1, C1 & Đối chứng không bật ngân sách và gói cam kết chính của H6.\\
+$U$ & Nhánh không bật cổng thời gian đang xét ở các đợt trôi dạt.\\
+H6, T38 & Mã phép so chính đã niêm phong và phép kiểm thăm dò cuối.\\
+\bottomrule
+\end{longtable}
+
+\noindent\textbf{Quy ước đọc ký hiệu}
+
+Các đại lượng dưới đây xét một hành khách và một tọa độ thời gian, trừ khi bảng kết quả
+ghi rõ phép gộp. $C$, $M^{+}$, $M$, $V$ cũng là tên bốn họ cổng kiểm đại lượng tương ứng.
+Chữ $V$ trong bài toán gán ở Chương 2 chỉ tập xe; $v$ ở phần ba mốc chỉ lời hứa trước.
+C1 là tên cấu hình; $C$ là tổng các độ lớn $A_t$, còn $c_t$ là độ dời có dấu của một lần.
+
+\noindent\textbf{Ký hiệu chính}
+
+\begin{longtable}{@{}p{2.4cm}p{12.4cm}@{}}
+\toprule
+\textbf{Ký hiệu} & \textbf{Ý nghĩa}\\
+\midrule
+\endhead
+$v_t$ & Lời hứa đã công bố trước lần $t$; chuỗi liên tục có $v_t=p_{t-1}$.\\
+$e_t$ & Mốc chiếu giữ tuyến: giờ dự báo của tuyến giữ nguyên từ trạng thái hiện tại.\\
+$p_t,\ p_0$ & Lời hứa đề xuất tại lần $t$ và lời hứa đầu tiên.\\
+$x_t,\ c_t,\ z_t$ & Các phần có dấu: $e_t-v_t$, $p_t-e_t$, $p_t-v_t=x_t+c_t$.\\
+$d_t,\ A_t,\ B_t$ & Độ lớn tương ứng: $|x_t|$, $|c_t|$, $|z_t|$.\\
+$C$ & $\sum_t A_t$: tổng phần do quyết định, cơ sở hành vi.\\
+$X$ & $\sum_t d_t$: tổng phần thay đổi khi giữ tuyến; không chỉ là giao thông.\\
+$V$ & $\sum_t B_t$: tổng biến động lời hứa, theo cơ sở thông báo nhìn thấy.\\
+$E,\ D^{+}$ & Độ lệch cuối $|p_T-p_0|$ và phần muộn cuối $\max(0,p_T-p_0)$.\\
+$M,\ M^{+}$ & Cực đại $|p_t-p_0|$ và cực đại $\max(0,p_t-p_0)$ trên chuỗi.\\
+$\beta,\ \kappa$ & Trần theo hành khách và chiều; $\kappa$ dùng so chung bốn họ cổng.\\
+$\ell$ & Khoảng chùng của hạn chót so với lời hứa đầu.\\
+$\Omega,\ \Delta$ & Thời gian chờ tối đa và độ trễ tối đa cho phép.\\
+$S_j,\ \gamma$ & Điểm ô $S_j=\max_r X_r$ và ngưỡng dự phòng đã hiệu chỉnh.\\
+$\alpha$ & Mức sai phủ danh nghĩa; chưa là xác suất bảo đảm cho T38.\\
+$k$ & Số mũ hệ số giao thông; ở công thức phân vị là chỉ số thứ tự.\\
+\bottomrule
+\end{longtable}
+
+\clearpage

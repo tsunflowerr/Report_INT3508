@@ -1,0 +1,31 @@
+# inventory_runs.py, run 2026-09-29T21:35:00
+root | dirs | summary | failure-00 | both | neither | -rerun1 dirs | files | bytes | GB (1e9) | GiB
+Tang 2 (deadline-v1) (E:/RideBoundData/research/deadline-v1) | 301 | 165 | 136 | 0 | 0 | 5 | 932 | 13783280568 | 13.78 | 12.84
+    rerun: dl-120-k1-d20181114-s10-r1-s7-rerun1; original has summary: False, original has failure-00: True
+    rerun: dl-120-k1-d20181116-s10-r4-s7-rerun1; original has summary: False, original has failure-00: True
+    rerun: dl-120-k1-d20181117-s10-r1-s7-rerun1; original has summary: False, original has failure-00: True
+    rerun: dl-120-k1-d20181117-s10-r3-s7-rerun1; original has summary: False, original has failure-00: True
+    rerun: dl-120-k1-d20181117-s10-r4-s7-rerun1; original has summary: False, original has failure-00: True
+Tang 2 pipeline pilot (not evidence) (E:/RideBoundData/research/deadline-v1-pilot) | 1 | 1 | 0 | 0 | 0 | 0 | 4 | 64231651 | 0.06 | 0.06
+Tang 3 pilot T3.7 (E:/RideBoundData/research/tier3-pilot-v1) | 60 | 60 | 0 | 0 | 0 | 0 | 240 | 5179265647 | 5.18 | 4.82
+Tang 3 sweep C/M+ (E:/RideBoundData/research/tier3-sweep-v1) | 168 | 156 | 0 | 0 | 12 | 12 | 648 | 15122469722 | 15.12 | 14.08
+    rerun: C-120-W4-d20181112-s10-r1-w08-rerun1; original has summary: False, original has failure-00: False
+    rerun: C-30-W4-d20181112-s10-r1-w17-rerun1; original has summary: False, original has failure-00: False
+    rerun: C-300-W4-d20181112-s10-r1-w08-rerun1; original has summary: False, original has failure-00: False
+    rerun: C-600-W4-d20181112-s10-r1-w08-rerun1; original has summary: False, original has failure-00: False
+    rerun: C-900-W4-d20181112-s10-r1-w08-rerun1; original has summary: False, original has failure-00: False
+    rerun: Mplus-120-W4-d20181112-s10-r1-w08-rerun1; original has summary: False, original has failure-00: False
+    rerun: Mplus-30-W4-d20181112-s10-r1-w17-rerun1; original has summary: False, original has failure-00: False
+    rerun: Mplus-300-W4-d20181112-s10-r1-w08-rerun1; original has summary: False, original has failure-00: False
+    rerun: Mplus-60-W4-d20181112-s10-r1-w08-rerun1; original has summary: False, original has failure-00: False
+    rerun: Mplus-600-W4-d20181112-s10-r1-w08-rerun1; original has summary: False, original has failure-00: False
+    rerun: Mplus-900-W4-d20181112-s10-r1-w08-rerun1; original has summary: False, original has failure-00: False
+    rerun: U-W4-d20181112-s10-r1-w17-rerun1; original has summary: False, original has failure-00: False
+    neither summary nor failure-00 (12): C-120-W4-d20181112-s10-r1-w08, C-30-W4-d20181112-s10-r1-w17, C-300-W4-d20181112-s10-r1-w08, C-600-W4-d20181112-s10-r1-w08, C-900-W4-d20181112-s10-r1-w08, Mplus-120-W4-d20181112-s10-r1-w08, Mplus-30-W4-d20181112-s10-r1-w17, Mplus-300-W4-d20181112-s10-r1-w08, Mplus-60-W4-d20181112-s10-r1-w08, Mplus-600-W4-d20181112-s10-r1-w08, Mplus-900-W4-d20181112-s10-r1-w08, U-W4-d20181112-s10-r1-w17
+Tang 3 no-worse (b) (C:/RideBoundData/research/tier3-sweep-noworse-v1) | 28 | 28 | 0 | 0 | 0 | 0 | 112 | 2424560257 | 2.42 | 2.26
+Tang 3 world smoke v1 (E:/RideBoundData/research/tier3-world-smoke-v1) | 2 | 2 | 0 | 0 | 0 | 0 | 8 | 153697374 | 0.15 | 0.14
+Tang 3 world smoke v1.1 (E:/RideBoundData/research/tier3-world-v11-smoke) | 4 | 4 | 0 | 0 | 0 | 0 | 16 | 335179108 | 0.34 | 0.31
+Tang 3 task A (a) (C:/RideBoundData/research/tier3-vm-v11-a) | 24 | 24 | 0 | 0 | 0 | 0 | 96 | 2071263677 | 2.07 | 1.93
+Tang 3 task A (b) (C:/RideBoundData/research/tier3-vm-v11-b) | 24 | 24 | 0 | 0 | 0 | 0 | 96 | 2179804169 | 2.18 | 2.03
+Tang 3 world smoke v1.2 | C:/RideBoundData/research/tier3-world-v12-smoke | MISSING
+Tang 3 task B 07-09h | C:/RideBoundData/research/tier3-w07-v1 | MISSING

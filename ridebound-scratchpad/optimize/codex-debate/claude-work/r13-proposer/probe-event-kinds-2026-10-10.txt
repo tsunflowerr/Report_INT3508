@@ -1,0 +1,37 @@
+# message types
+eventBatch: 455
+decision: 455
+decisionApplied: 455
+checkpoint: 2
+hello: 1
+helloAck: 1
+initializeRun: 1
+initialized: 1
+shutdown: 1
+# event kinds
+vehicleAdvanced: 1758
+timerTick: 358
+requestArrived: 108
+vehicleReachedStop: 98
+bookingConfirmed: 49
+passengerBoarded: 49
+passengerAlighted: 49
+travelTimesUpdated: 8
+# key sets (first example)
+hello: ['adapterId', 'adapterVersion', 'capabilities', 'maxFleetSize', 'maxRequestCount', 'positionModel', 'supportedSchemaVersions']
+helloAck: ['capabilitySelection', 'capabilitySelection.capabilities', 'capabilitySelection.maxFleetSize', 'capabilitySelection.maxRequestCount', 'capabilitySelection.positionModel', 'capabilitySelection.status', 'selectedSchemaVersion']
+initializeRun: ['manifest', 'manifest.adapter', 'manifest.adapter.adapterId', 'manifest.adapter.adapterVersion', 'manifest.binarySha256', 'manifest.capabilitySelection', 'manifest.capabilitySelection.capabilities', 'manifest.capabilitySelection.maxFleetSize', 'manifest.capabilitySelection.maxRequestCount', 'manifest.capabilitySelection.positionModel', 'manifest.capabilitySelection.status', 'manifest.coreCommitSha', 'manifest.costUnitId', 'manifest.graphSnapshotHash', 'manifest.masterSeed', 'manifest.policyConfigurationHash', 'manifest.policyId', 'manifest.policyVersion', 'manifest.protocolVersion', 'manifest.scenarioContentHash', 'manifest.simulator', 'manifest.simulator.simulatorId', 'manifest.simulator.simulatorVersion', 'manifest.simulator.upstreamCommitSha', 'manifest.sourceUnitConversions', 'manifest.sourceUnitConversions.[].canonicalUnit', 'manifest.sourceUnitConversions.[].quantity', 'manifest.sourceUnitConversions.[].roundingRule', 'manifest.sourceUnitConversions.[].sourceUnit', 'manifest.travelTimeSnapshotHash']
+initialized: ['initialStateIdentity', 'initialStateIdentity.epochId', 'initialStateIdentity.nextEventSeq', 'initialStateIdentity.simTimeMs', 'initialStateIdentity.stateHash', 'manifestHash']
+travelTimesUpdated: ['eventSeq', 'eventType', 'payload', 'payload.snapshot', 'payload.snapshot.arcs', 'payload.snapshot.snapshotHash', 'payload.snapshot.version']
+vehicleAdvanced: ['eventSeq', 'eventType', 'payload', 'payload.vehicle', 'payload.vehicle.acceptedRequestIds', 'payload.vehicle.capacity', 'payload.vehicle.occupiedSeats', 'payload.vehicle.onboardRequestIds', 'payload.vehicle.position', 'payload.vehicle.position.kind', 'payload.vehicle.position.nodeId', 'payload.vehicle.route', 'payload.vehicle.route.executedStopCount', 'payload.vehicle.route.frozenPrefix', 'payload.vehicle.route.mutableSuffix', 'payload.vehicle.route.planVersion', 'payload.vehicle.vehicleId']
+timerTick: ['eventSeq', 'eventType', 'payload']
+eventBatch: ['events', 'events.[].eventSeq', 'events.[].eventType', 'events.[].payload', 'events.[].payload.snapshot']
+decision: ['actions', 'actions.[].decisionType', 'actions.[].payload', 'actions.[].payload.candidateId', 'actions.[].payload.route', 'actions.[].payload.vehicleId', 'certificate', 'certificate.body', 'certificate.body.certificateVersion', 'certificate.body.inputStateHash', 'certificate.body.normalOperation', 'certificate.body.physicalPlanCount', 'certificate.body.promiseCount', 'certificate.body.proposedStateHash', 'certificate.body.publicationIds', 'certificate.body.validatorVersion', 'certificate.body.witnesses', 'certificate.reasonCode', 'certificate.status', 'decisionHash', 'previousDecisionHash', 'reasonCode', 'solver', 'solver.executionEvidence', 'solver.executionEvidence.evidenceVersion', 'solver.executionEvidence.generation', 'solver.executionEvidence.generation.consideredRequestCount', 'solver.executionEvidence.generation.exogenousServiceQualityBreaches', 'solver.executionEvidence.generation.omissions', 'solver.executionEvidence.generation.omittedRequestCount', 'solver.executionEvidence.generation.totalPendingRequestCount', 'solver.executionEvidence.generation.vehicleLosses', 'solver.executionEvidence.prunedCandidates', 'solver.executionEvidence.selection', 'solver.executionEvidence.selection.consumedGenerationWorkUnits', 'solver.executionEvidence.selection.consumedValidationWorkUnits', 'solver.executionEvidence.selection.executionPath', 'solver.executionEvidence.selection.fallbackValidationAttempts', 'solver.executionEvidence.selection.finalSolveStatus', 'solver.executionEvidence.selection.finalSolverDiagnostics', 'solver.executionEvidence.selection.omissionCountWasSaturated', 'solver.executionEvidence.selection.omittedCandidateCount', 'solver.executionEvidence.selection.primaryIncumbentRejected', 'solver.executionEvidence.selection.primarySolveStatus', 'solver.executionEvidence.selection.primarySolverDiagnostics', 'solver.executionEvidence.selection.validationWitnesses', 'solver.status', 'stateAfterHash', 'stateBeforeHash', 'status']
+decisionApplied: ['decisionHash']
+requestArrived: ['eventSeq', 'eventType', 'payload', 'payload.request', 'payload.request.arrivalTimeMs', 'payload.request.commitmentPolicyId', 'payload.request.destinationNodeId', 'payload.request.earliestPickupMs', 'payload.request.latestPickupMs', 'payload.request.maxRideTimeMs', 'payload.request.originNodeId', 'payload.request.partySize', 'payload.request.requestId', 'payload.request.serviceClass']
+bookingConfirmed: ['eventSeq', 'eventType', 'payload', 'payload.requestId']
+vehicleReachedStop: ['eventSeq', 'eventType', 'payload', 'payload.planVersion', 'payload.position', 'payload.position.kind', 'payload.position.nodeId', 'payload.stopId', 'payload.vehicleId']
+passengerBoarded: ['eventSeq', 'eventType', 'payload', 'payload.planVersion', 'payload.requestId', 'payload.vehicleId']
+passengerAlighted: ['eventSeq', 'eventType', 'payload', 'payload.planVersion', 'payload.requestId', 'payload.vehicleId']
+checkpoint: []
+shutdown: []

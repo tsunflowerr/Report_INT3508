@@ -1,0 +1,16 @@
+[
+  {
+    "package": "pypdfium2",
+    "version": "5.14.0",
+    "wheel": "pypdfium2-5.14.0-py3-none-win_amd64.whl",
+    "url": "https://files.pythonhosted.org/packages/00/dc/ca7874924c9cfd701ad53f89529968523790e70473e0b71e834668316148/pypdfium2-5.14.0-py3-none-win_amd64.whl",
+    "sha256": "149fd5c6397b8df8bf7911a93506eff0be874f877afe7ac936cf5d37d21a6a06"
+  },
+  {
+    "package": "Pillow",
+    "version": "12.3.0",
+    "wheel": "pillow-12.3.0-cp310-cp310-win_amd64.whl",
+    "url": "https://files.pythonhosted.org/packages/48/7c/8fa0039574c476d7c6fa57dd7c32a130436877c6ec1e5ce1cc8ec44878c1/pillow-12.3.0-cp310-cp310-win_amd64.whl",
+    "sha256": "300557495eb45ebb8aec96c2da9c4be642fbf7cd937278b4013ba894ea8eb0eb"
+  }
+]

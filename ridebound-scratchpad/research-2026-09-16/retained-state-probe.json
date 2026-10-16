@@ -1,0 +1,2150 @@
+{
+  "kind": "retained-state-independent-immediate-observed-OD-probe",
+  "rows": [
+    {
+      "epoch": 36,
+      "pendingRequest": "rq-85fe63f825d933f00f57dccbcb883004b37aa8a110744a1dd52012e542d4bb3a",
+      "sampleCount": 10,
+      "assignmentCount": 3,
+      "existingRiders": 8,
+      "inputStateSha256": "1ad0b80d1c0e4ee0dace5d7d86762add568d568615a15615617ed2e0d84583a5",
+      "outcomes": [
+        {
+          "ordinal": 0,
+          "selectedCandidateIds": [
+            "candidate-v1-80147391940063aaccc3a2599fc557d108b1e46132c2c3841ec30709c32e1b1b",
+            "candidate-v1-a908042eb595de7f25823f5993ddc0204abfd7a0f8b0e74e72ca7d84fb2641aa",
+            "candidate-v1-7df32bae6811364846b85976a65512bef881765041b610194eb5d657f04c1645",
+            "candidate-v1-7f586d0aa3ad39272eabbf1f870c6084016595957641a4a3d8eda99a9c786d64",
+            "candidate-v1-6bd1338195e1e2dfcf34622b6621086e9429d3caf7c61f9dc0154882f4d927ac",
+            "candidate-v1-f1c807c9c01198bc68b71b4ef8fe55bffd1266ea8f4f9b4fdb2205dc6163df0f",
+            "candidate-v1-7dd5c120956282bb80dc989f5176a663c8fd427188f50c03ffe9b830e6b5b531",
+            "candidate-v1-aec875f5b71eaa1e472a56e7d826314ac6e7edab209dc0166d78d21fb92b8a16"
+          ],
+          "isRecorded": false,
+          "currentVehicle": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+          "cost": 3539175,
+          "currentWaitMs": 490189,
+          "currentRideMs": 463526,
+          "revisions": [
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            }
+          ],
+          "futureResults": [
+            {
+              "sample": "rq-1edec00f229b933d4e15489972f7948ca28506265d05b173f8f3b9eea5fbfaf1",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              ]
+            },
+            {
+              "sample": "rq-acbbcd86c9dd9aa2d4c209ae6d84db2a1e51cf253e1d88f66876b80d21935932",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-2073ddddb3b81bd27787046606ed6eb0e3deafd24c33c07620f6fe96a331837e",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+              ]
+            },
+            {
+              "sample": "rq-c69acb69deadbc87d0ce7c769f5f88ad62aba27e6aad7f401bddda5dabd6c555",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-236a0d460ec876667807e56d4a0e8c54fd5754ee714a0816e7be0872ca65836d",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-d1e32b4949c8e150e8814e2e40808a033a91632e97e98761b57ffc31b8381357",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-a0bdefe123e0941c9caa0a9b73697d46a395a70a2effdc35a76db01923192c5a",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-c678fc47674a7031883da811bef76cb451d20a0ebaaf4fdcd0dafe46d8ad17f0",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+              ]
+            }
+          ],
+          "elapsedMs": 153.5725
+        },
+        {
+          "ordinal": 1,
+          "selectedCandidateIds": [
+            "candidate-v1-80147391940063aaccc3a2599fc557d108b1e46132c2c3841ec30709c32e1b1b",
+            "candidate-v1-a908042eb595de7f25823f5993ddc0204abfd7a0f8b0e74e72ca7d84fb2641aa",
+            "candidate-v1-f66f1c3354f335affa0a3fc5eae04111671ef6867a495da63efad5c6a275e515",
+            "candidate-v1-7f586d0aa3ad39272eabbf1f870c6084016595957641a4a3d8eda99a9c786d64",
+            "candidate-v1-6bd1338195e1e2dfcf34622b6621086e9429d3caf7c61f9dc0154882f4d927ac",
+            "candidate-v1-f7cb4937b84a17fd77d60336282ac57a94f78172f88db26b75e8f53cd5a8cff5",
+            "candidate-v1-7dd5c120956282bb80dc989f5176a663c8fd427188f50c03ffe9b830e6b5b531",
+            "candidate-v1-aec875f5b71eaa1e472a56e7d826314ac6e7edab209dc0166d78d21fb92b8a16"
+          ],
+          "isRecorded": true,
+          "currentVehicle": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+          "cost": 3094108,
+          "currentWaitMs": 558375,
+          "currentRideMs": 463526,
+          "revisions": [
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            }
+          ],
+          "futureResults": [
+            {
+              "sample": "rq-1edec00f229b933d4e15489972f7948ca28506265d05b173f8f3b9eea5fbfaf1",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              ]
+            },
+            {
+              "sample": "rq-acbbcd86c9dd9aa2d4c209ae6d84db2a1e51cf253e1d88f66876b80d21935932",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-2073ddddb3b81bd27787046606ed6eb0e3deafd24c33c07620f6fe96a331837e",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-c69acb69deadbc87d0ce7c769f5f88ad62aba27e6aad7f401bddda5dabd6c555",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-236a0d460ec876667807e56d4a0e8c54fd5754ee714a0816e7be0872ca65836d",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-d1e32b4949c8e150e8814e2e40808a033a91632e97e98761b57ffc31b8381357",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-a0bdefe123e0941c9caa0a9b73697d46a395a70a2effdc35a76db01923192c5a",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-c678fc47674a7031883da811bef76cb451d20a0ebaaf4fdcd0dafe46d8ad17f0",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+              ]
+            }
+          ],
+          "elapsedMs": 155.6201
+        },
+        {
+          "ordinal": 2,
+          "selectedCandidateIds": [
+            "candidate-v1-b2624a34e1ef7f92a17417f4377e0234d2619ba11f118a8ea497c4c0e08e3094",
+            "candidate-v1-a908042eb595de7f25823f5993ddc0204abfd7a0f8b0e74e72ca7d84fb2641aa",
+            "candidate-v1-f66f1c3354f335affa0a3fc5eae04111671ef6867a495da63efad5c6a275e515",
+            "candidate-v1-7f586d0aa3ad39272eabbf1f870c6084016595957641a4a3d8eda99a9c786d64",
+            "candidate-v1-6bd1338195e1e2dfcf34622b6621086e9429d3caf7c61f9dc0154882f4d927ac",
+            "candidate-v1-f1c807c9c01198bc68b71b4ef8fe55bffd1266ea8f4f9b4fdb2205dc6163df0f",
+            "candidate-v1-7dd5c120956282bb80dc989f5176a663c8fd427188f50c03ffe9b830e6b5b531",
+            "candidate-v1-aec875f5b71eaa1e472a56e7d826314ac6e7edab209dc0166d78d21fb92b8a16"
+          ],
+          "isRecorded": false,
+          "currentVehicle": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+          "cost": 3286902,
+          "currentWaitMs": 435592,
+          "currentRideMs": 463526,
+          "revisions": [
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            }
+          ],
+          "futureResults": [
+            {
+              "sample": "rq-1edec00f229b933d4e15489972f7948ca28506265d05b173f8f3b9eea5fbfaf1",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              ]
+            },
+            {
+              "sample": "rq-acbbcd86c9dd9aa2d4c209ae6d84db2a1e51cf253e1d88f66876b80d21935932",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-2073ddddb3b81bd27787046606ed6eb0e3deafd24c33c07620f6fe96a331837e",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-c69acb69deadbc87d0ce7c769f5f88ad62aba27e6aad7f401bddda5dabd6c555",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-236a0d460ec876667807e56d4a0e8c54fd5754ee714a0816e7be0872ca65836d",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-d1e32b4949c8e150e8814e2e40808a033a91632e97e98761b57ffc31b8381357",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-a0bdefe123e0941c9caa0a9b73697d46a395a70a2effdc35a76db01923192c5a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-c678fc47674a7031883da811bef76cb451d20a0ebaaf4fdcd0dafe46d8ad17f0",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+              ]
+            }
+          ],
+          "elapsedMs": 215.3255
+        }
+      ]
+    },
+    {
+      "epoch": 42,
+      "pendingRequest": "rq-77a4a148d71b41535903b4aaa84f3f9be84929d77f0b93242af99c17eb787ca3",
+      "sampleCount": 12,
+      "assignmentCount": 3,
+      "existingRiders": 11,
+      "inputStateSha256": "7f39d5525f0d82068a791cfaa59c88174f20f17b7c95c2e465926d71c6996e05",
+      "outcomes": [
+        {
+          "ordinal": 0,
+          "selectedCandidateIds": [
+            "candidate-v1-4109050a5ad64f7debd607ee291b82540a687148dbd3303b2a6a361e67b355b2",
+            "candidate-v1-1c18f251223ca5955ac64014d2c26dfcfa7a8a4c065639d1651c08dcaf64d689",
+            "candidate-v1-7bc5707148d6e374f98f552fb106c7a9c7e7d2c57e106ba1acf03281ca33312f",
+            "candidate-v1-666ecdc064de4db64ca2d9e42bbad043479aef3fc3efdf5d827ab88b0a6cae2e",
+            "candidate-v1-59bee509537e3042b26081a385844dc765b903af15d1003f1a2eecb8c7484c62",
+            "candidate-v1-865b063ff6e9fab2871a0eece08895e72461538c97c3b08b3f0aa0ade2c122a8",
+            "candidate-v1-37eeba607a290db29887603225625c11d38bfe6996efb1537aa98de819ebf59d",
+            "candidate-v1-74f38580b31a7e59e4cfaba38a93fc8d87430f26114d2dadfe96f4e07d533d28"
+          ],
+          "isRecorded": false,
+          "currentVehicle": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+          "cost": 3654568,
+          "currentWaitMs": 593585,
+          "currentRideMs": 264579,
+          "revisions": [
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            }
+          ],
+          "futureResults": [
+            {
+              "sample": "rq-1edec00f229b933d4e15489972f7948ca28506265d05b173f8f3b9eea5fbfaf1",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              ]
+            },
+            {
+              "sample": "rq-acbbcd86c9dd9aa2d4c209ae6d84db2a1e51cf253e1d88f66876b80d21935932",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-2073ddddb3b81bd27787046606ed6eb0e3deafd24c33c07620f6fe96a331837e",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-c69acb69deadbc87d0ce7c769f5f88ad62aba27e6aad7f401bddda5dabd6c555",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+              ]
+            },
+            {
+              "sample": "rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-236a0d460ec876667807e56d4a0e8c54fd5754ee714a0816e7be0872ca65836d",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-d1e32b4949c8e150e8814e2e40808a033a91632e97e98761b57ffc31b8381357",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-a0bdefe123e0941c9caa0a9b73697d46a395a70a2effdc35a76db01923192c5a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-c678fc47674a7031883da811bef76cb451d20a0ebaaf4fdcd0dafe46d8ad17f0",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+              ]
+            },
+            {
+              "sample": "rq-85fe63f825d933f00f57dccbcb883004b37aa8a110744a1dd52012e542d4bb3a",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              ]
+            },
+            {
+              "sample": "rq-1ed358c0456a31cbc2079f080b74244a0192aee99abd154df0e4ecf74700288a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            }
+          ],
+          "elapsedMs": 205.3642
+        },
+        {
+          "ordinal": 1,
+          "selectedCandidateIds": [
+            "candidate-v1-74a39135c0bb98aa40dad47cac0fac231477355c99f33370bbd0276d0dc1f408",
+            "candidate-v1-1c18f251223ca5955ac64014d2c26dfcfa7a8a4c065639d1651c08dcaf64d689",
+            "candidate-v1-7bc5707148d6e374f98f552fb106c7a9c7e7d2c57e106ba1acf03281ca33312f",
+            "candidate-v1-e55647914b92c88d2857956cdb66579bfdea28d5de2eff2b48c25c5566001d0a",
+            "candidate-v1-59bee509537e3042b26081a385844dc765b903af15d1003f1a2eecb8c7484c62",
+            "candidate-v1-865b063ff6e9fab2871a0eece08895e72461538c97c3b08b3f0aa0ade2c122a8",
+            "candidate-v1-37eeba607a290db29887603225625c11d38bfe6996efb1537aa98de819ebf59d",
+            "candidate-v1-74f38580b31a7e59e4cfaba38a93fc8d87430f26114d2dadfe96f4e07d533d28"
+          ],
+          "isRecorded": true,
+          "currentVehicle": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+          "cost": 3418703,
+          "currentWaitMs": 442939,
+          "currentRideMs": 264579,
+          "revisions": [
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            }
+          ],
+          "futureResults": [
+            {
+              "sample": "rq-1edec00f229b933d4e15489972f7948ca28506265d05b173f8f3b9eea5fbfaf1",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-acbbcd86c9dd9aa2d4c209ae6d84db2a1e51cf253e1d88f66876b80d21935932",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-2073ddddb3b81bd27787046606ed6eb0e3deafd24c33c07620f6fe96a331837e",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-c69acb69deadbc87d0ce7c769f5f88ad62aba27e6aad7f401bddda5dabd6c555",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+              ]
+            },
+            {
+              "sample": "rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-236a0d460ec876667807e56d4a0e8c54fd5754ee714a0816e7be0872ca65836d",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-d1e32b4949c8e150e8814e2e40808a033a91632e97e98761b57ffc31b8381357",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-a0bdefe123e0941c9caa0a9b73697d46a395a70a2effdc35a76db01923192c5a",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-c678fc47674a7031883da811bef76cb451d20a0ebaaf4fdcd0dafe46d8ad17f0",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+              ]
+            },
+            {
+              "sample": "rq-85fe63f825d933f00f57dccbcb883004b37aa8a110744a1dd52012e542d4bb3a",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              ]
+            },
+            {
+              "sample": "rq-1ed358c0456a31cbc2079f080b74244a0192aee99abd154df0e4ecf74700288a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            }
+          ],
+          "elapsedMs": 197.7928
+        },
+        {
+          "ordinal": 2,
+          "selectedCandidateIds": [
+            "candidate-v1-74a39135c0bb98aa40dad47cac0fac231477355c99f33370bbd0276d0dc1f408",
+            "candidate-v1-1c18f251223ca5955ac64014d2c26dfcfa7a8a4c065639d1651c08dcaf64d689",
+            "candidate-v1-b97f1507b258bf216d76ea51e92b5718cc5cad632a4a6c53d74aefe25ab2e821",
+            "candidate-v1-666ecdc064de4db64ca2d9e42bbad043479aef3fc3efdf5d827ab88b0a6cae2e",
+            "candidate-v1-59bee509537e3042b26081a385844dc765b903af15d1003f1a2eecb8c7484c62",
+            "candidate-v1-865b063ff6e9fab2871a0eece08895e72461538c97c3b08b3f0aa0ade2c122a8",
+            "candidate-v1-37eeba607a290db29887603225625c11d38bfe6996efb1537aa98de819ebf59d",
+            "candidate-v1-74f38580b31a7e59e4cfaba38a93fc8d87430f26114d2dadfe96f4e07d533d28"
+          ],
+          "isRecorded": false,
+          "currentVehicle": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+          "cost": 3504845,
+          "currentWaitMs": 287140,
+          "currentRideMs": 264579,
+          "revisions": [
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            }
+          ],
+          "futureResults": [
+            {
+              "sample": "rq-1edec00f229b933d4e15489972f7948ca28506265d05b173f8f3b9eea5fbfaf1",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              ]
+            },
+            {
+              "sample": "rq-acbbcd86c9dd9aa2d4c209ae6d84db2a1e51cf253e1d88f66876b80d21935932",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-2073ddddb3b81bd27787046606ed6eb0e3deafd24c33c07620f6fe96a331837e",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+              ]
+            },
+            {
+              "sample": "rq-c69acb69deadbc87d0ce7c769f5f88ad62aba27e6aad7f401bddda5dabd6c555",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+              ]
+            },
+            {
+              "sample": "rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-236a0d460ec876667807e56d4a0e8c54fd5754ee714a0816e7be0872ca65836d",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-d1e32b4949c8e150e8814e2e40808a033a91632e97e98761b57ffc31b8381357",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-a0bdefe123e0941c9caa0a9b73697d46a395a70a2effdc35a76db01923192c5a",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+              ]
+            },
+            {
+              "sample": "rq-c678fc47674a7031883da811bef76cb451d20a0ebaaf4fdcd0dafe46d8ad17f0",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+              ]
+            },
+            {
+              "sample": "rq-85fe63f825d933f00f57dccbcb883004b37aa8a110744a1dd52012e542d4bb3a",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              ]
+            },
+            {
+              "sample": "rq-1ed358c0456a31cbc2079f080b74244a0192aee99abd154df0e4ecf74700288a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            }
+          ],
+          "elapsedMs": 267.4457
+        }
+      ]
+    },
+    {
+      "epoch": 96,
+      "pendingRequest": "rq-9165f274c082eb071df9fbabe00079526ddf6ae8bb196a93c6fba2492f83bc09",
+      "sampleCount": 12,
+      "assignmentCount": 4,
+      "existingRiders": 10,
+      "inputStateSha256": "8e4c356727c3eaa6cb1ad327a62b044c30da2d848911c2a904e04fc8a72b2338",
+      "outcomes": [
+        {
+          "ordinal": 0,
+          "selectedCandidateIds": [
+            "candidate-v1-c407a5ab36f2d70673660605666ae430699b6563484a397c26d057e609c49c5d",
+            "candidate-v1-8067072431825ab02efbe131e8bda13b7b653034b4be11cfce44aad97b44d0a0",
+            "candidate-v1-608ab982637631f52665c824aa0967a2885c5c7d16cb9937d4c238f571c3ee19",
+            "candidate-v1-e3687a21ac9feccf54dc4410b75ae75bf59aa166721939b47a65202892849fa5",
+            "candidate-v1-0d20baef786806ba2d0ed25da313eb4d59cf3fcf46ea08f9c7ed28f4bed48f99",
+            "candidate-v1-0541c2bb6d777794035b3e8b61ca4625dc8bc1c50eee668063223c1ed86083ac",
+            "candidate-v1-463d1bd013b31673acdcae9c7effa33d05290e6e308af0d2a357cc1d704ecb4d",
+            "candidate-v1-1f977ac52058f27360e28becb41dd64885867d8d0f8f54e7b8c4d6790efc57c4"
+          ],
+          "isRecorded": true,
+          "currentVehicle": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+          "cost": 4062651,
+          "currentWaitMs": 465132,
+          "currentRideMs": 180488,
+          "revisions": [
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            }
+          ],
+          "futureResults": [
+            {
+              "sample": "rq-1edec00f229b933d4e15489972f7948ca28506265d05b173f8f3b9eea5fbfaf1",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-acbbcd86c9dd9aa2d4c209ae6d84db2a1e51cf253e1d88f66876b80d21935932",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001",
+              "feasible": true,
+              "vehicles": [
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-2073ddddb3b81bd27787046606ed6eb0e3deafd24c33c07620f6fe96a331837e",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-c69acb69deadbc87d0ce7c769f5f88ad62aba27e6aad7f401bddda5dabd6c555",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-236a0d460ec876667807e56d4a0e8c54fd5754ee714a0816e7be0872ca65836d",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-d1e32b4949c8e150e8814e2e40808a033a91632e97e98761b57ffc31b8381357",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-a0bdefe123e0941c9caa0a9b73697d46a395a70a2effdc35a76db01923192c5a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-c678fc47674a7031883da811bef76cb451d20a0ebaaf4fdcd0dafe46d8ad17f0",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-85fe63f825d933f00f57dccbcb883004b37aa8a110744a1dd52012e542d4bb3a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              ]
+            },
+            {
+              "sample": "rq-1ed358c0456a31cbc2079f080b74244a0192aee99abd154df0e4ecf74700288a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            }
+          ],
+          "elapsedMs": 127.3426
+        },
+        {
+          "ordinal": 1,
+          "selectedCandidateIds": [
+            "candidate-v1-e080b3edd55d0aa6737d38718f32dd599cf2a93a8549a0ded3aca6899eaf2d5f",
+            "candidate-v1-8067072431825ab02efbe131e8bda13b7b653034b4be11cfce44aad97b44d0a0",
+            "candidate-v1-608ab982637631f52665c824aa0967a2885c5c7d16cb9937d4c238f571c3ee19",
+            "candidate-v1-5d2ba7ea9464640d502a515c979133bdaed0e72b070618c4cb0e68f1693d40e9",
+            "candidate-v1-0d20baef786806ba2d0ed25da313eb4d59cf3fcf46ea08f9c7ed28f4bed48f99",
+            "candidate-v1-0541c2bb6d777794035b3e8b61ca4625dc8bc1c50eee668063223c1ed86083ac",
+            "candidate-v1-463d1bd013b31673acdcae9c7effa33d05290e6e308af0d2a357cc1d704ecb4d",
+            "candidate-v1-1f977ac52058f27360e28becb41dd64885867d8d0f8f54e7b8c4d6790efc57c4"
+          ],
+          "isRecorded": false,
+          "currentVehicle": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+          "cost": 4236986,
+          "currentWaitMs": 582944,
+          "currentRideMs": 180488,
+          "revisions": [
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            }
+          ],
+          "futureResults": [
+            {
+              "sample": "rq-1edec00f229b933d4e15489972f7948ca28506265d05b173f8f3b9eea5fbfaf1",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-acbbcd86c9dd9aa2d4c209ae6d84db2a1e51cf253e1d88f66876b80d21935932",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001",
+              "feasible": true,
+              "vehicles": [
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-2073ddddb3b81bd27787046606ed6eb0e3deafd24c33c07620f6fe96a331837e",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-c69acb69deadbc87d0ce7c769f5f88ad62aba27e6aad7f401bddda5dabd6c555",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-236a0d460ec876667807e56d4a0e8c54fd5754ee714a0816e7be0872ca65836d",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-d1e32b4949c8e150e8814e2e40808a033a91632e97e98761b57ffc31b8381357",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-a0bdefe123e0941c9caa0a9b73697d46a395a70a2effdc35a76db01923192c5a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-c678fc47674a7031883da811bef76cb451d20a0ebaaf4fdcd0dafe46d8ad17f0",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-85fe63f825d933f00f57dccbcb883004b37aa8a110744a1dd52012e542d4bb3a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              ]
+            },
+            {
+              "sample": "rq-1ed358c0456a31cbc2079f080b74244a0192aee99abd154df0e4ecf74700288a",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            }
+          ],
+          "elapsedMs": 141.9357
+        },
+        {
+          "ordinal": 2,
+          "selectedCandidateIds": [
+            "candidate-v1-e080b3edd55d0aa6737d38718f32dd599cf2a93a8549a0ded3aca6899eaf2d5f",
+            "candidate-v1-8067072431825ab02efbe131e8bda13b7b653034b4be11cfce44aad97b44d0a0",
+            "candidate-v1-608ab982637631f52665c824aa0967a2885c5c7d16cb9937d4c238f571c3ee19",
+            "candidate-v1-e3687a21ac9feccf54dc4410b75ae75bf59aa166721939b47a65202892849fa5",
+            "candidate-v1-0d20baef786806ba2d0ed25da313eb4d59cf3fcf46ea08f9c7ed28f4bed48f99",
+            "candidate-v1-0541c2bb6d777794035b3e8b61ca4625dc8bc1c50eee668063223c1ed86083ac",
+            "candidate-v1-463d1bd013b31673acdcae9c7effa33d05290e6e308af0d2a357cc1d704ecb4d",
+            "candidate-v1-08d7d56cc930ce703a11b902432305b446d9c1f85059e015b98014c0f9286911"
+          ],
+          "isRecorded": false,
+          "currentVehicle": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe",
+          "cost": 4243139,
+          "currentWaitMs": 377401,
+          "currentRideMs": 180488,
+          "revisions": [
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            }
+          ],
+          "futureResults": [
+            {
+              "sample": "rq-1edec00f229b933d4e15489972f7948ca28506265d05b173f8f3b9eea5fbfaf1",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-acbbcd86c9dd9aa2d4c209ae6d84db2a1e51cf253e1d88f66876b80d21935932",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001",
+              "feasible": true,
+              "vehicles": [
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              ]
+            },
+            {
+              "sample": "rq-2073ddddb3b81bd27787046606ed6eb0e3deafd24c33c07620f6fe96a331837e",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-c69acb69deadbc87d0ce7c769f5f88ad62aba27e6aad7f401bddda5dabd6c555",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              ]
+            },
+            {
+              "sample": "rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              ]
+            },
+            {
+              "sample": "rq-236a0d460ec876667807e56d4a0e8c54fd5754ee714a0816e7be0872ca65836d",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-d1e32b4949c8e150e8814e2e40808a033a91632e97e98761b57ffc31b8381357",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              ]
+            },
+            {
+              "sample": "rq-a0bdefe123e0941c9caa0a9b73697d46a395a70a2effdc35a76db01923192c5a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-c678fc47674a7031883da811bef76cb451d20a0ebaaf4fdcd0dafe46d8ad17f0",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+              ]
+            },
+            {
+              "sample": "rq-85fe63f825d933f00f57dccbcb883004b37aa8a110744a1dd52012e542d4bb3a",
+              "feasible": true,
+              "vehicles": [
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              ]
+            },
+            {
+              "sample": "rq-1ed358c0456a31cbc2079f080b74244a0192aee99abd154df0e4ecf74700288a",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              ]
+            }
+          ],
+          "elapsedMs": 148.8366
+        },
+        {
+          "ordinal": 3,
+          "selectedCandidateIds": [
+            "candidate-v1-e080b3edd55d0aa6737d38718f32dd599cf2a93a8549a0ded3aca6899eaf2d5f",
+            "candidate-v1-ae44373bdf20c46889f1871c317d83eeedf61d9ef47ef56d86500655dc543ea5",
+            "candidate-v1-608ab982637631f52665c824aa0967a2885c5c7d16cb9937d4c238f571c3ee19",
+            "candidate-v1-e3687a21ac9feccf54dc4410b75ae75bf59aa166721939b47a65202892849fa5",
+            "candidate-v1-0d20baef786806ba2d0ed25da313eb4d59cf3fcf46ea08f9c7ed28f4bed48f99",
+            "candidate-v1-0541c2bb6d777794035b3e8b61ca4625dc8bc1c50eee668063223c1ed86083ac",
+            "candidate-v1-463d1bd013b31673acdcae9c7effa33d05290e6e308af0d2a357cc1d704ecb4d",
+            "candidate-v1-1f977ac52058f27360e28becb41dd64885867d8d0f8f54e7b8c4d6790efc57c4"
+          ],
+          "isRecorded": false,
+          "currentVehicle": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+          "cost": 4124181,
+          "currentWaitMs": 409634,
+          "currentRideMs": 180488,
+          "revisions": [
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            },
+            {
+              "PickupEtaTotalMs": 0,
+              "DropEtaTotalMs": 0,
+              "MaterialEtaRevisionCount": 0,
+              "VehicleSwitchCount": 0,
+              "PickupStopRelocationMm": 0,
+              "PickupStopSwitchCount": 0,
+              "DropStopRelocationMm": 0,
+              "DropStopSwitchCount": 0,
+              "IncumbentOrderInversionCount": 0,
+              "PrePickupInsertedStopCount": 0
+            }
+          ],
+          "futureResults": [
+            {
+              "sample": "rq-1edec00f229b933d4e15489972f7948ca28506265d05b173f8f3b9eea5fbfaf1",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-acbbcd86c9dd9aa2d4c209ae6d84db2a1e51cf253e1d88f66876b80d21935932",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-b6455cb3002f587573300504222fe1eaecd8ce8909240705187db4da0f7a3001",
+              "feasible": true,
+              "vehicles": [
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-2073ddddb3b81bd27787046606ed6eb0e3deafd24c33c07620f6fe96a331837e",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              ]
+            },
+            {
+              "sample": "rq-c69acb69deadbc87d0ce7c769f5f88ad62aba27e6aad7f401bddda5dabd6c555",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-882dd9c224de1612ba8625d1b3245e87fee775beb4f125b03ce096f1df398dec",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-236a0d460ec876667807e56d4a0e8c54fd5754ee714a0816e7be0872ca65836d",
+              "feasible": false,
+              "vehicles": []
+            },
+            {
+              "sample": "rq-d1e32b4949c8e150e8814e2e40808a033a91632e97e98761b57ffc31b8381357",
+              "feasible": true,
+              "vehicles": [
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-a0bdefe123e0941c9caa0a9b73697d46a395a70a2effdc35a76db01923192c5a",
+              "feasible": true,
+              "vehicles": [
+                "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-c678fc47674a7031883da811bef76cb451d20a0ebaaf4fdcd0dafe46d8ad17f0",
+              "feasible": true,
+              "vehicles": [
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            },
+            {
+              "sample": "rq-85fe63f825d933f00f57dccbcb883004b37aa8a110744a1dd52012e542d4bb3a",
+              "feasible": true,
+              "vehicles": [
+                "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              ]
+            },
+            {
+              "sample": "rq-1ed358c0456a31cbc2079f080b74244a0192aee99abd154df0e4ecf74700288a",
+              "feasible": true,
+              "vehicles": [
+                "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+              ]
+            }
+          ],
+          "elapsedMs": 109.5299
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "key": "lu2024",
+    "candidate_key": "lu2025",
+    "candidate_metadata": "Chengqi Lu; Nico Kühnel. To wait or to cruise: The trade-off between waiting time and detours for service efficiency in ride-pooling systems. Case Studies on Transport Policy 21:101499 (September2025). DOI10.1016/j.cstp.2025.101499.",
+    "metadata_status": "CANNOT VERIFY (final page fetch)",
+    "url_open_attempts": [
+      "https://doi.org/10.1016/j.cstp.2025.101499",
+      "https://www.sciencedirect.com/science/article/pii/S2213624X25001361",
+      "https://www.sciencedirect.com/special-issue/102ZXS5MSH9"
+    ],
+    "primary_search_results": [
+      "https://www.sciencedirect.com/science/article/pii/S2213624X25001361",
+      "https://www.sciencedirect.com/special-issue/102ZXS5MSH9"
+    ],
+    "notes": "Final journal identity appears in primary publisher search results (journal/volume/year/article/DOI on article result; two author names on Elsevier special-issue result). Direct final article and special-issue page open both returned403; DOI fetch failed. No final full text opened. Thus this follow-up establishes a candidate final publication but not an independently opened final-version bibliographic record. Keep verified2024 DepositOnce preprint for exact claims; do not silently change lu2024 to a2025journal citation.",
+    "register_ids": [
+      "J22",
+      "C2-14"
+    ],
+    "body_status": "CANNOT VERIFY",
+    "claims_survive": "C2-14 pickup deadline formula and2–3minute buffer cannot be checked in2025final version from the accessible abstract. Existing verified2024preprint supports them.",
+    "tex_if_final_later_verified": "\\bibitem{lu2025}\nC.~Lu and N.~Kühnel.\n\\newblock To wait or to cruise: The trade-off between waiting time and detours for service efficiency in ride-pooling systems.\n\\newblock \\emph{Case Studies on Transport Policy}, 21:101499, 2025.\n\\newblock \\url{https://doi.org/10.1016/j.cstp.2025.101499}"
+  },
+  {
+    "key": "leonardi2024",
+    "candidate_key": "leonardi2026",
+    "candidate_metadata": "Pierfrancesco Leonardi; Vincenza Torrisi; Andrea Araldo; Matteo Ignaccolo. Data-driven assessment for the predictability of demand responsive transit. Transportmetrica A: Transport Science (2026), accepted/in press; no volume/issue/published page range verified. DOI10.1080/23249935.2026.2650136.",
+    "metadata_status": "VERIFIED (institutional final-version record; pagination unverified)",
+    "url": "https://researchportal.ip-paris.fr/en/publications/data-driven-assessment-for-the-predictability-of-demand-responsiv/",
+    "url_open_attempts": [
+      "https://doi.org/10.1080/23249935.2026.2650136",
+      "https://www.tandfonline.com/doi/abs/10.1080/23249935.2026.2650136",
+      "https://www.tandfonline.com/doi/full/10.1080/23249935.2026.2650136",
+      "https://www.sciencedirect.com/science/article/pii/S2324993526000291"
+    ],
+    "notes": "Successfully opened author-institution IPParis primary record and checked four ordered authors, final title, venue, year and DOI. Institutional record labels accepted/in press,1Jan2026; publisher search result labels available online4Apr2026. No final volume/issue/pages were exposed; do not invent them. Final title differs from2024preprint: 'On-Demand Responsive Transit' → 'demand responsive transit'. Full publisher /abs,/full and ScienceDirect opens returned403; direct DOI failed. Retain2024preprint for precise opened-claim version and note later publication separately.",
+    "register_ids": [
+      "J21",
+      "C2-13"
+    ],
+    "body_status": "ABSTRACT VERIFIED; FINAL BODY CANNOT VERIFY",
+    "claims_survive": "Opened2026institutional abstract independently confirms sample-efficient method from little historical data, VISUM simulations in two Italian cities, more than90%predictability when correctly dimensioned, and operator sizing support. Those broad C2-13 statements survive at abstract level. Exact2024page anchors and any body-level prediction-window details have not been revalidated in the final full text.",
+    "tex_if_explicit_final_version_selected": "\\bibitem{leonardi2026}\nP.~Leonardi, V.~Torrisi, A.~Araldo, and M.~Ignaccolo.\n\\newblock Data-driven assessment for the predictability of demand responsive transit.\n\\newblock \\emph{Transportmetrica A: Transport Science}, in press, 2026.\n\\newblock \\url{https://doi.org/10.1080/23249935.2026.2650136}"
+  }
+]
+

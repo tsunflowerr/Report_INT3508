@@ -1,0 +1,11 @@
+# Independent Round 11 reproduction
+
+The independent script and its primary metrics, calibration rules, per-rider quotes, gains, verdicts and metadata were saved before reading Claude's analysis or numerical report. Python 3.10.20 and the existing scikit-learn 1.7.2 environment were used without installation or simulation.
+
+All 95 E30 rows in Claude's metric file were checked: 665 numeric cells reproduce at the published three-decimal precision using the CSV's rounded residual, forecast-extension and horizon fields. The five verdicts are TRUE, FALSE, FALSE, TRUE, FALSE; the kill criterion fires. See round11-reproduce-comparison-summary.json and round11-reproduce-comparison.tsv. The file named .tsv by Claude actually has comma-separated columns; the independent exported TSV files use tabs.
+
+The independent first pass also reconstructed the target and delta from A, D0 and P0. The serialized residual/delta differ by at most 0.0005 s. This alternate HGB fit changes mean extension by at most 0.359 s, p90 extension by 2.434 s and early/symmetric rates by 1 pp; Y60 and all verdicts remain unchanged. These are reported separately in round11-reproduce-rounding-sensitivity.json. The seven three-decimal metric discrepancies under the stored fit with raw timestamp arithmetic disappear when the report's rounded-field metric equations are reproduced; they are serialization effects.
+
+The missing paired common-completed supplement was computed from frozen stored-model E30 quotes, without refitting or test rescaling. U/C30 has 141 riders on 15 November and 192 on 16 November; FREE/C30 has 748 and LOCKS/C30 761 on 13 November. No HGB, HGB-nostate or LinQR learner jointly matches C30 in Y60 and symmetric accuracy on any paired subset. Pairwise metrics and verdicts are saved in round11-reproduce-common-pairwise.tsv and round11-reproduce-common-pairwise-verdicts.json. These compare served subsets and do not establish equal rejection/service outcomes.
+
+The primary E30 rules set mean calibration extension to 30 s. Actual test extension varies; therefore equal calibration cost should not be described as exact equal realized test quote cost. All own-cohort and paired cost values, nearest-rank p90 extension and own-cohort horizon values are exported.

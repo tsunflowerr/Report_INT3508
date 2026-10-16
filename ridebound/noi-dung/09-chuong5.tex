@@ -1,0 +1,106 @@
+% Cập nhật ngày 15/10/2026; S15-01--S15-04 và các nguồn đã ghi trong bản trước.
+\chapter{Kết luận}
+\label{chuong:ketluan}
+
+Khóa luận đã đặc tả, cài đặt và đánh giá trên mô phỏng một trần cho tổng phần dời giờ trả do điều phối của từng
+hành khách. Phương pháp kết hợp giới hạn phần điều phối kiểm soát được, lời hứa có tính trước hồ sơ tắc đường
+và sổ theo từng khách. Chương này tổng hợp các kết quả, những đánh đổi quan sát được và phần còn cần kiểm tra.
+
+\section{Kết quả và đánh đổi}
+\label{muc:c5-tongket}
+
+Luật C cộng độ lớn của từng lần dời giờ trả so với mốc giữ nguyên kế hoạch đã được tính lại theo thời gian đi
+hiện tại. Mốc này kế thừa công thức 7 của Hörl và Zwick~\cite{horl2022}. Dưới điều kiện giữ nguyên kế hoạch ở
+mục~\ref{muc:giunguyen}, phương án giữ nguyên không tiêu thêm trần. Trên tập kiểm tra chính, không khách nào
+vượt trần 30 giây ở cả hai thứ tự chọn phương án; tổng dời lớn nhất là 29,239 giây khi ưu tiên ổn định và
+29,657 giây khi ưu tiên chi phí kế hoạch. Đây là giới hạn phần tính cho điều phối, không phải bảo đảm giờ đến
+thực tế cách lời hứa đầu nhiều nhất 30 giây.
+% EV: A01; A06; A13; A22; X3-27; J01; J03; S15-01 (5d); S15-02.
+
+Với ưu tiên ổn định, thêm trần 30 giây làm số lượt phục vụ giảm từ 2.434 xuống 2.338 và số khách hoàn thành
+có đi chung giảm từ 555 xuống 313. Đổi lại, số lượt được phục vụ và không muộn quá một phút tăng từ 2.231
+lên 2.262 trên 3.672 yêu cầu. Với ưu tiên chi phí, các số phục vụ là 2.502 và 2.364, số khách hoàn thành có
+đi chung là 1.027 và 432, còn số lượt không muộn quá một phút là 2.123 và 2.292. Trần vẫn đi cùng độ trễ
+thấp hơn khi bỏ ưu tiên ổn định khỏi thứ tự xếp hạng, nhưng đánh đổi về phục vụ và ghép khách cũng lớn hơn.
+% EV: S15-01 (mục 2, 5f); S15-02. Nhóm khách phục vụ thay đổi giữa các cấu hình.
+
+Khi cùng giữ trần, ưu tiên chi phí phục vụ thêm 26 lượt và có thêm 119 khách hoàn thành có đi chung so với
+ưu tiên ổn định. Cái giá nằm ở nhiều khách bị sửa lời hứa hơn: 106 thay vì 33; số khách bị sửa từ hai lần
+là 2 thay vì 0. Số lượt đón muộn là 44 thay vì 43. Vì thế, kết quả không thay thế bộ chọn ưu tiên ổn định
+bằng một bộ chọn tốt hơn ở mọi tiêu chí. Hai thứ tự cho hai cách sử dụng phần linh hoạt còn lại trong cùng
+trần; lựa chọn cần dựa trên mục tiêu dịch vụ và dữ liệu về mức chấp nhận của khách.
+% EV: S15-01 (5d--5f); S15-04.
+
+Các đối chứng cho thấy lợi ích có giới hạn. Dưới ưu tiên ổn định, luật hạn chót 30 giây cũng phục vụ 2.338
+lượt; khi so cùng ngưỡng muộn hơn lời hứa đầu quá 30 giây, luật C có 292 và luật hạn chót có 289 lượt muộn.
+Khi có dự báo, điều phối không trần đệm thêm 30 giây vào mọi lời hứa cũng đạt 2.328 lượt không muộn quá một
+phút, bằng luật C, và hơn ở hai phút: 2.366 so với 2.338. Đổi lại, phần lời hứa dài thêm trung bình là 37,2
+thay vì 7,4 giây. Những kết quả này không cho phép chọn luật C chỉ từ một số đo đúng giờ.
+% EV: C01; C4A-01; N-21; C10; N-16; N-18; K05; K51.
+
+Trần 120 giây dưới ưu tiên ổn định phục vụ 2.387 lượt, có 2.255 lượt không muộn quá một phút và 2.366 lượt
+không muộn quá hai phút trên 3.672 yêu cầu. Đây là một điểm thêm, chưa xác định trần tối ưu. Phép so trực
+tiếp luật cộng dồn với luật giới hạn từng lần vẫn chưa có. Bảy lịch sử thỏa điều kiện sàng lọc ở mức 120 giây
+trong nhánh ưu tiên chi phí không trần, cũng như một bản ghi chỉ vượt do cộng dồn trong nhánh có trần 30
+giây, cho thấy các điều kiện khác nhau của hai luật nhưng chưa cho biết chênh lệch kết quả phục vụ.
+% EV: N-06; L1a-02; S15-01 (5d--5e, H7); S15-02; K08.
+
+\section{Vai trò của dự báo và phần còn lại}
+
+Trên các hành trình ưu tiên chi phí có trần đã ghi, tính lại lời hứa có dự báo cho 11 lượt muộn quá một phút
+thay vì 72, trong 2.364 lượt phục vụ; lời hứa dài thêm trung bình 7,30 giây. Đối với ưu tiên ổn định có trần,
+trên 21 kịch bản ngày thường có dự báo, số lượt muộn giảm từ 68 xuống 2 trong 1.471 lượt phục vụ. Đây là
+hai phạm vi khác nhau; dự báo chỉ đổi giờ hứa trong phép tính lại, không đổi việc xe chở ai hay giờ trả thực tế.
+% EV: S15-01 (5b); F17; F04; F03; N4B8-01.
+
+Sổ theo từng khách cho biết dự báo giải thích được phần nào của độ lệch. Trong 6.217 giây trễ của 68 khách
+ngày thường dưới ưu tiên ổn định, có 82 giây tính cho điều phối, 5.353 giây được hồ sơ lịch sử giải thích và
+783 giây còn lại. Chiều tuyết 15/11/2018 cho thấy giới hạn: số khách trễ quá một phút chỉ giảm từ 41 xuống
+34 trong 601 khách được phục vụ. Trong 3.445,9 giây trễ của 41 khách đó, 8,6 giây tính cho điều phối, 251,5
+giây được hồ sơ lịch sử giải thích và 3.185,9 giây còn lại. Các phần được làm tròn riêng. Phần còn lại không
+đồng nghĩa với phần không thể biết trước; sổ là phép phân rã theo mô hình, không xác định lỗi của từng bên.
+% EV: F09; N4B8-11; F13; B20; N4B-05; K04; K19; X3-12.
+
+\section{Hạn chế}
+\label{muc:c5-hanche}
+
+Các kết quả có tính thăm dò trên 34 kịch bản phụ thuộc nhau thuộc năm ngày đã xem. Mô phỏng có tải thấp,
+thời gian dừng đón/trả bằng 0 trong các mẫu đã kiểm và một hệ số tắc đường chung cho toàn thành phố.
+Các lượt ưu tiên chi phí dùng bản chạy khác các lượt ưu tiên ổn định; kiểm hành vi trên bốn cặp mẫu chưa
+chứng minh tương đương toàn bộ. Chưa có căn cứ suy rộng các chênh lệch thành tác động nhân quả riêng của
+bộ chọn, lợi nhuận thực tế, hiệu quả ở tải cao hoặc sự hài lòng của hành khách.
+
+Phần dự báo dùng trung bình lịch sử theo khung 15 phút, lấy điều kiện hiện tại làm mốc; mỗi ngày bật dự báo
+chỉ có hai hoặc ba ngày nguồn. Phép kiểm giờ đón vẫn dùng giờ chưa dự báo, trong khi 34 trong 1.471 khách
+ngày thường được hiển thị giờ đón đầu vượt hạn đón. Phép thử đưa dự báo trực tiếp vào điều phối có ba lượt
+dừng vì kế hoạch không khả thi. Khả năng dự báo và tính nhất quán của phần tích hợp cần được đánh giá thêm.
+% EV: I01--I07; B06; B11; B12; S15-01; STAGE1B-PLAN mục 1.1,3; F01--F07; F12.
+
+Khóa luận kế thừa các thành phần đã có: đo và kiểm soát thay đổi lời hứa của Fielbaum và
+Alonso-Mora~\cite{fielbaum2020}, mốc tuyến cũ tính lại của Hörl và Zwick~\cite{horl2022}, cùng hạn chót từ lời
+hứa đầu của Schulz và Pfeiffer~\cite{schulz2026}. Đối chứng chỉ mượn thành phần hạn chót, chưa tái hiện toàn
+bộ các hệ thống đó. Phần thực hiện ở đây là đặc tả, cài đặt, kiểm giới hạn cộng dồn trên phần dời tính cho
+điều phối của từng khách, kết hợp lời hứa theo dự báo và sổ theo từng khách, rồi đo các đánh đổi trong phạm vi mô phỏng.
+
+\section{Hướng phát triển}
+\label{muc:c5-huongphattrien}
+
+Thứ nhất, cần khảo sát thêm các mức trần dưới cùng một thứ tự chọn phương án, trên dữ liệu phát triển mới.
+Trần 30 giây trong khóa luận giới hạn phần dời do điều phối sau khi nhận khách; nó không phải giới hạn toàn bộ
+thời gian chờ đón hay đi vòng. Muốn chọn mức triển khai cần biết khách chấp nhận bao nhiêu thay đổi và hãng xe
+đánh đổi phục vụ với ổn định thế nào. Không điều chỉnh lại kết quả đã có để chọn một mức có lợi.
+
+Thứ hai, cần mở rộng lịch sử giao thông cùng thành phố từ dữ liệu chuyến taxi theo tháng của
+TLC~\cite{tlc}, kiểm chất lượng và độ phủ theo vùng, ngày, giờ trước khi dùng. Phải tách thời gian học, chọn
+cấu hình và kiểm tra trên ngày chưa xem; mô hình phức tạp hơn chỉ được giữ nếu cải thiện ngoài tập học.
+Ngày có sự kiện cần được đánh giá riêng, chỉ dùng tín hiệu thực sự có ở thời điểm hứa. Dữ liệu mô phỏng
+bổ sung hữu ích cho thử tình huống khó, nhưng không thay bằng chứng dự báo trên giao thông thực.
+
+Thứ ba, cần sửa phép kiểm giờ đón để phù hợp với lời hứa theo dự báo, đồng thời kiểm dự báo sai, dữ liệu
+đến chậm và trường hợp thiếu lịch sử. Việc sửa cần có phép thử mô phỏng đầy đủ ở cấu hình mới; kết quả
+tính lại lời hứa trên hành trình cũ không xác nhận thay đổi trong quyết định nhận và ghép khách.
+
+Thứ tư, phép so luật cộng dồn với luật giới hạn từng lần vẫn là hướng kiểm tra riêng, cần đủ tình huống
+phân biệt hai luật và kế hoạch phù hợp. Cũng cần thử hạn chót nới theo mốc giữ nguyên kế hoạch, mở rộng tải,
+tắc đường riêng trên từng đoạn và mô hình khách hủy chuyến. Các hướng này giữ nguyên kết quả và giới hạn
+của những phép thử đã trình bày, thay vì coi các phần chưa đo là ưu thế đã có.

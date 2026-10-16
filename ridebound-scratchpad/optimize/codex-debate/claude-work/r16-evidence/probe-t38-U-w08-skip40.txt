@@ -1,0 +1,106 @@
+# probe_decision_tree.py C:/RideBoundData/research/tier3-t38-v1/U-d20181114-s10-r3-w08/transcript-00.ndjson skip=40
+# envelope keys: ['epochId', 'messageType', 'payload', 'runId', 'scenarioId', 'schemaVersion', 'simTimeMs']; simTimeMs=2384000
+# key tree of payload
+  actions: list[10]
+  actions[0].decisionType = "requestAccepted"
+  actions[0].payload: dict
+  actions[0].payload.candidateId = "candidate-v1-b464bfb2893118465666454347cc06d5f85ac5a57385fd55c22676f299171551"
+  actions[0].payload.requestId = "rq-fdcaeddf41e995c4d24071311dca56c5685e79ae9f3d5ecbaf9b040dacca1af4"
+  actions[0].payload.vehicleId = "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+  certificate: dict
+  certificate.body: dict
+  certificate.body.certificateVersion = "1.0.0"
+  certificate.body.inputStateHash = "c87950a215540eb7929f836efd7343cc2fa3f7dd643af1c8190c540049abdc4c"
+  certificate.body.normalOperation = true
+  certificate.body.physicalPlanCount = 8
+  certificate.body.promiseCount = 9
+  certificate.body.proposedStateHash = "09e363c34eb4ee690e44833b5b5ca249d43e8faddf87676d55ab11fee47bdafd"
+  certificate.body.publicationIds: list[8]
+  certificate.body.validatorVersion = "commitment-validator-v1"
+  certificate.body.witnesses: list[0]
+  certificate.reasonCode = "VALIDATED"
+  certificate.status = "produced"
+  decisionHash = "0e3f95b0c840940f05706f69566509a5e5da998ec47bda557c5c9ad5881748b2"
+  previousDecisionHash = "a58c092c43ae3ac4f84b70ebe05f272fd274abd72c2c21a394150d11dc8329bd"
+  reasonCode = "ACCEPTED"
+  solver: dict
+  solver.executionEvidence: dict
+  solver.executionEvidence.evidenceVersion = "1.1.0"
+  solver.executionEvidence.generation: dict
+  solver.executionEvidence.generation.consideredRequestCount = 1
+  solver.executionEvidence.generation.exogenousServiceQualityBreaches: list[0]
+  solver.executionEvidence.generation.omissions: list[0]
+  solver.executionEvidence.generation.omittedRequestCount = 0
+  solver.executionEvidence.generation.totalPendingRequestCount = 1
+  solver.executionEvidence.generation.vehicleLosses: list[8]
+  solver.executionEvidence.generation.vehicleLosses[0].candidateCapApplied = false
+  solver.executionEvidence.generation.vehicleLosses[0].consideredRepairRequestCount = 0
+  solver.executionEvidence.generation.vehicleLosses[0].eligibleRepairRequestCount = 0
+  solver.executionEvidence.generation.vehicleLosses[0].evaluatedCandidatePathCount = 6
+  solver.executionEvidence.generation.vehicleLosses[0].explorationWorkUnits = 8
+  solver.executionEvidence.generation.vehicleLosses[0].omissionCountWasSaturated = false
+  solver.executionEvidence.generation.vehicleLosses[0].omittedFeasibleCandidateCountByCap = 0
+  solver.executionEvidence.generation.vehicleLosses[0].omittedRepairRequestCount = 0
+  solver.executionEvidence.generation.vehicleLosses[0].omittedUnexpandedCandidatePathCount = 0
+  solver.executionEvidence.generation.vehicleLosses[0].physicallyOrSchedulePrunedCount = 5
+  solver.executionEvidence.generation.vehicleLosses[0].retainedCandidateCount = 2
+  solver.executionEvidence.generation.vehicleLosses[0].uniqueFeasibleCandidateCountBeforeCap = 2
+  solver.executionEvidence.generation.vehicleLosses[0].vehicleId = "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+  solver.executionEvidence.generation.vehicleLosses[0].workBudgetExhausted = false
+  solver.executionEvidence.prunedCandidates: list[38]
+  solver.executionEvidence.prunedCandidates[0].candidateId = "candidate-v1-2875847bd26198d94f8971029d0b9f514e40ce72e19b24b97ce9478ef9ff9d0b"
+  solver.executionEvidence.prunedCandidates[0].code = "PICKUP_WINDOW"
+  solver.executionEvidence.prunedCandidates[0].commitmentWitnesses: list[0]
+  solver.executionEvidence.prunedCandidates[0].newRequestIds: list[1]
+  solver.executionEvidence.prunedCandidates[0].physicalWitness: dict
+  solver.executionEvidence.prunedCandidates[0].physicalWitness.actual = 2850059
+  solver.executionEvidence.prunedCandidates[0].physicalWitness.code = "PICKUP_WINDOW"
+  solver.executionEvidence.prunedCandidates[0].physicalWitness.dimension = "latestPickupMs"
+  solver.executionEvidence.prunedCandidates[0].physicalWitness.expected = 2588000
+  solver.executionEvidence.prunedCandidates[0].physicalWitness.requestId = "rq-40920a776c9f2dac61a2b35f1f0878fabf124785733a4fc31fd1174b0f123725"
+  solver.executionEvidence.prunedCandidates[0].physicalWitness.stopId = "rb-p-d4f06aad3baf76626e160cbcf0e0a1dc435b2ea93dc4753a921f5cc408284fc0"
+  solver.executionEvidence.prunedCandidates[0].physicalWitness.vehicleId = "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+  solver.executionEvidence.prunedCandidates[0].vehicleId = "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+  solver.executionEvidence.selection: dict
+  solver.executionEvidence.selection.consumedGenerationWorkUnits = 55
+  solver.executionEvidence.selection.consumedValidationWorkUnits = 10
+  solver.executionEvidence.selection.executionPath = "validatedIncumbent"
+  solver.executionEvidence.selection.fallbackValidationAttempts = 0
+  solver.executionEvidence.selection.finalSolveStatus = "optimal"
+  solver.executionEvidence.selection.finalSolverDiagnostics: dict
+  solver.executionEvidence.selection.finalSolverDiagnostics.consumedDeterministicTimeMicros = 22
+  solver.executionEvidence.selection.finalSolverDiagnostics.consumedWorkUnits = 0
+  solver.executionEvidence.selection.finalSolverDiagnostics.detailCode = "ORTOOLS_OPTIMAL"
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds: list[21]
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].bestBound = 1
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].gapDenominator = 1
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].gapNumerator = 0
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].incumbentValue = 1
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].isProvenOptimal = true
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].levelIndex = 0
+  solver.executionEvidence.selection.finalSolverDiagnostics.objectiveBounds[0].objectiveName = "accepted-request-count"
+  solver.executionEvidence.selection.omissionCountWasSaturated = false
+  solver.executionEvidence.selection.omittedCandidateCount = 0
+  solver.executionEvidence.selection.primaryIncumbentRejected = false
+  solver.executionEvidence.selection.primarySolveStatus = "optimal"
+  solver.executionEvidence.selection.primarySolverDiagnostics: dict
+  solver.executionEvidence.selection.primarySolverDiagnostics.consumedDeterministicTimeMicros = 22
+  solver.executionEvidence.selection.primarySolverDiagnostics.consumedWorkUnits = 0
+  solver.executionEvidence.selection.primarySolverDiagnostics.detailCode = "ORTOOLS_OPTIMAL"
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds: list[21]
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].bestBound = 1
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].gapDenominator = 1
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].gapNumerator = 0
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].incumbentValue = 1
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].isProvenOptimal = true
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].levelIndex = 0
+  solver.executionEvidence.selection.primarySolverDiagnostics.objectiveBounds[0].objectiveName = "accepted-request-count"
+  solver.executionEvidence.selection.validationWitnesses: list[0]
+  solver.status = "completed"
+  stateAfterHash = "09e363c34eb4ee690e44833b5b5ca249d43e8faddf87676d55ab11fee47bdafd"
+  stateBeforeHash = "c87950a215540eb7929f836efd7343cc2fa3f7dd643af1c8190c540049abdc4c"
+  status = "produced"
+# selection excerpt
+{"consumedGenerationWorkUnits": 55, "consumedValidationWorkUnits": 10, "executionPath": "validatedIncumbent", "fallbackValidationAttempts": 0, "finalSolveStatus": "optimal", "finalSolverDiagnostics": {"consumedDeterministicTimeMicros": 22, "consumedWorkUnits": 0, "detailCode": "ORTOOLS_OPTIMAL", "objectiveBounds": [{"bestBound": 1, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 1, "isProvenOptimal": true, "levelIndex": 0, "objectiveName": "accepted-request-count"}, {"bestBound": 1000000, "gapDenominator": 1000000, "gapNumerator": 0, "incumbentValue": 1000000, "isProvenOptimal": true, "levelIndex": 1, "objectiveName": "worst-hard-utilization-ppm"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 2, "objectiveName": "revision:pickup_eta_total_ms"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 3, "objectiveName": "revision:drop_eta_total_ms"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 4, "objectiveName": "revision:material_eta_revision_count"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 5, "objectiveName": "revision:vehicle_switch_count"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 6, "objectiveName": "revision:pickup_stop_relocation_mm"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 7, "objectiveName": "revision:pickup_stop_switch_count"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 8, "objectiveName": "revision:drop_stop_relocation_mm"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 9, "objectiveName": "revision:drop_stop_switch_count"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 10, "objectiveName": "revision:incumbent_order_inversion_count"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 11, "objectiveName": "revision:pre_pickup_inserted_stop_count"}, {"bestBound": 5468753, "gapDenominator": 5468753, "gapNumerator": 0, "incumbentValue": 5468753, "isProvenOptimal": true, "levelIndex": 12, "objectiveName": "operational-cost"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 13, "objectiveName": "candidate-id-rank:veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 14, "objectiveName": "candidate-id-rank:veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 15, "objectiveName": "candidate-id-rank:veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 16, "objectiveName": "candidate-id-rank:veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 17, "objectiveName": "candidate-id-rank:veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 18, "objectiveName": "candidate-id-rank:veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 19, "objectiveName": "candidate-id-rank:veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 20, "objectiveName": "candidate-id-rank:veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"}]}, "omissionCountWasSaturated": false, "omittedCandidateCount": 0, "primaryIncumbentRejected": false, "primarySolveStatus": "optimal", "primarySolverDiagnostics": {"consumedDeterministicTimeMicros": 22, "consumedWorkUnits": 0, "detailCode": "ORTOOLS_OPTIMAL", "objectiveBounds": [{"bestBound": 1, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 1, "isProvenOptimal": true, "levelIndex": 0, "objectiveName": "accepted-request-count"}, {"bestBound": 1000000, "gapDenominator": 1000000, "gapNumerator": 0, "incumbentValue": 1000000, "isProvenOptimal": true, "levelIndex": 1, "objectiveName": "worst-hard-utilization-ppm"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 2, "objectiveName": "revision:pickup_eta_total_ms"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 3, "objectiveName": "revision:drop_eta_total_ms"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 4, "objectiveName": "revision:material_eta_revision_count"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 5, "objectiveName": "revision:vehicle_switch_count"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isProvenOptimal": true, "levelIndex": 6, "objectiveName": "revision:pickup_stop_relocation_mm"}, {"bestBound": 0, "gapDenominator": 1, "gapNumerator": 0, "incumbentValue": 0, "isP
+# generation excerpt
+{"consideredRequestCount": 1, "exogenousServiceQualityBreaches": [], "omissions": [], "omittedRequestCount": 0, "totalPendingRequestCount": 1, "vehicleLosses": [{"candidateCapApplied": false, "consideredRepairRequestCount": 0, "eligibleRepairRequestCount": 0, "evaluatedCandidatePathCount": 6, "explorationWorkUnits": 8, "omissionCountWasSaturated": false, "omittedFeasibleCandidateCountByCap": 0, "omittedRepairRequestCount": 0, "omittedUnexpandedCandidatePathCount": 0, "physicallyOrSchedulePrunedCount": 5, "retainedCandidateCount": 2, "uniqueFeasibleCandidateCountBeforeCap": 2, "vehicleId": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897", "workBudgetExhausted": false}, {"candidateCapApplied": false, "consideredRepairRequestCount": 0, "eligibleRepairRequestCount": 0, "evaluatedCandidatePathCount": 1, "explorationWorkUnits": 3, "omissionCountWasSaturated": false, "omittedFeasibleCandidateCountByCap": 0, "omittedRepairRequestCount": 0, "omittedUnexpandedCandidatePathCount": 0, "physicallyOrSchedulePrunedCount": 1, "retainedCandidateCount": 1, "uniqueFeasibleCandidateCountBeforeCap": 1, "vehicleId": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c", "workBudgetExhausted": false}, {"candidateCapApplied": false, "consideredRepairRequestCount": 0, "eligibleRepairRequestCount": 0, "evaluatedCandidatePathCount": 3, "explorationWorkUnits": 5, "omissionCountWasSaturated": false, "omittedFeasibleCandidateCountByCap": 0, "omittedRepairRequestCount": 0, "omittedUnexpandedCandidatePathCount": 0, "physicallyOrSchedulePrunedCount": 3, "retainedCandidateCount": 1, "uniqueFeasibleCandidateCountBeforeCap": 1, "vehicleId": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818", "workBudgetExhausted": false}, {"candidateCapApplied": false, "consideredRepairRequestCount": 0, "eligibleRepairRequestCount": 0, "evaluatedCandidatePathCount": 6, "explorationWorkUnits": 8, "omissionCountWasSaturated": false, "omittedFeasibleCandidateCountByCap": 0, "omittedRepairRequestCount": 0, "omittedUnexpandedCandidatePathCount": 0, "physicallyOrSchedulePrunedCount": 6, "retainedCandidateCount": 1, "uniqueFeasibleCandidateCountBeforeCap": 1, "vehicleId": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385", "workBudgetExhausted": false}, {"candidateCapApplied": false, "consideredRepairRequestCount": 0, "eligibleRepairRequestCount": 0, "evaluatedCandidatePathCount": 6, "explorationWorkUnits": 8, "omissionCountWasSaturated": false, "omittedFeasibleCandidateCountByCap": 0, "omittedRepairRequestCount": 0, "omittedUnexpandedCandidatePathCount": 0, "physicallyOrSchedulePrunedCount": 6, "retainedCandidateCount": 1, "uniqueFeasibleCandidateCountBeforeCap": 1, "vehicleId": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471", "workBudgetExhausted": false}, {"candidateCapApplied": false, "consideredRepairRequestCount": 0, "eligibleRepairRequestCount": 0, "evaluatedCandidatePathCount": 6, "explorationWork

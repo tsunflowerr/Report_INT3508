@@ -1,0 +1,80 @@
+# factor_inventory.py output
+2018-11-11_mean_tt_factor_hourly.csv: rows 1; columns ['simulation_time', 'travel_time_factor']; t 0..0 s; steps []; factor min 2.519 max 2.519 mean 2.519
+2018-11-11_to_2018-11-18_tt_factors.csv: rows 672; columns ['simulation_time', 'time_interval', 'travel_time_factor', 'travel requests', 'average travel duration', 'standard error', '25%', '50%', '75%']; t 86400..690300 s; steps [900]; factor min 1.514 max 7.977 mean 2.924
+2018-11-11_to_2018-11-18_tt_factors_hourly.csv: rows 192; columns ['simulation_time', 'travel_time_factor', 'speed', 'speed_nw']; t 0..687600 s; steps [3600]; factor min 1.645 max 6.833 mean 2.815
+2018-11-11_tt_factors_hourly.csv: rows 24; columns ['simulation_time', 'travel_time_factor', 'speed', 'speed_nw']; t 0..82800 s; steps [3600]; factor min 1.687 max 3.376 mean 2.519
+2018-11-12_mean_tt_factor.csv: rows 1; columns ['simulation_time', 'travel_time_factor']; t 0..0 s; steps []; factor min 2.515 max 2.515 mean 2.515
+2018-11-12_mean_tt_factor_hourly.csv: rows 1; columns ['simulation_time', 'travel_time_factor']; t 0..0 s; steps []; factor min 2.533 max 2.533 mean 2.533
+2018-11-12_tt_factors.csv: rows 96; columns ['simulation_time', 'time_interval', 'travel_time_factor', 'travel requests', 'average travel duration', 'standard error', '25%', '50%', '75%']; t 0..85500 s; steps [900]; factor min 1.514 max 3.395 mean 2.515
+2018-11-12_tt_factors_hourly.csv: rows 24; columns ['simulation_time', 'travel_time_factor', 'speed', 'speed_nw']; t 0..82800 s; steps [3600]; factor min 1.645 max 3.319 mean 2.533
+2018-11-13_mean_tt_factor_hourly.csv: rows 1; columns ['simulation_time', 'travel_time_factor']; t 0..0 s; steps []; factor min 2.953 max 2.953 mean 2.953
+2018-11-13_tt_factors.csv: rows 96; columns ['simulation_time', 'time_interval', 'travel_time_factor', 'travel requests', 'average travel duration', 'standard error', '25%', '50%', '75%']; t 0..85500 s; steps [900]; factor min 1.645 max 4.239 mean 2.992
+2018-11-13_tt_factors_hourly.csv: rows 24; columns ['simulation_time', 'travel_time_factor', 'speed', 'speed_nw']; t 0..82800 s; steps [3600]; factor min 1.774 max 3.953 mean 2.953
+2018-11-14_mean_tt_factor_hourly.csv: rows 1; columns ['simulation_time', 'travel_time_factor']; t 0..0 s; steps []; factor min 3.057 max 3.057 mean 3.057
+2018-11-14_tt_factors.csv: rows 96; columns ['simulation_time', 'time_interval', 'travel_time_factor', 'travel requests', 'average travel duration', 'standard error', '25%', '50%', '75%']; t 0..85500 s; steps [900]; factor min 1.638 max 4.396 mean 3.119
+2018-11-14_tt_factors_hourly.csv: rows 24; columns ['simulation_time', 'travel_time_factor', 'speed', 'speed_nw']; t 0..82800 s; steps [3600]; factor min 1.786 max 4.150 mean 3.057
+2018-11-15_mean_tt_factor_hourly.csv: rows 1; columns ['simulation_time', 'travel_time_factor']; t 0..0 s; steps []; factor min 3.701 max 3.701 mean 3.701
+2018-11-15_tt_factors.csv: rows 96; columns ['simulation_time', 'time_interval', 'travel_time_factor', 'travel requests', 'average travel duration', 'standard error', '25%', '50%', '75%']; t 0..85500 s; steps [900]; factor min 1.627 max 7.977 mean 4.024
+2018-11-15_tt_factors_hourly.csv: rows 24; columns ['simulation_time', 'travel_time_factor', 'speed', 'speed_nw']; t 0..82800 s; steps [3600]; factor min 1.749 max 6.833 mean 3.701
+2018-11-16_mean_tt_factor_hourly.csv: rows 1; columns ['simulation_time', 'travel_time_factor']; t 0..0 s; steps []; factor min 2.775 max 2.775 mean 2.775
+2018-11-16_tt_factors.csv: rows 96; columns ['simulation_time', 'time_interval', 'travel_time_factor', 'travel requests', 'average travel duration', 'standard error', '25%', '50%', '75%']; t 0..85500 s; steps [900]; factor min 1.683 max 3.616 mean 2.790
+2018-11-16_tt_factors_hourly.csv: rows 24; columns ['simulation_time', 'travel_time_factor', 'speed', 'speed_nw']; t 0..82800 s; steps [3600]; factor min 1.794 max 3.472 mean 2.775
+2018-11-17_mean_tt_factor_hourly.csv: rows 1; columns ['simulation_time', 'travel_time_factor']; t 0..0 s; steps []; factor min 2.604 max 2.604 mean 2.604
+2018-11-17_tt_factors.csv: rows 96; columns ['simulation_time', 'time_interval', 'travel_time_factor', 'travel requests', 'average travel duration', 'standard error', '25%', '50%', '75%']; t 0..85500 s; steps [900]; factor min 1.620 max 3.534 mean 2.637
+2018-11-17_tt_factors_hourly.csv: rows 24; columns ['simulation_time', 'travel_time_factor', 'speed', 'speed_nw']; t 0..82800 s; steps [3600]; factor min 1.717 max 3.280 mean 2.604
+2018-11-18_mean_tt_factor_hourly.csv: rows 1; columns ['simulation_time', 'travel_time_factor']; t 0..0 s; steps []; factor min 2.382 max 2.382 mean 2.382
+2018-11-18_tt_factors.csv: rows 96; columns ['simulation_time', 'time_interval', 'travel_time_factor', 'travel requests', 'average travel duration', 'standard error', '25%', '50%', '75%']; t 0..85500 s; steps [900]; factor min 1.558 max 3.464 mean 2.392
+2018-11-18_tt_factors_hourly.csv: rows 24; columns ['simulation_time', 'travel_time_factor', 'speed', 'speed_nw']; t 0..82800 s; steps [3600]; factor min 1.663 max 3.214 mean 2.382
+
+## 15-min files: per day
+2018-11-11: NO 15-min file
+2018-11-12: bins 96; trips sum 202568; min trips/bin 156; factor min 1.514 max 3.395; mean 07-09 2.709; mean 14-17 3.155; mean 17-19 3.043
+2018-11-13: bins 96; trips sum 226499; min trips/bin 121; factor min 1.645 max 4.239; mean 07-09 3.343; mean 14-17 3.914; mean 17-19 3.703
+2018-11-14: bins 96; trips sum 234258; min trips/bin 169; factor min 1.638 max 4.396; mean 07-09 3.235; mean 14-17 4.166; mean 17-19 4.078
+2018-11-15: bins 96; trips sum 169356; min trips/bin 228; factor min 1.627 max 7.977; mean 07-09 3.174; mean 14-17 6.217; mean 17-19 7.469
+2018-11-16: bins 96; trips sum 230914; min trips/bin 273; factor min 1.683 max 3.616; mean 07-09 2.730; mean 14-17 3.303; mean 17-19 3.267
+2018-11-17: bins 96; trips sum 244288; min trips/bin 262; factor min 1.620 max 3.534; mean 07-09 2.007; mean 14-17 3.228; mean 17-19 3.383
+2018-11-18: bins 96; trips sum 198981; min trips/bin 236; factor min 1.558 max 3.464; mean 07-09 1.763; mean 14-17 3.227; mean 17-19 3.279
+
+week 15-min file: first 86400 s (= day 1 after 11 Nov), last 690300 s (= day 7), rows 672 = 7.00 days of 96 bins
+week file equals the 7 daily 15-min files bin by bin: 7/7 days
+
+## definition check; free-flow table shape (4411, 4411)
+2018-11-12 bin  0: factor 1.7845 | travel requests 854 vs demand rows 883 | avg dur 519.2 s / mean ff 287.3 s = 1.8072
+2018-11-12 bin  8: factor 1.7013 | travel requests 269 vs demand rows 281 | avg dur 476.6 s / mean ff 271.5 s = 1.7552
+2018-11-12 bin 16: factor 1.6202 | travel requests 194 vs demand rows 210 | avg dur 526.1 s / mean ff 301.8 s = 1.7435
+2018-11-12 bin 24: factor 1.7193 | travel requests 828 vs demand rows 872 | avg dur 423.4 s / mean ff 238.6 s = 1.7746
+2018-11-12 bin 28: factor 2.1675 | travel requests 1826 vs demand rows 1910 | avg dur 544.9 s / mean ff 242.4 s = 2.2475
+2018-11-12 bin 29: factor 2.2969 | travel requests 2041 vs demand rows 2141 | avg dur 574.6 s / mean ff 239.0 s = 2.4043
+2018-11-12 bin 30: factor 2.5393 | travel requests 2387 vs demand rows 2497 | avg dur 625.1 s / mean ff 238.2 s = 2.6241
+2018-11-12 bin 31: factor 2.6745 | travel requests 2444 vs demand rows 2612 | avg dur 622.8 s / mean ff 221.0 s = 2.8175
+2018-11-12 bin 32: factor 2.7969 | travel requests 2500 vs demand rows 2661 | avg dur 652.8 s / mean ff 223.7 s = 2.9181
+2018-11-12 bin 33: factor 2.9964 | travel requests 2480 vs demand rows 2625 | avg dur 710.7 s / mean ff 228.6 s = 3.1092
+2018-11-12 bin 35: factor 3.1722 | travel requests 2762 vs demand rows 2926 | avg dur 714.4 s / mean ff 217.2 s = 3.2885
+2018-11-12 bin 40: factor 3.1820 | travel requests 2405 vs demand rows 2572 | avg dur 739.6 s / mean ff 220.6 s = 3.3529
+2018-11-12 bin 48: factor 3.3603 | travel requests 2630 vs demand rows 2809 | avg dur 796.7 s / mean ff 225.4 s = 3.5341
+2018-11-12 bin 56: factor 3.1743 | travel requests 2919 vs demand rows 3107 | avg dur 743.6 s / mean ff 223.8 s = 3.3224
+2018-11-12 bin 64: factor 3.1927 | travel requests 2903 vs demand rows 3108 | avg dur 744.5 s / mean ff 223.8 s = 3.3272
+2018-11-12 bin 72: factor 3.0672 | travel requests 3856 vs demand rows 4062 | avg dur 732.7 s / mean ff 228.7 s = 3.2037
+2018-11-12 bin 80: factor 2.3602 | travel requests 3077 vs demand rows 3216 | avg dur 611.4 s / mean ff 250.1 s = 2.4444
+2018-11-12 bin 88: factor 2.2507 | travel requests 2799 vs demand rows 2873 | avg dur 633.2 s / mean ff 275.1 s = 2.3019
+2018-11-12: |avgdur/meanff - factor|/factor over 96 bins: mean 4.07% max 8.71%; demand rows/day 213996; sum travel requests 202568
+2018-11-15 bin  0: factor 2.1806 | travel requests 1609 vs demand rows 1669 | avg dur 659.5 s / mean ff 293.6 s = 2.2468
+2018-11-15 bin  8: factor 1.7992 | travel requests 514 vs demand rows 555 | avg dur 532.6 s / mean ff 277.2 s = 1.9216
+2018-11-15 bin 16: factor 1.6589 | travel requests 233 vs demand rows 253 | avg dur 520.6 s / mean ff 292.7 s = 1.7784
+2018-11-15 bin 24: factor 1.8183 | travel requests 929 vs demand rows 972 | avg dur 449.1 s / mean ff 236.4 s = 1.8997
+2018-11-15 bin 28: factor 2.3594 | travel requests 2466 vs demand rows 2573 | avg dur 607.9 s / mean ff 247.4 s = 2.4576
+2018-11-15 bin 29: factor 2.6570 | travel requests 2914 vs demand rows 3052 | avg dur 663.7 s / mean ff 243.1 s = 2.7300
+2018-11-15 bin 30: factor 2.8979 | travel requests 3365 vs demand rows 3534 | avg dur 720.8 s / mean ff 239.0 s = 3.0159
+2018-11-15 bin 31: factor 3.1343 | travel requests 3397 vs demand rows 3640 | avg dur 745.6 s / mean ff 226.9 s = 3.2857
+2018-11-15 bin 32: factor 3.3445 | travel requests 3422 vs demand rows 3647 | avg dur 779.9 s / mean ff 222.3 s = 3.5080
+2018-11-15 bin 33: factor 3.5568 | travel requests 3408 vs demand rows 3641 | avg dur 858.8 s / mean ff 228.7 s = 3.7544
+2018-11-15 bin 35: factor 3.7530 | travel requests 3263 vs demand rows 3501 | avg dur 874.4 s / mean ff 221.5 s = 3.9471
+2018-11-15 bin 40: factor 4.1164 | travel requests 2991 vs demand rows 3210 | avg dur 970.6 s / mean ff 224.3 s = 4.3274
+2018-11-15 bin 48: factor 4.3767 | travel requests 2994 vs demand rows 3282 | avg dur 998.1 s / mean ff 215.5 s = 4.6313
+2018-11-15 bin 56: factor 4.9541 | travel requests 2903 vs demand rows 3230 | avg dur 1103.9 s / mean ff 208.3 s = 5.3000
+2018-11-15 bin 64: factor 6.9497 | travel requests 1517 vs demand rows 1789 | avg dur 1502.1 s / mean ff 203.2 s = 7.3908
+2018-11-15 bin 72: factor 7.6183 | travel requests 947 vs demand rows 1157 | avg dur 1678.9 s / mean ff 201.6 s = 8.3274
+2018-11-15 bin 80: factor 5.4265 | travel requests 1472 vs demand rows 1693 | avg dur 1230.0 s / mean ff 209.4 s = 5.8727
+2018-11-15 bin 88: factor 4.2031 | travel requests 1853 vs demand rows 1990 | avg dur 1078.1 s / mean ff 244.4 s = 4.4118
+2018-11-15: |avgdur/meanff - factor|/factor over 96 bins: mean 5.37% max 9.31%; demand rows/day 185181; sum travel requests 169356

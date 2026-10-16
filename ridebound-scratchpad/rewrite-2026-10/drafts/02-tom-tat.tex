@@ -1,0 +1,62 @@
+% Front matter — Tóm tắt và Abstract (bản viết lại 2026-10-14). Tệp mới để ghép; không sửa luận văn gốc.
+% Theo OUTLINE-V2 §4, §6.3–6.4; ràng buộc công bằng của điều phối viên (luật C không giữ lời hứa đầu tốt hơn luật
+% hạn chót, không phục vụ nhiều hơn; đệm hòa ở một phút, hơn ở hai phút). Số đếm tiếng, nguồn từng số: FRONT-NOTES.md.
+% Mã EV: EVIDENCE-REGISTER.md (A01…K52), ADDENDUM-1 (N-xx), ADDENDUM-4 (C4A-xx).
+\chapter*{Tóm tắt}
+\addcontentsline{toc}{chapter}{Tóm tắt}
+
+Trong dịch vụ đi chung xe, giờ trả đã hứa có thể bị dời khi bộ điều phối ghép thêm khách, hoặc khi thời gian đi
+thay đổi. Khóa luận chia độ lệch giữa giờ tới và lời hứa đầu thành ba phần: phần tính cho điều phối, phần dự báo
+tắc đường giải thích được và phần còn lại.
+% EV: A01; A02; X3-12 (eq:so, ba phần của sổ); K04 (phép chia theo mô hình, không phải nhân quả)
+
+Khóa luận đặc tả và cài đặt luật C trong bộ điều phối RideBound: tổng độ lớn phần dời giờ trả tính cho điều phối
+của mỗi khách trong cả chuyến không vượt một trần cố định. Mốc đo là giờ trả khi giữ nguyên kế hoạch cũ, đã có ở
+Hörl và Zwick. Luật C đi cùng lời hứa theo dự báo, vốn đã có, và sổ theo từng khách. Phép đo dùng mô phỏng FleetPy
+trên 34 kịch bản từ dữ liệu Manhattan.
+% EV: A06; A13; K43; A01; A02; J01; J03 (mốc của Hörl–Zwick); J35; K37 (lời hứa theo dự báo đã có); F03 (dự báo chỉ phát lại); X3-12; B01; B09 (34 kịch bản)
+
+Với trần 30 giây, luật C phục vụ ít hơn điều phối không trần 96 lượt trên 3.672 yêu cầu. Đổi lại, tổng phần dời
+tính cho điều phối của mỗi khách không quá 29,2 giây; khi không trần, 174 trong 2.434 khách bị dời, nhiều nhất
+590,1 giây. Về giờ tới, luật C không hơn luật hạn chót 30 giây tính từ lời hứa đầu: cùng phục vụ 2.338 lượt, có
+292 và 289 khách tới sau hạn đó. Khi có dự báo, điều phối không trần đệm 30 giây vào mọi lời hứa cũng có 2.328 lượt
+không trễ quá một phút trên 3.672 yêu cầu, bằng luật C, và hơn ở hai phút (2.366 so với 2.338). Cách đệm làm lời
+hứa dài thêm trung bình 37,2 thay vì 7,4 giây. Kết quả có tính thăm dò và chỉ áp cho mô phỏng tải thấp đã dùng.
+% EV (−96 trên 3.672): B09; C01 (2.434; 2.338); C02 (−96)
+% EV (29,2 s; 174 / 2.434; 590,1 s): C20; N-23 (590,133 s; 29,239 s); N-21 (C-30: 0 khách vượt trần, 0/34 kịch bản); N-28
+% EV (luật hạn chót, 292 / 289 trên 2.338): C01; C4A-01 (C-30 292/2.338 = 12,49%, 28/34); N-21 (M⁺-30 289/2.338 = 12,36%, 28/34); K05; K06
+% EV (đệm: 2.328 = 2.328; 2.366 > 2.338; 37,18 / 7,37 s): C10; N-16; N-18; K06; K51
+% EV (giới hạn): I05; I06; C4A-11 (dữ liệu đã xem, thăm dò); B12 (tải 0,535 khách/xe); I01; I02
+
+\vspace{6pt}
+\noindent\textbf{Từ khóa:} điều phối xe đi chung, lời hứa giờ trả, trần theo từng khách, lời hứa theo dự báo,
+sổ theo từng khách, mô phỏng FleetPy.
+
+\clearpage
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+In ride-pooling, a promised drop-off time can move when the dispatcher adds riders, or when travel times change.
+The thesis splits the deviation between arrival time and the first promise into three parts: the part charged to
+dispatch, the part a traffic forecast explains, and the remainder.
+
+The thesis specifies and implements rule C in the RideBound dispatcher: the total magnitude of each rider's
+dispatch-charged drop-off changes over the whole trip may not exceed a fixed cap. The reference is the drop-off time
+if the old plan is kept, which already appears in Hörl and Zwick. Rule C comes with a forecast-based promise, which
+already exists, and a per-rider ledger. Measurements use the FleetPy simulator on 34 scenarios built from Manhattan
+data.
+
+With a 30-second cap, rule C serves 96 fewer riders than uncapped dispatch out of 3,672 requests. In return, each
+rider's total dispatch-charged change is at most 29.2 seconds; without a cap, 174 of 2,434 riders are moved, by up to
+590.1 seconds. On arrival time, rule C does no better than a 30-second deadline from the first promise: both serve
+2,338 riders, with 292 and 289 arriving after that deadline. With the forecast, uncapped
+dispatch that pads every promise by 30 seconds also has 2,328 riders no more than one minute late out of 3,672
+requests, equal to rule C, and more at two minutes (2,366 versus 2,338). Padding lengthens promises by 37.2 instead of
+7.4 seconds on average. The results are exploratory and apply only to the low-load simulation used.
+
+\vspace{6pt}
+\noindent\textbf{Keywords:} ride-pooling dispatch, promised drop-off time, per-rider cap, forecast-based promise,
+per-rider ledger, FleetPy simulation.
+
+\clearpage

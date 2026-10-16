@@ -1,0 +1,2 @@
+# forecast_family_b.py DRYRUN (development)
+C-30      d20181112-s10-r1-w07: served 87->85 forced 0.000->0.000 own-break 0.276->0.047 late60 0.080->0.000 vis60 0.080->0.224 common-late60 0.074->0.000 later/earlier s 2080/187->1606/1748 same actions False

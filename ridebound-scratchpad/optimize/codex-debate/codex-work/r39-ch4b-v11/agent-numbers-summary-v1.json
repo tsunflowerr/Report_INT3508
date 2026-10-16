@@ -1,0 +1,90 @@
+{
+  "dispatcher_morning": {
+    "forecast": {
+      "scenarios": 8,
+      "served": 439,
+      "broken": 45,
+      "scenario_mean_pct": 10.992245859399665,
+      "pooled_pct": 10.250569476082005,
+      "source": "agent-numbers-v1.json:morning_promise_breaks.Mplus-30F"
+    },
+    "baseline": {
+      "scenarios": 8,
+      "served": 442,
+      "broken": 170,
+      "scenario_mean_pct": 39.047710181224865,
+      "pooled_pct": 38.46153846153846,
+      "source": "agent-numbers-v1.json:morning_promise_breaks.Mplus-30"
+    }
+  },
+  "dispatcher_paired": {
+    "C-30": {
+      "runs": 14,
+      "ack": 7845,
+      "forced": 0,
+      "scenario_mean_pct": 0.0
+    },
+    "C-30F": {
+      "runs": 14,
+      "ack": 7839,
+      "forced": 0,
+      "scenario_mean_pct": 0.0
+    },
+    "Mplus-30": {
+      "runs": 15,
+      "ack": 8468,
+      "forced": 5121,
+      "scenario_mean_pct": 62.770320874793974
+    },
+    "Mplus-30F": {
+      "runs": 15,
+      "ack": 8496,
+      "forced": 3849,
+      "scenario_mean_pct": 47.615892550800986
+    }
+  },
+  "forecast_ledger": {
+    "scenarios": 21,
+    "served": 1471,
+    "late_naive_count": 68,
+    "components_s": {
+      "dispatch": "81.742",
+      "anticipated": "5352.646482885389507",
+      "unanticipated": "783.0175171146106613",
+      "total": "6217.406"
+    },
+    "historical_pct": "86.09131336903830161646191354",
+    "integer_labels": [
+      82,
+      5353,
+      783
+    ],
+    "integer_total_label": 6217,
+    "integer_components_sum": 6218,
+    "source": "S/optimize/test-family-a-causal-no15-2026-10-06-cells.tsv: C-30 days14-16 ledger_* columns"
+  },
+  "ml_count_provenance": {
+    "derived_from_rounded_percentage": true,
+    "rounding_halfwidth_pct": "0.0005",
+    "max_count_halfwidth": "0.004035",
+    "method": "every integer 0..n enumerated; exactly one compatible in each used row",
+    "rows": 25,
+    "source": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\claude-work\\ml_pilot_run.py:37-42,175-176",
+    "limitation": "arithmetic compatibility only, no retraining or per-rider prediction revalidation"
+  },
+  "test_attempt4": {
+    "log": "C:\\RideBoundData\\research\\testrun-45f8026-eollf-dirty-fullrun-2026-10-13.log",
+    "evidence": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\evidence\\TESTRUN-45f8026-2026-10-12.md:18",
+    "project_rows": 9,
+    "failed": 0,
+    "passed": 1025,
+    "skipped": 0,
+    "total": 1025,
+    "exit": 0,
+    "completion": "2026-10-13T13:42:21+07:00",
+    "conditions": [
+      "LF checkout",
+      "untracked marker present"
+    ]
+  }
+}

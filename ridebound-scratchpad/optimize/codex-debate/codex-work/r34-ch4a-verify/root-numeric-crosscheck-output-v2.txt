@@ -1,0 +1,29 @@
+FIXED b1-ref: served/shared/moved=(1629, 865, 388); raw output lines 2..17 AGREE
+FIXED c1-nobudget: served/shared/moved=(1584, 346, 62); raw output lines 18..33 AGREE
+FIXED c1-budget120: served/shared/moved=(1563, 303, 41); raw output lines 34..49 AGREE
+FIXED c1-budget60: served/shared/moved=(1540, 266, 20); raw output lines 50..65 AGREE
+FIXED c1-h6ref: served/shared/moved=(1534, 241, 6); raw output lines 66..81 AGREE
+MORNING U: served/late60/timely60/timely120=(665, 50, 615, 656); aggregate line 82 AGREE
+MORNING C-30: served/late60/timely60/timely120=(660, 47, 613, 658); aggregate line 83 AGREE
+MORNING C-60: served/late60/timely60/timely120=(661, 47, 614, 659); aggregate line 84 AGREE
+MORNING C-90: served/late60/timely60/timely120=(664, 50, 614, 660); aggregate line 85 AGREE
+MORNING C-120: served/late60/timely60/timely120=(666, 51, 615, 659); aggregate line 86 AGREE
+MORNING C-150: served/late60/timely60/timely120=(666, 51, 615, 659); aggregate line 87 AGREE
+MORNING C-180: served/late60/timely60/timely120=(666, 51, 615, 659); aggregate line 88 AGREE
+MORNING C-240: served/late60/timely60/timely120=(665, 50, 615, 656); aggregate line 89 AGREE
+MORNING C-300: served/late60/timely60/timely120=(665, 50, 615, 656); aggregate line 90 AGREE
+SNOW: independent sum of 8 per-run request counts 864; served 601 AGREE
+ARCHIVE: 136 of 192; 17 arms x 8; output line 95 AGREE
+D13: no-record 1186 = 111+1075; recorded 148=116+32; output line 130 AGREE
+MAIN C-30: served/late30/late60/late120/early60/forced/acked=(2338, 292, 76, 11, 3, 0, 20101) AGREE
+MAIN Mplus-30: served/late30/late60/late120/early60/forced/acked=(2338, 289, 74, 11, 3, 7710, 20103) AGREE
+MAIN Mplus-60: served/late30/late60/late120/early60/forced/acked=(2347, 302, 79, 11, 3, 4031, 20163) AGREE
+MAIN V-30: served/late30/late60/late120/early60/forced/acked=(2336, 289, 74, 11, 3, 10442, 20090) AGREE
+MAIN U: served/late30/late60/late120/early60/forced/acked=(2434, 428, 203, 102, 7, 0, 20760) AGREE
+main-numbers-v4.txt:6: WORST U: 660.057 s; cell d20181117-s10-r3-w07; request rq-6558a837e02c91b80a131fc7f959bebdb196fafe556c6453918a771371b28aa8
+main-numbers-v4.txt:10: WORST C-30: 232.288 s; cell d20181114-s10-r3-w07; request rq-df183a5007642011117ede52f6cb9ecb0ad94e744f195641e3c47d8b8634167e
+main-numbers-v4.txt:24: N11 C30 late60 by window {'w07': 61, 'w08': 15, 'w17': 0}
+main-numbers-v4.txt:128: RAW_TOTAL U: served 2434; first_promise_sum_ms 2065946452; first_promise_mean_min 14.1464424267; late30 428; late60 203; early60 7; signed_late_seconds 23027.239; lateness_seconds 31353.407; share_percent 73.44413639
+main-numbers-v4.txt:129: RAW_TOTAL C-30: served 2338; first_promise_sum_ms 1980192800; first_promise_mean_min 14.1160022812; late30 292; late60 76; early60 3; signed_late_seconds 81.742; lateness_seconds 6891.526; share_percent 1.18612336
+main-numbers-v4.txt:130: RAW_TOTAL C-120: served 2387; first_promise_sum_ms 2016586081; first_promise_mean_min 14.0803385072; late30 355; late60 132; early60 1; signed_late_seconds 4836.281; lateness_seconds 12450.223; share_percent 38.84493475
+main-numbers-v4.txt:132: CHECK all 170 IVC runs passed; all 102 raw checkpoints frame hashes verified; all raw p0,publication_time,absolute_c matched existing independent R19 rider JSON; no unserved-in-served cohort, and every initial-promise ledger rider completed

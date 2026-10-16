@@ -1,0 +1,66 @@
+\section{Thí nghiệm hạn chót có tiền đăng ký (thăm dò)}
+\label{muc:tang2}
+
+Mục \ref{muc:haunghiem} và \ref{muc:hoito} chỉ là giải thích hậu nghiệm: quy tắc được dựng và
+``kiểm'' trên cùng dữ liệu. Mục này thay chúng bằng một thí nghiệm thật: cài luật hạn chót vào bộ
+điều phối, \emph{niêm phong} dự đoán theo từng ô trước khi chạy, rồi đối chiếu với kết cục, kể cả
+trên một tập ô chưa từng dùng để dựng phương pháp. Mọi lần chạy có trôi dạt vẫn không qua bộ kiểm
+chứng của dự án, nên kết quả mang nhãn \emph{thăm dò}.
+
+\subsection{Thiết kế}
+
+\textbf{Bốn họ, cùng trần 30 giây.} Cổng hành vi $C$ là cấu hình C1 như mọi mục trước
+(\texttt{conduct-30}). Hạn chót một chiều $M^{+}$ (\texttt{dl-}$\ell$) bỏ trần ngân sách giờ trả và
+thay bằng luật: loại mọi phương án làm giờ trả của một khách muộn hơn lời hứa \emph{đầu tiên} của
+khách ấy quá $\ell$ giây, $\ell \in \{30, 60, 120\}$. Hạn chót hai chiều $M$ (\texttt{dl2-30}) loại
+thêm phương án làm giờ trả sớm hơn lời hứa đầu quá 30 giây. Cổng kết quả $V$ (\texttt{visible-30})
+là C1 với cơ sở tính khách nhìn thấy. Khóa pha và mọi chiều khác giữ nguyên như C1.
+
+\textbf{Cài đặt.} Luật hạn chót mặc định tắt; khi tắt, bộ chạy cho kết quả giống từng byte với bộ
+chạy cũ ở mọi chính sách không dùng bộ giải và không đổi quyết định thành công nào ở chính sách dùng
+bộ giải (kiểm bằng 963 ca kiểm thử và hai vòng rà soát độc lập). Khác với mọi khóa hiện có, vốn so
+phương án với mốc ngoại sinh $e$ nên trôi dạt không bao giờ làm vướng, hạn chót so với lời hứa đầu
+$p_0$, nên riêng trôi dạt cũng làm vướng được --- kể cả trên phương án không làm gì. Bộ chạy mới cũng
+trích lý do loại của chính phương án không làm gì khi một xe mất hết phương án.
+
+\textbf{Hai panel.} Panel 2A là panel chính 20 ô, khung sáng 8:00--10:00 của năm ngày 14--18/11, ở
+hai mức trôi dạt $k \in \{0, 1\}$. Panel 2B là panel phát triển 16 ô của hai ngày 12--13/11, chưa
+từng dùng để dựng quy tắc dự đoán, gồm 8 ô khung sáng và 8 ô khung tối 17:00--19:00. Khung tối là
+nơi Hệ quả \ref{hq:chieutroi} cho dự đoán phân biệt, vì hệ số thời gian đi đo thật \emph{giảm}
+trong khung: ngày 12/11 hệ số tăng nhẹ lên $1{,}015$ lần ở phút thứ 15 rồi giảm dần còn $0{,}837$ lần
+cuối khung.
+
+\textbf{Biến kết cục.} Một ô là \emph{vô nghiệm do cam kết} khi lần chạy dừng với thông báo lỗi mà
+lý do được trích là một luật cam kết --- ngân sách, khóa pha hay hạn chót --- đối chiếu đúng hằng
+thông điệp trong mã nguồn. Ô dừng vì bất biến cửa sổ đón (mục \ref{muc:batbien}) trước khi vướng
+hạn chót được xếp là \emph{không} vô nghiệm do cam kết, một cách xếp chống lại giả thuyết.
+
+\subsection{Đối chứng, quỹ đạo tham chiếu và niêm phong}
+
+\textbf{Đối chứng.} Trước mọi nhánh mới, bộ chạy mới được chạy lại hai cấu hình đã có ở mức $k = 0$
+trên đủ 20 ô panel 2A. Ở 36 ô hoàn tất, chuỗi kế hoạch được gán, tập lời hứa công bố ở từng khung
+quyết định, mã lý do và số khách được nhận trùng \emph{tuyệt đối} với lần chạy cũ. Cổng kết quả vô
+nghiệm ở đúng bốn ô 16-r2, 16-r4, 17-r1, 17-r3 như bảng \ref{bang:doicho}, và tổng khách được nhận
+trên 16 ô còn lại là $1.294$, đúng con số ở bảng \ref{bang:coso}. Vì bộ chạy mới trích lý do của
+chính phương án không làm gì, lần này thấy được trực tiếp điều Định lý \ref{dl:ketqua} nói: ở cả bốn
+ô, phương án không làm gì bị loại vì vượt ngân sách.
+
+\textbf{Quỹ đạo tham chiếu.} Cổng hành vi chạy trước ở $k = 1$ trên cả hai panel để có quỹ đạo gần
+dự phòng: panel 2A có 9 ô hoàn tất --- trùng từng quyết định với lần chạy cũ --- và 11 ô dừng vì bất
+biến cửa sổ đón; panel 2B có 13 ô hoàn tất và 3 ô khung sáng dừng vì bất biến ấy. Không ô nào vô
+nghiệm do cam kết, đúng phần (a) của Định lý \ref{dl:hocong}. Một lần chạy thử ở khung tối xác nhận
+chín hệ số áp trong mô phỏng trùng từng giá trị với tệp đo thật.
+
+\textbf{Dự đoán theo ô.} Trên quỹ đạo tham chiếu cùng ô, cùng mức trôi dạt, với mỗi khách tính cực
+đại chạy $M^{+}$, $M$ và tổng chạy $V$ của chuỗi giờ trả đã công bố; $\tau$ là thời điểm đầu tiên một
+khách vượt ngưỡng, $T$ là khung quyết định cuối nếu tham chiếu dừng. Quy tắc: $\tau \le T$ thì đoán
+vô nghiệm do cam kết; không vượt và tham chiếu hoàn tất thì đoán không; không vượt trước khi tham
+chiếu dừng thì đoán dừng vì bất biến cửa sổ đón (dự đoán yếu). Đây là một \emph{heuristic}, không
+phải hệ quả của định lý: nhánh hạn chót đi quỹ đạo khác tham chiếu ngay sau lần cắt đầu tiên.
+
+\textbf{Niêm phong.} Tiền đăng ký, 200 dự đoán và mã chạy, phân loại, phân tích được băm SHA-256 lúc
+06:03:52 UTC ngày 24/9/2026, khi chưa có một lần chạy nào của các nhánh được dự đoán. Một lỗi được
+phát hiện \emph{trước} niêm phong và được báo cáo: bản dự đoán đầu tiên đoán nhầm mọi ô tham chiếu
+hoàn tất là vô nghiệm, do phép so $\infty \le \infty$; bản ấy được giữ lại, không niêm phong và không
+dùng. Tiền đăng ký ghi trước ngưỡng xác nhận, điều kiện phủ định và một bảng dự đoán hướng cho khung
+tối lấy từ Hệ quả \ref{hq:chieutroi}.

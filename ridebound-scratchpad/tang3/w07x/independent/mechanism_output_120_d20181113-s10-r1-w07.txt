@@ -1,0 +1,26 @@
+reading C:\RideBoundData\research\tier3-w07-v1\C-120-d20181113-s10-r1-w07
+reading C:\RideBoundData\research\tier3-w07-v1\Mplus-120-d20181113-s10-r1-w07
+C-120 acked decisions 608; Mplus-120 acked decisions 601
+first differing acknowledged decision index (0-based): 285
+simTimeMs C / M: 2903000 2903000  epochId C / M: 286 286
+all earlier decisions have identical fleet actions: True
+C fleet actions:
+    requestAccepted rq-a3419687c0dab 
+    vehiclePlanUpdated veh-68dae725a1 candidate-v1-9ea02c4ca1fe7
+Mplus fleet actions:
+    requestRejected rq-a3419687c0dab NO_FEASIBLE_INSERTION
+C accepts: ['rq-a3419687c0dab355a76eb833423983ac1d68703fa8701c0958981ed51e1f6f87']  Mplus rejects: ['rq-a3419687c0dab355a76eb833423983ac1d68703fa8701c0958981ed51e1f6f87']
+normalOperation C / M: True True
+certificate witnesses M: []
+C vehiclePlanUpdated: [('veh-68dae725a1', 'candidate-v1-9ea02c4ca1fe78af7')]
+C candidate for veh-68dae725a1 found in Mplus prunedCandidates: 1 hit(s)
+   code: COMMITMENT_DEADLINE_EXCEEDED  vehicleId: veh-68dae725a1  newRequestIds: ['rq-a3419687c0dab']
+   witness: {"code": "COMMITMENT_DEADLINE_EXCEEDED", "dimension": "drop_eta_ms", "requestId": "rq-f6c8ce7892b8129820f0318b54bf75629b5e6165b320bd42e36caa149bd57153", "rule": "deadline_cap", "stage": "lock", "vehicleId": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"}
+   candidate in C's own prunedCandidates: False
+
+witness rider: rq-f6c8ce7892b8129820f0318b54bf75629b5e6165b320bd42e36caa149bd57153
+  initial promise at decision 243 (epoch 244, publishedAtMs 2543000): drop 3738654
+  revisions before decision 285: 19; sum(e-v) = 60.889 s; sum(p-e) = 0.000 s
+  at decision 285 (epoch 286, t=2903000): v=3799543 e=3799722 p=3860903 -> e-v = 0.179 s, p-e = 61.181 s  (action decisionDelta.dropEtaTotalMs=61181, exogenousDelta=179)
+  (ledger publishedEpoch of decision-285 revisions equals decision epochId 286)
+  Mplus decision 285 promise for witness rider: decisionDelta.drop=0 exogenousDelta.drop=179 dropEta=3799722

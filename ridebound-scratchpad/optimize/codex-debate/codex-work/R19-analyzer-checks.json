@@ -1,0 +1,36 @@
+{
+  "scope": "AST syntax and isolated pure-function checks with synthetic metadata; zero C120 outcome reads, zero analyzer imports/main calls",
+  "analyzer_sha256": "69a4e72398c9b8fb5b3379bab2f484e05dee9b51de8243b0582da912e0bd8e14",
+  "checks": [
+    {
+      "name": "all 34 completed metadata passes",
+      "pass_": true
+    },
+    {
+      "name": "missing summary refused",
+      "pass_": true
+    },
+    {
+      "name": "failed summary refused",
+      "pass_": true
+    },
+    {
+      "name": "two repeats refused",
+      "pass_": true
+    },
+    {
+      "name": "empty transcript refused",
+      "pass_": true
+    },
+    {
+      "name": "missing run artifact refused",
+      "pass_": true
+    },
+    {
+      "name": "independent inverse-integral comparison",
+      "cases": 300,
+      "max_error_ms": 1.862645149230957e-09,
+      "pass_": true
+    }
+  ]
+}

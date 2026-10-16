@@ -1,0 +1,56 @@
+\subsection{Hạn chót dưới trôi dạt: giải thích hậu nghiệm từ dữ liệu có sẵn}
+\label{muc:haunghiem}
+
+Định lý \ref{dl:hocong} dự đoán rằng dưới trôi dạt bất lợi, một hạn chót tính từ lời hứa đầu có
+thể trở thành nguyên nhân làm rỗng tập phương án, còn trần hành vi thì không bao giờ. Khóa luận
+\emph{chưa} chạy nhánh hạn chót nào. Nhưng từ các quỹ đạo đã chạy dưới trần hành vi có thể ước
+lượng một hạn chót sẽ khả thi ở những ô nào: với mỗi ô, lấy cực đại theo khách của phần muộn cuối
+$D^{+} = \max(0,\, p_T - p_0)$ trên chuỗi giờ trả đã công bố; ô được coi là khả thi dưới hạn chót
+$\ell$ khi cực đại đó không vượt $\ell$.
+
+\begin{table}[htbp]
+\centering
+\caption{Khả thi ước lượng của hạn chót một chiều từ quỹ đạo dưới trần hành vi 30 giây (giải
+thích hậu nghiệm, không phải kiểm định)}
+\label{bang:haunghiem}
+\small
+\begin{tabular}{@{}lp{4.2cm}rrrr@{}}
+\toprule
+\textbf{Trôi dạt} & \textbf{Cực đại $D^{+}$ theo ô (s)} & $\ell = 30$ & $\ell = 60$ & $\ell = 120$
+& \textbf{Trần hành vi}\\
+\midrule
+$k = 0$ & $\le 28$ ở cả 20 ô & 20/20 & 20/20 & 20/20 & 0/20\\
+$k = 1$ & 54, 60, 63, 78, 81, 85, 85, 87, 102 (9 ô) & 0/9 & 2/9 & 9/9 & 0/20\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ba cột giữa là số ô ước lượng khả thi; cột cuối là số ô \emph{vô nghiệm do cam kết} đã quan sát
+thật dưới trần hành vi (bảng \ref{bang:phanloai}). Bảng này phải đọc kèm ba giới hạn.
+\emph{Thứ nhất}, chín ô ở $k = 1$ là các ô \emph{sống sót} dưới trần hành vi; mười một ô kia dừng
+vì bất biến cửa sổ đón trước khi hết khung nên không có $D^{+}$ cuối --- mẫu bị chọn theo kết quả
+của một nhánh can thiệp. \emph{Thứ hai}, quy tắc được dựng và ``kiểm'' trên cùng dữ liệu, nên đây là
+\emph{giải thích hậu nghiệm}, không phải kiểm định. \emph{Thứ ba}, khung sáng chỉ có trôi bất lợi,
+nên bảng chưa phân biệt được Định lý \ref{dl:hocong} với nhận định thô ``hạn chót hỏng khi có trôi
+dạt''; Hệ quả \ref{hq:chieutroi} chỉ phân biệt được khi có cả chiều thuận lợi. Ngoài ra, vì
+$D^{+} \le M^{+}$ nên ước lượng nghiêng về phía \emph{lạc quan} cho hạn chót: thực tế có thể còn vô
+nghiệm nhiều hơn.
+
+\subsection{Kiểm hồi tố cho cơ sở kết quả}
+\label{muc:hoito}
+
+Cùng lập luận cho một phép kiểm trên kết quả \emph{đã có}. Nếu Định lý \ref{dl:hocong} đúng thì
+dưới cơ sở kết quả với trần 30 giây, một ô vô nghiệm khi và chỉ khi trên quỹ đạo gần dự phòng có
+một khách mà tổng biến động nhìn thấy $V$ vượt 30 giây. Quỹ đạo của C1 trên panel tĩnh là gần dự
+phòng, vì tổng thành phần hành vi của nó chỉ 128 giây trên $1.581$ khách, nên $V \approx X$.
+
+Quy tắc đó đoán đúng tập ô vô nghiệm đã biết ở bảng \ref{bang:doicho}: các ô có khách với $V > 30$
+giây dưới C1 là \emph{đúng} bốn ô 16-r2, 16-r4, 17-r1, 17-r3 --- trùng tuyệt đối. Các ô sát ngưỡng
+cũng đúng: cực đại $V$ là $29{,}8$ giây (14-r3), $29{,}4$ giây (15-r2), $27{,}8$ giây (14-r2) và các
+ô này khả thi; $32{,}0$, $32{,}5$, $34{,}2$, $38{,}7$ giây và các ô này vô nghiệm.
+
+Phải gọi đúng tên kết quả này: đây là \emph{bằng chứng hồi tố}, vì tập ô vô nghiệm đã được biết
+\emph{trước} khi viết quy tắc. Quy tắc không có tham số nào để chỉnh nên khó ``khớp quá mức'', nhưng
+nó vẫn là kiểm tính nhất quán, không phải xác nhận độc lập. Nó cũng chỉ hợp lệ khi quỹ đạo tham
+chiếu gần dự phòng: với trần 120 giây nhà điều hành được phép dời đáng kể nên $V$ không còn xấp xỉ
+$X$, và quy tắc không được dùng để giải thích tập ô vô nghiệm ở trần đó.

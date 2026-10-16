@@ -1,0 +1,8 @@
+* text=auto
+# Historical seals and the delivered thesis bind byte hashes, including newlines.
+ridebound/** -text
+ridebound-scratchpad/** -text
+*.pdf -text
+*.png -text
+*.jpg -text
+*.jpeg -text

@@ -1,0 +1,3250 @@
+{
+  "reselection": [
+    {
+      "arm": "c1-nobudget",
+      "runs": 16,
+      "counts": {
+        "frames": 12663,
+        "with_new_request": 1714,
+        "validation_match": 12663,
+        "frames_with_revision_levels": 12599,
+        "ineligible_candidates": 278,
+        "cost_first_differs": 445,
+        "cost_first_differs_with_new_request": 445,
+        "accepted_changes": 0,
+        "cf_moves_drop_more": 424
+      },
+      "deltas": {
+        "accepted-request-count": 0.0,
+        "worst-hard-utilization-ppm": 0.0,
+        "revision:pickup_eta_total_ms": 0.0,
+        "revision:drop_eta_total_ms": 42714711.0,
+        "revision:material_eta_revision_count": 430.0,
+        "revision:vehicle_switch_count": 0.0,
+        "revision:pickup_stop_relocation_mm": 0.0,
+        "revision:pickup_stop_switch_count": 0.0,
+        "revision:drop_stop_relocation_mm": 0.0,
+        "revision:drop_stop_switch_count": 0.0,
+        "revision:incumbent_order_inversion_count": 0.0,
+        "revision:pre_pickup_inserted_stop_count": 36.0,
+        "operational-cost": -114720189.0
+      },
+      "selected_plan_cost_sum": 37380402107,
+      "mean_changed_frame_cost_saving_pct": 7.7902320393100855,
+      "upper_median_drop_s": 90.819,
+      "p90_drop_s": 183.807,
+      "max_drop_s": 390.812
+    },
+    {
+      "arm": "c1-budget120",
+      "runs": 16,
+      "counts": {
+        "frames": 12525,
+        "with_new_request": 1715,
+        "validation_match": 12525,
+        "frames_with_revision_levels": 12461,
+        "ineligible_candidates": 650,
+        "cost_first_differs": 325,
+        "cost_first_differs_with_new_request": 325,
+        "accepted_changes": 0,
+        "cf_moves_drop_more": 304
+      },
+      "deltas": {
+        "accepted-request-count": 0.0,
+        "worst-hard-utilization-ppm": 0.0,
+        "revision:pickup_eta_total_ms": 0.0,
+        "revision:drop_eta_total_ms": 19301087.0,
+        "revision:material_eta_revision_count": 309.0,
+        "revision:vehicle_switch_count": 0.0,
+        "revision:pickup_stop_relocation_mm": 0.0,
+        "revision:pickup_stop_switch_count": 0.0,
+        "revision:drop_stop_relocation_mm": 0.0,
+        "revision:drop_stop_switch_count": 0.0,
+        "revision:incumbent_order_inversion_count": 0.0,
+        "revision:pre_pickup_inserted_stop_count": 37.0,
+        "operational-cost": -86041988.0
+      },
+      "selected_plan_cost_sum": 36380856990,
+      "mean_changed_frame_cost_saving_pct": 7.9584061613343655,
+      "upper_median_drop_s": 57.255,
+      "p90_drop_s": 108.585,
+      "max_drop_s": 236.91
+    },
+    {
+      "arm": "c1-budget60",
+      "runs": 16,
+      "counts": {
+        "frames": 12364,
+        "with_new_request": 1716,
+        "validation_match": 12364,
+        "frames_with_revision_levels": 12300,
+        "ineligible_candidates": 952,
+        "cost_first_differs": 173,
+        "cost_first_differs_with_new_request": 173,
+        "accepted_changes": 0,
+        "cf_moves_drop_more": 152
+      },
+      "deltas": {
+        "accepted-request-count": 0.0,
+        "worst-hard-utilization-ppm": 0.0,
+        "revision:pickup_eta_total_ms": 0.0,
+        "revision:drop_eta_total_ms": 4662630.0,
+        "revision:material_eta_revision_count": 154.0,
+        "revision:vehicle_switch_count": 0.0,
+        "revision:pickup_stop_relocation_mm": 0.0,
+        "revision:pickup_stop_switch_count": 0.0,
+        "revision:drop_stop_relocation_mm": 0.0,
+        "revision:drop_stop_switch_count": 0.0,
+        "revision:incumbent_order_inversion_count": 0.0,
+        "revision:pre_pickup_inserted_stop_count": 32.0,
+        "operational-cost": -44065890.0
+      },
+      "selected_plan_cost_sum": 35447098791,
+      "mean_changed_frame_cost_saving_pct": 7.684179336600268,
+      "upper_median_drop_s": 21.717,
+      "p90_drop_s": 53.304,
+      "max_drop_s": 106.6
+    },
+    {
+      "arm": "c1-h6ref",
+      "runs": 16,
+      "counts": {
+        "frames": 12325,
+        "with_new_request": 1715,
+        "validation_match": 12325,
+        "frames_with_revision_levels": 12261,
+        "ineligible_candidates": 1092,
+        "cost_first_differs": 104,
+        "cost_first_differs_with_new_request": 104,
+        "accepted_changes": 0,
+        "cf_moves_drop_more": 81
+      },
+      "deltas": {
+        "accepted-request-count": 0.0,
+        "worst-hard-utilization-ppm": 0.0,
+        "revision:pickup_eta_total_ms": 0.0,
+        "revision:drop_eta_total_ms": 1196132.0,
+        "revision:material_eta_revision_count": 81.0,
+        "revision:vehicle_switch_count": 0.0,
+        "revision:pickup_stop_relocation_mm": 0.0,
+        "revision:pickup_stop_switch_count": 0.0,
+        "revision:drop_stop_relocation_mm": 0.0,
+        "revision:drop_stop_switch_count": 0.0,
+        "revision:incumbent_order_inversion_count": 0.0,
+        "revision:pre_pickup_inserted_stop_count": 29.0,
+        "operational-cost": -28288261.0
+      },
+      "selected_plan_cost_sum": 35606312123,
+      "mean_changed_frame_cost_saving_pct": 8.003756477696852,
+      "upper_median_drop_s": 12.494,
+      "p90_drop_s": 24.982,
+      "max_drop_s": 35.54
+    },
+    {
+      "arm": "b1-ref",
+      "runs": 16,
+      "counts": {
+        "frames": 12960,
+        "with_new_request": 1714,
+        "validation_match": 12960,
+        "frames_with_revision_levels": 0
+      },
+      "deltas": {},
+      "selected_plan_cost_sum": 36342780639,
+      "mean_changed_frame_cost_saving_pct": null,
+      "upper_median_drop_s": null,
+      "p90_drop_s": null,
+      "max_drop_s": null
+    }
+  ],
+  "special": [
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w17-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "decisionHash": "1db8297a7444df01b57b4993e73987c8e35f5de9ee70d3274c230d8e21f35826",
+      "recorded_drop_ms": 0,
+      "cf_drop_ms": 35540,
+      "extra_ms": 35540,
+      "enumerated_full_leaves": 5,
+      "enumerated_cf_leaves": 5,
+      "cf_selected": [
+        {
+          "candidateId": "candidate-v1-9a837e6ae15c9e73a79b7ba8b414b9f2ca5b0e649aac4a03d5f1379af7d45a81",
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 12,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f",
+                "requestId": "rq-2a2d4ec54db25bdc9122995a5656131045cc00357ab12055fc4939fccfea1afc",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-216cae544efb161b2316df79b63edc12f2c7e57fe8ccb98d7ad2dec6e3235774"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-5884bb32ae57d87383af55e6201a731256237c9f17416c85509f1604163953a6",
+                "requestId": "rq-2a2d4ec54db25bdc9122995a5656131045cc00357ab12055fc4939fccfea1afc",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-e8ceda5e600001ee8e0339c150f988fe61f098afb6f48d7c345c603411be78be"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-109b634adcb1450692725c1fd4f343438394915be5deb45a529fa733dfe7c3ac",
+                "requestId": "rq-fc1b6b55f34134b3e56793009b5d8b4ad49f322b16f4590bd6c3c49f4a302ec9",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8747ce87a795ef48d4faf1040404a29576eab08a99b8f07fb4d17fd0df0d5ac5"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-5f3c598ae06d16f8090220dc55df88738caa8ac82ecd3f9f79c3148c931d117d",
+                "requestId": "rq-fc1b6b55f34134b3e56793009b5d8b4ad49f322b16f4590bd6c3c49f4a302ec9",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-2ec616193165b7933468ae3dea9edf466c651e51ede38c75252d169746c6a1d4"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-cdb8e9ba044e96e22008fd164865b9eab16fce4a4177d8d8555353b63ab93d25",
+                "requestId": "rq-f25fce64009993aac7f708252e71d1de4e5335826ed68c19c459d2bcc5a6607a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-d333c5825debd1debffa8ed1cabd40c7472dcf55975feb30627e0343b5537112"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-fe6c87c27202aa44db39b7f62d792bb3eed9896e63e84c4f2d03cd2e6548da6b",
+                "requestId": "rq-f25fce64009993aac7f708252e71d1de4e5335826ed68c19c459d2bcc5a6607a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-167750ed66c81f145cc6038b3ea2986e302c91d2dee6811ecd47a30d68057e64"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-e42f33c1fe8383566079ee8d1d0e08134941bf6fc89366af46323a6b82cec741",
+                "requestId": "rq-0d6875849a4039cc30b40768a43e34d6819b8ebc58855e697bf0547497a1076a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-046c7530c363e11498aa41570f8760574da9852250bb7343c97bb92e131e41e1"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-cc7e81c77c934d5914c3d4f265cf74f3ab34c1e1feadc1cffce5ee250e6fefc8",
+                "requestId": "rq-0d6875849a4039cc30b40768a43e34d6819b8ebc58855e697bf0547497a1076a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-a3b422bea0aea0bb43322c9959c655cf313945fe02f7c76c73430352df0e0700"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-7ab194150389ad8b54ebf913672847a8c5677d08fc05943e99b748f412d634b7",
+                "requestId": "rq-a4ee8e487048f311a4be1c5a3b579263c3bfbcc2927a5e9e502c83d63365b9a7",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-230c809d933a3bac446c2e8aaad4ed152226567260871385d83edf06143e446b"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+                "requestId": "rq-a4ee8e487048f311a4be1c5a3b579263c3bfbcc2927a5e9e502c83d63365b9a7",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-fd6a6a8062c384d0cd36d800e530b6c4d190ef1a717b7771bc57ea045caf2600"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-5f3c598ae06d16f8090220dc55df88738caa8ac82ecd3f9f79c3148c931d117d",
+                "requestId": "rq-489c50f2ac74a2513e0643c8731698e9906d53349303adad6b918137702e63d6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8ece7fa5a8ec274fbaed6889a2183512bdbf0d4a16635516bb940ee1754db027"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-1311d6170ec2d6b865e3c005ca032bb18483fcc7cfc7c05b6f12e12a84729ebc",
+                "requestId": "rq-489c50f2ac74a2513e0643c8731698e9906d53349303adad6b918137702e63d6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-3440ce6f7848497ace9dc9d611a8f58a743b984ecdb61b4ba15ca6a0f08ffecb"
+              }
+            ],
+            "mutableSuffix": [],
+            "planVersion": 6
+          },
+          "schedule": {
+            "operationalCost": 0,
+            "stops": []
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+        },
+        {
+          "candidateId": "candidate-v1-5980812534f8f8a4b13a71df21d184bff8b7e5d337bf7c0e69090fe444eb0ef4",
+          "certifiedForwardSlackMs": 92791,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            884505,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 17,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-6b4404029cdce28d8721d8212418866429ca3337d505af09baf4a3715e379a61",
+                "requestId": "rq-4d1e02402843735a68912d98c8763b1dcfef9b214d4044cd9a55680f81f42c1e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-6720aeb728d2ecb1520480ca38625f20ea8d1335a46a58d475de27056c4ce4ef"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-937404e168323582f98a2f17c12ba6ee3c69a2cc5338e0202bc951dc88adbf1c",
+                "requestId": "rq-4d1e02402843735a68912d98c8763b1dcfef9b214d4044cd9a55680f81f42c1e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-23ab9c2dbc366ee1c231ce583dd5b940edc7fadfbbdd75503e80a918df3160f8"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-e42f33c1fe8383566079ee8d1d0e08134941bf6fc89366af46323a6b82cec741",
+                "requestId": "rq-7dcc1e43659b9b413b336ec6fb22347ec37371d73d077f72b9419d945b244e61",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-ec3c5b12042b88b304b5f67a86f76312a00c65465bedbcb82318579fa1a05ba7"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a535533d8ac65fd485415a6a76c1f94a179bb5f4fee1a6a542b5b075dfbc8013",
+                "requestId": "rq-7dcc1e43659b9b413b336ec6fb22347ec37371d73d077f72b9419d945b244e61",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-fe6a3fe912c2240b4c025cbbf7224068ae9f6ab4f53b3ee09c4649a3ffafb679"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-58300583d0f56a0e6753e7dba9afb4c0cd881544502a1ef0186632d563b3e4a5",
+                "requestId": "rq-9cc90c2033cdad1e01e36165d1633825467bb33c4fdcd6d335e37bb2c7668700",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-373ae878be5be3a2dccb434c6c432873656bd296657a810dae8e3c171c7e1afc"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-5ea11fa0c1f279951f4730d7b1f4e07814122e122d54df84e21dfe30db99ae75",
+                "requestId": "rq-9cc90c2033cdad1e01e36165d1633825467bb33c4fdcd6d335e37bb2c7668700",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-ee610a58e5b440c508bc742bdc88dd9c05650c357a44d4bd726df4c8f4ed91f4"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-5e5c4bf1a085e4813eaaea0b87f3cf2eb3c5d85610b3fd1c53ee47fe08d40b29",
+                "requestId": "rq-5fbba97db9482a3df388714c5d0241db950942046de50bfca92c843490a78df1",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-eec60f809b5f6483d0df55c4491e96728449a733d4da2359c5475dfe366223a3"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-1311d6170ec2d6b865e3c005ca032bb18483fcc7cfc7c05b6f12e12a84729ebc",
+                "requestId": "rq-5fbba97db9482a3df388714c5d0241db950942046de50bfca92c843490a78df1",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-f3f63e4ed4c2cf95427826c25f16fc5eef475ed984ee1e194aea21e22d0057e1"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-c158a122b7052c631a6d7bdeb5248d56895f63050d19c42e1a784c73ec4bd345",
+                "requestId": "rq-d01889efaef2ea9aa0af792747cb791f3ca86cec4929f050083daf0864b25e59",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8ffdf04020fb35118840cea44df7deecb8f9e0b320704197c1f7f107d7e8e04c"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-c97d99a785dbcd44e7a9eec019d961464c4557e35ef6ee89fd2653c967fc5f91",
+                "requestId": "rq-d01889efaef2ea9aa0af792747cb791f3ca86cec4929f050083daf0864b25e59",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-6c7a89309f92314a7460504381b826139d4d0a2b3faa5774664dfa84882b2120"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-ca66707a63a91a91c1987cee39aab63552c7d63bed5f6668b97eec020a3ee740",
+                "requestId": "rq-021116b4095d32cf9ff6530edb8b0917391260acae7787d01b776b409c496118",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-ab75de36bd2d7199692d0b4ab26216dc10f2e5be2515d4432c4e5045f05f337a"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "requestId": "rq-021116b4095d32cf9ff6530edb8b0917391260acae7787d01b776b409c496118",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-586f8dca07ae814afb8c334f9da1dd0d196999d7b4c9f0719e2f831119715a3d"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+                "requestId": "rq-287e2ea74a69d5b36f0f0605006472923b82ab29c880030be307c2588f7c299c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-68856f84327507caef995513a5983bbdcda386d60da43ecf564fd0a86935ee03"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-747149bd57639a04d4802cbcbafd62b569f5725e6ba21e25ce0a4328f1873b86",
+                "requestId": "rq-fb5177b7e7476aaf5061c97400d4094c4c611c6b68e3f5a05a33a8f385c48343",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-d3c711d74ebe552ec459a822046e57c08568f54df09c5d9072a76cf670082649"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-318b59e046d1d22409a336becc97f2fb895bb9476d6224617d2c9eae4ed633e2",
+                "requestId": "rq-287e2ea74a69d5b36f0f0605006472923b82ab29c880030be307c2588f7c299c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-15f9ad4f780e3249c33e2bbb0b2c36130313efe696c213203b6c266c6fe6a6c7"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-ab95b24e0ecefe72c3b18a881414a28e87f0a7e099caea29dde4914e1a6a647e",
+                "requestId": "rq-fb5177b7e7476aaf5061c97400d4094c4c611c6b68e3f5a05a33a8f385c48343",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-53dde3f85c046064b331cfe20912742f5b3160c259c1b74b9dcb8f27a77999a7"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-d2caff300e5787e55032229933134628c0a199abb2e84a47cb9d23edfef029f6",
+                "requestId": "rq-7c9fd920c5eb4a629cc4d2e374cf2f204ffe90a6928b528677fad410cc0b0ed6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-096de293a95ae0970f7a4e6a63f151482a8461acabaa9698898592d39c4a130e"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "dropOff",
+                "nodeId": "node-3c974b86434c7b5cb09d0b94f777602a895c01ffe00fd5fdc7ded77748b619e6",
+                "requestId": "rq-7c9fd920c5eb4a629cc4d2e374cf2f204ffe90a6928b528677fad410cc0b0ed6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-cdfcc51c84bfbb8175a4cefba87986b8435d1160a3a1a45caa8e0be17284dcb5"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-ca66707a63a91a91c1987cee39aab63552c7d63bed5f6668b97eec020a3ee740",
+                "requestId": "rq-d3c8c7054b20ba4613774a4a5b88d63f8c9575f0e5a56f18ef87a1aad0f50e14",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-55da82878f472ae1961789513ea91bb638694c8a84ba5485ae22fc05678534cb"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f",
+                "requestId": "rq-d3c8c7054b20ba4613774a4a5b88d63f8c9575f0e5a56f18ef87a1aad0f50e14",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-a2f1083a14dd03ea0fee502f10eaf6f47b2d031903aeadefcd1aef95a6033786"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8b1669041eae920ecc8a92a7132bd5a6a2a1fbff9f089c059e941b2d41840b6a",
+                "requestId": "rq-f0e5ee863488027cd3e0faf4bfc07afca71397385b37f5510e415aa1ab8f0a64",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-54d82a50cae29a2ae8c2fe87e20de6b26addb1c1f3f80b76c8e707ec40d709b7"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-825bcbe15455b5243bec7529e62f25d0b06f11a80a8ec736780dfe3ebb22850d",
+                "requestId": "rq-f0e5ee863488027cd3e0faf4bfc07afca71397385b37f5510e415aa1ab8f0a64",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-66fd37848755f3609a8b5d3d97a48d54a198904472a65f5d2ee531cd6c6763cd"
+              }
+            ],
+            "planVersion": 11
+          },
+          "schedule": {
+            "operationalCost": 884505,
+            "stops": [
+              {
+                "arrivalTimeMs": 5804533,
+                "departureTimeMs": 5804533,
+                "serviceStartTimeMs": 5804533,
+                "stopId": "rb-d-cdfcc51c84bfbb8175a4cefba87986b8435d1160a3a1a45caa8e0be17284dcb5"
+              },
+              {
+                "arrivalTimeMs": 5960504,
+                "departureTimeMs": 5960504,
+                "serviceStartTimeMs": 5960504,
+                "stopId": "rb-p-55da82878f472ae1961789513ea91bb638694c8a84ba5485ae22fc05678534cb"
+              },
+              {
+                "arrivalTimeMs": 6146085,
+                "departureTimeMs": 6146085,
+                "serviceStartTimeMs": 6146085,
+                "stopId": "rb-d-a2f1083a14dd03ea0fee502f10eaf6f47b2d031903aeadefcd1aef95a6033786"
+              },
+              {
+                "arrivalTimeMs": 6159905,
+                "departureTimeMs": 6159905,
+                "serviceStartTimeMs": 6159905,
+                "stopId": "rb-p-54d82a50cae29a2ae8c2fe87e20de6b26addb1c1f3f80b76c8e707ec40d709b7"
+              },
+              {
+                "arrivalTimeMs": 6574505,
+                "departureTimeMs": 6574505,
+                "serviceStartTimeMs": 6574505,
+                "stopId": "rb-d-66fd37848755f3609a8b5d3d97a48d54a198904472a65f5d2ee531cd6c6763cd"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+        },
+        {
+          "candidateId": "candidate-v1-1c9df01c17431710b9763810cc98cbae732484bfc1aa9cb6b7316fee8afc5d47",
+          "certifiedForwardSlackMs": 190522,
+          "isNoOp": false,
+          "newRequestIds": [
+            "rq-5aab90d83b2279b8f45642341a7e5a37571b74e39e60feae7249abdb65c75987"
+          ],
+          "objectiveContributions": [
+            1,
+            1000000,
+            0,
+            35540,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            805643,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 12,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-51215c4894a8ee03e5a7080a71232207043626e7792740cd721d9da65fbacbe0",
+                "requestId": "rq-bb675bf537747daf8f85e5d883e4c56f9a85737fa10181bce5aaa7d4e45f6a67",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-c34864bbc71217b4cadcc22a5a73c8db3fba5322dfc779cad8ebf379a35efc3e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-58b2859655e9fe8564f55e5190c14eba7f1ca7e8732f4a5310231b1ee66cb82b",
+                "requestId": "rq-bb675bf537747daf8f85e5d883e4c56f9a85737fa10181bce5aaa7d4e45f6a67",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-01446029c2f5ab7632dcd2c48ef1044b6f9759dc2cd04754c39ba1dbe4aa1043"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-cc7e81c77c934d5914c3d4f265cf74f3ab34c1e1feadc1cffce5ee250e6fefc8",
+                "requestId": "rq-8de404bb35917b3684bdf5fcdf463c763665d39b4936d2c02325a2c788cd01ae",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-4b6e97d8fdf5919d432bdc13b44e576e785fe6726d80814b807316ac27f0478b"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-38b17688949483d3b337bc7b8833eeb79c2b608e9de0c5bec68252da48304ae4",
+                "requestId": "rq-8de404bb35917b3684bdf5fcdf463c763665d39b4936d2c02325a2c788cd01ae",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-f1b352b337ae265262b3bc4c0cc0775ba0cf2287ff2cca7e5c409a5134069ebe"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-026b8832c09394c075e27eb73c96c41f99f1c7d4e15316630ef57d1ef732092b",
+                "requestId": "rq-d2b226f005fe7fe1d6c9fca623cdf75bdf31e7e011038e589306b8a4754adabc",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-d6a91372ac4299ee73c7fcb4c1cf73423f003182a284fd76e3e2598b6804a06e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "requestId": "rq-d2b226f005fe7fe1d6c9fca623cdf75bdf31e7e011038e589306b8a4754adabc",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-a594200ca548ec82c67e5d6ba4db6c0b919320f6eef6860fe8dd5ff4392a295d"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-0d6f60e0de356255c373f2c0d5a85b5882b3976704e2566a6fdf3e0014951676",
+                "requestId": "rq-a451d1c374421624d03b716268c051ec1c0c924e91b0ddd7d1a944c6689f5ce5",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-a727a213c0b370ef7cf7d1bb8283a59a7d860f4cb7e61f9b48a1421e8dfc4d5e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-4a17bbdf83f42a8e342d573b588c257edf6fb9c56a034919167bfd743794d583",
+                "requestId": "rq-a451d1c374421624d03b716268c051ec1c0c924e91b0ddd7d1a944c6689f5ce5",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-9032a154b1ba41691cde0b49fa2a5eec87c2891ddc6aa780b2608f42f48360a4"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-ab2f4c2ae11ed8526e21f42ccddfaa2fa8683d1a53efc0b0c30b89f4d07db4ca",
+                "requestId": "rq-84be5b7094321963080d8cd952af39b94b164a5ea8565f7d39a94436fe2c893d",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-e6ac319880592275ebe4ce0c1a39dad67c9e1304581086912fdef350155a45a6"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-5e5c4bf1a085e4813eaaea0b87f3cf2eb3c5d85610b3fd1c53ee47fe08d40b29",
+                "requestId": "rq-84be5b7094321963080d8cd952af39b94b164a5ea8565f7d39a94436fe2c893d",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d915cb462452a74bca99fbb38ad8863f173c66866a3dd904f0f094b66815815b"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8b1669041eae920ecc8a92a7132bd5a6a2a1fbff9f089c059e941b2d41840b6a",
+                "requestId": "rq-20b0a692b373cdbca43fee5bf34c91d1a10283c0ad2d7d493abed0aaa6f0e6ee",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-87a1e85cf9cc35ebd70c902deefcd8646ac24f9ea0e505d06686a276471c48de"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a1d070fda0525fa3bb33fd8e05cb25be8e4d4c36b042ee135533f67a5ce72166",
+                "requestId": "rq-20b0a692b373cdbca43fee5bf34c91d1a10283c0ad2d7d493abed0aaa6f0e6ee",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-2886191133799a0d4dae749503c0c0cf5000bab0ecbac0c0617470a360cad502"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "requestId": "rq-8262855a3c12de9ae222d63a3e7b71887768d9940add0cec0563d6f81b800993",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-1a7dfb43a9673b65f577245eb99e5ef26bb2b8c6c4f8bc22155e86b6031fa877"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+                "requestId": "rq-7af68df7b0f07577cb60cc9630da2c332a73384e2d6269b6d1a7abe689898293",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-15bb9bad70eef7ead2327d874b3a92e2b0cefb4a1c06becc1ebaf3eb0a39449d"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-937404e168323582f98a2f17c12ba6ee3c69a2cc5338e0202bc951dc88adbf1c",
+                "requestId": "rq-5aab90d83b2279b8f45642341a7e5a37571b74e39e60feae7249abdb65c75987",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-725f55e3e094150f7b00a5199a6e1b4b19b149d6171534b9dfc08c8756ef3848"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-883b3a29c0e6c4c070aac1fc723fa3d84e9776fbbc16efb7a129df84d74a2d90",
+                "requestId": "rq-8262855a3c12de9ae222d63a3e7b71887768d9940add0cec0563d6f81b800993",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-96cd9128773c5367c20d88b8bdb40963e4598ddb583973cd8659d88cfab478bf"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-3c974b86434c7b5cb09d0b94f777602a895c01ffe00fd5fdc7ded77748b619e6",
+                "requestId": "rq-5aab90d83b2279b8f45642341a7e5a37571b74e39e60feae7249abdb65c75987",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-40f0cb7a8ae5b2b906967eece08a27dac7e9745582538d3397e00967adff8755"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-3c974b86434c7b5cb09d0b94f777602a895c01ffe00fd5fdc7ded77748b619e6",
+                "requestId": "rq-7af68df7b0f07577cb60cc9630da2c332a73384e2d6269b6d1a7abe689898293",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d8429d0c69163d5b720b3fb7da7dd9544e9863d3c3027f6bcb6d0bc986910c30"
+              }
+            ],
+            "planVersion": 9
+          },
+          "schedule": {
+            "operationalCost": 805643,
+            "stops": [
+              {
+                "arrivalTimeMs": 5749361,
+                "departureTimeMs": 5749361,
+                "serviceStartTimeMs": 5749361,
+                "stopId": "rb-p-1a7dfb43a9673b65f577245eb99e5ef26bb2b8c6c4f8bc22155e86b6031fa877"
+              },
+              {
+                "arrivalTimeMs": 5950737,
+                "departureTimeMs": 5950737,
+                "serviceStartTimeMs": 5950737,
+                "stopId": "rb-p-15bb9bad70eef7ead2327d874b3a92e2b0cefb4a1c06becc1ebaf3eb0a39449d"
+              },
+              {
+                "arrivalTimeMs": 6090911,
+                "departureTimeMs": 6090911,
+                "serviceStartTimeMs": 6090911,
+                "stopId": "rb-p-725f55e3e094150f7b00a5199a6e1b4b19b149d6171534b9dfc08c8756ef3848"
+              },
+              {
+                "arrivalTimeMs": 6391007,
+                "departureTimeMs": 6391007,
+                "serviceStartTimeMs": 6391007,
+                "stopId": "rb-d-96cd9128773c5367c20d88b8bdb40963e4598ddb583973cd8659d88cfab478bf"
+              },
+              {
+                "arrivalTimeMs": 6495643,
+                "departureTimeMs": 6495643,
+                "serviceStartTimeMs": 6495643,
+                "stopId": "rb-d-40f0cb7a8ae5b2b906967eece08a27dac7e9745582538d3397e00967adff8755"
+              },
+              {
+                "arrivalTimeMs": 6495643,
+                "departureTimeMs": 6495643,
+                "serviceStartTimeMs": 6495643,
+                "stopId": "rb-d-d8429d0c69163d5b720b3fb7da7dd9544e9863d3c3027f6bcb6d0bc986910c30"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+        },
+        {
+          "candidateId": "candidate-v1-e60fff76cb2e62133df1df60aec9c3603d49ab44da55a8822ddecc5d4ee35de3",
+          "certifiedForwardSlackMs": 19743,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            483571,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 21,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-2d1730fcff6e412ceec252577331881967d58c88639bfae6aae5b884bd6d9efd",
+                "requestId": "rq-7875711bdf96a2dd1e076b03ad21ea61bbc91d08261e2d08c6ee2a677c822623",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-adac169bf4170e5af7e0ead8215299ddd0f28b7a9f8b152fcee54c0ad8b9e9b8"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-c4bad134f1137cfeb3c4999beaa4406a1961b5dd9907f79ecc6574f67b85b1c7",
+                "requestId": "rq-7875711bdf96a2dd1e076b03ad21ea61bbc91d08261e2d08c6ee2a677c822623",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-9dc9fee2313cb933c960886c5409b06512454193b7ee4325e11f88ca2a620d6d"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-c97d99a785dbcd44e7a9eec019d961464c4557e35ef6ee89fd2653c967fc5f91",
+                "requestId": "rq-6c902588642217f01a8b5a8cb79ad8aa1f6f17f9908e2250308657cd0605f8bf",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-0954200b0d7201f268c8c210f2920d2f9aee8a2569aba065450c6c545e51654b"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-747149bd57639a04d4802cbcbafd62b569f5725e6ba21e25ce0a4328f1873b86",
+                "requestId": "rq-6c902588642217f01a8b5a8cb79ad8aa1f6f17f9908e2250308657cd0605f8bf",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-8ff0c56d17a0a9de776c3f1e104a81d6fc3b98505c95024fcdaf813e1223e685"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-61ad2a2c3af3827996d4ea54fed9caed50944086de6c380acd52fea1a2816d5a",
+                "requestId": "rq-5daf8db233add6ba962788403925dd46ce3fea5b518e17915de8dcabd3bd9c40",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-3eeb664b9eebccf6481f33e8d3d248f8591a571ea33722d191e65fa8af8562ab"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-1e5ab51eb2119e32d260e4ba30a3b0da99a83dc89546160907f60e4afc9bbf7c",
+                "requestId": "rq-5daf8db233add6ba962788403925dd46ce3fea5b518e17915de8dcabd3bd9c40",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-6484f2a8ae64202554a9c87a16356e9007e1dc231233a2434f52553cda8b8133"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-cc7e81c77c934d5914c3d4f265cf74f3ab34c1e1feadc1cffce5ee250e6fefc8",
+                "requestId": "rq-2dd2d9dbb99701d5c6f0898c0f26d94407964c7ebc3ef7d8888ae840942ad1c0",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-ed39781dc44168533a5c16878c319ee45d599dbb5e766f13800a0f3a1536802c"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-454bc0519e2585203ed304a4090ee3e875e315031b8e77d853227a307392d23c",
+                "requestId": "rq-2dd2d9dbb99701d5c6f0898c0f26d94407964c7ebc3ef7d8888ae840942ad1c0",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-ca198fa8a90b70a70e3da523ab25e2cdca5ca1df261fb7b712f3dd26ea5a531a"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+                "requestId": "rq-fd8bfefdc106dfd5f43b2a3d4d1127858e5952405269355c6ac4c032b7af0719",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-d16cf6863260695be3320236beca781647ca5db1b9671e53f34dcd40b2b08b9e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-7ab194150389ad8b54ebf913672847a8c5677d08fc05943e99b748f412d634b7",
+                "requestId": "rq-fd8bfefdc106dfd5f43b2a3d4d1127858e5952405269355c6ac4c032b7af0719",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-9d53e93d31238e836a64a282ed6a63645412a55b06faf4fb75c4a6bc5ae1f6f3"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-6bbe4e96307f380d9be116c54e8246785789380c7f1a89ed2a53db780824e6af",
+                "requestId": "rq-62882477410d976b31ab233c37331eab52dba80333036ffc649952a9c1ba6282",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8cfa0f2ef54c6ca268af62d6df14c1c1f92f730431231ff74f24558b2c23c147"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+                "requestId": "rq-62882477410d976b31ab233c37331eab52dba80333036ffc649952a9c1ba6282",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d030ea64f21a306663350227294209cd3eb27810685a543828c769a44a256e05"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8e06c81748455688593894d40e9d68f75e5f92203fd9a40f9007d7e54169c445",
+                "requestId": "rq-15dbc200f27486d30ecceb15ef88fce0ba9df5712c4c401da392c49a7dd0fac0",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-45f4823d3352eb7e60e86290de86a6cab04e82be359a996e315337df6dc5835e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-937404e168323582f98a2f17c12ba6ee3c69a2cc5338e0202bc951dc88adbf1c",
+                "requestId": "rq-15dbc200f27486d30ecceb15ef88fce0ba9df5712c4c401da392c49a7dd0fac0",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-b12c5b4d92969051090e092c40ee1a0cab3e67e7a2128a61f2c14bbf8211d2ad"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-119e037ec034a1a7259c031018db08fb6c4e71029590be438a1bda6b57b64c19",
+                "requestId": "rq-d42054915dcab6a60759d8e1782d9eaa36e8aad90fdb26eeb250ceead66dd637",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-33a523eea8076866ae7444162106ea8696d139b525a27edfcc4eb87a273d123b"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-175203b76b976bc3a6d6d43ad7fe5378b974c6ea7b4572cb1200e0d2bd7c6c71",
+                "requestId": "rq-bee85d7ae5e25174c2824109ea9f3e560d9c8f74f8da8f11b30af11a4496ed67",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-4c02f591863c9aa253db1ddab55b4c8ac19bf9f288402fa712203804a15f490d"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-266d0417bb2da685e646389bfa3bbf1452d44b58c86b0f69c4763a3f156e3a4e",
+                "requestId": "rq-d42054915dcab6a60759d8e1782d9eaa36e8aad90fdb26eeb250ceead66dd637",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-a6794f04d5a48960bcbdf4446684472fa5eff7a32adea350c61f70571d20a6b3"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-454bc0519e2585203ed304a4090ee3e875e315031b8e77d853227a307392d23c",
+                "requestId": "rq-bee85d7ae5e25174c2824109ea9f3e560d9c8f74f8da8f11b30af11a4496ed67",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-4e0d21ffde7947306a99c2cb410578754c1938f3e867e87f5e74c817d1b6f93b"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-3b920715169d9da3115b23affc7170cec570df33a5904bfc33c9bc056bc9cd79",
+                "requestId": "rq-c0395b3005aefdf8e286ad436cf8d83839ed43a614c1a5fe19cf27752a2a98b6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-cf17d50b02955618cdb4e34d9b50e56239ee3ba0dd021a2c9bb40fee448bc7bf"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-d1c40154622f923ba1c07e1e78b17ab3fedeb3d8318ae97551287cad57628e9b",
+                "requestId": "rq-aade5820afc0242549865c280204c7e434c601634b7e4dc58f7a02a33b1ea2ed",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-e3f25c2d443d9c7c5192c4b31e2e7202d1fa4cb4407b7231382b275ad4ac39a2"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a1d070fda0525fa3bb33fd8e05cb25be8e4d4c36b042ee135533f67a5ce72166",
+                "requestId": "rq-c0395b3005aefdf8e286ad436cf8d83839ed43a614c1a5fe19cf27752a2a98b6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-4cef400c510526f0a1e5d59928952f6108a92462752edaef33db1221c918d91b"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "dropOff",
+                "nodeId": "node-119e037ec034a1a7259c031018db08fb6c4e71029590be438a1bda6b57b64c19",
+                "requestId": "rq-aade5820afc0242549865c280204c7e434c601634b7e4dc58f7a02a33b1ea2ed",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-4295bdb34d5a5e1f23280eeff530e42522ba50460ab6e9cb231758e5483a3bca"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-7ab194150389ad8b54ebf913672847a8c5677d08fc05943e99b748f412d634b7",
+                "requestId": "rq-3dd2345748eef3f3e6976c7f37d06bd9f04273a3e8bc39e4203b804062eecd60",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-919400f8e31d66e8d09106ca439235f99dff0f260144e407ca2d19e2815b08f0"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-f60dadcb317aba47d436bab7b0ae2ada3961fcb854f621569596ee2675b96f21",
+                "requestId": "rq-3dd2345748eef3f3e6976c7f37d06bd9f04273a3e8bc39e4203b804062eecd60",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-4a6f23e9723b16b3740db4654bcf1182427a25e4ecb9c0162e919f923fc970f6"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-175203b76b976bc3a6d6d43ad7fe5378b974c6ea7b4572cb1200e0d2bd7c6c71",
+                "requestId": "rq-1c09fdc0aa98532461221836de380e73757bad122162faf5564af047f157856f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-ee6eb0c69377f6fb4bbcf8c731154eb676a951d83a7796c857a25c98a1fb1d2e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-cdb8e9ba044e96e22008fd164865b9eab16fce4a4177d8d8555353b63ab93d25",
+                "requestId": "rq-1c09fdc0aa98532461221836de380e73757bad122162faf5564af047f157856f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-cd44d24b3101c6d9fc3ab343f6c1322cf573c649bb35cd9af776cb5a0987ba03"
+              }
+            ],
+            "planVersion": 13
+          },
+          "schedule": {
+            "operationalCost": 483571,
+            "stops": [
+              {
+                "arrivalTimeMs": 5745154,
+                "departureTimeMs": 5745154,
+                "serviceStartTimeMs": 5745154,
+                "stopId": "rb-d-4295bdb34d5a5e1f23280eeff530e42522ba50460ab6e9cb231758e5483a3bca"
+              },
+              {
+                "arrivalTimeMs": 5772794,
+                "departureTimeMs": 5772794,
+                "serviceStartTimeMs": 5772794,
+                "stopId": "rb-p-919400f8e31d66e8d09106ca439235f99dff0f260144e407ca2d19e2815b08f0"
+              },
+              {
+                "arrivalTimeMs": 6043269,
+                "departureTimeMs": 6043269,
+                "serviceStartTimeMs": 6043269,
+                "stopId": "rb-d-4a6f23e9723b16b3740db4654bcf1182427a25e4ecb9c0162e919f923fc970f6"
+              },
+              {
+                "arrivalTimeMs": 6134086,
+                "departureTimeMs": 6134086,
+                "serviceStartTimeMs": 6134086,
+                "stopId": "rb-p-ee6eb0c69377f6fb4bbcf8c731154eb676a951d83a7796c857a25c98a1fb1d2e"
+              },
+              {
+                "arrivalTimeMs": 6173571,
+                "departureTimeMs": 6173571,
+                "serviceStartTimeMs": 6173571,
+                "stopId": "rb-d-cd44d24b3101c6d9fc3ab343f6c1322cf573c649bb35cd9af776cb5a0987ba03"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+        },
+        {
+          "candidateId": "candidate-v1-6648c6830cb926e88dbbd07cca12061cb147240d98c144a6650bf2581eee4f51",
+          "certifiedForwardSlackMs": 17769,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            403821,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 15,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-425912f13d282f144329b651d06b68482447204a3e096375e448e93a6db3e989",
+                "requestId": "rq-83568f435a6efa21ba96501378041aae328e01b983a4e636778beaa4dd1182f3",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-cdefa0851488c857e1e2ba7afe38285275e7a0cb4e071354f270be80a053de91"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-9a8d21039df94e8a394ea5eb4ac1a183dbce251af248fa3714d690ba2733e341",
+                "requestId": "rq-83568f435a6efa21ba96501378041aae328e01b983a4e636778beaa4dd1182f3",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-f14941ad0d18ca64f56a6e629bb51d2a180ea28a7e0cfb406cb1e527f02504b7"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-5a51b0753a0f35469b5e3db66fce7660735429966fa8b3d9b90dcabb109213b6",
+                "requestId": "rq-eef8ba763b1c5408853f400a48505b8657faa6f8648fe8d83c439e0f61dbe8d6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-013d435b15a77335ace2cc5765738283643aa8db289650792efdc1afcc0b7025"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-7b6d6eb4330c887de9beaf80e22f31dccc498729102a930297dc719fb52d21dd",
+                "requestId": "rq-eef8ba763b1c5408853f400a48505b8657faa6f8648fe8d83c439e0f61dbe8d6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-ca7bd8b98348f0a0de2e089b23753bb30e5e49708e09f6f048de9d203841736a"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-7b6d6eb4330c887de9beaf80e22f31dccc498729102a930297dc719fb52d21dd",
+                "requestId": "rq-ae801f4ee85b0c05485627584cccfdab985733b72a4d154ad69472dc2fd37d18",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8a15de299226b6dbd6b648faf85bfe5019a9b2418b62bd56673c3efcd68bf03b"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+                "requestId": "rq-ae801f4ee85b0c05485627584cccfdab985733b72a4d154ad69472dc2fd37d18",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-98609494cb191b0e24f8fd139cac3dc54ec4f33f4e5190c861d4ed2317ded59b"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-026b8832c09394c075e27eb73c96c41f99f1c7d4e15316630ef57d1ef732092b",
+                "requestId": "rq-c9e5608681a7da1dc1b3cacf584f93f90c3c846bb01efa71deeb9387a3f8ab2a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-b22302da173cd143c4e4e2808d498edc7ee6f66a948eed882d9ab685f1383a05"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-896b93e1040568d06ef4a4f1738d2cf866a63e14fab04b830fc6dd609bc55442",
+                "requestId": "rq-c9e5608681a7da1dc1b3cacf584f93f90c3c846bb01efa71deeb9387a3f8ab2a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d4d30fce08782c8c3f984504372bc72b49e7cffbff3f2768f3a3b08637e2973f"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-02c4841685e2bda15e7c2f0fa9d7439d87e8668498fdd4f3f4065904645e7deb",
+                "requestId": "rq-cf431c808c39f804076cae198bc4e457f6300007167dd69dfbc8dbce9bfa22e6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-6ef064a56ab636509094dec314bbf444afd27f2efc08d93175d67f849d149a5b"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-57b80f7e9024008f8de68e1a9f048c56c96a2ac34f7c1b7c5292f9c18a2c9463",
+                "requestId": "rq-cf431c808c39f804076cae198bc4e457f6300007167dd69dfbc8dbce9bfa22e6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-f3c5763d50e5fc99b34236e0434286cc81d5e4ebac19f24ee2db019df48d312e"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "requestId": "rq-b6cacc5997abb3c1e97bc562e3a6d2ef9064051cd76f2c7d0072f6f218104403",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-51d42d302089b593aa918a5170f14fe36cab2a4df8c19c262122beef05699644"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-c97d99a785dbcd44e7a9eec019d961464c4557e35ef6ee89fd2653c967fc5f91",
+                "requestId": "rq-b6cacc5997abb3c1e97bc562e3a6d2ef9064051cd76f2c7d0072f6f218104403",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-9eec31431573526cf7e01e8c1cb93f4cdecdfb5b558dc1a97f4390acee3bdc70"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-62ff6338a21c888cb4904ea06eae92a3fab4e20fc3050809e2a411c059fc0d74",
+                "requestId": "rq-845028c4723e285f630fce5987dc8f8de190e7b909ccc7f5f164563f202580cd",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-a3932891d0d43c49db727080709b23e191fd5cd75220afed21fefad2d511f391"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-9ac3c648aef5bd67e4288ac768a2cec3a4e7986142343cc21a9acf8d05cae19a",
+                "requestId": "rq-845028c4723e285f630fce5987dc8f8de190e7b909ccc7f5f164563f202580cd",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-cff421a5395bfc54d3ed2a2bf43bb82268ea5df93f13fb9d1d7472f564aacbd3"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-62ff6338a21c888cb4904ea06eae92a3fab4e20fc3050809e2a411c059fc0d74",
+                "requestId": "rq-ca48b82d842a87a9f6864a2de6af22929624771d019d9d03c8e245f684129dab",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-523dcf9a5ebcaeac9e4798e0f8d90dcc8e20f162908a87917c79d78055810c87"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "dropOff",
+                "nodeId": "node-cdb8e9ba044e96e22008fd164865b9eab16fce4a4177d8d8555353b63ab93d25",
+                "requestId": "rq-ca48b82d842a87a9f6864a2de6af22929624771d019d9d03c8e245f684129dab",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-867baa73d730f24bf0510191976f4e58406b0f359870e4ce8d870027bb30a0f8"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-c4bad134f1137cfeb3c4999beaa4406a1961b5dd9907f79ecc6574f67b85b1c7",
+                "requestId": "rq-96aa483799d967dca838ebbf1045ebd44fa943c0e3da5bc625dae7acb71871b2",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-cf1fc45fbf428915d769c8b07132a4519da1d059638f3ab21328828b209f87fe"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-5e5c4bf1a085e4813eaaea0b87f3cf2eb3c5d85610b3fd1c53ee47fe08d40b29",
+                "requestId": "rq-96aa483799d967dca838ebbf1045ebd44fa943c0e3da5bc625dae7acb71871b2",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-b656714f2a0f1f2ffd645c34cc74ae22ca69c431513f3a9d522c5b1d920d17ae"
+              }
+            ],
+            "planVersion": 9
+          },
+          "schedule": {
+            "operationalCost": 403821,
+            "stops": [
+              {
+                "arrivalTimeMs": 6008926,
+                "departureTimeMs": 6008926,
+                "serviceStartTimeMs": 6008926,
+                "stopId": "rb-d-867baa73d730f24bf0510191976f4e58406b0f359870e4ce8d870027bb30a0f8"
+              },
+              {
+                "arrivalTimeMs": 6058283,
+                "departureTimeMs": 6058283,
+                "serviceStartTimeMs": 6058283,
+                "stopId": "rb-p-cf1fc45fbf428915d769c8b07132a4519da1d059638f3ab21328828b209f87fe"
+              },
+              {
+                "arrivalTimeMs": 6093821,
+                "departureTimeMs": 6093821,
+                "serviceStartTimeMs": 6093821,
+                "stopId": "rb-d-b656714f2a0f1f2ffd645c34cc74ae22ca69c431513f3a9d522c5b1d920d17ae"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+        },
+        {
+          "candidateId": "candidate-v1-2de955e2e956134be67f2e608626cae3a90b6630ba0ec514b76b056037aebf1d",
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 10,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-026b8832c09394c075e27eb73c96c41f99f1c7d4e15316630ef57d1ef732092b",
+                "requestId": "rq-465b9579b8e42891095bd8d02f565f9896ce10800ea52b8a3d11933858a752ab",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-e9624be14f50696057e06e65c8d2a47f157122f6a9943b60912ed6fb8085ba82"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-2d89a7df2f143440fd5f19f6444887c1cb72ca2df8d471bc58f63aa99e59a6eb",
+                "requestId": "rq-465b9579b8e42891095bd8d02f565f9896ce10800ea52b8a3d11933858a752ab",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-3fbf81adfb98a9bb9053346272d229938e74ab1b28ec08cf607ef5ac30919ac9"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-ab95b24e0ecefe72c3b18a881414a28e87f0a7e099caea29dde4914e1a6a647e",
+                "requestId": "rq-cfa9ff3c4ed5bf1a70d1e23d83c420a98af909017bd2dee304da679f7cecae77",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-6607f13990786a4d7dd9fd3e215b6fa28f511bbf0e833e17d118a003f6ef7e14"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-ab2f4c2ae11ed8526e21f42ccddfaa2fa8683d1a53efc0b0c30b89f4d07db4ca",
+                "requestId": "rq-cfa9ff3c4ed5bf1a70d1e23d83c420a98af909017bd2dee304da679f7cecae77",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-52cd1cdfc72cf1730ca6957ff74037457ce39086ca8619044b32d47c1010ea1a"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-61ad2a2c3af3827996d4ea54fed9caed50944086de6c380acd52fea1a2816d5a",
+                "requestId": "rq-9524229c7a45f4e2311c381b9195c029c8892e57a410b24d2bc95b8194c03395",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-21fff47e0f085321c10b1e5976aacc096cef099f42ef84a857ae50adda5326e0"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-1fafa2fa6a5b5789d0422d9bec7c1eef319ec3fb0585f7ad43df9f2a3739acdb",
+                "requestId": "rq-9524229c7a45f4e2311c381b9195c029c8892e57a410b24d2bc95b8194c03395",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-c2c09ec11362b7d89997fda4f8ef9adc280fd82ec22aeb6cf1dc5d75276bd631"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-894f75f560c8ac2ba7627cc09eaf2962fc3c50059a8640578c496b335868fdc5",
+                "requestId": "rq-c55ebb2fcb6c11895b407c65cab2392abde53bc243f94db87416efc222f77861",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-6848658a7d7c6ab9c6f0e1f1105bd0c4e12fb73f818966e372ca65369a9bfae1"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-d1c40154622f923ba1c07e1e78b17ab3fedeb3d8318ae97551287cad57628e9b",
+                "requestId": "rq-c55ebb2fcb6c11895b407c65cab2392abde53bc243f94db87416efc222f77861",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-30b1ce858b7cd80ef6af868c40ad8f315453f30a33d69930ddabaef53b28889e"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-62ff6338a21c888cb4904ea06eae92a3fab4e20fc3050809e2a411c059fc0d74",
+                "requestId": "rq-ec82c1d2ef64fe76dbba1d06019bae740357cc2e360f556bc4b648b76d9d93ff",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-fa873e4e1ec2d9e6e52dff6e022bbc67ddf5082343c963730a1b041d2b5f4204"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-7b6d6eb4330c887de9beaf80e22f31dccc498729102a930297dc719fb52d21dd",
+                "requestId": "rq-ec82c1d2ef64fe76dbba1d06019bae740357cc2e360f556bc4b648b76d9d93ff",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-468da2cf8e86b42995a586b73c03173ce7103af40004a765a78abf0326724c19"
+              }
+            ],
+            "mutableSuffix": [],
+            "planVersion": 5
+          },
+          "schedule": {
+            "operationalCost": 0,
+            "stops": []
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+        },
+        {
+          "candidateId": "candidate-v1-404dfbab283c7d956d7d6db3b8ef4da22df7b4a0e5aefda864b717dd2f88ea25",
+          "certifiedForwardSlackMs": 5923,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            502882,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 12,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "requestId": "rq-4dc4e5fea547874154a8ce16ebf62a38693cfe4b6060cc306477478d1a62c95c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-f516a5d15176a0ad132e66b49a30ecb62277666bf0b22fe0d0425c82778d0e9a"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+                "requestId": "rq-e9940f191a5df12e3c54e698d24c0ed8718c49c6b7869da73e5685d45b539237",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-270333463ea7a6ba9a2d72f2da22763c84ea28702f6f72581e45b805be7a472e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-08763e00c743443795ab7b2dbb417de1bf1d0b7c5b17a2ff37c142fa6c89295d",
+                "requestId": "rq-4dc4e5fea547874154a8ce16ebf62a38693cfe4b6060cc306477478d1a62c95c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-0a193a20d8deddd95bae08136673fcf1a4d76d97593006e7d6cde6aad181c2d0"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-98135593a06e0f76ec204bb29b61a6bbb66da35447838abe3f02adb85cd7bc9a",
+                "requestId": "rq-e9940f191a5df12e3c54e698d24c0ed8718c49c6b7869da73e5685d45b539237",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-6794f9fea339938dd8abebb2a2813a9f9af9ccf6892ce2baa9cad75ecabfaf9f"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-318b59e046d1d22409a336becc97f2fb895bb9476d6224617d2c9eae4ed633e2",
+                "requestId": "rq-b5c8d97eb1f82a85f5dfcd63b46d3e8627d9e146415d833b6efbe204d95e5cf8",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-b0a7e845e6b4b50d90b42d11275539476fdbb063a262fadc7a466d760cacbe22"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a505eef0365c329697b590dd60396b0e72527d948fd335794fd665c5ae58ff05",
+                "requestId": "rq-b5c8d97eb1f82a85f5dfcd63b46d3e8627d9e146415d833b6efbe204d95e5cf8",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-39c47171f654e0e518b3060db5d257ccccd642604f445297391d7dc5fa10b1df"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-a505eef0365c329697b590dd60396b0e72527d948fd335794fd665c5ae58ff05",
+                "requestId": "rq-4b222af931a472d28a31cc42be05044eadb0f268bb54e1cb8478a8c2abb0d23f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-ba0b65993edd3741e0c18efa4b58734110a914629f7694e33d94fa1b5d807674"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a5d545a12cfc68bd09ce2dafbb6a9b798f429f98b5240fd1cf31ad4a5af9babb",
+                "requestId": "rq-4b222af931a472d28a31cc42be05044eadb0f268bb54e1cb8478a8c2abb0d23f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-1c82b572af448cfa171da6cdf548edea9baaadb77882f34e7c163805340673d2"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-7656c66d6e66b31dc7f4013913d9cb76df4d0b4e6ddccf4b4d3fd33eb3468341",
+                "requestId": "rq-9b0232040dbf35dfd519df94b6749dd07aabafc7c59554134a1c6a7d1ed020b2",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-c8370955c2979e31b43104587bf401d8f1e3470dec60906704820f1542d26c14"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-61ad2a2c3af3827996d4ea54fed9caed50944086de6c380acd52fea1a2816d5a",
+                "requestId": "rq-9b0232040dbf35dfd519df94b6749dd07aabafc7c59554134a1c6a7d1ed020b2",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-f3bb350281f8e0d45787d42f009da6824101a4c62c1304c06b27eb8e4a2b9637"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-61ad2a2c3af3827996d4ea54fed9caed50944086de6c380acd52fea1a2816d5a",
+                "requestId": "rq-0b808887fd0c28375a94f924f7fc0975e09f01d24f816564d81f4bd8766351e4",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8dbdf5e3b102097880f44bb07b14d56b5f250eadac5fc78c988085161f8e491f"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-883b3a29c0e6c4c070aac1fc723fa3d84e9776fbbc16efb7a129df84d74a2d90",
+                "requestId": "rq-0b808887fd0c28375a94f924f7fc0975e09f01d24f816564d81f4bd8766351e4",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-ff351240621d4a1e339deba2923b66791bda690ed992ecd382f8c0370fc93fa3"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+                "requestId": "rq-2e31904b0188f7717875460871fd2a3e54248e97dcf5b2b0a1bd5b6870219b6b",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-e365ed22fb11fbaf97517368d8efcb35c0a1ed91c2ea4f116d4635cf7741ed44"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-c97d99a785dbcd44e7a9eec019d961464c4557e35ef6ee89fd2653c967fc5f91",
+                "requestId": "rq-2e31904b0188f7717875460871fd2a3e54248e97dcf5b2b0a1bd5b6870219b6b",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-46cd35ced4aa68f596ea5a60de0f528d0839e8a9ce695dd5826f7b43643f38da"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-0d6f60e0de356255c373f2c0d5a85b5882b3976704e2566a6fdf3e0014951676",
+                "requestId": "rq-4f755fc77b63d6137556ac7aefbefae486538afc0e1279ce5c40bf3a793d8250",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-3f5aa6341145e20bfedf7345244f251823f912ed949ead10b78e7cdf979c59a2"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-62ff6338a21c888cb4904ea06eae92a3fab4e20fc3050809e2a411c059fc0d74",
+                "requestId": "rq-4f755fc77b63d6137556ac7aefbefae486538afc0e1279ce5c40bf3a793d8250",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-a541e9a91314786e3896de7c8bad9648889309b0bca29cf251033d23263025f6"
+              }
+            ],
+            "planVersion": 8
+          },
+          "schedule": {
+            "operationalCost": 502882,
+            "stops": [
+              {
+                "arrivalTimeMs": 5774331,
+                "departureTimeMs": 5774331,
+                "serviceStartTimeMs": 5774331,
+                "stopId": "rb-p-e365ed22fb11fbaf97517368d8efcb35c0a1ed91c2ea4f116d4635cf7741ed44"
+              },
+              {
+                "arrivalTimeMs": 5786177,
+                "departureTimeMs": 5786177,
+                "serviceStartTimeMs": 5786177,
+                "stopId": "rb-d-46cd35ced4aa68f596ea5a60de0f528d0839e8a9ce695dd5826f7b43643f38da"
+              },
+              {
+                "arrivalTimeMs": 5867122,
+                "departureTimeMs": 5867122,
+                "serviceStartTimeMs": 5867122,
+                "stopId": "rb-p-3f5aa6341145e20bfedf7345244f251823f912ed949ead10b78e7cdf979c59a2"
+              },
+              {
+                "arrivalTimeMs": 6192882,
+                "departureTimeMs": 6192882,
+                "serviceStartTimeMs": 6192882,
+                "stopId": "rb-d-a541e9a91314786e3896de7c8bad9648889309b0bca29cf251033d23263025f6"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+        },
+        {
+          "candidateId": "candidate-v1-ec30a822fcd536e7c28fc0544825465adf1969a1fe152f404521343313edd568",
+          "certifiedForwardSlackMs": 91238,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            744745,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 22,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-896b93e1040568d06ef4a4f1738d2cf866a63e14fab04b830fc6dd609bc55442",
+                "requestId": "rq-449eb66fb8503b3dedb61a94e2618751673fe3a575856da37a8e2f901d16c0db",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-491217cd02680c1f9d53c4caa6e05133bec54136633dc633d53a3f7a69658f3e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-ab2f4c2ae11ed8526e21f42ccddfaa2fa8683d1a53efc0b0c30b89f4d07db4ca",
+                "requestId": "rq-449eb66fb8503b3dedb61a94e2618751673fe3a575856da37a8e2f901d16c0db",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-779924841f3e958a8eafd04b718bd6ccee6467b894bf43f4e93e5098b84b4f56"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-825bcbe15455b5243bec7529e62f25d0b06f11a80a8ec736780dfe3ebb22850d",
+                "requestId": "rq-b4d0ea3bb57127ab6d42ccedaf73e5e821bbfb094c141251241a1499597e905c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-45bf7ae2371c6a9eb56f166e8bb06397675109c2db734f52082764f2e3117274"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a535533d8ac65fd485415a6a76c1f94a179bb5f4fee1a6a542b5b075dfbc8013",
+                "requestId": "rq-b4d0ea3bb57127ab6d42ccedaf73e5e821bbfb094c141251241a1499597e905c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-18b51c0116c04dcab8e82b74771a9973e40a3074d37df428c54450d9ebf13476"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-ab2f4c2ae11ed8526e21f42ccddfaa2fa8683d1a53efc0b0c30b89f4d07db4ca",
+                "requestId": "rq-8f02d8dac0e7519ffb176712bb7acd61f570776d9e4eac12a5a2c01ad4384c29",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-2c93b8cd9f21bc7b714605adb863bd3d668a3e41bda7a46483afa66b97a185be"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-ad9f7937e0e63c9b06edfb9411d7933760cb063b93521201230f0246d189c567",
+                "requestId": "rq-8f02d8dac0e7519ffb176712bb7acd61f570776d9e4eac12a5a2c01ad4384c29",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-1cec5095110dde7087dcb54f4816b5c369f85c2967053cd0108e22318b71140e"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-7ae041cbb9ebcad2217f90f9d53b5b4b53ddce9a38a5cc37295e8b658baa7874",
+                "requestId": "rq-adcf5cf2b7a0d04f474c02b3259ff91cc8182b3f4897987e9d8ce81beddcdd1f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-927cb04aa61b6d6ac2ac4728f836d4150c5872f7904d3f4dfd2c9aa6bca633ff"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8b1669041eae920ecc8a92a7132bd5a6a2a1fbff9f089c059e941b2d41840b6a",
+                "requestId": "rq-528be91a2c52a0c2a5d32f0d1f43d06ce4fc31a038d8fe6484b752ec9bc636eb",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-bcc5c23e715dc3c589e9dad155ff9c435a36f86935aa955099469f93de8e910e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-0d6f60e0de356255c373f2c0d5a85b5882b3976704e2566a6fdf3e0014951676",
+                "requestId": "rq-adcf5cf2b7a0d04f474c02b3259ff91cc8182b3f4897987e9d8ce81beddcdd1f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-257fd8d1ec348b6525eea7cc83f5fd6a8dd3edb4aa6cd0adb65a2d2a2e2bb4d7"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-f60dadcb317aba47d436bab7b0ae2ada3961fcb854f621569596ee2675b96f21",
+                "requestId": "rq-528be91a2c52a0c2a5d32f0d1f43d06ce4fc31a038d8fe6484b752ec9bc636eb",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-490a35a3000c10d3c1b5f5ad7588d3546391adb6dc2d17e1ed90001755eddf12"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-c97d99a785dbcd44e7a9eec019d961464c4557e35ef6ee89fd2653c967fc5f91",
+                "requestId": "rq-3aa004344b671d1ec895a002b8832aa495d810824de04b81f3890baa8a5b3b5e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-7cc98975e285ddc026f62317433595c5a0b34aaf1199e87b562ebeb4fbc55bd8"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-58b2859655e9fe8564f55e5190c14eba7f1ca7e8732f4a5310231b1ee66cb82b",
+                "requestId": "rq-3aa004344b671d1ec895a002b8832aa495d810824de04b81f3890baa8a5b3b5e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-74aab4b7b11450a2287da32ee2c563a8680d6fa098049bd2d9cde0b3a28c06da"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-58b2859655e9fe8564f55e5190c14eba7f1ca7e8732f4a5310231b1ee66cb82b",
+                "requestId": "rq-56f8759b021441d5a7e5de4c26957f3876f4a9ee4fd6536aff7d92bced65399b",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-174a16ed39f86fcbd48deb625e3e726e939a4e41b5ed9ecd735a1d3e4035f099"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-4cc23dd580abc9b7db3133b37c8129e1058b4446fcfdb72d3c1bf474a4f9f364",
+                "requestId": "rq-56f8759b021441d5a7e5de4c26957f3876f4a9ee4fd6536aff7d92bced65399b",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-99a5adad1ef26adc00592c1683934eef678a836c914688eab84abbfb5b670e1c"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-c4bad134f1137cfeb3c4999beaa4406a1961b5dd9907f79ecc6574f67b85b1c7",
+                "requestId": "rq-800f8bba014472943fc6bcca7aca6f5f525d719bad275477251dc84560b7a4b4",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-b82fe5a3af1e6145a9ee4800797937ce463ac977b54cfbe6461ef4fa692dfb3e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-f240e6a8167379066317979bf135086fe8cba609bc63dcf1741e3f74c6545a50",
+                "requestId": "rq-800f8bba014472943fc6bcca7aca6f5f525d719bad275477251dc84560b7a4b4",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-27769a0b66054a8624ba371bc1605c837dbc756e5847ef914f11a7f24b6e3841"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-883b3a29c0e6c4c070aac1fc723fa3d84e9776fbbc16efb7a129df84d74a2d90",
+                "requestId": "rq-815fd0250fc8e39a6878eb95097ddcc8dc60dd6157ccdbd5aacccbe5e54cd834",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-52ea66b374f9c6d11c2bee5637e2f7a6240968b51a306fcb68d6dd7943354bca"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a535533d8ac65fd485415a6a76c1f94a179bb5f4fee1a6a542b5b075dfbc8013",
+                "requestId": "rq-815fd0250fc8e39a6878eb95097ddcc8dc60dd6157ccdbd5aacccbe5e54cd834",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-505fd8438d2c7cc239065c640a38ef038bf0956d6590c60887d7d14e5b91846e"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-58300583d0f56a0e6753e7dba9afb4c0cd881544502a1ef0186632d563b3e4a5",
+                "requestId": "rq-f458d9ce90ef9f4125c6442416ea2a652a85a2a7f347c15d9c7985b307c3bd52",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-e0e145cd990f085b6b33c0ea1cd9cb0e645f482dc0a78d500766143b70be1012"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-58300583d0f56a0e6753e7dba9afb4c0cd881544502a1ef0186632d563b3e4a5",
+                "requestId": "rq-06bbcef690f7988298c6915bc3c684c1c4afb1e234f0c04912f77a6e87acc76e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-7200929d6d16220385cf7c6443a1e4f0849c7ee3886c870ae4a0b9993de6a470"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-825bcbe15455b5243bec7529e62f25d0b06f11a80a8ec736780dfe3ebb22850d",
+                "requestId": "rq-06bbcef690f7988298c6915bc3c684c1c4afb1e234f0c04912f77a6e87acc76e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d1d4cbf15eb5ada5590c58334e5712ee805d740257f84f4d4e71d93853b42234"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-825bcbe15455b5243bec7529e62f25d0b06f11a80a8ec736780dfe3ebb22850d",
+                "requestId": "rq-f458d9ce90ef9f4125c6442416ea2a652a85a2a7f347c15d9c7985b307c3bd52",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-11272c50733644ce64c888873399767ce3d735e9f2b8422be32c1c95efa28d5c"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-5fe549f1a450aff8a3c76c0d0aeb66ec2b14363dca07ef173f95ec2f6e9cbbc5",
+                "requestId": "rq-249bfae7acb238965ca08116cb5fb07071b8a1e3603b3eda34a2819fd1f379d5",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-79575435237ba2f492f402ec29a4ff248b7c0d43f0e6f3cdf07b83bc8dadd9a0"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-825bcbe15455b5243bec7529e62f25d0b06f11a80a8ec736780dfe3ebb22850d",
+                "requestId": "rq-249bfae7acb238965ca08116cb5fb07071b8a1e3603b3eda34a2819fd1f379d5",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d8cb30e62dd19f0c1f51a74afb6fb684e53672d72c970255ae6ef08cc8d31273"
+              }
+            ],
+            "planVersion": 12
+          },
+          "schedule": {
+            "operationalCost": 744745,
+            "stops": [
+              {
+                "arrivalTimeMs": 6049762,
+                "departureTimeMs": 6049762,
+                "serviceStartTimeMs": 6049762,
+                "stopId": "rb-p-79575435237ba2f492f402ec29a4ff248b7c0d43f0e6f3cdf07b83bc8dadd9a0"
+              },
+              {
+                "arrivalTimeMs": 6434745,
+                "departureTimeMs": 6434745,
+                "serviceStartTimeMs": 6434745,
+                "stopId": "rb-d-d8cb30e62dd19f0c1f51a74afb6fb684e53672d72c970255ae6ef08cc8d31273"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+        }
+      ],
+      "recorded_selected": [
+        {
+          "candidateId": "candidate-v1-9a837e6ae15c9e73a79b7ba8b414b9f2ca5b0e649aac4a03d5f1379af7d45a81",
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 12,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f",
+                "requestId": "rq-2a2d4ec54db25bdc9122995a5656131045cc00357ab12055fc4939fccfea1afc",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-216cae544efb161b2316df79b63edc12f2c7e57fe8ccb98d7ad2dec6e3235774"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-5884bb32ae57d87383af55e6201a731256237c9f17416c85509f1604163953a6",
+                "requestId": "rq-2a2d4ec54db25bdc9122995a5656131045cc00357ab12055fc4939fccfea1afc",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-e8ceda5e600001ee8e0339c150f988fe61f098afb6f48d7c345c603411be78be"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-109b634adcb1450692725c1fd4f343438394915be5deb45a529fa733dfe7c3ac",
+                "requestId": "rq-fc1b6b55f34134b3e56793009b5d8b4ad49f322b16f4590bd6c3c49f4a302ec9",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8747ce87a795ef48d4faf1040404a29576eab08a99b8f07fb4d17fd0df0d5ac5"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-5f3c598ae06d16f8090220dc55df88738caa8ac82ecd3f9f79c3148c931d117d",
+                "requestId": "rq-fc1b6b55f34134b3e56793009b5d8b4ad49f322b16f4590bd6c3c49f4a302ec9",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-2ec616193165b7933468ae3dea9edf466c651e51ede38c75252d169746c6a1d4"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-cdb8e9ba044e96e22008fd164865b9eab16fce4a4177d8d8555353b63ab93d25",
+                "requestId": "rq-f25fce64009993aac7f708252e71d1de4e5335826ed68c19c459d2bcc5a6607a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-d333c5825debd1debffa8ed1cabd40c7472dcf55975feb30627e0343b5537112"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-fe6c87c27202aa44db39b7f62d792bb3eed9896e63e84c4f2d03cd2e6548da6b",
+                "requestId": "rq-f25fce64009993aac7f708252e71d1de4e5335826ed68c19c459d2bcc5a6607a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-167750ed66c81f145cc6038b3ea2986e302c91d2dee6811ecd47a30d68057e64"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-e42f33c1fe8383566079ee8d1d0e08134941bf6fc89366af46323a6b82cec741",
+                "requestId": "rq-0d6875849a4039cc30b40768a43e34d6819b8ebc58855e697bf0547497a1076a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-046c7530c363e11498aa41570f8760574da9852250bb7343c97bb92e131e41e1"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-cc7e81c77c934d5914c3d4f265cf74f3ab34c1e1feadc1cffce5ee250e6fefc8",
+                "requestId": "rq-0d6875849a4039cc30b40768a43e34d6819b8ebc58855e697bf0547497a1076a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-a3b422bea0aea0bb43322c9959c655cf313945fe02f7c76c73430352df0e0700"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-7ab194150389ad8b54ebf913672847a8c5677d08fc05943e99b748f412d634b7",
+                "requestId": "rq-a4ee8e487048f311a4be1c5a3b579263c3bfbcc2927a5e9e502c83d63365b9a7",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-230c809d933a3bac446c2e8aaad4ed152226567260871385d83edf06143e446b"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+                "requestId": "rq-a4ee8e487048f311a4be1c5a3b579263c3bfbcc2927a5e9e502c83d63365b9a7",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-fd6a6a8062c384d0cd36d800e530b6c4d190ef1a717b7771bc57ea045caf2600"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-5f3c598ae06d16f8090220dc55df88738caa8ac82ecd3f9f79c3148c931d117d",
+                "requestId": "rq-489c50f2ac74a2513e0643c8731698e9906d53349303adad6b918137702e63d6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8ece7fa5a8ec274fbaed6889a2183512bdbf0d4a16635516bb940ee1754db027"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-1311d6170ec2d6b865e3c005ca032bb18483fcc7cfc7c05b6f12e12a84729ebc",
+                "requestId": "rq-489c50f2ac74a2513e0643c8731698e9906d53349303adad6b918137702e63d6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-3440ce6f7848497ace9dc9d611a8f58a743b984ecdb61b4ba15ca6a0f08ffecb"
+              }
+            ],
+            "mutableSuffix": [],
+            "planVersion": 6
+          },
+          "schedule": {
+            "operationalCost": 0,
+            "stops": []
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+        },
+        {
+          "candidateId": "candidate-v1-5980812534f8f8a4b13a71df21d184bff8b7e5d337bf7c0e69090fe444eb0ef4",
+          "certifiedForwardSlackMs": 92791,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            884505,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 17,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-6b4404029cdce28d8721d8212418866429ca3337d505af09baf4a3715e379a61",
+                "requestId": "rq-4d1e02402843735a68912d98c8763b1dcfef9b214d4044cd9a55680f81f42c1e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-6720aeb728d2ecb1520480ca38625f20ea8d1335a46a58d475de27056c4ce4ef"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-937404e168323582f98a2f17c12ba6ee3c69a2cc5338e0202bc951dc88adbf1c",
+                "requestId": "rq-4d1e02402843735a68912d98c8763b1dcfef9b214d4044cd9a55680f81f42c1e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-23ab9c2dbc366ee1c231ce583dd5b940edc7fadfbbdd75503e80a918df3160f8"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-e42f33c1fe8383566079ee8d1d0e08134941bf6fc89366af46323a6b82cec741",
+                "requestId": "rq-7dcc1e43659b9b413b336ec6fb22347ec37371d73d077f72b9419d945b244e61",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-ec3c5b12042b88b304b5f67a86f76312a00c65465bedbcb82318579fa1a05ba7"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a535533d8ac65fd485415a6a76c1f94a179bb5f4fee1a6a542b5b075dfbc8013",
+                "requestId": "rq-7dcc1e43659b9b413b336ec6fb22347ec37371d73d077f72b9419d945b244e61",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-fe6a3fe912c2240b4c025cbbf7224068ae9f6ab4f53b3ee09c4649a3ffafb679"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-58300583d0f56a0e6753e7dba9afb4c0cd881544502a1ef0186632d563b3e4a5",
+                "requestId": "rq-9cc90c2033cdad1e01e36165d1633825467bb33c4fdcd6d335e37bb2c7668700",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-373ae878be5be3a2dccb434c6c432873656bd296657a810dae8e3c171c7e1afc"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-5ea11fa0c1f279951f4730d7b1f4e07814122e122d54df84e21dfe30db99ae75",
+                "requestId": "rq-9cc90c2033cdad1e01e36165d1633825467bb33c4fdcd6d335e37bb2c7668700",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-ee610a58e5b440c508bc742bdc88dd9c05650c357a44d4bd726df4c8f4ed91f4"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-5e5c4bf1a085e4813eaaea0b87f3cf2eb3c5d85610b3fd1c53ee47fe08d40b29",
+                "requestId": "rq-5fbba97db9482a3df388714c5d0241db950942046de50bfca92c843490a78df1",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-eec60f809b5f6483d0df55c4491e96728449a733d4da2359c5475dfe366223a3"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-1311d6170ec2d6b865e3c005ca032bb18483fcc7cfc7c05b6f12e12a84729ebc",
+                "requestId": "rq-5fbba97db9482a3df388714c5d0241db950942046de50bfca92c843490a78df1",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-f3f63e4ed4c2cf95427826c25f16fc5eef475ed984ee1e194aea21e22d0057e1"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-c158a122b7052c631a6d7bdeb5248d56895f63050d19c42e1a784c73ec4bd345",
+                "requestId": "rq-d01889efaef2ea9aa0af792747cb791f3ca86cec4929f050083daf0864b25e59",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8ffdf04020fb35118840cea44df7deecb8f9e0b320704197c1f7f107d7e8e04c"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-c97d99a785dbcd44e7a9eec019d961464c4557e35ef6ee89fd2653c967fc5f91",
+                "requestId": "rq-d01889efaef2ea9aa0af792747cb791f3ca86cec4929f050083daf0864b25e59",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-6c7a89309f92314a7460504381b826139d4d0a2b3faa5774664dfa84882b2120"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-ca66707a63a91a91c1987cee39aab63552c7d63bed5f6668b97eec020a3ee740",
+                "requestId": "rq-021116b4095d32cf9ff6530edb8b0917391260acae7787d01b776b409c496118",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-ab75de36bd2d7199692d0b4ab26216dc10f2e5be2515d4432c4e5045f05f337a"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "requestId": "rq-021116b4095d32cf9ff6530edb8b0917391260acae7787d01b776b409c496118",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-586f8dca07ae814afb8c334f9da1dd0d196999d7b4c9f0719e2f831119715a3d"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+                "requestId": "rq-287e2ea74a69d5b36f0f0605006472923b82ab29c880030be307c2588f7c299c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-68856f84327507caef995513a5983bbdcda386d60da43ecf564fd0a86935ee03"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-747149bd57639a04d4802cbcbafd62b569f5725e6ba21e25ce0a4328f1873b86",
+                "requestId": "rq-fb5177b7e7476aaf5061c97400d4094c4c611c6b68e3f5a05a33a8f385c48343",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-d3c711d74ebe552ec459a822046e57c08568f54df09c5d9072a76cf670082649"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-318b59e046d1d22409a336becc97f2fb895bb9476d6224617d2c9eae4ed633e2",
+                "requestId": "rq-287e2ea74a69d5b36f0f0605006472923b82ab29c880030be307c2588f7c299c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-15f9ad4f780e3249c33e2bbb0b2c36130313efe696c213203b6c266c6fe6a6c7"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-ab95b24e0ecefe72c3b18a881414a28e87f0a7e099caea29dde4914e1a6a647e",
+                "requestId": "rq-fb5177b7e7476aaf5061c97400d4094c4c611c6b68e3f5a05a33a8f385c48343",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-53dde3f85c046064b331cfe20912742f5b3160c259c1b74b9dcb8f27a77999a7"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-d2caff300e5787e55032229933134628c0a199abb2e84a47cb9d23edfef029f6",
+                "requestId": "rq-7c9fd920c5eb4a629cc4d2e374cf2f204ffe90a6928b528677fad410cc0b0ed6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-096de293a95ae0970f7a4e6a63f151482a8461acabaa9698898592d39c4a130e"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "dropOff",
+                "nodeId": "node-3c974b86434c7b5cb09d0b94f777602a895c01ffe00fd5fdc7ded77748b619e6",
+                "requestId": "rq-7c9fd920c5eb4a629cc4d2e374cf2f204ffe90a6928b528677fad410cc0b0ed6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-cdfcc51c84bfbb8175a4cefba87986b8435d1160a3a1a45caa8e0be17284dcb5"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-ca66707a63a91a91c1987cee39aab63552c7d63bed5f6668b97eec020a3ee740",
+                "requestId": "rq-d3c8c7054b20ba4613774a4a5b88d63f8c9575f0e5a56f18ef87a1aad0f50e14",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-55da82878f472ae1961789513ea91bb638694c8a84ba5485ae22fc05678534cb"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f",
+                "requestId": "rq-d3c8c7054b20ba4613774a4a5b88d63f8c9575f0e5a56f18ef87a1aad0f50e14",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-a2f1083a14dd03ea0fee502f10eaf6f47b2d031903aeadefcd1aef95a6033786"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8b1669041eae920ecc8a92a7132bd5a6a2a1fbff9f089c059e941b2d41840b6a",
+                "requestId": "rq-f0e5ee863488027cd3e0faf4bfc07afca71397385b37f5510e415aa1ab8f0a64",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-54d82a50cae29a2ae8c2fe87e20de6b26addb1c1f3f80b76c8e707ec40d709b7"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-825bcbe15455b5243bec7529e62f25d0b06f11a80a8ec736780dfe3ebb22850d",
+                "requestId": "rq-f0e5ee863488027cd3e0faf4bfc07afca71397385b37f5510e415aa1ab8f0a64",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-66fd37848755f3609a8b5d3d97a48d54a198904472a65f5d2ee531cd6c6763cd"
+              }
+            ],
+            "planVersion": 11
+          },
+          "schedule": {
+            "operationalCost": 884505,
+            "stops": [
+              {
+                "arrivalTimeMs": 5804533,
+                "departureTimeMs": 5804533,
+                "serviceStartTimeMs": 5804533,
+                "stopId": "rb-d-cdfcc51c84bfbb8175a4cefba87986b8435d1160a3a1a45caa8e0be17284dcb5"
+              },
+              {
+                "arrivalTimeMs": 5960504,
+                "departureTimeMs": 5960504,
+                "serviceStartTimeMs": 5960504,
+                "stopId": "rb-p-55da82878f472ae1961789513ea91bb638694c8a84ba5485ae22fc05678534cb"
+              },
+              {
+                "arrivalTimeMs": 6146085,
+                "departureTimeMs": 6146085,
+                "serviceStartTimeMs": 6146085,
+                "stopId": "rb-d-a2f1083a14dd03ea0fee502f10eaf6f47b2d031903aeadefcd1aef95a6033786"
+              },
+              {
+                "arrivalTimeMs": 6159905,
+                "departureTimeMs": 6159905,
+                "serviceStartTimeMs": 6159905,
+                "stopId": "rb-p-54d82a50cae29a2ae8c2fe87e20de6b26addb1c1f3f80b76c8e707ec40d709b7"
+              },
+              {
+                "arrivalTimeMs": 6574505,
+                "departureTimeMs": 6574505,
+                "serviceStartTimeMs": 6574505,
+                "stopId": "rb-d-66fd37848755f3609a8b5d3d97a48d54a198904472a65f5d2ee531cd6c6763cd"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+        },
+        {
+          "candidateId": "candidate-v1-c5fcf0eecdf359cdc3ba2ed628141c0ae8f1bb9e21760898a3df4e0bb740c41d",
+          "certifiedForwardSlackMs": 254686,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            787873,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 12,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-51215c4894a8ee03e5a7080a71232207043626e7792740cd721d9da65fbacbe0",
+                "requestId": "rq-bb675bf537747daf8f85e5d883e4c56f9a85737fa10181bce5aaa7d4e45f6a67",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-c34864bbc71217b4cadcc22a5a73c8db3fba5322dfc779cad8ebf379a35efc3e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-58b2859655e9fe8564f55e5190c14eba7f1ca7e8732f4a5310231b1ee66cb82b",
+                "requestId": "rq-bb675bf537747daf8f85e5d883e4c56f9a85737fa10181bce5aaa7d4e45f6a67",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-01446029c2f5ab7632dcd2c48ef1044b6f9759dc2cd04754c39ba1dbe4aa1043"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-cc7e81c77c934d5914c3d4f265cf74f3ab34c1e1feadc1cffce5ee250e6fefc8",
+                "requestId": "rq-8de404bb35917b3684bdf5fcdf463c763665d39b4936d2c02325a2c788cd01ae",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-4b6e97d8fdf5919d432bdc13b44e576e785fe6726d80814b807316ac27f0478b"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-38b17688949483d3b337bc7b8833eeb79c2b608e9de0c5bec68252da48304ae4",
+                "requestId": "rq-8de404bb35917b3684bdf5fcdf463c763665d39b4936d2c02325a2c788cd01ae",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-f1b352b337ae265262b3bc4c0cc0775ba0cf2287ff2cca7e5c409a5134069ebe"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-026b8832c09394c075e27eb73c96c41f99f1c7d4e15316630ef57d1ef732092b",
+                "requestId": "rq-d2b226f005fe7fe1d6c9fca623cdf75bdf31e7e011038e589306b8a4754adabc",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-d6a91372ac4299ee73c7fcb4c1cf73423f003182a284fd76e3e2598b6804a06e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+                "requestId": "rq-d2b226f005fe7fe1d6c9fca623cdf75bdf31e7e011038e589306b8a4754adabc",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-a594200ca548ec82c67e5d6ba4db6c0b919320f6eef6860fe8dd5ff4392a295d"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-0d6f60e0de356255c373f2c0d5a85b5882b3976704e2566a6fdf3e0014951676",
+                "requestId": "rq-a451d1c374421624d03b716268c051ec1c0c924e91b0ddd7d1a944c6689f5ce5",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-a727a213c0b370ef7cf7d1bb8283a59a7d860f4cb7e61f9b48a1421e8dfc4d5e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-4a17bbdf83f42a8e342d573b588c257edf6fb9c56a034919167bfd743794d583",
+                "requestId": "rq-a451d1c374421624d03b716268c051ec1c0c924e91b0ddd7d1a944c6689f5ce5",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-9032a154b1ba41691cde0b49fa2a5eec87c2891ddc6aa780b2608f42f48360a4"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-ab2f4c2ae11ed8526e21f42ccddfaa2fa8683d1a53efc0b0c30b89f4d07db4ca",
+                "requestId": "rq-84be5b7094321963080d8cd952af39b94b164a5ea8565f7d39a94436fe2c893d",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-e6ac319880592275ebe4ce0c1a39dad67c9e1304581086912fdef350155a45a6"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-5e5c4bf1a085e4813eaaea0b87f3cf2eb3c5d85610b3fd1c53ee47fe08d40b29",
+                "requestId": "rq-84be5b7094321963080d8cd952af39b94b164a5ea8565f7d39a94436fe2c893d",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d915cb462452a74bca99fbb38ad8863f173c66866a3dd904f0f094b66815815b"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8b1669041eae920ecc8a92a7132bd5a6a2a1fbff9f089c059e941b2d41840b6a",
+                "requestId": "rq-20b0a692b373cdbca43fee5bf34c91d1a10283c0ad2d7d493abed0aaa6f0e6ee",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-87a1e85cf9cc35ebd70c902deefcd8646ac24f9ea0e505d06686a276471c48de"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a1d070fda0525fa3bb33fd8e05cb25be8e4d4c36b042ee135533f67a5ce72166",
+                "requestId": "rq-20b0a692b373cdbca43fee5bf34c91d1a10283c0ad2d7d493abed0aaa6f0e6ee",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-2886191133799a0d4dae749503c0c0cf5000bab0ecbac0c0617470a360cad502"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+                "requestId": "rq-8262855a3c12de9ae222d63a3e7b71887768d9940add0cec0563d6f81b800993",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-1a7dfb43a9673b65f577245eb99e5ef26bb2b8c6c4f8bc22155e86b6031fa877"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+                "requestId": "rq-7af68df7b0f07577cb60cc9630da2c332a73384e2d6269b6d1a7abe689898293",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-15bb9bad70eef7ead2327d874b3a92e2b0cefb4a1c06becc1ebaf3eb0a39449d"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-883b3a29c0e6c4c070aac1fc723fa3d84e9776fbbc16efb7a129df84d74a2d90",
+                "requestId": "rq-8262855a3c12de9ae222d63a3e7b71887768d9940add0cec0563d6f81b800993",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-96cd9128773c5367c20d88b8bdb40963e4598ddb583973cd8659d88cfab478bf"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-3c974b86434c7b5cb09d0b94f777602a895c01ffe00fd5fdc7ded77748b619e6",
+                "requestId": "rq-7af68df7b0f07577cb60cc9630da2c332a73384e2d6269b6d1a7abe689898293",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d8429d0c69163d5b720b3fb7da7dd9544e9863d3c3027f6bcb6d0bc986910c30"
+              }
+            ],
+            "planVersion": 8
+          },
+          "schedule": {
+            "operationalCost": 787873,
+            "stops": [
+              {
+                "arrivalTimeMs": 5749361,
+                "departureTimeMs": 5749361,
+                "serviceStartTimeMs": 5749361,
+                "stopId": "rb-p-1a7dfb43a9673b65f577245eb99e5ef26bb2b8c6c4f8bc22155e86b6031fa877"
+              },
+              {
+                "arrivalTimeMs": 5950737,
+                "departureTimeMs": 5950737,
+                "serviceStartTimeMs": 5950737,
+                "stopId": "rb-p-15bb9bad70eef7ead2327d874b3a92e2b0cefb4a1c06becc1ebaf3eb0a39449d"
+              },
+              {
+                "arrivalTimeMs": 6373237,
+                "departureTimeMs": 6373237,
+                "serviceStartTimeMs": 6373237,
+                "stopId": "rb-d-96cd9128773c5367c20d88b8bdb40963e4598ddb583973cd8659d88cfab478bf"
+              },
+              {
+                "arrivalTimeMs": 6477873,
+                "departureTimeMs": 6477873,
+                "serviceStartTimeMs": 6477873,
+                "stopId": "rb-d-d8429d0c69163d5b720b3fb7da7dd9544e9863d3c3027f6bcb6d0bc986910c30"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+        },
+        {
+          "candidateId": "candidate-v1-e60fff76cb2e62133df1df60aec9c3603d49ab44da55a8822ddecc5d4ee35de3",
+          "certifiedForwardSlackMs": 19743,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            483571,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 21,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-2d1730fcff6e412ceec252577331881967d58c88639bfae6aae5b884bd6d9efd",
+                "requestId": "rq-7875711bdf96a2dd1e076b03ad21ea61bbc91d08261e2d08c6ee2a677c822623",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-adac169bf4170e5af7e0ead8215299ddd0f28b7a9f8b152fcee54c0ad8b9e9b8"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-c4bad134f1137cfeb3c4999beaa4406a1961b5dd9907f79ecc6574f67b85b1c7",
+                "requestId": "rq-7875711bdf96a2dd1e076b03ad21ea61bbc91d08261e2d08c6ee2a677c822623",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-9dc9fee2313cb933c960886c5409b06512454193b7ee4325e11f88ca2a620d6d"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-c97d99a785dbcd44e7a9eec019d961464c4557e35ef6ee89fd2653c967fc5f91",
+                "requestId": "rq-6c902588642217f01a8b5a8cb79ad8aa1f6f17f9908e2250308657cd0605f8bf",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-0954200b0d7201f268c8c210f2920d2f9aee8a2569aba065450c6c545e51654b"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-747149bd57639a04d4802cbcbafd62b569f5725e6ba21e25ce0a4328f1873b86",
+                "requestId": "rq-6c902588642217f01a8b5a8cb79ad8aa1f6f17f9908e2250308657cd0605f8bf",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-8ff0c56d17a0a9de776c3f1e104a81d6fc3b98505c95024fcdaf813e1223e685"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-61ad2a2c3af3827996d4ea54fed9caed50944086de6c380acd52fea1a2816d5a",
+                "requestId": "rq-5daf8db233add6ba962788403925dd46ce3fea5b518e17915de8dcabd3bd9c40",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-3eeb664b9eebccf6481f33e8d3d248f8591a571ea33722d191e65fa8af8562ab"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-1e5ab51eb2119e32d260e4ba30a3b0da99a83dc89546160907f60e4afc9bbf7c",
+                "requestId": "rq-5daf8db233add6ba962788403925dd46ce3fea5b518e17915de8dcabd3bd9c40",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-6484f2a8ae64202554a9c87a16356e9007e1dc231233a2434f52553cda8b8133"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-cc7e81c77c934d5914c3d4f265cf74f3ab34c1e1feadc1cffce5ee250e6fefc8",
+                "requestId": "rq-2dd2d9dbb99701d5c6f0898c0f26d94407964c7ebc3ef7d8888ae840942ad1c0",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-ed39781dc44168533a5c16878c319ee45d599dbb5e766f13800a0f3a1536802c"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-454bc0519e2585203ed304a4090ee3e875e315031b8e77d853227a307392d23c",
+                "requestId": "rq-2dd2d9dbb99701d5c6f0898c0f26d94407964c7ebc3ef7d8888ae840942ad1c0",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-ca198fa8a90b70a70e3da523ab25e2cdca5ca1df261fb7b712f3dd26ea5a531a"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+                "requestId": "rq-fd8bfefdc106dfd5f43b2a3d4d1127858e5952405269355c6ac4c032b7af0719",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-d16cf6863260695be3320236beca781647ca5db1b9671e53f34dcd40b2b08b9e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-7ab194150389ad8b54ebf913672847a8c5677d08fc05943e99b748f412d634b7",
+                "requestId": "rq-fd8bfefdc106dfd5f43b2a3d4d1127858e5952405269355c6ac4c032b7af0719",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-9d53e93d31238e836a64a282ed6a63645412a55b06faf4fb75c4a6bc5ae1f6f3"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-6bbe4e96307f380d9be116c54e8246785789380c7f1a89ed2a53db780824e6af",
+                "requestId": "rq-62882477410d976b31ab233c37331eab52dba80333036ffc649952a9c1ba6282",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8cfa0f2ef54c6ca268af62d6df14c1c1f92f730431231ff74f24558b2c23c147"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+                "requestId": "rq-62882477410d976b31ab233c37331eab52dba80333036ffc649952a9c1ba6282",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d030ea64f21a306663350227294209cd3eb27810685a543828c769a44a256e05"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8e06c81748455688593894d40e9d68f75e5f92203fd9a40f9007d7e54169c445",
+                "requestId": "rq-15dbc200f27486d30ecceb15ef88fce0ba9df5712c4c401da392c49a7dd0fac0",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-45f4823d3352eb7e60e86290de86a6cab04e82be359a996e315337df6dc5835e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-937404e168323582f98a2f17c12ba6ee3c69a2cc5338e0202bc951dc88adbf1c",
+                "requestId": "rq-15dbc200f27486d30ecceb15ef88fce0ba9df5712c4c401da392c49a7dd0fac0",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-b12c5b4d92969051090e092c40ee1a0cab3e67e7a2128a61f2c14bbf8211d2ad"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-119e037ec034a1a7259c031018db08fb6c4e71029590be438a1bda6b57b64c19",
+                "requestId": "rq-d42054915dcab6a60759d8e1782d9eaa36e8aad90fdb26eeb250ceead66dd637",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-33a523eea8076866ae7444162106ea8696d139b525a27edfcc4eb87a273d123b"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-175203b76b976bc3a6d6d43ad7fe5378b974c6ea7b4572cb1200e0d2bd7c6c71",
+                "requestId": "rq-bee85d7ae5e25174c2824109ea9f3e560d9c8f74f8da8f11b30af11a4496ed67",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-4c02f591863c9aa253db1ddab55b4c8ac19bf9f288402fa712203804a15f490d"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-266d0417bb2da685e646389bfa3bbf1452d44b58c86b0f69c4763a3f156e3a4e",
+                "requestId": "rq-d42054915dcab6a60759d8e1782d9eaa36e8aad90fdb26eeb250ceead66dd637",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-a6794f04d5a48960bcbdf4446684472fa5eff7a32adea350c61f70571d20a6b3"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-454bc0519e2585203ed304a4090ee3e875e315031b8e77d853227a307392d23c",
+                "requestId": "rq-bee85d7ae5e25174c2824109ea9f3e560d9c8f74f8da8f11b30af11a4496ed67",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-4e0d21ffde7947306a99c2cb410578754c1938f3e867e87f5e74c817d1b6f93b"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-3b920715169d9da3115b23affc7170cec570df33a5904bfc33c9bc056bc9cd79",
+                "requestId": "rq-c0395b3005aefdf8e286ad436cf8d83839ed43a614c1a5fe19cf27752a2a98b6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-cf17d50b02955618cdb4e34d9b50e56239ee3ba0dd021a2c9bb40fee448bc7bf"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-d1c40154622f923ba1c07e1e78b17ab3fedeb3d8318ae97551287cad57628e9b",
+                "requestId": "rq-aade5820afc0242549865c280204c7e434c601634b7e4dc58f7a02a33b1ea2ed",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-e3f25c2d443d9c7c5192c4b31e2e7202d1fa4cb4407b7231382b275ad4ac39a2"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a1d070fda0525fa3bb33fd8e05cb25be8e4d4c36b042ee135533f67a5ce72166",
+                "requestId": "rq-c0395b3005aefdf8e286ad436cf8d83839ed43a614c1a5fe19cf27752a2a98b6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-4cef400c510526f0a1e5d59928952f6108a92462752edaef33db1221c918d91b"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "dropOff",
+                "nodeId": "node-119e037ec034a1a7259c031018db08fb6c4e71029590be438a1bda6b57b64c19",
+                "requestId": "rq-aade5820afc0242549865c280204c7e434c601634b7e4dc58f7a02a33b1ea2ed",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-4295bdb34d5a5e1f23280eeff530e42522ba50460ab6e9cb231758e5483a3bca"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-7ab194150389ad8b54ebf913672847a8c5677d08fc05943e99b748f412d634b7",
+                "requestId": "rq-3dd2345748eef3f3e6976c7f37d06bd9f04273a3e8bc39e4203b804062eecd60",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-919400f8e31d66e8d09106ca439235f99dff0f260144e407ca2d19e2815b08f0"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-f60dadcb317aba47d436bab7b0ae2ada3961fcb854f621569596ee2675b96f21",
+                "requestId": "rq-3dd2345748eef3f3e6976c7f37d06bd9f04273a3e8bc39e4203b804062eecd60",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-4a6f23e9723b16b3740db4654bcf1182427a25e4ecb9c0162e919f923fc970f6"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-175203b76b976bc3a6d6d43ad7fe5378b974c6ea7b4572cb1200e0d2bd7c6c71",
+                "requestId": "rq-1c09fdc0aa98532461221836de380e73757bad122162faf5564af047f157856f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-ee6eb0c69377f6fb4bbcf8c731154eb676a951d83a7796c857a25c98a1fb1d2e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-cdb8e9ba044e96e22008fd164865b9eab16fce4a4177d8d8555353b63ab93d25",
+                "requestId": "rq-1c09fdc0aa98532461221836de380e73757bad122162faf5564af047f157856f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-cd44d24b3101c6d9fc3ab343f6c1322cf573c649bb35cd9af776cb5a0987ba03"
+              }
+            ],
+            "planVersion": 13
+          },
+          "schedule": {
+            "operationalCost": 483571,
+            "stops": [
+              {
+                "arrivalTimeMs": 5745154,
+                "departureTimeMs": 5745154,
+                "serviceStartTimeMs": 5745154,
+                "stopId": "rb-d-4295bdb34d5a5e1f23280eeff530e42522ba50460ab6e9cb231758e5483a3bca"
+              },
+              {
+                "arrivalTimeMs": 5772794,
+                "departureTimeMs": 5772794,
+                "serviceStartTimeMs": 5772794,
+                "stopId": "rb-p-919400f8e31d66e8d09106ca439235f99dff0f260144e407ca2d19e2815b08f0"
+              },
+              {
+                "arrivalTimeMs": 6043269,
+                "departureTimeMs": 6043269,
+                "serviceStartTimeMs": 6043269,
+                "stopId": "rb-d-4a6f23e9723b16b3740db4654bcf1182427a25e4ecb9c0162e919f923fc970f6"
+              },
+              {
+                "arrivalTimeMs": 6134086,
+                "departureTimeMs": 6134086,
+                "serviceStartTimeMs": 6134086,
+                "stopId": "rb-p-ee6eb0c69377f6fb4bbcf8c731154eb676a951d83a7796c857a25c98a1fb1d2e"
+              },
+              {
+                "arrivalTimeMs": 6173571,
+                "departureTimeMs": 6173571,
+                "serviceStartTimeMs": 6173571,
+                "stopId": "rb-d-cd44d24b3101c6d9fc3ab343f6c1322cf573c649bb35cd9af776cb5a0987ba03"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+        },
+        {
+          "candidateId": "candidate-v1-6648c6830cb926e88dbbd07cca12061cb147240d98c144a6650bf2581eee4f51",
+          "certifiedForwardSlackMs": 17769,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            403821,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 15,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-425912f13d282f144329b651d06b68482447204a3e096375e448e93a6db3e989",
+                "requestId": "rq-83568f435a6efa21ba96501378041aae328e01b983a4e636778beaa4dd1182f3",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-cdefa0851488c857e1e2ba7afe38285275e7a0cb4e071354f270be80a053de91"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-9a8d21039df94e8a394ea5eb4ac1a183dbce251af248fa3714d690ba2733e341",
+                "requestId": "rq-83568f435a6efa21ba96501378041aae328e01b983a4e636778beaa4dd1182f3",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-f14941ad0d18ca64f56a6e629bb51d2a180ea28a7e0cfb406cb1e527f02504b7"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-5a51b0753a0f35469b5e3db66fce7660735429966fa8b3d9b90dcabb109213b6",
+                "requestId": "rq-eef8ba763b1c5408853f400a48505b8657faa6f8648fe8d83c439e0f61dbe8d6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-013d435b15a77335ace2cc5765738283643aa8db289650792efdc1afcc0b7025"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-7b6d6eb4330c887de9beaf80e22f31dccc498729102a930297dc719fb52d21dd",
+                "requestId": "rq-eef8ba763b1c5408853f400a48505b8657faa6f8648fe8d83c439e0f61dbe8d6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-ca7bd8b98348f0a0de2e089b23753bb30e5e49708e09f6f048de9d203841736a"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-7b6d6eb4330c887de9beaf80e22f31dccc498729102a930297dc719fb52d21dd",
+                "requestId": "rq-ae801f4ee85b0c05485627584cccfdab985733b72a4d154ad69472dc2fd37d18",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8a15de299226b6dbd6b648faf85bfe5019a9b2418b62bd56673c3efcd68bf03b"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+                "requestId": "rq-ae801f4ee85b0c05485627584cccfdab985733b72a4d154ad69472dc2fd37d18",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-98609494cb191b0e24f8fd139cac3dc54ec4f33f4e5190c861d4ed2317ded59b"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-026b8832c09394c075e27eb73c96c41f99f1c7d4e15316630ef57d1ef732092b",
+                "requestId": "rq-c9e5608681a7da1dc1b3cacf584f93f90c3c846bb01efa71deeb9387a3f8ab2a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-b22302da173cd143c4e4e2808d498edc7ee6f66a948eed882d9ab685f1383a05"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-896b93e1040568d06ef4a4f1738d2cf866a63e14fab04b830fc6dd609bc55442",
+                "requestId": "rq-c9e5608681a7da1dc1b3cacf584f93f90c3c846bb01efa71deeb9387a3f8ab2a",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d4d30fce08782c8c3f984504372bc72b49e7cffbff3f2768f3a3b08637e2973f"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-02c4841685e2bda15e7c2f0fa9d7439d87e8668498fdd4f3f4065904645e7deb",
+                "requestId": "rq-cf431c808c39f804076cae198bc4e457f6300007167dd69dfbc8dbce9bfa22e6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-6ef064a56ab636509094dec314bbf444afd27f2efc08d93175d67f849d149a5b"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-57b80f7e9024008f8de68e1a9f048c56c96a2ac34f7c1b7c5292f9c18a2c9463",
+                "requestId": "rq-cf431c808c39f804076cae198bc4e457f6300007167dd69dfbc8dbce9bfa22e6",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-f3c5763d50e5fc99b34236e0434286cc81d5e4ebac19f24ee2db019df48d312e"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897",
+                "requestId": "rq-b6cacc5997abb3c1e97bc562e3a6d2ef9064051cd76f2c7d0072f6f218104403",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-51d42d302089b593aa918a5170f14fe36cab2a4df8c19c262122beef05699644"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-c97d99a785dbcd44e7a9eec019d961464c4557e35ef6ee89fd2653c967fc5f91",
+                "requestId": "rq-b6cacc5997abb3c1e97bc562e3a6d2ef9064051cd76f2c7d0072f6f218104403",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-9eec31431573526cf7e01e8c1cb93f4cdecdfb5b558dc1a97f4390acee3bdc70"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-62ff6338a21c888cb4904ea06eae92a3fab4e20fc3050809e2a411c059fc0d74",
+                "requestId": "rq-845028c4723e285f630fce5987dc8f8de190e7b909ccc7f5f164563f202580cd",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-a3932891d0d43c49db727080709b23e191fd5cd75220afed21fefad2d511f391"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-9ac3c648aef5bd67e4288ac768a2cec3a4e7986142343cc21a9acf8d05cae19a",
+                "requestId": "rq-845028c4723e285f630fce5987dc8f8de190e7b909ccc7f5f164563f202580cd",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-cff421a5395bfc54d3ed2a2bf43bb82268ea5df93f13fb9d1d7472f564aacbd3"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-62ff6338a21c888cb4904ea06eae92a3fab4e20fc3050809e2a411c059fc0d74",
+                "requestId": "rq-ca48b82d842a87a9f6864a2de6af22929624771d019d9d03c8e245f684129dab",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-523dcf9a5ebcaeac9e4798e0f8d90dcc8e20f162908a87917c79d78055810c87"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "dropOff",
+                "nodeId": "node-cdb8e9ba044e96e22008fd164865b9eab16fce4a4177d8d8555353b63ab93d25",
+                "requestId": "rq-ca48b82d842a87a9f6864a2de6af22929624771d019d9d03c8e245f684129dab",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-867baa73d730f24bf0510191976f4e58406b0f359870e4ce8d870027bb30a0f8"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-c4bad134f1137cfeb3c4999beaa4406a1961b5dd9907f79ecc6574f67b85b1c7",
+                "requestId": "rq-96aa483799d967dca838ebbf1045ebd44fa943c0e3da5bc625dae7acb71871b2",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-cf1fc45fbf428915d769c8b07132a4519da1d059638f3ab21328828b209f87fe"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-5e5c4bf1a085e4813eaaea0b87f3cf2eb3c5d85610b3fd1c53ee47fe08d40b29",
+                "requestId": "rq-96aa483799d967dca838ebbf1045ebd44fa943c0e3da5bc625dae7acb71871b2",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-b656714f2a0f1f2ffd645c34cc74ae22ca69c431513f3a9d522c5b1d920d17ae"
+              }
+            ],
+            "planVersion": 9
+          },
+          "schedule": {
+            "operationalCost": 403821,
+            "stops": [
+              {
+                "arrivalTimeMs": 6008926,
+                "departureTimeMs": 6008926,
+                "serviceStartTimeMs": 6008926,
+                "stopId": "rb-d-867baa73d730f24bf0510191976f4e58406b0f359870e4ce8d870027bb30a0f8"
+              },
+              {
+                "arrivalTimeMs": 6058283,
+                "departureTimeMs": 6058283,
+                "serviceStartTimeMs": 6058283,
+                "stopId": "rb-p-cf1fc45fbf428915d769c8b07132a4519da1d059638f3ab21328828b209f87fe"
+              },
+              {
+                "arrivalTimeMs": 6093821,
+                "departureTimeMs": 6093821,
+                "serviceStartTimeMs": 6093821,
+                "stopId": "rb-d-b656714f2a0f1f2ffd645c34cc74ae22ca69c431513f3a9d522c5b1d920d17ae"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+        },
+        {
+          "candidateId": "candidate-v1-2b60dd570602229bb377eb81d3ac976b1426be85f964b71c6f57243603704ad0",
+          "certifiedForwardSlackMs": 198418,
+          "isNoOp": false,
+          "newRequestIds": [
+            "rq-5aab90d83b2279b8f45642341a7e5a37571b74e39e60feae7249abdb65c75987"
+          ],
+          "objectiveContributions": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            582418,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 10,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-026b8832c09394c075e27eb73c96c41f99f1c7d4e15316630ef57d1ef732092b",
+                "requestId": "rq-465b9579b8e42891095bd8d02f565f9896ce10800ea52b8a3d11933858a752ab",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-e9624be14f50696057e06e65c8d2a47f157122f6a9943b60912ed6fb8085ba82"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-2d89a7df2f143440fd5f19f6444887c1cb72ca2df8d471bc58f63aa99e59a6eb",
+                "requestId": "rq-465b9579b8e42891095bd8d02f565f9896ce10800ea52b8a3d11933858a752ab",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-3fbf81adfb98a9bb9053346272d229938e74ab1b28ec08cf607ef5ac30919ac9"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-ab95b24e0ecefe72c3b18a881414a28e87f0a7e099caea29dde4914e1a6a647e",
+                "requestId": "rq-cfa9ff3c4ed5bf1a70d1e23d83c420a98af909017bd2dee304da679f7cecae77",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-6607f13990786a4d7dd9fd3e215b6fa28f511bbf0e833e17d118a003f6ef7e14"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-ab2f4c2ae11ed8526e21f42ccddfaa2fa8683d1a53efc0b0c30b89f4d07db4ca",
+                "requestId": "rq-cfa9ff3c4ed5bf1a70d1e23d83c420a98af909017bd2dee304da679f7cecae77",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-52cd1cdfc72cf1730ca6957ff74037457ce39086ca8619044b32d47c1010ea1a"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-61ad2a2c3af3827996d4ea54fed9caed50944086de6c380acd52fea1a2816d5a",
+                "requestId": "rq-9524229c7a45f4e2311c381b9195c029c8892e57a410b24d2bc95b8194c03395",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-21fff47e0f085321c10b1e5976aacc096cef099f42ef84a857ae50adda5326e0"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-1fafa2fa6a5b5789d0422d9bec7c1eef319ec3fb0585f7ad43df9f2a3739acdb",
+                "requestId": "rq-9524229c7a45f4e2311c381b9195c029c8892e57a410b24d2bc95b8194c03395",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-c2c09ec11362b7d89997fda4f8ef9adc280fd82ec22aeb6cf1dc5d75276bd631"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-894f75f560c8ac2ba7627cc09eaf2962fc3c50059a8640578c496b335868fdc5",
+                "requestId": "rq-c55ebb2fcb6c11895b407c65cab2392abde53bc243f94db87416efc222f77861",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-6848658a7d7c6ab9c6f0e1f1105bd0c4e12fb73f818966e372ca65369a9bfae1"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-d1c40154622f923ba1c07e1e78b17ab3fedeb3d8318ae97551287cad57628e9b",
+                "requestId": "rq-c55ebb2fcb6c11895b407c65cab2392abde53bc243f94db87416efc222f77861",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-30b1ce858b7cd80ef6af868c40ad8f315453f30a33d69930ddabaef53b28889e"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-62ff6338a21c888cb4904ea06eae92a3fab4e20fc3050809e2a411c059fc0d74",
+                "requestId": "rq-ec82c1d2ef64fe76dbba1d06019bae740357cc2e360f556bc4b648b76d9d93ff",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-fa873e4e1ec2d9e6e52dff6e022bbc67ddf5082343c963730a1b041d2b5f4204"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-7b6d6eb4330c887de9beaf80e22f31dccc498729102a930297dc719fb52d21dd",
+                "requestId": "rq-ec82c1d2ef64fe76dbba1d06019bae740357cc2e360f556bc4b648b76d9d93ff",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-468da2cf8e86b42995a586b73c03173ce7103af40004a765a78abf0326724c19"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-937404e168323582f98a2f17c12ba6ee3c69a2cc5338e0202bc951dc88adbf1c",
+                "requestId": "rq-5aab90d83b2279b8f45642341a7e5a37571b74e39e60feae7249abdb65c75987",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-725f55e3e094150f7b00a5199a6e1b4b19b149d6171534b9dfc08c8756ef3848"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-3c974b86434c7b5cb09d0b94f777602a895c01ffe00fd5fdc7ded77748b619e6",
+                "requestId": "rq-5aab90d83b2279b8f45642341a7e5a37571b74e39e60feae7249abdb65c75987",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-40f0cb7a8ae5b2b906967eece08a27dac7e9745582538d3397e00967adff8755"
+              }
+            ],
+            "planVersion": 6
+          },
+          "schedule": {
+            "operationalCost": 582418,
+            "stops": [
+              {
+                "arrivalTimeMs": 5875582,
+                "departureTimeMs": 5875582,
+                "serviceStartTimeMs": 5875582,
+                "stopId": "rb-p-725f55e3e094150f7b00a5199a6e1b4b19b149d6171534b9dfc08c8756ef3848"
+              },
+              {
+                "arrivalTimeMs": 6272418,
+                "departureTimeMs": 6272418,
+                "serviceStartTimeMs": 6272418,
+                "stopId": "rb-d-40f0cb7a8ae5b2b906967eece08a27dac7e9745582538d3397e00967adff8755"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+        },
+        {
+          "candidateId": "candidate-v1-404dfbab283c7d956d7d6db3b8ef4da22df7b4a0e5aefda864b717dd2f88ea25",
+          "certifiedForwardSlackMs": 5923,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            502882,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 12,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+                "requestId": "rq-4dc4e5fea547874154a8ce16ebf62a38693cfe4b6060cc306477478d1a62c95c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-f516a5d15176a0ad132e66b49a30ecb62277666bf0b22fe0d0425c82778d0e9a"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+                "requestId": "rq-e9940f191a5df12e3c54e698d24c0ed8718c49c6b7869da73e5685d45b539237",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-270333463ea7a6ba9a2d72f2da22763c84ea28702f6f72581e45b805be7a472e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-08763e00c743443795ab7b2dbb417de1bf1d0b7c5b17a2ff37c142fa6c89295d",
+                "requestId": "rq-4dc4e5fea547874154a8ce16ebf62a38693cfe4b6060cc306477478d1a62c95c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-0a193a20d8deddd95bae08136673fcf1a4d76d97593006e7d6cde6aad181c2d0"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-98135593a06e0f76ec204bb29b61a6bbb66da35447838abe3f02adb85cd7bc9a",
+                "requestId": "rq-e9940f191a5df12e3c54e698d24c0ed8718c49c6b7869da73e5685d45b539237",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-6794f9fea339938dd8abebb2a2813a9f9af9ccf6892ce2baa9cad75ecabfaf9f"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-318b59e046d1d22409a336becc97f2fb895bb9476d6224617d2c9eae4ed633e2",
+                "requestId": "rq-b5c8d97eb1f82a85f5dfcd63b46d3e8627d9e146415d833b6efbe204d95e5cf8",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-b0a7e845e6b4b50d90b42d11275539476fdbb063a262fadc7a466d760cacbe22"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a505eef0365c329697b590dd60396b0e72527d948fd335794fd665c5ae58ff05",
+                "requestId": "rq-b5c8d97eb1f82a85f5dfcd63b46d3e8627d9e146415d833b6efbe204d95e5cf8",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-39c47171f654e0e518b3060db5d257ccccd642604f445297391d7dc5fa10b1df"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-a505eef0365c329697b590dd60396b0e72527d948fd335794fd665c5ae58ff05",
+                "requestId": "rq-4b222af931a472d28a31cc42be05044eadb0f268bb54e1cb8478a8c2abb0d23f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-ba0b65993edd3741e0c18efa4b58734110a914629f7694e33d94fa1b5d807674"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a5d545a12cfc68bd09ce2dafbb6a9b798f429f98b5240fd1cf31ad4a5af9babb",
+                "requestId": "rq-4b222af931a472d28a31cc42be05044eadb0f268bb54e1cb8478a8c2abb0d23f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-1c82b572af448cfa171da6cdf548edea9baaadb77882f34e7c163805340673d2"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-7656c66d6e66b31dc7f4013913d9cb76df4d0b4e6ddccf4b4d3fd33eb3468341",
+                "requestId": "rq-9b0232040dbf35dfd519df94b6749dd07aabafc7c59554134a1c6a7d1ed020b2",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-c8370955c2979e31b43104587bf401d8f1e3470dec60906704820f1542d26c14"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-61ad2a2c3af3827996d4ea54fed9caed50944086de6c380acd52fea1a2816d5a",
+                "requestId": "rq-9b0232040dbf35dfd519df94b6749dd07aabafc7c59554134a1c6a7d1ed020b2",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-f3bb350281f8e0d45787d42f009da6824101a4c62c1304c06b27eb8e4a2b9637"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-61ad2a2c3af3827996d4ea54fed9caed50944086de6c380acd52fea1a2816d5a",
+                "requestId": "rq-0b808887fd0c28375a94f924f7fc0975e09f01d24f816564d81f4bd8766351e4",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-8dbdf5e3b102097880f44bb07b14d56b5f250eadac5fc78c988085161f8e491f"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-883b3a29c0e6c4c070aac1fc723fa3d84e9776fbbc16efb7a129df84d74a2d90",
+                "requestId": "rq-0b808887fd0c28375a94f924f7fc0975e09f01d24f816564d81f4bd8766351e4",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-ff351240621d4a1e339deba2923b66791bda690ed992ecd382f8c0370fc93fa3"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+                "requestId": "rq-2e31904b0188f7717875460871fd2a3e54248e97dcf5b2b0a1bd5b6870219b6b",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-e365ed22fb11fbaf97517368d8efcb35c0a1ed91c2ea4f116d4635cf7741ed44"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-c97d99a785dbcd44e7a9eec019d961464c4557e35ef6ee89fd2653c967fc5f91",
+                "requestId": "rq-2e31904b0188f7717875460871fd2a3e54248e97dcf5b2b0a1bd5b6870219b6b",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-46cd35ced4aa68f596ea5a60de0f528d0839e8a9ce695dd5826f7b43643f38da"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-0d6f60e0de356255c373f2c0d5a85b5882b3976704e2566a6fdf3e0014951676",
+                "requestId": "rq-4f755fc77b63d6137556ac7aefbefae486538afc0e1279ce5c40bf3a793d8250",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-3f5aa6341145e20bfedf7345244f251823f912ed949ead10b78e7cdf979c59a2"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-62ff6338a21c888cb4904ea06eae92a3fab4e20fc3050809e2a411c059fc0d74",
+                "requestId": "rq-4f755fc77b63d6137556ac7aefbefae486538afc0e1279ce5c40bf3a793d8250",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-a541e9a91314786e3896de7c8bad9648889309b0bca29cf251033d23263025f6"
+              }
+            ],
+            "planVersion": 8
+          },
+          "schedule": {
+            "operationalCost": 502882,
+            "stops": [
+              {
+                "arrivalTimeMs": 5774331,
+                "departureTimeMs": 5774331,
+                "serviceStartTimeMs": 5774331,
+                "stopId": "rb-p-e365ed22fb11fbaf97517368d8efcb35c0a1ed91c2ea4f116d4635cf7741ed44"
+              },
+              {
+                "arrivalTimeMs": 5786177,
+                "departureTimeMs": 5786177,
+                "serviceStartTimeMs": 5786177,
+                "stopId": "rb-d-46cd35ced4aa68f596ea5a60de0f528d0839e8a9ce695dd5826f7b43643f38da"
+              },
+              {
+                "arrivalTimeMs": 5867122,
+                "departureTimeMs": 5867122,
+                "serviceStartTimeMs": 5867122,
+                "stopId": "rb-p-3f5aa6341145e20bfedf7345244f251823f912ed949ead10b78e7cdf979c59a2"
+              },
+              {
+                "arrivalTimeMs": 6192882,
+                "departureTimeMs": 6192882,
+                "serviceStartTimeMs": 6192882,
+                "stopId": "rb-d-a541e9a91314786e3896de7c8bad9648889309b0bca29cf251033d23263025f6"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+        },
+        {
+          "candidateId": "candidate-v1-ec30a822fcd536e7c28fc0544825465adf1969a1fe152f404521343313edd568",
+          "certifiedForwardSlackMs": 91238,
+          "isNoOp": true,
+          "newRequestIds": [],
+          "objectiveContributions": [
+            0,
+            1000000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            744745,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "policyEligibility": "eligible",
+          "relocatedWaitMs": 0,
+          "route": {
+            "executedStopCount": 22,
+            "frozenPrefix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-896b93e1040568d06ef4a4f1738d2cf866a63e14fab04b830fc6dd609bc55442",
+                "requestId": "rq-449eb66fb8503b3dedb61a94e2618751673fe3a575856da37a8e2f901d16c0db",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-491217cd02680c1f9d53c4caa6e05133bec54136633dc633d53a3f7a69658f3e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-ab2f4c2ae11ed8526e21f42ccddfaa2fa8683d1a53efc0b0c30b89f4d07db4ca",
+                "requestId": "rq-449eb66fb8503b3dedb61a94e2618751673fe3a575856da37a8e2f901d16c0db",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-779924841f3e958a8eafd04b718bd6ccee6467b894bf43f4e93e5098b84b4f56"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-825bcbe15455b5243bec7529e62f25d0b06f11a80a8ec736780dfe3ebb22850d",
+                "requestId": "rq-b4d0ea3bb57127ab6d42ccedaf73e5e821bbfb094c141251241a1499597e905c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-45bf7ae2371c6a9eb56f166e8bb06397675109c2db734f52082764f2e3117274"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a535533d8ac65fd485415a6a76c1f94a179bb5f4fee1a6a542b5b075dfbc8013",
+                "requestId": "rq-b4d0ea3bb57127ab6d42ccedaf73e5e821bbfb094c141251241a1499597e905c",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-18b51c0116c04dcab8e82b74771a9973e40a3074d37df428c54450d9ebf13476"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-ab2f4c2ae11ed8526e21f42ccddfaa2fa8683d1a53efc0b0c30b89f4d07db4ca",
+                "requestId": "rq-8f02d8dac0e7519ffb176712bb7acd61f570776d9e4eac12a5a2c01ad4384c29",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-2c93b8cd9f21bc7b714605adb863bd3d668a3e41bda7a46483afa66b97a185be"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-ad9f7937e0e63c9b06edfb9411d7933760cb063b93521201230f0246d189c567",
+                "requestId": "rq-8f02d8dac0e7519ffb176712bb7acd61f570776d9e4eac12a5a2c01ad4384c29",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-1cec5095110dde7087dcb54f4816b5c369f85c2967053cd0108e22318b71140e"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-7ae041cbb9ebcad2217f90f9d53b5b4b53ddce9a38a5cc37295e8b658baa7874",
+                "requestId": "rq-adcf5cf2b7a0d04f474c02b3259ff91cc8182b3f4897987e9d8ce81beddcdd1f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-927cb04aa61b6d6ac2ac4728f836d4150c5872f7904d3f4dfd2c9aa6bca633ff"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-8b1669041eae920ecc8a92a7132bd5a6a2a1fbff9f089c059e941b2d41840b6a",
+                "requestId": "rq-528be91a2c52a0c2a5d32f0d1f43d06ce4fc31a038d8fe6484b752ec9bc636eb",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-bcc5c23e715dc3c589e9dad155ff9c435a36f86935aa955099469f93de8e910e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-0d6f60e0de356255c373f2c0d5a85b5882b3976704e2566a6fdf3e0014951676",
+                "requestId": "rq-adcf5cf2b7a0d04f474c02b3259ff91cc8182b3f4897987e9d8ce81beddcdd1f",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-257fd8d1ec348b6525eea7cc83f5fd6a8dd3edb4aa6cd0adb65a2d2a2e2bb4d7"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-f60dadcb317aba47d436bab7b0ae2ada3961fcb854f621569596ee2675b96f21",
+                "requestId": "rq-528be91a2c52a0c2a5d32f0d1f43d06ce4fc31a038d8fe6484b752ec9bc636eb",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-490a35a3000c10d3c1b5f5ad7588d3546391adb6dc2d17e1ed90001755eddf12"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-c97d99a785dbcd44e7a9eec019d961464c4557e35ef6ee89fd2653c967fc5f91",
+                "requestId": "rq-3aa004344b671d1ec895a002b8832aa495d810824de04b81f3890baa8a5b3b5e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-7cc98975e285ddc026f62317433595c5a0b34aaf1199e87b562ebeb4fbc55bd8"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-58b2859655e9fe8564f55e5190c14eba7f1ca7e8732f4a5310231b1ee66cb82b",
+                "requestId": "rq-3aa004344b671d1ec895a002b8832aa495d810824de04b81f3890baa8a5b3b5e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-74aab4b7b11450a2287da32ee2c563a8680d6fa098049bd2d9cde0b3a28c06da"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-58b2859655e9fe8564f55e5190c14eba7f1ca7e8732f4a5310231b1ee66cb82b",
+                "requestId": "rq-56f8759b021441d5a7e5de4c26957f3876f4a9ee4fd6536aff7d92bced65399b",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-174a16ed39f86fcbd48deb625e3e726e939a4e41b5ed9ecd735a1d3e4035f099"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-4cc23dd580abc9b7db3133b37c8129e1058b4446fcfdb72d3c1bf474a4f9f364",
+                "requestId": "rq-56f8759b021441d5a7e5de4c26957f3876f4a9ee4fd6536aff7d92bced65399b",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-99a5adad1ef26adc00592c1683934eef678a836c914688eab84abbfb5b670e1c"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-c4bad134f1137cfeb3c4999beaa4406a1961b5dd9907f79ecc6574f67b85b1c7",
+                "requestId": "rq-800f8bba014472943fc6bcca7aca6f5f525d719bad275477251dc84560b7a4b4",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-b82fe5a3af1e6145a9ee4800797937ce463ac977b54cfbe6461ef4fa692dfb3e"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-f240e6a8167379066317979bf135086fe8cba609bc63dcf1741e3f74c6545a50",
+                "requestId": "rq-800f8bba014472943fc6bcca7aca6f5f525d719bad275477251dc84560b7a4b4",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-27769a0b66054a8624ba371bc1605c837dbc756e5847ef914f11a7f24b6e3841"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-883b3a29c0e6c4c070aac1fc723fa3d84e9776fbbc16efb7a129df84d74a2d90",
+                "requestId": "rq-815fd0250fc8e39a6878eb95097ddcc8dc60dd6157ccdbd5aacccbe5e54cd834",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-52ea66b374f9c6d11c2bee5637e2f7a6240968b51a306fcb68d6dd7943354bca"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-a535533d8ac65fd485415a6a76c1f94a179bb5f4fee1a6a542b5b075dfbc8013",
+                "requestId": "rq-815fd0250fc8e39a6878eb95097ddcc8dc60dd6157ccdbd5aacccbe5e54cd834",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-505fd8438d2c7cc239065c640a38ef038bf0956d6590c60887d7d14e5b91846e"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-58300583d0f56a0e6753e7dba9afb4c0cd881544502a1ef0186632d563b3e4a5",
+                "requestId": "rq-f458d9ce90ef9f4125c6442416ea2a652a85a2a7f347c15d9c7985b307c3bd52",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-e0e145cd990f085b6b33c0ea1cd9cb0e645f482dc0a78d500766143b70be1012"
+              },
+              {
+                "kind": "pickup",
+                "nodeId": "node-58300583d0f56a0e6753e7dba9afb4c0cd881544502a1ef0186632d563b3e4a5",
+                "requestId": "rq-06bbcef690f7988298c6915bc3c684c1c4afb1e234f0c04912f77a6e87acc76e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-7200929d6d16220385cf7c6443a1e4f0849c7ee3886c870ae4a0b9993de6a470"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-825bcbe15455b5243bec7529e62f25d0b06f11a80a8ec736780dfe3ebb22850d",
+                "requestId": "rq-06bbcef690f7988298c6915bc3c684c1c4afb1e234f0c04912f77a6e87acc76e",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d1d4cbf15eb5ada5590c58334e5712ee805d740257f84f4d4e71d93853b42234"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-825bcbe15455b5243bec7529e62f25d0b06f11a80a8ec736780dfe3ebb22850d",
+                "requestId": "rq-f458d9ce90ef9f4125c6442416ea2a652a85a2a7f347c15d9c7985b307c3bd52",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-11272c50733644ce64c888873399767ce3d735e9f2b8422be32c1c95efa28d5c"
+              }
+            ],
+            "mutableSuffix": [
+              {
+                "kind": "pickup",
+                "nodeId": "node-5fe549f1a450aff8a3c76c0d0aeb66ec2b14363dca07ef173f95ec2f6e9cbbc5",
+                "requestId": "rq-249bfae7acb238965ca08116cb5fb07071b8a1e3603b3eda34a2819fd1f379d5",
+                "serviceDurationMs": 0,
+                "stopId": "rb-p-79575435237ba2f492f402ec29a4ff248b7c0d43f0e6f3cdf07b83bc8dadd9a0"
+              },
+              {
+                "kind": "dropOff",
+                "nodeId": "node-825bcbe15455b5243bec7529e62f25d0b06f11a80a8ec736780dfe3ebb22850d",
+                "requestId": "rq-249bfae7acb238965ca08116cb5fb07071b8a1e3603b3eda34a2819fd1f379d5",
+                "serviceDurationMs": 0,
+                "stopId": "rb-d-d8cb30e62dd19f0c1f51a74afb6fb684e53672d72c970255ae6ef08cc8d31273"
+              }
+            ],
+            "planVersion": 12
+          },
+          "schedule": {
+            "operationalCost": 744745,
+            "stops": [
+              {
+                "arrivalTimeMs": 6049762,
+                "departureTimeMs": 6049762,
+                "serviceStartTimeMs": 6049762,
+                "stopId": "rb-p-79575435237ba2f492f402ec29a4ff248b7c0d43f0e6f3cdf07b83bc8dadd9a0"
+              },
+              {
+                "arrivalTimeMs": 6434745,
+                "departureTimeMs": 6434745,
+                "serviceStartTimeMs": 6434745,
+                "stopId": "rb-d-d8cb30e62dd19f0c1f51a74afb6fb684e53672d72c970255ae6ef08cc8d31273"
+              }
+            ]
+          },
+          "scheduleStrategy": "earliestFeasible",
+          "vehicleId": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+\section{Phạm vi kết luận và các đe dọa tính hợp lệ}
+\label{muc:hanche}
+
+\subsection{Tính hợp lệ của đại lượng}
+
+Sổ hành vi đo khoảng cách giữa phương án giữ tuyến và phương án mới tại cùng
+trạng thái thông tin. Nó trả lời bộ điều phối đã sửa kế hoạch bao nhiêu,
+không đo trực tiếp khách khó chịu bao nhiêu. Tổng trị tuyệt đối coi dời sớm
+và dời muộn như nhau, không phân biệt một lần đổi lớn với nhiều lần đổi nhỏ
+có cùng tổng. Hai tọa độ đón và trả còn có thể phản ánh cùng một sự thay
+đổi của chuyến. Các thước đo bổ sung cho biết độ nhạy của mô tả, nhưng chưa
+xác lập một thước đo tâm lý hoặc phúc lợi.
+
+Phần ``giữ tuyến'' cũng không đồng nhất với tắc đường ngoại sinh. Nó bao
+gồm thay đổi dự báo trong mô hình khi tuyến được giữ, cùng ảnh hưởng của
+tiến độ và các quy tắc thực thi. Tuyến đã chọn trước đó lại phụ thuộc chính
+sách. Vì vậy phép phân rã có giá trị kiểm toán quyết định tại thời điểm
+hiện tại, nhưng không nhận diện tác động nhân quả toàn phần của giao thông
+hay chính sách. Một nghiên cứu nhân quả cần một thiết kế khác với chỉ nối
+ba mốc lời hứa.
+
+\subsection{Tính hợp lệ nội tại và thống kê}
+
+Ghép cặp đầu vào, cấu hình và hạt giống giúp tách một số khác biệt không
+mong muốn. Kiểm delta, băm khung và tính lại bảng giảm nguy cơ sai trích
+xuất. Chúng không loại hết sai mô hình hoặc thiếu sót của bộ sinh. Phương
+án giữ tuyến chỉ bảo toàn tập cổng dưới giả thiết vật lý và ngân sách đã
+hợp lệ; các lần chạy dừng vật lý ở tầng 2 là giới hạn thực nghiệm của
+điều kiện đó, không phải chi tiết có thể bỏ.
+
+Các đợt dùng hạt giống điều phối cố định và nhiều cấu hình trên cùng ô.
+Khóa luận chưa đo biến thiên theo hạt giống, không coi số cấu hình là cỡ
+mẫu độc lập và không đặt ngưỡng nhiễu tùy ý. Quan hệ theo trần có thể không
+đơn điệu vì quyết định hiện tại đổi quỹ đạo về sau. Các phân tích độ nhạy
+được giữ ở cấp mô tả trên miền đã chạy.
+
+T38 có giao nhau chuyến nguồn giữa hiệu chỉnh và kiểm tra, phụ thuộc giữa
+khung cùng ngày, loại 11 ô ở bước chuẩn hóa và một ô hiệu chỉnh đã được
+đọc trước. Các điều này giới hạn độ tin cậy của suy luận về độ phủ và
+tương đương. Kế hoạch niêm phong và kiểm độc lập phép tính không bù được
+thiếu độc lập trong thiết kế. Phép kiểm mới cần tách theo ngày và định
+danh chuyến, đồng thời dành đủ ngày cho từng khung, trước khi đưa ra một
+phát biểu về quần thể.
+
+\subsection{Khả năng khái quát và so sánh với văn liệu}
+
+Mạng 96 nút là bao đóng nhỏ với tọa độ tổng hợp, không là mạng phố đầy đủ.
+Hệ số thời gian đi áp chung cho các cung bỏ qua tắc nghẽn theo không gian.
+Đội xe nhỏ, bộ sinh chèn và khóa tái gán giới hạn cơ hội tối ưu. Kết quả
+chưa bao phủ điều phối cho hàng nghìn xe, sửa tuyến tùy ý, dự báo có sai số
+theo vùng, hủy chuyến hoặc hành vi đặt dịch vụ đáp lại giờ hẹn.
+
+Các cổng đối chứng lấy một hình thức ràng buộc từ văn liệu, dùng cùng bộ
+sinh của khóa luận. Chúng không tái lập toàn bộ bộ giải, mục tiêu và dữ
+liệu của nghiên cứu gốc. Đặc biệt, trần 30--120 giây ở đây chặt hơn mức
+15 phút trong thiết lập mặc định của Schulz và Pfeiffer~\cite{schulz2026}.
+Tỉ lệ phục hồi cao trong panel không chứng minh thuật toán của công trình
+đó kém hơn. Cách đối chiếu hợp lệ là chỉ rõ nghĩa vụ nào được tính, trạng
+thái nào làm nó mất khả thi và hệ thực thi xử lý ra sao.
+
+Khóa luận cũng chưa có thử nghiệm người dùng hay triển khai trên đội xe
+thật. Không thể chọn một trần tốt nhất chỉ từ tổng khách và tổng dịch
+chuyển, hoặc định giá mỗi giây dịch chuyển bằng một hệ số từ khảo sát
+khác. Điều đã biết là chi phí kỹ thuật của một hợp đồng cụ thể; sự chấp
+nhận chi phí đó là quyết định cần bằng chứng bổ sung.
+
+\subsection{Kết luận thực nghiệm theo ba câu hỏi}
+
+RQ1 được hỗ trợ ở nghĩa vận hành: ba mốc cho phép tái tính sổ hành vi, và
+gói cam kết giảm mạnh đại lượng đó trong panel chính. RQ2 cho một đánh
+đổi đo được; tiêu chí tổng hợp H6 không đạt vì mất dịch vụ vượt mức đã
+đặt. Không có lợi ích người dùng đã đo để tự động coi đánh đổi là đáng giá.
+
+RQ3 được hỗ trợ theo điều kiện và theo phiên bản: cổng hành vi không tự
+loại phương án giữ tuyến hợp lệ, còn các cổng theo kết quả có thể cần
+miễn trừ khi trôi dạt. Sau phục hồi, số khách có thể gần nhau. Một biên
+nhìn thấy còn cần phần giữ tuyến được khống chế; T38 mới kiểm tần suất
+quan sát, chưa cung cấp bảo đảm cho quần thể. Các giới hạn này xác định
+chính xác việc cần làm tiếp, thay vì mở rộng phát biểu vượt bằng chứng.

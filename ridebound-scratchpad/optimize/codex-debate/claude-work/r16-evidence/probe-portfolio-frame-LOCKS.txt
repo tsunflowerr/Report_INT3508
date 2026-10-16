@@ -1,0 +1,837 @@
+# probe_portfolio_frame.py E:/RideBoundData/wp14r/development-v6-ledger/w14-d20181112-s10-r1-w08-c1-nobudget-s7/attempt-01/output/transcript-00.ndjson skip=30
+# simTimeMs 2446000 decisionHash 4457b9b7738d2d1b7b41dfecdd4fc31fdc447c9c0cefe2debc0d7a82b72e5c0b
+# candidatePortfolio (shortened)
+{
+ "candidates": [
+  {
+   "candidateId": "candidate-v1-7ab80644dd1a5a1531b511681baf752969d6d8ffe468afde666a6fe65aa9e29c",
+   "isNoOp": true,
+   "newRequestIds": [],
+   "objectiveContributions": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 4,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+      "requestId": "rq-63dfce8968e45f3b62f72ffb1bc351f8ef0166dd7264a225dd7ce12b983dcaee",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-aa47f860139df4a400105ae9532eb3d873ef646a84ec158e2c8b1b55512ac922"
+     },
+     "... 4 items"
+    ],
+    "mutableSuffix": [],
+    "planVersion": 2
+   },
+   "schedule": {
+    "operationalCost": 0,
+    "stops": []
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+  },
+  {
+   "candidateId": "candidate-v1-dd0ecc6dc68954ea369672793bc044c6c3918c688d4fe97c06ea29108aa0a441",
+   "certifiedForwardSlackMs": 102611,
+   "isNoOp": false,
+   "newRequestIds": [
+    "rq-0a590096cbe9e0a8aabc4769b2747491c7461635d9e57731ada1ad26d571cf4d"
+   ],
+   "objectiveContributions": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    389033,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 4,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+      "requestId": "rq-63dfce8968e45f3b62f72ffb1bc351f8ef0166dd7264a225dd7ce12b983dcaee",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-aa47f860139df4a400105ae9532eb3d873ef646a84ec158e2c8b1b55512ac922"
+     },
+     "... 4 items"
+    ],
+    "mutableSuffix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-175203b76b976bc3a6d6d43ad7fe5378b974c6ea7b4572cb1200e0d2bd7c6c71",
+      "requestId": "rq-0a590096cbe9e0a8aabc4769b2747491c7461635d9e57731ada1ad26d571cf4d",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-7a55f168b3ce7937032bf51a8162fa5f95ad5c7744f7dc15af0b5500e7c9f97b"
+     },
+     "... 2 items"
+    ],
+    "planVersion": 3
+   },
+   "schedule": {
+    "operationalCost": 389033,
+    "stops": [
+     {
+      "arrivalTimeMs": 2629810,
+      "departureTimeMs": 2629810,
+      "serviceStartTimeMs": 2629810,
+      "stopId": "rb-p-7a55f168b3ce7937032bf51a8162fa5f95ad5c7744f7dc15af0b5500e7c9f97b"
+     },
+     "... 2 items"
+    ]
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"
+  },
+  {
+   "candidateId": "candidate-v1-3ad0b6b306020e8d91614f3d49262e5209ffe6e59141d477a24390457e16b16f",
+   "certifiedForwardSlackMs": 190035,
+   "isNoOp": true,
+   "newRequestIds": [],
+   "objectiveContributions": [
+    0,
+    1000000,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    277478,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 7,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-bd32d4ca03350e944edde70d39c47c3a87cddb208d92bb64ac22c641d4c80ee0",
+      "requestId": "rq-ea9b62dac75cee404484e44b3b1f510482aaf483e6431a8fdd2f2270cfd96a9c",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-800b432adf9caa2881fc2fbaa1ff34e2acc56f7060c55e893933916ea337c3c6"
+     },
+     "... 7 items"
+    ],
+    "mutableSuffix": [
+     {
+      "kind": "dropOff",
+      "nodeId": "node-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f",
+      "requestId": "rq-a12813d5ea7f5791ac3cc18fb4b80543595dddba4f594705ece07d29fe1619c0",
+      "serviceDurationMs": 0,
+      "stopId": "rb-d-acf5065e3c716c432ac21f10b315abad215a6d41dff055fb8182155834f500e5"
+     }
+    ],
+    "planVersion": 4
+   },
+   "schedule": {
+    "operationalCost": 277478,
+    "stops": [
+     {
+      "arrivalTimeMs": 2723478,
+      "departureTimeMs": 2723478,
+      "serviceStartTimeMs": 2723478,
+      "stopId": "rb-d-acf5065e3c716c432ac21f10b315abad215a6d41dff055fb8182155834f500e5"
+     }
+    ]
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+  },
+  {
+   "candidateId": "candidate-v1-a79bc963319674977f819439167c15c4ffaca7e0d713e8a41e5271da1cc5821e",
+   "certifiedForwardSlackMs": 28071,
+   "isNoOp": false,
+   "newRequestIds": [
+    "rq-0a590096cbe9e0a8aabc4769b2747491c7461635d9e57731ada1ad26d571cf4d"
+   ],
+   "objectiveContributions": [
+    1,
+    1000000,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    777152,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 7,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-bd32d4ca03350e944edde70d39c47c3a87cddb208d92bb64ac22c641d4c80ee0",
+      "requestId": "rq-ea9b62dac75cee404484e44b3b1f510482aaf483e6431a8fdd2f2270cfd96a9c",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-800b432adf9caa2881fc2fbaa1ff34e2acc56f7060c55e893933916ea337c3c6"
+     },
+     "... 7 items"
+    ],
+    "mutableSuffix": [
+     {
+      "kind": "dropOff",
+      "nodeId": "node-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f",
+      "requestId": "rq-a12813d5ea7f5791ac3cc18fb4b80543595dddba4f594705ece07d29fe1619c0",
+      "serviceDurationMs": 0,
+      "stopId": "rb-d-acf5065e3c716c432ac21f10b315abad215a6d41dff055fb8182155834f500e5"
+     },
+     "... 3 items"
+    ],
+    "planVersion": 5
+   },
+   "schedule": {
+    "operationalCost": 777152,
+    "stops": [
+     {
+      "arrivalTimeMs": 2723478,
+      "departureTimeMs": 2723478,
+      "serviceStartTimeMs": 2723478,
+      "stopId": "rb-d-acf5065e3c716c432ac21f10b315abad215a6d41dff055fb8182155834f500e5"
+     },
+     "... 3 items"
+    ]
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c"
+  },
+  {
+   "candidateId": "candidate-v1-92032942e2891de697edb7f97427345c663317aaf8bee01ef0ad253ed7b93994",
+   "certifiedForwardSlackMs": 300693,
+   "isNoOp": true,
+   "newRequestIds": [],
+   "objectiveContributions": [
+    0,
+    1000000,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    744521,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 2,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-a1d070fda0525fa3bb33fd8e05cb25be8e4d4c36b042ee135533f67a5ce72166",
+      "requestId": "rq-4266fdbcae2e32d830bad1057d6701b0ae93716bd0a43e7518e69a0ebf9cc239",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-a8e0efc6570e762065606b6153fc24c3314ced8ab383e95b1b751dbd0a45824d"
+     },
+     "... 2 items"
+    ],
+    "mutableSuffix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-4a760952e8989a0b21548f11112fbbe1b67c7a9743369c60bd5a4810b82aaa4d",
+      "requestId": "rq-fbe9fb9fa86c4f2e394e06c3c2fcb316ef6484057f74b6422096e9bcaa859502",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-706d83c104bdbb4b81344d46356f26c5d9356fc6c5ea9e845ca0a9936008e09a"
+     },
+     "... 2 items"
+    ],
+    "planVersion": 2
+   },
+   "schedule": {
+    "operationalCost": 744521,
+    "stops": [
+     {
+      "arrivalTimeMs": 2589136,
+      "departureTimeMs": 2589136,
+      "serviceStartTimeMs": 2589136,
+      "stopId": "rb-p-706d83c104bdbb4b81344d46356f26c5d9356fc6c5ea9e845ca0a9936008e09a"
+     },
+     "... 2 items"
+    ]
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+  },
+  {
+   "candidateId": "candidate-v1-db221c1e0bc95a59882aba2bdc507dfb4d7b2e964c0100153fc55fe9f02d7d0d",
+   "certifiedForwardSlackMs": 283430,
+   "isNoOp": true,
+   "newRequestIds": [],
+   "objectiveContributions": [
+    0,
+    1000000,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    410859,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 9,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+      "requestId": "rq-e57d177747558137be3689979c31028e0511d0dd254b9b29f02e57e055903b3d",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-474065023bc838df477e4b53ce6cbbb1d326278b69eb23167364e464cc00f05b"
+     },
+     "... 9 items"
+    ],
+    "mutableSuffix": [
+     {
+      "kind": "dropOff",
+      "nodeId": "node-7656c66d6e66b31dc7f4013913d9cb76df4d0b4e6ddccf4b4d3fd33eb3468341",
+      "requestId": "rq-064f4acfc6f7e8e0694834eb0af9bba4f2ee754961260659309afc847e7a9ffe",
+      "serviceDurationMs": 0,
+      "stopId": "rb-d-e80dc6f270915b47476c8016c5ed5ceaef87762e1184c6516f0ccbb0457df2c2"
+     }
+    ],
+    "planVersion": 5
+   },
+   "schedule": {
+    "operationalCost": 410859,
+    "stops": [
+     {
+      "arrivalTimeMs": 2856859,
+      "departureTimeMs": 2856859,
+      "serviceStartTimeMs": 2856859,
+      "stopId": "rb-d-e80dc6f270915b47476c8016c5ed5ceaef87762e1184c6516f0ccbb0457df2c2"
+     }
+    ]
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+  },
+  {
+   "candidateId": "candidate-v1-9736670792fc1201dd3c68a1b43d53ae76dc04cb8b3e223aa5b16d6238e1ad93",
+   "certifiedForwardSlackMs": 76727,
+   "isNoOp": true,
+   "newRequestIds": [],
+   "objectiveContributions": [
+    0,
+    1000000,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    546889,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 7,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+      "requestId": "rq-9097f954ad38feeb44b37e726697ec80f73ae74a79e6e0977c4314749b28cec1",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-42d6a0ce3f7748d7bd04031cf4b22d2f661feda53563e958e0bdcd6b2c5831d7"
+     },
+     "... 7 items"
+    ],
+    "mutableSuffix": [
+     {
+      "kind": "dropOff",
+      "nodeId": "node-98135593a06e0f76ec204bb29b61a6bbb66da35447838abe3f02adb85cd7bc9a",
+      "requestId": "rq-dabb66fc6b39887fcfcb05ca3e989be23dc660823a92d0e03809782e61ba9dab",
+      "serviceDurationMs": 0,
+      "stopId": "rb-d-44d324a77cf61a5ba6b75a023871f9b6640baeff199051b02c3156cbce126d69"
+     },
+     "... 3 items"
+    ],
+    "planVersion": 5
+   },
+   "schedule": {
+    "operationalCost": 546889,
+    "stops": [
+     {
+      "arrivalTimeMs": 2448609,
+      "departureTimeMs": 2448609,
+      "serviceStartTimeMs": 2448609,
+      "stopId": "rb-d-44d324a77cf61a5ba6b75a023871f9b6640baeff199051b02c3156cbce126d69"
+     },
+     "... 3 items"
+    ]
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471"
+  },
+  {
+   "candidateId": "candidate-v1-31b280bd6b16b5e2755533d53c19087753e2d2b42911b47d69bbdeda6118fd9e",
+   "certifiedForwardSlackMs": 214142,
+   "isNoOp": true,
+   "newRequestIds": [],
+   "objectiveContributions": [
+    0,
+    1000000,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    450820,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 6,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-5884bb32ae57d87383af55e6201a731256237c9f17416c85509f1604163953a6",
+      "requestId": "rq-6e83dbd654149441768044ff7498c08af6e0690d99b1f9df3e1443b1d728b429",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-d1f731dc29efcc4011356c8c38fbe54119cba6e600828e79224d6f8d39452d1c"
+     },
+     "... 6 items"
+    ],
+    "mutableSuffix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c",
+      "requestId": "rq-5a4655092a0aa65cda4dcdf5ad192e1ca7db3ebab40f48c3a8406d06f1b01d79",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-65fdcc8ea9572683d46589857e2375bd364bd1952cc7db13d908935da3e6eb1d"
+     },
+     "... 2 items"
+    ],
+    "planVersion": 4
+   },
+   "schedule": {
+    "operationalCost": 450820,
+    "stops": [
+     {
+      "arrivalTimeMs": 2468536,
+      "departureTimeMs": 2468536,
+      "serviceStartTimeMs": 2468536,
+      "stopId": "rb-p-65fdcc8ea9572683d46589857e2375bd364bd1952cc7db13d908935da3e6eb1d"
+     },
+     "... 2 items"
+    ]
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+  },
+  {
+   "candidateId": "candidate-v1-4193f45c1a595f25487a4343c778b6e0179c72f37059d220b7532912459dfd82",
+   "certifiedForwardSlackMs": 94581,
+   "isNoOp": true,
+   "newRequestIds": [],
+   "objectiveContributions": [
+    0,
+    1000000,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    426471,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 8,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-51215c4894a8ee03e5a7080a71232207043626e7792740cd721d9da65fbacbe0",
+      "requestId": "rq-8dff25044322f7643788c8d23fff6ecdffc07ca54a903af3aa5e9f92397c3244",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-ec5b4fe8a467cd3335a8395939690e13cd0ff0d19b4f66a429a2b518acb5b6fb"
+     },
+     "... 8 items"
+    ],
+    "mutableSuffix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+      "requestId": "rq-74c207f6087915e9ad6aa496ba06628d6f98d5dbbd31862bb1f8d69caa4b1e28",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-4264c8a0b69d5d34d9a845a7b69d2e6b5cc62bffbba9b85f5f5dc867bab423f8"
+     },
+     "... 2 items"
+    ],
+    "planVersion": 5
+   },
+   "schedule": {
+    "operationalCost": 426471,
+    "stops": [
+     {
+      "arrivalTimeMs": 2683308,
+      "departureTimeMs": 2683308,
+      "serviceStartTimeMs": 2683308,
+      "stopId": "rb-p-4264c8a0b69d5d34d9a845a7b69d2e6b5cc62bffbba9b85f5f5dc867bab423f8"
+     },
+     "... 2 items"
+    ]
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f"
+  },
+  {
+   "candidateId": "candidate-v1-7d307e8e98f4e23d1f256ae09532cab066b910899282e97450057b002763adb1",
+   "isNoOp": true,
+   "newRequestIds": [],
+   "objectiveContributions": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 6,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-a5d545a12cfc68bd09ce2dafbb6a9b798f429f98b5240fd1cf31ad4a5af9babb",
+      "requestId": "rq-ef7335c2e6ef3ff2df83187fb07071a0b2968a8cfa93cea51c3dd59bd48d29e7",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-f0d81cfef13d38a452fb1c7e2752ea1ac966e1008d6238fd31e728be9cc7408a"
+     },
+     "... 6 items"
+    ],
+    "mutableSuffix": [],
+    "planVersion": 3
+   },
+   "schedule": {
+    "operationalCost": 0,
+    "stops": []
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+  },
+  {
+   "candidateId": "candidate-v1-9c1b8c0a8e43e85041a53382dcfedb7c006a269bc1e9b455573e455aefe9e054",
+   "certifiedForwardSlackMs": 102611,
+   "isNoOp": false,
+   "newRequestIds": [
+    "rq-0a590096cbe9e0a8aabc4769b2747491c7461635d9e57731ada1ad26d571cf4d"
+   ],
+   "objectiveContributions": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    435431,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "policyEligibility": "eligible",
+   "relocatedWaitMs": 0,
+   "route": {
+    "executedStopCount": 6,
+    "frozenPrefix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-a5d545a12cfc68bd09ce2dafbb6a9b798f429f98b5240fd1cf31ad4a5af9babb",
+      "requestId": "rq-ef7335c2e6ef3ff2df83187fb07071a0b2968a8cfa93cea51c3dd59bd48d29e7",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-f0d81cfef13d38a452fb1c7e2752ea1ac966e1008d6238fd31e728be9cc7408a"
+     },
+     "... 6 items"
+    ],
+    "mutableSuffix": [
+     {
+      "kind": "pickup",
+      "nodeId": "node-175203b76b976bc3a6d6d43ad7fe5378b974c6ea7b4572cb1200e0d2bd7c6c71",
+      "requestId": "rq-0a590096cbe9e0a8aabc4769b2747491c7461635d9e57731ada1ad26d571cf4d",
+      "serviceDurationMs": 0,
+      "stopId": "rb-p-7a55f168b3ce7937032bf51a8162fa5f95ad5c7744f7dc15af0b5500e7c9f97b"
+     },
+     "... 2 items"
+    ],
+    "planVersion": 4
+   },
+   "schedule": {
+    "operationalCost": 435431,
+    "stops": [
+     {
+      "arrivalTimeMs": 2676208,
+      "departureTimeMs": 2676208,
+      "serviceStartTimeMs": 2676208,
+      "stopId": "rb-p-7a55f168b3ce7937032bf51a8162fa5f95ad5c7744f7dc15af0b5500e7c9f97b"
+     },
+     "... 2 items"
+    ]
+   },
+   "scheduleStrategy": "earliestFeasible",
+   "vehicleId": "veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe"
+  }
+ ],
+ "generatedCandidateCount": 11,
+ "objectiveProfile": "hardVector",
+ "policyEligibleCandidateCount": 11,
+ "portfolioVersion": "1.0.0",
+ "schemaId": "https://ridebound.local/schemas/wp13/v1/runner-retained-candidate-portfolio-evidence.schema.json",
+ "selectedCandidateIds": [
+  "candidate-v1-dd0ecc6dc68954ea369672793bc044c6c3918c688d4fe97c06ea29108aa0a441",
+  "candidate-v1-3ad0b6b306020e8d91614f3d49262e5209ffe6e59141d477a24390457e16b16f",
+  "candidate-v1-92032942e2891de697edb7f97427345c663317aaf8bee01ef0ad253ed7b93994",
+  "candidate-v1-db221c1e0bc95a59882aba2bdc507dfb4d7b2e964c0100153fc55fe9f02d7d0d",
+  "candidate-v1-9736670792fc1201dd3c68a1b43d53ae76dc04cb8b3e223aa5b16d6238e1ad93",
+  "candidate-v1-31b280bd6b16b5e2755533d53c19087753e2d2b42911b47d69bbdeda6118fd9e",
+  "candidate-v1-4193f45c1a595f25487a4343c778b6e0179c72f37059d220b7532912459dfd82",
+  "candidate-v1-7d307e8e98f4e23d1f256ae09532cab066b910899282e97450057b002763adb1"
+ ],
+ "selectionProblem": {
+  "objectiveLevels": [
+   {
+    "aggregation": "sum",
+    "levelIndex": 0,
+    "name": "accepted-request-count",
+    "sense": "maximize"
+   },
+   {
+    "aggregation": "maximum",
+    "levelIndex": 1,
+    "name": "worst-hard-utilization-ppm",
+    "sense": "minimize"
+   },
+   {
+    "aggregation": "sum",
+    "levelIndex": 2,
+    "name": "revision:pickup_eta_total_ms",
+    "sense": "minimize"
+   },
+   {
+    "aggregation": "sum",
+    "levelIndex": 3,
+    "name": "revision:drop_eta_total_ms",
+    "sense": "minimize"
+   },
+   {
+    "aggregation": "sum",
+    "levelIndex": 4,
+    "name": "revision:material_eta_revision_count",
+    "sense": "minimize"
+   },
+   {
+    "aggregation": "sum",
+    "levelIndex": 5,
+    "name": "revision:vehicle_switch_count",
+    "sense": "minimize"
+   },
+   {
+    "aggregation": "sum",
+    "levelIndex": 6,
+    "name": "revision:pickup_stop_relocation_mm",
+    "sense": "minimize"
+   },
+   {
+    "aggregation": "sum",
+    "levelIndex": 7,
+    "name": "revision:pickup_stop_switch_count",
+    "sense": "minimize"
+   },
+   {
+    "aggregation": "sum",
+    "levelIndex": 8,
+    "name": "revision:drop_stop_relocation_mm",
+    "sense": "minimize"
+   },
+   {
+    "aggregation": "sum",
+    "levelIndex": 9,
+    "name": "revision:drop_stop_switch_count",
+    "sense": "minimize"
+   },
+   {
+    "aggregatio
+# selection.finalSolverDiagnostics.objectiveBounds (name, incumbent, bestBound)
+  accepted-request-count: 1 / 1
+  worst-hard-utilization-ppm: 1000000 / 1000000
+  revision:pickup_eta_total_ms: 0 / 0
+  revision:drop_eta_total_ms: 0 / 0
+  revision:material_eta_revision_count: 0 / 0
+  revision:vehicle_switch_count: 0 / 0
+  revision:pickup_stop_relocation_mm: 0 / 0
+  revision:pickup_stop_switch_count: 0 / 0
+  revision:drop_stop_relocation_mm: 0 / 0
+  revision:drop_stop_switch_count: 0 / 0
+  revision:incumbent_order_inversion_count: 0 / 0
+  revision:pre_pickup_inserted_stop_count: 0 / 0
+  operational-cost: 3246071 / 3246071
+  candidate-id-rank:veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897: 1 / 1
+  candidate-id-rank:veh-21af05defc8038ab89d5c462ab9837f71ba3f21560802c5a0ef068980d436b6c: 0 / 0
+  candidate-id-rank:veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818: 0 / 0
+  candidate-id-rank:veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385: 0 / 0
+  candidate-id-rank:veh-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471: 0 / 0
+  candidate-id-rank:veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998: 0 / 0
+  candidate-id-rank:veh-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f: 0 / 0
+  candidate-id-rank:veh-fa893b7b6d70835eaa997043b8616a3e74a94d3bbd1b9a67ba45df31d5df71fe: 0 / 0
+# prunedCandidates codes: {"MAX_RIDE_TIME": 12, "PICKUP_WINDOW": 21}
+# objective-level name sequences over all portfolio frames:
+  821: ['accepted-request-count', 'worst-hard-utilization-ppm', 'revision:pickup_eta_total_ms', 'revision:drop_eta_total_ms', 'revision:material_eta_revision_count', 'revision:vehicle_switch_count', 'revision:pickup_stop_relocation_mm', 'revision:pickup_stop_switch_count', 'revision:drop_stop_relocation_mm', 'revision:drop_stop_switch_count', 'revision:incumbent_order_inversion_count', 'revision:pre_pickup_inserted_stop_count', 'operational-cost', 'candidate-id-rank*']
+  4: ['accepted-request-count', 'operational-cost', 'candidate-id-rank*']
+# policyEligibility values: {'eligible': 7072, 'pruned': 26}; objectiveContributions lengths: {10: 39, 21: 7033, 0: 26}

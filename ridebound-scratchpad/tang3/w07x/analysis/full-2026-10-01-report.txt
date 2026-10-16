@@ -1,0 +1,43 @@
+# w07x_analyze.py FULL; jobs analysed 184
+== validity: 0 problem(s)
+  none
+  policyConfigurationHash distinct per arm: 23 hashes for 23 arms
+
+== per level (8 cells, 864 requests): served U/C/Mplus/V, same decisions, prunes, max C_r, promise broken, forced, E2
+  U served 665
+  x= 30: served C 660 M+ 660 V 660 | same C/M+ 8/8 V/C 8/8 | prunes C 221 M+ 227 V 227 | max C_r (s) C 10.0
+          own promise broken: C 0.000 M+ 0.240 V 0.292 | by the deadline rule (A > x): C 0.240 M+ 0.240 V 0.240 | forced C 0.000 M+ 0.586 V 0.632 | E2 C 0.088 M+ 0.088 V 0.088
+  x= 60: served C 661 M+ 661 | same C/M+ 8/8 | prunes C 186 M+ 192 | max C_r (s) C 41.9
+          own promise broken: C 0.000 M+ 0.073 | by the deadline rule (A > x): C 0.073 M+ 0.073 | forced C 0.000 M+ 0.355 | E2 C 0.088 M+ 0.088
+  x= 90: served C 664 M+ 663 V 663 | same C/M+ 7/8 V/C 7/8 | prunes C 153 M+ 159 V 160 | max C_r (s) C 86.9
+          own promise broken: C 0.000 M+ 0.021 V 0.029 | by the deadline rule (A > x): C 0.021 M+ 0.021 V 0.021 | forced C 0.000 M+ 0.130 V 0.174 | E2 C 0.092 M+ 0.092 V 0.092
+  x=120: served C 666 M+ 664 V 664 | same C/M+ 6/8 V/C 6/8 | prunes C 119 M+ 129 V 129 | max C_r (s) C 96.7
+          own promise broken: C 0.000 M+ 0.009 V 0.010 | by the deadline rule (A > x): C 0.012 M+ 0.009 V 0.009 | forced C 0.000 M+ 0.066 V 0.074 | E2 C 0.092 M+ 0.092 V 0.092
+  x=150: served C 666 M+ 666 V 666 | same C/M+ 8/8 V/C 8/8 | prunes C 108 M+ 115 V 115 | max C_r (s) C 96.7
+          own promise broken: C 0.000 M+ 0.005 V 0.008 | by the deadline rule (A > x): C 0.005 M+ 0.005 V 0.005 | forced C 0.000 M+ 0.068 V 0.086 | E2 C 0.092 M+ 0.092 V 0.092
+  x=180: served C 666 M+ 666 V 666 | same C/M+ 8/8 V/C 8/8 | prunes C 100 M+ 105 V 105 | max C_r (s) C 96.7
+          own promise broken: C 0.000 M+ 0.005 V 0.005 | by the deadline rule (A > x): C 0.005 M+ 0.005 V 0.005 | forced C 0.000 M+ 0.028 V 0.028 | E2 C 0.092 M+ 0.092 V 0.092
+  x=240: served C 665 M+ 665 V 665 | same C/M+ 8/8 V/C 8/8 | prunes C 87 M+ 91 V 91 | max C_r (s) C 208.2
+          own promise broken: C 0.000 M+ 0.002 V 0.004 | by the deadline rule (A > x): C 0.002 M+ 0.002 V 0.002 | forced C 0.000 M+ 0.017 V 0.017 | E2 C 0.090 M+ 0.090 V 0.090
+  x=300: served C 665 M+ 665 | same C/M+ 8/8 | prunes C 85 M+ 85 | max C_r (s) C 208.2
+          own promise broken: C 0.000 M+ 0.002 | by the deadline rule (A > x): C 0.002 M+ 0.002 | forced C 0.000 M+ 0.017 | E2 C 0.090 M+ 0.090
+
+== served per cell: U | then per level C/M+/V
+  d20181112-s10-r1-w07: U 90 | 30: 87/87/87 | 60: 87/87 | 90: 90/89/89 | 120: 90/89/89 | 150: 90/90/90 | 180: 90/90/90 | 240: 90/90/90 | 300: 90/90
+  d20181112-s10-r2-w07: U 82 | 30: 82/82/82 | 60: 82/82 | 90: 82/82/82 | 120: 82/82/82 | 150: 82/82/82 | 180: 82/82/82 | 240: 82/82/82 | 300: 82/82
+  d20181112-s10-r3-w07: U 97 | 30: 97/97/97 | 60: 97/97 | 90: 97/97/97 | 120: 97/97/97 | 150: 97/97/97 | 180: 97/97/97 | 240: 97/97/97 | 300: 97/97
+  d20181112-s10-r4-w07: U 87 | 30: 86/86/86 | 60: 87/87 | 90: 87/87/87 | 120: 87/87/87 | 150: 87/87/87 | 180: 87/87/87 | 240: 87/87/87 | 300: 87/87
+  d20181113-s10-r1-w07: U 70 | 30: 68/68/68 | 60: 68/68 | 90: 69/69/69 | 120: 71/70/70 | 150: 71/71/71 | 180: 71/71/71 | 240: 70/70/70 | 300: 70/70
+  d20181113-s10-r2-w07: U 65 | 30: 65/65/65 | 60: 65/65 | 90: 65/65/65 | 120: 65/65/65 | 150: 65/65/65 | 180: 65/65/65 | 240: 65/65/65 | 300: 65/65
+  d20181113-s10-r3-w07: U 82 | 30: 83/83/83 | 60: 83/83 | 90: 82/82/82 | 120: 82/82/82 | 150: 82/82/82 | 180: 82/82/82 | 240: 82/82/82 | 300: 82/82
+  d20181113-s10-r4-w07: U 92 | 30: 92/92/92 | 60: 92/92 | 90: 92/92/92 | 120: 92/92/92 | 150: 92/92/92 | 180: 92/92/92 | 240: 92/92/92 | 300: 92/92
+
+== predictions (W07X-PLAN §4)
+R1 new C-x jobs with non-normal decisions: 0/32 [] -> HELD
+R2 cells where C-x and Mplus-x decisions differ: {90: 1, 150: 0, 180: 0, 240: 0} -> NOT HELD
+R3 per level (total C-M+, cells with C>M+, per-cell diffs): {90: (1, 1, [1, 0, 0, 0, 0, 0, 0, 0]), 150: (0, 0, [0, 0, 0, 0, 0, 0, 0, 0]), 180: (0, 0, [0, 0, 0, 0, 0, 0, 0, 0]), 240: (0, 0, [0, 0, 0, 0, 0, 0, 0, 0])} -> HELD
+R4 forced share V vs M+: {90: ('0.174', '0.130'), 120: ('0.074', '0.066'), 150: ('0.086', '0.068'), 180: ('0.028', '0.028'), 240: ('0.017', '0.017')} -> NOT HELD
+R5 served V vs C: {90: (663, 664), 120: (664, 666), 150: (666, 666), 180: (666, 666), 240: (665, 665)} -> HELD
+R6 M+ own promise broken by level: {60: '0.0725', 90: '0.0212', 120: '0.0087', 150: '0.0051', 180: '0.0051', 240: '0.0018', 300: '0.0018'} -> HELD
+R7 A > x share C vs M+: {90: ('0.0211', '0.0212'), 150: ('0.0051', '0.0051'), 180: ('0.0051', '0.0051'), 240: ('0.0018', '0.0018')} -> HELD
+R8 V own promise broken vs V's A > x: {30: ('0.2919', '0.2404'), 90: ('0.0289', '0.0212'), 120: ('0.0101', '0.0087'), 150: ('0.0083', '0.0051'), 180: ('0.0051', '0.0051'), 240: ('0.0036', '0.0018')} -> HELD

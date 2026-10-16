@@ -1,0 +1,13 @@
+{
+  "randomDifferentialCases": 1000,
+  "duplicatesCase": "pass",
+  "oversizeFallbackBand": "correctlyRejected",
+  "example": {
+    "left": 690,
+    "right": 750,
+    "score": 3
+  },
+  "scope": "Exact best weighted distinct-color coverage on supplied scalar ETA options with one fixed fallback band; not a global multi-rider or closed-loop optimum.",
+  "novelty": "Sweep-line maximum coverage is standard; contribution of a future research method cannot be claimed from this primitive alone.",
+  "scriptSha256": "f79ce692841e72635bd18ad7b4f264b1d9b6ae61a06d2c31955c0ca888929c30"
+}

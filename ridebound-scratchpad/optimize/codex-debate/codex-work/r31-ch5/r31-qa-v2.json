@@ -1,0 +1,96 @@
+{
+  "files": {
+    "10-chuong5-v2.tex": {
+      "opening_words": 35,
+      "sections": [
+        {
+          "title": "Tổng kết theo ba phần",
+          "prose_words": 492,
+          "table_text_words": 0,
+          "tables": 0
+        },
+        {
+          "title": "Hạn chế",
+          "prose_words": 169,
+          "table_text_words": 0,
+          "tables": 0
+        },
+        {
+          "title": "Hướng phát triển",
+          "prose_words": 271,
+          "table_text_words": 0,
+          "tables": 0
+        }
+      ],
+      "prose_total": 967,
+      "brace_errors": [],
+      "environment_errors": [],
+      "math_delimiters_even": true,
+      "forbidden_hits": [],
+      "paragraphs_without_ev": [],
+      "ev_comments": 11
+    },
+    "11-phuluc-v2.tex": {
+      "opening_words": 4,
+      "sections": [
+        {
+          "title": "Phạm vi của tập kịch bản tĩnh",
+          "prose_words": 40,
+          "table_text_words": 0,
+          "tables": 0
+        },
+        {
+          "title": "Phương án giữ nguyên kế hoạch dưới các luật",
+          "prose_words": 140,
+          "table_text_words": 94,
+          "tables": 1
+        },
+        {
+          "title": "Thông tin tái lập",
+          "prose_words": 389,
+          "table_text_words": 135,
+          "tables": 2
+        }
+      ],
+      "prose_total": 573,
+      "brace_errors": [],
+      "environment_errors": [],
+      "math_delimiters_even": true,
+      "forbidden_hits": [],
+      "paragraphs_without_ev": [],
+      "ev_comments": 23
+    }
+  },
+  "unresolved_references": [],
+  "duplicate_labels": [],
+  "scenario_list_checks": {
+    "test": {
+      "count": 34,
+      "exact_set_match": true,
+      "no_duplicates": true
+    },
+    "calibration": {
+      "count": 15,
+      "exact_set_match": true,
+      "no_duplicates": true
+    }
+  },
+  "illustrative_arithmetic": {
+    "ce1": {
+      "x": 0,
+      "c": 60,
+      "z": 60
+    },
+    "ce4": {
+      "endpoint": 0,
+      "variation": 120
+    },
+    "ce5": {
+      "endpoint": 120,
+      "variation": 120
+    }
+  },
+  "summary_paragraph_count": 3,
+  "future_direction_count": 5,
+  "status": "PASS (static checks only; no build or simulation)"
+}

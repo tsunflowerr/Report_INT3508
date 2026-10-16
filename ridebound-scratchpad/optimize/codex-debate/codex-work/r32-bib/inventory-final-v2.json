@@ -1,0 +1,241 @@
+{
+  "scan_time": "2026-10-13T14:23:06.376220+07:00",
+  "files": [
+    {
+      "path": "E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/07-chuong3-v3.tex",
+      "keys": [
+        "alonsomora2017",
+        "engelhardt2026",
+        "fielbaum2020",
+        "horl2022",
+        "ortools",
+        "schulz2026"
+      ]
+    },
+    {
+      "path": "E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/08-chuong4-phanA-v4.tex",
+      "keys": [
+        "engelhardt2026",
+        "schulz2026"
+      ]
+    },
+    {
+      "path": "E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/09-chuong4-phanB-v7.tex",
+      "keys": [
+        "engelhardt2026",
+        "horl2022",
+        "schulz2026"
+      ]
+    },
+    {
+      "path": "E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/06-chuong2-v2.tex",
+      "keys": [
+        "alonsogonzalez2020",
+        "alonsomora2017",
+        "elmi2026",
+        "engelhardt2026",
+        "fielbaum2020",
+        "horl2022",
+        "hu2022",
+        "kovacs2014",
+        "laupichler2026",
+        "leonardi2024",
+        "lu2024",
+        "molenbruch2017",
+        "schulz2026",
+        "sridharan1987",
+        "tlc",
+        "wardman2026",
+        "yu2022"
+      ]
+    },
+    {
+      "path": "E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/06-chuong2-v3.tex",
+      "keys": [
+        "alonsogonzalez2020",
+        "alonsomora2017",
+        "elmi2026",
+        "engelhardt2026",
+        "fielbaum2020",
+        "horl2022",
+        "hu2022",
+        "laupichler2026",
+        "leonardi2024",
+        "lu2024",
+        "molenbruch2017",
+        "schulz2026",
+        "tlc",
+        "wardman2026",
+        "yu2022"
+      ]
+    },
+    {
+      "path": "E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/06-chuong2-v4.tex",
+      "keys": [
+        "alonsogonzalez2020",
+        "alonsomora2017",
+        "elmi2026",
+        "engelhardt2026",
+        "fielbaum2020",
+        "horl2022",
+        "hu2022",
+        "laupichler2026",
+        "leonardi2024",
+        "lu2024",
+        "molenbruch2017",
+        "schulz2026",
+        "tlc",
+        "wardman2026",
+        "yu2022"
+      ]
+    },
+    {
+      "path": "E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/06-chuong2.tex",
+      "keys": [
+        "alonsogonzalez2020",
+        "alonsomora2017",
+        "elmi2026",
+        "engelhardt2026",
+        "fielbaum2020",
+        "horl2022",
+        "hu2022",
+        "kovacs2014",
+        "laupichler2026",
+        "leonardi2024",
+        "lu2024",
+        "molenbruch2017",
+        "schulz2026",
+        "sridharan1987",
+        "tlc",
+        "wardman2026",
+        "yu2022"
+      ]
+    }
+  ],
+  "cited_keys": [
+    "alonsogonzalez2020",
+    "alonsomora2017",
+    "elmi2026",
+    "engelhardt2026",
+    "fielbaum2020",
+    "horl2022",
+    "hu2022",
+    "kovacs2014",
+    "laupichler2026",
+    "leonardi2024",
+    "lu2024",
+    "molenbruch2017",
+    "ortools",
+    "schulz2026",
+    "sridharan1987",
+    "tlc",
+    "wardman2026",
+    "yu2022"
+  ],
+  "latest_ch2_keys": [
+    "alonsogonzalez2020",
+    "alonsomora2017",
+    "elmi2026",
+    "engelhardt2026",
+    "fielbaum2020",
+    "horl2022",
+    "hu2022",
+    "laupichler2026",
+    "leonardi2024",
+    "lu2024",
+    "molenbruch2017",
+    "schulz2026",
+    "tlc",
+    "wardman2026",
+    "yu2022"
+  ],
+  "active_keys": [
+    "alonsogonzalez2020",
+    "alonsomora2017",
+    "elmi2026",
+    "engelhardt2026",
+    "fielbaum2020",
+    "horl2022",
+    "hu2022",
+    "laupichler2026",
+    "leonardi2024",
+    "lu2024",
+    "molenbruch2017",
+    "ortools",
+    "schulz2026",
+    "tlc",
+    "wardman2026",
+    "yu2022"
+  ],
+  "planned_keys": [
+    "alonsogonzalez2020",
+    "alonsomora2017",
+    "ding2025",
+    "doordash2024",
+    "elmi2026",
+    "engelhardt2026",
+    "fielbaum2020",
+    "horl2022",
+    "hu2022",
+    "laupichler2026",
+    "leonardi2024",
+    "lu2024",
+    "moiaexpress",
+    "molenbruch2017",
+    "schulz2026",
+    "uberxshare",
+    "wang2026",
+    "wardman2026",
+    "yu2022"
+  ],
+  "retained_keys": [
+    "alonsomora2017",
+    "fielbaum2020",
+    "horl2022",
+    "schulz2026",
+    "elmi2026",
+    "laupichler2026",
+    "wang2026",
+    "engelhardt2026",
+    "ortools",
+    "molenbruch2017",
+    "leonardi2024",
+    "lu2024",
+    "hu2022",
+    "doordash2024",
+    "wardman2026",
+    "alonsogonzalez2020",
+    "yu2022",
+    "uberxshare",
+    "moiaexpress",
+    "ding2025",
+    "tlc",
+    "kovacs2014",
+    "sridharan1987"
+  ],
+  "legacy_drop_candidates": [
+    "agarwal2019",
+    "agatz2012",
+    "bansal2019",
+    "blackburn1986",
+    "borodin1992",
+    "chen2018",
+    "cordeau2007",
+    "fielbaum2022scale",
+    "fleetpy2022",
+    "gerzinic2023",
+    "groer2009",
+    "haferkamp2024",
+    "li2025",
+    "schmidt2026",
+    "sharifazadeh2022",
+    "sivagnanam2026",
+    "toth2014",
+    "zalesak2025"
+  ],
+  "status_counts": {
+    "VERIFIED": 45,
+    "CORRECTED": 7,
+    "CANNOT VERIFY": 1
+  }
+}

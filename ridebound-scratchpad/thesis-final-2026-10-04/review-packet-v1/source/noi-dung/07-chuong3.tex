@@ -1,0 +1,610 @@
+\chapter{Lời hứa có biên và các điều kiện bảo đảm}\label{ch:phuongphap}
+
+Chương này trả lời RQ1 bằng cách xác định đại lượng được ghi sổ, thời điểm kiểm tra và phạm vi
+của chứng nhận. Từ đó, chương xây dựng khung bốn họ cổng để trả lời phần lý thuyết của RQ3.
+Các bảo đảm đều có giả thiết; chúng không thay thế việc đo chất lượng dịch vụ và các biến động
+mà hành khách thực sự nhìn thấy ở Chương~\ref{ch:thucnghiem}.
+
+\section{Tổng quan cơ chế}
+
+RideBound công bố giờ đón và giờ trả dự kiến cho khách đã nhận. Mỗi khi công bố lại, độ dời
+được ghi vào sổ cái riêng của khách. Sổ cái không giảm; phương án làm vượt trần cứng bị loại
+trước khi bộ chọn đội xe giải bài toán quy hoạch nguyên.
+
+Điểm cần lựa chọn là độ dời nào được tính. Khóa luận so phương án mới với tuyến giữ nguyên
+trên cùng trạng thái hiện tại. Phần chênh giữa hai phép chiếu được quy cho quyết định. Phần
+chênh giữa tuyến giữ nguyên và giờ đã báo là phần thay đổi khi giữ tuyến. Một trần trên phần
+thứ nhất không đồng nghĩa trần trên toàn bộ biến động khách nhìn thấy.
+
+Một quyết định có miễn trừ vẫn có thể tiếp tục phục vụ khách nhưng phải ghi vi phạm và không
+được gắn nhãn vận hành bình thường. Đây là một phần của phạm vi chứng nhận, không phải một
+cách biến lời hứa đã vượt trần thành lời hứa được giữ.
+
+\section{Mô hình bài toán mở rộng}
+
+\subsection{Lời hứa công bố}
+
+Mở rộng mô hình bài toán ở Chương 2, ta bổ sung khái niệm lời hứa. Với mỗi hành khách $r$ đã được xác nhận,
+hệ thống duy trì một \emph{lời hứa đang mở}, gồm định danh xe được phân công, điểm đón, điểm
+trả, giờ đón dự kiến và giờ trả dự kiến. Lời hứa này được công bố cho hành khách và được ghi
+vào biên bản. Mỗi khi hệ thống ra quyết định, lời hứa có thể được công bố lại với giá trị mới.
+Trong chế độ xác nhận đặt xe dùng cho FleetPy, đề nghị tạm thời chưa mở lời hứa; mốc đầu
+được ghi khi khách xác nhận đặt xe.
+
+Chính sách phân biệt ba pha của yêu cầu: \emph{đã nhận} (hệ thống đã chấp nhận yêu cầu),
+\emph{đang chờ đón}, và \emph{đang trên xe}. Việc phân biệt ba pha
+là cần thiết vì các chiều cam kết có ý nghĩa khác nhau ở từng giai đoạn --- chẳng hạn giờ đón
+không còn ý nghĩa sau khi khách đã lên xe.
+
+\subsection{Các chiều cam kết}
+
+Hệ thống theo dõi mười chiều cam kết, chia thành ba nhóm. Nhóm thời gian gồm tổng độ dời giờ
+đón và tổng độ dời giờ trả, tính bằng mili giây. Nhóm định danh gồm số lần đổi xe, số lần đổi
+điểm đón, số lần đổi điểm trả. Nhóm cấu trúc gồm khoảng cách dời điểm đón và điểm trả tính bằng
+mili-mét, số cặp điểm dừng của khách cũ bị đảo thứ tự, số điểm dừng chèn thêm trước khi đón, và số lần sửa
+đổi đáng kể theo ngưỡng được cấu hình.
+
+Mỗi chiều có thể được đặt một trần cứng, hoặc để không giới hạn. Trong thực nghiệm, cấu hình
+được dùng nhiều nhất đặt trần cho chiều \emph{tổng độ dời giờ trả} và khóa cứng ba chiều định
+danh về không, tức cấm hoàn toàn việc đổi xe hay đổi điểm dừng sau khi đã hứa.
+
+\section{Phép phân rã ba mốc}
+\label{muc:bamoc}
+
+\subsection{Định nghĩa}
+\label{muc:dinhnghia-bamoc}
+
+Tại một thời điểm quyết định, với một tọa độ thời gian của hành khách $r$ đang có lời hứa mở,
+hệ thống dựng ba mốc:
+
+\begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+\item $v$ --- \textbf{previous}: lời hứa đã công bố lần gần nhất cho hành khách;
+\item $e$ --- \textbf{exogenous}: chính kế hoạch đó, chiếu lại từ vị trí thật hiện tại của xe.
+Cùng lộ trình, cùng phân công, chỉ khác điểm xuất phát và thời điểm chiếu;
+\item $p$ --- \textbf{proposed}: lời hứa mà phương án đang xét sẽ tạo ra.
+\end{itemize}
+
+Từ ba mốc này định nghĩa ba đại lượng:
+
+\begin{align}
+\text{độ dời do quyết định} \quad & A = |p - e|\\
+\text{thay đổi khi giữ tuyến} \quad & d = |e - v|\\
+\text{độ dời khách nhìn thấy} \quad & B = |p - v|
+\end{align}
+
+Mốc $e$ trả lời câu hỏi trong mô hình: nếu nhà điều hành giữ tuyến, giờ hẹn hiện được chiếu
+là bao nhiêu? Chênh lệch với giờ đã hứa là phần thay đổi khi giữ tuyến, gồm cả giao thông,
+tiến độ thực và độ trễ thực thi (mục~\ref{muc:phanra}). Chênh lệch với phương án đang xét
+là độ dời quy cho quyết định trong phép đối chiếu tại cùng trạng thái.
+
+\paragraph{$A$ là đại lượng đối xứng.} Cài đặt tính $A = |p - e|$ theo đúng trị tuyệt đối
+(\texttt{PromiseDeltaCalculator}, hàm \texttt{AbsoluteDifference}): một quyết định kéo lời hứa
+\emph{sớm} hơn mốc giữ tuyến cũng bị tính phí bằng đúng độ lệch đó, giống hệt một quyết định
+đẩy muộn. Không có quy ước một chiều nào trong mã.
+
+Cơ sở hành vi vì vậy có thể tính phí cả một sửa chữa khôi phục giờ đã hứa. Xét
+$v = 600$, $e = 720$, $p = 600$ (giây): giao thông đẩy lời hứa muộn đi 120 giây, và phương án
+đang xét kéo nó về đúng giờ đã hứa. Khi đó $A = 120$ trong khi $B = 0$: khách không thấy giờ
+dự kiến thay đổi, nhưng sổ cái hành vi vẫn ghi thêm 120 giây. Một trần hành vi chặt có thể
+loại phương án khôi phục đúng giờ đã hứa.
+
+Đây là giới hạn của sổ cái đối xứng. Bộ sinh chèn thuần trong các phép so chính chưa dùng
+sửa chữa kéo giờ hẹn về sớm hơn mốc giữ tuyến. Kết quả ấy là đặc điểm của bộ sinh và dữ liệu,
+không làm mất phản ví dụ. Một sổ cái chỉ tính phần gây hại cần định nghĩa và đánh giá riêng.
+
+\subsection{Ví dụ minh họa}
+
+Một hành khách đặt xe lúc 9:00 và được báo sẽ được đón lúc 9:10. Đến 9:05, hệ thống cân nhắc
+thay đổi kế hoạch vì có khách mới. Giả sử tại thời điểm đó xe đang chậm hơn dự kiến 40 giây.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\linewidth]{hinh/co-che-ba-moc.pdf}
+\caption{Ví dụ dựng để giải thích ba mốc: tuyến giữ nguyên trễ 40 giây, phương án mới thêm
+30 giây. Sơ đồ này không phải một quan sát thực nghiệm.}
+\label{hinh:bamoc}
+\end{figure}
+Hình~\ref{hinh:bamoc} dùng giờ đã báo làm gốc để minh họa phép đối chiếu.
+
+Với phương án đổi kế hoạch, cơ sở hành vi tính $9{:}11{:}10 - 9{:}10{:}40 = 30$ giây, còn cơ sở
+kết quả tính $9{:}11{:}10 - 9{:}10{:}00 = 70$ giây. Khác biệt 40 giây chính là phần xe chạy chậm.
+
+Bây giờ xét phương án \emph{không làm gì}, tức $p = e = 9{:}10{:}40$. Cơ sở hành vi tính 0 giây,
+nên riêng cổng hành vi không loại phương án này nếu sổ cái trước đó hợp lệ. Cơ sở kết quả tính 40 giây --- đã vượt trần 30 giây. Theo cách
+tính thứ hai, \emph{ngay cả việc không làm gì cũng là vi phạm}. Nếu mọi phương án khác cũng vượt,
+chiếc xe không còn kế hoạch hợp lệ nào và hệ thống dừng. Đây là hạt nhân của toàn bộ phần lý
+thuyết ở mục \ref{muc:haicosotinh}.
+
+\section{Sổ cái cam kết}
+
+Với mỗi cặp (hành khách, chiều cam kết), hệ thống duy trì một bộ đếm cộng dồn. Mỗi lần công bố
+lại lời hứa, bộ đếm được cập nhật
+
+\begin{equation}
+L_{r,\text{sau}} = L_{r,\text{trước}} + \delta_r
+\end{equation}
+
+trong đó $\delta_r$ là độ dời của lần công bố ấy theo cơ sở đang dùng. Vì $\delta_r \ge 0$, bộ
+đếm đơn điệu tăng.
+
+Một phương án được coi là hợp lệ về mặt cam kết nếu với mọi hành khách $r$ bị ảnh hưởng và mọi
+chiều $k$ có đặt trần, ta có $L_{r,k,\text{sau}} \le \beta_k$. Phương án vi phạm bị loại khỏi
+tập lựa chọn trước khi bài toán quy hoạch nguyên được giải, chứ không bị phạt trong hàm mục
+tiêu.
+
+Ba đặc điểm sau xác định chính xác cơ chế được kiểm trong khóa luận. Thứ
+nhất, nó \emph{theo từng hành khách}: không có phép cộng gộp nào làm loãng người chịu thiệt
+nặng nhất. Thứ hai, nó \emph{cộng dồn theo thời gian}: một hành khách bị dời năm lần, mỗi lần
+mười giây, tiêu tốn đúng bằng một hành khách bị dời một lần năm mươi giây. Thứ ba, nó là
+\emph{ràng buộc cứng}: phương án vượt trần bị loại trong vận hành bình thường.
+
+\section{Hai cơ sở tính, các định lý và khung bốn họ cổng}
+\label{muc:haicosotinh}
+
+\subsection{Phát biểu hai cơ sở}
+
+Khóa luận xét hai cơ sở tính sổ cái từ ba mốc ở mục~\ref{muc:bamoc}. Hai cơ sở này không
+tương đương và đều tính cả độ dời sớm lẫn độ dời muộn.
+
+\begin{dinhnghia}[Cơ sở hành vi]
+Sổ cái cộng dồn đại lượng $A = |p-e|$, tức độ dời so với phép chiếu khi giữ tuyến.
+Trong cài đặt, đây là \texttt{CommitmentBudgetBasis.DecisionInduced}. 
+\end{dinhnghia}
+
+\begin{dinhnghia}[Cơ sở kết quả]
+Sổ cái cộng dồn đại lượng $B = |p-v|$, tức độ dời so với lời hứa đã công bố gần nhất. Trong cài
+đặt, đây là \texttt{CommitmentBudgetBasis.CustomerVisible}. 
+\end{dinhnghia}
+
+\subsection{Phương án giữ tuyến trong danh mục ứng viên}
+
+Danh mục ứng viên của mỗi xe phải chứa đúng một phương án giữ nguyên kế hoạch hiện tại,
+còn gọi là phương án không làm gì (no-op). Bộ sinh, bộ giữ danh mục và bộ đánh giá kiểm yêu
+cầu này. Bài toán chọn buộc mỗi xe chọn \emph{đúng} một phương án, kể cả khi không nhận thêm
+khách. Việc giữ một ứng viên no-op trong danh mục chưa bảo đảm nó qua mọi cổng khả thi.
+
+Với phương án không làm gì, kế hoạch không đổi, nên phép chiếu của nó từ vị trí hiện tại
+\emph{chính là} mốc $e$. Tức là $p(\text{no-op}) = e$.
+
+\subsection{Bất đẳng thức ba mốc và điều kiện dấu bằng}
+\label{muc:phanra}
+
+Ba đại lượng liên hệ với nhau qua bất đẳng thức tam giác:
+
+\begin{equation}
+\boxed{\,B \le A + d\,}
+\label{eq:phanra}
+\end{equation}
+
+Dấu bằng xảy ra khi và chỉ khi hai hiệu $(p-e)$ và $(e-v)$ không trái dấu. Khóa luận không
+giả định điều kiện đó luôn đúng; độ hụt so với dấu bằng được báo ở mục~\ref{muc:quytrach}.
+
+\paragraph{Vì sao dấu bằng có thể hỏng.} Cả ba đại lượng đều là trị tuyệt đối. Nếu phần thay đổi
+khi giữ tuyến kéo $e$ \emph{sớm} hơn $v$ trong khi quyết định đẩy $p$ \emph{muộn} hơn $e$, hai hiệu
+ngược dấu triệt tiêu một phần và $|p-v| < |p-e| + |e-v|$. Vì thế tổng phần do quyết định và
+tổng phần giữ tuyến không nhất thiết bằng tổng biến động nhìn thấy, dù cùng đo bằng giây.
+
+\paragraph{Phạm vi của phép đối chiếu.}
+Mốc $e$ được dựng trên trạng thái sau khi lô sự kiện đã được áp dụng. Vì vậy $d$ có thể gồm
+cập nhật thời gian đi, tiến độ thực, thời gian dừng và độ trễ thực thi. Không được gọi nó là
+tác động thuần của giao thông. Tuyến đã chọn trước đó cũng ảnh hưởng vị trí xe hiện tại,
+nên $d$ không được giả định độc lập với chính sách.
+
+Phép đối chiếu là một cách hạch toán trong mô hình, tại cùng trạng thái, không phải một ước
+lượng tác động nhân quả tổng thể của việc đổi chính sách. Dấu bằng trong~\eqref{eq:phanra}
+phải được kiểm, không được giả định. Các tỉ số giữa tổng phần do quyết định và tổng biến
+động nhìn thấy ở mục~\ref{muc:quytrach} có tử số, mẫu số rõ ràng; chúng không phải các tỉ
+trọng của một phân rã cộng tính luôn đúng.
+
+\paragraph{Điều kiện ngân sách trước quyết định (B).}
+Sổ cái trước quyết định không vượt trần đang áp dụng. Điều kiện này được duy trì khi sổ cái
+khởi tạo bằng không, trần cố định suốt chuỗi và các lần công bố trước đều qua cổng trong
+vận hành bình thường. Các kết quả giữ tuyến dưới đây cần điều kiện (B); chúng không áp
+dụng nguyên trạng cho sổ cái đã vượt trần sau miễn trừ hoặc vừa đổi pha áp dụng trần.
+
+\paragraph{Điều kiện các kiểm tra khác (N).}
+Phương án giữ tuyến tại kỷ nguyên đang xét qua mọi kiểm tra ngoài cổng thời gian đang so,
+gồm cấu trúc tuyến, sức chứa, lịch trình, khóa và vòng đời. Cổng ngân sách không thay thế
+tính khả thi vật lý. Hai điều kiện (B) và (N) phải được kiểm riêng.
+
+\subsection{Ba định lý}
+
+
+Các định lý xét một tọa độ thời gian, cùng trần cố định và cổng không có miễn trừ. Khi có
+nhiều cổng, các điều kiện tương ứng phải đúng cho từng cổng đang áp dụng.
+
+\begin{dinhly}[Cổng hành vi giữ tuyến dưới điều kiện ngân sách]
+
+Dưới điều kiện (B), cổng ngân sách hành vi không loại phương án giữ tuyến. Nếu thêm (N),
+tập phương án sau các kiểm tra không rỗng.
+\end{dinhly}
+
+\begin{proof}
+Với phương án không làm gì, $A = |p - e| = |e - e| = 0$. Do đó sổ cái sau bằng sổ cái trước,
+mà theo (B), sổ cái trước không vượt $\beta$. Vậy cổng ngân sách không loại phương án giữ
+tuyến; theo (N), phương án đó cũng qua các kiểm tra khác và là một phần tử của tập khả thi.
+\end{proof}
+
+Kết quả dựa vào đẳng thức $p=e$ của phép chiếu khi giữ tuyến, không phải khả năng kiểm soát
+giao thông. Hệ thống vẫn có thể dừng vì một kiểm tra khác hoặc vì (B) không còn đúng.
+
+\begin{dinhly}[Cơ sở kết quả có thể vô nghiệm]
+
+Dưới cơ sở kết quả, tồn tại trạng thái thỏa (B) và (N) mà cổng ngân sách làm rỗng tập
+phương án của một xe.
+\end{dinhly}
+
+\begin{proof}
+Xét một xe chở một khách cũ, không có yêu cầu mới và chỉ có phương án giữ tuyến. Cho sổ cái
+trước bằng $0$, trần $\beta=30$ giây và phép chiếu giữ tuyến muộn hơn lời hứa trước $40$ giây.
+Chọn các cửa sổ vật lý đủ rộng để phương án vẫn thỏa (N). Khi đó (B) đúng nhưng
+$B=|e-v|=40>\beta$, nên phương án duy nhất bị loại. Đây là một trạng thái dựng, không phải
+một quan sát thực nghiệm.
+\end{proof}
+
+\begin{dinhly}[Bao hàm quỹ đạo dưới điều kiện (H)]
+\label{dl:tapcon}
+Xét cùng kịch bản và chân trời hữu hạn, cùng phép chiếu, quy tắc chuyển trạng thái và các
+ràng buộc khác; hai sổ cái đều khởi tạo bằng không. Giả sử điều kiện \emph{(H)} đúng ở mọi
+lần công bố của mọi quỹ đạo khả thi dưới cơ sở kết quả:
+$|p-e|\le|p-v|$. Khi đó, với cùng trần $\beta$, mọi quỹ đạo ấy cũng khả thi dưới cơ sở
+hành vi. Vì vậy số khách phục vụ lớn nhất trên toàn bộ quỹ đạo của cơ sở kết quả không
+vượt số khách phục vụ lớn nhất của cơ sở hành vi.
+\end{dinhly}
+
+\begin{proof}
+Giữ nguyên một quỹ đạo khả thi dưới cơ sở kết quả và ghi hai sổ cái trên chính quỹ đạo đó.
+Ký hiệu $L^{A}_k$, $L^{B}_k$ là các giá trị sau $k$ lần công bố, với
+$L^{A}_0=L^{B}_0=0$. Nếu $L^{A}_k\le L^{B}_k$, thì theo (H) và cổng kết quả,
+$$L^{A}_k + A \;\le\; L^{B}_k + B \;\le\; \beta,$$
+nên phương án đó cũng được cơ sở hành vi chấp nhận, và bất đẳng thức giữa hai sổ cái được bảo
+toàn sang bước $k+1$. Vậy mọi chuỗi quyết định hợp lệ dưới cơ sở kết quả cũng hợp lệ dưới cơ sở
+hành vi, tức tập quỹ đạo khả thi của cơ sở kết quả là \emph{tập con} của tập quỹ đạo khả thi của
+cơ sở hành vi. Lấy cực đại số khách phục vụ trên hai tập lồng nhau cho kết luận cuối.
+\end{proof}
+
+\paragraph{Phạm vi của quan hệ bao hàm.}
+Điều kiện (H) không là hệ quả của bất đẳng thức tam giác. Khi phần thay đổi giữ tuyến hấp thụ
+một phần độ dời do quyết định, $A>B$ có thể xảy ra. Chẳng hạn ví dụ $v=600$, $e=720$,
+$p=600$ ở mục~\ref{muc:dinhnghia-bamoc} cho $A=120>B=0$. Việc dấu bằng của bất đẳng thức
+tam giác không đạt chưa đủ để kết luận (H) hỏng, và kiểm trên phương án đã chọn chưa chứng
+minh (H) cho toàn bộ tập quỹ đạo. Vì vậy định lý không được dùng như kết luận về panel.
+
+Định lý so tập quỹ đạo và chính sách tối ưu toàn quỹ đạo. Bộ chọn đang cài chỉ tối ưu ở từng
+kỷ nguyên, không nhìn trước yêu cầu tương lai. Chọn một phương án khác hôm nay có thể làm
+trạng thái ngày mai khác đi, nên một cấu hình chặt hơn vẫn có thể tình cờ hoàn tất nhiều
+khách hơn ở một ô. Phần thực nghiệm phải kiểm riêng, không suy trực tiếp từ định lý.
+
+\begin{hequa}[Dải khác biệt tại một lần công bố]
+
+Xét một lần công bố mà ngay trước đó hai sổ cái bằng nhau, $L^{A} = L^{B} = L$. Một phương án được
+cơ sở hành vi giữ lại nhưng bị cơ sở kết quả loại khi và chỉ khi $L + A \le \beta < L + B$, tức
+$L + A$ rơi vào dải $(\beta - (B - A),\, \beta]$. Vì $B \le A + d$, bề rộng dải không quá $d$ của
+lần công bố đó, và đúng bằng $d$ khi dấu bằng trong \eqref{eq:phanra} xảy ra; khi (H) hỏng
+($B < A$) dải rỗng.
+\end{hequa}
+
+Hệ quả chỉ so một lần công bố khi hai sổ cái bằng nhau. Trên cả chuỗi, sổ cái có thể tách
+nhau và các chính sách đi quỹ đạo khác nhau. Nó không cho một công thức dự báo chênh số khách.
+
+\subsection{Khung so sánh bốn họ cổng}
+
+
+Ba định lý trên so hai cơ sở tính của \emph{cùng một} cơ chế. Các công trình gần nhất lại dùng
+những ràng buộc lời hứa có hình thức khác: Schulz và Pfeiffer \cite{schulz2026} đặt một hạn chót
+tính từ lời hứa đầu tiên; một cửa sổ quanh lời hứa đầu gần với ``hộp tĩnh'' gồm cửa sổ thời gian
+và thời gian đi tối đa của Sharif Azadeh và cộng sự \cite{sharifazadeh2022}. Mục này đặt tất cả
+vào cùng một khung để so được, và rút ra kết quả trung tâm của chương.
+
+\paragraph{Đại lượng có dấu và đại lượng cộng dồn.} Xét một hành khách và tọa độ giờ trả. Tại mỗi
+lần công bố $t$ đặt
+\begin{equation}
+x_t = e_t - v_t, \qquad c_t = p_t - e_t, \qquad z_t = p_t - v_t,
+\end{equation}
+khi đó $d_t = |x_t|$, $A_t = |c_t|$, $B_t = |z_t|$, và đồng nhất \emph{có dấu} $z_t = x_t + c_t$
+luôn đúng --- bất đẳng thức \eqref{eq:phanra} chỉ xuất hiện khi lấy trị tuyệt đối. Gọi $p_0$ là
+lời hứa \emph{đầu tiên} của hành khách. Cộng dồn trên cùng lưới công bố:
+\begin{gather}
+C = \sum_t A_t, \qquad X = \sum_t d_t, \qquad V = \sum_t B_t, \qquad E = |p_T - p_0|,\\
+M = \max_t |p_t - p_0|, \qquad M^{+} = \max_t \max(0,\, p_t - p_0).
+\end{gather}
+$E$ là độ lệch hai đầu, $M^{+}$ là phần \emph{muộn} cực đại so với lời hứa đầu --- đúng đại lượng mà
+một hạn chót kiểu Schulz--Pfeiffer chặn. Trong mục này $\kappa$ ký hiệu trần chung của một họ ràng
+buộc; với hai sổ cái của khóa luận, $\kappa$ chính là trần $\beta$.
+
+\begin{menhde}[Chuỗi đại lượng]
+\label{md:chuoi}
+Nếu chuỗi công bố liên tục, tức mỗi lần công bố so với lần ngay trước nó ($v_t = p_{t-1}$), thì
+\[
+\max(0,\, p_T - p_0) \;\le\; M^{+} \;\le\; M \;\le\; V \;\le\; C + X
+\qquad\text{và}\qquad E \le M .
+\]
+\end{menhde}
+
+\begin{proof}
+Bất đẳng thức đầu và $E \le M$ đúng vì giá trị tại lần công bố cuối không vượt cực đại trên mọi
+lần công bố; $M^{+} \le M$ vì $\max(0,\cdot) \le |\cdot|$. Với chuỗi liên tục,
+$p_t - p_0 = \sum_{s \le t} z_s$, nên $|p_t - p_0| \le \sum_{s \le t} |z_s| \le V$. Cuối cùng
+$|z_t| \le |c_t| + |x_t|$ ở từng lần công bố, cộng dồn lại được $V \le C + X$.
+\end{proof}
+
+Bản thân chuỗi bất đẳng thức này là kiến thức cơ bản, \emph{không} phải đóng góp; nó chỉ là công
+cụ cho định lý dưới đây.
+
+\paragraph{Bốn họ cổng.} Bảng \ref{bang:hocong} xếp bốn cách ràng buộc lời hứa theo đại lượng mà
+chúng kiểm ở mỗi quyết định. (Schulz và Pfeiffer không công bố lại lời hứa --- khách chỉ được báo
+giờ tới và hạn chót một lần --- nhưng hạn chót được kiểm ở mọi lần chèn khách mới về sau.)
+
+\begin{table}[htbp]
+\centering
+\caption{Bốn họ cổng cam kết với trần $\kappa$}
+\label{bang:hocong}
+\small
+\begin{tabularx}{\linewidth}{@{}llXX@{}}
+\toprule
+\textbf{Họ} & \textbf{Kiểm ở mỗi quyết định} & \textbf{Tên gọi} & \textbf{Ví dụ}\\
+\midrule
+$C$ & $\sum_t A_t \le \kappa$ & theo hành vi & cơ sở hành vi của khóa luận\\
+$M^{+}$ & $p_t - p_0 \le \kappa$ & hạn chót một chiều & Schulz và Pfeiffer \cite{schulz2026}\\
+$M$ & $|p_t - p_0| \le \kappa$ & hạn chót hai chiều & cửa sổ quanh lời hứa đầu\\
+$V$ & $\sum_t B_t \le \kappa$ & theo kết quả & cơ sở kết quả của khóa luận\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Phạm vi khả thi.}
+Điều kiện (N) vẫn cần cho khung bốn họ cổng. Nếu xe tới đón ngoài cửa sổ đã chấp nhận,
+một bất biến vòng đời có thể làm lần chạy dừng. Mục~\ref{muc:trongdiem} phân loại các lần
+dừng theo nguyên nhân.
+
+Việc danh mục phương án yêu cầu tuyến giữ nguyên cũng là một lựa chọn cài đặt. Trong chiều
+trôi thuận lợi, một cổng có thể loại tuyến giữ nguyên nhưng vẫn giữ phương án khác; không
+được coi mọi lần tuyến giữ nguyên bị loại là một chứng minh tập toán học hoàn toàn rỗng.
+
+\paragraph{Quỹ đạo dự phòng.} Xét chuỗi hữu hạn từ lời hứa đầu tiên, khởi tạo sổ cái bằng
+không, mà ở mọi kỷ nguyên xe giữ nguyên tuyến. Trên đó
+$p_t = e_t$, nên $c_t = 0$ với mọi $t$, và
+\[
+C_{\text{noop}} = 0, \qquad z_t = x_t, \qquad V_{\text{noop}} = X_{\text{noop}} ,
+\]
+trong đó chỉ số ``noop'' chỉ đại lượng tính dọc quỹ đạo dự phòng (khác với quỹ đạo thật đã chạy).
+
+\begin{dinhly}[Thứ tự ngưỡng giữ tuyến của các họ cổng]
+\label{dl:hocong}
+Xét một hành khách, một tọa độ thời gian và trần $\kappa$ cố định. Giả sử (N) tại các
+kỷ nguyên đang xét.
+\begin{enumerate}[label=(\alph*),leftmargin=1cm,itemsep=2pt,topsep=3pt]
+\item \emph{Tại một quyết định.} Nếu (B) đúng, cổng $C$ giữ phương án không làm gì với mọi
+$\kappa\ge0$. Vì vậy cổng này không làm rỗng tập phương án tại quyết định đó.
+\item \emph{Quỹ đạo dự phòng.} Trên quỹ đạo dự phòng với chuỗi công bố liên tục, ngưỡng nhỏ nhất
+bảo đảm phương án không làm gì không bị loại ở mọi kỷ nguyên là
+\[
+\kappa^{*}_{C} = 0 \;\le\; \kappa^{*}_{M^{+}} = M^{+}_{\text{noop}} \;\le\;
+\kappa^{*}_{M} = M_{\text{noop}} \;\le\; \kappa^{*}_{V} = X_{\text{noop}} ,
+\]
+tức ba họ còn lại có thể loại phương án không làm gì, với ngưỡng giữ tuyến phụ thuộc phần
+trôi dạt. $M^{+}$ chỉ xét độ muộn so với lời hứa đầu (Hệ quả~\ref{hq:chieutroi}).
+\end{enumerate}
+\end{dinhly}
+
+\begin{proof}
+(a) Sổ cái trước kỷ nguyên $t$ thỏa $C_{t-1} \le \kappa$ vì lần công bố trước đã qua cổng. Phương
+án không làm gì có $c_t = 0$ nên $C_t = C_{t-1} \le \kappa$: cổng không loại nó, và theo (N) nó
+cũng qua mọi kiểm tra khác, nên tập phương án không bị làm rỗng \emph{vì cổng}. (b) Phương án không
+làm gì bị loại ngay tại lần công bố đầu tiên mà đại lượng được kiểm vượt $\kappa$, nên ngưỡng nhỏ
+nhất đúng bằng giá trị lớn nhất của đại lượng đó dọc quỹ đạo dự phòng (với $V$ là giá trị cuối, vì
+$V$ cộng dồn đơn điệu). Thứ tự giữa các ngưỡng là Mệnh đề \ref{md:chuoi} áp cho quỹ đạo có
+$C = 0$; bước $M \le V$ cần chuỗi công bố liên tục.
+\end{proof}
+
+Phần (a) dựa vào $p=e$ của tuyến giữ nguyên và ngân sách trước đó hợp lệ. Phần (b) so các
+ngưỡng trên cùng quỹ đạo dự phòng, không so số khách của các nhánh đã chọn tuyến khác nhau.
+Chứng minh sơ cấp; khung này có ích vì phân biệt các lời hứa cùng đơn vị giây và tạo dự
+đoán kiểm được từ chuỗi công bố. Trong bốn họ đang xét, chỉ $C$ không tính phần trôi vào
+ngân sách. Điều đó không phải bảo đảm hệ thống luôn chạy trọn hay khách không thấy đổi giờ.
+
+\begin{hequa}[Khi thời gian đi tất định]
+
+Trên quỹ đạo dự phòng thỏa (N), nếu phép chiếu và tiến độ thực thi nhất quán để
+$x_t\equiv0$, và chuỗi công bố liên tục, thì
+$M^{+}_{\text{noop}} = M_{\text{noop}} = X_{\text{noop}} = 0$ và cả bốn họ đều không bao giờ loại
+phương án không làm gì, với mọi $\kappa \ge 0$.
+\end{hequa}
+
+Thời gian đi cố định chưa đủ để suy ra $x_t=0$: tiến độ thực thi và phép chiếu cũng phải
+nhất quán. Panel mạng tĩnh của khóa luận vẫn có trôi nhỏ do mô phỏng rời rạc. Vì vậy hệ quả
+là một trường hợp lý tưởng của mô hình; việc áp dụng cần kiểm biên bản.
+
+\begin{hequa}[Phụ thuộc chiều trôi]
+\label{hq:chieutroi}
+Trên quỹ đạo dự phòng với chuỗi công bố liên tục, $p_t - p_0 = \sum_{s \le t} x_s$, nên
+\[
+M^{+}_{\text{noop}} = \max_t \Big(\sum_{s \le t} x_s\Big)^{+}, \qquad
+M_{\text{noop}} = \max_t \Big|\sum_{s \le t} x_s\Big|, \qquad
+V_{\text{noop}} = \sum_t |x_t| .
+\]
+Nếu trôi \emph{bất lợi} (mọi $x_s\ge0$, phép chiếu giờ đến dần muộn hơn) thì
+$M^{+}_{\text{noop}} = M_{\text{noop}} = V_{\text{noop}}$: ba họ $M^{+}$, $M$, $V$ cùng loại phương
+án không làm gì ở cùng một ngưỡng. Nếu trôi \emph{thuận lợi} (mọi $x_s\le0$, phép chiếu
+giờ đến dần sớm hơn) thì
+$M^{+}_{\text{noop}} = 0$: hạn chót một chiều không bao giờ loại phương án không làm gì, trong khi
+$M_{\text{noop}} = V_{\text{noop}}$ vẫn có thể lớn, nên hạn chót hai chiều và cổng kết quả vẫn có
+thể loại nó. Cổng hành vi không loại nó ở cả hai chiều.
+\end{hequa}
+
+Loại phương án không làm gì chưa đủ để kết luận tập phương án rỗng. Trên quỹ đạo dự phòng
+chỉ trôi bất lợi, nếu mọi phương án chèn có $c\ge0$, thì chúng đều muộn ít nhất bằng
+phương án giữ tuyến tại cùng trạng thái. Khi một trong các cổng $M^{+}$, $M$, $V$ loại
+phương án giữ tuyến, nó cũng loại các phương án chèn này. Với trôi thuận lợi, phương án
+chèn làm muộn lại có thể lọt vào cửa sổ $M$ hay dưới trần $V$. Khi đó tập toán học vẫn có
+thể còn phần tử, dù cài đặt đòi ứng viên no-op và dừng khi ứng viên này mất tính hợp lệ.
+
+Trên hệ thật, phần giữ tuyến có thể đổi dấu và không chỉ gồm giao thông. Dự đoán theo ô
+phải tính trên chuỗi đo được của từng khách. Khi trôi thuận lợi, hạn chót một chiều có thể
+cho phép chèn thêm bằng phần chùng vừa tạo ra, còn cổng hành vi vẫn tính đủ độ dời do quyết
+định. Đây là khả năng đánh đổi, không phải ưu thế dịch vụ của một họ đã được chứng minh.
+
+\subsection{Khi nào chặn theo chuỗi khác chặn hai đầu}
+
+
+\begin{menhde}[Bộ sinh chèn thuần]
+
+Xét một chuỗi công bố liên tục. Nếu mọi phương án được chọn đều có $p \ge e$ với mọi hành khách
+cũ, tức $c_t \ge 0$ ở mọi lần công bố, thì $C = \sum_t c_t$. Nếu thêm $x_t \equiv 0$ thì
+$C = V = p_T - p_0 = M^{+} = M$: trần theo chuỗi, trần theo hai đầu và trần theo hành vi là một.
+Khi $x_t \not\equiv 0$, kết luận thứ hai không còn được bảo đảm.
+\end{menhde}
+
+\begin{proof}
+$c_t \ge 0$ cho $A_t = c_t$. Khi $x_t \equiv 0$ thì $z_t = c_t \ge 0$; với chuỗi liên tục
+$p_t - p_0 = \sum_{s \le t} z_s$, nên $p_t$ đơn điệu không giảm, $p_T - p_0 = \sum_t z_t = V = C$,
+và cực đại của $p_t - p_0$ đạt ở lần công bố cuối.
+\end{proof}
+
+Kết quả này giới hạn cách phát biểu đóng góp. Khi $c_t\ge0$, ta có
+$|C-(p_T-p_0)|=|\sum_t x_t|\le X$, nên trần cộng dồn hành vi gần trần độ muộn hai đầu
+khi $X$ nhỏ trên cùng chuỗi. Khóa luận không coi hai hình thức khác nhau là một lợi thế
+đã được chứng minh độc lập với bộ sinh.
+
+Hai ví dụ dựng tách hiệu hai đầu khỏi độ dài chuỗi. Chuỗi $600\to660\to600$ có $E=0$ nhưng
+$V=120$ giây; chuỗi $600\to660\to720$ có $E=V=120$ giây. Ghi nhận dao động không đồng nghĩa
+đã đo được tổn thất hài lòng; khóa luận không có dữ liệu lựa chọn hay cảm nhận của hành khách.
+
+\section{Các khóa và cơ chế bảo vệ bổ sung}
+
+Khóa cứng cấm đổi một trường lời hứa trong pha được cấu hình. Hàng rào đóng băng cấm đổi khi
+giờ đón còn cách hiện tại dưới một ngưỡng. Cơ chế một chiều cho phép giờ dự báo tốt lên nhưng
+cấm xấu đi so với mốc tham chiếu được chọn. Đây là những hình thức có tiền lệ trong văn liệu,
+không phải các khái niệm mới của khóa luận.
+
+Các cấu hình này phải được đọc cùng bộ sinh phương án. Nếu bộ sinh không thể làm giờ hẹn
+tốt lên, quyền cho phép cải thiện không tạo thêm lựa chọn. Ngược lại, một bộ sinh biết sửa
+tuyến có thể làm cơ chế một chiều khác với khóa hai chiều. Mục~\ref{muc:kiemtraphu} báo các
+quan sát phụ trong phạm vi cài đặt đã thử.
+
+\section{Chứng nhận và phục hồi có miễn trừ}
+\label{muc:phuchoi}
+
+\subsection{Phạm vi của chứng nhận}
+
+``Được chứng nhận'' ở đây nghĩa là quyết định có bằng chứng kiểm tra gắn với phiên bản,
+cấu hình và lịch sử lời hứa. Chứng cứ ghi giá trị trước, độ dời, giá trị sau và các lý do
+loại hoặc miễn trừ. Nó không phải chứng nhận pháp lý, bảo đảm thời gian đến thật, hay chứng
+minh hình thức tính đúng của toàn bộ chương trình.
+
+Quyết định có miễn trừ được đánh dấu \texttt{normalOperation=false}. Nó có thể được thực thi
+để tiếp tục phục vụ khách đã nhận, nhưng không được tính là giữ lời hứa của cổng bị vượt.
+Tỉ lệ quyết định có miễn trừ và tỉ lệ khách vượt lời hứa có mẫu số khác nhau, phải báo riêng.
+
+\subsection{Hai quy tắc phục hồi}
+
+\textbf{Quy tắc (a), giữ tuyến.} Xe có tuyến tham chiếu đã vượt ngân sách hoặc hạn chót vẫn
+đi tuyến đó, với vi phạm được ghi nhận có kiểu. Quy tắc có thể làm giảm cơ hội nhận khách
+mới vì xe bị hạn chế đổi tuyến. Việc tiếp tục chạy không biến vi phạm thành tuân thủ.
+
+\textbf{Quy tắc (b), không tệ hơn tham chiếu.} Xe bị vướng được đổi tuyến trên cùng xe chỉ
+khi từng cổng được xin miễn trừ cũng bị tuyến giữ nguyên vi phạm và phương án mới không
+tệ hơn ở đúng cổng ấy. Với cận muộn, giờ trả mới không muộn hơn mốc giữ tuyến; với cận sớm,
+nó không sớm hơn. Với chiều ngân sách, giá trị sau không lớn hơn giá trị sau của tham chiếu
+đã vượt trần.
+
+Miễn trừ không áp cho khóa pha, đổi xe hoặc ràng buộc vật lý. Khách mới vẫn phải qua các
+cổng thông thường. Nếu một chiều khác phát sinh vi phạm mà tham chiếu chưa có, phương án
+không qua quy tắc (b). Chỉ các chiều ngân sách thuộc miễn trừ được bỏ khỏi tầng xếp hạng
+mức sử dụng; các chiều còn lại vẫn được kiểm và xếp hạng.
+
+Nguyên tắc không tệ hơn tham chiếu có tiền lệ trong văn liệu; khóa luận không nhận tính mới
+cho nguyên tắc này. Quy tắc (b) được thêm sau niêm phong phép quét đầu, nên đối chiếu (a)/(b) là phân tích bổ
+sung. Các kế hoạch W07, W07X và T38 về sau đã cố định (b) trước khi chạy những nhánh được
+dự đoán. Quy tắc có thể cho khách mới lên xe đang có miễn trừ, nên không trùng mọi điều kiện
+của quy trình cũ. Việc tính lại tham chiếu chưa được phản ánh đầy đủ trong bộ đếm
+\texttt{validationWorkUnits}; khóa luận không tuyên bố hai cách phục hồi có chi phí tính
+toán bằng nhau.
+
+\subsection{Biên nhìn thấy có điều kiện}
+\label{muc:biendukien}
+
+Vì $V_r\le C_r+X_r$, nếu cổng hành vi giữ $C_r\le\beta$ và một ô có
+$S_j=\max_r X_r\le\gamma$, thì mọi khách được xét trong ô ấy có
+\begin{equation}
+V_r\le\beta+\gamma.
+\end{equation}
+Đây là suy luận tất định có điều kiện trên $S_j$, không phải bảo đảm $S_j$ luôn nhỏ. $X_r$
+được đo trên quỹ đạo thực thi; không lấy từ một nhánh khác mà không kiểm tra.
+
+T38 cố định $C$-30 rồi hiệu chỉnh $\gamma$ trên các ô riêng. Điểm ô là tổng biến động khi
+giữ tuyến lớn nhất theo khách. Khách đã được hứa mà không hoàn tất làm điểm bằng vô hạn.
+Với $n$ điểm hiệu chỉnh và mức danh nghĩa $1-\alpha$, chỉ số thứ tự là
+$k=\lceil(n+1)(1-\alpha)\rceil$; giá trị thứ $k$ được đóng băng trước tập kiểm tra. Nếu
+$k>n$, ngưỡng là vô hạn. Không cắt ngưỡng lớn hoặc thay điểm vô hạn bằng số hữu hạn.
+
+Cách hiệu chỉnh theo thứ tự thường gắn với lập luận độ phủ dưới tính hoán đổi được của các
+điểm. T38 có khung giờ không đồng nhất và ô chung ngày, mẫu, nên khóa luận chỉ báo độ phủ
+thực nghiệm trên tập giữ lại. Biên chưa là bảo đảm phân phối tự do cho ngày vận hành mới.
+Mục~\ref{muc:biendukien-t38} phân biệt điểm vượt $\gamma$ với $V$ thật vượt $\beta+\gamma$, vì hai
+sự kiện không đồng nhất.
+
+\section{Cài đặt và dấu vết tái lập}
+
+
+RideBound được cài bằng C\# trên .NET. Bảng~\ref{bang:kientruc} mô tả trách nhiệm các lớp;
+số dòng mã không được dùng như thước đo đóng góp. Domain và Application độc lập với
+FleetPy, EF Core, ASP.NET và OR-Tools. Các adapter gọi cùng runner có phiên bản, không
+cài lại thuật toán điều phối trong Python.
+
+\begin{table}[htbp]
+\centering
+\caption{Trách nhiệm các thành phần của RideBound}
+\label{bang:kientruc}
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+\textbf{Thành phần} & \textbf{Trách nhiệm}\\
+\midrule
+Domain & Lời hứa, vector, sổ cái, vòng đời và bất biến nghiệp vụ.\\
+Application & Áp sự kiện, đối chiếu ba mốc, kiểm quyết định, ghi chứng cứ.\\
+Algorithms & Sinh phương án, đánh giá ứng viên, hồ sơ mục tiêu.\\
+Solvers.OrTools & Cầu nối tới bộ giải quy hoạch nguyên của OR-Tools.\\
+Contracts và Runner & Giao thức có phiên bản, phiên chạy, tuần tự hóa trạng thái.\\
+Benchmarking & Chuẩn hóa dữ liệu, dựng đầu vào và kiểm thực nghiệm.\\
+Adapter FleetPy & Đổi sự kiện, hành động giữa mô phỏng và runner.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\texttt{PromiseDeltaCalculator} tính ba cặp mốc. \texttt{CommitmentBudgetEvaluator} cộng
+vector và kiểm trần theo pha. \texttt{CommitmentDecisionValidator} kiểm cả khóa, hạn chót
+và miễn trừ; \texttt{NoWorseReference} đối chiếu đúng cận hoặc chiều đang vượt. Việc tách
+trách nhiệm cho phép kiểm toán đại lượng được tính phí mà không đổi bộ mô phỏng.
+
+FleetPy phiên bản 1.0.2 là nền mô phỏng dùng cho các phép so~\cite{fleetpy2022}. Adapter
+truyền trạng thái và hành động tới runner; kết quả được ghim vào cả phiên bản adapter lẫn
+runner, không chỉ vào tên thuật toán.
+
+\subsection{Sinh phương án theo lối chèn}
+
+Bộ sinh chèn cặp điểm đón--trả của yêu cầu mới vào các vị trí trên phần tuyến chưa chạy,
+giữ thứ tự tương đối của các điểm cũ. Các lượt chạy được xét không ghi nhận quyết định
+kéo giờ hẹn sớm hơn mốc giữ tuyến. Đây là quan sát trên bộ sinh và đầu vào đã chạy; riêng
+thao tác chèn chưa đủ chứng minh $c\ge0$ cho mọi mô hình thời gian đi.
+
+Danh mục giữ lại và giới hạn công việc được ghi trong chứng cứ. Mục~\ref{muc:bosinh}
+kiểm việc cắt danh mục trong các lượt chạy đã có, không chứng minh bộ sinh bao quát mọi
+lộ trình có thể.
+
+Hồ sơ độ chùng đưa ra một \emph{chứng chỉ độ trễ} bảo thủ cho tuyến và lịch đón cố định.
+Nó cho điều kiện đủ để một độ trễ thuần túy vẫn an toàn; vượt cận này chưa chứng minh bất
+khả thi và không thay thế bộ kiểm vật lý đầy đủ. Trong adapter, phần chờ có sẵn được đặt
+tại điểm chờ có thể thực thi.
+
+\subsection{Chứng cứ niêm phong}
+
+Biên bản đầy đủ lưu NDJSON, dữ liệu base64 và SHA-256 của từng khung trao đổi. Điểm kiểm tra
+cuối giữ lịch sử lời hứa và trạng thái yêu cầu. Băm runner, cấu hình, đầu vào và cây mã nguồn
+ghim kết quả vào đúng phiên bản. Băm ngữ nghĩa và tóm lược công bố hỗ trợ so các lần chạy
+giống nhau trong phạm vi dữ liệu được băm; không được nói mọi khác biệt hành vi tất yếu đổi
+mọi loại băm.
+
+Tái lập cần đủ phiên bản runner, dữ liệu chuẩn hóa, cấu hình và script phân tích. Các đợt
+đổi runner hoặc quy tắc mô phỏng được báo riêng. Thử lại sau lỗi hạ tầng phải theo quy tắc
+đã ghi, giữ thư mục lỗi và chỉ rõ bản dùng. Các kiểm tra này hỗ trợ tin cậy của phép so;
+chúng không xóa giới hạn về quy mô, nguồn dữ liệu hay giả thiết thống kê.

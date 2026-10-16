@@ -1,0 +1,106 @@
+\subsection{Quy tắc chuẩn hóa và tham số thực thi}
+
+Đầu vào cụ thể là \texttt{FleetPy\_Manhattan.zip} của bộ dữ liệu Manhattan,
+phiên bản 1.0 trên Zenodo~\cite{fleetpydata2025}. Mỗi mẫu nguồn có một CSV
+nhu cầu riêng; 108 yêu cầu là tập dẫn xuất tiếp theo, không phải toàn bộ
+nhu cầu của khung giờ. Công cụ chuẩn hóa loại hàng sai định dạng, trùng
+định danh, ngoài cửa sổ thời gian hoặc có hai đầu không thuộc cùng một
+thành phần liên thông mạnh của mạng có hướng.
+
+Việc chọn nút ưu tiên giữ được nhiều hàng nhu cầu. Công cụ bắt đầu từ cặp
+điểm có nhiều hàng hợp lệ nhất, rồi thêm nút làm tăng số hàng có cả hai
+đầu trong tập đã chọn. Khi hòa, nó dùng tần suất điểm, hạng HMAC và định
+danh nút theo quy tắc cố định. Sau khi khóa tập 96 nút, các hàng được xếp
+bằng HMAC-SHA256 từ băm kho nguồn, tên CSV và số thứ tự hàng; giữ 108 hàng
+đầu tiên có cả hai đầu trong tập nút. Đây là lựa chọn tất định theo độ phủ
+mạng và hạng băm, không phải mẫu ngẫu nhiên đơn của mọi chuyến taxi.
+Các nhãn khóa và cửa sổ nằm trong \path{normalizer-configuration.json};
+\path{selection-frame.json} giữ liên kết tới hàng nguồn.
+
+Thời gian đến giữ khoảng cách trong CSV và được dịch về đầu ô; giây được
+đổi sang mili giây bằng quy tắc làm tròn về số chẵn khi hòa. Mỗi cung trong
+bao đóng dùng đường đi ngắn nhất trên mạng nguồn có hướng; đường đó có thể
+qua nút ngoài tập 96 điểm. Không dùng đường ngược hoặc khoảng cách Euclid
+để điền thời gian thiếu. Hệ số ban đầu lấy tại mốc 0 của tệp thời gian nguồn.
+
+Đội xe ban đầu rỗng, không có khách đã nhận hoặc đang trên xe. Vị trí tám
+xe là tám nút khác nhau đứng đầu hạng HMAC theo khóa chọn, băm kho nguồn,
+định danh kịch bản và nút. Các nhánh của cùng ô dùng cùng đội xe; đổi kịch
+bản hoặc cửa sổ có thể đổi vị trí. Bảng~\ref{bang:thamso} nêu các tham số
+còn lại đã kiểm trực tiếp trong đầu vào và cấu hình bộ chạy.
+
+\begin{table}[htbp]
+\centering
+\caption{Tham số chung của đầu vào và bộ chạy. Hạt giống và các cấu hình
+trên cùng ô không được tính là mẫu độc lập.}
+\label{bang:thamso}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{4.1cm}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Tham số} & \textbf{Giá trị và quy tắc}\\
+\midrule
+Nhu cầu và xe & Mỗi yêu cầu một người; 108 yêu cầu, 8 xe bốn chỗ, xe ban đầu rỗng.\\
+Cửa sổ đón & Từ lúc yêu cầu đến đến 600 giây sau đó; nhánh độ nhạy dùng 900 giây.\\
+Thời gian trên xe tối đa & $1{,}5$ lần thời gian đi trực tiếp trong ảnh chụp ban đầu,
+làm tròn về mili giây; không đặt lại theo từng cập nhật giao thông.\\
+Phục vụ điểm dừng & Thời gian cố định lên và xuống xe bằng 0; vẫn có thể chờ đến giờ đón sớm nhất.\\
+Cửa sổ và phần chạy nốt & Nhu cầu trong 7.200 giây, cho phép chạy nốt thêm 7.200 giây.
+Bộ điều khiển có tối đa 24 mốc kiểm phần chạy nốt, cách nhau 600 giây.\\
+Danh mục giữ lại & Tối đa 100 ứng viên mỗi xe, chèn tối đa hai yêu cầu mới;
+giữ danh mục theo hồ sơ \texttt{service-set-stability-portfolio-v1}.\\
+Ngân sách công việc & Sinh và kiểm: 10.000 đơn vị mỗi phần; bộ giải: 100.000 đơn vị,
+thời gian tất định 1.000.000 micro giây. Đây không phải thời gian đáp ứng đã đo.\\
+Bộ giải và hạt giống & OR-Tools 9.15.6755; hạt giống bộ chạy và bộ giải bằng 7;
+chế độ liệt kê chính xác cho bài nhỏ tắt.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Phiên bản và cấu hình theo lớp bằng chứng}
+
+Bảng~\ref{bang:phienban} tách các quy tắc thực thi có thể làm đổi kết quả.
+Các tổng H6 ở đây được đọc từ cây chạy lại \texttt{confirmatory-h6-panela-v2}.
+Thiết kế và tiêu chí H6 gắn với biên nhận v5; v6 sửa ánh xạ đoạn đường xe
+đang đi và cách băm nguồn bộ chuyển đổi rồi chạy lại thiết kế. Hai đợt dùng
+cùng DLL bộ thực thi, nhưng bộ chuyển đổi và mốc mã ghi trong biên bản khác
+nhau. Chạy lại không tạo một mẫu xác nhận độc lập hoặc thay tiêu chí H6.
+
+\begin{table}[htbp]
+\centering
+\caption{Khác biệt giữa các lớp bằng chứng. Mã băm rút gọn giúp tra cứu;
+định danh đầy đủ nằm trong biên nhận và bản kê của từng lần chạy.}
+\label{bang:phienban}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Lớp} & \textbf{Bộ thực thi, thế giới và quy tắc phục hồi}\\
+\midrule
+H6 & DLL \texttt{8445f053}; biên nhận v5 \texttt{84f6eff3}, v6 \texttt{e7bc41be}.
+Ảnh chụp thời gian đi tĩnh; B1 dùng hồ sơ chi phí, C1 dùng vector cứng.
+Chưa có phục hồi không tệ hơn tham chiếu.\\[4pt]
+Tầng 2 & DLL \texttt{8b00dfbf}; bộ chạy hạn chót riêng.
+Hệ số theo ngày được áp tại kích hoạt quyết định đầu tiên ở hoặc sau mỗi mốc 900 giây.
+Không bật phục hồi không tệ hơn hoặc chế độ ghi nhận đón muộn.\\[4pt]
+T38 & DLL \texttt{a631038b}; bộ chạy \texttt{runner-tier3-v2}, cấu hình WP4
+\texttt{66e9b592}. Thế giới dừng đúng mỗi mốc 900 giây; số mũ hệ số bằng 1,
+không thêm nhiễu hay sốc. Cả năm nhánh dùng phục hồi không tệ hơn tham chiếu
+và chế độ ghi nhận đón muộn.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+T38 giữ khóa xe, điểm đón và giờ đón sau xác nhận. Cấu hình $U$ bỏ cổng thời
+gian đang so, nhưng vẫn giữ các khóa và tầng mục tiêu của hồ sơ vector cứng;
+không đồng nhất nó với B1. Ở chế độ ghi nhận đón muộn, bộ chuyển đổi bỏ cận
+trả neo theo cửa sổ đón đầu, vẫn giữ kiểm thời gian trên xe từ lúc đón thật.
+Vì vậy hoàn tất trong T38 không chứng minh mọi cửa sổ vật lý ban đầu đều
+được giữ. Mục~\ref{muc:bochon} xác định thứ tự mục tiêu tương ứng.
+
+Lượt kiểm cấu hình đọc 20 đầu vào H6, 16 đầu vào phát triển tầng 2 và 49
+đầu vào T38: cả 85 đều có đúng 96 nút, 9.120 cung và 108 yêu cầu. Băm kho
+ZIP là \texttt{d9e86f33}, băm nguồn chuẩn hóa năm tệp là \texttt{34517a83};
+cả hai được tính lại và khớp bản ghim. Băm DLL và cây công bố bộ thực thi
+được kiểm riêng. Băm cây bộ chuyển đổi H6 v5 là trường đã ghi trong biên
+nhận, có cả mã byte Python; khóa luận không nhận đã dựng lại độc lập cây
+lịch sử ấy chỉ từ commit nguồn. Hồ sơ đầy đủ được giữ trong
+\path{reproducibility-config.json} của gói kiểm và trong bản kê từng lần chạy.

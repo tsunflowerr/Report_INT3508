@@ -1,0 +1,339 @@
+## 0. Invariants
+conduct arms commitment-infeasible: 0 []
+selection-noop-invariant anywhere: 0 []
+
+## 1. Prediction-outcome table
+stage	window	arm	k	cell	tau_s	ref_T_s	ref_C_s	far	weak	prediction	outcome	correct
+2a	w08	dl-30	0	d20181114-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181114-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181114-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181114-s10-r2	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181114-s10-r2	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181114-s10-r2	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181114-s10-r3	-	inf	26.663	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181114-s10-r3	-	inf	26.663	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181114-s10-r3	-	inf	26.663	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181114-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181114-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181114-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181115-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181115-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181115-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181115-s10-r2	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181115-s10-r2	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181115-s10-r2	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181115-s10-r3	-	inf	6.542	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181115-s10-r3	-	inf	6.542	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181115-s10-r3	-	inf	6.542	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181115-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181115-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181115-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181116-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181116-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181116-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181116-s10-r2	-	inf	30.095	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181116-s10-r2	-	inf	30.095	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181116-s10-r2	-	inf	30.095	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181116-s10-r3	-	inf	17.557	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181116-s10-r3	-	inf	17.557	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181116-s10-r3	-	inf	17.557	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181116-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181116-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181116-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181117-s10-r1	-	inf	29.494	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181117-s10-r1	-	inf	29.494	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181117-s10-r1	-	inf	29.494	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181117-s10-r2	-	inf	2.458	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181117-s10-r2	-	inf	2.458	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181117-s10-r2	-	inf	2.458	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181117-s10-r3	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181117-s10-r3	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181117-s10-r3	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181117-s10-r4	-	inf	4.916	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181117-s10-r4	-	inf	4.916	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181117-s10-r4	-	inf	4.916	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181118-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181118-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181118-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181118-s10-r2	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181118-s10-r2	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181118-s10-r2	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181118-s10-r3	-	inf	10.295	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181118-s10-r3	-	inf	10.295	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181118-s10-r3	-	inf	10.295	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	0	d20181118-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-60	0	d20181118-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	0	d20181118-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	1	d20181114-s10-r1	909.165	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181114-s10-r1	1833.000	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181114-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	1	d20181114-s10-r2	1825.000	3157.663	16.081	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181114-s10-r2	1825.000	3157.663	16.081	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181114-s10-r2	-	3157.663	16.081	False	True	window-wall	window-wall	yes
+2a	w08	dl-30	1	d20181114-s10-r3	900.526	inf	7.049	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181114-s10-r3	1822.471	inf	7.049	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181114-s10-r3	-	inf	7.049	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	1	d20181114-s10-r4	926.000	1238.000	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181114-s10-r4	-	1238.000	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-120	1	d20181114-s10-r4	-	1238.000	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-30	1	d20181115-s10-r1	922.843	3059.433	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181115-s10-r1	1802.173	3059.433	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181115-s10-r1	-	3059.433	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-30	1	d20181115-s10-r2	911.461	2232.080	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181115-s10-r2	911.461	2232.080	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181115-s10-r2	-	2232.080	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-30	1	d20181115-s10-r3	903.493	4657.817	21.643	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181115-s10-r3	2112.000	4657.817	21.643	False	False	commitment-infeasible	completed	NO
+2a	w08	dl-120	1	d20181115-s10-r3	-	4657.817	21.643	False	True	window-wall	window-wall	yes
+2a	w08	dl-30	1	d20181115-s10-r4	911.190	1838.635	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181115-s10-r4	-	1838.635	0.000	False	True	window-wall	commitment-all-rejected/deadline-late	NO
+2a	w08	dl-120	1	d20181115-s10-r4	-	1838.635	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-30	1	d20181116-s10-r1	941.864	2366.000	10.803	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181116-s10-r1	-	2366.000	10.803	False	True	window-wall	window-wall	yes
+2a	w08	dl-120	1	d20181116-s10-r1	-	2366.000	10.803	False	True	window-wall	window-wall	yes
+2a	w08	dl-30	1	d20181116-s10-r2	913.810	5080.000	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181116-s10-r2	4557.159	5080.000	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181116-s10-r2	-	5080.000	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-30	1	d20181116-s10-r3	936.000	1487.335	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181116-s10-r3	-	1487.335	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-120	1	d20181116-s10-r3	-	1487.335	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-30	1	d20181116-s10-r4	923.000	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181116-s10-r4	2703.410	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181116-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	1	d20181117-s10-r1	911.805	inf	2.910	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181117-s10-r1	1860.672	inf	2.910	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181117-s10-r1	-	inf	2.910	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	1	d20181117-s10-r2	-	2186.000	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-60	1	d20181117-s10-r2	-	2186.000	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-120	1	d20181117-s10-r2	-	2186.000	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-30	1	d20181117-s10-r3	1022.209	inf	8.295	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181117-s10-r3	3615.000	inf	8.295	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181117-s10-r3	-	inf	8.295	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	1	d20181117-s10-r4	904.041	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181117-s10-r4	2700.000	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181117-s10-r4	-	inf	0.000	False	False	not-commitment-infeasible	commitment-all-rejected/deadline-late	NO
+2a	w08	dl-30	1	d20181118-s10-r1	1814.235	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181118-s10-r1	1814.235	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181118-s10-r1	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-30	1	d20181118-s10-r2	1870.245	inf	0.001	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181118-s10-r2	-	inf	0.001	False	False	not-commitment-infeasible	completed	yes
+2a	w08	dl-120	1	d20181118-s10-r2	-	inf	0.001	False	False	not-commitment-infeasible	commitment-all-rejected/deadline-late	NO
+2a	w08	dl-30	1	d20181118-s10-r3	1816.000	inf	8.281	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181118-s10-r3	5424.244	inf	8.281	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-120	1	d20181118-s10-r3	-	inf	8.281	False	False	not-commitment-infeasible	commitment-all-rejected/deadline-late	NO
+2a	w08	dl-30	1	d20181118-s10-r4	1826.549	3900.323	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2a	w08	dl-60	1	d20181118-s10-r4	-	3900.323	0.000	False	True	window-wall	window-wall	yes
+2a	w08	dl-120	1	d20181118-s10-r4	-	3900.323	0.000	False	True	window-wall	window-wall	yes
+2b	w08	visible-30	1	d20181112-s10-r1-w08	2712.832	inf	14.692	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w08	dl-30	1	d20181112-s10-r1-w08	2712.832	inf	14.692	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2b	w08	dl-60	1	d20181112-s10-r1-w08	-	inf	14.692	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl-120	1	d20181112-s10-r1-w08	-	inf	14.692	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl2-30	1	d20181112-s10-r1-w08	2712.832	inf	14.692	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2b	w17	visible-30	1	d20181112-s10-r1-w17	2748.414	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w17	dl-30	1	d20181112-s10-r1-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-60	1	d20181112-s10-r1-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-120	1	d20181112-s10-r1-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl2-30	1	d20181112-s10-r1-w17	2748.414	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-window	yes
+2b	w08	visible-30	1	d20181112-s10-r2-w08	933.000	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w08	dl-30	1	d20181112-s10-r2-w08	933.000	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2b	w08	dl-60	1	d20181112-s10-r2-w08	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl-120	1	d20181112-s10-r2-w08	-	inf	0.000	False	False	not-commitment-infeasible	commitment-all-rejected/deadline-late	NO
+2b	w08	dl2-30	1	d20181112-s10-r2-w08	933.000	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2b	w17	visible-30	1	d20181112-s10-r2-w17	5407.514	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w17	dl-30	1	d20181112-s10-r2-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-60	1	d20181112-s10-r2-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-120	1	d20181112-s10-r2-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl2-30	1	d20181112-s10-r2-w17	5407.514	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-window	yes
+2b	w08	visible-30	1	d20181112-s10-r3-w08	1304.092	3225.000	0.000	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w08	dl-30	1	d20181112-s10-r3-w08	2741.000	3225.000	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2b	w08	dl-60	1	d20181112-s10-r3-w08	-	3225.000	0.000	False	True	window-wall	window-wall	yes
+2b	w08	dl-120	1	d20181112-s10-r3-w08	-	3225.000	0.000	False	True	window-wall	window-wall	yes
+2b	w08	dl2-30	1	d20181112-s10-r3-w08	2741.000	3225.000	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2b	w17	visible-30	1	d20181112-s10-r3-w17	2700.493	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w17	dl-30	1	d20181112-s10-r3-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-60	1	d20181112-s10-r3-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-120	1	d20181112-s10-r3-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl2-30	1	d20181112-s10-r3-w17	2700.493	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-window	yes
+2b	w08	visible-30	1	d20181112-s10-r4-w08	983.000	1275.000	0.000	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w08	dl-30	1	d20181112-s10-r4-w08	983.000	1275.000	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2b	w08	dl-60	1	d20181112-s10-r4-w08	-	1275.000	0.000	False	True	window-wall	window-wall	yes
+2b	w08	dl-120	1	d20181112-s10-r4-w08	-	1275.000	0.000	False	True	window-wall	window-wall	yes
+2b	w08	dl2-30	1	d20181112-s10-r4-w08	983.000	1275.000	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-late	yes
+2b	w17	visible-30	1	d20181112-s10-r4-w17	4538.819	inf	0.001	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w17	dl-30	1	d20181112-s10-r4-w17	-	inf	0.001	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-60	1	d20181112-s10-r4-w17	-	inf	0.001	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-120	1	d20181112-s10-r4-w17	-	inf	0.001	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl2-30	1	d20181112-s10-r4-w17	4538.819	inf	0.001	False	False	commitment-infeasible	commitment-all-rejected/deadline-window	yes
+2b	w08	visible-30	1	d20181113-s10-r1-w08	1567.486	2361.000	0.000	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w08	dl-30	1	d20181113-s10-r1-w08	-	2361.000	0.000	False	True	window-wall	window-wall	yes
+2b	w08	dl-60	1	d20181113-s10-r1-w08	-	2361.000	0.000	False	True	window-wall	window-wall	yes
+2b	w08	dl-120	1	d20181113-s10-r1-w08	-	2361.000	0.000	False	True	window-wall	window-wall	yes
+2b	w08	dl2-30	1	d20181113-s10-r1-w08	-	2361.000	0.000	False	True	window-wall	window-wall	yes
+2b	w17	visible-30	1	d20181113-s10-r1-w17	6055.144	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w17	dl-30	1	d20181113-s10-r1-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-60	1	d20181113-s10-r1-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-120	1	d20181113-s10-r1-w17	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl2-30	1	d20181113-s10-r1-w17	6350.000	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/deadline-window	yes
+2b	w08	visible-30	1	d20181113-s10-r2-w08	1185.001	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w08	dl-30	1	d20181113-s10-r2-w08	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl-60	1	d20181113-s10-r2-w08	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl-120	1	d20181113-s10-r2-w08	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl2-30	1	d20181113-s10-r2-w08	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	visible-30	1	d20181113-s10-r2-w17	1329.030	inf	27.786	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w17	dl-30	1	d20181113-s10-r2-w17	-	inf	27.786	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-60	1	d20181113-s10-r2-w17	-	inf	27.786	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-120	1	d20181113-s10-r2-w17	-	inf	27.786	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl2-30	1	d20181113-s10-r2-w17	6329.822	inf	27.786	False	False	commitment-infeasible	commitment-all-rejected/deadline-window	yes
+2b	w08	visible-30	1	d20181113-s10-r3-w08	1027.000	inf	0.000	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w08	dl-30	1	d20181113-s10-r3-w08	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl-60	1	d20181113-s10-r3-w08	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl-120	1	d20181113-s10-r3-w08	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl2-30	1	d20181113-s10-r3-w08	-	inf	0.000	False	False	not-commitment-infeasible	completed	yes
+2b	w17	visible-30	1	d20181113-s10-r3-w17	6785.000	inf	19.742	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w17	dl-30	1	d20181113-s10-r3-w17	-	inf	19.742	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-60	1	d20181113-s10-r3-w17	-	inf	19.742	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-120	1	d20181113-s10-r3-w17	-	inf	19.742	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl2-30	1	d20181113-s10-r3-w17	-	inf	19.742	False	False	not-commitment-infeasible	completed	yes
+2b	w08	visible-30	1	d20181113-s10-r4-w08	3663.000	inf	0.001	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w08	dl-30	1	d20181113-s10-r4-w08	-	inf	0.001	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl-60	1	d20181113-s10-r4-w08	-	inf	0.001	False	False	not-commitment-infeasible	completed	yes
+2b	w08	dl-120	1	d20181113-s10-r4-w08	-	inf	0.001	False	False	not-commitment-infeasible	window-wall	yes
+2b	w08	dl2-30	1	d20181113-s10-r4-w08	-	inf	0.001	False	False	not-commitment-infeasible	completed	yes
+2b	w17	visible-30	1	d20181113-s10-r4-w17	6321.671	inf	1.796	False	False	commitment-infeasible	commitment-all-rejected/budget	yes
+2b	w17	dl-30	1	d20181113-s10-r4-w17	-	inf	1.796	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-60	1	d20181113-s10-r4-w17	-	inf	1.796	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl-120	1	d20181113-s10-r4-w17	-	inf	1.796	False	False	not-commitment-infeasible	completed	yes
+2b	w17	dl2-30	1	d20181113-s10-r4-w17	6321.671	inf	1.796	False	False	commitment-infeasible	commitment-all-rejected/deadline-window	yes
+
+## 2. Counts (stage x arm x window x k x label group)
+2a	dl-120	w08	k=0	completed=20
+2a	dl-120	w08	k=1	commitment-all-rejected=3, completed=6, window-wall=11
+2a	dl-30	w08	k=0	completed=20
+2a	dl-30	w08	k=1	commitment-all-rejected=19, window-wall=1
+2a	dl-60	w08	k=0	completed=20
+2a	dl-60	w08	k=1	commitment-all-rejected=13, completed=2, window-wall=5
+2b	dl-120	w08	k=1	commitment-all-rejected=1, completed=3, window-wall=4
+2b	dl-120	w17	k=1	completed=8
+2b	dl-30	w08	k=1	commitment-all-rejected=4, completed=3, window-wall=1
+2b	dl-30	w17	k=1	completed=8
+2b	dl-60	w08	k=1	completed=5, window-wall=3
+2b	dl-60	w17	k=1	completed=8
+2b	dl2-30	w08	k=1	commitment-all-rejected=4, completed=3, window-wall=1
+2b	dl2-30	w17	k=1	commitment-all-rejected=7, completed=1
+2b	visible-30	w08	k=1	commitment-all-rejected=8
+2b	visible-30	w17	k=1	commitment-all-rejected=8
+
+## 3. Accuracy over determinable (non-weak) pairs
+2a	w08	98/102	96.1%
+2b	w08	31/32	96.9%
+2b	w17	40/40	100.0%
+weak predictions: 26; correct 25
+  weak	dl-120-k1-d20181114-s10-r2-s7	predicted window-wall	outcome window-wall
+  weak	dl-60-k1-d20181114-s10-r4-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181114-s10-r4-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181115-s10-r1-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181115-s10-r2-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181115-s10-r3-s7	predicted window-wall	outcome window-wall
+  weak	dl-60-k1-d20181115-s10-r4-s7	predicted window-wall	outcome commitment-all-rejected/deadline-late
+  weak	dl-120-k1-d20181115-s10-r4-s7	predicted window-wall	outcome window-wall
+  weak	dl-60-k1-d20181116-s10-r1-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181116-s10-r1-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181116-s10-r2-s7	predicted window-wall	outcome window-wall
+  weak	dl-60-k1-d20181116-s10-r3-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181116-s10-r3-s7	predicted window-wall	outcome window-wall
+  weak	dl-30-k1-d20181117-s10-r2-s7	predicted window-wall	outcome window-wall
+  weak	dl-60-k1-d20181117-s10-r2-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181117-s10-r2-s7	predicted window-wall	outcome window-wall
+  weak	dl-60-k1-d20181118-s10-r4-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181118-s10-r4-s7	predicted window-wall	outcome window-wall
+  weak	dl-60-k1-d20181112-s10-r3-w08-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181112-s10-r3-w08-s7	predicted window-wall	outcome window-wall
+  weak	dl-60-k1-d20181112-s10-r4-w08-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181112-s10-r4-w08-s7	predicted window-wall	outcome window-wall
+  weak	dl-30-k1-d20181113-s10-r1-w08-s7	predicted window-wall	outcome window-wall
+  weak	dl-60-k1-d20181113-s10-r1-w08-s7	predicted window-wall	outcome window-wall
+  weak	dl-120-k1-d20181113-s10-r1-w08-s7	predicted window-wall	outcome window-wall
+  weak	dl2-30-k1-d20181113-s10-r1-w08-s7	predicted window-wall	outcome window-wall
+
+## 4. 2A minimum feasible deadline per cell
+k	cell	min_l_feasible	ref_max_Mplus_s
+0	d20181114-s10-r1	30	1.0
+0	d20181114-s10-r2	30	1.1
+0	d20181114-s10-r3	30	26.8
+0	d20181114-s10-r4	30	0.9
+0	d20181115-s10-r1	30	1.3
+0	d20181115-s10-r2	30	1.3
+0	d20181115-s10-r3	30	6.9
+0	d20181115-s10-r4	30	1.0
+0	d20181116-s10-r1	30	0.9
+0	d20181116-s10-r2	30	28.0
+0	d20181116-s10-r3	30	17.6
+0	d20181116-s10-r4	30	1.4
+0	d20181117-s10-r1	30	27.1
+0	d20181117-s10-r2	30	2.5
+0	d20181117-s10-r3	30	1.3
+0	d20181117-s10-r4	30	5.4
+0	d20181118-s10-r1	30	1.4
+0	d20181118-s10-r2	30	1.1
+0	d20181118-s10-r3	30	8.1
+0	d20181118-s10-r4	30	1.3
+1	d20181114-s10-r1	120	61.0
+1	d20181114-s10-r2	120	99.0
+1	d20181114-s10-r3	120	86.2
+1	d20181114-s10-r4	60	35.5
+1	d20181115-s10-r1	120	82.2
+1	d20181115-s10-r2	120	66.7
+1	d20181115-s10-r3	60	66.7
+1	d20181115-s10-r4	120	56.3
+1	d20181116-s10-r1	60	49.3
+1	d20181116-s10-r2	120	76.0
+1	d20181116-s10-r3	60	32.5
+1	d20181116-s10-r4	120	86.0
+1	d20181117-s10-r1	120	82.9
+1	d20181117-s10-r2	30	28.0
+1	d20181117-s10-r3	120	80.1
+1	d20181117-s10-r4	none(>120)	64.4
+1	d20181118-s10-r1	120	87.6
+1	d20181118-s10-r2	60	55.6
+1	d20181118-s10-r3	none(>120)	103.2
+1	d20181118-s10-r4	60	46.6
+
+## 5. 2B directional table (commitment-infeasible cells / 8)
+w08	conduct-30	0/8 run	expected 0/8
+w08	dl-30	4/8 run	expected >=4/8
+w08	dl-60	0/8 run	expected -
+w08	dl-120	1/8 run	expected <=1/8
+w08	dl2-30	4/8 run	expected >= dl-30 per cell
+w08	visible-30	8/8 run	expected >=4/8
+w17	conduct-30	0/8 run	expected 0/8
+w17	dl-30	0/8 run	expected <=1/8
+w17	dl-60	0/8 run	expected -
+w17	dl-120	0/8 run	expected 0/8
+w17	dl2-30	7/8 run	expected >=4/8
+w17	visible-30	8/8 run	expected >=4/8
+w17 row as expected: True; w08 dl2-30 >= dl-30 per cell: True
+
+## 6. Thresholds
+2B night accuracy 40/40 = 100.0% (>= 90% needed); w17 row True
+2B confirmed on held-out set: True
+2A accuracy 98/102; dl-30 k=1 commitment-infeasible 19/20 (>= 11 needed)
+2A confirmed (controlled mechanism): True
+negations: night accuracy < 75%: False; night dl-30 deadline-late >= 3/8: False (0); night dl2-30 and visible-30 both <= 2/8: False
+
+## 7. Exact McNemar (descriptive only): dl-30 vs conduct-30, commitment-infeasible
+2A w08	dl-30 only 19	conduct-30 only 0	p = 0.0000
+2B w08	dl-30 only 4	conduct-30 only 0	p = 0.1250
+2B w17	dl-30 only 0	conduct-30 only 0	p = 1.0000
+
+## 8. Accepted requests where both arms completed (dl-30 vs conduct-30, k=1)
+d20181112-s10-r1-w17	dl-30 99	conduct-30 99
+d20181112-s10-r2-w17	dl-30 103	conduct-30 103
+d20181112-s10-r3-w17	dl-30 91	conduct-30 91
+d20181112-s10-r4-w17	dl-30 99	conduct-30 99
+d20181113-s10-r1-w17	dl-30 92	conduct-30 91
+d20181113-s10-r2-w08	dl-30 99	conduct-30 99
+d20181113-s10-r2-w17	dl-30 96	conduct-30 96
+d20181113-s10-r3-w08	dl-30 93	conduct-30 93
+d20181113-s10-r3-w17	dl-30 94	conduct-30 94
+d20181113-s10-r4-w08	dl-30 92	conduct-30 92
+d20181113-s10-r4-w17	dl-30 97	conduct-30 97

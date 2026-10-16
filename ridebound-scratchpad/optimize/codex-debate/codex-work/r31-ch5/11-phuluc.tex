@@ -1,0 +1,120 @@
+% Round 31 — ghép sau tài liệu tham khảo; không cần gói mới.
+% Mục A chỉ giữ nhãn và phạm vi; các bảng số liệu tĩnh bị bỏ, lý do ở r31-NOTES.md.
+\appendix
+\chapter*{Phụ lục}
+\addcontentsline{toc}{chapter}{Phụ lục}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\theHsection}{appendix.\Alph{section}}
+\renewcommand{\theHtable}{appendix.\Alph{section}.\arabic{table}}
+
+\section{Phạm vi của tập kịch bản tĩnh}
+\label{phuluc:A}
+
+Tập này thuộc đợt thử trước với thời gian đi không đổi. Phép so cấu hình cam kết đầy đủ với ghép tự do xét cả gói cam kết. Kết quả không chuyển sang tập kiểm tra chính (mục~\ref{muc:c4-taptu}).
+% EV: K29; K33; K34; E12 (OUTLINE-PROPOSAL-CLAUDE.md:403; chỉ dùng phạm vi, không dùng số)
+
+\section{Phương án giữ nguyên kế hoạch dưới các luật}
+\label{phuluc:B}
+\setcounter{table}{0}
+
+Bảng~\ref{bang:pl-giunguyen} chỉ xét phép kiểm giờ trả, với giả thiết (N) ở mục~\ref{muc:giunguyen} và trạng thái sổ hợp lệ. Phương án giữ nguyên có $p=e$; được phép qua riêng luật giờ trả chưa bảo đảm các ràng buộc khác đều hợp lệ.
+% EV: A06; A22; X3-27; X3-31
+
+\begin{table}[htbp]
+\centering
+\caption{Phép kiểm giờ trả của phương án giữ nguyên kế hoạch. $L$ là phần trần đã dùng, $B$ là trần, $L^{\mathrm{V}}$ là tổng độ dời khách thấy đã dùng; các mốc giờ theo mục~\ref{muc:bamoc}.}
+\label{bang:pl-giunguyen}
+\begin{tabular}{@{}p{3.5cm}p{3.1cm}p{8.4cm}@{}}
+\toprule
+\textbf{Luật} & \textbf{Luôn qua?} & \textbf{Lý do hoặc điều kiện} \\
+\midrule
+Luật C & Có, khi $0\le L\le B$ & $L+|e-e|=L\le B$. \\
+% EV: A06; A22
+Luật hạn chót & Không & Có thể có $e-p_0>B$ dù kế hoạch không đổi. \\
+% EV: A09; A10
+Trần độ dời khách thấy & Không & $L^{\mathrm{V}}+|e-v|$ có thể vượt $B$. \\
+% EV: A11; A01; X3-33
+Hạn chót nới theo mốc giữ kế hoạch & Có, theo suy luận & $p=e\le\max(p_0+B,e)$. Đây là cách viết lại theo Hörl và Zwick~\cite{horl2022}, chưa được chạy. \\
+% EV: A22; J03; X3-36; K02; K27
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách đọc bảng: giữ kế hoạch không thêm phần dời do điều phối.
+% EV: A22; A10
+
+Các ví dụ sau là phép tính minh họa, mọi mốc thời gian tính bằng giây:
+\begin{itemize}[leftmargin=1.2cm,itemsep=0pt,topsep=2pt]
+\item Với $v=e=600$ và $p=660$, ta có $x=0$, $c=z=60$: mốc giữ kế hoạch không đổi, nhưng điều phối dời giờ trả.
+% EV: A01; TEX07:650 (CE-1; minh họa số)
+\item Chuỗi lời hứa $600\to660\to600$ có độ lệch hai đầu bằng 0, tổng độ dời khách thấy bằng 120.
+% EV: A01; A12; TEX07:655-656 (CE-4; minh họa số)
+\item Chuỗi $600\to660\to720$ có cả độ lệch hai đầu và tổng độ dời khách thấy bằng 120.
+% EV: A01; A12; TEX07:657-658 (CE-5; minh họa số)
+\item Khi $x$ và $c$ trái dấu, $|z|=|x+c|$ có thể nhỏ hơn $|c|$: hai phần bù nhau trong độ dời khách thấy.
+% EV: A01; suy luận đại số cho CE-6, không nhận là bản ghi thực nghiệm
+\end{itemize}
+
+\section{Thông tin tái lập}
+\label{phuluc:C}
+\setcounter{table}{0}
+
+Bảng~\ref{bang:pl-danhsach} viết gọn \nolinkurl{tang3/t38/split-t38-v1.json} trong \nolinkurl{E:/Code/Report_INT3508/ridebound-scratchpad/}. Lấy mọi cặp trong mỗi tích; mã có dạng \nolinkurl{d20181114-s10-r3-w07}, với $r$ là mẫu, $w$ là giờ bắt đầu.
+% EV: B08; B09; SPLIT:15-65
+
+\begin{table}[htbp]
+\centering
+\caption{Danh sách 34 kịch bản kiểm tra chính và 15 kịch bản hiệu chỉnh, đều tháng 11/2018. Dấu chấm phẩy tách các nhóm trong cùng ngày.}
+\label{bang:pl-danhsach}
+\begin{tabular}{@{}p{1.5cm}p{7.0cm}p{6.5cm}@{}}
+\toprule
+\textbf{Ngày} & \textbf{Kiểm tra chính: mẫu $\times$ khung} & \textbf{Hiệu chỉnh: mẫu $\times$ khung} \\
+\midrule
+14 & $\{3,4\}\times\{7,8,17\}$ & $\{1,2\}\times\{7,8,17\}$ \\
+15 & $\{1,2,4\}\times\{7,8\}$ & $\{3\}\times\{7,8\}$ \\
+16 & $\{1,2,4\}\times\{7,8,17\}$ & $\{3\}\times\{7,8,17\}$ \\
+17 & $\{1,2\}\times\{8,17\}$; $\{3\}\times\{7,8,17\}$ & $\{4\}\times\{8,17\}$ \\
+18 & $\{2,3,4\}\times\{8,17\}$ & $\{1\}\times\{8,17\}$ \\
+% EV: B08; B09; SPLIT:15-65
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách đọc bảng: ngày 14 dùng mẫu 3, 4 ở cả ba khung cho tập chính. 15 kịch bản hiệu chỉnh chạy luật C trần 30 giây để chỉnh khoảng dự phòng trong phép thử riêng, không dùng ở khóa luận. Các tập khác đều lấy mọi mẫu 1--4: buổi sáng ngày 12--13/11/2018, khung 7; cố định cùng ngày, khung 8 và 17; tuyết ngày 15/11/2018, khung 14 và 15.
+% EV: B08; C17; T38I:15-22; B15; B16; B17; B20; RUNW07:3-8,33-34; run_forecast.py:73-74
+
+Bảng~\ref{bang:pl-goc} ghi cấu hình và gốc kết quả; tệp luật ở \nolinkurl{tang3/configs/}, mức bổ sung buổi sáng ở \nolinkurl{tang3/w07x/configs/}. LOCKS tương ứng điều phối không trần; B1 là chính sách ghép tự do; C1 là họ chính sách kiểm trần cứng.
+% EV: A08; X3-19; X3-38; DOC08:20-29; RUNW07:33-43; RW7X:35-40; B17
+
+\begin{table}[htbp]
+\centering
+\caption{Cấu hình được dùng và gốc kết quả. Các tên bắt đầu bằng \texttt{tier3-} tính từ \nolinkurl{C:/RideBoundData/research/}. U là điều phối không trần; C-$B$ là luật C; M$^+$-$B$ là luật hạn chót; V-30 là trần độ dời khách thấy; FREE là ghép tự do. $B$ tính bằng giây.}
+\label{bang:pl-goc}
+\begin{tabular}{@{}p{2.8cm}p{5.4cm}p{6.8cm}@{}}
+\toprule
+\textbf{Tập} & \textbf{Cấu hình} & \textbf{Gốc kết quả} \\
+\midrule
+Chính & U, C-30, M$^+$-30, M$^+$-60, V-30; C-120 & \nolinkurl{tier3-t38-v1/}; C-120 ở \nolinkurl{tier3-t38c120-v1/} \\
+% EV: B10; L1a-01; RUN38:42-55; R120:22-26
+Buổi sáng & U; C và M$^+$ với $B\in\{30,60,90,120,150,180,240,300\}$ & \nolinkurl{tier3-w07-v1/}, \nolinkurl{tier3-w07x-v1/} \\
+% EV: B15; B16; X3-28; RUNW07:33-43; RW7X:35-40
+Cố định & FREE, U, C-30, C-60, C-120 & \nolinkurl{E:/RideBoundData/wp14r/development-v6-ledger/}, trong \nolinkurl{attempt-01/output/} của từng lần chạy \\
+% EV: B17; LAD:1-6; wp14r_ladder_reanalysis.py:1-13
+Chiều tuyết & C-30 & \nolinkurl{tier3-forecast-v1/} \\
+% EV: B20; N-26; run_forecast.py:73-74,85-102
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách đọc bảng: trần 120 giây của tập chính có gốc riêng. Trừ tập cố định dùng bộ chạy cũ không phục hồi, các tập dùng \nolinkurl{runner-tier3-v2}, dựng từ \texttt{45f8026}; bản tin khởi tạo ghi lõi \texttt{1ce15e92}, FleetPy 1.0.2, hạt giống 7. \nolinkurl{wp4-tier3-v2.json} dùng phục hồi không tệ hơn kế hoạch giữ. Đồng hồ tiến theo sự kiện, kết thúc khi hết yêu cầu và hành trình đang hoạt động; khung nhu cầu hai tiếng không phải thời lượng cố định.
+% EV: A28; X3-10; B17; R26 Q1-Q2,Q8 (tám bản tin khởi tạo chiều tuyết và liên kết cấu hình); WP4:7
+
+Một lần chạy là một cặp kịch bản và cấu hình, lấy bản hoàn tất thay bản hỏng. Số dùng: chính 170 lần và thêm 34 lần C-120; sáng 136 trong 192; cố định 16 mỗi cấu hình; tuyết 8. C-30 dùng bản thay thế \nolinkurl{C-30-d20181114-s10-r3-w17-rerun1}. 1.991 là kiểm kê ngày 08/10/2026.
+% EV: B10; L1a-01; C4A-07; B17; H13; B20; C4A-17; ADD1:6; B19; C4A-20
+
+Các bộ đọc tính lại $v,e,p$, phần dời và lời hứa dự báo từ bản ghi thô. Trễ dùng ngưỡng lớn hơn hẳn; không trễ bằng phục vụ trừ trễ trên mọi yêu cầu. Độ dài thêm gộp theo khách; trung bình theo kịch bản tính riêng. Phát lại giữ nguyên quyết định và giờ trả thực tế.
+% EV: A26; C19; N4B-14; ADDENDUM-1 phần phương pháp; SPEC:28-63; C08; C09; C10; N-16; K41
+
+Ngày 12/10/2026, toàn bộ kiểm thử trên \texttt{45f8026} với kiểu xuống dòng LF đạt 1.024 trong 1.025. Kiểm thử còn lại đòi cây làm việc có tệp chưa ghi nhận và đạt 1 trong 1 khi chạy riêng sau khi thêm tệp đó. Kết quả cần cả hai điều kiện môi trường này.
+% EV: N4B-13; TESTRUN-45f8026-2026-10-12.md:14-17,34-47; TLOG:43-105; TDIRTY:1-6

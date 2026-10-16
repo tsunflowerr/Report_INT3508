@@ -1,0 +1,805 @@
+% =====================================================================================================
+% Chương 3 — bản viết lại, phiên bản 2 (2026-10-11). Dùng như \input{noi-dung/07-chuong3} của main.tex.
+% Bản 1 (07-chuong3.tex) được giữ nguyên. Lý do từng thay đổi: reviews/CH3-REVISION-LOG.md.
+% Ghi chú cho người ghép: 07-chuong3-v2-NOTES.md (nhãn ngoài chương, tài liệu mới, môi trường nhanxet).
+% Mỗi dòng "% EV:" trỏ tới EVIDENCE-REGISTER.md (A01…K52), EVIDENCE-REGISTER-ADDENDUM-1.md (N-01…N-30,
+% L1a-01…09) hoặc EVIDENCE-REGISTER-ADDENDUM-2-CH3.md (X3-01…X3-41).
+% =====================================================================================================
+
+% Môi trường "Nhận xét" chưa có trong main.tex; định nghĩa có điều kiện ở đây (nên chuyển lên phần mở đầu).
+\ifcsname nhanxet\endcsname\else
+  \theoremstyle{definition}
+  \newtheorem{nhanxet}{Nhận xét}[chapter]
+\fi
+
+\chapter{Phương pháp: luật C, lời hứa theo dự báo và sổ theo từng khách}
+\label{chuong:phuongphap}
+
+Khi đặt xe đi chung, hành khách được báo giờ xe sẽ trả mình tới nơi; khóa luận gọi giờ này là lời hứa giờ
+trả, gọi tắt là lời hứa. Giờ trả có thể bị dời vì bộ điều phối ghé đón thêm khách, hoặc vì đường đông hơn lúc
+hứa hay xe đi nhanh, chậm hơn dự kiến. Ý chính của chương là chỉ giới hạn loại thứ nhất. Ở mỗi lượt quyết
+định, hệ thống tính cho mỗi khách giờ trả nếu xe giữ nguyên kế hoạch cũ và giờ trả nếu chọn phương án mới;
+hiệu của hai giờ là phần dời do điều phối. Luật C cộng độ lớn phần này qua cả chuyến và loại mọi phương án
+làm tổng vượt một trần. Phần thay đổi theo nhịp tắc đường quen thuộc trong ngày được cộng trước vào lời hứa
+đầu nhờ dự báo theo các ngày trước; phần còn lại được ghi trong sổ theo từng khách (per-rider ledger).
+Mục~\ref{muc:baitoan} phát biểu bài toán; mục~\ref{muc:bamoc}--\ref{muc:doichung} định nghĩa phần dời do
+điều phối, luật C và các luật đối chứng; mục~\ref{muc:dubao}--\ref{muc:caidat} trình bày lời hứa theo dự
+báo, sổ, cài đặt và cách kiểm tra.
+% EV: A01; A02; A06; F01; X3-12 (FFA:134-138, ba phần của sổ)
+
+% -----------------------------------------------------------------------------------------------------
+\section{Phát biểu bài toán và tổng quan hệ thống}
+\label{muc:baitoan}
+
+\subsection{Thuật ngữ và vòng đời của một yêu cầu}
+\label{muc:thuatngu}
+
+Bảng~\ref{bang:thuatngu} giải thích các thuật ngữ của chương; tên tiếng Anh chỉ ghi trong bảng. Mọi thực
+nghiệm chạy trên bộ mô phỏng FleetPy~\cite{engelhardt2026} với dữ liệu chuẩn Manhattan; bộ mô phỏng gửi sự
+kiện cho bộ điều phối RideBound và cho xe chạy theo kế hoạch được chọn (mục~\ref{muc:kientruc}).
+% EV: B01; J18 (FLEET:1-12, 474); X3-15
+
+\begin{table}[htbp]
+\centering
+\caption{Thuật ngữ dùng trong chương}
+\label{bang:thuatngu}
+\small
+\begin{tabular}{@{}p{4.3cm}p{10.5cm}@{}}
+\toprule
+\textbf{Thuật ngữ} & \textbf{Nghĩa trong khóa luận}\\
+\midrule
+Lượt quyết định (decision epoch) & Một lần bộ điều phối nhận một lô sự kiện và trả một quyết định cho cả
+đội xe.\\
+Phương án (candidate plan) & Một kế hoạch, tức danh sách điểm đón, điểm trả theo thứ tự, có thể chọn cho
+một xe ở lượt đang xét.\\
+Phương án giữ nguyên kế hoạch (keep-route option) & Xe đi tiếp kế hoạch cũ, không nhận thêm khách.\\
+Bộ sinh chỉ chèn thêm (insertion-only generator) & Chèn điểm đón, điểm trả của yêu cầu mới vào kế hoạch
+của một xe, không bỏ và không đảo thứ tự điểm cũ nào.\\
+Bộ chọn (selector); bộ giải (solver) & Bộ chọn chọn mỗi xe một phương án theo thứ tự tiêu chí
+(lexicographic order): chỉ khi hòa ở tiêu chí trước mới xét tiêu chí sau. Bộ giải quy hoạch nguyên của
+OR-Tools~\cite{ortools} giải bài toán chọn.\\
+Lời hứa; lời hứa đầu $p_0$ & Giờ đón, giờ trả báo cho khách. Lời hứa đầu được công bố khi khách xác nhận
+đặt xe; $p_0$ là giờ trả của nó, chưa cộng dự báo.\\
+Công bố; bản ghi sửa & Ghi lời hứa mới của một khách vào sổ và gửi nó trong bản tin quyết định; mỗi lần
+công bố sau lời hứa đầu là một bản ghi sửa.\\
+Khóa (lock); chiều cam kết & Khóa là phần của lời hứa không được đổi sau khi xác nhận. Chiều cam kết là một
+thuộc tính của lời hứa được theo dõi riêng, như giờ trả hay việc đổi xe.\\
+Trần $B$ (cap); phần trần đã dùng $L_r$ & $B$ là tổng phần dời do điều phối tối đa của mỗi khách trong cả
+chuyến; $L_r$ là phần khách $r$ đã dùng; $B - L_r$ là phần trần còn lại.\\
+Quyết định bị ép (forced decision); luật phục hồi (recovery rule) & Quyết định có xe đi theo phương án vi
+phạm luật lời hứa, vì luật đó đã loại cả phương án giữ nguyên của xe. Luật phục hồi quy định phương án nào
+được giữ lại khi đó.\\
+Hệ số tắc đường & Số nhân chung cho cả thành phố áp lên mọi thời gian đi, đổi theo khung 15 phút; hệ số 1,2
+làm mọi thời gian đi dài gấp 1,2 lần so với hệ số 1.\\
+Kịch bản & Một ngày, một mẫu nhu cầu và một khung 2 giờ của dữ liệu Manhattan: 108 yêu cầu, 8 xe 4 chỗ.\\
+\bottomrule
+\end{tabular}
+\end{table}
+% EV (lượt, phương án, bộ sinh, bộ chọn): X3-01; SPEC:31-34; X3-03; X3-07; X3-22; A14
+% EV (lời hứa, công bố, khóa, chiều, trần): A13; X3-25 (fleet_control.py:882-893: lời hứa trong bản tin quyết định); A07; A04; A06; K43
+% EV (bị ép, phục hồi, hệ số, kịch bản): X3-30; X3-09; B06; STRETCH:3-4 (số nhân chung toàn thành phố); B02; B03
+
+Một yêu cầu mới chờ được xét. Khi phương án được chọn của một xe chứa nó, yêu cầu được nhận và khách được
+mời; lúc này chưa có lời hứa. Khi khách xác nhận đặt xe, lời hứa đầu được công bố và $L_r = 0$; khách chờ
+đón, lên xe rồi được trả. Yêu cầu chưa được nhận được xét lại ở lượt sau nếu còn phương án hợp lệ hay chưa
+được xét vì giới hạn số yêu cầu mới, và bị từ chối khi mọi phương án chứa nó đều bị loại. Khóa và luật lời
+hứa áp từ lúc xác nhận tới lúc khách xuống xe.
+% EV: X3-20 (VALID:272-336; RollingCostPolicy.cs:173-226; fleet_control.py:878-924); A13; X3-32
+
+\subsection{Bài toán ở mỗi lượt quyết định}
+\label{muc:baitoan-phatbieu}
+
+Một lượt quyết định bắt đầu mỗi khi FleetPy gọi bước điều phối: bộ chuyển đổi gom các sự kiện từ lần gọi
+trước (yêu cầu mới, xác nhận đặt xe, tiến độ xe, đón, trả, thời gian đi mới) thành một lô. Bài toán ở mỗi
+lượt như sau.
+\begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+\item \textbf{Đầu vào:} trạng thái từng xe (vị trí, kế hoạch, sức chứa, khách trên xe, khách chờ đón); sổ
+theo từng khách; các yêu cầu đang chờ với điểm đón, điểm trả, cửa sổ đón (từ giờ đón sớm nhất tới giờ đón
+muộn nhất) và thời gian ngồi xe tối đa; bảng thời gian đi giữa các điểm lúc này, được coi là giữ nguyên cho
+phần đường còn lại.
+\item \textbf{Quyết định:} nhận, để lại hay từ chối từng yêu cầu đang chờ; chọn cho mỗi xe đúng một phương án.
+\item \textbf{Đầu ra:} lời hứa đầu và các bản ghi sửa trong sổ (mục~\ref{muc:so}).
+\item \textbf{Ràng buộc cứng và mục tiêu:} Bảng~\ref{bang:rangbuoc}; vi phạm ràng buộc cứng thì phương án bị
+loại.
+\item \textbf{Đánh giá:} số khách được phục vụ, trễ hay tới sớm so với lời hứa đầu, độ dài thêm của lời hứa,
+số khách bị điều phối dời giờ trả (mục~\ref{muc:c4-thietlap}).
+\end{itemize}
+% EV: X3-21 (fleet_control.py:395-429); X3-01; X3-02; A05; X3-20; B03; A06; A07; A14
+
+Bộ chọn giải một bài toán quy hoạch nguyên. Với $y_{k\pi} \in \{0, 1\}$ bằng 1 khi xe $k$ chọn phương án
+$\pi$ trong tập phương án $P_k$ của nó, ràng buộc là
+\begin{equation}
+\sum_{\pi \in P_k} y_{k\pi} = 1 \;\;\text{với mọi xe } k, \qquad
+\sum_{k} \sum_{\pi \in P_k,\; u \in \pi} y_{k\pi} \le 1 \;\;\text{với mọi yêu cầu mới } u ,
+\label{eq:chon}
+\end{equation}
+tức mỗi xe có đúng một phương án và mỗi yêu cầu mới thuộc phương án được chọn của nhiều nhất một xe. Các
+tiêu chí được giải lần lượt: mỗi lần tối ưu một tiêu chí và giữ các tiêu chí trước ở giá trị tốt nhất đã
+tìm. Đây là bước chọn của lối gán xe--chuyến động của Alonso-Mora và cộng sự~\cite{alonsomora2017}
+(mục~\ref{muc:c2-baitoan}); RideBound thêm các phép kiểm trước bước này.
+% EV: X3-22 (OrTools:3, 96-125, 180-189, 343-365); X3-34 (HZ:341-345); J17
+
+\begin{table}[htbp]
+\centering
+\caption{Ràng buộc cứng của một phương án (nửa trên) và thứ tự tiêu chí của bộ chọn (nửa dưới): bộ chọn so
+tiêu chí 1 trước, chỉ khi hòa mới xét tiêu chí 2, và cứ thế. Giá trị là cấu hình của các tập thử, không phải
+chuẩn ngành.}
+\label{bang:rangbuoc}
+\small
+\begin{tabular}{@{}p{2.4cm}p{7.6cm}p{4.8cm}@{}}
+\toprule
+\textbf{Nhóm} & \textbf{Nội dung} & \textbf{Vai trò}\\
+\midrule
+Ràng buộc dịch vụ & Đón trong vòng 10 phút kể từ lúc gọi; ngồi xe không quá 1,5 lần thời gian đi thẳng;
+mỗi xe tối đa 4 khách & Phương án đổi kế hoạch phải thỏa chặt; phương án giữ nguyên được nới phần vượt hai
+giới hạn thời gian mà kế hoạch cũ đã có\\
+% EV: B03; X3-23 (GEN:161-246; ServiceQualityAllowance.cs:61-94)
+Khóa & Không đổi xe, điểm đón, giờ đón; điểm trả không đổi nhờ trần 0. Giờ đón mới phải bằng giờ đón khi giữ
+nguyên kế hoạch & So với kế hoạch giữ nguyên, nên riêng tắc đường không làm khóa bị vi phạm\\
+% EV: A07; A08; A10; X3-06 (LOCK:42-60, 103-161, 204-207; CFG C-30.json:66-67, 94-98)
+Luật lời hứa & Luật C: $L_r + |p_r - e_r| \le B$ cho mọi khách có lời hứa trên xe, hoặc một luật ở
+Bảng~\ref{bang:luat} & Lọc trước bộ giải\\
+% EV: A06; A09; A11; HVA:62-66
+\midrule
+Tiêu chí 1 & Ít phương án vi phạm được giữ lại nhất (chỉ khi có xe bị ép) & Chỉ dùng chúng khi không còn
+cách khác\\
+Tiêu chí 2 & Nhận nhiều yêu cầu mới nhất & Ưu tiên phục vụ\\
+Tiêu chí 3 & Mức dùng trần lớn nhất trên đội xe nhỏ nhất; nếu hòa, tổng phần dời do điều phối nhỏ nhất, so
+lần lượt từng chiều cam kết (chỉ khi có chiều mang trần) & Ưu tiên ổn định\\
+Tiêu chí 4 & Tổng chi phí kế hoạch nhỏ nhất, tức thời lượng còn lại của các tuyến dự kiến & Hiệu quả theo mô
+hình, không phải chi phí vận hành thực\\
+Tiêu chí 5 & Thứ tự mã phương án & Phá hòa, để chạy lại cho cùng kết quả\\
+% EV: A14; X3-07 (SEL:271-330, 365-385, 510-522; HVA:537-636); DIM:19-32; A16; I09
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Một lượt quyết định}
+\label{muc:luotquyetdinh}
+
+Hình~\ref{hinh:vongquyetdinh} và Bảng~\ref{bang:luotquyetdinh} mô tả một lượt. Ngoài sinh phương án và chọn
+bằng bộ giải, mỗi lượt có ba bước dành cho lời hứa: tính các mốc giờ trả của từng khách cho mỗi phương án,
+loại phương án vi phạm khóa hay luật lời hứa trước khi gọi bộ giải, và ghi sổ sau khi chọn.
+% EV: X3-04 (VALID:201-239, 355-411, 494-520); X3-13; X3-25
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  node distance=6mm,
+  hop/.style={draw=xamvien,fill=xamnhat,rounded corners=3pt,align=center,
+              inner sep=4pt,font=\small,minimum height=12mm,text width=2.75cm},
+  ngoai/.style={draw=xamvien,dashed,rounded corners=3pt,align=center,
+              inner sep=4pt,font=\small,minimum height=10mm,text width=4.2cm},
+  mui/.style={-{Latex[length=2.2mm]},thick}
+]
+\node[hop] (a) {Nhận lô sự kiện\\mới};
+\node[hop,right=of a] (b) {Sinh phương án chỉ chèn thêm, kiểm ràng buộc dịch vụ};
+\node[hop,right=of b] (c) {Tính $v$, $e$, $p$ cho từng khách có lời hứa};
+\node[hop,right=of c] (d) {Loại phương án vi phạm khóa hay luật lời hứa};
+\node[hop,below=9mm of d] (e) {Bộ giải chọn\\một phương án\\mỗi xe};
+\node[hop,left=of e] (f) {Kiểm lại cả đội xe; công bố lời hứa $p$; ghi sổ};
+\node[ngoai,below=8mm of f] (g) {Sau khi chạy, trên bản ghi đã lưu: lời hứa hiển thị $D = \max(p, S)$};
+\draw[mui] (a)--(b); \draw[mui] (b)--(c); \draw[mui] (c)--(d);
+\draw[mui] (d)--(e); \draw[mui] (e)--(f);
+\draw[mui,dashed] (f.west) -| node[pos=0.3,below,font=\footnotesize]{lượt sau} (a.south);
+\draw[-{Latex[length=2.2mm]},dashed] (f.south)--(g.north);
+\end{tikzpicture}
+\caption{Một lượt quyết định của RideBound. Bộ điều phối công bố lời hứa không dự báo $p$. Trong các kết quả
+chính, lời hứa theo dự báo $D$ được tính sau khi chạy, từ bản ghi đã lưu (ô nét đứt), và không quay lại làm
+đầu vào của quyết định nào (mục~\ref{muc:dubao}).}
+\label{hinh:vongquyetdinh}
+\end{figure}
+% EV: X3-03; X3-04; X3-22; X3-25; F03; X3-11 (DISP:1-8); FR:10-11
+
+\begin{table}[htbp]
+\centering
+\caption{Giả mã một lượt quyết định của RideBound; $a \gets b$ nghĩa là gán $b$ cho $a$}
+\label{bang:luotquyetdinh}
+\small
+\begin{tabular}{@{}r@{\hspace{6pt}}p{10.0cm}@{\hspace{8pt}}p{4.2cm}@{}}
+\toprule
+\multicolumn{3}{@{}p{14.9cm}@{}}{\textbf{Đầu vào:} trạng thái đội xe; sổ theo từng khách; lô sự kiện mới;
+luật lời hứa đang dùng}\\
+\multicolumn{3}{@{}p{14.9cm}@{}}{\textbf{Đầu ra:} một kế hoạch mỗi xe; yêu cầu được nhận, để lại hay từ
+chối; lời hứa mới; bản ghi sổ}\\
+\midrule
+1: & \textbf{hàm LượtQuyếtĐịnh}(trạng thái, lô sự kiện) & \\
+2: & \quad áp lô sự kiện vào trạng thái; ghi nhận lần đón muộn hơn giờ đón muộn nhất, nếu có & vị trí xe,
+đón, trả, thời gian đi\\
+3: & \quad chọn tối đa 2 yêu cầu đang chờ có giờ đón muộn nhất sớm nhất & yêu cầu khác để lượt sau\\
+4: & \quad \textbf{với mỗi} xe $k$ \textbf{thực hiện} & \\
+5: & \qquad \textbf{nếu} kế hoạch đang chạy vi phạm ràng buộc cấu trúc \textbf{thì} báo lỗi, dừng lần chạy
+& ví dụ vượt sức chứa\\
+6: & \qquad $P_k \gets \{$phương án giữ nguyên$\}$, kiểm dịch vụ có nới phần vượt do tắc đường & luôn giữ
+khi cắt bớt\\
+7: & \qquad thêm vào $P_k$ các phương án chèn yêu cầu ở dòng 3, thỏa chặt ràng buộc dịch vụ; giữ tối đa 100
+phương án & bộ sinh chỉ chèn thêm\\
+8: & \qquad \textbf{với mỗi} $\pi \in P_k$ và mỗi khách có lời hứa trên xe $k$: tính $v$, $e$, $p$;
+\textbf{nếu} $\pi$ vi phạm khóa hay luật lời hứa \textbf{thì} loại $\pi$ & mục~\ref{muc:bamoc},
+Bảng~\ref{bang:kiemtran}\\
+9: & \qquad \textbf{nếu} phương án giữ nguyên bị loại chỉ vì lỗi hạn chót hay lỗi trần \textbf{thì} & xe bị
+ép\\
+10: & \qquad\quad giữ lại phương án giữ nguyên làm phương án được miễn trừ & phục hồi giữ nguyên kế hoạch\\
+11: & \qquad\quad giữ thêm phương án đã bị loại không làm vi phạm đó tệ hơn & phục hồi không tệ hơn\\
+12: & \qquad \textbf{nếu} phương án giữ nguyên bị loại mà không được miễn trừ \textbf{thì} báo lỗi, dừng lần
+chạy & xe kẹt\\
+13: & \quad chọn $y$ theo~\eqref{eq:chon} và thứ tự tiêu chí; kiểm lại lựa chọn trên cả đội xe &
+Bảng~\ref{bang:rangbuoc}\\
+14: & \quad nhận yêu cầu có trong phương án được chọn; để lại hay từ chối các yêu cầu khác &
+mục~\ref{muc:thuatngu}\\
+15: & \quad \textbf{với mỗi} khách vừa xác nhận: công bố lời hứa đầu, $L_r \gets 0$; \textbf{với mỗi} khách
+có lời hứa mà $x$, $c$ hay $z$ khác 0: ghi bản ghi sửa, $L_r \gets L_r + |c_r|$ & mục~\ref{muc:so}; ghi vi
+phạm cho khách được miễn\\
+16: & \quad \textbf{trả về} quyết định; chờ bộ mô phỏng xác nhận đã áp dụng & \\
+17: & \textbf{kết thúc hàm} & \\
+\bottomrule
+\end{tabular}
+\end{table}
+% EV (dòng 2–3): X3-01; X3-24 (WP4:8; EventReducer.cs:13-23, 260-282); X3-32 (GEN:54-96)
+% EV (dòng 4–7): X3-31 (GEN:171-182); X3-23; X3-27 (CandidatePortfolioRetainer.cs:102-113); X3-03 (GEN:548-575); A24
+% EV (dòng 8–12): X3-04; A06; A07; A10; X3-09 (HVA:244-390); X3-31 (POL:336-339; RunnerSession.cs:941-947)
+% EV (dòng 13–16): X3-22; X3-07; POL:370-401; X3-20; X3-25 (VALID:272-336, 562-597; RunnerSession.cs:956-987); X3-30; RunnerSession.cs:448-455
+
+Luật lời hứa là bộ lọc cứng: phương án vi phạm bị loại trước khi bộ giải chạy, chứ không được giữ lại kèm một
+điểm trừ. Ngoại lệ là khi xe bị ép (dòng 9--11), chẳng hạn khi riêng việc đường đông hơn đã đẩy giờ trả vượt
+hạn chót của luật hạn chót (mục~\ref{muc:doichung}): luật phục hồi giữ lại vài phương án vi phạm, và tiêu chí
+1 chỉ cho dùng chúng ở xe không còn cách nào khác. Bộ sinh không bỏ, không đảo điểm cũ nào, nên khách đã nhận
+không bị chuyển sang xe khác.
+% EV: A06; HVA:62-66; X3-09 (HVA:255-326); X3-07 (SEL:283-295); A10; X3-03 (GEN:548-575); TEX08:129-131
+
+Phần nới ở dòng 6 để xe không kẹt vì tắc đường: phương án giữ nguyên được nhận dù kế hoạch cũ đã vượt giờ đón
+muộn nhất hay thời gian ngồi xe tối đa, miễn không tệ hơn kế hoạch cũ, và mỗi lần vượt được ghi lại. Lần đón
+thực tế muộn hơn giờ đón muộn nhất cũng chỉ được ghi nhận, không làm dừng lần chạy, và cửa sổ đón ban đầu
+không đổi. Vì vậy cửa sổ đón là điều kiện kiểm phương án, không phải bảo đảm mọi lần đón đều đúng hạn.
+% EV: X3-23 (GEN:161-246; ServiceQualityAllowance.cs:5-18, 61-94; RunnerSession.cs:989-1009); X3-24
+
+% -----------------------------------------------------------------------------------------------------
+\section{Ba mốc giờ trả và phần dời do điều phối}
+\label{muc:bamoc}
+
+Giờ trả đã hứa có thể đổi vì bộ điều phối ghép thêm khách, hoặc ngay cả khi xe giữ kế hoạch cũ. Để giới hạn
+riêng loại thứ nhất, với mỗi khách có lời hứa và mỗi phương án đang xét, hệ thống so ba mốc giờ trả:
+\begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+\item $v$: giờ trả đã công bố cho khách ở lần gần nhất;
+\item $e$: giờ trả tính lại nếu xe giữ nguyên kế hoạch cũ, từ trạng thái hiện tại với thời gian đi hiện tại;
+\item $p$: giờ trả nếu chọn phương án đang xét, với cùng trạng thái và cùng thời gian đi.
+\end{itemize}
+Ba hiệu sau được tính bằng giây (sổ lưu tới mili giây):
+\begin{equation}
+x = e - v, \qquad c = p - e, \qquad z = p - v = x + c .
+\label{eq:bamoc}
+\end{equation}
+Trong đó, $x$ là phần thay đổi khi giữ nguyên kế hoạch, $c$ là phần dời do điều phối, $z$ là phần khách thấy.
+Dễ nhớ: $v$ là giờ đang báo, $e$ là giờ nếu xe cứ đi như cũ, $p$ là giờ theo phương án mới. Bản ghi lời hứa đầu
+không có lời hứa trước; sổ quy ước $v = e = p$ cho nó. Mốc $e$ không phải ý của khóa luận: Hörl và
+Zwick~\cite{horl2022} đã tính lại giờ trả trên tuyến đang gán theo thời gian đi hiện tại ở mỗi lượt, và khóa
+luận dùng lại mốc này.
+% EV: A01; A02; X3-04 (VALID:355-384); X3-13 (SPEC:39-50); LEDGER:188-207; J01
+
+Mốc $e$ là giờ mô hình tính, không phải giờ đến thật, nên $x$ gồm mọi thứ đổi khi giữ nguyên kế hoạch: thời
+gian đi mới, tiến độ thực của xe, sự kiện vừa xảy ra. Trên các tập dùng hệ số đo, tắc đường là một hệ số chung
+cho cả thành phố theo khung 15 phút. Phép tách $z = x + c$ chỉ là phép trừ giữa các giờ do mô hình tính; nó
+không chứng minh quyết định điều phối thực sự gây ra đúng $c$ giây chậm trễ.
+% EV: A01 (không phải giờ đến thật, không nhận diện nhân quả); A02; X3-04 (VALID:355-361); B06; K04
+
+Hình~\ref{hinh:bamoc} là một ví dụ dựng tay. Khách A đang trên xe, được hứa trả lúc 9:10:00; lúc 9:00 bộ điều
+phối xét ghép thêm khách M. Khi ghép, giờ trả của A muộn hơn lời hứa 70 giây, nhưng chỉ 30 giây là phần dời do
+điều phối; 40 giây còn lại (chẳng hạn vì đường đông hơn lúc hứa) vẫn có nếu xe không ghép thêm ai.
+% EV: ví dụ dựng tay, không phải số đo; định nghĩa theo A01
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small,
+  diem/.style={draw=xamvien,fill=xamnhat,rounded corners=2pt,inner sep=3pt,minimum height=6mm},
+  mui/.style={-{Latex[length=2mm]},thick}]
+\node[anchor=east] at (2.6,4.0) {Giữ nguyên kế hoạch:};
+\node[diem] (x1) at (3.4,4.0) {Xe};
+\node[diem] (a1) at (5.6,4.0) {Trả A};
+\draw[mui] (x1)--(a1);
+\node[anchor=east] at (2.6,3.0) {Ghép thêm khách M:};
+\node[diem] (x2) at (3.4,3.0) {Xe};
+\node[diem] (b2) at (5.6,3.0) {Đón M};
+\node[diem] (a2) at (7.8,3.0) {Trả A};
+\node[diem] (c2) at (10.0,3.0) {Trả M};
+\draw[mui] (x2)--(b2); \draw[mui] (b2)--(a2); \draw[mui] (a2)--(c2);
+\draw[-{Latex[length=2mm]}] (0.8,0)--(12.2,0) node[right]{giờ};
+\foreach \vitri/\tenmoc/\giomoc in {2.0/v/9:10:00, 6.8/e/9:10:40, 10.4/p/9:11:10}
+  \draw (\vitri,0.12)--(\vitri,-0.12) node[below,align=center]{$\tenmoc$\\\giomoc};
+\draw[mui,dashed] (2.0,0.55)--(6.8,0.55) node[midway,above]{$x = e - v = 40$ giây};
+\draw[mui] (6.8,0.55)--(10.4,0.55) node[midway,above]{$c = p - e = 30$ giây};
+\draw[mui,densely dotted] (2.0,1.45)--(10.4,1.45) node[midway,above]{$z = p - v = 70$ giây};
+\end{tikzpicture}
+\caption{Ví dụ dựng tay: khách A được hứa trả lúc 9:10:00 ($v$); lúc 9:00, xe đang chở A xét ghép thêm khách
+M. Tính lại với thời gian đi hiện tại, giữ nguyên kế hoạch thì A tới lúc 9:10:40 ($e$), ghép M thì tới lúc
+9:11:10 ($p$). Nét đứt: phần thay đổi khi giữ nguyên kế hoạch ($x$); nét liền: phần dời do điều phối ($c$);
+nét chấm: phần khách thấy ($z = x + c$). Luật C chỉ tính $|c|$.}
+\label{hinh:bamoc}
+\end{figure}
+
+Phần dời do điều phối được tính theo độ lớn: sớm hơn hay muộn hơn $e$ 20 giây đều tính 20 giây. Định nghĩa đo
+độ lớn của lần sửa chứ không đo lần sửa có lợi hay hại cho khách; Fielbaum và Alonso-Mora~\cite{fielbaum2020}
+thì chỉ tính phần thay đổi bất lợi. Bộ sinh chỉ chèn thêm không bảo đảm $c \ge 0$ theo cấu tạo, nên định nghĩa
+giữ trị tuyệt đối. Ở bốn cấu hình đã kiểm của tập kiểm tra chính (điều phối không trần, luật C trần 30 và 120
+giây, luật hạn chót 30 giây; 136 lần chạy), mỗi lần điều phối kéo giờ trả sớm hơn $e$ chỉ sớm đúng 1 mili
+giây, nên các số này không cho thấy việc tính cả chiều sớm có tác dụng đáng kể.
+% EV: A04; X3-05 (DELTA:137-139, 259-262); J06 (FAM:293-296); N-05 (CORRECTED); ADD1:104-112; ADDENDUM-1 mục 0.1–0.2 (không nêu nguyên nhân của −1 ms)
+
+% -----------------------------------------------------------------------------------------------------
+\section{Luật C: trần phần dời giờ trả do điều phối cho từng khách}
+\label{muc:luatc}
+
+\begin{dinhnghia}[Luật C]
+\label{dn:luatc}
+Gọi $B$ là trần, tính bằng giây, và $L_r$ là tổng các $|c|$ đã tính cho khách $r$ kể từ lúc $r$ xác nhận đặt
+xe, với $L_r = 0$ lúc xác nhận. Một phương án của một xe chỉ được giữ lại nếu với mọi khách $r$ có lời hứa
+đang được gán cho xe đó (chờ đón hay đang trên xe),
+\begin{equation}
+L_r + |p_r - e_r| \le B .
+\label{eq:luatc}
+\end{equation}
+Sau khi quyết định của lượt được chọn, với mỗi khách $r$ có lời hứa mà phương án được chọn làm $x$, $c$ hay
+$z$ khác 0, $L_r$ được cộng thêm $|p_r - e_r|$ của phương án đó, kể cả khi giờ trả công bố không đổi
+($p_r = v_r$).
+\end{dinhnghia}
+% EV: A06 (BUDGET:41-105; LEDGER:285-288); A13; X3-05 (BUDGET:107-114; CFG C-30.json:17-23); X3-25 (VALID:272-281, 562-597)
+
+Dấu $\le$ nghĩa là phương án làm $L_r + |c|$ đúng bằng $B$ vẫn được giữ. Phương án chỉ được xét mà không được
+chọn không làm đổi $L_r$: mỗi phương án được kiểm trên một bản sao của sổ, và chỉ quyết định cuối của lượt,
+sau khi được kiểm lại trên cả đội xe, mới được ghi vào sổ thật.
+% EV: X3-05 (BUDGET:88); X3-25 (HVA:161-174; RunnerSession.cs:956-987)
+
+Có thể hình dung $B$ như một ngân sách thời gian của từng khách: $B - L_r$ là phần trần còn lại, không được cấp
+lại sau mỗi lần dời. Mọi khách có lời hứa dùng cùng một trần, và phần được phép dời do điều phối không phụ thuộc
+tắc đường. Phần dời được cộng qua cả chuyến: một luật cho mỗi lần dời tới 30 giây sẽ cho ba lần dời, tổng 90
+giây, còn luật C với $B = 30$ giây thì không. Ở Hình~\ref{hinh:bamoc}, với $L_A = 0$ và $B = 30$ giây, phương
+án ghép M có $|c| = 30$ giây, đúng bằng trần, nên vẫn được giữ, và phần trần còn lại của A về 0. Như vậy, khi
+phép kiểm không được miễn cho khách $r$ ở lượt nào, tổng $|c|$ của $r$ đến hết chuyến không vượt $B$.
+% EV: A06; K43; E08; J05; CFG C-30.json:3-6 (một chính sách cho mọi khách); X3-05; X3-25 (VALID:640-644: miễn trừ vẫn cộng vào sổ)
+
+\begin{table}[htbp]
+\centering
+\caption{Giả mã phép kiểm luật C cho một phương án (chỉ viết chiều giờ trả)}
+\label{bang:kiemtran}
+\small
+\begin{tabular}{@{}r@{\hspace{6pt}}p{9.6cm}@{\hspace{8pt}}p{4.6cm}@{}}
+\toprule
+\multicolumn{3}{@{}p{14.9cm}@{}}{\textbf{Đầu vào:} phương án $\pi$ của xe $k$; trần $B$; phần đã dùng $L_r$
+của mỗi khách có lời hứa; trạng thái và thời gian đi của lượt}\\
+\multicolumn{3}{@{}p{14.9cm}@{}}{\textbf{Đầu ra:} giữ hay loại $\pi$; nếu loại, một bản ghi lý do loại}\\
+\midrule
+1: & \textbf{hàm KiểmTrần}($\pi$, $k$, $B$) & \\
+2: & \quad \textbf{với mỗi} khách $r$ có lời hứa được gán cho xe $k$, theo thứ tự mã khách \textbf{thực hiện}
+& khách chờ đón hay trên xe\\
+3: & \qquad $e_r \gets$ giờ trả của $r$ khi chiếu lại kế hoạch cũ của $k$ từ trạng thái hiện tại & mốc giữ
+nguyên kế hoạch\\
+4: & \qquad $p_r \gets$ giờ trả của $r$ theo $\pi$, với cùng trạng thái và thời gian đi & \\
+5: & \qquad $c_r \gets p_r - e_r$ & phần dời do điều phối\\
+6: & \qquad \textbf{nếu} $L_r + |c_r| > B$ \textbf{thì} & sớm hay muộn đều tính\\
+7: & \qquad\quad \textbf{trả về} loại $\pi$, kèm bản ghi lý do ($r$, $L_r$, $|c_r|$, $L_r + |c_r|$, $B$) & dừng
+ở khách vi phạm đầu tiên\\
+8: & \quad \textbf{trả về} giữ $\pi$ & $L_r$ chỉ đổi nếu $\pi$ được chọn\\
+9: & \textbf{kết thúc hàm} & \\
+\bottomrule
+\end{tabular}
+\end{table}
+% EV (dòng 2–5): X3-04 (VALID:233-239, 355-361; HVA:171); X3-27 (VALID:1048-1064)
+% EV (dòng 6–8): X3-05 (BUDGET:6-12, 72-104); A06; A23; X3-25
+
+Bảng~\ref{bang:kiemtran} chỉ viết chiều giờ trả. Cài đặt theo dõi mười chiều cam kết: độ lớn thay đổi của giờ
+đón và của giờ trả; số lần sửa đáng kể; số lần đổi xe; khoảng dời và số lần đổi của điểm đón, của điểm trả; số
+lần đảo thứ tự với khách cũ; số điểm dừng mới chèn trước điểm đón. Chỉ bốn chiều có trần: giờ trả (trần $B$ ở
+luật C) và đổi xe, đổi điểm đón, đổi điểm trả (trần 0); cả mười chiều được ghi vào sổ và dùng ở tiêu chí 3. Ở
+tập kiểm tra chính và tập chỉnh trần buổi sáng, phép kiểm dừng ở khách vi phạm đầu tiên, nên mỗi bản ghi lý do
+loại chỉ nêu lỗi của khách đó, không nêu mọi lý do.
+% EV: A04 (DIM:3-32); X3-26 (DELTA:137-153); A25 (ngưỡng sửa đáng kể 1.000 ms); A07; CFG C-30.json:7-89; X3-07 (SEL:319-330, 510-522); A23; X3-04 (VALID:222-239); WP4:1-25 (không bật thu đủ bản ghi; tập buổi sáng dùng cùng WP4, X3-10)
+
+\subsection{Phương án giữ nguyên kế hoạch dưới luật C}
+\label{muc:giunguyen}
+
+Gọi \textbf{(N)} là giả thiết sau, áp cho lượt đang xét: (i) kế hoạch đang chạy của xe không vi phạm ràng buộc
+cấu trúc nào (sức chứa, thứ tự đón trước trả, phần kế hoạch đã cố định), nên bộ sinh dựng được phương án giữ
+nguyên; (ii) giờ trả của từng khách theo phương án giữ nguyên được tính bằng đúng phép chiếu dùng cho $e$.
+Trong RideBound, (ii) đúng vì cả hai dùng cùng một hàm chiếu lịch với cùng đầu vào, và bộ sinh luôn giữ phương
+án giữ nguyên khi cắt còn 100 phương án.
+% EV: A22; X3-31 (GEN:171-182, 213-229); ServiceQualityAllowance.cs:66-73; X3-27 (VALID:355-360, 1048-1064; HVA:144-165; CandidatePortfolioRetainer.cs:102-113; WP4:15)
+
+\begin{nhanxet}
+\label{nx:giunguyen}
+Giả sử (N) và mọi khách có lời hứa trên xe có $0 \le L_r \le B$. Khi đó luật C không loại phương án giữ nguyên
+kế hoạch.
+\end{nhanxet}
+
+\noindent\textit{Chứng minh.} Theo (N)(ii), với mọi khách $r$ trên xe, $p_r = e_r$, nên
+$L_r + |p_r - e_r| = L_r \le B$ và phép kiểm~\eqref{eq:luatc} cho qua. \hfill$\square$
+% EV: A22 (theo cấu tạo, giả thiết N); A06; X3-27
+
+Khóa và các trần 0 cũng so với kế hoạch giữ nguyên, nên phương án giữ nguyên qua cả chúng. Điều kiện
+$L_r \le B$ được giữ qua các lượt nếu (N) đúng ở mọi lượt: lúc xác nhận, $L_r = 0$; nếu $L_r \le B$ ở đầu một
+lượt thì theo Nhận xét, phương án giữ nguyên không bị loại, luật phục hồi không được dùng, phương án được chọn
+đã qua~\eqref{eq:luatc}, nên $L_r$ mới vẫn không vượt $B$. Do đó, khi (N) luôn đúng, xe dùng luật C hay điều
+phối không trần không bị ép ở lượt nào.
+% EV: A10 (LOCK:156-161); X3-06; X3-26 (véc-tơ c của phương án giữ nguyên bằng 0 ở mọi chiều); X3-09 (HVA:255-259: phục hồi chỉ khi phương án giữ nguyên bị loại); X3-25
+
+Nhận xét đúng do cách đặt luật C, không phải kết quả thực nghiệm; số liệu chạy thử chỉ cho thấy thực tế phù hợp
+với nó. Trên tập kiểm tra chính, không có quyết định bị ép nào trong 20.101 quyết định với trần 30 giây và trong
+20.435 quyết định với trần 120 giây; mỗi quyết định là kết quả của một lượt cho cả đội xe.
+% EV: A21; N-21; X3-16 (STG:43-44); N-07; X3-30 (RunnerSession.cs:1013-1027); SPEC:31-34
+
+Nhận xét có ba giới hạn. Thứ nhất, nếu (N)(i) không thỏa, lần chạy dừng vì lỗi cấu trúc chứ không vì luật C;
+phần vượt cửa sổ đón hay thời gian ngồi xe do tắc đường không làm (N) hỏng, nhờ phần nới. Thứ hai, $c = 0$ không
+có nghĩa khách không thấy thay đổi: với $v$ = 9:10:00 và $e = p$ = 9:11:00, phương án giữ nguyên có $z = 60$
+giây, nên luật C không bảo đảm khách tới đúng giờ đã hứa. Thứ ba, kéo giờ trả về đúng giờ đã hứa vẫn bị trừ vào
+trần: với $v = p$ = 9:10:00 và $e$ = 9:12:00, có $z = 0$ nhưng $|c| = 120$ giây, và $L_r$ tăng 120 giây dù
+giờ công bố không đổi. Tính chất của Nhận xét và giới hạn thứ hai là hai mặt của một lựa chọn: luật C không bị
+ép vì không tính phần thay đổi khi giữ nguyên kế hoạch, và cũng vì thế không giới hạn phần đó.
+% EV: A22; X3-31 (GEN:171-182; RunnerSession.cs:941-947); X3-23; K05; X3-25 (VALID:562-597: bản ghi sửa khi x ≠ 0 dù p = v); ví dụ dựng tay (CE-2, CE-3 của bản cũ)
+
+% -----------------------------------------------------------------------------------------------------
+\section{Các luật đối chứng, bộ chọn và luật phục hồi}
+\label{muc:doichung}
+
+Chương~\ref{chuong:thucnghiem} so luật C với bốn cấu hình khác (Bảng~\ref{bang:luat}). Trừ ghép tự do, chúng
+dùng cùng bộ sinh, bộ kiểm, bộ chọn và luật phục hồi với luật C; riêng tập tắc đường cố định chạy bằng phiên bản
+bộ chạy trước khi có luật phục hồi. Ký hiệu ở cột thứ hai chỉ dùng trong các bảng.
+% EV: A08; A09; A11; A17; A19; K50; HO:109; B17; NEW:13
+
+\begin{table}[htbp]
+\centering
+\caption{Các cấu hình được so sánh. $B$ là trần, tính bằng giây; với luật hạn chót, $B$ là số giây giờ trả được
+phép muộn hơn lời hứa đầu $p_0$. Các tập thử được mô tả ở mục~\ref{muc:c4-thietlap}.}
+\label{bang:luat}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{2.2cm}p{1.0cm}p{3.2cm}p{2.3cm}p{2.6cm}p{3.5cm}@{}}
+\toprule
+\textbf{Tên trong khóa luận} & \textbf{Ký hiệu} & \textbf{Kiểm điều gì} & \textbf{Khóa} & \textbf{Khi xe bị
+ép} & \textbf{Dùng ở tập nào}\\
+\midrule
+Điều phối không trần & U & Không kiểm giờ trả & Khóa xe, điểm đón, giờ đón; điểm trả có trần 0 & Không bị ép
+khi (N) đúng & Tập kiểm tra chính; tập chỉnh trần buổi sáng; tập tắc đường cố định\\
+% EV: A07; A08; K50; A10; X3-16 (STG:42: 0 / 20.760); B10; B15; B17; NEW:11
+Ghép tự do & FREE & Không kiểm lời hứa; chọn theo chi phí kế hoạch ở từng lượt & Không khóa & Không áp dụng &
+Tập tắc đường cố định\\
+% EV: A17; K50; HO:109 (b1-rolling-cost, không khóa); B17; X3-38
+Luật C & C-$B$ & $\sum |c| \le B$ cả chuyến, cho mọi khách có lời hứa & Như U & Không bị ép khi (N) đúng
+(Nhận xét~\ref{nx:giunguyen}) & Tập chính (30, 120); buổi sáng (30, 60, 90, 120, 150, 180, 240, 300); tắc
+đường cố định (30, 60, 120); chiều tuyết (30)\\
+% EV: A06; A22; B10; L1a-01; X3-28 (run_w07.py:5; run_w07x.py:3-4, 35-36); B17; B20; N-26 (chiều tuyết 0 / 5.067 quyết định bị ép)
+Luật hạn chót & M$^{+}$-$B$ & $p - p_0 \le B$ ở mọi lần kiểm; chỉ chặn phía muộn & Như U & Có thể bị ép do tắc
+đường; phục hồi không tệ hơn & Tập chính (30, 60); buổi sáng (cùng tám mức như luật C)\\
+% EV: A09; A10; A19; B10; X3-28; D04; LOCK:186-197; CFG Mplus-30.json:98
+Luật trần độ dời khách thấy & V-$B$ & $\sum |z| \le B$ cả chuyến & Như U & Có thể bị ép do tắc đường; phục hồi
+không tệ hơn & Tập chính (30); buổi sáng (30, 90, 120, 150, 180, 240)\\
+% EV: A11; A19; B10; X3-28 (run_w07x.py:3-4, 35-36: V-90/120/150/180/240; run_w07.py:5: V-30)
+\bottomrule
+\end{tabular}
+\end{table}
+
+Luật hạn chót mượn thành phần hạn chót tính từ lời hứa đầu của Schulz và Pfeiffer~\cite{schulz2026}, không tái
+lập thuật toán của họ. Bài của họ dùng thời gian đi cố định và độ chùng mặc định 900 giây; ở đây mỗi độ chùng
+bằng một mức trần của luật C chạy trên cùng tập, để hai luật chỉ khác nhau ở đại lượng được kiểm. Với độ chùng
+nhỏ và hệ số tắc đường đổi theo khung 15 phút, riêng tắc đường có thể làm luật này loại phương án giữ nguyên, nên
+số quyết định bị ép của nó ở Chương~\ref{chuong:thucnghiem} nói về một hạn chót chặt khi tắc đường thay đổi,
+không nói về phương pháp của họ.
+% EV: J10 (SP:466-490, 568-577); J11; A08; A09; X3-28; X3-41 (D03:214-217); A10
+
+Ba luật lời hứa khác nhau ở đại lượng được cộng. Đánh số các lần cập nhật lời hứa của một khách là
+$1, \ldots, n$. Trong sổ, mỗi bản ghi sửa so với lời hứa ngay trước nó ($v_j = p_{j-1}$), nên
+$z_j = p_j - p_{j-1}$ và các giờ ở giữa triệt tiêu:
+\begin{equation}
+\sum_{j=1}^{n} (x_j + c_j) \;=\; \sum_{j=1}^{n} z_j \;=\; p_n - p_0 .
+\label{eq:dongnhat}
+\end{equation}
+Luật hạn chót kiểm $p_n - p_0 \le B$, tức cộng có dấu cả hai phần; luật trần độ dời khách thấy cộng $|z_j|$;
+luật C chỉ cộng $|c_j|$. Vì vậy riêng tắc đường có thể làm hai luật đầu loại phương án giữ nguyên: ở
+Hình~\ref{hinh:bamoc}, nếu 9:10:00 là lời hứa đầu, phương án giữ nguyên có $e - p_0 = |z| = 40$ giây, vượt trần
+30 giây của cả hai, dù $c = 0$. Điều phối không trần cũng không bị ép vì không kiểm giờ trả, nên tính chất của
+Nhận xét~\ref{nx:giunguyen} không riêng của luật C.
+% EV: A12; X3-33 (LEDGER:256-269, 298-314; SPEC:62-63); A09; A10 (LOCK:156-161); A11; X3-16 (U 0 / 20.760)
+
+Tiền lệ trực tiếp của cách đo này là Hörl và Zwick~\cite{horl2022} (mục~\ref{muc:c2-rangbuoc}). Ở đầu mỗi
+lượt, họ duyệt tuyến đang gán theo thời gian đi hiện tại để có giờ trả cập nhật, tức mốc $e$; công thức 7 của
+họ đặt giờ trả bắt buộc bằng giá trị lớn hơn giữa giờ cập nhật và giờ trả muộn nhất. Tuyến mới phải thỏa giờ bắt
+buộc như ràng buộc cứng (ràng buộc 9--10), còn phần vượt giờ trả muộn nhất gốc bị phạt (công thức 11). Mục đích
+là tránh tình huống không còn thứ tự trả khách nào khả thi, cũng là mục đích của Nhận xét~\ref{nx:giunguyen}.
+Đặt giờ trả muộn nhất là $p_0 + B$, ta có hạn chót nới $p \le \max(p_0 + B, e)$; đây là cách viết lại của khóa
+luận. Theo phần dời do điều phối, nó cho phép $c \le \max(p_0 + B - e, 0)$, phần này về 0 khi tắc đường đã đẩy
+$e$ quá $p_0 + B$; phương án giữ nguyên có $p = e$ nên cũng không bị loại (suy luận, chưa chạy). Luật C khác ở
+ba chỗ: cùng một trần cho mọi khách có lời hứa, còn phần nới của họ chỉ tác dụng với khách mà giờ cập nhật đã
+vượt giờ trả muộn nhất; phần được phép dời, $|c| \le B - L_r$, không phụ thuộc tắc đường; và phần dời được cộng
+qua cả chuyến, dù vế cộng dồn hiếm khi là lý do loại phương án trên các lần chạy đã kiểm
+(mục~\ref{muc:c4-congdon}).
+% EV: J01; J02 (HZ:481-497); J03; X3-36 (HZ:531-543, 565-606); J05; A22 (suy luận V17 R6); K02; K26; K27; N-15
+
+So với Fielbaum và Alonso-Mora~\cite{fielbaum2020} (mục~\ref{muc:c2-dolech}), khóa luận kế thừa ý tách phần thay
+đổi do quyết định gán xe và kiểm soát nó trước khi quyết định, nhưng đo khác: mỗi lần sửa được so với mốc $e$
+chứ không so điểm đầu với điểm cuối, nên hai lần dời ngược chiều không triệt tiêu nhau; chiều sớm cũng được tính;
+đại lượng bị giới hạn là giờ trả chứ không phải thời gian chờ; và thực nghiệm có tắc đường thay đổi chứ không
+chọn giờ thấp điểm.
+% EV: J06; J07; J08; X3-35 (FAM:90-94, 189-195, 216-220, 293-296, 948-972); K30; K32
+
+Tiêu chí 1 chỉ có mặt khi có phương án được miễn trừ. Tiêu chí 3 có mặt cả ở điều phối không trần, vì đổi xe,
+đổi điểm đón, đổi điểm trả là các trần 0. Phần đầu của nó, mức dùng trần lớn nhất (tỉ số lớn nhất giữa phần đã
+dùng và trần), không phân biệt phương án: chiều có trần 0 luôn tính là đã dùng hết, nên mức này bằng 100\% ở mọi
+lượt đã ghi của tập kiểm tra chính (mục~\ref{muc:c4-hople}). Trên các lượt đó, tiêu chí 3 chỉ tác dụng qua tổng
+phần dời do điều phối theo từng chiều. Điều phối không trần và luật C dùng cùng cấu hình và cùng bộ chọn, chỉ
+khác trần giờ trả; chênh lệch giữa chúng ở Chương~\ref{chuong:thucnghiem} là phần đi kèm việc thêm trần khi bộ
+chọn giữ nguyên, và chưa được kiểm với bộ chọn ưu tiên chi phí (mục~\ref{muc:c4-vaitro}).
+% EV: A14; X3-07 (SEL:271-330; HVA:537-636); A15; N-25; A08; H01; H02; K18
+
+Có hai luật phục hồi, luật sau mở rộng luật trước. Luật phục hồi giữ nguyên kế hoạch: nếu phương án giữ nguyên
+bị loại và mọi lỗi của nó là lỗi hạn chót hay lỗi trần, nó được giữ làm phương án được miễn trừ. Luật phục hồi
+không tệ hơn: trên xe đó, phương án đổi kế hoạch đã bị loại cũng được giữ nếu mỗi lỗi của nó, cùng khách và
+cùng chiều, cũng là lỗi của phương án giữ nguyên và không nặng hơn. Lỗi khóa theo giai đoạn (khóa của khách chờ
+đón hay trên xe) và lỗi ràng buộc dịch vụ không bao giờ được miễn. Mỗi khách được miễn được ghi một vi phạm, trừ
+khi lời hứa, giai đoạn và mã lỗi không đổi so với lần vi phạm trước. Tập kiểm tra chính và tập chỉnh trần buổi
+sáng dùng luật thứ hai. Hai luật này là chi tiết cài đặt, không phải đóng góp của khóa luận.
+% EV: A17; A18 (ADR:5066-5092); X3-09 (HVA:79-99, 255-326; VALID:413-420, 475-483, 537-544, 599-638, 791-818; LOCK:42-60); A19 (RUN38:9; WP4:7); X3-10
+
+% -----------------------------------------------------------------------------------------------------
+\section{Lời hứa theo dự báo}
+\label{muc:dubao}
+
+Bộ điều phối tính lời hứa với thời gian đi hiện tại, nên khi thời gian đi tăng sau lúc công bố, lời hứa có thể
+sớm hơn giờ trả thực tế dù xe giữ nguyên kế hoạch. Lời hứa theo dự báo, một cách làm đã có
+(mục~\ref{muc:c2-dubao}), cộng sẵn mức tăng tắc đường mà các ngày trước cho thấy ở cùng khung giờ, riêng cho
+từng giờ đón và giờ trả được công bố.
+% EV: A05; F10; J35; F01; X3-11 (DISP:1-8)
+
+Thời gian được đo bằng giây kể từ đầu khung giờ của kịch bản, và $i(\tau) = \lfloor \tau / 900 \rfloor$ là
+khung 15 phút chứa $\tau$. Gọi $m_i$, với $i = 0, \ldots, 8$, là trung bình hệ số tắc đường của khung $i$ trên
+các ngày nguồn; từ khung 8 hệ số được giữ ở giá trị cuối, như bộ mô phỏng cũng giữ, nên đặt
+$\tilde m_i = m_{\min(i, 8)}$. Với lúc công bố $t$ và giờ công bố $p > t$, lời hứa kéo dài $S$ là nghiệm của
+\begin{equation}
+\int_{t}^{S} \frac{\mathrm{d}\tau}{g(\tau)} = p - t, \qquad
+g(\tau) =
+\begin{cases}
+1 & \text{nếu } i(\tau) = i(t),\\
+\tilde m_{i(\tau)} / \tilde m_{i(t)} & \text{nếu không,}
+\end{cases}
+\label{eq:keodan}
+\end{equation}
+và lời hứa hiển thị là $D = \max(p, S)$. Trong đó, $p$ là giờ công bố của phương án được chọn
+(mục~\ref{muc:bamoc}), chưa cộng dự báo.
+% EV: F01; X3-11 (DISP:3-8, 55-64; STRETCH:1-12, 22-52; preflight_world_v1_3.py:51-82)
+
+Theo tốc độ lúc công bố, xe cần thêm $p - t$ giây. Trong một khung chậm hơn khung hiện tại $g$ lần, mỗi giây đồng
+hồ xe chỉ đi được $1/g$ giây quãng đường đó; $S$ là lúc đi hết. Mức tắc đường lúc này đã có trong thời gian đi
+đang dùng, nên $g = 1$ ở khung hiện tại; các ngày khác chỉ cho biết khung sau chậm hay nhanh hơn bao nhiêu lần.
+Phép lấy $\max$ bảo đảm $D \ge p$ ở cùng lần công bố, không bảo đảm lời hứa hiển thị tăng dần qua các lần cập
+nhật.
+% EV: X3-11 (STRETCH:1-12; forecast_weight neo ở khung hiện tại); F01; DISP:60-64
+
+Ví dụ dựng tay: trong một kịch bản khung 8:00--10:00, lúc $t$ = 9:05:00 hệ thống công bố giờ trả $p$ = 9:25:00,
+tức còn 1.200 giây. Giả sử các ngày nguồn có hệ số trung bình 1,25 ở khung 9:00--9:15 và 1,50 ở khung
+9:15--9:30, nên sau 9:15 có $g = 1{,}50/1{,}25 = 1{,}2$. Từ 9:05 tới 9:15, $g = 1$ và xe đi được 600 giây quãng
+đường; 600 giây còn lại mất $600 \times 1{,}2 = 720$ giây, nên $S$ = 9:27:00 và $D = \max$(9:25:00; 9:27:00) =
+9:27:00, dài thêm 120 giây.
+% EV: ví dụ dựng tay, tính theo~\eqref{eq:keodan} và Bảng~\ref{bang:dubao}; số học ở 07-chuong3-v2-NOTES.md mục 4
+
+\begin{table}[htbp]
+\centering
+\caption{Giả mã lời hứa theo dự báo cho một giờ đón hay giờ trả đã công bố}
+\label{bang:dubao}
+\small
+\begin{tabular}{@{}r@{\hspace{6pt}}p{9.6cm}@{\hspace{8pt}}p{4.6cm}@{}}
+\toprule
+\multicolumn{3}{@{}p{14.9cm}@{}}{\textbf{Đầu vào:} lúc công bố $t$; giờ công bố $p$; ngày $d$ và khung giờ của
+kịch bản; hệ số tắc đường theo khung 15 phút của các ngày trước $d$}\\
+\multicolumn{3}{@{}p{14.9cm}@{}}{\textbf{Đầu ra:} lời hứa hiển thị $D$}\\
+\midrule
+1: & \textbf{hàm LờiHứaTheoDựBáo}($t$, $p$, $d$) & \\
+2: & \quad $H \gets$ các ngày cùng loại với $d$ và trước $d$, bỏ ngày 15/11 & chỉ dùng ngày đã qua\\
+3: & \quad \textbf{nếu} $H$ có ít hơn 2 ngày \textbf{hoặc} $p \le t$ \textbf{thì trả về} $p$ & giữ lời hứa
+không dự báo\\
+4: & \quad $m_i \gets$ trung bình hệ số của khung $i$ trên các ngày trong $H$, $i = 0, \ldots, 8$ & khung tính
+từ đầu khung giờ\\
+5: & \quad $W \gets p - t$;\; $\tau \gets t$;\; $i_0 \gets i(t)$ & quãng còn lại theo tốc độ hiện tại\\
+6: & \quad \textbf{lặp} & \\
+7: & \qquad $g \gets 1$ nếu $i(\tau) = i_0$, ngược lại $g \gets \tilde m_{i(\tau)} / \tilde m_{i_0}$ &
+$\tilde m_i = m_{\min(i, 8)}$\\
+8: & \qquad $h \gets$ thời gian từ $\tau$ tới hết khung $i(\tau)$ & \\
+9: & \qquad \textbf{nếu} $h/g \ge W$ \textbf{thì} $S \gets \tau + W g$ và thoát vòng lặp & \\
+10: & \qquad $W \gets W - h/g$;\; $\tau \gets$ đầu khung kế tiếp & \\
+11: & \quad \textbf{trả về} $D \gets \max(p, S)$ & $D \ge p$ ở lần công bố này\\
+12: & \textbf{kết thúc hàm} & \\
+\bottomrule
+\end{tabular}
+\end{table}
+% EV (dòng 2–4): F02; X3-11 (DISP:27-57; preflight_world_v1_3.py:51, 80-82)
+% EV (dòng 5–11): F01; X3-11 (STRETCH:25-39, 49-52)
+
+Ngày nguồn là các ngày cùng loại (ngày thường hay cuối tuần) trước ngày của kịch bản, cần ít nhất 2 ngày, và
+không bao giờ là ngày tuyết 15/11/2018; các kịch bản của chính ngày 15/11 vẫn được dự báo. Vì vậy, trong dữ liệu
+12--18/11/2018 chỉ các ngày 14, 15 và 16/11 có dự báo: 21 trong 34 kịch bản của tập kiểm tra chính; 13 kịch bản
+ngày 17 và 18/11 giữ lời hứa không dự báo. Bỏ ngày 15/11 là lựa chọn của khóa luận; hệ thống thật cần một quy
+tắc tự động để nhận ra ngày bất thường.
+% EV: F02 (DISP:10-16, 27-52); F04; N-16; N-28
+
+Trong các kết quả chính, $D$ được tính lại trên các lần chạy đã ghi, gọi là phát lại (replay): xe nào chở ai
+theo thứ tự nào giữ nguyên, chỉ giờ báo cho khách đổi, và $D$ không quay lại sổ hay phép kiểm trần. $D_0$ là lời
+hứa đầu có dự báo; $D_0 - p_0$ là giá của dự báo. Còn một chỗ chưa khớp: phép kiểm khả thi vẫn dùng giờ không dự
+báo, nên dưới luật C trần 30 giây, trong 1.471 khách được phục vụ ở 21 kịch bản có dự báo, 34 khách có lời hứa
+giờ đón đầu tiên hiển thị muộn hơn giờ đón muộn nhất. Chỗ này cần sửa trước khi đưa dự báo vào bộ điều phối. Phép
+thử đưa dự báo vào bộ điều phối là một can thiệp khác: nó nhân thời gian đi mà bộ điều phối nhận với một hệ số dự
+báo, còn FleetPy vẫn cho xe chạy theo hệ số đo (mục~\ref{muc:c4-dubao}).
+% EV: F03 (chỉ phần "phát lại trên các lần chạy đã ghi"); FR:10-11; X3-12 (FFA:84-99); F06; F07 (FR:70); F12; X3-29 (preflight_world_v1_3.py:1-26, 113-133)
+
+% -----------------------------------------------------------------------------------------------------
+\section{Sổ theo dõi từng khách}
+\label{muc:so}
+
+Sổ do RideBound ghi trong lúc chạy. Mỗi khách có bản ghi lời hứa đầu và một bản ghi sửa cho mỗi lượt mà phương
+án được chọn làm $x$, $c$ hay $z$ khác 0 ở bất kỳ chiều nào. Bản ghi sửa lưu lời hứa trước, phép chiếu khi giữ
+nguyên kế hoạch và lời hứa mới (ứng với $v$, $e$, $p$), ba véc-tơ thay đổi trên mười chiều và $L$ sau lần sửa.
+Tọa độ giờ đón, giờ trả của ba véc-tơ là $|x|$, $|c|$, $|z|$; các tọa độ khác đếm việc đổi xe, đổi điểm dừng hay
+đảo thứ tự. Không có ngưỡng: thay đổi 1 mili giây cũng tạo bản ghi sửa, nên số bản ghi sửa không phải số lần một
+ứng dụng thật báo lại cho khách. Trạng thái cuối của lần chạy chứa toàn bộ sổ; Bảng~\ref{bang:vidu-so} là một
+ví dụ.
+% EV: A04; X3-26 (DELTA:64-160); X3-25 (VALID:562-597); LEDGER:285-314; X3-13 (SPEC:35-46)
+
+\begin{table}[htbp]
+\centering
+\caption{Hai bản ghi giờ trả của khách A trong ví dụ dựng tay của Hình~\ref{hinh:bamoc}, với giả định 9:10:00
+là lời hứa đầu, công bố lúc 8:50:00, và $B = 30$ giây. Chỉ ghi chiều giờ trả; các độ lớn và $L$ tính bằng
+giây.}
+\label{bang:vidu-so}
+\small
+\begin{tabular}{@{}lllllrrrr@{}}
+\toprule
+\textbf{Bản ghi} & \textbf{Lúc ghi} & $v$ & $e$ & $p$ & $|x|$ & $|c|$ & $|z|$ & $L$\\
+\midrule
+Lời hứa đầu & 8:50:00 & 9:10:00 & 9:10:00 & 9:10:00 & 0 & 0 & 0 & 0\\
+Sửa (ghép khách M) & 9:00:00 & 9:10:00 & 9:10:40 & 9:11:10 & 40 & 30 & 70 & 30\\
+\bottomrule
+\end{tabular}
+\end{table}
+% EV: ví dụ dựng tay; v = e = p ở bản ghi đầu theo SPEC:46; L = 0 + |c| theo LEDGER:285-288
+
+Sau khi chạy, độ trễ so với lời hứa đầu được chia thành ba phần: phần tính cho điều phối, phần được hồ sơ lịch
+sử giải thích và phần còn lại,
+\begin{equation}
+a - p_0 \;=\; q \;+\; f \;+\; (a - D_0 - q), \qquad q = \sum_{j} c_j, \qquad f = D_0 - p_0 .
+\label{eq:so}
+\end{equation}
+Cộng ba phần thì $q$ và $D_0$ triệt tiêu, nên đẳng thức luôn đúng. Trong đó, $a$ là giờ trả thực tế trong mô
+phỏng; $q$ cộng các $c$ giữ nguyên dấu (dời muộn dương, dời sớm âm), khác với $\sum |c|$ mà luật C giới hạn, và
+dưới luật C, $|q| \le \sum |c| \le B$; $f$ là phần dự báo đã cộng sẵn vào lời hứa đầu, bằng 0 khi không có dự
+báo. Theo~\eqref{eq:dongnhat}, phần còn lại bằng $\sum_j x_j + \rho - f$, với $\rho = a - p_n$: các thay đổi khi
+giữ nguyên kế hoạch mà dự báo chưa tính tới, cộng độ lệch giữa giờ trả thực tế và lời hứa cuối $p_n$.
+% EV: X3-12 (FFA:84-97: q = Σ(p − e) có dấu, D0 = lời hứa hiển thị đầu); A12; A06; F09
+
+Ví dụ, với khách A ở Bảng~\ref{bang:vidu-so}, nếu $D_0$ = 9:10:30 ($f = 30$ giây) và A tới nơi đúng lời hứa cuối,
+$a$ = 9:11:10 ($\rho = 0$), thì độ trễ 70 giây gồm $q = 30$, $f = 30$ và 10 giây còn lại; kiểm lại,
+$\sum x + \rho - f = 40 + 0 - 30 = 10$. Chương~\ref{chuong:thucnghiem} cộng ba phần trên các khách có
+$a - p_0 > 60$ giây, với $p_0$ là lời hứa giờ trả đầu không dự báo; điều kiện này không dùng $D_0$, và A thuộc
+nhóm đó.
+% EV: ví dụ dựng tay (số học ở NOTES mục 4); X3-12 (FFA:134-138: nhóm A − P0 > 60 s); F09
+
+Đây là phép tính theo mô hình, không kết luận ai có lỗi: ``phần tính cho điều phối'' chỉ nói rằng mô hình gán
+phần này cho quyết định điều phối khi so với kế hoạch giữ nguyên. Phần được hồ sơ lịch sử giải thích phụ thuộc
+dự báo đang dùng, và phần còn lại là phần dự báo đó chưa giải thích được, không phải phần ``không thể biết
+trước''.
+% EV: K04; A01 (lưu ý D03:222-224); F09 (lưu ý); K19
+
+% -----------------------------------------------------------------------------------------------------
+\section{Cài đặt, kiểm thử và tái lập}
+\label{muc:caidat}
+
+\subsection{Kiến trúc và trao đổi với bộ mô phỏng}
+\label{muc:kientruc}
+
+RideBound được viết bằng C\# trên .NET 10, chia thành các dự án xếp theo tầng: tầng ngoài dùng mã của tầng trong,
+tầng trong không dùng mã của tầng ngoài (Bảng~\ref{bang:kientruc}). Tầng nghiệp vụ không tham chiếu dự án khác
+hay gói thư viện ngoài nào, tầng ứng dụng chỉ tham chiếu tầng nghiệp vụ, OR-Tools chỉ có trong cầu nối bộ giải,
+và một bộ kiểm thử kiến trúc kiểm các quy tắc này. Nhờ vậy phép kiểm trần, ba mốc giờ trả và sổ không phụ thuộc
+bộ mô phỏng hay bộ giải.
+% EV: X3-14 (các tệp .csproj: net10.0, ProjectReference, PackageReference; DependencyRuleTests.cs:8-31, 137-166)
+
+\begin{table}[htbp]
+\centering
+\caption{Các thành phần chính của RideBound và bộ chuyển đổi FleetPy}
+\label{bang:kientruc}
+\small
+\begin{tabular}{@{}p{4.6cm}p{10.2cm}@{}}
+\toprule
+\textbf{Thành phần} & \textbf{Vai trò}\\
+\midrule
+Domain (tầng nghiệp vụ) & Yêu cầu và giai đoạn của khách, lời hứa, khóa, sổ theo từng khách, phép kiểm trần\\
+Application (tầng ứng dụng) & Chiếu lịch theo thời gian đi, tính ba mốc giờ trả, kiểm một phương án theo khóa
+và luật lời hứa\\
+Algorithms (thuật toán) & Bộ sinh chỉ chèn thêm, đánh giá phương án theo luật lời hứa và luật phục hồi, bộ
+chọn\\
+Solvers.OrTools (cầu nối bộ giải) & Cầu nối tới bộ giải CP-SAT của OR-Tools 9.15\\
+Contracts (định dạng bản tin) & Định dạng các bản tin trao đổi với bộ mô phỏng\\
+Runner (bộ chạy) & Tiến trình nhận bản tin, ghép các thành phần trên và trả quyết định\\
+Benchmarking (chuẩn bị dữ liệu) & Chuẩn hóa dữ liệu Manhattan của FleetPy thành kịch bản thử\\
+Bộ chuyển đổi FleetPy (Python) & Phần điều khiển đội xe của FleetPy 1.0.2: gửi sự kiện cho bộ chạy và áp quyết
+định vào mô phỏng\\
+\bottomrule
+\end{tabular}
+\end{table}
+% EV: X3-14 (Google.OrTools 9.15.6755 chỉ ở RideBound.Solvers.OrTools.csproj:9); X3-22 (OrTools:3, CP-SAT); X3-15; NORM; B01
+
+Bộ mô phỏng là FleetPy 1.0.2~\cite{engelhardt2026}, được ghim theo phiên bản. Bộ chuyển đổi viết bằng Python
+chạy bộ chạy RideBound như một chương trình con; hai bên nhắn tin qua đầu vào, đầu ra chuẩn của chương trình, mỗi
+bản tin là một dòng văn bản JSON (Hình~\ref{hinh:bantin}). Bộ chạy không nhận lô sự kiện mới cho tới khi bộ mô
+phỏng báo quyết định trước đã được áp dụng, nên các quyết định được áp dụng đúng thứ tự. Các bản tin của mỗi lần
+chạy được lưu lại, và các con số ở Chương~\ref{chuong:thucnghiem} được tính từ bản ghi này.
+% EV: B01; J18 (FLEET:474); X3-15 (README:1-12; runner_client.py:133-138; Program.cs:103-106; RunnerSession.cs:448-455); X3-13 (SPEC:28-37); A26
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[y=0.75cm,font=\small,
+  ben/.style={draw=xamvien,fill=xamnhat,rounded corners=2pt,align=center,inner sep=4pt,text width=4.3cm},
+  tin/.style={-{Latex[length=2mm]},thick},
+  nhan/.style={midway,above,font=\footnotesize,align=center}]
+\node[ben] (L) at (0,0) {FleetPy 1.0.2\\và bộ chuyển đổi (Python)};
+\node[ben] (R) at (9.5,0) {Bộ chạy RideBound\\(C\#, .NET 10)};
+\draw[xamvien,thick] (L.south)--(0,-9.6);
+\draw[xamvien,thick] (R.south)--(9.5,-9.6);
+\draw[tin] (0,-1.3)--(9.5,-1.3) node[nhan]{chào hỏi; khởi tạo lần chạy (kịch bản, cấu hình luật)};
+\draw[tin] (9.5,-2.0)--(0,-2.0) node[nhan]{đã nhận chào hỏi; đã khởi tạo};
+\draw[dashed,xamvien] (-0.6,-2.5) rectangle (12.2,-7.2);
+\node[anchor=south west,font=\footnotesize\itshape] at (-0.55,-7.15) {mỗi lượt quyết định};
+\draw[tin] (0,-3.6)--(9.5,-3.6) node[nhan]{lô sự kiện: yêu cầu mới, xác nhận đặt xe,\\tiến độ xe, đón, trả,
+thời gian đi mới};
+\node[ben,text width=3.9cm,font=\footnotesize] at (9.5,-4.6) {sinh phương án, kiểm luật, chọn, ghi sổ
+(Bảng~\ref{bang:luotquyetdinh})};
+\draw[tin] (9.5,-5.8)--(0,-5.8) node[nhan]{quyết định: kế hoạch mới của các xe, lời hứa};
+\draw[tin] (0,-6.5)--(9.5,-6.5) node[nhan]{đã áp dụng quyết định};
+\draw[tin] (0,-7.9)--(9.5,-7.9) node[nhan]{yêu cầu trạng thái};
+\draw[tin] (9.5,-8.6)--(0,-8.6) node[nhan]{trạng thái, gồm sổ theo từng khách};
+\draw[tin] (0,-9.3)--(9.5,-9.3) node[nhan]{kết thúc: bộ chạy dừng, không trả lời};
+\end{tikzpicture}
+\caption{Các bản tin chính giữa bộ chuyển đổi FleetPy và bộ chạy RideBound trong một lần chạy (đã giản lược). Mỗi
+bản tin là một dòng JSON; phần trong khung nét đứt lặp lại ở mỗi lượt quyết định.}
+\label{hinh:bantin}
+\end{figure}
+% EV: X3-15 (ProtocolPrimitives.cs:104-121; RunnerSession.cs:177-214: chỉ xử lý hello, initializeRun, eventBatch, decisionApplied, checkpoint, restore; shutdown làm bộ chạy dừng, không trả lời; finalizeRun/runSummary chỉ được khai báo; runner_client.py:158-273); X3-13 (SPEC:35-37)
+
+\subsection{Giới hạn tính toán và thời gian chạy}
+\label{muc:gioihan}
+
+Mỗi lượt chỉ xét 2 yêu cầu đang chờ có giờ đón muộn nhất sớm nhất, mỗi xe giữ tối đa 100 phương án, các bước
+sinh, kiểm và giải đều có giới hạn số bước tính, và bộ giải dùng hạt giống ngẫu nhiên (số khởi tạo phần ngẫu
+nhiên) cố định bằng 7 để chạy lại cho cùng kết quả. Vì vậy bộ sinh không xét hết mọi phương án;
+mục~\ref{muc:c4-hople} báo các bộ đếm cho biết các giới hạn có cắt bớt phương án hay không. Phép so trần duyệt
+mười chiều cho mỗi khách có lời hứa trên xe, ở mỗi phương án; phép tính ba véc-tơ còn đếm đảo thứ tự trên từng
+cặp điểm dừng, nên không thể coi khối lượng kiểm là tuyến tính theo độ dài kế hoạch.
+% EV: A24 (WP4:9-23); X3-17; X3-32 (GEN:54-79); N-25; X3-05 (BUDGET:76-99); X3-04 (VALID:233-239); X3-26 (DELTA:190-215)
+
+Khóa luận chỉ báo thời gian của cả lần chạy, trên tập tắc đường cố định (16 lần chạy mỗi cấu hình, phiên bản bộ
+chạy trước khi có luật phục hồi): trung vị 730 giây với ghép tự do, 667 giây với điều phối không trần và 641 giây
+với luật C trần 30 giây. Chi phí thêm của phép kiểm trần ở từng lượt không được báo riêng, nên các số này không
+dùng để so chi phí tính toán giữa các luật.
+% EV: H13 (EL17:2-6); X3-19; B17
+
+\subsection{Kiểm tra kết quả}
+\label{muc:kiemtra}
+
+Kết quả được kiểm ở bốn mức.
+\begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+\item \textbf{Kiểm thử phần mềm:} khi luật phục hồi không tệ hơn được thêm vào mã, bộ kiểm thử của RideBound
+qua 1.025 trên 1.025 trường hợp; đây là số ghi lại lúc đó, không được chạy lại khi viết khóa luận.
+\item \textbf{Kiểm tính nhất quán của sổ:} ở cả 382.006 bản ghi sửa của 185 lần chạy (170 lần chạy của năm cấu
+hình trên tập kiểm tra chính và 15 lần chạy luật C trần 30 giây trên 15 kịch bản hiệu chỉnh), $|x|$, $|c|$,
+$|z|$ tính lại từ $v$, $e$, $p$ trong sổ khớp đúng các trường độ lớn. Phép kiểm này cho biết sổ nhất quán, không
+kiểm $e$ có được tính đúng hay không.
+\item \textbf{Tính lại độc lập:} một chương trình viết riêng, độc lập về mã nhưng dùng cùng đặc tả chỉ số, tính
+lại 13 hạng mục số liệu từ bản ghi thô và kiểm thêm một bất biến; không hạng mục nào lệch. Các số đếm chính của
+tập kiểm tra chính được ít nhất hai bộ đọc viết độc lập tính lại và khớp trong phạm vi đã kiểm. Các chương trình
+kiểm ở mức này và mức trên do các mô hình ngôn ngữ lớn Claude và Codex viết và chạy, không phải kiểm thủ công;
+chúng cho biết con số khớp bản ghi, không cho biết mô phỏng giống thực tế đến đâu.
+\item \textbf{Tái lập:} tập kiểm tra chính, tập chỉnh trần buổi sáng và các lần chạy trần 120 giây dùng cùng một
+bản bộ chạy đã biên dịch và lưu lại, có luật phục hồi; tập tắc đường cố định dùng một bản cũ hơn. Bản dựng lại từ
+mã nguồn, nếu có, phải cho đúng kết quả cũ trên một số kịch bản trước khi dùng (Phụ lục~\ref{phuluc:C}).
+\end{itemize}
+% EV (kiểm thử): A27 (ADR:5100, số lịch sử)
+% EV (sổ): A26 (T38:106; T38I:68); B10 (170 + 15); RUN38:1-8 (15 lần chạy C-30 trên 15 kịch bản hiệu chỉnh)
+% EV (tính lại): C19 (T38I:79-97: 13 hạng mục + 1 bất biến); ADDENDUM-1:15-19 (Codex A, Codex v4 độc lập; TSV của Claude dùng lại bộ đọc); C04; E01; K41; A26 lưu ý; I01
+% EV (tái lập): A28 (RUNW07:40-41); X3-10 (run_w07.py:8; run_w07x.py:7; run_t38c120.py:3-8); B17; NEW:13; I13
+
+Chương~\ref{chuong:thucnghiem} dùng các thành phần trên để đo luật C được gì và mất gì trên mô phỏng FleetPy, so
+với điều phối không trần, luật hạn chót và cách đệm lời hứa, tức cộng thêm một khoảng cố định vào giờ hứa cho mọi
+khách.

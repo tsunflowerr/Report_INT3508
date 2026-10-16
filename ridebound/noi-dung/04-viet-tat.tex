@@ -1,0 +1,80 @@
+% Front matter — Danh mục ký hiệu và chữ viết tắt (bản viết lại 2026-10-14, thay noi-dung/04-viet-tat.tex khi ghép).
+% Chỉ gồm chữ viết tắt và ký hiệu có trong các chương đang ghép: Ch1 r40 v4-v4, Ch2 v6, Ch3 r33 v4-v3, Ch4A r36 v5-v3,
+% Ch4B r39 v11-v2, Ch5 r31 v2, Phụ lục r31 v2. Đã bỏ các chữ tắt và ký hiệu mà GLOSSARY-VI-v2 mục H cho bỏ, cùng mọi
+% mục của bản cũ không còn xuất hiện trong các chương. Chương dùng mỗi mục lần đầu (tệp:dòng): FRONT-NOTES.md mục 6–7.
+\chapter*{Danh mục ký hiệu và chữ viết tắt}
+\addcontentsline{toc}{chapter}{Danh mục ký hiệu và chữ viết tắt}
+
+\vspace{4pt}
+\noindent\textbf{Chữ viết tắt}
+\vspace{4pt}
+
+\begin{longtable}{@{}p{2.6cm}p{4.6cm}p{7.6cm}@{}}
+\toprule
+\textbf{Viết tắt} & \textbf{Cụm từ đầy đủ} & \textbf{Ý nghĩa}\\
+\midrule
+\endhead
+CH1, CH2, CH3 & Câu hỏi nghiên cứu 1, 2, 3 & Ba câu hỏi nghiên cứu nêu ở mục~\ref{muc:c1-cauhoi}.\\
+DARP & Dial-a-Ride Problem & Bài toán đưa đón theo yêu cầu.\\
+JSON & JavaScript Object Notation & Định dạng văn bản của mỗi bản tin trao đổi giữa bộ mô phỏng và bộ chạy
+RideBound.\\
+LF & Line Feed & Kiểu ký tự xuống dòng của các tệp mã nguồn khi chạy lại kiểm thử tự động
+(Phụ lục~\ref{phuluc:C}).\\
+NOAA & National Oceanic and Atmospheric Administration & Cơ quan Quản lý Khí quyển và Đại dương Quốc gia Hoa Kỳ;
+nguồn số liệu tuyết của trạm Central Park.\\
+TLC & Taxi \& Limousine Commission & Ủy ban Taxi và Xe limousine New York, nơi công bố dữ liệu chuyến đi
+taxi.\\
+\bottomrule
+\end{longtable}
+
+\vspace{8pt}
+\noindent\textbf{Ký hiệu}
+\vspace{4pt}
+
+\begin{longtable}{@{}p{2.6cm}p{12.2cm}@{}}
+\toprule
+\textbf{Ký hiệu} & \textbf{Ý nghĩa}\\
+\midrule
+\endhead
+\multicolumn{2}{@{}l}{\textit{Lời hứa và giờ trả (tính bằng giây trên đồng hồ mô phỏng)}}\\
+$r$ & Một khách đã có lời hứa; chỉ số dưới $r$ chỉ đại lượng của khách đó.\\
+$v$ & Giờ trả đã công bố cho khách ở lần gần nhất.\\
+$e$ & Giờ trả tính lại nếu xe giữ nguyên kế hoạch cũ, từ trạng thái và thời gian đi hiện tại.\\
+$p$ & Giờ trả nếu chọn phương án đang xét, với cùng trạng thái và thời gian đi.\\
+$p_0$ & Lời hứa đầu: giờ trả công bố khi khách xác nhận đặt xe, chưa cộng dự báo.\\
+$p_n$; $j$ & Lời hứa giờ trả sau lần cập nhật cuối; $j = 1, \ldots, n$ đánh số các lần cập nhật lời hứa của một
+khách.\\
+$D$; $D_0$ & Lời hứa theo dự báo của một lần công bố (mục~\ref{muc:dubao}); $D_0$ là lời hứa đầu theo dự báo, và
+$D_0 = p_0$ khi không có dự báo.\\
+$a$ & Giờ trả thực tế trong mô phỏng.\\
+\multicolumn{2}{@{}l}{\textit{Các phần của độ lệch giờ trả}}\\
+$x$ & $x = e - v$: phần thay đổi khi giữ nguyên kế hoạch, ở một lần cập nhật.\\
+$c$ & $c = p - e$: phần dời do điều phối, gọi là phần tính cho điều phối, ở một lần cập nhật.\\
+$z$ & $z = p - v = x + c$: phần khách thấy ở một lần cập nhật.\\
+$q$ & $q = \sum_j c_j$: tổng có dấu của phần tính cho điều phối qua cả chuyến; dời muộn dương, dời sớm âm.\\
+$f$ & $f = D_0 - p_0$: phần dự báo đã cộng sẵn vào lời hứa đầu.\\
+$\rho$ & $\rho = a - p_n$: độ lệch giữa giờ trả thực tế và lời hứa cuối.\\
+\multicolumn{2}{@{}l}{\textit{Luật lời hứa và chỉ số}}\\
+$B$ & Trần, tính bằng giây. Với luật C: tổng $|c|$ tối đa của một khách trong cả chuyến. Với luật hạn chót: số giây
+giờ trả được phép muộn hơn $p_0$.\\
+$L_r$ & Phần trần khách $r$ đã dùng: tổng các $|c|$ đã tính cho $r$ từ lúc xác nhận đặt xe; $B - L_r$ là phần
+trần còn lại. Viết gọn $L$ khi không cần chỉ rõ khách.\\
+(N) & Giả thiết của Nhận xét~\ref{nx:giunguyen}: xe dựng được phương án giữ nguyên kế hoạch, và giờ trả của phương
+án đó được tính bằng đúng phép chiếu dùng cho $e$.\\
+$\theta$ & Ngưỡng trễ trong các chỉ số, bằng 30, 60, 120, 300 hoặc 600 giây; trễ quá $\theta$ nghĩa là
+$a - D_0 > \theta$ (Bảng~\ref{bang:c4-chiso}).\\
+\multicolumn{2}{@{}l}{\textit{Tên cấu hình, chỉ dùng trong bảng và hình (Bảng~\ref{bang:luat})}}\\
+U & Điều phối không trần: giữ xe, điểm đón, điểm trả và giờ đón đã xác nhận; không giới hạn phần dời giờ trả.\\
+FREE & Ghép tự do: không khóa gì và không kiểm lời hứa.\\
+C-$B$ & Luật C với trần $B$ giây, ví dụ C-30, C-120.\\
+M$^{+}$-$B$ & Luật hạn chót: giờ trả không được muộn hơn lời hứa đầu $p_0$ quá $B$ giây.\\
+V-$B$ & Luật trần độ dời khách thấy: tổng $|z|$ của một khách trong cả chuyến không vượt $B$.\\
+\multicolumn{2}{@{}l}{\textit{Đơn vị}}\\
+s & Giây; chỉ dùng trong bảng và hình.\\
+\bottomrule
+\end{longtable}
+
+\noindent Các ký hiệu chỉ dùng ở một chỗ, như trong~\eqref{eq:c2-chon}, \eqref{eq:chon}, \eqref{eq:keodan}, được
+giải thích ngay tại đó.
+
+\clearpage

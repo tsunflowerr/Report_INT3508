@@ -1,0 +1,2612 @@
+{
+  "root": "E:\\Code\\RideBound",
+  "head": "41a4e11eb2897e7af45543078371d51591231b41",
+  "files": [
+    {
+      "path": "src/RideBound.Domain/AssemblyReference.cs",
+      "bytes": 172,
+      "lines": 8,
+      "sha256": "33924b6c0ec7a91646c201ea097a1f6a9e77f32cbe937572c4dfb7459f4cbf97"
+    },
+    {
+      "path": "src/RideBound.Domain/Commitments/CommitmentBudgetEvaluator.cs",
+      "bytes": 3620,
+      "lines": 115,
+      "sha256": "83dedf68ab453a7d2d6c406716fe63c7e6e6894290fa71f5a442ab36f4d208bb"
+    },
+    {
+      "path": "src/RideBound.Domain/Commitments/CommitmentDimension.cs",
+      "bytes": 2271,
+      "lines": 59,
+      "sha256": "55ff9175b695a0ac6ec1e5953e3d29934fac01bffce23873055f08a64b839121"
+    },
+    {
+      "path": "src/RideBound.Domain/Commitments/CommitmentLedger.cs",
+      "bytes": 10853,
+      "lines": 343,
+      "sha256": "e8d150b463606b1c5d5aebca391f1547c9ca017a874425d01cef965d901da685"
+    },
+    {
+      "path": "src/RideBound.Domain/Commitments/CommitmentLockEvaluator.cs",
+      "bytes": 4958,
+      "lines": 148,
+      "sha256": "8dd1205bfb275f37bd33c76f277e6f7a7bbbc7e5b350f91e1d471c5c780c6f2f"
+    },
+    {
+      "path": "src/RideBound.Domain/Commitments/CommitmentPolicy.cs",
+      "bytes": 7340,
+      "lines": 230,
+      "sha256": "80618e96cb73954fdb2c6c16650eac23eca5de439685e60d7ff11aa2cae31c0e"
+    },
+    {
+      "path": "src/RideBound.Domain/Commitments/CommitmentVector.cs",
+      "bytes": 5609,
+      "lines": 153,
+      "sha256": "ee12cca349890dcc6f4620e1d0c9d0fd5c8c20ce3a320f5a97653490e366742b"
+    },
+    {
+      "path": "src/RideBound.Domain/Commitments/RiderPromise.cs",
+      "bytes": 5093,
+      "lines": 180,
+      "sha256": "2c68c71dc2eccb4d8d67c9d2255641f5c0acb0a11c15608d829a6fce6916c3d2"
+    },
+    {
+      "path": "src/RideBound.Domain/Common/DomainPrimitives.cs",
+      "bytes": 5926,
+      "lines": 262,
+      "sha256": "18d57770f2ca1f0e21187ae1daa1f57d795986811781c075c39aa05673742bc1"
+    },
+    {
+      "path": "src/RideBound.Domain/Incidents/OperationalIncidentLedger.cs",
+      "bytes": 20376,
+      "lines": 579,
+      "sha256": "25210d7190b6544c261617feb7c4dd6d0a8063d6ec837221ed9c278c0e9e53ee"
+    },
+    {
+      "path": "src/RideBound.Domain/Requests/RideRequest.cs",
+      "bytes": 11172,
+      "lines": 342,
+      "sha256": "0f3233fcf83f4fa57d9924cecc35348231a092223207629bc6d758905de8650e"
+    },
+    {
+      "path": "src/RideBound.Domain/RideBound.Domain.csproj",
+      "bytes": 207,
+      "lines": 9,
+      "sha256": "2c82dae7a6492e5dc0d99b6b5a5d1c89a4702b892f71757981e46302949d6115"
+    },
+    {
+      "path": "src/RideBound.Domain/Routes/RoutePlan.cs",
+      "bytes": 8826,
+      "lines": 295,
+      "sha256": "1b156e57d788ef09d25364cee416a02544c395d5db6ec19b8008241fab62297c"
+    },
+    {
+      "path": "src/RideBound.Domain/Runs/RideBoundRun.cs",
+      "bytes": 20348,
+      "lines": 611,
+      "sha256": "f2c6c20b7c879304b890ad0bd564cc6dcaf42c0adbe4064ba93cdad7f701562a"
+    },
+    {
+      "path": "src/RideBound.Domain/Validation/IStopDistanceLookup.cs",
+      "bytes": 240,
+      "lines": 11,
+      "sha256": "0298963c956008a5b7e47f96b72a3c9a73ec97c4d55076610108061f4615aa33"
+    },
+    {
+      "path": "src/RideBound.Domain/Validation/ITravelTimeLookup.cs",
+      "bytes": 224,
+      "lines": 11,
+      "sha256": "00cb28f12d1fedc0e02e902cb6f217359321c9ed9dd2012ef5ba8e9d85bc46c7"
+    },
+    {
+      "path": "src/RideBound.Domain/Validation/PhysicalPlanValidator.cs",
+      "bytes": 28208,
+      "lines": 837,
+      "sha256": "04f74a729d21c41808b760dc563a62b46fe02e56c4d1f12f874463e1378a54c6"
+    },
+    {
+      "path": "src/RideBound.Domain/Validation/ServiceQualityAllowance.cs",
+      "bytes": 8413,
+      "lines": 205,
+      "sha256": "64f86937b1878645b8e10ababd30f941a7dded73cc382d35ebc60fe9f49299e6"
+    },
+    {
+      "path": "src/RideBound.Domain/Vehicles/VehicleState.cs",
+      "bytes": 12921,
+      "lines": 407,
+      "sha256": "ced9d7be54e28edf9e3952ba25f301b082f1d1aa72247f14cec67a2d03eb61de"
+    },
+    {
+      "path": "src/RideBound.Application/AssemblyReference.cs",
+      "bytes": 177,
+      "lines": 8,
+      "sha256": "72f8c4ce61c1ca8e1822fd96e10848dd4b0864581e7bc635dffb2ab1055da016"
+    },
+    {
+      "path": "src/RideBound.Application/Commitments/CommitmentDecisionValidator.cs",
+      "bytes": 31205,
+      "lines": 810,
+      "sha256": "751d8fb76c0ad641734004c1196cce6386b6164c6c3f6e9504ae559522c3f1ee"
+    },
+    {
+      "path": "src/RideBound.Application/Events/OnlineEvents.cs",
+      "bytes": 2857,
+      "lines": 90,
+      "sha256": "cce27e2a966bf818d79392e884b704352ccc2430b3c155d0dcdfb208b9d3d382"
+    },
+    {
+      "path": "src/RideBound.Application/Optimization/CandidateSelectionExecution.cs",
+      "bytes": 17145,
+      "lines": 472,
+      "sha256": "47085e212010c51514ab33adcf836db22d90c7c001143b4aaced3989dc292740"
+    },
+    {
+      "path": "src/RideBound.Application/Optimization/CandidateSelectionModel.cs",
+      "bytes": 13163,
+      "lines": 367,
+      "sha256": "f8015e3629024b3242c617c335c173e29274be4bda3ae2e1c1b685863e061772"
+    },
+    {
+      "path": "src/RideBound.Application/Optimization/CandidateSelectionSolution.cs",
+      "bytes": 6073,
+      "lines": 170,
+      "sha256": "9f380cebfcb9c5522d0c48cf4b5a308946dace0bc5cfe3efba724fdd7148912c"
+    },
+    {
+      "path": "src/RideBound.Application/Optimization/CandidateSelectionSolver.cs",
+      "bytes": 14246,
+      "lines": 428,
+      "sha256": "3b5df81e9f68890113c16157b5607663ca88355509c2663edb0b08ddaf6fbc61"
+    },
+    {
+      "path": "src/RideBound.Application/Promises/PromiseDeltaCalculator.cs",
+      "bytes": 8359,
+      "lines": 265,
+      "sha256": "e7dcf38ce3ab5e265c52f2f46e45a3e0d3f8131c65eeb2ce98c43d338e7ac7d9"
+    },
+    {
+      "path": "src/RideBound.Application/Promises/PromiseProjector.cs",
+      "bytes": 5179,
+      "lines": 151,
+      "sha256": "7fd53f1aba8422212de53d792bff311a4f2a3bcf807f5a3818e7c5aa866928db"
+    },
+    {
+      "path": "src/RideBound.Application/RideBound.Application.csproj",
+      "bytes": 316,
+      "lines": 13,
+      "sha256": "b01af430536b0af1ac900ad1f14a2f37ce59b388dc5e0cf945342ab03a8bdd89"
+    },
+    {
+      "path": "src/RideBound.Application/Scheduling/RouteScheduleProjector.cs",
+      "bytes": 5392,
+      "lines": 179,
+      "sha256": "485b089b2b1a99dbb54d71b6d8e32005fae76cabb808d43266bf52fe2102adad"
+    },
+    {
+      "path": "src/RideBound.Application/State/EventReducer.cs",
+      "bytes": 13434,
+      "lines": 374,
+      "sha256": "7b9bc6df1e4305034611bf10a4ff122d18db83f6cbd1eb96cfa934c2df7dbb7a"
+    },
+    {
+      "path": "src/RideBound.Application/State/EventReductionCoordinator.cs",
+      "bytes": 4552,
+      "lines": 129,
+      "sha256": "b5e502ff1155ede2f242d01dc0dcc1bbfa7651cd0c2240d1818b4f8472b5cafb"
+    },
+    {
+      "path": "src/RideBound.Application/State/OnlineState.cs",
+      "bytes": 3537,
+      "lines": 107,
+      "sha256": "c7b3e218952c35ff923d99dfbb03e21d283e3c82e658124f46af5b4b85d04a58"
+    },
+    {
+      "path": "src/RideBound.Application/State/VersionedPlanPool.cs",
+      "bytes": 9404,
+      "lines": 302,
+      "sha256": "dc8b732edee3acd4a499e43def1637fd33525f5c5580221c8861da2d86cd5a32"
+    },
+    {
+      "path": "src/RideBound.Application/Travel/TravelTimeSnapshot.cs",
+      "bytes": 3242,
+      "lines": 101,
+      "sha256": "b85aab9f5f193bafc04a0bf292aecf406470fdf2d855b6e06a7d1d296650eb6c"
+    },
+    {
+      "path": "src/RideBound.Algorithms/AssemblyReference.cs",
+      "bytes": 176,
+      "lines": 8,
+      "sha256": "d0fe4c0786c6bc3bbe1e41335cf6d12f47bd313180340defb613d4dbfcd076f9"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Candidates/CandidateIdentity.cs",
+      "bytes": 8346,
+      "lines": 237,
+      "sha256": "6feb17f5a15783845653df99a6ceceda4e8acc62ee2e2b2f038fcfa41bba9b9a"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Candidates/CandidateModels.cs",
+      "bytes": 9671,
+      "lines": 273,
+      "sha256": "71fc91d4a31400061d3a205e68ee21705b352f9966b0189aa2cee60bea67b2d0"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Candidates/CandidatePortfolioRetainer.cs",
+      "bytes": 22290,
+      "lines": 594,
+      "sha256": "fb4b2687da078e26fdc641efebe3da69664479dd60294ea51dca580850a4956f"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Candidates/CandidateScheduleEvaluator.cs",
+      "bytes": 2693,
+      "lines": 90,
+      "sha256": "c4a42a87f9fe7ba2319bfebae1be8205d23217f3d4a14df41c41214a1d7ac8c6"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Candidates/ForwardSlackProfile.cs",
+      "bytes": 17956,
+      "lines": 567,
+      "sha256": "63bccacc43b7415cfb361980635b4a7d258241c21d0d0e6911a6dbcade2bedf7"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Candidates/InsertionCandidateGenerator.cs",
+      "bytes": 40760,
+      "lines": 1061,
+      "sha256": "980c376c45871ba869b76187d4aba6a8876e964b7b57ec38c554af5c327b5336"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Candidates/OriginHoldCandidateTransformer.cs",
+      "bytes": 3304,
+      "lines": 104,
+      "sha256": "50b01a3b8a637554e2b6653f03a471606e9e7c8b67c5660238de19c939042e35"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Candidates/WaitingIncumbentRepairSeedBuilder.cs",
+      "bytes": 5815,
+      "lines": 149,
+      "sha256": "5f999e78bdd31e86a2bcef8b7d81bf812b7a9fd1d0b52d006d0bac67bba572da"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Commitments/CommitmentCandidateAssessor.cs",
+      "bytes": 9700,
+      "lines": 284,
+      "sha256": "c89561d36d9b6e287754df9f47e34dfecd1b20fe438cf773fe246464b366bc86"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Commitments/CommitmentCandidateFilter.cs",
+      "bytes": 5578,
+      "lines": 158,
+      "sha256": "69121ff9854999b98f312385095f1e0d5dc64f2884a328d8c0cbf2b26ce0d022"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Commitments/CommitmentWarningProfile.cs",
+      "bytes": 3029,
+      "lines": 102,
+      "sha256": "aef07d1b4241ef9454ff15b93cdbc405ebb0c6080a95927d5b2bb7d296b304af"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Commitments/HardVectorCandidateAssessor.cs",
+      "bytes": 20626,
+      "lines": 548,
+      "sha256": "1a9aa4d7268658318ce325903714858b76e57639e98f92bd48d448c6de0b753d"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Policies/CandidateFleetSelector.cs",
+      "bytes": 4795,
+      "lines": 153,
+      "sha256": "548f188a5cff45bc55fcfdb5f7c7795e9aef8b225d4515a6a560972532aeca01"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Policies/CommitmentMechanismPolicies.cs",
+      "bytes": 7632,
+      "lines": 218,
+      "sha256": "b0556094582297b97a8642f556bae2e5d0ffcbab5afff01f24b16020ed067030"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Policies/HardVectorPolicy.cs",
+      "bytes": 9356,
+      "lines": 273,
+      "sha256": "2081a8abe81eb09a357704e2700f0418ff674d03654ecf4609da172d44c9b648"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Policies/MultiplePlanPolicy.cs",
+      "bytes": 27176,
+      "lines": 775,
+      "sha256": "9ec8f6e0459d108089f91b802f865a4a9eac7701da692ecd94e809abbe6c5d2a"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Policies/RevisionPenaltyFleetSelector.cs",
+      "bytes": 6756,
+      "lines": 198,
+      "sha256": "33c5b9d12f0abeb357cdef28379b458b1bd18ac9bffcefad02c48eaf2151e939"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Policies/RollingCostDecisionModels.cs",
+      "bytes": 11761,
+      "lines": 328,
+      "sha256": "56b647e70bdd7101532b6f9d4e92006293d89173c768ba0fa7832970809a365e"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Policies/RollingCostPolicy.cs",
+      "bytes": 9373,
+      "lines": 273,
+      "sha256": "fc679e053c2ecd5533af7764133c3b18d427e23d9ef43a9f388324e186727247"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Policies/SoftHardHybridPolicy.cs",
+      "bytes": 10676,
+      "lines": 319,
+      "sha256": "e2e26af1b2db94641e0f9c7c90e82f0aa63f2c569c72cd4a3bc8aeb275d67e6a"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Policies/SolverBackedFleetSelection.cs",
+      "bytes": 22476,
+      "lines": 561,
+      "sha256": "d633d0e2ef137307a52caf824987bbcb8cce70372bb207cfa2e0b705b36f5ef7"
+    },
+    {
+      "path": "src/RideBound.Algorithms/Policies/SolverBackedRidePoolingPolicy.cs",
+      "bytes": 21210,
+      "lines": 546,
+      "sha256": "2e963b86c3b5f40eaf976a325f33ef80a45b0192d79f346241590801bfd8a400"
+    },
+    {
+      "path": "src/RideBound.Algorithms/RideBound.Algorithms.csproj",
+      "bytes": 405,
+      "lines": 14,
+      "sha256": "a473b74661f024f491684fe9645c74f9cda5758af16be88d5c750f1ae9315a00"
+    },
+    {
+      "path": "src/RideBound.Runner/AssemblyReference.cs",
+      "bytes": 172,
+      "lines": 8,
+      "sha256": "cbb0baab94eea59e4966b6b7e23edcfd74ece591be138f33043039053fc694a1"
+    },
+    {
+      "path": "src/RideBound.Runner/Configuration/CommitmentPolicyConfiguration.cs",
+      "bytes": 11529,
+      "lines": 339,
+      "sha256": "864f62acd80b81cff91d9c0d917eb746bc6bd37233aada8416eab39ff63512cd"
+    },
+    {
+      "path": "src/RideBound.Runner/Configuration/Wp4RunnerConfiguration.cs",
+      "bytes": 26696,
+      "lines": 719,
+      "sha256": "1f4c52e21ec835485fea19844759aa11788d7b2cea2a4b0d3ac5612e0037d27e"
+    },
+    {
+      "path": "src/RideBound.Runner/Online/ExogenousServiceQualityBreachBridge.cs",
+      "bytes": 8652,
+      "lines": 236,
+      "sha256": "3a3252623a5730d2077fc15f562a486cb55249857c112fe718f57ad2adef70e3"
+    },
+    {
+      "path": "src/RideBound.Runner/Online/OnlineDecisionActionMapper.cs",
+      "bytes": 7569,
+      "lines": 184,
+      "sha256": "f431c0cf01779755784ca8021c429acc5075a99e1d0d8e7d6c9d6b7e1df3e554"
+    },
+    {
+      "path": "src/RideBound.Runner/Online/OnlineEventMapper.cs",
+      "bytes": 13933,
+      "lines": 391,
+      "sha256": "d207889e45490c85678f51b4b237c92fce552722ef67e150f5b33827737f188a"
+    },
+    {
+      "path": "src/RideBound.Runner/Online/OnlineStateCanonicalizer.cs",
+      "bytes": 24056,
+      "lines": 639,
+      "sha256": "7435276e2c631d31d2cbd4e269348db5b477be286c4bb8e7325e7fa08fdae9bb"
+    },
+    {
+      "path": "src/RideBound.Runner/Online/OnlineStateCheckpointCodec.cs",
+      "bytes": 31326,
+      "lines": 768,
+      "sha256": "bd0b99d9d9c2fccf6d2f18fb432efdd6fbe855f3da8b047955f4353b926bba23"
+    },
+    {
+      "path": "src/RideBound.Runner/Program.cs",
+      "bytes": 4441,
+      "lines": 117,
+      "sha256": "21e12725cd2428c63ebc5005c894f088de175356a17ce66264caadb77a2657bf"
+    },
+    {
+      "path": "src/RideBound.Runner/Protocol/CapabilityNegotiator.cs",
+      "bytes": 9369,
+      "lines": 275,
+      "sha256": "01c4860b29c141e727ae57762cbf9ebc9368dae5a8f07332a75292b708c53a6c"
+    },
+    {
+      "path": "src/RideBound.Runner/Protocol/EventBatchOrderingValidator.cs",
+      "bytes": 2532,
+      "lines": 82,
+      "sha256": "757411d16eca87717c6680836a927ce2bf36a6555543aafc9a264cf05854199b"
+    },
+    {
+      "path": "src/RideBound.Runner/Protocol/InitializeRunValidator.cs",
+      "bytes": 7237,
+      "lines": 212,
+      "sha256": "4191ec5c0b1b4e775521b7f7fb2917eade1fb0da37e717c9b3df0a6976d36fee"
+    },
+    {
+      "path": "src/RideBound.Runner/Protocol/NdjsonReader.cs",
+      "bytes": 3870,
+      "lines": 139,
+      "sha256": "7df6e18cdfeb6ebd7d8ead8ff09ca656c1ebecd5606a98ca3f030532595051f9"
+    },
+    {
+      "path": "src/RideBound.Runner/Protocol/NdjsonWriter.cs",
+      "bytes": 1024,
+      "lines": 34,
+      "sha256": "61c52dfd7b3c238653974240d99994fe52b3bfe324f62a6b7c553271bb95f5c8"
+    },
+    {
+      "path": "src/RideBound.Runner/Protocol/RunnerHost.cs",
+      "bytes": 5095,
+      "lines": 147,
+      "sha256": "904384e6cc7c33844ae04fe4c5a18d738e214ffb668b69817b4f1904be247b69"
+    },
+    {
+      "path": "src/RideBound.Runner/Protocol/RunnerSession.cs",
+      "bytes": 44336,
+      "lines": 1210,
+      "sha256": "7986507e0f7904b845badfaac93669ff0fc46eb10ca9d412e07bcd84563d013d"
+    },
+    {
+      "path": "src/RideBound.Runner/Protocol/SolverExecutionEvidenceMapper.cs",
+      "bytes": 25071,
+      "lines": 655,
+      "sha256": "75996041dc33b2d6439ea4fc116d9a172ee1a31afb95b009b61a7b3147d06027"
+    },
+    {
+      "path": "src/RideBound.Runner/RideBound.Runner.csproj",
+      "bytes": 723,
+      "lines": 18,
+      "sha256": "1445250d64178e4512f405a476adfcdd895a8a6d66a266f12a921ebe9032d544"
+    },
+    {
+      "path": "src/RideBound.Contracts/AssemblyReference.cs",
+      "bytes": 175,
+      "lines": 8,
+      "sha256": "26e7f3028a01220f788ded97583a04fd17863fcee973db85bd40b25d6c444de1"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/CanonicalUnits.cs",
+      "bytes": 5434,
+      "lines": 238,
+      "sha256": "ea5532f8d33a79cfcdd625f3dad5a72d3684d94abca009e5e4b071b82292551b"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/CheckpointMessages.cs",
+      "bytes": 12088,
+      "lines": 333,
+      "sha256": "278f172f5040398c962adf58b100fd3e07770eb40b335426f285e49a1e23734f"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/CommitmentContracts.cs",
+      "bytes": 25411,
+      "lines": 718,
+      "sha256": "f959a12ba0cddd4b7558eb754c8fe5e996188288708ec52af54297537e568490"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/DecisionMessages.cs",
+      "bytes": 60359,
+      "lines": 1864,
+      "sha256": "22dd15af5947d7b03b02163a9ee36fa9478696e1c2d139dd829b60ba8fa0d0c8"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/ErrorMessage.cs",
+      "bytes": 7034,
+      "lines": 181,
+      "sha256": "5020ecc4dc58ecf13f6ebf8c7083f24120cf27c7a500989f9ca3244a389b72d1"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/EventBatchMessages.cs",
+      "bytes": 28106,
+      "lines": 778,
+      "sha256": "7bb5d7e17570d52669a0db78e7446ca1c631c046a342697d7630a0e54f79db7c"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/HelloMessages.cs",
+      "bytes": 18958,
+      "lines": 560,
+      "sha256": "323a3396c0f789d8bd97e55f8c5e5249fe6e5feec7c3960c104f2dec4e6d469d"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/InitializeRunMessages.cs",
+      "bytes": 26891,
+      "lines": 760,
+      "sha256": "a9bd54342c19ed1600d0f78504c20446ef3f63fa11c676c3e90bb2e431501afc"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/OnlineDecisionActions.cs",
+      "bytes": 16729,
+      "lines": 484,
+      "sha256": "6a8e939ea004b3acaacc617b44526d618a4bc2e1a39fd7c61e239395d1bd542a"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/OnlineEventModels.cs",
+      "bytes": 36698,
+      "lines": 1126,
+      "sha256": "d25fbc3fdd306dc705ea724fe373b48b13e5383d8d49be5f5a9beaee80726551"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/ProtocolEnvelope.cs",
+      "bytes": 1884,
+      "lines": 75,
+      "sha256": "afa6f27f050caa81cf5d8131d8070842c7c18ded7196a2b4ae5c891943129126"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/ProtocolEnvelopeCodec.cs",
+      "bytes": 22570,
+      "lines": 681,
+      "sha256": "2ab474eb86e88ebc028b688f50dbb09d1f1ab3da1510f4310c9344a9c475bb13"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/ProtocolIdentityPrimitives.cs",
+      "bytes": 1367,
+      "lines": 62,
+      "sha256": "f2d248ddd9d164cc35faf20f00d441d3c79c4e7e888860fc3f3106b41e89afae"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/ProtocolPayloadValidation.cs",
+      "bytes": 9444,
+      "lines": 313,
+      "sha256": "0a5bfb96a411e256d37ec280d0bf473adf55bce39d0b903d323c194f3fa67373"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/ProtocolPrimitives.cs",
+      "bytes": 6098,
+      "lines": 274,
+      "sha256": "0759ac35e12ea5d7845565dd2b28b2836a2bdb84dd50515d06610069291d6451"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/ProtocolVersionCompatibility.cs",
+      "bytes": 2887,
+      "lines": 89,
+      "sha256": "06964ee289368d4833cbd2ba179f2b83d4fcaeb7ae04cff1d7377e6ed735a995"
+    },
+    {
+      "path": "src/RideBound.Contracts/Protocol/Wp4PolicyConfigurationBinding.cs",
+      "bytes": 4654,
+      "lines": 130,
+      "sha256": "6ee86636624e8a6b952f5a278de5523eaafb179f458fb1dd954dd4cf421afdc1"
+    },
+    {
+      "path": "src/RideBound.Contracts/RideBound.Contracts.csproj",
+      "bytes": 207,
+      "lines": 9,
+      "sha256": "2c82dae7a6492e5dc0d99b6b5a5d1c89a4702b892f71757981e46302949d6115"
+    },
+    {
+      "path": "src/RideBound.Contracts/Serialization/CanonicalJson.cs",
+      "bytes": 12966,
+      "lines": 448,
+      "sha256": "b968f39806e9cfdc5426531d5ad692d16d24d3c4bd52411f646222debc812067"
+    },
+    {
+      "path": "src/RideBound.Contracts/Serialization/ProtocolHash.cs",
+      "bytes": 4672,
+      "lines": 140,
+      "sha256": "e827ae8e53eaf6b8afd33a7311be41c4e077b47c2cee764378604e88c29ddb07"
+    },
+    {
+      "path": "src/RideBound.Benchmarking.Contracts/BenchmarkContractCodec.cs",
+      "bytes": 8055,
+      "lines": 234,
+      "sha256": "4f57804a829d08f3ce00905cc667c7763f658958ab746e6fbb627d8ec81f0ac5"
+    },
+    {
+      "path": "src/RideBound.Benchmarking.Contracts/BenchmarkContractValidator.cs",
+      "bytes": 58646,
+      "lines": 1467,
+      "sha256": "bbbda2c43e2a061bc16c446219bea0cef093ec35e32b924f5d146e7b0be3fb3b"
+    },
+    {
+      "path": "src/RideBound.Benchmarking.Contracts/BenchmarkIdentity.cs",
+      "bytes": 7589,
+      "lines": 207,
+      "sha256": "fd21779701e7e35c1633226bbb4dec5ec26d8876c1154aa102eaf16bb169f3e9"
+    },
+    {
+      "path": "src/RideBound.Benchmarking.Contracts/BenchmarkModels.cs",
+      "bytes": 14288,
+      "lines": 532,
+      "sha256": "33902f43f8f93a3a00d322459418b365223e056320bf40006c2e2af04ee65ee5"
+    },
+    {
+      "path": "src/RideBound.Benchmarking.Contracts/BenchmarkSeed.cs",
+      "bytes": 4249,
+      "lines": 123,
+      "sha256": "5eab206857110cd30abd920d0670dcab254f9a6cd5fb75ac0e14a9728437b8a4"
+    },
+    {
+      "path": "src/RideBound.Benchmarking.Contracts/ExperimentalUnitModels.cs",
+      "bytes": 8706,
+      "lines": 255,
+      "sha256": "38f98539dccf0b6bcea80c1c58a08868062252f4904fcea1256a8a37bdd2bac3"
+    },
+    {
+      "path": "src/RideBound.Benchmarking.Contracts/RideBound.Benchmarking.Contracts.csproj",
+      "bytes": 322,
+      "lines": 13,
+      "sha256": "c9799f2e49ecb8767cbbef39624c0180c32535ad95865400f96e810b677f6dce"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Bundles/BundleSourceInventoryCapture.cs",
+      "bytes": 9365,
+      "lines": 269,
+      "sha256": "eda22737966e9df8d1aa79367ab4b4d23b53ed1d52539ec73c8a46ce7672d4b7"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Bundles/StrictBagItBundleBuilder.cs",
+      "bytes": 22830,
+      "lines": 531,
+      "sha256": "35f8d331635733e3b9ecb43247307cdc369d0ef89d96cd391ca1e171ed448aa7"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Bundles/StrictBagItBundleVerifier.cs",
+      "bytes": 60345,
+      "lines": 1531,
+      "sha256": "363102f6477b2a4ab4aade304bc1bb0047414b923e2ccd07b6190afd92c5d8f4"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Bundles/StrictBundleModels.cs",
+      "bytes": 13941,
+      "lines": 415,
+      "sha256": "10e655f708d3d42cf6645e9f95a54318e3f0d61d62f1e20c40f6ca290b80134e"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Claims/ArtifactClaimChecker.cs",
+      "bytes": 15615,
+      "lines": 423,
+      "sha256": "0269f4521d44f28f080e7bb01adaa8fc1c0e25a583adb3ef987f0419e8dd5f1c"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Claims/ArtifactClaimModels.cs",
+      "bytes": 10503,
+      "lines": 266,
+      "sha256": "f80c958fd2f384bf7a62df9a6c64e5a79727a29993758c0654215c09f45c73b6"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Datasets/DatasetAcquisitionModels.cs",
+      "bytes": 1706,
+      "lines": 63,
+      "sha256": "fc999c840f3113a940ed14ee3923df1add74c3b09969f9b9899bd8d5cbfe8a97"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Datasets/DatasetSourceRegistry.cs",
+      "bytes": 3545,
+      "lines": 80,
+      "sha256": "109e58039a3c43b5dd804c492fc79d9764738f0c628b1490704d8fac7c4c6565"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Datasets/SafeZipExtractor.cs",
+      "bytes": 28944,
+      "lines": 826,
+      "sha256": "311102ae97f62a9a6d145e116c8720d7542c45b925924966de56b582abf4671c"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Datasets/VerifiedDatasetDownloader.cs",
+      "bytes": 25358,
+      "lines": 695,
+      "sha256": "b969dd4e0f724dda9d352820838ce9d09dd9bbbec8373dbe73803e5ce0942b47"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/EndToEnd/MechanicalPairedHarnessModels.cs",
+      "bytes": 1232,
+      "lines": 35,
+      "sha256": "8378e9511a578205dfc32d77d30822654cd403725fe1f82644adb24913641a8a"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/EndToEnd/PublicDerivativeMechanicalFixtureCompiler.cs",
+      "bytes": 12830,
+      "lines": 320,
+      "sha256": "78e240b928f6480154946413939934378290012c58ae8e4b655a5b88b4986fea"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/EndToEnd/PublicDerivativeMechanicalFixtureModels.cs",
+      "bytes": 825,
+      "lines": 26,
+      "sha256": "3fe852f5f7dc8ed2bcd1b68aae6c27a7fd0b579073869b63e53b6ea93c566362"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/EndToEnd/PublicDerivativePairedHarness.cs",
+      "bytes": 9501,
+      "lines": 238,
+      "sha256": "7c8716c4eece6377100cdd16cab685569ace71d596c3760e4429442a3791ab71"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/EndToEnd/TinyPairedHarness.cs",
+      "bytes": 55970,
+      "lines": 1371,
+      "sha256": "01adf79b54095bd2030cea94dc2f100b0a639b15adbeb28cd37ddf5a71469d3b"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/EndToEnd/TinyPairedHarnessModels.cs",
+      "bytes": 2110,
+      "lines": 74,
+      "sha256": "5c620dc6fddeb676a76cd1ed0d3e83065af72885e023eb5dcf8a77d5c526fc9d"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/EndToEnd/TinyProtocolFixtureCompiler.cs",
+      "bytes": 18490,
+      "lines": 440,
+      "sha256": "be1878f8e7242fca66b52f6e8fd0fe76ddea4fdac5420663bdecc76952a9c2d7"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Execution/BoundedRecordingStreams.cs",
+      "bytes": 6931,
+      "lines": 254,
+      "sha256": "96469953dddabd73206e8b8dc712b8653010ffacfec3b82ed1634ee0c3792da5"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Execution/ExternalProcessModels.cs",
+      "bytes": 2984,
+      "lines": 103,
+      "sha256": "a021a89944cdcd653a565e0d42e0c48f27d1c7a1d2677a4e0dfd95706eaf09ab"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Execution/ExternalProcessSupervisor.cs",
+      "bytes": 27449,
+      "lines": 774,
+      "sha256": "111cbc27d7cc5e4706fce2a0a2115cdadf8b1c9558efa8a76dda199929ac4ace"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Execution/ProcessArtifactIdentity.cs",
+      "bytes": 7421,
+      "lines": 206,
+      "sha256": "3ca62a06edd18342d2a3a359c048a37e73dbb86041861fdcc0811714462b1e84"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Execution/ProcessLaunchIdentity.cs",
+      "bytes": 1685,
+      "lines": 46,
+      "sha256": "27d5fe1575182de4e59a523cf774bc9279b7ae6d23470303095db1b21810dec9"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Execution/ProcessTreeSnapshot.cs",
+      "bytes": 8009,
+      "lines": 239,
+      "sha256": "c5e8120c9fca6bd44c4bd24694e4a117fed7e553d009e932a97b3c824c3adf02"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Execution/PublicDerivativeMechanicalDrainConversation.cs",
+      "bytes": 25982,
+      "lines": 701,
+      "sha256": "099bebb3b859121c83d107cb35d3c3601410ca4760be678644a9f79030591467"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Execution/RunnerProtocolFixtureConversation.cs",
+      "bytes": 11746,
+      "lines": 314,
+      "sha256": "584c3903425bd1821781ba24f5ec5d360d9f12b490b2292785a94cfabb729e11"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Metrics/DecisionInducedBurdenCalculator.cs",
+      "bytes": 14771,
+      "lines": 411,
+      "sha256": "878efa2dddddadf161f0ffacbd42d758bfbddeefa8db5826d87d2fcde981b09a"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Metrics/MechanicalMetricCalculator.cs",
+      "bytes": 31367,
+      "lines": 892,
+      "sha256": "73cc9acac20e664517385d029c7dc57be86dbf5211e6f95558010f79fca7cea2"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Metrics/MechanicalMetricModels.cs",
+      "bytes": 857,
+      "lines": 29,
+      "sha256": "95a1e08ad5b3b7bd65ad6def1742f0a276bc34f98c97f9fde956209dd12834c4"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Metrics/MechanicalMetricOracleVerifier.cs",
+      "bytes": 838,
+      "lines": 24,
+      "sha256": "f8d7411f909ee9cfdc28daf2e2a042c99c72caf489ddc1df3514ff8a1670b4c9"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Metrics/MechanicalMetricRegistry.cs",
+      "bytes": 7406,
+      "lines": 196,
+      "sha256": "87d04ae19d75f30d05580ae1058566d0bdf2711aa5f5ebfdc676c60ab894d1b3"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Metrics/MetricEvidenceIdentity.cs",
+      "bytes": 2058,
+      "lines": 55,
+      "sha256": "601f3565c531dd014c6df17fce4711faca0fc78b01a946f0ae3fbebcee8d5e82"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Normalization/DirectedTravelGraph.cs",
+      "bytes": 5812,
+      "lines": 191,
+      "sha256": "60a58e5ca111cd88d557ce20b60f4971c4068432ceb7fd4263d67a080a6d86b1"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Normalization/FleetPyManhattanNormalizer.cs",
+      "bytes": 46145,
+      "lines": 1200,
+      "sha256": "706e1e0d83c334add85d710aa287d145633c0ae5ae962a1abf7a1fb1cca8144c"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Normalization/FleetPyNormalizationModels.cs",
+      "bytes": 3612,
+      "lines": 122,
+      "sha256": "846cc8d88b4d186b47ab84b9cf57996808031b166cff59510b5a0810d45ba992"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Normalization/FleetPyNormalizerSourceIdentity.cs",
+      "bytes": 1983,
+      "lines": 60,
+      "sha256": "85573474179f161793fb4542f6665c0997d50fdab34f03b31052067e0daffc9c"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Normalization/StrictCsv.cs",
+      "bytes": 4089,
+      "lines": 149,
+      "sha256": "d30aa72a07f0d225498b6857883e03241b1795fe77f41b207d7b786b3889c19e"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Planning/BenchmarkPlanCompiler.cs",
+      "bytes": 17860,
+      "lines": 458,
+      "sha256": "da2d01a1ce6869f479d6331118f13d80cd9457892b2c06d13211a3e815a6538c"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Planning/BenchmarkPlanningModels.cs",
+      "bytes": 2129,
+      "lines": 74,
+      "sha256": "454c230ac0b2e7749bf029bfee771d30861dabaee4b9dda333624b1b684eba3a"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/RideBound.Benchmarking.csproj",
+      "bytes": 529,
+      "lines": 18,
+      "sha256": "2207afd606532ddec35e0b6ca573a26c98b725a3c93445f8cf641c48c43e94ea"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Storage/AppendOnlyRunStore.cs",
+      "bytes": 80007,
+      "lines": 2165,
+      "sha256": "773b39257bc323f21ed067ce8231e78cafb9a06443f35caf980150ef8033b10d"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Storage/ExternalProcessTerminalMapper.cs",
+      "bytes": 4210,
+      "lines": 106,
+      "sha256": "fc55080eedcb077d22d570347ab94d6d3f6541281ed9ee253dc27bb847d4c534"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Storage/ProtocolObservationIndexer.cs",
+      "bytes": 19152,
+      "lines": 553,
+      "sha256": "73386711a699c7a6d2fccae3953e2e2a861219411bdeb396dd1bdabc71357155"
+    },
+    {
+      "path": "src/RideBound.Benchmarking/Storage/RunStoreModels.cs",
+      "bytes": 4115,
+      "lines": 153,
+      "sha256": "5482f78f69ff2fc05d82c6e6a74c6a22017702014fedd0a2abdaac16ce961206"
+    },
+    {
+      "path": "src/RideBound.Solvers.OrTools/AssemblyReference.cs",
+      "bytes": 181,
+      "lines": 8,
+      "sha256": "c2033f3ce7fc3df256b2a0edf61a4b5f8fbee243586f3344cebda695dbb52efa"
+    },
+    {
+      "path": "src/RideBound.Solvers.OrTools/OrToolsCandidateSelectionSolver.cs",
+      "bytes": 21308,
+      "lines": 609,
+      "sha256": "5137e58edf2b87785488eee872d551e554469221a7b1a2bde304890b7035be54"
+    },
+    {
+      "path": "src/RideBound.Solvers.OrTools/RideBound.Solvers.OrTools.csproj",
+      "bytes": 505,
+      "lines": 18,
+      "sha256": "f9ec20774c2bf5b5323c72991fe831a9bc3b40ecdb11e12d03641c705201c034"
+    },
+    {
+      "path": "src/RideBound.Infrastructure/AssemblyReference.cs",
+      "bytes": 180,
+      "lines": 8,
+      "sha256": "ce7c1a62b41d6539fd22b111245d32ea9f4c8ad7d0585c8e65e9e1d2018939ec"
+    },
+    {
+      "path": "src/RideBound.Infrastructure/RideBound.Infrastructure.csproj",
+      "bytes": 490,
+      "lines": 15,
+      "sha256": "57635661380a9804dade50a0acabe98a059b356debb7a34e8a32241670808a6b"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/AlgorithmTestData.cs",
+      "bytes": 3691,
+      "lines": 119,
+      "sha256": "1b409a9c75ed7f4305ee66bf4e34bf02debe9036a51ddf72328cc30b24020c3a"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Candidates/CandidatePortfolioRetainerTests.cs",
+      "bytes": 21525,
+      "lines": 541,
+      "sha256": "9d9863bb67218004bb2c31894b998b624d330e657366a07ead4b7ceb6ee2a72d"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Candidates/CandidateSearchWorkProfileTests.cs",
+      "bytes": 7591,
+      "lines": 200,
+      "sha256": "c24255e2b8dac379324463838748e453d6935f3cf10c2bdd4d68b40b73a135d1"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Candidates/ExogenousServiceQualityTests.cs",
+      "bytes": 7835,
+      "lines": 210,
+      "sha256": "45144ff29be32ccb455805273696b4e693b7ac8d907093f8f215e7ba2dc7b8d4"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Candidates/ForwardSlackAndScheduleStrategyTests.cs",
+      "bytes": 20574,
+      "lines": 552,
+      "sha256": "daefdc44ed01eb308e88dcda0393ce4e601b8793c31b39cfa535feeabe1d8be7"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Candidates/InsertionCandidateGeneratorTests.cs",
+      "bytes": 17780,
+      "lines": 446,
+      "sha256": "8a3a4e91b876ba8806719da203738fd8ce7bd9413c7482eba90fa28441cf14e3"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Candidates/WaitingIncumbentRepairTests.cs",
+      "bytes": 16113,
+      "lines": 410,
+      "sha256": "33a78b0dab4b1c05678e7312f8c8ea7492a278d1c2584e88be24d041c22deb64"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Commitments/CommitmentCandidateFilterTests.cs",
+      "bytes": 2257,
+      "lines": 65,
+      "sha256": "c45fde98b809747dbcb01629ad02aba2b6bc4f00e35c298b6c99b98bc46c62a7"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs",
+      "bytes": 39696,
+      "lines": 1030,
+      "sha256": "2b6403eb8f3228cdf2a8660245c68acf2e4b7f50eca2ac5f1e6bf15cab72f144"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Oracle/ExactSmallDifferentialTests.cs",
+      "bytes": 9012,
+      "lines": 242,
+      "sha256": "b8407b65babec4b9c76e9d2f8470815a46df2f9d3d0960bd5f78c5f3409467b2"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Oracle/ExactSmallOracle.cs",
+      "bytes": 15521,
+      "lines": 496,
+      "sha256": "4bb753d2eead155a3e3d6a154795a084d59a77f39925624283698a0efa30de76"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Policies/CommitmentMechanismPolicyTests.cs",
+      "bytes": 16706,
+      "lines": 447,
+      "sha256": "5574b6409511024012724a5053f6de0cae7e5f1c353462ec0e141483061cb395"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Policies/EffectivePolicyFairnessTests.cs",
+      "bytes": 11941,
+      "lines": 289,
+      "sha256": "7a825e91ed9b32f1d0cfe1a211d144ff7cc8be96d685f4ff276b60bb0777fcb0"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Policies/MultiplePlanPolicyTests.cs",
+      "bytes": 11782,
+      "lines": 318,
+      "sha256": "1d62ab73765c2ec9f2e4ac7e02116ff8fc3801f257367b6bec324af6d04af0db"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Policies/RollingCostPolicyTests.cs",
+      "bytes": 10149,
+      "lines": 264,
+      "sha256": "e463603acf6b3adbd51b7e25fc76bc11760c107bad20589fb6ae44dac634f99e"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/Policies/SolverBackedFleetSelectionTests.cs",
+      "bytes": 23874,
+      "lines": 617,
+      "sha256": "217a534d42fb1153ac882a8414172c861e0eee393453cffd85a4e570374ec581"
+    },
+    {
+      "path": "tests/RideBound.Algorithms.Tests/RideBound.Algorithms.Tests.csproj",
+      "bytes": 918,
+      "lines": 27,
+      "sha256": "4b135240a1ac99bc0414df1a8c5f119b27bf03e41f3a4d0af3ee7432fa675bac"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/ApplicationTestData.cs",
+      "bytes": 3472,
+      "lines": 114,
+      "sha256": "b5eef07314fdd41716915ae9bcad070ff1ec10fbc557e47f16790e69a523c6ea"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/Commitments/CommitmentDecisionValidatorTests.cs",
+      "bytes": 17917,
+      "lines": 475,
+      "sha256": "56bb04763a249de9dbeb4c7ffc0e2b27da90446daa91f2f6c240191fafb2cc8b"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/Commitments/CommitmentValidatorFixtures.cs",
+      "bytes": 5596,
+      "lines": 164,
+      "sha256": "e8a02ba57ba3197fc0b51f94b4d88be89e3a2f79560ee281bf1f5fe89ba32f42"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/Commitments/CommitmentWitnessCollectionTests.cs",
+      "bytes": 4433,
+      "lines": 117,
+      "sha256": "47fbf670f17e326110e9ba3fa9696ee8e8269cf121214a400f488eabbec03979"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/Optimization/CandidateSelectionConstantLevelTests.cs",
+      "bytes": 5108,
+      "lines": 142,
+      "sha256": "fb44fa756f2188c924cd9f531d0d75069197a4a55018aaf6742cb86600a2fc33"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/Optimization/CandidateSelectionExecutionTests.cs",
+      "bytes": 17150,
+      "lines": 435,
+      "sha256": "ea46bbf85680b50116dad6540c9d68adc7368b3b80f1d8a6dde28632cf0c8c82"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/Optimization/CandidateSelectionModelTests.cs",
+      "bytes": 16764,
+      "lines": 496,
+      "sha256": "24c040e5d93aacb6ba6bca55640bf8afde20051920a06d5fb7536a9ccf152884"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/Promises/PromiseDeltaCalculatorTests.cs",
+      "bytes": 13020,
+      "lines": 378,
+      "sha256": "8e5705766dd5f3ac7e2b723a9a2921bc48ca1a20ea7934d6ddb74dc6f7e224c5"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/Promises/PromiseProjectorTests.cs",
+      "bytes": 6355,
+      "lines": 179,
+      "sha256": "890c552ef70c14f468a64d3395bcb0af3452380a723207086e33e2ffef565460"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/RideBound.Application.Tests.csproj",
+      "bytes": 824,
+      "lines": 26,
+      "sha256": "50b19548fd6ec64d42b63e0b46033586221186d5b7327c7ea89a6a0f3904f340"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/Scheduling/RouteScheduleProjectorTests.cs",
+      "bytes": 6115,
+      "lines": 192,
+      "sha256": "400ef56e20dfabf4274b461f415f8acbc284a4440c403c269dbb9f4e7d4fd5ce"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/State/CommitmentStateTests.cs",
+      "bytes": 2068,
+      "lines": 58,
+      "sha256": "e4821d8b15027aba9a48f3d952d29e1c4c713419830592627c30d54b9008ce46"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/State/EventReducerTests.cs",
+      "bytes": 20649,
+      "lines": 570,
+      "sha256": "8fb756c242c0e24157b00c9db9d7fa21e0b283cb472840e48382fae25124399f"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/State/EventReductionCoordinatorDecisionTests.cs",
+      "bytes": 3265,
+      "lines": 88,
+      "sha256": "b64c3614e713e4b03175b99de192bca7c6477c89f06d246c1843d3c2a4c75bf1"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/State/IncidentStateTests.cs",
+      "bytes": 3580,
+      "lines": 96,
+      "sha256": "02f2f7fd36262bde6620c2f3cb068746c50df2b64a6e4226b82cb80221d1ba07"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/State/VersionedPlanPoolTests.cs",
+      "bytes": 3211,
+      "lines": 96,
+      "sha256": "dfbce7898c60b48cb4015243c04d55214ec768d7d4597aac6fa2df04602369d2"
+    },
+    {
+      "path": "tests/RideBound.Application.Tests/Travel/TravelTimeSnapshotTests.cs",
+      "bytes": 1539,
+      "lines": 50,
+      "sha256": "999846e3cb981569b4300b4acc381cead1ac1c0ecbae2cf3a0faf0dc31d8f3b9"
+    },
+    {
+      "path": "tests/RideBound.ArchitectureTests/DependencyRuleTests.cs",
+      "bytes": 9045,
+      "lines": 255,
+      "sha256": "f484a4425921f0549dba207edf842022c77ed106f1ab6f678298a5a6322a31c0"
+    },
+    {
+      "path": "tests/RideBound.ArchitectureTests/RideBound.ArchitectureTests.csproj",
+      "bytes": 904,
+      "lines": 28,
+      "sha256": "1b5ab637d4128eccc4759def257a9037da536d9063e9e86e34828854a25c512b"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Contracts.Tests/BenchmarkContractCodecTests.cs",
+      "bytes": 20234,
+      "lines": 528,
+      "sha256": "b038493261911a02c96ed61992c3a294411322969a1ae5e37b4f9072e428f0c4"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Contracts.Tests/BenchmarkSeedTests.cs",
+      "bytes": 4339,
+      "lines": 108,
+      "sha256": "9c9901d8a258d7140f1ebe55803bc3ddeacf1fce2a2fa0d6feb23bd92806288b"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Contracts.Tests/Draft202012SubsetValidator.cs",
+      "bytes": 11826,
+      "lines": 365,
+      "sha256": "81c8072844531aebbb817814fe68cc336b3420165090b552cc2f145f88481d37"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Contracts.Tests/ExperimentalUnitContractTests.cs",
+      "bytes": 8795,
+      "lines": 290,
+      "sha256": "7892c9e6a37ae30563527ec20b8db13687e9ea3ee875483bb180710cffbcec9b"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Contracts.Tests/FixturePaths.cs",
+      "bytes": 1243,
+      "lines": 47,
+      "sha256": "973ccf04fc71b4ef074f9394349bdd75d068867afbc4e69766554868fa93ff0e"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Contracts.Tests/RideBound.Benchmarking.Contracts.Tests.csproj",
+      "bytes": 1332,
+      "lines": 34,
+      "sha256": "4c91f994f29200c129e577685fd7005c872d1ced143f34fce6394959018125e3"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Contracts.Tests/SchemaContractTests.cs",
+      "bytes": 6704,
+      "lines": 157,
+      "sha256": "ecbde73a4e6db42dc93ea01f59db8fa0a3ac0a95ca152c631ee2fcaa7d17b233"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/AppendOnlyRunStoreTests.cs",
+      "bytes": 39163,
+      "lines": 956,
+      "sha256": "7e8ad07e0e209975bb6a5eb11e177cda70d63b3e9392a4da99b801e03554086a"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/BenchmarkPlanCompilerTests.cs",
+      "bytes": 12422,
+      "lines": 337,
+      "sha256": "73582a19e6ae1b295217431eaf0eb53746b7dd664eafd773b21dec9fc8682420"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/DatasetDownloaderTests.cs",
+      "bytes": 17034,
+      "lines": 394,
+      "sha256": "0b4ad718acb61d0c53c00ce889a56666d5d3933a5020159f165d9810c64c1adc"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/DecisionInducedBurdenMetricTests.cs",
+      "bytes": 12663,
+      "lines": 306,
+      "sha256": "f47b5f52fdd89532cfabaa3693c5d29f3e7b1d8e23f4f8a0059d583d16ea8d6f"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/ExternalProcessSupervisorTests.cs",
+      "bytes": 21481,
+      "lines": 573,
+      "sha256": "68bcc3053e97aab382a6b1dd4e1c6772f6f0b91deec166a15cc1bf09fa4ceea5"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/ExternalProcessTerminalMapperTests.cs",
+      "bytes": 7082,
+      "lines": 189,
+      "sha256": "f297240dc7fd4c41db69777789a7f2edf7a2d3439c0b0db16b585b9388e67593"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/FleetPyManhattanNormalizerTests.cs",
+      "bytes": 14052,
+      "lines": 357,
+      "sha256": "0858f817fba33600a8edc2889bdbaaa5082acc7f775ac25edbd15df4e72e4f21"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/FleetPyPublicDerivativeTests.cs",
+      "bytes": 4175,
+      "lines": 99,
+      "sha256": "ba344f9e07109a364ce70bbca18ce3dae9e85a507af864317456e214c6e63335"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/MechanicalMetricCalculatorTests.cs",
+      "bytes": 27168,
+      "lines": 679,
+      "sha256": "334b334adf92a1418c33ad91e0973b17434fc4a21231f943eb8135785089650f"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/MechanicalPairedHarnessPreflightTests.cs",
+      "bytes": 1987,
+      "lines": 55,
+      "sha256": "53838f80100a1005a321a9f9398de8c47f306e8a261443150d2a069ecaa4516a"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/ProcessTreeSnapshotTests.cs",
+      "bytes": 2366,
+      "lines": 67,
+      "sha256": "24863cf6c1ae2e2ccf6f2eccb5724e74a01cdd6e5c4f9e98919cd48932630a40"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/PublicDerivativeMechanicalDrainConversationTests.cs",
+      "bytes": 7341,
+      "lines": 187,
+      "sha256": "2f8326bd0a4abc0ea4f81fd0b08e5416dfdc97fc6f3e3417a048c0d2e9494c3a"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/PublicDerivativeMechanicalFixtureCompilerTests.cs",
+      "bytes": 7515,
+      "lines": 188,
+      "sha256": "03d6297d62eb6d3c631d1e21e195434434f7a9c3e192f687da2a6a12bb99f6bc"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/RideBound.Benchmarking.Tests.csproj",
+      "bytes": 1906,
+      "lines": 50,
+      "sha256": "c367412a91a8687d481560a2007634f06b3dfccbf5ac878afb7ae972a65854cf"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/SafeZipExtractorTests.cs",
+      "bytes": 14375,
+      "lines": 350,
+      "sha256": "cc82f3d04ac89261cefd2ec1e96af78292866c406600fbd1e99ecbad32e64a2f"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/StrictBagItBundleTests.cs",
+      "bytes": 37729,
+      "lines": 859,
+      "sha256": "f14ad317d324ee94e18ff9fc5376bdaa2a032cedde80ce966487a4d202426f53"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/StrictBundleTestFixture.cs",
+      "bytes": 29972,
+      "lines": 737,
+      "sha256": "ccfa173c37c22a2c45def02ff6b35c66b1cb192253ea26625bc14f65cd45b421"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/TestDirectory.cs",
+      "bytes": 985,
+      "lines": 39,
+      "sha256": "b84eb136dba4a1706e992124b13fe981e5966c0811972255f0378f93060dbeda"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/TinyPairedHarnessProcessTests.cs",
+      "bytes": 6161,
+      "lines": 149,
+      "sha256": "2d3f3931b1e6b10b9017e172da65ddb853cd2b62600a6e955c63e799018f87a7"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/TinyProtocolFixtureCompilerTests.cs",
+      "bytes": 3416,
+      "lines": 81,
+      "sha256": "fdcc375676109b4485ab44bc5ba4d22aa97ed68eaa4e8804428a6ffeab2cad62"
+    },
+    {
+      "path": "tests/RideBound.Benchmarking.Tests/Wp6SourceAuditTests.cs",
+      "bytes": 4084,
+      "lines": 119,
+      "sha256": "e6e5cbd229ae59e0c50dc7a1f7d7e6e0cb4cd550cbe16f064965722c5e45cb70"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Fixtures/FixtureLoader.cs",
+      "bytes": 3186,
+      "lines": 97,
+      "sha256": "0ec03e5894995d9ac4a08be5e7064fd6fc3ee3c250e9375dc13fbc8d6c1a3f83"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Fixtures/FixtureLoaderTests.cs",
+      "bytes": 1711,
+      "lines": 48,
+      "sha256": "70f7987d2cd34d7ca805b0262fd1f420226cb47af7cce376dc8614004ea6bb4c"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/CheckpointMessageTests.cs",
+      "bytes": 2378,
+      "lines": 66,
+      "sha256": "86f8c498c7c856aec08749c318d3407c354305759de1962710b2ec4ef58e426d"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/EventDecisionMessageTests.cs",
+      "bytes": 28519,
+      "lines": 767,
+      "sha256": "d575c1bb448e66184f8994e37c82fff56b17d175ed8bf7949e29087e9f8386a2"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/GoldenFixtureTests.cs",
+      "bytes": 4378,
+      "lines": 122,
+      "sha256": "84c986c5b330197de6ad5ad79c84f1caaaedb72845d95597c26d0db76fee2166"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/HelloMessageTests.cs",
+      "bytes": 4982,
+      "lines": 136,
+      "sha256": "404533abc525e388c92f8ff314e4184e078a1717bb4cf77508ea9c043843e45f"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/InitializeRunMessageTests.cs",
+      "bytes": 5062,
+      "lines": 127,
+      "sha256": "6b44d30cee5567e88ac02413cdd67a9d68d3285f57f1f14e9f098a73bc2e104a"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/OnlineEventContractTests.cs",
+      "bytes": 8104,
+      "lines": 215,
+      "sha256": "249c0a3fea6ba498de4ebc8687d34aee83bf5083958ee957dad9eceb4b9ab670"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/ProtocolEnvelopeTests.cs",
+      "bytes": 5540,
+      "lines": 140,
+      "sha256": "f6725a04438c2c72fd95aa2eee2faac50a4df397c6e6e9c81fe444570cc44dda"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/ProtocolPrimitiveTests.cs",
+      "bytes": 1919,
+      "lines": 67,
+      "sha256": "0d3bb9d53ab88a1571a6f7d14bf4374456620d84dad2d6ff416aa36331c79242"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/ProtocolVersionCompatibilityTests.cs",
+      "bytes": 5909,
+      "lines": 157,
+      "sha256": "d329ed2ad6201c393992eeeeaebf01102c6016cf19a96362d638649193f22ffc"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/SchemaAssetTests.cs",
+      "bytes": 14402,
+      "lines": 361,
+      "sha256": "8dd76d3a8a1e3abd4c64e4036f52e68a1c4ad3dcd3dcf4dff3342b6f2321aa0c"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Protocol/Wp4PolicyConfigurationBindingTests.cs",
+      "bytes": 2349,
+      "lines": 43,
+      "sha256": "ab3eace9d0aebc9252836601892d287d1e5145bb55abd573ad835ef183697f95"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/RideBound.Contracts.Tests.csproj",
+      "bytes": 1026,
+      "lines": 32,
+      "sha256": "af11466c2109f2a01ec6e2d9371f9681b60f11503e89bc58df3dcdeb45a8a12e"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Serialization/CanonicalJsonTests.cs",
+      "bytes": 4995,
+      "lines": 142,
+      "sha256": "90cf6274e31bbd5b008212ea82c86aa610a4b829df9f366ad60f9612c56d4efe"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Serialization/CanonicalUnitTests.cs",
+      "bytes": 2672,
+      "lines": 79,
+      "sha256": "9f1c3940c00d3b53ee4f2d097c046af42a83ff3e55792a05062c6c0623f604ba"
+    },
+    {
+      "path": "tests/RideBound.Contracts.Tests/Serialization/ProtocolHashTests.cs",
+      "bytes": 3581,
+      "lines": 107,
+      "sha256": "8f646c8c77495160901ca9d0cfb3271e79930b213d4fba74b1804ff6c2d0fa70"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/AssemblySmokeTests.cs",
+      "bytes": 263,
+      "lines": 12,
+      "sha256": "b640e83b426a82d015e8aaf7523d706626148a18c2d7c5132fbfe65886ed79ee"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Commitments/CommitmentBudgetEvaluatorTests.cs",
+      "bytes": 5073,
+      "lines": 145,
+      "sha256": "cd40b0b56c78d255a6b9aed2701e707e674cd07a59f6805c80fdd28bfce1d479"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Commitments/CommitmentLedgerTests.cs",
+      "bytes": 10054,
+      "lines": 300,
+      "sha256": "60159cee74d633082993b59c9f71a632f70afe33fecffbdb2ddd27eaa66077d6"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Commitments/CommitmentLockEvaluatorTests.cs",
+      "bytes": 4479,
+      "lines": 132,
+      "sha256": "d08c154b155a3b6d19eaf4071679a986de0405557d5c23e1e33a18c773a161ed"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Commitments/CommitmentPolicyTests.cs",
+      "bytes": 1771,
+      "lines": 56,
+      "sha256": "58a4593919943ab549fcabc6ddd2daba2ce5134c011bab18b6a413427029b19d"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Commitments/CommitmentRatchetLockTests.cs",
+      "bytes": 5368,
+      "lines": 145,
+      "sha256": "aca104a5868c16a9dde2b7236628d1e08a777cbc946c3822002306ef9a25c255"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Commitments/CommitmentTestData.cs",
+      "bytes": 2523,
+      "lines": 81,
+      "sha256": "7076116a7d4832a865a6fc5bfb759d2c1514cd057050c873fe574cb83a6e0835"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Commitments/CommitmentVectorTests.cs",
+      "bytes": 1221,
+      "lines": 48,
+      "sha256": "0cfb1ec92fbb872575d1dd52e0f8b5fc8491d48901ed21ff7d995a70139b81f3"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Commitments/RiderPromiseTests.cs",
+      "bytes": 1508,
+      "lines": 45,
+      "sha256": "e035f658afeb9e98a793b199ca68493f11a29b4037f32016e81b54c420b6adef"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Incidents/OperationalIncidentLedgerTests.cs",
+      "bytes": 8889,
+      "lines": 260,
+      "sha256": "e6bdd2bfa3cdb82a3382ea536482deea20e83a9c4345a0890816ab4f75fda83a"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Requests/RequestLifecycleTests.cs",
+      "bytes": 5328,
+      "lines": 150,
+      "sha256": "748edb6204430fbf23cdd38c3b4feeaaa6a0cf80148cc0f1a63271444db6bcae"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/RideBound.Domain.Tests.csproj",
+      "bytes": 728,
+      "lines": 25,
+      "sha256": "f5009e479890ebcfe7cbcb3eb43d300e382fad49c906bdd95415ac00efd381c3"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Routes/RoutePlanTests.cs",
+      "bytes": 4945,
+      "lines": 140,
+      "sha256": "97edff3f3b098d0c2e31d0fc98fcd817efb5a1fc1ff2bd3f1e37493768804630"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Runs/RideBoundRunTests.cs",
+      "bytes": 5545,
+      "lines": 149,
+      "sha256": "70281d5b2811484ef1fe640d173a7dfe301df73df9779cc26230ff4f85608ac6"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/TestData.cs",
+      "bytes": 3085,
+      "lines": 104,
+      "sha256": "67813129cd409f9e06776514bf19cf596626f65384fe75bb9cbb4e0a608d5e91"
+    },
+    {
+      "path": "tests/RideBound.Domain.Tests/Validation/PhysicalPlanValidatorTests.cs",
+      "bytes": 22639,
+      "lines": 674,
+      "sha256": "a8013fdda64d62bc3c01bf302349b7472a7588ba05abefaecf04a22b5947f69b"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Configuration/CommitmentPolicyConfigurationTests.cs",
+      "bytes": 3580,
+      "lines": 103,
+      "sha256": "a7fd265b83933033c06c099a45c0d4ff85f44587f785f585f13244a800565225"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Configuration/Wp14FactorConfigurationTests.cs",
+      "bytes": 6789,
+      "lines": 188,
+      "sha256": "39190a314e7aafdf29b25ea68ae888927a00f7d6a03a8bd9f0aa105d795e89e7"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Configuration/Wp4RunnerConfigurationTests.cs",
+      "bytes": 22278,
+      "lines": 564,
+      "sha256": "4b684f1c3d3eb5e0136f4100d030ce0de77e44ca5658bf210effbd294da6425f"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Online/CommitmentCheckpointProcessTests.cs",
+      "bytes": 4992,
+      "lines": 125,
+      "sha256": "35ac24ba9c32e20065a225a954e9e8bf8993b697d4289b7eb79bed3ce8d62ee4"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Online/CommitmentRunnerSessionTests.cs",
+      "bytes": 9251,
+      "lines": 243,
+      "sha256": "ae8d26b6f63a67471ea7f111237b79620cef251d99a8326317a957ff9447a18f"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Online/ExogenousServiceQualityBreachBridgeTests.cs",
+      "bytes": 5716,
+      "lines": 174,
+      "sha256": "4a80abb4c23f3a7ea9b2a84cf8c67609f04f97761b81e56efcc6622352683331"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Online/OnlineEventMapperTests.cs",
+      "bytes": 4041,
+      "lines": 105,
+      "sha256": "4fd2ec14d31c6aadbc57d88cf3fa3beb563ca42d1a07c85179b3c1824b707022"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Online/OnlineRunnerSessionTests.cs",
+      "bytes": 7689,
+      "lines": 199,
+      "sha256": "e81c530ad0fd85941470a1181ed35218bb88313727badf2b7844e00daa7c7f0a"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Online/OnlineStateCheckpointCodecTests.cs",
+      "bytes": 7782,
+      "lines": 218,
+      "sha256": "47a5f922bda798a743c734c3899bbf35c4aa0a63204e7e6886d6f85e488bc262"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Online/PlanPoolCheckpointTests.cs",
+      "bytes": 8174,
+      "lines": 241,
+      "sha256": "f5e34cc37f1f4b0defa4fb02c3a60693559d650f6e5878bbdeb9ae12cb551e8d"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Online/Wp2TinyDemoTests.cs",
+      "bytes": 7236,
+      "lines": 198,
+      "sha256": "712d3cb791d8043c7aa94b19e89e8beb92e0948db0304161faf230ec5bc907b1"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Online/Wp4RunnerIntegrationTests.cs",
+      "bytes": 33946,
+      "lines": 823,
+      "sha256": "0fb56ddde86c4d1db548ffa7baa9cf35e074f34a9f54c9caef4fbb87370fb750"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Protocol/CapabilityNegotiatorTests.cs",
+      "bytes": 5615,
+      "lines": 154,
+      "sha256": "5b82072e534ebdb8834a577fad32a57dcefe30b76075abf22866c0e47006d4cc"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Protocol/InitializeRunValidatorTests.cs",
+      "bytes": 6431,
+      "lines": 189,
+      "sha256": "89500316e37501ff629907abea89e09fc6062e33630b54aa42a7c7dbe067d81a"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Protocol/NdjsonTransportTests.cs",
+      "bytes": 4944,
+      "lines": 153,
+      "sha256": "001c6d63ffe941906c10c910b89a0c871e12198a06e0a1a12e8190f623ef78a9"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Protocol/RunnerEndToEndTests.cs",
+      "bytes": 9072,
+      "lines": 245,
+      "sha256": "6cf30d74a1820da4d7094a5ce16d900ae09336dff6b2cfad105fe521b3d32e0b"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/Protocol/RunnerSessionTests.cs",
+      "bytes": 13463,
+      "lines": 349,
+      "sha256": "3ae7cffff0ca9b7d956a8e15b0a361065d56519c98d05ad400f59858e611dd81"
+    },
+    {
+      "path": "tests/RideBound.Runner.Tests/RideBound.Runner.Tests.csproj",
+      "bytes": 1268,
+      "lines": 39,
+      "sha256": "92f1f319933f5c9e8b76b6dcfe76be8b5c62f9ab0fb533fe97806303a0690cec"
+    },
+    {
+      "path": "tests/RideBound.Solvers.OrTools.Tests/OrToolsCandidateSelectionSolverTests.cs",
+      "bytes": 11596,
+      "lines": 301,
+      "sha256": "c7afca8ee1dc174f0dc3323f672d193450edee2808d45a08715a2aa9949acf62"
+    },
+    {
+      "path": "tests/RideBound.Solvers.OrTools.Tests/OrToolsConstantLevelSkipTests.cs",
+      "bytes": 9895,
+      "lines": 246,
+      "sha256": "991ae3a0682c8c8e8e29418efd3082092f039c920645690916953fae96d82f0d"
+    },
+    {
+      "path": "tests/RideBound.Solvers.OrTools.Tests/OrToolsPolicyDifferentialTests.cs",
+      "bytes": 12582,
+      "lines": 349,
+      "sha256": "8b5137db88fd5a1f7bc19297db246e45b37cf914d7b55ea5d95d8679918ac809"
+    },
+    {
+      "path": "tests/RideBound.Solvers.OrTools.Tests/RideBound.Solvers.OrTools.Tests.csproj",
+      "bytes": 1062,
+      "lines": 29,
+      "sha256": "d915aea7ef6b4e9948ee54e2b624fbc3349125e79dd04ebc0868f416a732d9a5"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/actual_fleetcontrol_lifecycle_matrix.py",
+      "bytes": 8879,
+      "lines": 241,
+      "sha256": "09241666a2a16af18b141aad96c75a4ba3c53e65b15cacc8a96b08404bbc9188"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/actual_fleetcontrol_preflight.py",
+      "bytes": 12463,
+      "lines": 336,
+      "sha256": "2183365a10be3306caa4a1432bf2502e06e517cd76d67947ded1a8555dd4f92c"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/actual_fleetpy_clock_preflight.py",
+      "bytes": 10650,
+      "lines": 257,
+      "sha256": "8f42e988f4dbc63e72844a7d4b602118d1170ddf8cced6209b53f2b0d648b266"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/actual_fleetpy_medium_preflight.py",
+      "bytes": 36589,
+      "lines": 958,
+      "sha256": "48f346c971db21b99c8c916091f9877cfe12094e60bc18dddef57dd9f04a52c1"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/actual_fleetpy_medium_verify.py",
+      "bytes": 53798,
+      "lines": 1399,
+      "sha256": "89a9e9a797e7d7f004490bff3bc37da14cd792c14ff60513873ed51b96c06a17"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/actual_runner_preflight.py",
+      "bytes": 11442,
+      "lines": 317,
+      "sha256": "cd3eb6fa3b2526fedc0da2c5cfe1235a9617390dc53eef6fae820abf7e1ed9a3"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/capability_probe.py",
+      "bytes": 9042,
+      "lines": 247,
+      "sha256": "41dd929b63eccc3705f4c7eaeb43dbe6f25b993bbd4569972af6a9d3e7c360e0"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/dev/__init__.py",
+      "bytes": 63,
+      "lines": 1,
+      "sha256": "3d131054d255f5ea63c43e62beaffa0519051c499c7f3381d1b938bd32c653cc"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/dev/misc/__init__.py",
+      "bytes": 62,
+      "lines": 1,
+      "sha256": "f6574318d9a8eec95a3ec840dd8fbb8beb59fab32faacf681adae590a71305a6"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/dev/misc/init_modules.py",
+      "bytes": 835,
+      "lines": 54,
+      "sha256": "d2ff06a7ad2c176e0ccae948ee2fa880bfad9fd48d1e9a29aaa0af3a106df554"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/environment.lock.yml",
+      "bytes": 2803,
+      "lines": 103,
+      "sha256": "1831376d6d1df7f365f576dfa03f5a2da9506f90b22b9cf8a74e61be542e62b2"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/ridebound_fleetpy/__init__.py",
+      "bytes": 829,
+      "lines": 30,
+      "sha256": "1599ca17b241741d3be329844bc7b61e8e919e587a38be17bbe268bf30e1cad1"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/ridebound_fleetpy/errors.py",
+      "bytes": 359,
+      "lines": 12,
+      "sha256": "1893c76b8fdc3c6b1d0e8128078dd1a1231394fc67e85fa15571a03dacc7f304"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/ridebound_fleetpy/fleet_control.py",
+      "bytes": 48138,
+      "lines": 1130,
+      "sha256": "bbe7e373d0f7aece2f06c1bf6dddacba654ab720c7c63a3a67ec4d6596349713"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/ridebound_fleetpy/mapping.py",
+      "bytes": 16182,
+      "lines": 346,
+      "sha256": "78ce8819867c0f5535033ca045a25a6ac5bce34c55ed1fbbc885d0c9b37128b1"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/ridebound_fleetpy/protocol.py",
+      "bytes": 14858,
+      "lines": 414,
+      "sha256": "0e6218ebd9fc37b693616afc76be3df3ec11e8ecb6bd0ed1af7f4c059da24b4f"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/ridebound_fleetpy/runner_client.py",
+      "bytes": 23688,
+      "lines": 551,
+      "sha256": "961f899d44ae9335ef3dc6ec6bcf0c52f65e6d4f4691513b2d700a22a39acd74"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/ridebound_fleetpy/session.py",
+      "bytes": 22196,
+      "lines": 565,
+      "sha256": "ef4db8d25fab83df476ceed41ab47f6e770bad4c47e571237bfeec41cb0deebb"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/ridebound_fleetpy/transcript.py",
+      "bytes": 2491,
+      "lines": 74,
+      "sha256": "05ee5883271d35d86dade0ce04adc3783c94c67828c1efae48f510691d135639"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/fixtures/fake_runner.py",
+      "bytes": 3359,
+      "lines": 101,
+      "sha256": "a330b3de1d36225ccb188360ab9831fd020480f955dc28aa56204f42685249a7"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_capability_probe.py",
+      "bytes": 3138,
+      "lines": 79,
+      "sha256": "a520c4e545741a481b98ca2b4389517989f4f0fd3bfcb8b75a5284e160c0a69b"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_fleet_control.py",
+      "bytes": 17172,
+      "lines": 450,
+      "sha256": "65fe2fd1b9ec9ecc1f027323a4df4939549aee654621439caba717f8e27fae7c"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_mapping.py",
+      "bytes": 11434,
+      "lines": 249,
+      "sha256": "8f0c12360b79fec9721b530e0fa425c6d2f2d3e9dbdcbf44f2811cf7fd65bbcf"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_medium_verifier.py",
+      "bytes": 22146,
+      "lines": 646,
+      "sha256": "e38c463951d568a99f4f8c62b5a75db3e6ebde154addd1ee7cd5b8a68ce4eac8"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_protocol.py",
+      "bytes": 6921,
+      "lines": 197,
+      "sha256": "d9cfe2bcde248bf4af4f845cb07d0033f7af39ef6d462fd65554931b8345f104"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_runner_client.py",
+      "bytes": 11660,
+      "lines": 300,
+      "sha256": "09fe661abd5f91ce35cb93234eb314799e2f71afdc6ca4b0225c8f226ceccabf"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_behavioral_comparator.py",
+      "bytes": 10518,
+      "lines": 273,
+      "sha256": "6b297755e36bd8937f5e72af8b145676a654da0f76d042d7f30092102e69938f"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_closure_decision.py",
+      "bytes": 4253,
+      "lines": 128,
+      "sha256": "2fcf68a0e0d6dd2662aa07f3608342f0184cc54b6aac077ba4c90227c1f17738"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_e1_candidate_aggregate.py",
+      "bytes": 7381,
+      "lines": 204,
+      "sha256": "de13c824babf7b96905bf49fec93bae4654cf095cf5ea14db9818fce5bf6163d"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_e1_falsify.py",
+      "bytes": 3954,
+      "lines": 109,
+      "sha256": "24eb3510d0ca02c1fa09f8c2fa3d19efe29ba03c52e174d4d2a6c3fae13d5adb"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_e1_freeze.py",
+      "bytes": 9252,
+      "lines": 253,
+      "sha256": "3e3523dd8af867385e3ac1d6fc4547cddc2583ff9a170e2fbe9d9dc4236d4eee"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_e1_h6_equivalence.py",
+      "bytes": 1805,
+      "lines": 60,
+      "sha256": "65353324cbbfb5541365893fa356fcaf30073e98f6d178fadab1e2d3e9f3f3ae"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_e1_inventory.py",
+      "bytes": 2807,
+      "lines": 85,
+      "sha256": "39aa08d434f470f8b354812382260f9cf6ef51ecb1b338066a2acb9251d4e3ad"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_e1_source_divergence.py",
+      "bytes": 3424,
+      "lines": 91,
+      "sha256": "e82092debc9c2c5589aa4e1005f6fc2f3d88c5de6de3de23ca12be78b0ab5741"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_first_divergence_records.py",
+      "bytes": 10695,
+      "lines": 283,
+      "sha256": "ea820344011e932e22840d2d039f1ce5642251a0df1f8c1178c5d24521d7e6e2"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_full_audit.py",
+      "bytes": 5808,
+      "lines": 155,
+      "sha256": "e2e4933e1189527c000499d60c4e3b0e84fc63b0aa80ce4516395ea64e184626"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_h6_evidence_inventory.py",
+      "bytes": 12774,
+      "lines": 335,
+      "sha256": "98cc5208a0270ff18cdd6fd953450ebda33f9e1e6300e73a79150e36441caf99"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_mechanism_classify.py",
+      "bytes": 8196,
+      "lines": 221,
+      "sha256": "a156184b61d3cde19b18d81840984913a5153fc6712f3124b9495c0ff2cffffc"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_option_set_sufficiency.py",
+      "bytes": 11922,
+      "lines": 332,
+      "sha256": "db90f4c03781728d2882af6ca265633950d134e06b8ce7c3b01d97f860d926c5"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_recorded_witness_relaxation.py",
+      "bytes": 9048,
+      "lines": 263,
+      "sha256": "f7bf7f98b7d7e8c8e77b83f34cc385819b00b3a3601973fdc9dea09bcdc55f92"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp13_runner_retained_candidate_portfolio_schema.py",
+      "bytes": 5104,
+      "lines": 157,
+      "sha256": "2f0d94bf643390d0c97169bf0885dc2312cc0ae50b3df03297c9e3c17ea983a7"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14_development_panel_audit.py",
+      "bytes": 4072,
+      "lines": 101,
+      "sha256": "4f4b4386760f2608f4322c6392c79cfd588e6ac16b7eb9a318259e09ae07131c"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14_freeze.py",
+      "bytes": 7331,
+      "lines": 196,
+      "sha256": "5ad73d6a25e6a9db2a167b90e9c6bd2e2ceb648d43b8a19c8722011fee6cdc0a"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14_freeze_v2.py",
+      "bytes": 9171,
+      "lines": 233,
+      "sha256": "a86b1c94ded0d6949e8ec1f3f61049edefbfe47a8f2a053240a6603fc53a82ee"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14_frontier_analyze.py",
+      "bytes": 8694,
+      "lines": 245,
+      "sha256": "da423fad6fbadddf4b8074a17fdb887444d66a2531afcc6c0a10f50cc3e37482"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14_mechanism_probe.py",
+      "bytes": 9826,
+      "lines": 265,
+      "sha256": "820faa14d87f4f672a9c02821f212413d3a2e9ead73c56b6891012ae627897d2"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14_run_matrix.py",
+      "bytes": 8799,
+      "lines": 214,
+      "sha256": "105a92468a64a766e9f219220fdc6500a3a675a4083bf410477a38cd99733284"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_attempt_ledger.py",
+      "bytes": 12041,
+      "lines": 312,
+      "sha256": "04407a4f26ef4a1a0eff0430c61485e96076aa9b2d0d32bbce672bb7e4072319"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_fault_recovery.py",
+      "bytes": 17223,
+      "lines": 455,
+      "sha256": "acc8ba74c82bcd28c411b0d585424e1f4bd4bb3c5292c5d5dd5c66fb80cbdffd"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_freeze_v2.py",
+      "bytes": 8267,
+      "lines": 203,
+      "sha256": "64c47dc07fd5ced8fa9c6b7c958017d4f80ce6b6b01023f84549248df3ba4860"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_freeze_v3.py",
+      "bytes": 8517,
+      "lines": 181,
+      "sha256": "1aba14ad73a5651cfd2ed8bc625a95597fad6084e6dab127e50f9b927a511308"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_freeze_v4.py",
+      "bytes": 6336,
+      "lines": 154,
+      "sha256": "d57c46c286bb1085bb6bb50a94e83c094b18ef33206dc2955a81b7d1d4018c12"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_freeze_v5.py",
+      "bytes": 6754,
+      "lines": 158,
+      "sha256": "f1748bfc50a9782f8a6afde3200dbc2c59a974eb2a2bb639ef0fa309d7faf153"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_freeze_v6.py",
+      "bytes": 6161,
+      "lines": 148,
+      "sha256": "f3dca35c2bb849f2b540fea94f3e199f690c6e37357d0798ec8119123c18cbee"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_host_preflight.py",
+      "bytes": 6578,
+      "lines": 207,
+      "sha256": "ccb1cbaa495a8a0a01dd1d1db73335af0865c1be0a5672a0921574091f99bc38"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_independent_mutation.py",
+      "bytes": 4873,
+      "lines": 139,
+      "sha256": "c9f13d32ee7b556da67eb53342325588d9423f777b2a5f2e6a1498a570ef09d3"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_independent_verify.py",
+      "bytes": 22747,
+      "lines": 595,
+      "sha256": "82ac23488a21ccaaf8d7d5de412d2556d8c2e149ac4d14c61c8e1ecee94ed337"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_matrix_driver.py",
+      "bytes": 6478,
+      "lines": 173,
+      "sha256": "6f8df7fa8ae47d81ef2e346b38a7dcbae5ad67d1e69239e361b67c0a6f48be2e"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_promise_direction.py",
+      "bytes": 7019,
+      "lines": 170,
+      "sha256": "1b9b37d476eddf083a3898f10a119c7dbfa075ca29e05caf30913c408deae7d6"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_resource_dimension.py",
+      "bytes": 10192,
+      "lines": 272,
+      "sha256": "df21581b13de70e3d90250f7f9a43e21e909813d43dc7132d50e9e58b5e776bb"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_scientific_protocol.py",
+      "bytes": 15852,
+      "lines": 483,
+      "sha256": "b816ff427289592b9fe5a65000b39906a56bad4a3d102bc81b80c18a6e9e78fe"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_slice_frontier.py",
+      "bytes": 5478,
+      "lines": 142,
+      "sha256": "73df26b987de8981cbd36951091cccbda51bfcee8352c5691d83bc21d171b0dc"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp14r_supervised_process.py",
+      "bytes": 17510,
+      "lines": 459,
+      "sha256": "6aff2e2f2e2f60c4223837b25243b644d905772e38e8e4d441decb7cc92b6398"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp9_fixed_panel_analyze.py",
+      "bytes": 12018,
+      "lines": 308,
+      "sha256": "3555e7da58e102cfd3d3a78607863df830a65163dd1934293a7fac9f10e54751"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp9_freeze_v6.py",
+      "bytes": 8520,
+      "lines": 212,
+      "sha256": "8f3ad00579b3376f01cc0d1296af79c675c7a6099c60144478175cb75ecf6b2b"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp9_freeze_verify.py",
+      "bytes": 1773,
+      "lines": 51,
+      "sha256": "93acd58cbf340359a8148f31218a725097aba5f14bbebb8add8c97daa83886d6"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp9_reproducibility_verify.py",
+      "bytes": 2632,
+      "lines": 73,
+      "sha256": "1b5c46b19df8a89892fad88b54a923f358d7963712158a0d74a9963ce4e7e4e3"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp9_robustness_analyze.py",
+      "bytes": 3434,
+      "lines": 101,
+      "sha256": "b7b80b574b619b3998b49efe7af752d70593c83282fa0b6f8bcacceb1c3c2483"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/tests/test_wp9_run_matrix.py",
+      "bytes": 5157,
+      "lines": 136,
+      "sha256": "778ef4cb6fc5b24bc5e8672857bf41ee3423dd5e202d3b48cbdd5904a32a84ea"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_behavioral_comparator.py",
+      "bytes": 23184,
+      "lines": 615,
+      "sha256": "f2c55e1f7fbe9cb341cb6c75764a192254aa2e375de0547780c94c83b01dd0ee"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_e1_candidate_aggregate.py",
+      "bytes": 33453,
+      "lines": 882,
+      "sha256": "d938d3d70287b033a91fa373b8271d3fb7e566cf242bc9d998c5ebc0b7b7a906"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_e1_falsify.py",
+      "bytes": 29088,
+      "lines": 871,
+      "sha256": "32cb0738e824be29ae6aecea0267f99296c3297501435a8ba8f20d689d9cd175"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_e1_freeze.py",
+      "bytes": 19923,
+      "lines": 574,
+      "sha256": "66416924bb6d65fe1e97a9f54570c725277b5b1ac0b433cc0343bb5880161a1a"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_e1_h6_equivalence.py",
+      "bytes": 7737,
+      "lines": 218,
+      "sha256": "67ff0d603eebc7857d4b2d970ff5d154276f819c8df09e66c2087accdddff097"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_e1_inventory.py",
+      "bytes": 10897,
+      "lines": 277,
+      "sha256": "aa58475c6519907c0a819a74467ee642b94a444a994b82e04916ccf7b0b732cf"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_e1_run_matrix.py",
+      "bytes": 12476,
+      "lines": 363,
+      "sha256": "2fbc17ea5f1c529096f8b2d6c2b83616c84644261eae19a0f17a16a1a249c030"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_first_divergence_records.py",
+      "bytes": 19515,
+      "lines": 541,
+      "sha256": "4f52b76baa3f34b16975a57abb1acb44901e2adcd7afc507f95b5ae4987f74f8"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_full_audit.py",
+      "bytes": 45349,
+      "lines": 1168,
+      "sha256": "3103585ac126ce79b47441a08c4dab0ef36390c1a46209943897bc9aecb380ad"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_h6_evidence_inventory.py",
+      "bytes": 31907,
+      "lines": 864,
+      "sha256": "0563ef2495550345c587ddbe07cf47a0ff88c38bf2b618dae6723c881ab1ab3b"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_mechanism_classify.py",
+      "bytes": 14712,
+      "lines": 406,
+      "sha256": "bf11f7e131f20483b1a1e78eaabdc1357e8b319d6be8800a86039612c1c8b14a"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_option_set_sufficiency.py",
+      "bytes": 36953,
+      "lines": 1011,
+      "sha256": "85cf42e99fedfc6ac22b97961b6d0a3b4c219a21ab7fdf9f922ec7f06555eb75"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp13_recorded_witness_relaxation.py",
+      "bytes": 20837,
+      "lines": 508,
+      "sha256": "1ee0abdc060c8cd2d51a3ea6c1331dd059cb8a5b471fa3df6747e3ec61a5acff"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14_development_panel_audit.py",
+      "bytes": 7019,
+      "lines": 206,
+      "sha256": "340062f412d999a62fe1f8b6a8b2938f3ae129ff66fd6b4cf0581e9b3af325a5"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14_freeze.py",
+      "bytes": 24681,
+      "lines": 653,
+      "sha256": "a31a93e5798bb7dadbf4da033da34705594e9c0ac7047b4805f06419a8670f1d"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14_freeze_v2.py",
+      "bytes": 26537,
+      "lines": 672,
+      "sha256": "728510dfa9b084ed8585e64b4fb71bc9effc17b3505226561f338da5d8390971"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14_frontier_analyze.py",
+      "bytes": 21924,
+      "lines": 570,
+      "sha256": "ea5c12539d6c12899b99c7459da066e3533b78baefe0ec43c55037844fba6d0e"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14_mechanism_probe.py",
+      "bytes": 14800,
+      "lines": 353,
+      "sha256": "3c1b91f9ae425525034765ea6513f720208ea0dfb98d0e1f1ac17d4fd8664d2c"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14_run_matrix.py",
+      "bytes": 18881,
+      "lines": 513,
+      "sha256": "9b999a6e19cbd0a0a61f9be2034077a20e5c231da1763a1775658956db6036ac"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_attempt_ledger.py",
+      "bytes": 34491,
+      "lines": 924,
+      "sha256": "917f991e9fc42a467dc82f5774a4f517911002473c891b81dcf1930faea5eab9"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_fault_injection.py",
+      "bytes": 13976,
+      "lines": 413,
+      "sha256": "dca365f12f9b5db6ef33fb4c2e3d8a562caa6a70f833db29db4ee89f3ec8d0a3"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_freeze_v2.py",
+      "bytes": 21362,
+      "lines": 575,
+      "sha256": "7c8deae5b23113df1ea0dc21009aa28fc029c04c56f86c35dacd7001c0bb165d"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_freeze_v3.py",
+      "bytes": 24183,
+      "lines": 618,
+      "sha256": "ec2861e7beb7f6f373a70a88efde7e090475cc6e72752ba94ed4351834e6a400"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_freeze_v4.py",
+      "bytes": 25019,
+      "lines": 633,
+      "sha256": "168b2e688b89a01854be413bc1e9b386da4141159983a34e4961eabadf8c49a5"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_freeze_v5.py",
+      "bytes": 24600,
+      "lines": 634,
+      "sha256": "3291bf4be62206b5930a0d8a02d551793802225248d2adcd119f7220c9078963"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_freeze_v6.py",
+      "bytes": 24195,
+      "lines": 638,
+      "sha256": "67feb74c30db5a714ee7168ca0ee471b5900d2917a087ff8c3ce35a911933b96"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_host_preflight.py",
+      "bytes": 13962,
+      "lines": 462,
+      "sha256": "06dccbcc3daa01aff7a527f9a3c6786e5161513275dcef5be21419890149305a"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_independent_fixture.py",
+      "bytes": 13063,
+      "lines": 428,
+      "sha256": "e0f44b94799074fe3c949226adf4eedc1e9efa93313b98154fc50bfe24933dd1"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_independent_mutation.py",
+      "bytes": 21143,
+      "lines": 644,
+      "sha256": "4d4e662c323b443eeecb669b64f9d4ca63a07a23fe5969bb8a2d351b2b80522a"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_independent_verify.py",
+      "bytes": 52219,
+      "lines": 1403,
+      "sha256": "356a40477d1d055987aaa0109e18493ee81afedddf382baac28ccf69b68a6587"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_matrix_driver.py",
+      "bytes": 9297,
+      "lines": 251,
+      "sha256": "1c4d85fce14a1cbda3af68aa805da544c857e4997ffa5588ad8c95ee43e51e8b"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_promise_direction.py",
+      "bytes": 9565,
+      "lines": 254,
+      "sha256": "2383679485f37e5f0c27857924a7e81738b5c22e4d74a93dda2eb2810dd3951f"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_resource_dimension.py",
+      "bytes": 33732,
+      "lines": 1020,
+      "sha256": "57e08ea42222b8a8d8c21003575d03a5c34e3e227d273d9dde88a3e8a4cb442e"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_scientific_protocol.py",
+      "bytes": 45391,
+      "lines": 1379,
+      "sha256": "3e9839b8bcbc59c7b1962173dbc3ab0b4bddd0933387327884c7159046d474a3"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_slice_frontier.py",
+      "bytes": 14689,
+      "lines": 405,
+      "sha256": "c7702717c0d400e790d289b12b484cb5d8637bfc1ca08fcc939f46f2d7195378"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_stale_open_recovery.py",
+      "bytes": 18620,
+      "lines": 520,
+      "sha256": "90a33f7146695e655083d17b0f6749d00aec72f1dae04e6620b7212cb88a3504"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp14r_supervised_process.py",
+      "bytes": 52186,
+      "lines": 1414,
+      "sha256": "55999dc5184719cb7bcefab0e92c8f31929815fc1319366bde8865f0eed086e2"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp9_fixed_panel_analyze.py",
+      "bytes": 19288,
+      "lines": 483,
+      "sha256": "94d6b5c97d4011b528754d89e021bf3116b5257a21c8d526a4570d8739543f14"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp9_freeze_v6.py",
+      "bytes": 14800,
+      "lines": 365,
+      "sha256": "be9906140844075f46005647f94e0c7ed9ad932aa85ba45d2f6bef16f0ecf221"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp9_freeze_verify.py",
+      "bytes": 10928,
+      "lines": 278,
+      "sha256": "cb730d1997b115c6b20fbe4fb142cbdad0ab7bd495d9522c6a535f09e1b03726"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp9_reproducibility_verify.py",
+      "bytes": 23057,
+      "lines": 608,
+      "sha256": "2637c0124b7afa48854b3cec560685eb3ba3601b4d57f272e887873f585985b8"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp9_robustness_analyze.py",
+      "bytes": 9543,
+      "lines": 254,
+      "sha256": "6e0bb961329aa05e64d6408b854c53c7784ad95550c59a83be7e7036c2507bea"
+    },
+    {
+      "path": "simulators/fleetpy-ridebound/wp9_run_matrix.py",
+      "bytes": 17378,
+      "lines": 497,
+      "sha256": "870d8a0c22f53fa8035cca5f1090a3dbc0716b31ca630621dec04dd03405f0ce"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/ridebound_ridepy/__init__.py",
+      "bytes": 129,
+      "lines": 5,
+      "sha256": "4e2c5d904bccf440cbdfce2ba2a3b4786e93ab4e2c79924a9b9ba9322687e1ef"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/ridebound_ridepy/fleet_state.py",
+      "bytes": 23110,
+      "lines": 520,
+      "sha256": "892601d81dba6a5ea82bf31e67c070fdd3b3abf9fe5ec18219f0488ec4d0ebcb"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/ridebound_ridepy/mapping.py",
+      "bytes": 7645,
+      "lines": 170,
+      "sha256": "4cc6e82633d55efa914d78ea0e077b793df9dc7030764eb0d54efa05133e81f4"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/ridebound_ridepy/session.py",
+      "bytes": 7877,
+      "lines": 222,
+      "sha256": "94d375be3d0bff5812018487689695e3bfeff989b0aa4518d629ec95f5c916ba"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/tests/test_fleet_state.py",
+      "bytes": 7291,
+      "lines": 198,
+      "sha256": "507c8774885d37c80d58413111bf04e9ba4bd49349b1240e2166a58cf4f6e2f7"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/tests/test_mapping.py",
+      "bytes": 3463,
+      "lines": 92,
+      "sha256": "6fb8ff19260e2ae8dc278bae621293e1db5d7fcf535a520f4c61616e5e52a7ff"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/tests/test_wp10_source_verify.py",
+      "bytes": 5537,
+      "lines": 144,
+      "sha256": "30010b8ca239d7695993fed2136d3266f14b205dd3a586cda6312b4eb13ac632"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/tests/test_wp10_subset_analyze.py",
+      "bytes": 2429,
+      "lines": 74,
+      "sha256": "e5c4b948749c3a927d6cb3ff6e3829847c95cd737dad17ccfd10cfd584e41e90"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/wp10_bundle_verify.py",
+      "bytes": 14761,
+      "lines": 293,
+      "sha256": "05514a5373864aa5bfa129e8494cfc13a6cb8fb345283e25e3466992f7c1f854"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/wp10_canonical_run.py",
+      "bytes": 9447,
+      "lines": 249,
+      "sha256": "a81e823bb85fb9d136e0c355d86edbc9bcfb8833d653c5c606c9bb2b7c12877e"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/wp10_source_verify.py",
+      "bytes": 8651,
+      "lines": 231,
+      "sha256": "616c48ae8a69a81f6abb435327828eaeab410b31ab0434b4e092a74232ce0596"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/wp10_subset_analyze.py",
+      "bytes": 24201,
+      "lines": 534,
+      "sha256": "d1b2a17af1d5772b16378a01ef421978bf17958295c615e6d0e7c137367feaf2"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/wp10_subset_execute.py",
+      "bytes": 11469,
+      "lines": 291,
+      "sha256": "976637084f639e52d693d394dc10ef09292bc272926d73b28effe8bbd335a01e"
+    },
+    {
+      "path": "simulators/ridepy-ridebound/wp10_subset_freeze.py",
+      "bytes": 3914,
+      "lines": 102,
+      "sha256": "3d9a60d50ade12a22e7a8cba4a6cb7cf65bb00be1caca610005a2faeb9575ad9"
+    },
+    {
+      "path": "tools/RideBound.CandidateHotPathBenchmark/Program.cs",
+      "bytes": 9992,
+      "lines": 319,
+      "sha256": "775bdd36f1223578f58a0c927bdff838b748c7b04c7845127af6a6282866ca65"
+    },
+    {
+      "path": "tools/RideBound.CandidateHotPathBenchmark/RideBound.CandidateHotPathBenchmark.csproj",
+      "bytes": 546,
+      "lines": 16,
+      "sha256": "3d19a9fb830bf2165d91b20bd7f48eae71ded09ad76abba04a73bc0c5a1f5cbd"
+    },
+    {
+      "path": "tools/RideBound.Wp4Microbenchmark/Program.cs",
+      "bytes": 6034,
+      "lines": 180,
+      "sha256": "49a42a84e819710ba8e081b52629abeede6e453c57d09824aa197e2fbaba4a43"
+    },
+    {
+      "path": "tools/RideBound.Wp4Microbenchmark/RideBound.Wp4Microbenchmark.csproj",
+      "bytes": 556,
+      "lines": 16,
+      "sha256": "045f627834d09e97e93e41560580c00f137bfcb41e6026f23a640d3ffababf2d"
+    },
+    {
+      "path": "tools/RideBound.Wp6BundleVerify/Program.cs",
+      "bytes": 3348,
+      "lines": 118,
+      "sha256": "44ea58ed6b6200459b80603fc5db595a32d60cf4a8bd4c798c534ce1589f41b4"
+    },
+    {
+      "path": "tools/RideBound.Wp6BundleVerify/RideBound.Wp6BundleVerify.csproj",
+      "bytes": 368,
+      "lines": 14,
+      "sha256": "3fcbdc34757e22b9847b6bd58c1581127d3c2959bae20c7259021a949abe7d49"
+    },
+    {
+      "path": "tools/RideBound.Wp6ContractVectors/Program.cs",
+      "bytes": 2175,
+      "lines": 66,
+      "sha256": "1fa58113c2a1c3ce1f8ddb39aac1646e8d050e9c4a0c1e73382c69d0f2c457d9"
+    },
+    {
+      "path": "tools/RideBound.Wp6ContractVectors/RideBound.Wp6ContractVectors.csproj",
+      "bytes": 388,
+      "lines": 14,
+      "sha256": "158ffee3ae2b4ce0494be1fd5f492746d092bcd631ffd4b8a3a109cb9f20de2e"
+    },
+    {
+      "path": "tools/RideBound.Wp6Dataset/Program.cs",
+      "bytes": 4904,
+      "lines": 165,
+      "sha256": "243472a02f4124d55c12ad141870051d37145f9e891d99dc93bad22dbcd619cb"
+    },
+    {
+      "path": "tools/RideBound.Wp6Dataset/RideBound.Wp6Dataset.csproj",
+      "bytes": 368,
+      "lines": 14,
+      "sha256": "3fcbdc34757e22b9847b6bd58c1581127d3c2959bae20c7259021a949abe7d49"
+    },
+    {
+      "path": "tools/RideBound.Wp6FakeChild/Program.cs",
+      "bytes": 3152,
+      "lines": 106,
+      "sha256": "ec53289a184d4a43768fd35eb082da4ddd328f867968f0cc85b1b2ac21771076"
+    },
+    {
+      "path": "tools/RideBound.Wp6FakeChild/RideBound.Wp6FakeChild.csproj",
+      "bytes": 240,
+      "lines": 10,
+      "sha256": "acd95014af5198a4b92c655ddd680cef3448692ea96fd8613b512fa321816cd9"
+    },
+    {
+      "path": "tools/RideBound.Wp6MediumHarness/Program.cs",
+      "bytes": 2658,
+      "lines": 81,
+      "sha256": "ccd7180315f83403c1d029e144dd6597a2753ca34023633f8fb85a0597d211dc"
+    },
+    {
+      "path": "tools/RideBound.Wp6MediumHarness/RideBound.Wp6MediumHarness.csproj",
+      "bytes": 744,
+      "lines": 17,
+      "sha256": "75483a964c2c31f7f365432a0f5e0abd4ed5040eae4516c4c202502fcbb6f638"
+    },
+    {
+      "path": "tools/RideBound.Wp6MetricOracle/DecisionInducedBurdenOracle.cs",
+      "bytes": 11479,
+      "lines": 329,
+      "sha256": "4d7f1b646a99bb4b320d29a01ab7405ad19bd5c872af69318f4ab4d74e747ec3"
+    },
+    {
+      "path": "tools/RideBound.Wp6MetricOracle/OracleCalculator.cs",
+      "bytes": 35519,
+      "lines": 1009,
+      "sha256": "c34bf5c7cad241b3826961b00ffa97b1949dfe26fd8d00a7575454a49227d4ed"
+    },
+    {
+      "path": "tools/RideBound.Wp6MetricOracle/OracleIdentity.cs",
+      "bytes": 2234,
+      "lines": 65,
+      "sha256": "b5beae87354648eea066384da99cd6fdcc625148660824fdf485c45696cd4485"
+    },
+    {
+      "path": "tools/RideBound.Wp6MetricOracle/OracleJson.cs",
+      "bytes": 8714,
+      "lines": 278,
+      "sha256": "cbff8522e0edd3006878cbf5c2a2cb38fc3d770f7684c8aada85e958d6ce9e5b"
+    },
+    {
+      "path": "tools/RideBound.Wp6MetricOracle/Program.cs",
+      "bytes": 3147,
+      "lines": 104,
+      "sha256": "e2b03fa21e25873eb7b263bde4ff2ed6f948ddb507c6783bd0beda3b68fd3b96"
+    },
+    {
+      "path": "tools/RideBound.Wp6MetricOracle/RideBound.Wp6MetricOracle.csproj",
+      "bytes": 240,
+      "lines": 10,
+      "sha256": "acd95014af5198a4b92c655ddd680cef3448692ea96fd8613b512fa321816cd9"
+    },
+    {
+      "path": "tools/RideBound.Wp6Normalize/Program.cs",
+      "bytes": 14268,
+      "lines": 414,
+      "sha256": "d380f5a230214ae3c22737ef6a264f26bdfc6a5130a9de52a22f36c08e562a23"
+    },
+    {
+      "path": "tools/RideBound.Wp6Normalize/RideBound.Wp6Normalize.csproj",
+      "bytes": 368,
+      "lines": 14,
+      "sha256": "3fcbdc34757e22b9847b6bd58c1581127d3c2959bae20c7259021a949abe7d49"
+    },
+    {
+      "path": "tools/RideBound.Wp6SeedVectors/Program.cs",
+      "bytes": 1030,
+      "lines": 36,
+      "sha256": "b64fb0be5dd9928f8e3c9dadfac46b381e8918f5bb6675c0dfb57dfdc48df733"
+    },
+    {
+      "path": "tools/RideBound.Wp6SeedVectors/RideBound.Wp6SeedVectors.csproj",
+      "bytes": 388,
+      "lines": 14,
+      "sha256": "158ffee3ae2b4ce0494be1fd5f492746d092bcd631ffd4b8a3a109cb9f20de2e"
+    },
+    {
+      "path": "tools/RideBound.Wp6TinyHarness/Program.cs",
+      "bytes": 2475,
+      "lines": 75,
+      "sha256": "3cf90d624ef94faae33ee8b39abdc0bb67fd06118b801df20747c4f866ea4fb5"
+    },
+    {
+      "path": "tools/RideBound.Wp6TinyHarness/RideBound.Wp6TinyHarness.csproj",
+      "bytes": 744,
+      "lines": 17,
+      "sha256": "75483a964c2c31f7f365432a0f5e0abd4ed5040eae4516c4c202502fcbb6f638"
+    },
+    {
+      "path": "tools/create_post_wp10_review_pdf.py",
+      "bytes": 33138,
+      "lines": 692,
+      "sha256": "a4446d6c5f0411e3028c9f91cbf6fd7d8049e81f1a021bd36bf23331fcaaf416"
+    },
+    {
+      "path": "scripts/run-wp2-tiny-demo.ps1",
+      "bytes": 3816,
+      "lines": 120,
+      "sha256": "6df5a99f8ee0067789fa07af2cc07a84a71faa7dc7725269b45fff59b25ef407"
+    },
+    {
+      "path": "scripts/run-wp3-commitment-demo.ps1",
+      "bytes": 6742,
+      "lines": 203,
+      "sha256": "15c7b12b44936adf65362892a62b1e88219322554e4d88f7ce5eeef2e53c6473"
+    },
+    {
+      "path": "scripts/run-wp4-microbenchmark.ps1",
+      "bytes": 273,
+      "lines": 8,
+      "sha256": "53abcb0f19144adf8ae15b7da9931f0e3d7075065266f5b170b762397cc31c57"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "bytes": 531,
+      "lines": 25,
+      "sha256": "2466cc60506a536eb9f45f883da807222b6da82af7531125be13b7181af9bb60"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 3483,
+      "lines": 128,
+      "sha256": "e4c61869f95db9310191a606a716981d8290f87685087c07c8f9314ea8bf45e3"
+    },
+    {
+      "path": ".github/workflows/pr-agent.yml",
+      "bytes": 1633,
+      "lines": 47,
+      "sha256": "e73c02f6296eb9bcee6d45857164ba1c59df1e9683827655a0c33195ea19d792"
+    },
+    {
+      "path": ".github/workflows/sonar.yml",
+      "bytes": 2628,
+      "lines": 78,
+      "sha256": "8ca17f5f150512c440bd2fa8009efd0db912f626ab1c031d0bfe02d1572fbcc8"
+    },
+    {
+      "path": "Directory.Build.props",
+      "bytes": 443,
+      "lines": 12,
+      "sha256": "02885c91a0ffbfdc83224794310d0b6c5f358c8f2822573cb6aeb45b51312b27"
+    },
+    {
+      "path": "RideBound.slnx",
+      "bytes": 2565,
+      "lines": 36,
+      "sha256": "ca006832f28d55f330a071c30ffb84210828cbebc1574f8ec58d45f27fca9483"
+    }
+  ],
+  "chunks": 178,
+  "totalLines": 134305
+}

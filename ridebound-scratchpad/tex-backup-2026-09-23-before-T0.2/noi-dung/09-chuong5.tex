@@ -1,0 +1,141 @@
+\chapter{Kết luận}
+
+\section{Tổng kết}
+
+Khóa luận này xuất phát từ một quan sát đơn giản về cách các hệ thống điều phối xe đi chung
+đang vận hành: chúng báo cho hành khách một giờ hẹn, rồi tiếp tục tối ưu lại và dời giờ ấy nhiều
+lần, trong khi không một thước đo chuẩn nào của ngành ghi nhận điều đó. Câu hỏi đặt ra là liệu
+một hệ thống có thể đưa ra lời hứa mà nó thực sự giữ được hay không, và cái đó đắt bao nhiêu.
+
+Để trả lời, chúng tôi xây dựng cơ chế lời hứa có biên được chứng nhận, với ba thành phần. Thành
+phần thứ nhất là phép phân rã ba mốc, dựng một mốc phản thực bằng cách chiếu lại chính kế hoạch
+cũ từ vị trí thật hiện tại của xe, nhờ đó tách được phần dịch chuyển do nhà điều hành gây ra
+khỏi phần do thế giới vật lý gây ra. Thành phần thứ hai là sổ cái cam kết riêng cho từng hành
+khách, cộng dồn theo thời gian và đối chiếu với một trần, được kiểm tra ngay tại thời điểm ra
+quyết định. Thành phần thứ ba là hệ thống chứng cứ niêm phong, bảo đảm rằng mọi so sánh giữa
+các cấu hình đều kiểm chứng được tới từng lần chạy.
+
+Về mặt lý thuyết, đóng góp trung tâm là việc phân biệt hai cơ sở tính sổ cái và ba định lý đi
+kèm. Tính theo hành vi của nhà điều hành thì luôn thỏa được, vì phương án không làm gì theo định
+nghĩa không gây ra gì. Tính theo kết quả mà hành khách nhìn thấy thì có thể khiến hệ thống không
+còn bất kỳ quyết định hợp lệ nào, vì ngay cả việc không làm gì cũng bị tính phí trôi dạt. Và
+quan trọng nhất, cơ sở kết quả không bao giờ phục vụ được nhiều hơn cơ sở hành vi với bất kỳ
+trần nào --- đây là một định lý chứ không phải một quan sát may mắn ở một giá trị cụ thể. Phân
+biệt này trùng với phân biệt cổ điển giữa nghĩa vụ phương tiện và nghĩa vụ kết quả trong luật
+hợp đồng, và điểm mới nằm ở chỗ mốc tham chiếu ngoại sinh \emph{tính được} ranh giới ``ngoài
+tầm kiểm soát'' mà luật xử lý bằng văn xuôi.
+
+Về mặt thực nghiệm, 558 lần chạy trên một panel 20 ô đã niêm phong cho bốn nhóm kết quả. Nhóm
+thứ nhất là quy trách: $89{,}06\%$ lượng dịch chuyển mà hành khách nhìn thấy trong chế độ không
+cam kết là do bộ điều phối tự gây ra, và thiệt hại dồn vào một cái đuôi mỏng --- $23{,}2\%$ số
+hành khách hứng toàn bộ, người chịu thiệt nặng nhất bị dời gần mười bốn phút mà hệ thống vẫn
+tính là phục vụ thành công. Nhóm thứ hai là đường cong giá của cam kết trên chín cấu hình, với
+phát hiện rằng phần đắt nhất là quyết định cam kết chút nào đó chứ không phải độ chặt của lời
+hứa về thời gian. Nhóm thứ ba xác nhận cả ba định lý, kể cả dưới dữ liệu tắc đường đo thật của
+Manhattan, nơi cơ sở kết quả tê liệt trên 19 trên 20 ô còn cơ sở hành vi không hỏng một ô nào.
+Nhóm thứ tư kiểm tra độ vững: chín thước đo cho cùng một thứ hạng, không một ngoại lệ.
+
+Ngoài ra, khóa luận ghi nhận bốn kết quả phụ mà chúng tôi cho là đáng chú ý. Thứ nhất, sáu cơ
+chế bảo vệ giờ đón khác nhau --- kể cả cơ chế bảo đảm một chiều mà văn liệu sử dụng --- rơi vào
+đúng hai hành vi, vì hình thức của một lời bảo đảm chỉ có ý nghĩa trong chừng mực bộ sinh
+phương án có thể thực thi nó. Thứ hai, giá của một lời hứa không phải hằng số mà tăng theo mức
+tự do của nhà điều hành, và mặt cong hai chiều ở mục \ref{muc:matcong} cho thấy hai yếu tố này
+\emph{tương tác}: trần càng chặt thì việc cho thêm tự do càng đắt, từ $0{,}42$ lên $1{,}44$
+điểm phần trăm khi trần siết từ 300 xuống 30 giây. Thứ ba, hệ quả của định lý về hai cơ sở
+biểu hiện theo kiểu phân loại chứ không theo kiểu biên --- cơ sở kết quả mất nguyên cả ô chứ
+không phục vụ ít hơn vài hành khách --- và lý do là số học: khả thi cấp ô sụp theo $(1-p)^{n}$
+với $n$ là số hành khách mỗi ô.
+
+Thứ tư, ba hướng cải tiến bộ sinh phương án mà chúng tôi dự định thực hiện đều bị chính dữ liệu
+của hệ thống bác bỏ, mỗi hướng vì một lý do khác nhau, và điều đó tự nó là một kết quả. Xếp hạng
+vị trí chèn và cắt tỉa sớm là phép toán rỗng vì $96{,}0\%$ quyết định cấp xe chỉ có đúng một ứng
+viên khả thi trên $217.736$ quan sát. Đặt trước ngân sách chạy được nhưng trùng khớp tới từng
+quyết định với đối chứng, vì tầng cảnh báo bị đặt bên dưới một tầng mục tiêu liên tục đo cùng
+đại lượng ở thang mịn hơn --- ý tưởng ấy đã nằm sẵn trong hệ thống ở dạng mạnh hơn. Và bộ sinh
+biết sắp xếp lại, vốn cũng đã có sẵn, va vào một bất biến thứ hai của mô hình về thời điểm một
+chặng hết sửa được. Điểm chung của cả ba là chúng được loại bằng phép đo rẻ tiền trên bằng chứng
+đã có, chứ không bằng nhiều ngày chạy mô phỏng --- và bằng chứng ấy do chính cơ chế lời hứa sinh
+ra.
+
+\section{Hạn chế}
+
+Chúng tôi muốn nêu các hạn chế một cách rõ ràng, vì một số trong đó ảnh hưởng trực tiếp tới
+cách đọc kết quả.
+
+Hạn chế lớn nhất là \textbf{quy mô}. Panel 108 yêu cầu và 8 xe mỗi ô nhỏ hơn nhiều so với các
+thực nghiệm quy mô Manhattan trong văn liệu. Lựa chọn này có chủ ý --- mục tiêu là so sánh có
+kiểm soát giữa các cấu hình trên cùng đầu vào --- nhưng hệ quả là các con số tuyệt đối không so
+trực tiếp được với văn liệu.
+
+Hạn chế thứ hai là \textbf{phần trùng lặp với công trình gần nhất}. Như mục \ref{muc:doichieu} đã trình bày chi
+tiết, sáu trong số các hạng mục của khóa luận đã có trong Fielbaum và Alonso-Mora (2020): khái
+niệm, đo độ lớn, đếm số lần, phân loại nguyên nhân định tính, đường cong đánh đổi, và cơ chế
+ratchet. Chúng tôi coi phần đó là nền chứ không phải đóng góp, và đã cố gắng ghi rõ ranh giới ở
+bảng \ref{bang:trung}.
+
+Hạn chế thứ ba là \textbf{trôi dạt ở panel chính chỉ là cận dưới}. Bộ dữ liệu thử gốc có đồ thị
+thời gian di chuyển tĩnh, nên trôi dạt đo được đến từ độ trễ thực thi chứ không từ tắc đường.
+Thí nghiệm bơm trôi dạt đã bù một phần nhưng chưa trọn vẹn: nó cho kết quả về tính khả thi nhưng
+không cho kết quả về tỉ lệ phục vụ, vì một bất biến miền của hệ thống chặn lại.
+
+Hạn chế thứ tư là \textbf{lập luận phúc lợi kém chắc chắn hơn phần kỹ thuật}. Nó dựa trên hệ số
+định giá từ một bối cảnh địa lý khác và trên giả định rằng mọi chuyến bị mất có cùng thặng dư.
+Chúng tôi trình bày nó như một ngưỡng chứ không phải một kết luận.
+
+Cuối cùng, khóa luận \textbf{không tuyên bố vượt trội về tỉ lệ phục vụ}. Mọi cấu hình có cam
+kết đều phục vụ ít hành khách hơn cấu hình không cam kết. Đóng góp nằm ở việc biến một đại
+lượng trước nay chỉ đo được sau sự việc thành một ràng buộc cưỡng chế được trước khi quyết
+định, và ở việc chỉ ra rằng cách tính sổ cái quyết định hệ thống có vận hành nổi hay không.
+
+\section{Hướng phát triển}
+
+Từ những hạn chế trên, chúng tôi đề xuất năm hướng tiếp theo, xếp theo thứ tự ưu tiên mà chúng
+tôi cho là hợp lý.
+
+\textbf{Đo Định lý 3.3 trên một panel có ít hành khách hơn mỗi ô.} Mục \ref{muc:troidat} cho thấy phép so
+sánh tỉ lệ phục vụ giữa hai cơ sở không lấy được trên panel hiện tại, vì khả thi cấp ô sụp theo
+$(1-p)^{n}$ với $n \approx 80$. Lối thoát tự nhiên là giảm $n$: một panel nhiều ô nhỏ hơn, mỗi
+ô vài chục hành khách, sẽ giữ được nhiều ô khả thi ở cùng mức trôi dạt, nhờ đó có tập ô chung
+để so. Đây là thay đổi về thiết kế panel chứ không phải về hệ thống, nên chi phí thấp.
+
+\textbf{Mở rộng mặt cong sang chiều tự do thứ ba.} Mục \ref{muc:matcong} đã dựng mặt cong trên hai mức tự
+do và cho thấy tự do với độ chặt \emph{tương tác} chứ không cộng độc lập. Chiều tự do ở đây là
+cửa sổ đón; hai chiều tự nhiên tiếp theo là cỡ đội xe và mật độ nhu cầu. Nếu quy luật giữ nguyên
+trên cả ba chiều thì có thể rút ra một quy tắc chọn trần theo mức tự do, thay vì phải đo lại cho
+từng cấu hình vận hành.
+
+\textbf{Cửa sổ đón thương lượng có chọn lọc.} Như mục \ref{muc:dathu} đã nêu, hướng này chưa bị bác bỏ. Bài
+toán đã được đặt đúng với cả trần lẫn kiểu hỏng đều đã đo: lấy được bao nhiêu trong 172 hành
+khách mà vẫn giữ chờ trung vị quanh 407 giây. Tuy nhiên nó đòi hỏi sửa mã nguồn và mở rộng phát
+biểu vấn đề sang kiểm soát tiếp nhận, nên cần cân nhắc kỹ về phạm vi.
+
+\textbf{Nới lỏng bất biến miền về cửa sổ đón.} Phát hiện ở mục \ref{muc:batbien} --- rằng hệ thống chưa biểu
+diễn được trạng thái mà riêng giao thông phá vỡ một cửa sổ đã cam kết --- là một giới hạn thật
+của mô hình. Cơ chế nới lỏng theo mốc ngoại sinh đã tồn tại trong hệ thống cho bộ sinh phương án;
+mở rộng nó sang tầng kiểm tra trạng thái sẽ cho phép nghiên cứu chế độ cao điểm một cách đầy đủ.
+
+\textbf{Đóng băng chặng đang chạy, rồi mới mở khóa bộ sinh biết sắp xếp lại.} Mục
+\ref{muc:bosinh} cho thấy hệ thống đã có sẵn cơ chế sắp xếp lại nhưng nó hỏng trên 18 trên 20
+ô, vì mô hình miền chỉ đóng băng một điểm dừng khi xe \emph{tới nơi}, còn bộ mô phỏng khóa chặng
+ngay khi xe \emph{lăn bánh}. Việc cần làm có phạm vi rõ ràng và phải theo đúng thứ tự: thêm
+chuyển trạng thái đóng băng chặng đang bay ở tầng miền --- kiểu dữ liệu lộ trình đã cho phép
+trạng thái ``đã đóng băng nhưng chưa thực hiện'', chỉ thiếu điểm gọi; cho chính sách vector cứng
+nhận hạn mức sửa chữa; và nới điều kiện kiểm tra cấu hình để hai thứ đi được cùng nhau. Chỉ sau
+ba bước đó mới đặt được câu hỏi mà mục 4 thật sự muốn hỏi: liệu quyền sắp xếp lại có thu hồi
+được những hành khách mà cổng cam kết đang từ chối hay không. Chúng tôi lưu ý rằng ô duy nhất
+chạy trọn vẹn cho kết quả bằng đúng nhánh không cam kết, nên kỳ vọng nên đặt thấp.
+
+\section{Kết luận cuối}
+
+Đóng góp mà chúng tôi tin là bền nhất của khóa luận không phải một con số cụ thể, mà là một cách
+đặt vấn đề. Văn liệu hiện hành \emph{mô tả} hiện tượng lời hứa bị xê dịch; khóa luận này
+\emph{chặn} nó. Sự khác biệt giữa hai việc ấy không phải là mức độ mà là bản chất: thước đo của
+văn liệu tham chiếu tới giá trị thực tế, chỉ biết được sau khi hành khách đã được đón, nên về
+mặt toán học không thể trở thành ràng buộc; còn cơ chế ở đây định nghĩa trên các đại lượng đều
+biết được tại thời điểm quyết định.
+
+Và khi biến một thước đo thành một ràng buộc, một câu hỏi mới xuất hiện mà trước đó không có lý
+do gì để hỏi: \emph{tính sổ cái theo cái gì}. Câu trả lời hóa ra quyết định hệ thống có vận hành
+nổi hay không --- điều mà ba định lý và thí nghiệm tắc đường thật đã chỉ ra. Cách tự nhiên nhất
+để biến thước đo của văn liệu thành ràng buộc chính là cơ sở kết quả, và đó cũng chính là cách
+hỏng.

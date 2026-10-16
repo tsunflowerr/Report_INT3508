@@ -1,0 +1,41 @@
+[
+  {
+    "population": "WP14r",
+    "arm": "C-120",
+    "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w17-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+    "sha256": "93012e0972f609e30d7513e799ad33f91199a8c9111eb6c4a1ae63b0c609f1c8",
+    "request_id": "rq-a46d45ae12ac09e424c49e8ff7b2f3360afd0f28738152ec2f2645ef88a6d28e",
+    "nonzero_signed_c_ms": [
+      25661,
+      5924
+    ],
+    "S_ms": 31585,
+    "max_step_ms": 25661
+  },
+  {
+    "population": "WP14r",
+    "arm": "FREE",
+    "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+    "sha256": "f3bb7a0cbb4c225625bbfd5200e5d3d269dc1cb02199499b953fe69eb2fbf78a",
+    "request_id": "rq-1c726f7ba0897f9da8da62a96e4044b0d0bbed95bb99e0a0f228934988e2cd37",
+    "nonzero_signed_c_ms": [
+      91010,
+      117780
+    ],
+    "S_ms": 208790,
+    "max_step_ms": 117780
+  },
+  {
+    "population": "synthetic",
+    "arm": "C-120",
+    "path": "E:\\RideBoundData\\research\\tier3-sweep-v1\\C-120-W4-d20181112-s10-r1-w08\\transcript-00.ndjson",
+    "sha256": "be33c238c8c8d25d53a28b5d665c37629fa5d04233683ea30316f5bd6712400d",
+    "request_id": "rq-e4baf6f0db1b4027726c88c24bda945a9635b419a3c586449e43781fe698f20d",
+    "nonzero_signed_c_ms": [
+      81952,
+      10017
+    ],
+    "S_ms": 91969,
+    "max_step_ms": 81952
+  }
+]

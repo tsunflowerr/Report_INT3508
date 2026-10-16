@@ -1,0 +1,299 @@
+{
+  "input_files": {
+    "Ch1": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r40-ch1-v4\\05-chuong1-v4-v4.tex",
+    "Ch2": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\06-chuong2-v6.tex",
+    "Ch3": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex",
+    "Ch4A": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r36-ch4a-v5\\08-chuong4-phanA-v5-v3.tex",
+    "Ch4B": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\09-chuong4-phanB-v11-v2.tex",
+    "Ch5": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r42-ch5-v3\\10-chuong5-v3-v3.tex",
+    "PL": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r42-ch5-v3\\11-phuluc-v3-v3.tex",
+    "BIB": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r32-bib\\10-tai-lieu-draft-v2.tex"
+  },
+  "word_counts": {
+    "Ch5": {
+      "opening_words": 67,
+      "sections": [
+        {
+          "title": "Tổng kết theo ba phần",
+          "prose_words": 777,
+          "table_words": 0,
+          "table_count": 0
+        },
+        {
+          "title": "Hạn chế",
+          "prose_words": 315,
+          "table_words": 0,
+          "table_count": 0
+        },
+        {
+          "title": "Hướng phát triển",
+          "prose_words": 321,
+          "table_words": 0,
+          "table_count": 0
+        }
+      ],
+      "prose_total": 1480
+    },
+    "PL": {
+      "opening_words": 0,
+      "sections": [
+        {
+          "title": "Tập kịch bản tĩnh của đợt thử trước",
+          "prose_words": 102,
+          "table_words": 0,
+          "table_count": 0
+        },
+        {
+          "title": "Phương án giữ nguyên kế hoạch dưới các luật",
+          "prose_words": 227,
+          "table_words": 106,
+          "table_count": 1
+        },
+        {
+          "title": "Thông tin tái lập",
+          "prose_words": 662,
+          "table_words": 150,
+          "table_count": 2
+        }
+      ],
+      "prose_total": 991
+    }
+  },
+  "syntax": {
+    "Ch5": {
+      "environment_errors": [],
+      "brace_errors": [],
+      "math_even": true,
+      "prohibited_hits": [],
+      "missing_ev": []
+    },
+    "PL": {
+      "environment_errors": [],
+      "brace_errors": [],
+      "math_even": true,
+      "prohibited_hits": [],
+      "missing_ev": []
+    }
+  },
+  "labels": {
+    "duplicates": [],
+    "missing_by_file": {
+      "Ch1": [],
+      "Ch2": [],
+      "Ch3": [],
+      "Ch4A": [],
+      "Ch4B": [],
+      "Ch5": [],
+      "PL": [],
+      "BIB": []
+    },
+    "missing_citations": {
+      "Ch1": [],
+      "Ch2": [],
+      "Ch3": [],
+      "Ch4A": [],
+      "Ch4B": [],
+      "Ch5": [],
+      "PL": [],
+      "BIB": []
+    },
+    "new_references_to_B": {
+      "Ch1": 0,
+      "Ch2": 0,
+      "Ch3": 0,
+      "Ch4A": 0,
+      "Ch4B": 0,
+      "Ch5": 1,
+      "PL": 0,
+      "BIB": 0
+    }
+  },
+  "numbers": {
+    "main_raw_rows": {
+      "U": {
+        "served": 2434,
+        "late30": 428,
+        "late60": 203,
+        "late120": 102,
+        "early60": 7,
+        "timely60": 2231,
+        "timely120": 2332,
+        "extension_s": 0.0
+      },
+      "C30": {
+        "served": 2338,
+        "late30": 292,
+        "late60": 76,
+        "late120": 11,
+        "early60": 3,
+        "timely60": 2262,
+        "timely120": 2327,
+        "extension_s": 0.0
+      },
+      "Mplus30": {
+        "served": 2338,
+        "late30": 289,
+        "late60": 74,
+        "late120": 11,
+        "early60": 3,
+        "timely60": 2264,
+        "timely120": 2327,
+        "extension_s": 0.0
+      },
+      "C120": {
+        "served": 2387,
+        "late30": 355,
+        "late60": 132,
+        "late120": 21,
+        "early60": 1,
+        "timely60": 2255,
+        "timely120": 2366,
+        "extension_s": 0.0
+      },
+      "U_forecast_pad30": {
+        "served": 2434,
+        "late30": 137,
+        "late60": 106,
+        "late120": 68,
+        "early60": 44,
+        "timely60": 2328,
+        "timely120": 2366,
+        "extension_s": 37.183331
+      },
+      "C30_forecast": {
+        "served": 2338,
+        "late30": 86,
+        "late60": 10,
+        "late120": 0,
+        "early60": 4,
+        "timely60": 2328,
+        "timely120": 2338,
+        "extension_s": 7.367123
+      }
+    },
+    "differences": {
+      "served": -96,
+      "timely60": 31,
+      "timely120": -5,
+      "shared": -242,
+      "padding_timely120": 28
+    },
+    "current_source_checks": {
+      "fairness_28_of34": true,
+      "deadline_forecast66_to2_on1471": true,
+      "dispatch_max29_2_vs590_1": true,
+      "prune_records845_524": true
+    },
+    "rounding": {
+      "weekday_raw_parts_s": [
+        81.742,
+        5352.646,
+        783.018
+      ],
+      "raw_sum_s": 6217.406,
+      "rounded_parts_sum_s": 6218,
+      "rounded_total_s": 6217,
+      "independent_rounding_stated": true,
+      "snow_raw_residual_s": 3185.871
+    },
+    "illustrations": {
+      "ce1": [
+        0,
+        60,
+        60
+      ],
+      "ce4": [
+        0,
+        120
+      ],
+      "ce5": [
+        120,
+        120
+      ],
+      "ce6_witness": [
+        30,
+        60
+      ]
+    },
+    "scenario_lists": {
+      "test": {
+        "count": 34,
+        "exact_match": true
+      },
+      "calibration": {
+        "count": 15,
+        "exact_match": true
+      }
+    },
+    "snow_selection": [
+      "C-30-d20181115-s10-r1-w14",
+      "C-30-d20181115-s10-r1-w15",
+      "C-30-d20181115-s10-r2-w14",
+      "C-30-d20181115-s10-r2-w15",
+      "C-30-d20181115-s10-r3-w14",
+      "C-30-d20181115-s10-r3-w15",
+      "C-30-d20181115-s10-r4-w14",
+      "C-30-d20181115-s10-r4-w15"
+    ],
+    "run_counts": {
+      "main_original": 170,
+      "main_C120": 34,
+      "morning_used": 136,
+      "morning_stored": 192,
+      "fixed_per_configuration": 16,
+      "snow": 8,
+      "riders_compared": 7159
+    },
+    "test_attempts": {
+      "1": {
+        "failed": 5,
+        "passed": 1020,
+        "skipped": 0,
+        "total": 1025,
+        "projects": 9,
+        "log": "testrun-45f8026-2026-10-12.log"
+      },
+      "2": {
+        "failed": 5,
+        "passed": 1020,
+        "skipped": 0,
+        "total": 1025,
+        "projects": 9,
+        "log": "testrun-45f8026-lf-2026-10-12.log"
+      },
+      "3": {
+        "failed": 1,
+        "passed": 1024,
+        "skipped": 0,
+        "total": 1025,
+        "projects": 9,
+        "log": "testrun-45f8026-eollf-2026-10-12.log"
+      },
+      "3b": {
+        "failed": 0,
+        "passed": 1,
+        "skipped": 0,
+        "total": 1,
+        "projects": 1,
+        "log": "testrun-45f8026-eollf-dirtycheck-2026-10-12.log"
+      },
+      "4": {
+        "failed": 0,
+        "passed": 1025,
+        "skipped": 0,
+        "total": 1025,
+        "projects": 9,
+        "log": "testrun-45f8026-eollf-dirty-fullrun-2026-10-13.log"
+      }
+    }
+  },
+  "integration_notes": [
+    "Ch3 current file still dates the full 1025 result 12/10; assembly must use 13/10 as TESTRUN attempt4 and Ch4B already do."
+  ],
+  "structure": {
+    "three_summary_paragraphs": true,
+    "five_future_directions": true,
+    "selector_first": true
+  },
+  "status": "PASS; read-only checks, no build or simulation"
+}

@@ -1,0 +1,16 @@
+Mplus-30 vs V-30 fleet-action sequences differ in cells: []
+Mplus-90 vs V-90 fleet-action sequences differ in cells: []
+Mplus-120 vs V-120 fleet-action sequences differ in cells: []
+Mplus-150 vs V-150 fleet-action sequences differ in cells: []
+Mplus-180 vs V-180 fleet-action sequences differ in cells: []
+Mplus-240 vs V-240 fleet-action sequences differ in cells: []
+n acked decisions at (90,d20181112-s10-r1-w07): C 735 Mplus 729 V 729
+n acked decisions at (120,d20181112-s10-r1-w07): C 735 Mplus 729 V 729
+n acked decisions at (120,d20181113-s10-r1-w07): C 608 Mplus 601 V 601
+C-90       max A_r 194.0 s, max V_r 204.1 s, max sum|p-e| 86.9 s
+Mplus-90   max A_r 194.0 s, max V_r 204.1 s, max sum|p-e| 86.9 s
+V-90       max A_r 194.0 s, max V_r 204.1 s, max sum|p-e| 86.9 s
+Mplus-150  max A_r 227.5 s, max V_r 241.5 s, max sum|p-e| 96.7 s
+V-150      max A_r 227.5 s, max V_r 241.5 s, max sum|p-e| 96.7 s
+Mplus-240  max A_r 307.3 s, max V_r 313.9 s, max sum|p-e| 208.2 s
+V-240      max A_r 307.3 s, max V_r 313.9 s, max sum|p-e| 208.2 s

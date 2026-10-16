@@ -1,0 +1,16 @@
+{
+  "scope": "canonical configuration binding arithmetic, archived U/C30 initialize metadata only; no C120 outcomes, no analyzer import/main",
+  "bindings": {
+    "C-30": "a2f11a3ada0773f9b30b85c56c935058e2e931f13c907f46b2ddfff8c1285f1c",
+    "U": "251b331eb56fe870e734d651bf6937e95304919ed92967b2f3b0d0b9da1ac346",
+    "C-120": "a9ac58b33558c6ec2d604ee7fe3e7fdb02deaecfd866ea73282b911326ed9010"
+  },
+  "archived_matches": {
+    "C-30": "a2f11a3ada0773f9b30b85c56c935058e2e931f13c907f46b2ddfff8c1285f1c",
+    "U": "251b331eb56fe870e734d651bf6937e95304919ed92967b2f3b0d0b9da1ac346"
+  },
+  "syntax_pass": true,
+  "tested_forecast_and_gate_AST_identical": true,
+  "v3_sha256": "74447319935aad42c205a9b3ade24ba212e699658a0f2d4e24bde34d4e510705",
+  "source": "C:/Code/RideBound-noworse/src/RideBound.Contracts/Protocol/Wp4PolicyConfigurationBinding.cs:18-42"
+}

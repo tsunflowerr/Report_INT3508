@@ -1,0 +1,53 @@
+# w07_analyze.py FULL; jobs analysed 88/88
+== validity (W07-PLAN §4): 0 problem(s)
+  none
+  inventories: 0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe
+
+== served (completed / 108) per cell: U | C-30/60/120/300 | Mplus-30/60/120/300 | V-30 | M-30
+  d20181112-s10-r1-w07: U 90 | C 87/87/90/90 | M+ 87/87/89/90 | V 87 | M 87
+  d20181112-s10-r2-w07: U 82 | C 82/82/82/82 | M+ 82/82/82/82 | V 82 | M 82
+  d20181112-s10-r3-w07: U 97 | C 97/97/97/97 | M+ 97/97/97/97 | V 97 | M 97
+  d20181112-s10-r4-w07: U 87 | C 86/87/87/87 | M+ 86/87/87/87 | V 86 | M 86
+  d20181113-s10-r1-w07: U 70 | C 68/68/71/70 | M+ 68/68/70/70 | V 68 | M 68
+  d20181113-s10-r2-w07: U 65 | C 65/65/65/65 | M+ 65/65/65/65 | V 65 | M 65
+  d20181113-s10-r3-w07: U 82 | C 83/83/82/82 | M+ 83/83/82/82 | V 83 | M 83
+  d20181113-s10-r4-w07: U 92 | C 92/92/92/92 | M+ 92/92/92/92 | V 92 | M 92
+
+== predictions (W07-PLAN §5)
+Q1 C-x jobs with non-normal decisions: 0/32 [] -> HELD
+Q2 Mplus-30 forced in 8/8 cells -> HELD
+Q3 Mplus-60 promise broken (A > 60 s share > 0) in 8/8 cells [('d20181112r1', 0.08), ('d20181112r2', 0.061), ('d20181112r3', 0.041), ('d20181112r4', 0.023), ('d20181113r1', 0.118), ('d20181113r2', 0.077), ('d20181113r3', 0.06), ('d20181113r4', 0.12)] -> HELD
+Q4 Mplus-300 unforced and never late by > 300 s in 7/8 cells -> NOT HELD
+Q5 x=30: |C - Mplus| <= 2 in 8/8 cells; diffs [0, 0, 0, 0, 0, 0, 0, 0]
+Q5 x=60: |C - Mplus| <= 2 in 8/8 cells; diffs [0, 0, 0, 0, 0, 0, 0, 0]
+Q5 x=120: |C - Mplus| <= 2 in 8/8 cells; diffs [1, 0, 0, 0, 1, 0, 0, 0]
+Q5 x=300: |C - Mplus| <= 2 in 8/8 cells; diffs [0, 0, 0, 0, 0, 0, 0, 0]
+Q5 -> HELD
+Q6 V-30 forced in 8/8; |V-30 - C-30| <= 2 in 8/8 -> HELD
+Q7 C-30 <= U in 7/8 -> HELD
+
+== descriptive (not predictions): per level, mean over cells
+  x=30: served C 660 M+ 660 | M+ promise broken (A>x) 0.240 | C scored by M+ rule 0.240 | C promise broken (C_r>x) 0.000 | M+ forced 0.586 | M+ frozen fleet 0.231 | M+ same decisions as C 8/8 cells
+  x=60: served C 661 M+ 661 | M+ promise broken (A>x) 0.073 | C scored by M+ rule 0.073 | C promise broken (C_r>x) 0.000 | M+ forced 0.355 | M+ frozen fleet 0.081 | M+ same decisions as C 8/8 cells
+  x=120: served C 666 M+ 664 | M+ promise broken (A>x) 0.009 | C scored by M+ rule 0.012 | C promise broken (C_r>x) 0.000 | M+ forced 0.066 | M+ frozen fleet 0.009 | M+ same decisions as C 6/8 cells
+  x=300: served C 665 M+ 665 | M+ promise broken (A>x) 0.002 | C scored by M+ rule 0.002 | C promise broken (C_r>x) 0.000 | M+ forced 0.017 | M+ frozen fleet 0.002 | M+ same decisions as C 8/8 cells
+
+== descriptive: C-30 per cell, lateness against the first promise (A) and C's own promise
+  d20181112-s10-r1-w07: riders 87 | A>30 0.276 A>60 0.080 A>120 0.000 | max A 109.1 s | early by >30 s 0.000
+  d20181112-s10-r2-w07: riders 82 | A>30 0.256 A>60 0.061 A>120 0.000 | max A 102.9 s | early by >30 s 0.000
+  d20181112-s10-r3-w07: riders 97 | A>30 0.247 A>60 0.041 A>120 0.000 | max A 99.7 s | early by >30 s 0.000
+  d20181112-s10-r4-w07: riders 86 | A>30 0.163 A>60 0.023 A>120 0.012 | max A 148.7 s | early by >30 s 0.000
+  d20181113-s10-r1-w07: riders 68 | A>30 0.382 A>60 0.118 A>120 0.000 | max A 99.1 s | early by >30 s 0.000
+  d20181113-s10-r2-w07: riders 65 | A>30 0.246 A>60 0.077 A>120 0.015 | max A 194.0 s | early by >30 s 0.000
+  d20181113-s10-r3-w07: riders 83 | A>30 0.157 A>60 0.060 A>120 0.000 | max A 88.2 s | early by >30 s 0.000
+  d20181113-s10-r4-w07: riders 92 | A>30 0.196 A>60 0.120 A>120 0.000 | max A 106.3 s | early by >30 s 0.000
+
+== descriptive: V-30 own promise (drop V > 30 s) for V-30 and C-30; V-30 same decisions as C-30
+  d20181112-s10-r1-w07: V>30 V-30 0.345 C-30 0.345 | V-30 forced 0.694 | same decisions True
+  d20181112-s10-r2-w07: V>30 V-30 0.305 C-30 0.305 | V-30 forced 0.683 | same decisions True
+  d20181112-s10-r3-w07: V>30 V-30 0.320 C-30 0.320 | V-30 forced 0.673 | same decisions True
+  d20181112-s10-r4-w07: V>30 V-30 0.186 C-30 0.186 | V-30 forced 0.587 | same decisions True
+  d20181113-s10-r1-w07: V>30 V-30 0.441 C-30 0.441 | V-30 forced 0.597 | same decisions True
+  d20181113-s10-r2-w07: V>30 V-30 0.308 C-30 0.308 | V-30 forced 0.629 | same decisions True
+  d20181113-s10-r3-w07: V>30 V-30 0.181 C-30 0.181 | V-30 forced 0.484 | same decisions True
+  d20181113-s10-r4-w07: V>30 V-30 0.250 C-30 0.250 | V-30 forced 0.709 | same decisions True

@@ -1,0 +1,363 @@
+{
+  "local_links_checked": 74,
+  "link_errors": [],
+  "papers": 13,
+  "ranked_proposals": [
+    [
+      "1",
+      "P1"
+    ],
+    [
+      "2",
+      "P2"
+    ],
+    [
+      "3",
+      "P0"
+    ],
+    [
+      "4",
+      "P3"
+    ],
+    [
+      "5",
+      "P4"
+    ],
+    [
+      "6",
+      "P5"
+    ],
+    [
+      "7",
+      "P6"
+    ]
+  ],
+  "main_raw_runs": 196,
+  "extra_raw_runs": 45,
+  "verified_frames": 495832,
+  "budget_rows": [
+    {
+      "population": "t38",
+      "arm": "C-30",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 8.295,
+      "conventional_median_matches_p50_rounding": true
+    },
+    {
+      "population": "t38",
+      "arm": "U",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 117.4215,
+      "conventional_median_matches_p50_rounding": false
+    },
+    {
+      "population": "w07",
+      "arm": "C-120",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 68.261,
+      "conventional_median_matches_p50_rounding": true
+    },
+    {
+      "population": "w07",
+      "arm": "C-150",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 68.261,
+      "conventional_median_matches_p50_rounding": true
+    },
+    {
+      "population": "w07",
+      "arm": "C-180",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 68.261,
+      "conventional_median_matches_p50_rounding": true
+    },
+    {
+      "population": "w07",
+      "arm": "C-240",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 68.262,
+      "conventional_median_matches_p50_rounding": true
+    },
+    {
+      "population": "w07",
+      "arm": "C-30",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 6.011,
+      "conventional_median_matches_p50_rounding": false
+    },
+    {
+      "population": "w07",
+      "arm": "C-300",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 68.262,
+      "conventional_median_matches_p50_rounding": true
+    },
+    {
+      "population": "w07",
+      "arm": "C-60",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 10.048,
+      "conventional_median_matches_p50_rounding": true
+    },
+    {
+      "population": "w07",
+      "arm": "C-90",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 68.261,
+      "conventional_median_matches_p50_rounding": true
+    },
+    {
+      "population": "w07",
+      "arm": "U",
+      "nearest_rank_table": "MATCH",
+      "conventional_median_s": 68.262,
+      "conventional_median_matches_p50_rounding": true
+    }
+  ],
+  "script_syntax_checked": [
+    "R13-extract-cumulative-witnesses.py",
+    "R13-fetch-public-schemas.py",
+    "R13-final-qa.py",
+    "R13-inspect-supporting-sources.py",
+    "R13-paper-extract.py",
+    "R13-render-thesis.py",
+    "R13-verify-extra-raw.py",
+    "R13-verify-raw-v2.py",
+    "R13-verify-raw-v3.py",
+    "R13-verify-raw.py",
+    "R13-write-deliverables.py"
+  ],
+  "outputs": [
+    {
+      "name": "R13-cumulative-witnesses.json",
+      "bytes": 1443,
+      "sha256": "fa3f22d89ca489967fa09b6ab711c1dda5c363701bfa4654e3afa34a262dc53f"
+    },
+    {
+      "name": "R13-deliverable-manifest.json",
+      "bytes": 433,
+      "sha256": "ae61fe6a6d48394bbb5b221c6a97642cc39e76c595b5421980cec8830bf31009"
+    },
+    {
+      "name": "R13-extra-raw-verification-v2.json",
+      "bytes": 28482,
+      "sha256": "0382ff323e931dc87d5c2f142fbd6342114d2b3cb13695b350a0febe0fd28523"
+    },
+    {
+      "name": "R13-extra-raw-verification.json",
+      "bytes": 27803,
+      "sha256": "367dbf7a60a16cdf39d19887b55fc8ba504630404bc2ccb072d5ca612ad9e2fc"
+    },
+    {
+      "name": "R13-extract-cumulative-witnesses.py",
+      "bytes": 2160,
+      "sha256": "594c456173a105b6ef8c963749e259f9c43e7752ce459ec9e44d71a2c8c70bfb"
+    },
+    {
+      "name": "R13-fetch-public-schemas.py",
+      "bytes": 2378,
+      "sha256": "0c92d85781806a9114fd5681189471536746d345e65a1a7ae8696f8ddc5f5650"
+    },
+    {
+      "name": "R13-final-qa.py",
+      "bytes": 4212,
+      "sha256": "39227b51c3bd6d95d659cadc84c60de2a2644ef004c3fd73a63852e431f37f93"
+    },
+    {
+      "name": "R13-inspect-supporting-sources.py",
+      "bytes": 1356,
+      "sha256": "b94dda46a4259030e1af0aa7a63d5209961c1e01a4c7b50a820b983e566e6efc"
+    },
+    {
+      "name": "R13-paper-extract.py",
+      "bytes": 1369,
+      "sha256": "015ad5bdcbbee8dd5ce6e662c88eb54b9da21e0a27c0374da1fbf90e528a403a"
+    },
+    {
+      "name": "R13-paper-index.json",
+      "bytes": 25083,
+      "sha256": "59f7b317d34849774457aa251098c2aba1dc3984a35955a89d87d65e6f94fbf9"
+    },
+    {
+      "name": "R13-pdf-render-dependencies.json",
+      "bytes": 734,
+      "sha256": "87f1f9a53dcf0ad72267858b3603d10d8d15d865f622344f21a3c3eb46a3388f"
+    },
+    {
+      "name": "R13-PROPOSALS-CODEX.md",
+      "bytes": 33672,
+      "sha256": "64a2afa8e53d3a1925567617f3f6738aa8ae5033713ae733045e30e0a8ca1b3a"
+    },
+    {
+      "name": "R13-public-fetch-manifest.json",
+      "bytes": 2590,
+      "sha256": "430a4f36b7c2a6ccfdf5c7a352f2af309183a7d7174ecc4f02bf5189291257d5"
+    },
+    {
+      "name": "R13-public-grubhub-terms-clean.txt",
+      "bytes": 11673,
+      "sha256": "3aee5d41b8e1234e372a90fddfa732fabe6a2268fd92a491813bdfacf8745831"
+    },
+    {
+      "name": "R13-public-grubhub-terms.txt",
+      "bytes": 134245,
+      "sha256": "abede47a6a384c6c3cfc3ec4706d68e831764ac96d37a0e355a2f95455d916b7"
+    },
+    {
+      "name": "R13-public-lyft-help-clean.txt",
+      "bytes": 15041,
+      "sha256": "4c1682f3327dbeea4350923a0d7d12733684fa3a8fb64a26dbaf8e37fbc421fb"
+    },
+    {
+      "name": "R13-public-lyft-help.txt",
+      "bytes": 293443,
+      "sha256": "db3a25a72af5568dbcec96c65fba7e9e8dea5ef027a4072aeb0e4ac2d9ca81e0"
+    },
+    {
+      "name": "R13-public-nyc-hvf-dictionary.pdf",
+      "bytes": 117347,
+      "sha256": "5458c35b4cb989c69f1211fa9bfe7462d6ba157569de4aa0480e764b2037c41a"
+    },
+    {
+      "name": "R13-public-nyc-tlc-page.txt",
+      "bytes": 144617,
+      "sha256": "d2c00c05d39a887caebc2159f24e4a20a655d150e87d4b9fcaf58ca95f490fe0"
+    },
+    {
+      "name": "R13-raw-verification.json",
+      "bytes": 155901,
+      "sha256": "d8f2adb5d43394079af9616f21123d5febe6d635a9bbf848d6190d20fee361e3"
+    },
+    {
+      "name": "R13-raw-verification.txt",
+      "bytes": 10850,
+      "sha256": "58cad7e6600e398d0e864949c9185deb5c942255c167147899cae45d57c27c05"
+    },
+    {
+      "name": "R13-render-thesis.py",
+      "bytes": 496,
+      "sha256": "66948780718c8df6208ef62770c76e2fdeb5728e19741ebdf5d31dd2f91fd264"
+    },
+    {
+      "name": "R13-rider-budget.tsv",
+      "bytes": 1819257,
+      "sha256": "c5459908406adbe6d6e1ca23aabeab1b5e79ca916b6061676733f888d9893781"
+    },
+    {
+      "name": "R13-SURVEY-CODEX.md",
+      "bytes": 29955,
+      "sha256": "95e02e8f2fce0d2968e39e215495c07d8675110ae9fd6a5461d27be2ca3d41e3"
+    },
+    {
+      "name": "R13-verify-extra-raw.py",
+      "bytes": 3376,
+      "sha256": "d961218f379cc967f7b557e329015bf2708cfcf2dcb7d2af23f4d92ead75783e"
+    },
+    {
+      "name": "R13-verify-raw-v2.py",
+      "bytes": 7907,
+      "sha256": "a385ba8d64c554c7f91b531ea878c6fb5b8afa554627b86c6962dde5895492f4"
+    },
+    {
+      "name": "R13-verify-raw-v3.py",
+      "bytes": 7933,
+      "sha256": "e67abec9fdaf3f5b89bd643b479d9c9720140b5835462f4410af59df324ae511"
+    },
+    {
+      "name": "R13-verify-raw.py",
+      "bytes": 7867,
+      "sha256": "a15b64e67dddb9830f6c683bb1b68401a71ccc0e5153613edfe0e34afad59064"
+    },
+    {
+      "name": "R13-write-deliverables.py",
+      "bytes": 63935,
+      "sha256": "0146eaab9323783c774a99e731f62c9bfd4e7ff7fd92d49ab66f9e15d9a6682c"
+    },
+    {
+      "name": "r13-paper-text/1-s2.0-S0191261522000716-main.txt",
+      "bytes": 148914,
+      "sha256": "f1cd95c5ffee64578b9268b596418441bcb426cb6e01fe9f41ec98998fab4d3a"
+    },
+    {
+      "name": "r13-paper-text/1-s2.0-S0965856426000662-main.txt",
+      "bytes": 137838,
+      "sha256": "a132561dd8358ae24010be14ded53f5e7f79515a0f41bba09213072d3381657e"
+    },
+    {
+      "name": "r13-paper-text/21020283-3476 (1).txt",
+      "bytes": 140849,
+      "sha256": "cd891271ccced38ac3ec02e764b133d9b3c0126e7abb559df093dfcf34011cf9"
+    },
+    {
+      "name": "r13-paper-text/2508.04811v1.txt",
+      "bytes": 63958,
+      "sha256": "6affb64ddf9f5bd7eb6e0098bdfb569062d5e9de31811c7803ef6a49cf9d1697"
+    },
+    {
+      "name": "r13-paper-text/BregniA._DAvinoM.SchiraldiM.M.txt",
+      "bytes": 18639,
+      "sha256": "af5c6161605fd32af86683184ca8d60908f68630068f8f6f6953b35f19cf16ac"
+    },
+    {
+      "name": "r13-paper-text/FreezingtheMPSMgtScipaper.txt",
+      "bytes": 44087,
+      "sha256": "d586ccd04648ffae7f16c0f2fc4c940c6dd758c937e9eb764c9dfe2aa774ddc2"
+    },
+    {
+      "name": "r13-paper-text/Networks - 2014 - Kovacs - Vehicle routing problems in which consistency considerations are important  A survey.txt",
+      "bytes": 142826,
+      "sha256": "036822c6696a6fcebc6867f3ee3802d42671fc512bd3bbb4a54826ee2cb67e05"
+    },
+    {
+      "name": "r13-paper-text/OperationalEffectsofServiceLevelVariations-publication151005.txt",
+      "bytes": 66541,
+      "sha256": "ebb2e6bb7b7debd62534d882bdabfbef52dd9f1abc0655f4eabba6c7e6bc58d4"
+    },
+    {
+      "name": "r13-paper-text/s00291-025-00812-3.txt",
+      "bytes": 81112,
+      "sha256": "5fa16534017f1d61d7ac3de44b575167bab0f7b72f9a00b9921951389a9d3584"
+    },
+    {
+      "name": "r13-paper-text/s00291-026-00847-0.txt",
+      "bytes": 143049,
+      "sha256": "44406d236d83ed5f75d4a11abb5e62d73d4ce10a64fd41361f6c4a8a0aa26097"
+    },
+    {
+      "name": "r13-paper-text/Scale_analysis_for_on-demand_ridepooling_systems_a.txt",
+      "bytes": 95822,
+      "sha256": "c124a6f83498d903ab9e35dacb9dbe83bc2e24221431c93ec4c5bfc82c444bce"
+    },
+    {
+      "name": "r13-paper-text/Unreliability_in_ridesharing_systems_Measuring_cha.txt",
+      "bytes": 102525,
+      "sha256": "70d71cfa02d2d40238de19ffe135b1cf4956af4a8ebe2160706743182eba574f"
+    },
+    {
+      "name": "r13-paper-text/Value_of_time_and_reliability_for_urban_pooled_on-.txt",
+      "bytes": 136606,
+      "sha256": "2958be9bc982486a6031b774ab78f7e6597a338caf9c7f3a5007f6277d40694f"
+    },
+    {
+      "name": "r13-paper-images/example-thesis-p46.png",
+      "bytes": 271898,
+      "sha256": "ff5073c415a1e184f715b9a6124edc5b233eaf52ed3eea9cbacebf03f2f8c293"
+    },
+    {
+      "name": "r13-paper-images/example-thesis-p47.png",
+      "bytes": 177851,
+      "sha256": "f29ab0d890e91d517a79010ed290a10c0f2148f0cf1d3f6c1892f7bf9cae7cb1"
+    },
+    {
+      "name": "r13-paper-images/example-thesis-p48.png",
+      "bytes": 179726,
+      "sha256": "0f9204377adf2af40e0c348d827c41d37155ae10fa9356033aeecc66c390ad17"
+    },
+    {
+      "name": "r13-paper-images/example-thesis-p49.png",
+      "bytes": 224972,
+      "sha256": "274f0bffc6668f9fb79a53cf90aeced77d4cb11a86c5710bf04c6c2c6a381f5c"
+    }
+  ],
+  "limitations": "Checks validate links, arithmetic, UTF8 and script syntax; they do not validate every substantive literature inference, certify future proposals, or execute builds/simulations."
+}

@@ -1,0 +1,184 @@
+====================================================================================================
+FAMILY B
+====================================================================================================
+Failed runs (no summary.json / no final checkpoint):
+   C-30F-d20181114-s10-r3-w08
+   C-30F-d20181116-s10-r1-w08
+   Mplus-30F-d20181116-s10-r1-w08
+Naive runs failed: 0
+
+Per-cell metrics (served, forced, ownBreak(>30s), late60, visible60, promised/alighted):
+d20181114-s10-r3-w07     C-30       served= 47 req=108 ack=442 nn=  0 forced=0.0000 prom= 47 al= 47 own=0.4468 l60=0.1702 vis60=0.2340
+d20181114-s10-r3-w07     C-30F      served= 47 req=108 ack=442 nn=  0 forced=0.0000 prom= 47 al= 47 own=0.1489 l60=0.0426 vis60=0.4043
+d20181114-s10-r3-w07     Mplus-30   served= 47 req=108 ack=442 nn=321 forced=0.7262 prom= 47 al= 47 own=0.4468 l60=0.1702 vis60=0.2340
+d20181114-s10-r3-w07     Mplus-30F  served= 47 req=108 ack=442 nn=284 forced=0.6425 prom= 47 al= 47 own=0.1489 l60=0.0426 vis60=0.4043
+d20181114-s10-r4-w07     C-30       served= 53 req=108 ack=479 nn=  0 forced=0.0000 prom= 53 al= 53 own=0.2453 l60=0.1132 vis60=0.1132
+d20181114-s10-r4-w07     C-30F      served= 51 req=108 ack=466 nn=  0 forced=0.0000 prom= 51 al= 51 own=0.0588 l60=0.0000 vis60=0.1373
+d20181114-s10-r4-w07     Mplus-30   served= 53 req=108 ack=479 nn=370 forced=0.7724 prom= 53 al= 53 own=0.2453 l60=0.1132 vis60=0.1132
+d20181114-s10-r4-w07     Mplus-30F  served= 51 req=108 ack=466 nn=147 forced=0.3155 prom= 51 al= 51 own=0.0588 l60=0.0000 vis60=0.1373
+d20181115-s10-r1-w07     C-30       served= 44 req=108 ack=421 nn=  0 forced=0.0000 prom= 44 al= 44 own=0.5000 l60=0.2273 vis60=0.2273
+d20181115-s10-r1-w07     C-30F      served= 48 req=108 ack=452 nn=  0 forced=0.0000 prom= 48 al= 48 own=0.1667 l60=0.0417 vis60=0.3542
+d20181115-s10-r1-w07     Mplus-30   served= 44 req=108 ack=421 nn=323 forced=0.7672 prom= 44 al= 44 own=0.5000 l60=0.2273 vis60=0.2273
+d20181115-s10-r1-w07     Mplus-30F  served= 48 req=108 ack=452 nn=327 forced=0.7235 prom= 48 al= 48 own=0.1667 l60=0.0417 vis60=0.3542
+d20181115-s10-r2-w07     C-30       served= 58 req=108 ack=514 nn=  0 forced=0.0000 prom= 58 al= 58 own=0.5345 l60=0.2069 vis60=0.2414
+d20181115-s10-r2-w07     C-30F      served= 52 req=108 ack=476 nn=  0 forced=0.0000 prom= 52 al= 52 own=0.1923 l60=0.0577 vis60=0.4231
+d20181115-s10-r2-w07     Mplus-30   served= 58 req=108 ack=514 nn=413 forced=0.8035 prom= 58 al= 58 own=0.5345 l60=0.2069 vis60=0.2414
+d20181115-s10-r2-w07     Mplus-30F  served= 52 req=108 ack=476 nn=328 forced=0.6891 prom= 52 al= 52 own=0.1923 l60=0.0577 vis60=0.4231
+d20181115-s10-r4-w07     C-30       served= 45 req=108 ack=428 nn=  0 forced=0.0000 prom= 45 al= 45 own=0.4000 l60=0.2222 vis60=0.2444
+d20181115-s10-r4-w07     C-30F      served= 46 req=108 ack=434 nn=  0 forced=0.0000 prom= 46 al= 46 own=0.1739 l60=0.0435 vis60=0.3261
+d20181115-s10-r4-w07     Mplus-30   served= 45 req=108 ack=428 nn=341 forced=0.7967 prom= 45 al= 45 own=0.4000 l60=0.2222 vis60=0.2444
+d20181115-s10-r4-w07     Mplus-30F  served= 46 req=108 ack=434 nn=344 forced=0.7926 prom= 46 al= 46 own=0.1739 l60=0.0435 vis60=0.3261
+d20181116-s10-r1-w07     C-30       served= 67 req=108 ack=583 nn=  0 forced=0.0000 prom= 67 al= 67 own=0.3582 l60=0.0448 vis60=0.0746
+d20181116-s10-r1-w07     C-30F      served= 68 req=108 ack=588 nn=  0 forced=0.0000 prom= 68 al= 68 own=0.0441 l60=0.0294 vis60=0.2353
+d20181116-s10-r1-w07     Mplus-30   served= 66 req=108 ack=577 nn=465 forced=0.8059 prom= 66 al= 66 own=0.3636 l60=0.0303 vis60=0.0606
+d20181116-s10-r1-w07     Mplus-30F  served= 67 req=108 ack=582 nn=281 forced=0.4828 prom= 67 al= 67 own=0.0299 l60=0.0299 vis60=0.2388
+d20181116-s10-r2-w07     C-30       served= 62 req=108 ack=538 nn=  0 forced=0.0000 prom= 62 al= 62 own=0.3226 l60=0.0968 vis60=0.1129
+d20181116-s10-r2-w07     C-30F      served= 61 req=108 ack=534 nn=  0 forced=0.0000 prom= 61 al= 61 own=0.0656 l60=0.0000 vis60=0.2459
+d20181116-s10-r2-w07     Mplus-30   served= 62 req=108 ack=538 nn=353 forced=0.6561 prom= 62 al= 62 own=0.2903 l60=0.0806 vis60=0.0968
+d20181116-s10-r2-w07     Mplus-30F  served= 61 req=108 ack=534 nn=299 forced=0.5599 prom= 61 al= 61 own=0.0492 l60=0.0000 vis60=0.2459
+d20181116-s10-r4-w07     C-30       served= 68 req=108 ack=590 nn=  0 forced=0.0000 prom= 68 al= 68 own=0.3382 l60=0.0735 vis60=0.1176
+d20181116-s10-r4-w07     C-30F      served= 67 req=108 ack=583 nn=  0 forced=0.0000 prom= 67 al= 67 own=0.0597 l60=0.0149 vis60=0.2090
+d20181116-s10-r4-w07     Mplus-30   served= 67 req=108 ack=584 nn=482 forced=0.8253 prom= 67 al= 67 own=0.3433 l60=0.0746 vis60=0.1194
+d20181116-s10-r4-w07     Mplus-30F  served= 67 req=108 ack=583 nn=318 forced=0.5455 prom= 67 al= 67 own=0.0597 l60=0.0149 vis60=0.2090
+d20181114-s10-r3-w08     C-30       served= 73 req=108 ack=621 nn=  0 forced=0.0000 prom= 73 al= 73 own=0.1096 l60=0.0274 vis60=0.0274
+d20181114-s10-r3-w08     C-30F      FAILED
+d20181114-s10-r3-w08     Mplus-30   served= 75 req=108 ack=635 nn=204 forced=0.3213 prom= 75 al= 75 own=0.0933 l60=0.0267 vis60=0.0267
+d20181114-s10-r3-w08     Mplus-30F  served= 79 req=108 ack=663 nn=188 forced=0.2836 prom= 79 al= 79 own=0.0127 l60=0.0127 vis60=0.0380
+d20181114-s10-r4-w08     C-30       served= 87 req=108 ack=718 nn=  0 forced=0.0000 prom= 87 al= 87 own=0.0230 l60=0.0000 vis60=0.0000
+d20181114-s10-r4-w08     C-30F      served= 85 req=108 ack=706 nn=  0 forced=0.0000 prom= 85 al= 85 own=0.0000 l60=0.0000 vis60=0.0000
+d20181114-s10-r4-w08     Mplus-30   served= 87 req=108 ack=718 nn=190 forced=0.2646 prom= 87 al= 87 own=0.0230 l60=0.0000 vis60=0.0000
+d20181114-s10-r4-w08     Mplus-30F  served= 85 req=108 ack=706 nn= 81 forced=0.1147 prom= 85 al= 85 own=0.0000 l60=0.0000 vis60=0.0000
+d20181115-s10-r1-w08     C-30       served= 70 req=108 ack=598 nn=  0 forced=0.0000 prom= 70 al= 70 own=0.0857 l60=0.0143 vis60=0.0286
+d20181115-s10-r1-w08     C-30F      served= 71 req=108 ack=604 nn=  0 forced=0.0000 prom= 71 al= 71 own=0.0563 l60=0.0000 vis60=0.0282
+d20181115-s10-r1-w08     Mplus-30   served= 70 req=108 ack=598 nn=364 forced=0.6087 prom= 70 al= 70 own=0.0857 l60=0.0143 vis60=0.0286
+d20181115-s10-r1-w08     Mplus-30F  served= 71 req=108 ack=604 nn=353 forced=0.5844 prom= 71 al= 71 own=0.0563 l60=0.0000 vis60=0.0282
+d20181115-s10-r2-w08     C-30       served= 80 req=108 ack=674 nn=  0 forced=0.0000 prom= 80 al= 80 own=0.0750 l60=0.0125 vis60=0.0250
+d20181115-s10-r2-w08     C-30F      served= 82 req=108 ack=689 nn=  0 forced=0.0000 prom= 82 al= 82 own=0.0488 l60=0.0000 vis60=0.0366
+d20181115-s10-r2-w08     Mplus-30   served= 80 req=108 ack=674 nn=317 forced=0.4703 prom= 80 al= 80 own=0.0750 l60=0.0125 vis60=0.0250
+d20181115-s10-r2-w08     Mplus-30F  served= 82 req=108 ack=689 nn=218 forced=0.3164 prom= 82 al= 82 own=0.0488 l60=0.0000 vis60=0.0366
+d20181115-s10-r4-w08     C-30       served= 79 req=108 ack=661 nn=  0 forced=0.0000 prom= 79 al= 79 own=0.0633 l60=0.0127 vis60=0.0253
+d20181115-s10-r4-w08     C-30F      served= 78 req=108 ack=655 nn=  0 forced=0.0000 prom= 78 al= 78 own=0.0256 l60=0.0000 vis60=0.0513
+d20181115-s10-r4-w08     Mplus-30   served= 79 req=108 ack=661 nn=222 forced=0.3359 prom= 79 al= 79 own=0.0633 l60=0.0127 vis60=0.0253
+d20181115-s10-r4-w08     Mplus-30F  served= 78 req=108 ack=655 nn=295 forced=0.4504 prom= 78 al= 78 own=0.0256 l60=0.0000 vis60=0.0513
+d20181116-s10-r1-w08     C-30       served= 81 req=108 ack=676 nn=  0 forced=0.0000 prom= 81 al= 81 own=0.0617 l60=0.0123 vis60=0.0123
+d20181116-s10-r1-w08     C-30F      FAILED
+d20181116-s10-r1-w08     Mplus-30   served= 81 req=108 ack=676 nn=261 forced=0.3861 prom= 81 al= 81 own=0.0617 l60=0.0123 vis60=0.0123
+d20181116-s10-r1-w08     Mplus-30F  FAILED
+d20181116-s10-r2-w08     C-30       served= 70 req=108 ack=600 nn=  0 forced=0.0000 prom= 70 al= 70 own=0.1143 l60=0.0143 vis60=0.0429
+d20181116-s10-r2-w08     C-30F      served= 72 req=108 ack=613 nn=  0 forced=0.0000 prom= 72 al= 72 own=0.0556 l60=0.0139 vis60=0.0139
+d20181116-s10-r2-w08     Mplus-30   served= 70 req=108 ack=600 nn=296 forced=0.4933 prom= 70 al= 70 own=0.1143 l60=0.0143 vis60=0.0429
+d20181116-s10-r2-w08     Mplus-30F  served= 72 req=108 ack=613 nn=115 forced=0.1876 prom= 72 al= 72 own=0.0556 l60=0.0139 vis60=0.0139
+d20181116-s10-r4-w08     C-30       served= 69 req=108 ack=599 nn=  0 forced=0.0000 prom= 69 al= 69 own=0.1304 l60=0.0145 vis60=0.0435
+d20181116-s10-r4-w08     C-30F      served= 69 req=108 ack=597 nn=  0 forced=0.0000 prom= 69 al= 69 own=0.0580 l60=0.0145 vis60=0.0435
+d20181116-s10-r4-w08     Mplus-30   served= 69 req=108 ack=599 nn=460 forced=0.7679 prom= 69 al= 69 own=0.1304 l60=0.0145 vis60=0.0435
+d20181116-s10-r4-w08     Mplus-30F  served= 69 req=108 ack=597 nn=271 forced=0.4539 prom= 69 al= 69 own=0.0580 l60=0.0145 vis60=0.0435
+
+CHAIN M  metric=forced  cells=15 (Mplus-30F completed)
+   mean naive (Mplus-30)  = 0.627703
+   mean forecast (Mplus-30F) = 0.476159
+   relative reduction = 24.1427%
+   mean diff (F - naive) = -15.15 pp ; stratified point = -15.15 pp
+      day-window d20181114-w07 (n=2): diff -27.04 pp
+      day-window d20181115-w07 (n=3): diff -5.41 pp
+      day-window d20181116-w07 (n=3): diff -23.31 pp
+      day-window d20181114-w08 (n=2): diff -9.38 pp
+      day-window d20181115-w08 (n=3): diff -2.12 pp
+      day-window d20181116-w08 (n=2): diff -30.99 pp
+   decreases in day-windows: 6/6
+   97.5% interval (125th, 9876th): [-25.52, -6.76] pp
+   strata sizes: [(3, 8), (3, 7)]
+   VERDICT: PERSISTS
+
+CHAIN M  metric=ownBreak  cells=15 (Mplus-30F completed)
+   mean naive (Mplus-30)  = 0.247258
+   mean forecast (Mplus-30F) = 0.075755
+   relative reduction = 69.3619%
+   mean diff (F - naive) = -17.15 pp ; stratified point = -17.15 pp
+      day-window d20181114-w07 (n=2): diff -24.22 pp
+      day-window d20181115-w07 (n=3): diff -30.05 pp
+      day-window d20181116-w07 (n=3): diff -28.62 pp
+      day-window d20181114-w08 (n=2): diff -5.18 pp
+      day-window d20181115-w08 (n=3): diff -3.11 pp
+      day-window d20181116-w08 (n=2): diff -6.56 pp
+   decreases in day-windows: 6/6
+   97.5% interval (125th, 9876th): [-18.66, -14.92] pp
+   strata sizes: [(3, 8), (3, 7)]
+   VERDICT: ARTEFACT
+
+CHAIN C  served(C-30F) - served(C-30), cells=14 (C-30F completed)
+      d20181114-s10-r3-w07: +0
+      d20181114-s10-r4-w07: -2
+      d20181115-s10-r1-w07: +4
+      d20181115-s10-r2-w07: -6
+      d20181115-s10-r4-w07: +1
+      d20181116-s10-r1-w07: +1
+      d20181116-s10-r2-w07: -1
+      d20181116-s10-r4-w07: -1
+      d20181114-s10-r4-w08: -2
+      d20181115-s10-r1-w08: +1
+      d20181115-s10-r2-w08: +2
+      d20181115-s10-r4-w08: -1
+      d20181116-s10-r2-w08: +2
+      d20181116-s10-r4-w08: +0
+   mean diff = -0.1429 (point stratified -0.1429)
+   97.5% interval: [-1.1429, 0.2381]
+   B-C1 (lower >= -2): PASS
+   (extra) worst case, failed C-30F = 0 served, 16 cells: mean -9.7500 [-19.0000, 0.0833] -> B-C1 FAIL
+
+C-30F over its 14 completed cells: mean visible60 = 0.1792, mean late60 = 0.0184
+   (context) C-30 naive over the same cells: visible60 = 0.1093, late60 = 0.0874
+   non-normal acknowledged decisions in completed C-30F runs: 0
+   (extra) non-normal in failed C-30F transcripts (acknowledged, produced): [('d20181114-s10-r3-w08', 0, 0), ('d20181116-s10-r1-w08', 0, 0)]
+   (extra) visible60 C-30F - C-30 per day-window: d20181114-w07 +0.0971, d20181115-w07 +0.1301, d20181116-w07 +0.1283, d20181114-w08 +0.0000, d20181115-w08 +0.0124, d20181116-w08 -0.0145 ; higher in 4/6
+
+served(C-30F) - served(Mplus-30F), cells=14 (both completed)
+      d20181114-s10-r3-w07: +0
+      d20181114-s10-r4-w07: +0
+      d20181115-s10-r1-w07: +0
+      d20181115-s10-r2-w07: +0
+      d20181115-s10-r4-w07: +0
+      d20181116-s10-r1-w07: +1
+      d20181116-s10-r2-w07: +0
+      d20181116-s10-r4-w07: +0
+      d20181114-s10-r4-w08: +0
+      d20181115-s10-r1-w08: +0
+      d20181115-s10-r2-w08: +0
+      d20181115-s10-r4-w08: +0
+      d20181116-s10-r2-w08: +0
+      d20181116-s10-r4-w08: +0
+   mean = 0.0714 ; 95% interval (250th, 9751st): [0.0000, 0.1905]
+w07 Mplus (cells=8): forced 0.7692 -> 0.5939 ; own-break 0.3905 -> 0.1099
+w08 Mplus (cells=7): forced 0.4660 -> 0.3416 ; own-break 0.0836 -> 0.0367
+(extra) C-30F w07 late60 = 0.0287 (cells=8); C-30 naive w07 late60 = 0.1444
+
+(extra) gate run Mplus-30-d20181115-s10-r4-w08: forecast-v1 copy equals T3.8 on ['served', 'ack', 'nonNormal', 'promised', 'ownBreakCount', 'late60Count', 'visible60Count']: True
+(extra) gate run C-30-d20181115-s10-r2-w07: forecast-v1 copy equals T3.8 on ['served', 'ack', 'nonNormal', 'promised', 'ownBreakCount', 'late60Count', 'visible60Count']: True
+
+====================================================================================================
+SNOW
+====================================================================================================
+m(b) window start 50400 s: 3.7447, 3.7339, 3.7488, 3.7452, 3.7756, 3.8230, 3.7612, 3.7330, 3.7619
+   g(b)/g(0) ratios relative to bin 0: 1.0000, 0.9971, 1.0011, 1.0001, 1.0082, 1.0209, 1.0044, 0.9969, 1.0046
+m(b) window start 54000 s: 3.7756, 3.8230, 3.7612, 3.7330, 3.7619, 3.7412, 3.6576, 3.7106, 3.7726
+   g(b)/g(0) ratios relative to bin 0: 1.0000, 1.0126, 0.9962, 0.9887, 0.9964, 0.9909, 0.9688, 0.9828, 0.9992
+d20181115-s10-r1-w14   served= 86 late_naive= 2 (0.0233) late_disp= 1 (0.0116)
+d20181115-s10-r1-w15   served= 75 late_naive= 6 (0.0800) late_disp= 5 (0.0667)
+d20181115-s10-r2-w14   served= 74 late_naive= 6 (0.0811) late_disp= 6 (0.0811)
+d20181115-s10-r2-w15   served= 66 late_naive= 4 (0.0606) late_disp= 4 (0.0606)
+d20181115-s10-r3-w14   served= 80 late_naive= 6 (0.0750) late_disp= 6 (0.0750)
+d20181115-s10-r3-w15   served= 85 late_naive= 1 (0.0118) late_disp= 0 (0.0000)
+d20181115-s10-r4-w14   served= 75 late_naive= 7 (0.0933) late_disp= 6 (0.0800)
+d20181115-s10-r4-w15   served= 60 late_naive= 9 (0.1500) late_disp= 6 (0.1000)
+Y_naive (cell mean over 8 cells) = 0.0719
+Y_disp  (cell mean over 8 cells) = 0.0594
+share of Y_naive removed by display = 17.40%
+LEDGER over 41 riders with A - P0 > 60 s:
+   total A - P0      = 3445.9 s
+   dispatch          = 8.6 s
+   anticipated       = 251.5 s
+   unanticipated     = 3185.9 s
+   unanticipated share of total = 92.45%
+   check: dispatch + anticipated + unanticipated - total = 0.0 ms
+float vs exact display classification/value mismatches: 0
+
+INTEGRITY ISSUES (0):

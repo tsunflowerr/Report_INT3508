@@ -1,0 +1,2244 @@
+{
+  "kind": "all-incumbent-orders-same-state-original-E1-validator-audit",
+  "allOrders": true,
+  "auditHead": true,
+  "halfWidthMs": 150000,
+  "noticeMs": 180000,
+  "intervalRows": [
+    {
+      "epoch": 304,
+      "vehicle": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+      "preservesHead": true,
+      "Control": true,
+      "originalWitnesses": [
+        {
+          "Stage": 4,
+          "Code": "COMMITMENT_BUDGET_EXCEEDED",
+          "Message": "The candidate exceeds a hard commitment dimension.",
+          "VehicleId": {
+            "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+          },
+          "RequestId": {
+            "Value": "rq-2a6ad52ed3548683aeec52f607a5daba013e9e59a63420f84e4aa3c88f85b035"
+          },
+          "Dimension": "drop_eta_total_ms",
+          "Rule": null,
+          "Limit": 30000,
+          "Before": 0,
+          "Delta": 86142,
+          "After": 86142
+        }
+      ],
+      "remainingConstraintsPass": true,
+      "remainingWitnesses": [],
+      "allInitialContain": true,
+      "allChangedBeforeDeadline": true,
+      "historyContained": true,
+      "opportunity": true,
+      "details": [
+        {
+          "request": "rq-2a6ad52ed3548683aeec52f607a5daba013e9e59a63420f84e4aa3c88f85b035",
+          "initialDropMs": 4030070,
+          "oldEtaMs": 4030241,
+          "newEtaMs": 4116383,
+          "deltaMs": 86142,
+          "changed": true,
+          "lowerMs": 3880070,
+          "upperMs": 4180070,
+          "deadlineMs": 3700070,
+          "nowMs": 2983000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    },
+    {
+      "epoch": 374,
+      "vehicle": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+      "preservesHead": true,
+      "Control": true,
+      "originalWitnesses": [
+        {
+          "Stage": 4,
+          "Code": "COMMITMENT_BUDGET_EXCEEDED",
+          "Message": "The candidate exceeds a hard commitment dimension.",
+          "VehicleId": {
+            "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+          },
+          "RequestId": {
+            "Value": "rq-325394a72c62cf6addb87604d7886d48dd7d8f327490cfbf5d90e01bbd8d2942"
+          },
+          "Dimension": "drop_eta_total_ms",
+          "Rule": null,
+          "Limit": 30000,
+          "Before": 0,
+          "Delta": 123060,
+          "After": 123060
+        }
+      ],
+      "remainingConstraintsPass": true,
+      "remainingWitnesses": [],
+      "allInitialContain": true,
+      "allChangedBeforeDeadline": true,
+      "historyContained": true,
+      "opportunity": true,
+      "details": [
+        {
+          "request": "rq-325394a72c62cf6addb87604d7886d48dd7d8f327490cfbf5d90e01bbd8d2942",
+          "initialDropMs": 4708306,
+          "oldEtaMs": 4708391,
+          "newEtaMs": 4831451,
+          "deltaMs": 123060,
+          "changed": true,
+          "lowerMs": 4558306,
+          "upperMs": 4858306,
+          "deadlineMs": 4378306,
+          "nowMs": 3843000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    },
+    {
+      "epoch": 388,
+      "vehicle": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+      "preservesHead": false,
+      "Control": true,
+      "originalWitnesses": [
+        {
+          "Stage": 4,
+          "Code": "COMMITMENT_BUDGET_EXCEEDED",
+          "Message": "The candidate exceeds a hard commitment dimension.",
+          "VehicleId": {
+            "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+          },
+          "RequestId": {
+            "Value": "rq-ea96757aa62aa656ab3283f5e2f92ee6cd356e5ce36b3c449d7ff2112167d32f"
+          },
+          "Dimension": "drop_eta_total_ms",
+          "Rule": null,
+          "Limit": 30000,
+          "Before": 0,
+          "Delta": 118958,
+          "After": 118958
+        }
+      ],
+      "remainingConstraintsPass": true,
+      "remainingWitnesses": [],
+      "allInitialContain": true,
+      "allChangedBeforeDeadline": true,
+      "historyContained": true,
+      "opportunity": false,
+      "details": [
+        {
+          "request": "rq-2a6ad52ed3548683aeec52f607a5daba013e9e59a63420f84e4aa3c88f85b035",
+          "initialDropMs": 4030070,
+          "oldEtaMs": 4030398,
+          "newEtaMs": 4030398,
+          "deltaMs": 0,
+          "changed": false,
+          "lowerMs": 3880070,
+          "upperMs": 4180070,
+          "deadlineMs": 3700070,
+          "nowMs": 3975000,
+          "pastInside": true,
+          "lifecycle": "Onboard"
+        },
+        {
+          "request": "rq-ea96757aa62aa656ab3283f5e2f92ee6cd356e5ce36b3c449d7ff2112167d32f",
+          "initialDropMs": 4494344,
+          "oldEtaMs": 4493924,
+          "newEtaMs": 4612882,
+          "deltaMs": 118958,
+          "changed": true,
+          "lowerMs": 4344344,
+          "upperMs": 4644344,
+          "deadlineMs": 4164344,
+          "nowMs": 3975000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    },
+    {
+      "epoch": 388,
+      "vehicle": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+      "preservesHead": false,
+      "Control": true,
+      "originalWitnesses": [
+        {
+          "Stage": 4,
+          "Code": "COMMITMENT_BUDGET_EXCEEDED",
+          "Message": "The candidate exceeds a hard commitment dimension.",
+          "VehicleId": {
+            "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+          },
+          "RequestId": {
+            "Value": "rq-ea96757aa62aa656ab3283f5e2f92ee6cd356e5ce36b3c449d7ff2112167d32f"
+          },
+          "Dimension": "drop_eta_total_ms",
+          "Rule": null,
+          "Limit": 30000,
+          "Before": 0,
+          "Delta": 118958,
+          "After": 118958
+        }
+      ],
+      "remainingConstraintsPass": true,
+      "remainingWitnesses": [],
+      "allInitialContain": true,
+      "allChangedBeforeDeadline": true,
+      "historyContained": true,
+      "opportunity": false,
+      "details": [
+        {
+          "request": "rq-2a6ad52ed3548683aeec52f607a5daba013e9e59a63420f84e4aa3c88f85b035",
+          "initialDropMs": 4030070,
+          "oldEtaMs": 4030398,
+          "newEtaMs": 4030398,
+          "deltaMs": 0,
+          "changed": false,
+          "lowerMs": 3880070,
+          "upperMs": 4180070,
+          "deadlineMs": 3700070,
+          "nowMs": 3975000,
+          "pastInside": true,
+          "lifecycle": "Onboard"
+        },
+        {
+          "request": "rq-ea96757aa62aa656ab3283f5e2f92ee6cd356e5ce36b3c449d7ff2112167d32f",
+          "initialDropMs": 4494344,
+          "oldEtaMs": 4493924,
+          "newEtaMs": 4612882,
+          "deltaMs": 118958,
+          "changed": true,
+          "lowerMs": 4344344,
+          "upperMs": 4644344,
+          "deadlineMs": 4164344,
+          "nowMs": 3975000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    },
+    {
+      "epoch": 394,
+      "vehicle": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+      "preservesHead": false,
+      "Control": true,
+      "originalWitnesses": [
+        {
+          "Stage": 3,
+          "Code": "COMMITMENT_PHASE_LOCK",
+          "Message": "The candidate changes a phase-locked promise field.",
+          "VehicleId": {
+            "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+          },
+          "RequestId": {
+            "Value": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a"
+          },
+          "Dimension": "pickup_eta_ms",
+          "Rule": "final_confirmation",
+          "Limit": null,
+          "Before": null,
+          "Delta": null,
+          "After": null
+        }
+      ],
+      "remainingConstraintsPass": false,
+      "remainingWitnesses": [
+        {
+          "Stage": 3,
+          "Code": "COMMITMENT_PHASE_LOCK",
+          "Message": "The candidate changes a phase-locked promise field.",
+          "VehicleId": {
+            "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+          },
+          "RequestId": {
+            "Value": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a"
+          },
+          "Dimension": "pickup_eta_ms",
+          "Rule": "final_confirmation",
+          "Limit": null,
+          "Before": null,
+          "Delta": null,
+          "After": null
+        }
+      ],
+      "allInitialContain": false,
+      "allChangedBeforeDeadline": true,
+      "historyContained": true,
+      "opportunity": false,
+      "details": [
+        {
+          "request": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a",
+          "initialDropMs": 4461384,
+          "oldEtaMs": 4461414,
+          "newEtaMs": 4676769,
+          "deltaMs": 215355,
+          "changed": true,
+          "lowerMs": 4311384,
+          "upperMs": 4611384,
+          "deadlineMs": 4131384,
+          "nowMs": 4058000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    },
+    {
+      "epoch": 394,
+      "vehicle": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+      "preservesHead": true,
+      "Control": true,
+      "originalWitnesses": [
+        {
+          "Stage": 4,
+          "Code": "COMMITMENT_BUDGET_EXCEEDED",
+          "Message": "The candidate exceeds a hard commitment dimension.",
+          "VehicleId": {
+            "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+          },
+          "RequestId": {
+            "Value": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a"
+          },
+          "Dimension": "drop_eta_total_ms",
+          "Rule": null,
+          "Limit": 30000,
+          "Before": 0,
+          "Delta": 71785,
+          "After": 71785
+        }
+      ],
+      "remainingConstraintsPass": true,
+      "remainingWitnesses": [],
+      "allInitialContain": true,
+      "allChangedBeforeDeadline": true,
+      "historyContained": true,
+      "opportunity": true,
+      "details": [
+        {
+          "request": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a",
+          "initialDropMs": 4461384,
+          "oldEtaMs": 4461414,
+          "newEtaMs": 4533199,
+          "deltaMs": 71785,
+          "changed": true,
+          "lowerMs": 4311384,
+          "upperMs": 4611384,
+          "deadlineMs": 4131384,
+          "nowMs": 4058000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    },
+    {
+      "epoch": 458,
+      "vehicle": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+      "preservesHead": true,
+      "Control": true,
+      "originalWitnesses": [
+        {
+          "Stage": 3,
+          "Code": "COMMITMENT_PHASE_LOCK",
+          "Message": "The candidate changes a phase-locked promise field.",
+          "VehicleId": {
+            "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+          },
+          "RequestId": {
+            "Value": "rq-f9288c97ebefbd3e9e0d5e2eb91db9215b7cfc3adf773d49cb486d1507c21525"
+          },
+          "Dimension": "pickup_eta_ms",
+          "Rule": "final_confirmation",
+          "Limit": null,
+          "Before": null,
+          "Delta": null,
+          "After": null
+        }
+      ],
+      "remainingConstraintsPass": false,
+      "remainingWitnesses": [
+        {
+          "Stage": 3,
+          "Code": "COMMITMENT_PHASE_LOCK",
+          "Message": "The candidate changes a phase-locked promise field.",
+          "VehicleId": {
+            "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+          },
+          "RequestId": {
+            "Value": "rq-f9288c97ebefbd3e9e0d5e2eb91db9215b7cfc3adf773d49cb486d1507c21525"
+          },
+          "Dimension": "pickup_eta_ms",
+          "Rule": "final_confirmation",
+          "Limit": null,
+          "Before": null,
+          "Delta": null,
+          "After": null
+        }
+      ],
+      "allInitialContain": false,
+      "allChangedBeforeDeadline": true,
+      "historyContained": true,
+      "opportunity": false,
+      "details": [
+        {
+          "request": "rq-77387e5664671b9e2859e758c435a1627a7bf4c5ddec54852b2ab5fb789cdb06",
+          "initialDropMs": 4969496,
+          "oldEtaMs": 4969490,
+          "newEtaMs": 4969490,
+          "deltaMs": 0,
+          "changed": false,
+          "lowerMs": 4819496,
+          "upperMs": 5119496,
+          "deadlineMs": 4639496,
+          "nowMs": 4863000,
+          "pastInside": true,
+          "lifecycle": "Onboard"
+        },
+        {
+          "request": "rq-f9288c97ebefbd3e9e0d5e2eb91db9215b7cfc3adf773d49cb486d1507c21525",
+          "initialDropMs": 5340788,
+          "oldEtaMs": 5340721,
+          "newEtaMs": 5572484,
+          "deltaMs": 231763,
+          "changed": true,
+          "lowerMs": 5190788,
+          "upperMs": 5490788,
+          "deadlineMs": 5010788,
+          "nowMs": 4863000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    },
+    {
+      "epoch": 459,
+      "vehicle": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+      "preservesHead": false,
+      "Control": true,
+      "originalWitnesses": [
+        {
+          "Stage": 4,
+          "Code": "COMMITMENT_BUDGET_EXCEEDED",
+          "Message": "The candidate exceeds a hard commitment dimension.",
+          "VehicleId": {
+            "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+          },
+          "RequestId": {
+            "Value": "rq-770524f07d580e5c6b769a5db273cac0c132b6983351f15e59a74209c257376d"
+          },
+          "Dimension": "drop_eta_total_ms",
+          "Rule": null,
+          "Limit": 30000,
+          "Before": 0,
+          "Delta": 258426,
+          "After": 258426
+        }
+      ],
+      "remainingConstraintsPass": true,
+      "remainingWitnesses": [],
+      "allInitialContain": false,
+      "allChangedBeforeDeadline": true,
+      "historyContained": true,
+      "opportunity": false,
+      "details": [
+        {
+          "request": "rq-770524f07d580e5c6b769a5db273cac0c132b6983351f15e59a74209c257376d",
+          "initialDropMs": 5891560,
+          "oldEtaMs": 5891700,
+          "newEtaMs": 6150126,
+          "deltaMs": 258426,
+          "changed": true,
+          "lowerMs": 5741560,
+          "upperMs": 6041560,
+          "deadlineMs": 5561560,
+          "nowMs": 4882000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    },
+    {
+      "epoch": 459,
+      "vehicle": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+      "preservesHead": false,
+      "Control": true,
+      "originalWitnesses": [
+        {
+          "Stage": 4,
+          "Code": "COMMITMENT_BUDGET_EXCEEDED",
+          "Message": "The candidate exceeds a hard commitment dimension.",
+          "VehicleId": {
+            "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+          },
+          "RequestId": {
+            "Value": "rq-770524f07d580e5c6b769a5db273cac0c132b6983351f15e59a74209c257376d"
+          },
+          "Dimension": "drop_eta_total_ms",
+          "Rule": null,
+          "Limit": 30000,
+          "Before": 0,
+          "Delta": 258426,
+          "After": 258426
+        }
+      ],
+      "remainingConstraintsPass": true,
+      "remainingWitnesses": [],
+      "allInitialContain": false,
+      "allChangedBeforeDeadline": true,
+      "historyContained": true,
+      "opportunity": false,
+      "details": [
+        {
+          "request": "rq-770524f07d580e5c6b769a5db273cac0c132b6983351f15e59a74209c257376d",
+          "initialDropMs": 5891560,
+          "oldEtaMs": 5891700,
+          "newEtaMs": 6150126,
+          "deltaMs": 258426,
+          "changed": true,
+          "lowerMs": 5741560,
+          "upperMs": 6041560,
+          "deadlineMs": 5561560,
+          "nowMs": 4882000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    }
+  ],
+  "limitation": "Hypothetical pre-deadline interval opportunity only. Same original C1 states; no new contract executed, no post-deadline narrowing simulated, no closed-loop gain. Head-preserving candidates only count as opportunities.",
+  "rows": [
+    {
+      "epoch": 20,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 439,
+      "expectedAllOrders": 439,
+      "maxSuffix": 4,
+      "screenRemoved": 359,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 263,
+        "physical:PRECEDENCE": 168,
+        "physical:MAX_RIDE_TIME": 8
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [],
+      "elapsedMs": 14.1912,
+      "inputStateSha256": "9fd92358730bd2f7a9f76ba80ed855ac66282a58484950ce0ac1f250ec2607fb"
+    },
+    {
+      "epoch": 275,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 393,
+      "expectedAllOrders": 393,
+      "maxSuffix": 4,
+      "screenRemoved": 322,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 251,
+        "physical:MAX_RIDE_TIME": 43,
+        "physical:PRECEDENCE": 99
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [],
+      "elapsedMs": 20.8098,
+      "inputStateSha256": "7a2c9323fd7cbe48212c8e7908a631b2d8d228c6ee33b30b62fe79967a7b796a"
+    },
+    {
+      "epoch": 304,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 415,
+      "expectedAllOrders": 415,
+      "maxSuffix": 4,
+      "screenRemoved": 340,
+      "physicalPass": 1,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 109,
+        "physical:PRECEDENCE": 128,
+        "commitment:COMMITMENT_BUDGET_EXCEEDED": 1,
+        "physical:MAX_RIDE_TIME": 177
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [
+        {
+          "vehicle": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+          "preservesHead": true,
+          "Control": true,
+          "route": [
+            {
+              "stop": "rb-p-8266e211baefc9ac05edd40c199ed517d34f3bfb9d72b9a108dec27fee5c5497",
+              "node": "node-3c974b86434c7b5cb09d0b94f777602a895c01ffe00fd5fdc7ded77748b619e6",
+              "kind": "Pickup",
+              "request": "rq-2a6ad52ed3548683aeec52f607a5daba013e9e59a63420f84e4aa3c88f85b035"
+            },
+            {
+              "stop": "rb-p-6650e9230140f9df4a9748e3397b44350f3497b19e7f045804369e848e9d9b0e",
+              "node": "node-80596fd3603b21c8cb1cc6fe83c41149fa641602fe1b1bd062c6a96b8e270ad9",
+              "kind": "Pickup",
+              "request": "rq-cca1825d16fd4a465fa1aeb8d46c6bc245dc7bba48e81970f3894e4eca79a497"
+            },
+            {
+              "stop": "rb-d-64f3050505d4433a19b8db8fa4daca6d90c0b06d0751f512932150a600374af2",
+              "node": "node-747149bd57639a04d4802cbcbafd62b569f5725e6ba21e25ce0a4328f1873b86",
+              "kind": "DropOff",
+              "request": "rq-cca1825d16fd4a465fa1aeb8d46c6bc245dc7bba48e81970f3894e4eca79a497"
+            },
+            {
+              "stop": "rb-d-bf7b4885e280c3b4a8bd6dc22afc94a03595a7d88dee5471fbfe232ebf4ed0be",
+              "node": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+              "kind": "DropOff",
+              "request": "rq-2a6ad52ed3548683aeec52f607a5daba013e9e59a63420f84e4aa3c88f85b035"
+            }
+          ],
+          "beforeSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-8266e211baefc9ac05edd40c199ed517d34f3bfb9d72b9a108dec27fee5c5497"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 3271371
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 3271371
+                },
+                "DepartureTime": {
+                  "Milliseconds": 3271371
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-bf7b4885e280c3b4a8bd6dc22afc94a03595a7d88dee5471fbfe232ebf4ed0be"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4030241
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4030241
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4030241
+                }
+              }
+            ],
+            "OperationalCost": 1047241
+          },
+          "afterSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-8266e211baefc9ac05edd40c199ed517d34f3bfb9d72b9a108dec27fee5c5497"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 3271371
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 3271371
+                },
+                "DepartureTime": {
+                  "Milliseconds": 3271371
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-6650e9230140f9df4a9748e3397b44350f3497b19e7f045804369e848e9d9b0e"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 3421094
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 3421094
+                },
+                "DepartureTime": {
+                  "Milliseconds": 3421094
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-64f3050505d4433a19b8db8fa4daca6d90c0b06d0751f512932150a600374af2"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 3521593
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 3521593
+                },
+                "DepartureTime": {
+                  "Milliseconds": 3521593
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-bf7b4885e280c3b4a8bd6dc22afc94a03595a7d88dee5471fbfe232ebf4ed0be"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4116383
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4116383
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4116383
+                }
+              }
+            ],
+            "OperationalCost": 1133383
+          },
+          "witnesses": [
+            {
+              "Stage": 4,
+              "Code": "COMMITMENT_BUDGET_EXCEEDED",
+              "Message": "The candidate exceeds a hard commitment dimension.",
+              "VehicleId": {
+                "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              },
+              "RequestId": {
+                "Value": "rq-2a6ad52ed3548683aeec52f607a5daba013e9e59a63420f84e4aa3c88f85b035"
+              },
+              "Dimension": "drop_eta_total_ms",
+              "Rule": null,
+              "Limit": 30000,
+              "Before": 0,
+              "Delta": 86142,
+              "After": 86142
+            }
+          ]
+        }
+      ],
+      "elapsedMs": 40.082,
+      "inputStateSha256": "9994cce975ecb05341e9322383c4d02f306f2a4a556afc97829f864000511ada"
+    },
+    {
+      "epoch": 321,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 124,
+      "expectedAllOrders": 124,
+      "maxSuffix": 3,
+      "screenRemoved": 95,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 33,
+        "physical:MAX_RIDE_TIME": 44,
+        "physical:PRECEDENCE": 47
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [],
+      "elapsedMs": 6.7785,
+      "inputStateSha256": "a764e13f76c2e06f1ce6ee012fa0ccc9d7bcf968d3eec1a12a2b5695fbb644ce"
+    },
+    {
+      "epoch": 334,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 49,
+      "expectedAllOrders": 49,
+      "maxSuffix": 2,
+      "screenRemoved": 37,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 23,
+        "physical:MAX_RIDE_TIME": 8,
+        "physical:PRECEDENCE": 18
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [],
+      "elapsedMs": 1.6014,
+      "inputStateSha256": "43311e3d4f08e9fedce0dc32029f7a7138a754b7e790bfc5d49dce2e2e4653d2"
+    },
+    {
+      "epoch": 373,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 511,
+      "expectedAllOrders": 511,
+      "maxSuffix": 4,
+      "screenRemoved": 418,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 129,
+        "physical:PRECEDENCE": 310,
+        "physical:MAX_RIDE_TIME": 72
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [],
+      "elapsedMs": 20.1559,
+      "inputStateSha256": "1153e57af9ba32c5497bbac94d57c19b29ec9a94425a12a692fdd67810a85ced"
+    },
+    {
+      "epoch": 374,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 511,
+      "expectedAllOrders": 511,
+      "maxSuffix": 4,
+      "screenRemoved": 418,
+      "physicalPass": 1,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 183,
+        "physical:PRECEDENCE": 282,
+        "physical:MAX_RIDE_TIME": 45,
+        "commitment:COMMITMENT_BUDGET_EXCEEDED": 1
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [
+        {
+          "vehicle": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+          "preservesHead": true,
+          "Control": true,
+          "route": [
+            {
+              "stop": "rb-p-253f75d09c48937d593b65021921aca35406c79739d7ba4dfd0e4a477b6f7b0b",
+              "node": "node-1311d6170ec2d6b865e3c005ca032bb18483fcc7cfc7c05b6f12e12a84729ebc",
+              "kind": "Pickup",
+              "request": "rq-325394a72c62cf6addb87604d7886d48dd7d8f327490cfbf5d90e01bbd8d2942"
+            },
+            {
+              "stop": "rb-p-b1039464da066118e1e9ca62646e68a8fea2d3aae16b3f79f12f2aaca6f9c874",
+              "node": "node-5e5c4bf1a085e4813eaaea0b87f3cf2eb3c5d85610b3fd1c53ee47fe08d40b29",
+              "kind": "Pickup",
+              "request": "rq-2131fe16917c8af215730645c55e8bd4ff75c16dffcc661b8c42148c8759d7a8"
+            },
+            {
+              "stop": "rb-d-82769338006328d8ef03b56eb86633c17705236c69c3b9dd99368ff2cd4f20ce",
+              "node": "node-6eb906e51db8a19b16ee2ec1aaa55464071c7319c675efc30c4959a7a7fa4471",
+              "kind": "DropOff",
+              "request": "rq-2131fe16917c8af215730645c55e8bd4ff75c16dffcc661b8c42148c8759d7a8"
+            },
+            {
+              "stop": "rb-d-32d7b2d08fb06f754fa11c8d4e3c13c1737aecd20fcc01a2b9b8f6a2562fb072",
+              "node": "node-a5d545a12cfc68bd09ce2dafbb6a9b798f429f98b5240fd1cf31ad4a5af9babb",
+              "kind": "DropOff",
+              "request": "rq-325394a72c62cf6addb87604d7886d48dd7d8f327490cfbf5d90e01bbd8d2942"
+            }
+          ],
+          "beforeSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-253f75d09c48937d593b65021921aca35406c79739d7ba4dfd0e4a477b6f7b0b"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4113601
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4113601
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4113601
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-32d7b2d08fb06f754fa11c8d4e3c13c1737aecd20fcc01a2b9b8f6a2562fb072"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4708391
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4708391
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4708391
+                }
+              }
+            ],
+            "OperationalCost": 865391
+          },
+          "afterSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-253f75d09c48937d593b65021921aca35406c79739d7ba4dfd0e4a477b6f7b0b"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4113601
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4113601
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4113601
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-b1039464da066118e1e9ca62646e68a8fea2d3aae16b3f79f12f2aaca6f9c874"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4328956
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4328956
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4328956
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-82769338006328d8ef03b56eb86633c17705236c69c3b9dd99368ff2cd4f20ce"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4458169
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4458169
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4458169
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-32d7b2d08fb06f754fa11c8d4e3c13c1737aecd20fcc01a2b9b8f6a2562fb072"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4831451
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4831451
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4831451
+                }
+              }
+            ],
+            "OperationalCost": 988451
+          },
+          "witnesses": [
+            {
+              "Stage": 4,
+              "Code": "COMMITMENT_BUDGET_EXCEEDED",
+              "Message": "The candidate exceeds a hard commitment dimension.",
+              "VehicleId": {
+                "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              },
+              "RequestId": {
+                "Value": "rq-325394a72c62cf6addb87604d7886d48dd7d8f327490cfbf5d90e01bbd8d2942"
+              },
+              "Dimension": "drop_eta_total_ms",
+              "Rule": null,
+              "Limit": 30000,
+              "Before": 0,
+              "Delta": 123060,
+              "After": 123060
+            }
+          ]
+        }
+      ],
+      "elapsedMs": 29.9318,
+      "inputStateSha256": "c67305a320d38ed9ca29dd8c7bda73e02ec24fc247487d1dd4a630da2c7ad308"
+    },
+    {
+      "epoch": 378,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 509,
+      "expectedAllOrders": 509,
+      "maxSuffix": 4,
+      "screenRemoved": 416,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 205,
+        "physical:PRECEDENCE": 268,
+        "physical:MAX_RIDE_TIME": 36
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [],
+      "elapsedMs": 18.3764,
+      "inputStateSha256": "2210e355973692821cadb063ecddb955d810053d1aba015f0e88298fe2697d8e"
+    },
+    {
+      "epoch": 388,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 159,
+      "expectedAllOrders": 159,
+      "maxSuffix": 3,
+      "screenRemoved": 129,
+      "physicalPass": 2,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 41,
+        "physical:PRECEDENCE": 70,
+        "physical:MAX_RIDE_TIME": 46,
+        "commitment:COMMITMENT_BUDGET_EXCEEDED": 2
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [
+        {
+          "vehicle": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+          "preservesHead": false,
+          "Control": true,
+          "route": [
+            {
+              "stop": "rb-p-77fe439bc9a0cfc540109d36d748549a959b78fd0fbfc4e71adfa62fd7a11388",
+              "node": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+              "kind": "Pickup",
+              "request": "rq-ffac2a946e4e7cdca072246df1909676269e298b0227baad877fec810fe45f1d"
+            },
+            {
+              "stop": "rb-d-bf7b4885e280c3b4a8bd6dc22afc94a03595a7d88dee5471fbfe232ebf4ed0be",
+              "node": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+              "kind": "DropOff",
+              "request": "rq-2a6ad52ed3548683aeec52f607a5daba013e9e59a63420f84e4aa3c88f85b035"
+            },
+            {
+              "stop": "rb-p-50d7821114911125e74df68449d90306fcd893f1f84c61cd16b6a7247e87e70f",
+              "node": "node-8d69abde9ee3652ea6bf867698a8151f4923ec2d014c6b3a6c78b691fdd07f77",
+              "kind": "Pickup",
+              "request": "rq-ea96757aa62aa656ab3283f5e2f92ee6cd356e5ce36b3c449d7ff2112167d32f"
+            },
+            {
+              "stop": "rb-d-0f0ee6baba3dfa946cb95f6fddf5fba397a49eb482e22b9da49c322af36f9aed",
+              "node": "node-11eb1e51343eae00a1840b2a81a56366a35b126628c9883e5fe3d9e20052f98b",
+              "kind": "DropOff",
+              "request": "rq-ffac2a946e4e7cdca072246df1909676269e298b0227baad877fec810fe45f1d"
+            },
+            {
+              "stop": "rb-d-3def44a26f502a7876837748cfeb3f77706209f27c7a2c518d42594641be93b3",
+              "node": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+              "kind": "DropOff",
+              "request": "rq-ea96757aa62aa656ab3283f5e2f92ee6cd356e5ce36b3c449d7ff2112167d32f"
+            }
+          ],
+          "beforeSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-d-bf7b4885e280c3b4a8bd6dc22afc94a03595a7d88dee5471fbfe232ebf4ed0be"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4030398
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4030398
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4030398
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-50d7821114911125e74df68449d90306fcd893f1f84c61cd16b6a7247e87e70f"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4225243
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4225243
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4225243
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-3def44a26f502a7876837748cfeb3f77706209f27c7a2c518d42594641be93b3"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4493924
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4493924
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4493924
+                }
+              }
+            ],
+            "OperationalCost": 518924
+          },
+          "afterSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-77fe439bc9a0cfc540109d36d748549a959b78fd0fbfc4e71adfa62fd7a11388"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4030398
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4030398
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4030398
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-bf7b4885e280c3b4a8bd6dc22afc94a03595a7d88dee5471fbfe232ebf4ed0be"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4030398
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4030398
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4030398
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-50d7821114911125e74df68449d90306fcd893f1f84c61cd16b6a7247e87e70f"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4225243
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4225243
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4225243
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-0f0ee6baba3dfa946cb95f6fddf5fba397a49eb482e22b9da49c322af36f9aed"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4401629
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4401629
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4401629
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-3def44a26f502a7876837748cfeb3f77706209f27c7a2c518d42594641be93b3"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4612882
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4612882
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4612882
+                }
+              }
+            ],
+            "OperationalCost": 637882
+          },
+          "witnesses": [
+            {
+              "Stage": 4,
+              "Code": "COMMITMENT_BUDGET_EXCEEDED",
+              "Message": "The candidate exceeds a hard commitment dimension.",
+              "VehicleId": {
+                "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              },
+              "RequestId": {
+                "Value": "rq-ea96757aa62aa656ab3283f5e2f92ee6cd356e5ce36b3c449d7ff2112167d32f"
+              },
+              "Dimension": "drop_eta_total_ms",
+              "Rule": null,
+              "Limit": 30000,
+              "Before": 0,
+              "Delta": 118958,
+              "After": 118958
+            }
+          ]
+        },
+        {
+          "vehicle": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+          "preservesHead": false,
+          "Control": true,
+          "route": [
+            {
+              "stop": "rb-d-bf7b4885e280c3b4a8bd6dc22afc94a03595a7d88dee5471fbfe232ebf4ed0be",
+              "node": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+              "kind": "DropOff",
+              "request": "rq-2a6ad52ed3548683aeec52f607a5daba013e9e59a63420f84e4aa3c88f85b035"
+            },
+            {
+              "stop": "rb-p-77fe439bc9a0cfc540109d36d748549a959b78fd0fbfc4e71adfa62fd7a11388",
+              "node": "node-8a0db9d90061e8c90a895079eccafb7db21cae015be709c80514519f127ce02e",
+              "kind": "Pickup",
+              "request": "rq-ffac2a946e4e7cdca072246df1909676269e298b0227baad877fec810fe45f1d"
+            },
+            {
+              "stop": "rb-p-50d7821114911125e74df68449d90306fcd893f1f84c61cd16b6a7247e87e70f",
+              "node": "node-8d69abde9ee3652ea6bf867698a8151f4923ec2d014c6b3a6c78b691fdd07f77",
+              "kind": "Pickup",
+              "request": "rq-ea96757aa62aa656ab3283f5e2f92ee6cd356e5ce36b3c449d7ff2112167d32f"
+            },
+            {
+              "stop": "rb-d-0f0ee6baba3dfa946cb95f6fddf5fba397a49eb482e22b9da49c322af36f9aed",
+              "node": "node-11eb1e51343eae00a1840b2a81a56366a35b126628c9883e5fe3d9e20052f98b",
+              "kind": "DropOff",
+              "request": "rq-ffac2a946e4e7cdca072246df1909676269e298b0227baad877fec810fe45f1d"
+            },
+            {
+              "stop": "rb-d-3def44a26f502a7876837748cfeb3f77706209f27c7a2c518d42594641be93b3",
+              "node": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+              "kind": "DropOff",
+              "request": "rq-ea96757aa62aa656ab3283f5e2f92ee6cd356e5ce36b3c449d7ff2112167d32f"
+            }
+          ],
+          "beforeSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-d-bf7b4885e280c3b4a8bd6dc22afc94a03595a7d88dee5471fbfe232ebf4ed0be"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4030398
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4030398
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4030398
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-50d7821114911125e74df68449d90306fcd893f1f84c61cd16b6a7247e87e70f"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4225243
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4225243
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4225243
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-3def44a26f502a7876837748cfeb3f77706209f27c7a2c518d42594641be93b3"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4493924
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4493924
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4493924
+                }
+              }
+            ],
+            "OperationalCost": 518924
+          },
+          "afterSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-d-bf7b4885e280c3b4a8bd6dc22afc94a03595a7d88dee5471fbfe232ebf4ed0be"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4030398
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4030398
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4030398
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-77fe439bc9a0cfc540109d36d748549a959b78fd0fbfc4e71adfa62fd7a11388"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4030398
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4030398
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4030398
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-50d7821114911125e74df68449d90306fcd893f1f84c61cd16b6a7247e87e70f"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4225243
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4225243
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4225243
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-0f0ee6baba3dfa946cb95f6fddf5fba397a49eb482e22b9da49c322af36f9aed"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4401629
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4401629
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4401629
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-3def44a26f502a7876837748cfeb3f77706209f27c7a2c518d42594641be93b3"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4612882
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4612882
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4612882
+                }
+              }
+            ],
+            "OperationalCost": 637882
+          },
+          "witnesses": [
+            {
+              "Stage": 4,
+              "Code": "COMMITMENT_BUDGET_EXCEEDED",
+              "Message": "The candidate exceeds a hard commitment dimension.",
+              "VehicleId": {
+                "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              },
+              "RequestId": {
+                "Value": "rq-ea96757aa62aa656ab3283f5e2f92ee6cd356e5ce36b3c449d7ff2112167d32f"
+              },
+              "Dimension": "drop_eta_total_ms",
+              "Rule": null,
+              "Limit": 30000,
+              "Before": 0,
+              "Delta": 118958,
+              "After": 118958
+            }
+          ]
+        }
+      ],
+      "elapsedMs": 7.7873,
+      "inputStateSha256": "8d9212178f0d8cffa14025dcc481c72fbc7885d13a613b5e308fb7e2abcbfc83"
+    },
+    {
+      "epoch": 394,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 122,
+      "expectedAllOrders": 122,
+      "maxSuffix": 3,
+      "screenRemoved": 93,
+      "physicalPass": 2,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 57,
+        "physical:PRECEDENCE": 47,
+        "physical:MAX_RIDE_TIME": 16,
+        "commitment:COMMITMENT_PHASE_LOCK": 1,
+        "commitment:COMMITMENT_BUDGET_EXCEEDED": 1
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [
+        {
+          "vehicle": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+          "preservesHead": false,
+          "Control": true,
+          "route": [
+            {
+              "stop": "rb-p-fb39465617661b76734a360e716c41ec4af0b64c0cd6eaf0ea94889a35b9dac4",
+              "node": "node-7656c66d6e66b31dc7f4013913d9cb76df4d0b4e6ddccf4b4d3fd33eb3468341",
+              "kind": "Pickup",
+              "request": "rq-b61ff44d06272aabc669d8e7693b1a420efde1fc33dadf2e5b7ced670e1a8172"
+            },
+            {
+              "stop": "rb-p-b47ba3a23ddeea5d5b514599ff87f960d2b0dab7fc7710a0a9e8e9f27b0eb2d5",
+              "node": "node-175203b76b976bc3a6d6d43ad7fe5378b974c6ea7b4572cb1200e0d2bd7c6c71",
+              "kind": "Pickup",
+              "request": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a"
+            },
+            {
+              "stop": "rb-d-f6609cc50ce19663ae24d332f4c973ddf72a709f0e97ae63bdf8995f5779e9ee",
+              "node": "node-ca66707a63a91a91c1987cee39aab63552c7d63bed5f6668b97eec020a3ee740",
+              "kind": "DropOff",
+              "request": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a"
+            },
+            {
+              "stop": "rb-d-f23681e47fbc60c476acf3bd7026c2564d85b10cff104ee08c224b65cd8151d6",
+              "node": "node-fb7dbdff01f70a9228c8958e691ea4ecfd5c03c7eea23d7092d589a5b8080705",
+              "kind": "DropOff",
+              "request": "rq-b61ff44d06272aabc669d8e7693b1a420efde1fc33dadf2e5b7ced670e1a8172"
+            }
+          ],
+          "beforeSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-b47ba3a23ddeea5d5b514599ff87f960d2b0dab7fc7710a0a9e8e9f27b0eb2d5"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4088132
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4088132
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4088132
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-f6609cc50ce19663ae24d332f4c973ddf72a709f0e97ae63bdf8995f5779e9ee"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4461414
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4461414
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4461414
+                }
+              }
+            ],
+            "OperationalCost": 403414
+          },
+          "afterSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-fb39465617661b76734a360e716c41ec4af0b64c0cd6eaf0ea94889a35b9dac4"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4209141
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4209141
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4209141
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-b47ba3a23ddeea5d5b514599ff87f960d2b0dab7fc7710a0a9e8e9f27b0eb2d5"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4303487
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4303487
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4303487
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-f6609cc50ce19663ae24d332f4c973ddf72a709f0e97ae63bdf8995f5779e9ee"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4676769
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4676769
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4676769
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-f23681e47fbc60c476acf3bd7026c2564d85b10cff104ee08c224b65cd8151d6"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5041847
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5041847
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5041847
+                }
+              }
+            ],
+            "OperationalCost": 983847
+          },
+          "witnesses": [
+            {
+              "Stage": 3,
+              "Code": "COMMITMENT_PHASE_LOCK",
+              "Message": "The candidate changes a phase-locked promise field.",
+              "VehicleId": {
+                "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              },
+              "RequestId": {
+                "Value": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a"
+              },
+              "Dimension": "pickup_eta_ms",
+              "Rule": "final_confirmation",
+              "Limit": null,
+              "Before": null,
+              "Delta": null,
+              "After": null
+            }
+          ]
+        },
+        {
+          "vehicle": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818",
+          "preservesHead": true,
+          "Control": true,
+          "route": [
+            {
+              "stop": "rb-p-b47ba3a23ddeea5d5b514599ff87f960d2b0dab7fc7710a0a9e8e9f27b0eb2d5",
+              "node": "node-175203b76b976bc3a6d6d43ad7fe5378b974c6ea7b4572cb1200e0d2bd7c6c71",
+              "kind": "Pickup",
+              "request": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a"
+            },
+            {
+              "stop": "rb-p-fb39465617661b76734a360e716c41ec4af0b64c0cd6eaf0ea94889a35b9dac4",
+              "node": "node-7656c66d6e66b31dc7f4013913d9cb76df4d0b4e6ddccf4b4d3fd33eb3468341",
+              "kind": "Pickup",
+              "request": "rq-b61ff44d06272aabc669d8e7693b1a420efde1fc33dadf2e5b7ced670e1a8172"
+            },
+            {
+              "stop": "rb-d-f6609cc50ce19663ae24d332f4c973ddf72a709f0e97ae63bdf8995f5779e9ee",
+              "node": "node-ca66707a63a91a91c1987cee39aab63552c7d63bed5f6668b97eec020a3ee740",
+              "kind": "DropOff",
+              "request": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a"
+            },
+            {
+              "stop": "rb-d-f23681e47fbc60c476acf3bd7026c2564d85b10cff104ee08c224b65cd8151d6",
+              "node": "node-fb7dbdff01f70a9228c8958e691ea4ecfd5c03c7eea23d7092d589a5b8080705",
+              "kind": "DropOff",
+              "request": "rq-b61ff44d06272aabc669d8e7693b1a420efde1fc33dadf2e5b7ced670e1a8172"
+            }
+          ],
+          "beforeSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-b47ba3a23ddeea5d5b514599ff87f960d2b0dab7fc7710a0a9e8e9f27b0eb2d5"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4088132
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4088132
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4088132
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-f6609cc50ce19663ae24d332f4c973ddf72a709f0e97ae63bdf8995f5779e9ee"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4461414
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4461414
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4461414
+                }
+              }
+            ],
+            "OperationalCost": 403414
+          },
+          "afterSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-b47ba3a23ddeea5d5b514599ff87f960d2b0dab7fc7710a0a9e8e9f27b0eb2d5"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4088132
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4088132
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4088132
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-fb39465617661b76734a360e716c41ec4af0b64c0cd6eaf0ea94889a35b9dac4"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4209141
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4209141
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4209141
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-f6609cc50ce19663ae24d332f4c973ddf72a709f0e97ae63bdf8995f5779e9ee"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4533199
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4533199
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4533199
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-f23681e47fbc60c476acf3bd7026c2564d85b10cff104ee08c224b65cd8151d6"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4898277
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4898277
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4898277
+                }
+              }
+            ],
+            "OperationalCost": 840277
+          },
+          "witnesses": [
+            {
+              "Stage": 4,
+              "Code": "COMMITMENT_BUDGET_EXCEEDED",
+              "Message": "The candidate exceeds a hard commitment dimension.",
+              "VehicleId": {
+                "Value": "veh-67cc8400ceb0b56466430aeca6e36d1d2e6cd768d5532e4c1c44453d5b17e818"
+              },
+              "RequestId": {
+                "Value": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a"
+              },
+              "Dimension": "drop_eta_total_ms",
+              "Rule": null,
+              "Limit": 30000,
+              "Before": 0,
+              "Delta": 71785,
+              "After": 71785
+            }
+          ]
+        }
+      ],
+      "elapsedMs": 5.4312,
+      "inputStateSha256": "426ec39613cfd5cc990577a9cd17e670272d215bc9619a209c2e201cf838cc34"
+    },
+    {
+      "epoch": 406,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 67,
+      "expectedAllOrders": 67,
+      "maxSuffix": 2,
+      "screenRemoved": 49,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 47,
+        "physical:PRECEDENCE": 18,
+        "physical:MAX_RIDE_TIME": 2
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [],
+      "elapsedMs": 1.6946,
+      "inputStateSha256": "8d6d56adb693a82c50799967c176e788db8ac7a56d06bb4bc9bf43b15c939769"
+    },
+    {
+      "epoch": 457,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 163,
+      "expectedAllOrders": 163,
+      "maxSuffix": 3,
+      "screenRemoved": 127,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 52,
+        "physical:MAX_RIDE_TIME": 44,
+        "physical:PRECEDENCE": 67
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [],
+      "elapsedMs": 4.8473,
+      "inputStateSha256": "a988be9fcc8765cad179dd99367b3e837e92deec01359b8f707d77319b9e4806"
+    },
+    {
+      "epoch": 458,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 163,
+      "expectedAllOrders": 163,
+      "maxSuffix": 3,
+      "screenRemoved": 127,
+      "physicalPass": 1,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 52,
+        "physical:MAX_RIDE_TIME": 43,
+        "physical:PRECEDENCE": 67,
+        "commitment:COMMITMENT_PHASE_LOCK": 1
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [
+        {
+          "vehicle": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+          "preservesHead": true,
+          "Control": true,
+          "route": [
+            {
+              "stop": "rb-d-e8de14cfb014fefb2feec710a7127eae333438c8ac8910516b9279658a9de185",
+              "node": "node-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+              "kind": "DropOff",
+              "request": "rq-77387e5664671b9e2859e758c435a1627a7bf4c5ddec54852b2ab5fb789cdb06"
+            },
+            {
+              "stop": "rb-p-035ebd43aee58847eb54c7aeface1fa47407484ab2301c9e278971718100b711",
+              "node": "node-6bbe4e96307f380d9be116c54e8246785789380c7f1a89ed2a53db780824e6af",
+              "kind": "Pickup",
+              "request": "rq-72acef20a5d67bf054b6b15003cab152b139adb037524cc4feaab0788ecaee7d"
+            },
+            {
+              "stop": "rb-p-583d9387392ae0eedc4eedc8f8200d2ff70bea03b267b9f0cfa756448dce6eb5",
+              "node": "node-27984aebb7c22eed15a07f9725fa369aa1268f547b8a423cfb39c88d150d37ad",
+              "kind": "Pickup",
+              "request": "rq-f9288c97ebefbd3e9e0d5e2eb91db9215b7cfc3adf773d49cb486d1507c21525"
+            },
+            {
+              "stop": "rb-d-935e03dfa36e113233a68abd9f55e40dab28c04fc3fe0cdb620e46bd0beb7ed6",
+              "node": "node-e23c7de5ddc680b31145768d6277ef772e42b49197cc84d7a0c5fd9660313b1f",
+              "kind": "DropOff",
+              "request": "rq-72acef20a5d67bf054b6b15003cab152b139adb037524cc4feaab0788ecaee7d"
+            },
+            {
+              "stop": "rb-d-728fa4c1f9c1edfaff8d6e424f32e6c83d82140851c3a55c94cc9d5a59e04e28",
+              "node": "node-7ab194150389ad8b54ebf913672847a8c5677d08fc05943e99b748f412d634b7",
+              "kind": "DropOff",
+              "request": "rq-f9288c97ebefbd3e9e0d5e2eb91db9215b7cfc3adf773d49cb486d1507c21525"
+            }
+          ],
+          "beforeSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-d-e8de14cfb014fefb2feec710a7127eae333438c8ac8910516b9279658a9de185"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4969490
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4969490
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4969490
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-583d9387392ae0eedc4eedc8f8200d2ff70bea03b267b9f0cfa756448dce6eb5"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5117162
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5117162
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5117162
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-728fa4c1f9c1edfaff8d6e424f32e6c83d82140851c3a55c94cc9d5a59e04e28"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5340721
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5340721
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5340721
+                }
+              }
+            ],
+            "OperationalCost": 477721
+          },
+          "afterSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-d-e8de14cfb014fefb2feec710a7127eae333438c8ac8910516b9279658a9de185"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 4969490
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 4969490
+                },
+                "DepartureTime": {
+                  "Milliseconds": 4969490
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-035ebd43aee58847eb54c7aeface1fa47407484ab2301c9e278971718100b711"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5234069
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5234069
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5234069
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-583d9387392ae0eedc4eedc8f8200d2ff70bea03b267b9f0cfa756448dce6eb5"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5346874
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5346874
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5346874
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-935e03dfa36e113233a68abd9f55e40dab28c04fc3fe0cdb620e46bd0beb7ed6"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5500699
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5500699
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5500699
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-728fa4c1f9c1edfaff8d6e424f32e6c83d82140851c3a55c94cc9d5a59e04e28"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5572484
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5572484
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5572484
+                }
+              }
+            ],
+            "OperationalCost": 709484
+          },
+          "witnesses": [
+            {
+              "Stage": 3,
+              "Code": "COMMITMENT_PHASE_LOCK",
+              "Message": "The candidate changes a phase-locked promise field.",
+              "VehicleId": {
+                "Value": "veh-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385"
+              },
+              "RequestId": {
+                "Value": "rq-f9288c97ebefbd3e9e0d5e2eb91db9215b7cfc3adf773d49cb486d1507c21525"
+              },
+              "Dimension": "pickup_eta_ms",
+              "Rule": "final_confirmation",
+              "Limit": null,
+              "Before": null,
+              "Delta": null,
+              "After": null
+            }
+          ]
+        }
+      ],
+      "elapsedMs": 8.0362,
+      "inputStateSha256": "102d252a999dc403118f39c1716fc52db330e44a1e5f9e579ec0d507059dac83"
+    },
+    {
+      "epoch": 459,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 163,
+      "expectedAllOrders": 163,
+      "maxSuffix": 3,
+      "screenRemoved": 129,
+      "physicalPass": 2,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 58,
+        "physical:MAX_RIDE_TIME": 36,
+        "physical:PRECEDENCE": 67,
+        "commitment:COMMITMENT_BUDGET_EXCEEDED": 2
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [
+        {
+          "vehicle": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+          "preservesHead": false,
+          "Control": true,
+          "route": [
+            {
+              "stop": "rb-p-5766f8cf75a7169d43dfa878d11c47f80505cf3cf0b0ce2f42ad556dda4a4782",
+              "node": "node-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+              "kind": "Pickup",
+              "request": "rq-8ce4f5cb7eaf6d43aedaaf2e485c1cee4d6cb1534f759f196a6771b22f47c1ae"
+            },
+            {
+              "stop": "rb-p-dbef515a6356071a4a14150d46a87c617014fe7f52321f63621a3e1b52e307b3",
+              "node": "node-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+              "kind": "Pickup",
+              "request": "rq-770524f07d580e5c6b769a5db273cac0c132b6983351f15e59a74209c257376d"
+            },
+            {
+              "stop": "rb-d-8114456d4357da6f600b0cc1c7a226836ab8b0f1e55c6792c881b801c954fdef",
+              "node": "node-62ff6338a21c888cb4904ea06eae92a3fab4e20fc3050809e2a411c059fc0d74",
+              "kind": "DropOff",
+              "request": "rq-8ce4f5cb7eaf6d43aedaaf2e485c1cee4d6cb1534f759f196a6771b22f47c1ae"
+            },
+            {
+              "stop": "rb-d-7af6909e55c0f44c35be786f24801930d9f933aa2dfe3fb16e57cd65353c1cbd",
+              "node": "node-5ea11fa0c1f279951f4730d7b1f4e07814122e122d54df84e21dfe30db99ae75",
+              "kind": "DropOff",
+              "request": "rq-770524f07d580e5c6b769a5db273cac0c132b6983351f15e59a74209c257376d"
+            }
+          ],
+          "beforeSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-dbef515a6356071a4a14150d46a87c617014fe7f52321f63621a3e1b52e307b3"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5303063
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5303063
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5303063
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-7af6909e55c0f44c35be786f24801930d9f933aa2dfe3fb16e57cd65353c1cbd"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5891700
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5891700
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5891700
+                }
+              }
+            ],
+            "OperationalCost": 1009700
+          },
+          "afterSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-5766f8cf75a7169d43dfa878d11c47f80505cf3cf0b0ce2f42ad556dda4a4782"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5303063
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5303063
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5303063
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-dbef515a6356071a4a14150d46a87c617014fe7f52321f63621a3e1b52e307b3"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5303063
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5303063
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5303063
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-8114456d4357da6f600b0cc1c7a226836ab8b0f1e55c6792c881b801c954fdef"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5563540
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5563540
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5563540
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-7af6909e55c0f44c35be786f24801930d9f933aa2dfe3fb16e57cd65353c1cbd"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 6150126
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 6150126
+                },
+                "DepartureTime": {
+                  "Milliseconds": 6150126
+                }
+              }
+            ],
+            "OperationalCost": 1268126
+          },
+          "witnesses": [
+            {
+              "Stage": 4,
+              "Code": "COMMITMENT_BUDGET_EXCEEDED",
+              "Message": "The candidate exceeds a hard commitment dimension.",
+              "VehicleId": {
+                "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              },
+              "RequestId": {
+                "Value": "rq-770524f07d580e5c6b769a5db273cac0c132b6983351f15e59a74209c257376d"
+              },
+              "Dimension": "drop_eta_total_ms",
+              "Rule": null,
+              "Limit": 30000,
+              "Before": 0,
+              "Delta": 258426,
+              "After": 258426
+            }
+          ]
+        },
+        {
+          "vehicle": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998",
+          "preservesHead": false,
+          "Control": true,
+          "route": [
+            {
+              "stop": "rb-p-dbef515a6356071a4a14150d46a87c617014fe7f52321f63621a3e1b52e307b3",
+              "node": "node-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+              "kind": "Pickup",
+              "request": "rq-770524f07d580e5c6b769a5db273cac0c132b6983351f15e59a74209c257376d"
+            },
+            {
+              "stop": "rb-p-5766f8cf75a7169d43dfa878d11c47f80505cf3cf0b0ce2f42ad556dda4a4782",
+              "node": "node-68dae725a1dda994cb00ae5498393e6c9e13ba9724b440a94e2761d0a74da385",
+              "kind": "Pickup",
+              "request": "rq-8ce4f5cb7eaf6d43aedaaf2e485c1cee4d6cb1534f759f196a6771b22f47c1ae"
+            },
+            {
+              "stop": "rb-d-8114456d4357da6f600b0cc1c7a226836ab8b0f1e55c6792c881b801c954fdef",
+              "node": "node-62ff6338a21c888cb4904ea06eae92a3fab4e20fc3050809e2a411c059fc0d74",
+              "kind": "DropOff",
+              "request": "rq-8ce4f5cb7eaf6d43aedaaf2e485c1cee4d6cb1534f759f196a6771b22f47c1ae"
+            },
+            {
+              "stop": "rb-d-7af6909e55c0f44c35be786f24801930d9f933aa2dfe3fb16e57cd65353c1cbd",
+              "node": "node-5ea11fa0c1f279951f4730d7b1f4e07814122e122d54df84e21dfe30db99ae75",
+              "kind": "DropOff",
+              "request": "rq-770524f07d580e5c6b769a5db273cac0c132b6983351f15e59a74209c257376d"
+            }
+          ],
+          "beforeSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-dbef515a6356071a4a14150d46a87c617014fe7f52321f63621a3e1b52e307b3"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5303063
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5303063
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5303063
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-7af6909e55c0f44c35be786f24801930d9f933aa2dfe3fb16e57cd65353c1cbd"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5891700
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5891700
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5891700
+                }
+              }
+            ],
+            "OperationalCost": 1009700
+          },
+          "afterSchedule": {
+            "Stops": [
+              {
+                "StopId": {
+                  "Value": "rb-p-dbef515a6356071a4a14150d46a87c617014fe7f52321f63621a3e1b52e307b3"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5303063
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5303063
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5303063
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-p-5766f8cf75a7169d43dfa878d11c47f80505cf3cf0b0ce2f42ad556dda4a4782"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5303063
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5303063
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5303063
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-8114456d4357da6f600b0cc1c7a226836ab8b0f1e55c6792c881b801c954fdef"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 5563540
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 5563540
+                },
+                "DepartureTime": {
+                  "Milliseconds": 5563540
+                }
+              },
+              {
+                "StopId": {
+                  "Value": "rb-d-7af6909e55c0f44c35be786f24801930d9f933aa2dfe3fb16e57cd65353c1cbd"
+                },
+                "ArrivalTime": {
+                  "Milliseconds": 6150126
+                },
+                "ServiceStartTime": {
+                  "Milliseconds": 6150126
+                },
+                "DepartureTime": {
+                  "Milliseconds": 6150126
+                }
+              }
+            ],
+            "OperationalCost": 1268126
+          },
+          "witnesses": [
+            {
+              "Stage": 4,
+              "Code": "COMMITMENT_BUDGET_EXCEEDED",
+              "Message": "The candidate exceeds a hard commitment dimension.",
+              "VehicleId": {
+                "Value": "veh-db624aef4a3a962d339cfff96f93dcb411c9193c6fbc10e5cfc383a57b623998"
+              },
+              "RequestId": {
+                "Value": "rq-770524f07d580e5c6b769a5db273cac0c132b6983351f15e59a74209c257376d"
+              },
+              "Dimension": "drop_eta_total_ms",
+              "Rule": null,
+              "Limit": 30000,
+              "Before": 0,
+              "Delta": 258426,
+              "After": 258426
+            }
+          ]
+        }
+      ],
+      "elapsedMs": 9.2667,
+      "inputStateSha256": "17a3032c61b440a4853ca0867d3e7e41e1704a80f97bf233a509149d3660c1d5"
+    },
+    {
+      "epoch": 460,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 163,
+      "expectedAllOrders": 163,
+      "maxSuffix": 3,
+      "screenRemoved": 127,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 65,
+        "physical:PRECEDENCE": 64,
+        "physical:MAX_RIDE_TIME": 34
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [],
+      "elapsedMs": 7.0216,
+      "inputStateSha256": "01db74f2a1f7aed0041ab56e75cd7b12e6e866b5a9730bace34f408ca1101ec8"
+    },
+    {
+      "epoch": 673,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 202,
+      "expectedAllOrders": 202,
+      "maxSuffix": 3,
+      "screenRemoved": 159,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 142,
+        "physical:PRECEDENCE": 48,
+        "physical:MAX_RIDE_TIME": 12
+      },
+      "validCount": 0,
+      "valid": [],
+      "hardRejectedRoutes": [],
+      "elapsedMs": 9.0816,
+      "inputStateSha256": "4798e2959add05de673cb23d774e9c0b4b5def4783bc152571df21764f6a4060"
+    }
+  ]
+}

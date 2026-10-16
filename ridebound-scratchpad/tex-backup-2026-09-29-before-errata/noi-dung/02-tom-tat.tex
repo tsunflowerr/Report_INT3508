@@ -1,0 +1,89 @@
+\chapter*{Tóm tắt}
+\addcontentsline{toc}{chapter}{Tóm tắt}
+
+Các hệ thống điều phối xe đi chung theo yêu cầu hiện nay đều báo cho hành khách một giờ đón
+và một giờ trả dự kiến, rồi sau đó tiếp tục tối ưu lại kế hoạch mỗi khi có khách mới. Hệ quả
+là giờ đã báo bị dời đi nhiều lần trong cùng một chuyến, trong khi mọi thước đo chuẩn của
+ngành --- tỉ lệ phục vụ, thời gian chờ, độ vòng đường --- đều không ghi nhận điều đó. Một
+hành khách được báo đúng một lần và một hành khách bị đổi giờ mười hai lần là giống hệt nhau
+trong các hàm mục tiêu của dòng bài điều phối kinh điển, miễn là cả hai vẫn nằm trong cửa sổ
+thời gian hợp lệ.
+
+Khóa luận này đặt câu hỏi ngược lại: \emph{một hãng gọi xe chung có thể đưa ra lời hứa về giờ
+giấc mà hãng thực sự giữ được hay không, và cái đó đắt bao nhiêu?} Để trả lời, chúng tôi xây
+dựng cơ chế \textbf{lời hứa có biên được chứng nhận}. Mỗi lần hệ thống công bố lại một lời
+hứa, độ dời được ghi vào một sổ cái riêng của từng hành khách, cộng dồn và chỉ tăng, rồi đối
+chiếu với một trần $\beta$; phương án nào làm sổ cái vượt trần sẽ bị loại khỏi tập lựa chọn
+ngay tại thời điểm quyết định. Khác biệt cốt lõi so với văn liệu là ở chỗ độ dời được phân rã
+theo nguyên nhân: bằng cách chiếu lại chính kế hoạch cũ từ vị trí thật hiện tại của xe, hệ
+thống tách được phần do nhà điều hành tự gây ra khỏi phần thay đổi khi giữ nguyên kế hoạch, và
+chỉ tính vào sổ cái phần thứ nhất.
+
+Phần lý thuyết đặt bốn họ ràng buộc lời hứa --- theo hành vi của nhà điều hành, hạn chót một
+chiều tính từ lời hứa đầu, hạn chót hai chiều, và theo kết quả khách nhìn thấy --- vào cùng một
+khung, và chứng minh rằng, xét riêng phần cam kết, chỉ ràng buộc theo hành vi không bao giờ là
+nguyên nhân làm rỗng tập phương án khi thế giới trôi dạt; họ nào trong ba họ còn lại hỏng phụ
+thuộc chiều trôi. Chứng minh là sơ cấp; giá trị nằm ở khung so sánh và ở đối chiếu với hệ thật.
+Phần thực nghiệm gồm 558 lần chạy mô phỏng trên dữ liệu chuyến đi công khai của Manhattan, sử
+dụng nền mô phỏng FleetPy và một panel 20 ô đã niêm phong. Trong chế độ không cam kết, phần do
+chính bộ điều phối gây ra bằng $89{,}06\%$ lượng dịch chuyển giờ hẹn mà hành khách nhìn thấy; một
+trần 30 giây đưa tỉ lệ đó xuống $1{,}37\%$ với cái giá $7{,}13$ điểm phần trăm tỉ lệ phục vụ. Dưới
+dữ liệu tắc đường đo thật của Manhattan (thăm dò), cách tính theo kết quả vô nghiệm do cam kết ở
+19 trên 20 ô, trong khi cách tính theo hành vi không vô nghiệm do cam kết ở ô nào --- dù 11 ô vẫn
+dừng vì một bất biến cửa sổ đón nằm ngoài cơ chế cam kết. Một thí nghiệm thăm dò có tiền đăng ký
+kiểm thêm hai họ hạn chót, với dự đoán theo từng ô niêm phong trước khi chạy các nhánh được dự
+đoán: dự đoán đúng ở
+$98/102$ cặp trên panel chính và ở $31/32$, $40/40$ cặp trên khung sáng và khung tối của một tập giữ
+lại; khi tắc đường giảm, hạn chót một chiều vô nghiệm ở 0/8 ô còn hạn chót hai chiều ở 7/8 ô, đúng
+chiều định lý dự đoán.
+
+\vspace{6pt}
+\noindent\textbf{Từ khóa:} điều phối xe đi chung, lời hứa có biên, độ ổn định lịch trình,
+quy trách nguyên nhân, nghĩa vụ phương tiện, đánh đổi phục vụ--ổn định.
+
+\clearpage
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Modern on-demand ride-pooling dispatchers announce an estimated pickup and drop-off time to
+every rider, then keep re-optimising the plan as new requests arrive. As a result, the
+announced times are revised repeatedly within a single trip, while none of the field's
+standard metrics --- service rate, waiting time, detour --- record this at all. A rider told
+once and a rider re-quoted twelve times are indistinguishable under the objective functions of
+the classical dispatching literature, as long as both remain inside the admissible time window.
+
+This thesis asks the opposite question: \emph{can a ride-pooling operator make a timing
+promise it can actually keep, and what does that cost?} We build a mechanism of
+\textbf{certified bounded promises}. Every time the system republishes a promise, the
+displacement is recorded in a per-rider ledger that accumulates monotonically and is checked
+against a cap $\beta$; any candidate plan that would push the ledger past the cap is removed
+from the choice set at decision time. The core departure from the literature is that the
+displacement is decomposed by cause: by re-projecting the unchanged previous plan from the
+vehicle's true current position, the system separates what the operator caused from what
+changes when the plan is kept, and charges only the former.
+
+The theoretical part places four families of promise constraints --- a cap on the operator's
+conduct, a one-sided deadline measured from the first promise, a two-sided deadline, and a cap
+on the outcome the rider observes --- in one framework, and proves that, as far as the
+commitment gate is concerned, only the conduct cap is never the cause of an empty choice set
+when the world drifts; which of the other three fails depends on the direction of the drift.
+The proof is elementary; its value lies in the common frame and in checking it against a real
+system. The experimental part comprises 558 simulation runs on public Manhattan trip data,
+using the FleetPy simulator and a sealed 20-cell panel. Under the unconstrained policy the
+operator-induced part equals $89.06\%$ of the rider-visible promise movement; a 30-second cap
+brings this share down to $1.37\%$ at a cost of $7.13$ percentage points of service rate. Under
+measured Manhattan congestion (exploratory), the outcome basis is commitment-infeasible on 19
+of 20 cells while the conduct basis is commitment-infeasible on none --- although 11 cells still
+stop on a pickup-window invariant that lies outside the commitment mechanism. An exploratory
+preregistered experiment adds the two deadline families, with per-cell predictions sealed before
+any run of a predicted arm: they hold on $98/102$ pairs on the main panel and on $31/32$ and $40/40$ pairs in the
+morning and evening windows of a held-out set; when congestion eases, the one-sided deadline is
+commitment-infeasible on 0 of 8 cells and the two-sided one on 7 of 8, the direction the theorem
+predicts.
+
+\vspace{6pt}
+\noindent\textbf{Keywords:} ride-pooling dispatch, bounded promises, schedule stability, causal
+attribution, obligation of means, service--stability trade-off.
+
+\clearpage

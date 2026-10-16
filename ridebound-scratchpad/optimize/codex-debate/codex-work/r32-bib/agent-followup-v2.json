@@ -1,0 +1,15 @@
+[
+  {
+    "key": "gerzinic2023",
+    "status": "VERIFIED",
+    "metadata": "Nejc Geržinič; Oded Cats; Niels van Oort; Sascha Hoogendoorn-Lanser; Michel Bierlaire; Serge Hoogendoorn. An instance-based learning approach for evaluating the perception of ride-hailing waiting time variability. Travel Behaviour and Society 33:100616 (2023). DOI 10.1016/j.tbs.2023.100616.",
+    "url": "https://research.tudelft.nl/en/publications/an-instance-based-learning-approach-for-evaluating-the-perception/ ; https://arxiv.org/abs/2301.04982",
+    "notes": "Official TU Delft journal record independently opened and confirms all metadata in old bibliography; no correction needed. Official arXiv preprint page also opened and links the published DOI. Do not replace final-journal reference with arXiv merely because Elsevier redirect and repository PDF fetching failed. Abstract concerns waiting-time variability (936 stated-preference responses), not a verified20–25EUR/hour valuation claim; the latter remains unverified.",
+    "tex": "\\bibitem{gerzinic2023}\nN.~Geržinič, O.~Cats, N.~van Oort, S.~Hoogendoorn-Lanser, M.~Bierlaire, and S.~Hoogendoorn.\n\\newblock An instance-based learning approach for evaluating the perception of ride-hailing waiting time variability.\n\\newblock \\emph{Travel Behaviour and Society}, 33:100616, 2023.\n\\newblock \\url{https://doi.org/10.1016/j.tbs.2023.100616}",
+    "register_ids": [
+      "K35"
+    ],
+    "body_status": "METADATA/ABSTRACT ONLY"
+  }
+]
+

@@ -1,0 +1,402 @@
+diff --git a/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs b/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs
+index b08d92b..020cf48 100644
+--- a/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs
++++ b/tests/RideBound.Algorithms.Tests/Oracle/ExactSmallCommitmentDifferentialTests.cs
+@@ -662,6 +662,145 @@ public sealed class ExactSmallCommitmentDifferentialTests
+         Assert.Equal(0, assessed.Witness.GeneratedCandidateCount);
+     }
+ 
++    [Fact]
++    public void C1_reports_a_rejected_safety_no_op_that_leaves_other_candidates_alive()
++    {
++        // The no-op keeps the route, so its drop ETA is the baseline. The rider's
++        // initial promise is placed exactly one insertion's delay LATER than that,
++        // and a zero-slack two-sided deadline then rejects the no-op (too early)
++        // while the insertion that causes exactly that delay survives. Before the
++        // diagnostic change this state died later with a generic mapping error.
++        var fixture = CreateState(seed: 3);
++        var generated = new InsertionCandidateGenerator().Generate(
++            fixture.State,
++            CandidateGenerationOptions.ExactSmall);
++        Assert.True(generated.IsSuccess, generated.Witness?.Message);
++        var set = generated.VehicleCandidates!.Single();
++        var noOp = set.Candidates.Single(value => value.IsNoOp);
++        var delayed = set.Candidates
++            .Where(value => !value.IsNoOp)
++            .Select(value => (
++                Candidate: value,
++                Delay: OracleEtas(fixture.State, SemanticKey(value), fixture.IncumbentId)
++                    .Drop.Milliseconds - fixture.BaselineDrop.Milliseconds))
++            .Where(value => value.Delay > 0)
++            .OrderBy(value => value.Delay)
++            .ThenBy(value => value.Candidate.CandidateId, StringComparer.Ordinal)
++            .First();
++        var context = DeadlineContext(
++            fixture,
++            initialDropMs: fixture.BaselineDrop.Milliseconds + delayed.Delay,
++            twoSided: true);
++
++        var assessed = new HardVectorCandidateAssessor().AssessAndFilter(
++            context,
++            generated.VehicleCandidates!);
++
++        Assert.False(assessed.IsSuccess);
++        var witness = assessed.Witness!;
++        Assert.Equal(CommitmentFailureCodes.SafetyNoOpRejected, witness.Code);
++        Assert.Equal(noOp.CandidateId, witness.CandidateId);
++        Assert.Equal(AlgorithmTestData.VehicleOne, witness.VehicleId);
++        Assert.Equal(CommitmentFailureCodes.DeadlineExceeded, witness.UnderlyingCode);
++        Assert.Equal(fixture.IncumbentId, witness.RequestId);
++        Assert.Equal("drop_eta_ms", witness.Dimension);
++        Assert.Equal(set.Candidates.Count, witness.GeneratedCandidateCount);
++        Assert.True(witness.GeneratedCandidateCount > witness.RejectedCandidateCount);
++        Assert.StartsWith(
++            "C1 rejected the safety no-op while other candidates survived. No-op rejection: ",
++            witness.Message,
++            StringComparison.Ordinal);
++        Assert.EndsWith(
++            "outside the initial-promise window.",
++            witness.Message,
++            StringComparison.Ordinal);
++        Assert.DoesNotContain("firstCode=", witness.Message, StringComparison.Ordinal);
++    }
++
++    [Fact]
++    public void C1_fail_closed_cites_the_safety_no_op_when_every_candidate_is_rejected()
++    {
++        // An initial promise one millisecond EARLIER than the kept route and a
++        // zero-slack one-sided deadline: the no-op is already too late, and the
++        // insertion generator can only delay an incumbent further, so every
++        // candidate is rejected. The witness must now cite the no-op itself.
++        var fixture = CreateState(seed: 3);
++        var generated = new InsertionCandidateGenerator().Generate(
++            fixture.State,
++            CandidateGenerationOptions.ExactSmall);
++        Assert.True(generated.IsSuccess, generated.Witness?.Message);
++        var set = generated.VehicleCandidates!.Single();
++        var noOp = set.Candidates.Single(value => value.IsNoOp);
++        var context = DeadlineContext(
++            fixture,
++            initialDropMs: fixture.BaselineDrop.Milliseconds - 1,
++            twoSided: false);
++
++        var assessed = new HardVectorCandidateAssessor().AssessAndFilter(
++            context,
++            generated.VehicleCandidates!);
++
++        Assert.False(assessed.IsSuccess);
++        var witness = assessed.Witness!;
++        Assert.Equal(CommitmentFailureCodes.VehicleHasNoFeasibleCandidate, witness.Code);
++        Assert.Equal(noOp.CandidateId, witness.CandidateId);
++        Assert.Equal(CommitmentFailureCodes.DeadlineExceeded, witness.UnderlyingCode);
++        Assert.Equal(set.Candidates.Count, witness.RejectedCandidateCount);
++        Assert.EndsWith(
++            "beyond the initial-promise deadline.",
++            witness.Message,
++            StringComparison.Ordinal);
++    }
++
++    private static CommitmentMechanismContext DeadlineContext(
++        Fixture fixture,
++        long initialDropMs,
++        bool twoSided)
++    {
++        var incumbent = fixture.State.Run.Requests[fixture.IncumbentId];
++        var pickupStop = new StopId("incumbent-pickup");
++        var dropStop = new StopId("incumbent-drop");
++        var initial = new PromiseProjection(
++            incumbent.Id,
++            AlgorithmTestData.VehicleOne,
++            pickupStop,
++            incumbent.OriginNodeId,
++            dropStop,
++            incumbent.DestinationNodeId,
++            fixture.BaselinePickup,
++            new SimTime(initialDropMs),
++            [
++                new PromiseServiceToken(pickupStop, incumbent.Id, RouteStopKind.Pickup),
++                new PromiseServiceToken(dropStop, incumbent.Id, RouteStopKind.DropOff),
++            ]);
++        var ledger = CommitmentLedger.Empty.OpenInitial(
++            "oracle-initial-deadline",
++            initial,
++            1,
++            fixture.State.Run.SimulationTime,
++            "INITIAL_ACCEPTANCE",
++            2).Ledger!;
++        var policy = new CommitmentPolicy(
++            fixture.Policy.PolicyId,
++            CommitmentBudgetBasis.DecisionInduced,
++            CommitmentDimensionVocabulary.Ordered.Select(
++                dimension => new CommitmentDimensionLimit(
++                    dimension,
++                    null,
++                    CommitmentPhase.AllActive)),
++            new MaterialRevisionRule(1_000, null),
++            dropEtaDeadlineSlack: new Duration(0),
++            dropEtaDeadlineTwoSided: twoSided);
++
++        return new CommitmentMechanismContext(
++            fixture.BeforeEventState with { Commitments = ledger },
++            fixture.State with { Commitments = ledger },
++            new CommitmentPolicyCatalog([policy]),
++            NoDistances.Instance,
++            "c1-deadline",
++            1);
++    }
++
+     private static IReadOnlySet<string> RetainedKeys(
+         Fixture fixture,
+         IReadOnlyList<VehicleCandidateSet> candidates,
+diff --git a/tests/RideBound.Algorithms.Tests/Policies/EffectivePolicyFairnessTests.cs b/tests/RideBound.Algorithms.Tests/Policies/EffectivePolicyFairnessTests.cs
+index 584b7fa..2d56f54 100644
+--- a/tests/RideBound.Algorithms.Tests/Policies/EffectivePolicyFairnessTests.cs
++++ b/tests/RideBound.Algorithms.Tests/Policies/EffectivePolicyFairnessTests.cs
+@@ -87,6 +87,43 @@ public sealed class EffectivePolicyFairnessTests
+             Fingerprint(underTightBudget));
+     }
+ 
++    /// <summary>
++    /// The drop-ETA deadline is a research probe for the deadline family. Like every
++    /// cumulative limit it binds only the commitment arms: a baseline arm scored
++    /// against a deadline would silently stop being a baseline.
++    /// </summary>
++    [Theory]
++    [InlineData(RidePoolingPolicyKind.RollingCost)]
++    [InlineData(RidePoolingPolicyKind.RollingPenalty)]
++    [InlineData(RidePoolingPolicyKind.FixedFreezeHorizon)]
++    [InlineData(RidePoolingPolicyKind.NoReassignmentRepair)]
++    public void A_baseline_arm_never_inherits_a_configured_deadline(
++        RidePoolingPolicyKind kind)
++    {
++        var policy = EffectivePolicyFor(
++            kind,
++            deadlineSlackMs: 30_000,
++            deadlineTwoSided: true);
++
++        Assert.Null(policy.DropEtaDeadlineSlack);
++        Assert.False(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Theory]
++    [InlineData(RidePoolingPolicyKind.RideBoundHardVector)]
++    [InlineData(RidePoolingPolicyKind.CommitSoftHardHybrid)]
++    public void A_commitment_arm_keeps_a_configured_deadline(RidePoolingPolicyKind kind)
++    {
++        var policy = EffectivePolicyFor(
++            kind,
++            deadlineSlackMs: 30_000,
++            deadlineTwoSided: true);
++
++        Assert.Equal(
++            Fingerprint(ConfiguredPolicy(DropEtaHardLimit, 30_000, true)),
++            Fingerprint(policy));
++    }
++
+     [Fact]
+     public void B3_and_b4_keep_only_their_declared_mechanism_settings()
+     {
+@@ -135,6 +172,8 @@ public sealed class EffectivePolicyFairnessTests
+                 policy.FreezeHorizon?.Milliseconds.ToString() ?? "none",
+                 ((int)policy.FreezeHorizonLocks).ToString(),
+                 ((int)policy.FinalConfirmationLocks).ToString(),
++                policy.DropEtaDeadlineSlack?.Milliseconds.ToString() ?? "none",
++                policy.DropEtaDeadlineTwoSided.ToString(),
+             }.Concat(
+                 CommitmentDimensionVocabulary.Ordered.Select(
+                     dimension => string.Join(
+@@ -149,7 +188,9 @@ public sealed class EffectivePolicyFairnessTests
+ 
+     private static CommitmentPolicy EffectivePolicyFor(
+         RidePoolingPolicyKind kind,
+-        long? dropEtaHardLimit = DropEtaHardLimit)
++        long? dropEtaHardLimit = DropEtaHardLimit,
++        long? deadlineSlackMs = null,
++        bool deadlineTwoSided = false)
+     {
+         var request = AlgorithmTestData.PendingRequest("request-1");
+         var unadvanced = AlgorithmTestData.CreateState(
+@@ -168,7 +209,10 @@ public sealed class EffectivePolicyFairnessTests
+                 AlgorithmTestData.ScenarioId,
+                 new SimTime(0)),
+             state.ExpectedInitialTravelTimeSnapshotHash);
+-        var configured = ConfiguredPolicy(dropEtaHardLimit);
++        var configured = ConfiguredPolicy(
++            dropEtaHardLimit,
++            deadlineSlackMs,
++            deadlineTwoSided);
+         var solverBudget = DeterministicSolverBudget.Create(1000, 1000, 1).Value!;
+         var executionBudget =
+             DeterministicCandidateSelectionExecutionBudget.Create(
+@@ -198,7 +242,10 @@ public sealed class EffectivePolicyFairnessTests
+         return policy;
+     }
+ 
+-    private static CommitmentPolicy ConfiguredPolicy(long? dropEtaHardLimit) =>
++    private static CommitmentPolicy ConfiguredPolicy(
++        long? dropEtaHardLimit,
++        long? deadlineSlackMs = null,
++        bool deadlineTwoSided = false) =>
+         new(
+             PolicyId,
+             CommitmentBudgetBasis.DecisionInduced,
+@@ -211,7 +258,9 @@ public sealed class EffectivePolicyFairnessTests
+                     dimension == CommitmentDimension.VehicleSwitchCount
+                         ? CommitmentPhase.WaitingPickup
+                         : CommitmentPhase.AllActive)),
+-            new MaterialRevisionRule(1, 30_000));
++            new MaterialRevisionRule(1, 30_000),
++            dropEtaDeadlineSlack: deadlineSlackMs is long slack ? new Duration(slack) : null,
++            dropEtaDeadlineTwoSided: deadlineTwoSided);
+ 
+     /// <summary>
+     /// Each arm carries its own mandatory settings — B3 needs a freeze horizon and lock
+diff --git a/tests/RideBound.Domain.Tests/Commitments/CommitmentPolicyTests.cs b/tests/RideBound.Domain.Tests/Commitments/CommitmentPolicyTests.cs
+index 9b85e09..64e2e36 100644
+--- a/tests/RideBound.Domain.Tests/Commitments/CommitmentPolicyTests.cs
++++ b/tests/RideBound.Domain.Tests/Commitments/CommitmentPolicyTests.cs
+@@ -36,6 +36,48 @@ public sealed class CommitmentPolicyTests
+                 finalLocks: (PromiseLock)64));
+     }
+ 
++    [Fact]
++    public void Policy_has_no_deadline_by_default()
++    {
++        var policy = CreatePolicy(CommitmentBudgetBasis.DecisionInduced);
++
++        Assert.Null(policy.DropEtaDeadlineSlack);
++        Assert.False(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Fact]
++    public void Policy_keeps_the_configured_deadline()
++    {
++        var policy = CreateDeadlinePolicy(new Duration(30_000), twoSided: true);
++
++        Assert.Equal(new Duration(30_000), policy.DropEtaDeadlineSlack);
++        Assert.True(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Fact]
++    public void Policy_rejects_a_two_sided_deadline_without_a_slack()
++    {
++        var error = Assert.Throws<ArgumentException>(
++            () => CreateDeadlinePolicy(null, twoSided: true));
++
++        Assert.Equal("dropEtaDeadlineTwoSided", error.ParamName);
++    }
++
++    private static CommitmentPolicy CreateDeadlinePolicy(
++        Duration? slack,
++        bool twoSided) =>
++        new(
++            "validated-policy",
++            CommitmentBudgetBasis.DecisionInduced,
++            CommitmentDimensionVocabulary.Ordered.Select(
++                dimension => new CommitmentDimensionLimit(
++                    dimension,
++                    null,
++                    CommitmentPhase.AllActive)),
++            new MaterialRevisionRule(1, null),
++            dropEtaDeadlineSlack: slack,
++            dropEtaDeadlineTwoSided: twoSided);
++
+     private static CommitmentPolicy CreatePolicy(
+         CommitmentBudgetBasis budgetBasis,
+         Duration? freezeHorizon = null,
+diff --git a/tests/RideBound.Runner.Tests/Configuration/CommitmentPolicyConfigurationTests.cs b/tests/RideBound.Runner.Tests/Configuration/CommitmentPolicyConfigurationTests.cs
+index 31e157a..f8df167 100644
+--- a/tests/RideBound.Runner.Tests/Configuration/CommitmentPolicyConfigurationTests.cs
++++ b/tests/RideBound.Runner.Tests/Configuration/CommitmentPolicyConfigurationTests.cs
+@@ -94,6 +94,91 @@ public sealed class CommitmentPolicyConfigurationTests
+         Assert.Contains(expectedMessage, error.Message);
+     }
+ 
++    [Fact]
++    public void Drop_eta_deadline_is_read_when_present()
++    {
++        var configuration = CommitmentPolicyConfiguration.Decode(
++            PolicyJson("\"dropEtaDeadlineSlackMs\":30000,\"dropEtaDeadlineTwoSided\":true"));
++
++        Assert.True(configuration.TryGetPolicy("uniform-v1", out var policy));
++        Assert.Equal(new Duration(30_000), policy.DropEtaDeadlineSlack);
++        Assert.True(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Fact]
++    public void Drop_eta_deadline_is_one_sided_unless_asked()
++    {
++        var configuration = CommitmentPolicyConfiguration.Decode(
++            PolicyJson("\"dropEtaDeadlineSlackMs\":60000"));
++
++        Assert.True(configuration.TryGetPolicy("uniform-v1", out var policy));
++        Assert.Equal(new Duration(60_000), policy.DropEtaDeadlineSlack);
++        Assert.False(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Fact]
++    public void Drop_eta_deadline_is_disabled_when_absent()
++    {
++        var configuration = CommitmentPolicyConfiguration.Decode(PolicyJson(null));
++
++        Assert.True(configuration.TryGetPolicy("uniform-v1", out var policy));
++        Assert.Null(policy.DropEtaDeadlineSlack);
++        Assert.False(policy.DropEtaDeadlineTwoSided);
++    }
++
++    [Theory]
++    [InlineData("\"dropEtaDeadlineSlackMs\":0", "must be positive")]
++    [InlineData("\"dropEtaDeadlineSlackMs\":-1", "canonical non-negative integer")]
++    [InlineData(
++        "\"dropEtaDeadlineSlackMs\":30000,\"dropEtaDeadlineTwoSided\":\"yes\"",
++        "must be a boolean")]
++    [InlineData(
++        "\"dropEtaDeadlineSlackMs\":30000,\"dropEtaDeadlineTwoSided\":1",
++        "must be a boolean")]
++    [InlineData(
++        "\"dropEtaDeadlineTwoSided\":true",
++        "requires 'dropEtaDeadlineSlackMs'")]
++    [InlineData(
++        "\"dropEtaDeadlineSlack\":30000",
++        "Unknown field 'dropEtaDeadlineSlack'")]
++    public void Invalid_drop_eta_deadline_is_rejected(
++        string extraFields,
++        string expectedMessage)
++    {
++        var error = Assert.Throws<InvalidDataException>(
++            () => CommitmentPolicyConfiguration.Decode(PolicyJson(extraFields)));
++
++        Assert.Contains(expectedMessage, error.Message);
++    }
++
++    [Fact]
++    public void Drop_eta_deadline_given_as_a_string_is_rejected()
++    {
++        // The shared integer reader used for every integer field of this file
++        // (including freezeHorizonMs) calls TryGetInt64, which throws on a string
++        // element. The value is rejected either way; the exception type is the
++        // existing behaviour of that reader and is not changed here.
++        Assert.Throws<InvalidOperationException>(
++            () => CommitmentPolicyConfiguration.Decode(
++                PolicyJson("\"dropEtaDeadlineSlackMs\":\"30000\"")));
++    }
++
++    private static byte[] PolicyJson(string? extraFields)
++    {
++        var limits = string.Join(
++            ",",
++            CommitmentDimensionVocabulary.Ordered.Select(
++                value =>
++                    $"{{\"dimension\":\"{CommitmentDimensionVocabulary.ToProtocolValue(value)}\"," +
++                    "\"applicablePhases\":[\"accepted\"]}"));
++        var extra = extraFields is null ? string.Empty : "," + extraFields;
++        return Encoding.UTF8.GetBytes(
++            $"{{\"configurationVersion\":\"1.0.0\",\"policies\":[{{" +
++            "\"policyId\":\"uniform-v1\",\"budgetBasis\":\"decisionInduced\"," +
++            $"\"limits\":[{limits}],\"materialRevisionRule\":{{\"rawEtaThresholdMs\":1}}" +
++            $"{extra}}}],\"stopDistances\":[]}}");
++    }
++
+     private static string RepositoryRoot() =>
+         typeof(CommitmentPolicyConfigurationTests)
+             .Assembly

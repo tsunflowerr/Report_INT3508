@@ -1,0 +1,71 @@
+# ml_pilot_run.py (sealed plan 93f6b968...; sklearn 1.7.2); lateness = A - F (s); rates in %
+
+== measured U: fit 665, cal 100, cal mean delta (D0-P0) 23.13 s
+  E 15 test15 (n 145): uniform Y60 14.48 sym 85.5 early 0.0 ext 15.0 p90 15.0
+  E 15 test16 (n 200): uniform Y60 3.50 sym 96.5 early 0.0 ext 15.0 p90 15.0
+  E 30 test15 (n 145): uniform Y60 8.97 sym 91.0 early 0.0 ext 30.0 p90 30.0 | fc+uniform Y60 1.38 sym 98.6 early 0.0 ext 37.2 p90 76.4 | HGB Y60 0.69 sym 98.6 early 0.7 ext 41.6 p90 98.2 | HGB-nostate Y60 0.69 sym 98.6 early 0.7 ext 41.7 p90 98.6 | LinQR Y60 1.38 sym 98.6 early 0.0 ext 37.2 p90 76.4
+  E 30 test16 (n 200): uniform Y60 3.00 sym 97.0 early 0.0 ext 30.0 p90 30.0 | fc+uniform Y60 0.50 sym 99.0 early 0.5 ext 31.8 p90 64.2 | HGB Y60 0.50 sym 97.0 early 2.5 ext 35.6 p90 85.8 | HGB-nostate Y60 0.50 sym 97.0 early 2.5 ext 35.8 p90 85.1 | LinQR Y60 0.50 sym 99.0 early 0.5 ext 31.8 p90 64.2
+  E 60 test15 (n 145): uniform Y60 5.52 sym 84.1 early 10.3 ext 60.0 p90 60.0 | fc+uniform Y60 1.38 sym 98.6 early 0.0 ext 67.2 p90 106.4 | HGB Y60 0.00 sym 73.1 early 26.9 ext 90.9 p90 260.5 | HGB-nostate Y60 0.00 sym 71.7 early 28.3 ext 91.5 p90 259.7 | LinQR Y60 1.38 sym 98.6 early 0.0 ext 67.2 p90 106.4
+  E 60 test16 (n 200): uniform Y60 1.50 sym 89.5 early 9.0 ext 60.0 p90 60.0 | fc+uniform Y60 0.50 sym 97.5 early 2.0 ext 61.8 p90 94.2 | HGB Y60 0.50 sym 69.5 early 30.0 ext 82.1 p90 205.5 | HGB-nostate Y60 0.50 sym 68.5 early 31.0 ext 83.2 p90 216.9 | LinQR Y60 0.50 sym 97.5 early 2.0 ext 61.8 p90 94.2
+
+== measured C-30: fit 660, cal 100, cal mean delta (D0-P0) 23.13 s
+  E 15 test15 (n 147): uniform Y60 12.24 sym 87.8 early 0.0 ext 15.0 p90 15.0
+  E 15 test16 (n 197): uniform Y60 3.05 sym 97.0 early 0.0 ext 15.0 p90 15.0
+  E 30 test15 (n 147): uniform Y60 8.16 sym 91.8 early 0.0 ext 30.0 p90 30.0 | fc+uniform Y60 0.00 sym 100.0 early 0.0 ext 36.7 p90 76.5 | HGB Y60 0.00 sym 100.0 early 0.0 ext 39.5 p90 96.0 | HGB-nostate Y60 0.00 sym 100.0 early 0.0 ext 39.5 p90 95.5 | LinQR Y60 0.00 sym 100.0 early 0.0 ext 36.7 p90 76.5
+  E 30 test16 (n 197): uniform Y60 2.54 sym 97.5 early 0.0 ext 30.0 p90 30.0 | fc+uniform Y60 0.00 sym 99.5 early 0.5 ext 32.0 p90 64.4 | HGB Y60 0.00 sym 98.5 early 1.5 ext 36.3 p90 87.6 | HGB-nostate Y60 0.00 sym 98.5 early 1.5 ext 36.2 p90 87.6 | LinQR Y60 0.00 sym 99.5 early 0.5 ext 32.0 p90 64.4
+  E 60 test15 (n 147): uniform Y60 4.76 sym 85.0 early 10.2 ext 60.0 p90 60.0 | fc+uniform Y60 0.00 sym 100.0 early 0.0 ext 66.7 p90 106.5 | HGB Y60 0.00 sym 73.5 early 26.5 ext 81.7 p90 262.8 | HGB-nostate Y60 0.00 sym 73.5 early 26.5 ext 81.6 p90 262.0 | LinQR Y60 0.00 sym 100.0 early 0.0 ext 66.7 p90 106.5
+  E 60 test16 (n 197): uniform Y60 1.02 sym 89.8 early 9.1 ext 60.0 p90 60.0 | fc+uniform Y60 0.00 sym 98.0 early 2.0 ext 62.0 p90 94.4 | HGB Y60 0.00 sym 62.4 early 37.6 ext 85.2 p90 217.5 | HGB-nostate Y60 0.00 sym 62.4 early 37.6 ext 85.0 p90 218.2 | LinQR Y60 0.00 sym 98.0 early 2.0 ext 62.0 p90 94.4
+
+== static FREE: fit 621, cal 201, cal mean delta (D0-P0) 0.00 s
+  E 15 test13 (n 807): uniform Y60 14.62 sym 85.4 early 0.0 ext 15.0 p90 15.0 | fc+uniform Y60 14.62 sym 85.4 early 0.0 ext 15.0 p90 15.0 | HGB Y60 14.37 sym 85.6 early 0.0 ext 14.7 p90 31.0 | HGB-nostate Y60 14.25 sym 85.7 early 0.0 ext 14.8 p90 32.5 | LinQR Y60 14.62 sym 85.4 early 0.0 ext 15.0 p90 15.0
+  E 30 test13 (n 807): uniform Y60 12.89 sym 87.1 early 0.0 ext 30.0 p90 30.0 | fc+uniform Y60 12.89 sym 87.1 early 0.0 ext 30.0 p90 30.0 | HGB Y60 11.65 sym 81.4 early 6.9 ext 29.4 p90 62.0 | HGB-nostate Y60 11.65 sym 81.3 early 7.1 ext 29.5 p90 65.0 | LinQR Y60 12.89 sym 87.1 early 0.0 ext 30.0 p90 30.0
+  E 60 test13 (n 807): uniform Y60 9.17 sym 37.9 early 52.9 ext 60.0 p90 60.0 | fc+uniform Y60 9.17 sym 37.9 early 52.9 ext 60.0 p90 60.0 | HGB Y60 6.20 sym 62.6 early 31.2 ext 58.8 p90 124.0 | HGB-nostate Y60 6.57 sym 59.6 early 33.8 ext 59.1 p90 130.0 | LinQR Y60 9.17 sym 37.9 early 52.9 ext 60.0 p90 60.0
+
+== static LOCKS: fit 596, cal 196, cal mean delta (D0-P0) 0.00 s
+  E 15 test13 (n 792): uniform Y60 2.27 sym 97.7 early 0.0 ext 15.0 p90 15.0 | fc+uniform Y60 2.27 sym 97.7 early 0.0 ext 15.0 p90 15.0 | HGB Y60 2.15 sym 91.2 early 6.7 ext 12.5 p90 38.9 | HGB-nostate Y60 2.27 sym 91.5 early 6.2 ext 15.0 p90 51.3 | LinQR Y60 2.27 sym 97.7 early 0.0 ext 15.0 p90 15.0
+  E 30 test13 (n 792): uniform Y60 2.27 sym 97.7 early 0.0 ext 30.0 p90 30.0 | fc+uniform Y60 2.27 sym 97.7 early 0.0 ext 30.0 p90 30.0 | HGB Y60 2.02 sym 86.7 early 11.2 ext 25.0 p90 77.9 | HGB-nostate Y60 1.64 sym 80.9 early 17.4 ext 30.1 p90 102.5 | LinQR Y60 2.27 sym 97.7 early 0.0 ext 30.0 p90 30.0
+  E 60 test13 (n 792): uniform Y60 1.64 sym 32.8 early 65.5 ext 60.0 p90 60.0 | fc+uniform Y60 1.64 sym 32.8 early 65.5 ext 60.0 p90 60.0 | HGB Y60 1.64 sym 80.3 early 18.1 ext 50.1 p90 155.7 | HGB-nostate Y60 1.52 sym 74.7 early 23.7 ext 60.2 p90 205.0 | LinQR Y60 1.64 sym 32.8 early 65.5 ext 60.0 p90 60.0
+
+== static C-120: fit 588, cal 191, cal mean delta (D0-P0) 0.00 s
+  E 15 test13 (n 784): uniform Y60 0.64 sym 99.4 early 0.0 ext 15.0 p90 15.0 | fc+uniform Y60 0.64 sym 99.4 early 0.0 ext 15.0 p90 15.0 | HGB Y60 0.51 sym 89.9 early 9.6 ext 15.8 p90 52.7 | HGB-nostate Y60 0.64 sym 96.6 early 2.8 ext 16.1 p90 0.0 | LinQR Y60 0.64 sym 99.4 early 0.0 ext 15.0 p90 15.0
+  E 30 test13 (n 784): uniform Y60 0.64 sym 99.4 early 0.0 ext 30.0 p90 30.0 | fc+uniform Y60 0.64 sym 99.4 early 0.0 ext 30.0 p90 30.0 | HGB Y60 0.51 sym 86.5 early 13.0 ext 31.6 p90 105.3 | HGB-nostate Y60 0.64 sym 96.6 early 2.8 ext 32.2 p90 0.0 | LinQR Y60 0.64 sym 99.4 early 0.0 ext 30.0 p90 30.0
+  E 60 test13 (n 784): uniform Y60 0.00 sym 34.1 early 65.9 ext 60.0 p90 60.0 | fc+uniform Y60 0.00 sym 34.1 early 65.9 ext 60.0 p90 60.0 | HGB Y60 0.51 sym 82.7 early 16.8 ext 63.2 p90 210.6 | HGB-nostate Y60 0.64 sym 96.6 early 2.8 ext 64.3 p90 0.0 | LinQR Y60 0.00 sym 34.1 early 65.9 ext 60.0 p90 60.0
+
+== static C-60: fit 576, cal 187, cal mean delta (D0-P0) 0.00 s
+  E 15 test13 (n 777): uniform Y60 0.00 sym 100.0 early 0.0 ext 15.0 p90 15.0 | fc+uniform Y60 0.00 sym 100.0 early 0.0 ext 15.0 p90 15.0 | HGB Y60 0.00 sym 91.5 early 8.5 ext 10.2 p90 47.1 | HGB-nostate Y60 0.00 sym 100.0 early 0.0 ext 15.0 p90 15.0 | LinQR Y60 0.00 sym 100.0 early 0.0 ext 15.0 p90 15.0
+  E 30 test13 (n 777): uniform Y60 0.00 sym 100.0 early 0.0 ext 30.0 p90 30.0 | fc+uniform Y60 0.00 sym 100.0 early 0.0 ext 30.0 p90 30.0 | HGB Y60 0.00 sym 88.8 early 11.2 ext 20.3 p90 94.2 | HGB-nostate Y60 0.00 sym 100.0 early 0.0 ext 30.0 p90 30.0 | LinQR Y60 0.00 sym 100.0 early 0.0 ext 30.0 p90 30.0
+  E 60 test13 (n 777): uniform Y60 0.00 sym 33.7 early 66.3 ext 60.0 p90 60.0 | fc+uniform Y60 0.00 sym 33.7 early 66.3 ext 60.0 p90 60.0 | HGB Y60 0.00 sym 86.7 early 13.3 ext 40.6 p90 188.4 | HGB-nostate Y60 0.00 sym 33.7 early 66.3 ext 60.0 p90 60.0 | LinQR Y60 0.00 sym 33.7 early 66.3 ext 60.0 p90 60.0
+
+== static C-30: fit 576, cal 186, cal mean delta (D0-P0) 0.00 s
+  E 15 test13 (n 772): uniform Y60 0.00 sym 100.0 early 0.0 ext 15.0 p90 15.0 | fc+uniform Y60 0.00 sym 100.0 early 0.0 ext 15.0 p90 15.0 | HGB Y60 0.00 sym 100.0 early 0.0 ext 15.0 p90 15.0 | HGB-nostate Y60 0.00 sym 100.0 early 0.0 ext 15.0 p90 15.0 | LinQR Y60 0.00 sym 100.0 early 0.0 ext 15.0 p90 15.0
+  E 30 test13 (n 772): uniform Y60 0.00 sym 100.0 early 0.0 ext 30.0 p90 30.0 | fc+uniform Y60 0.00 sym 100.0 early 0.0 ext 30.0 p90 30.0 | HGB Y60 0.00 sym 100.0 early 0.0 ext 30.0 p90 30.0 | HGB-nostate Y60 0.00 sym 100.0 early 0.0 ext 30.0 p90 30.0 | LinQR Y60 0.00 sym 100.0 early 0.0 ext 30.0 p90 30.0
+  E 60 test13 (n 772): uniform Y60 0.00 sym 33.3 early 66.7 ext 60.0 p90 60.0 | fc+uniform Y60 0.00 sym 33.3 early 66.7 ext 60.0 p90 60.0 | HGB Y60 0.00 sym 33.3 early 66.7 ext 60.0 p90 60.0 | HGB-nostate Y60 0.00 sym 33.3 early 66.7 ext 60.0 p90 60.0 | LinQR Y60 0.00 sym 33.3 early 66.7 ext 60.0 p90 60.0
+
+== Sealed predictions (E = 30)
+  ML1 test15: C-30 gain of HGB over fc+uniform = +0.00 pp
+  ML1 test16: C-30 gain of HGB over fc+uniform = +0.00 pp
+  ML1 TRUE
+  ML2 test15 vs uniform: gain +8.28 pp, guards fail -> no
+  ML2 test15 vs fc+uniform: gain +0.69 pp, guards fail -> no
+  ML2 test16 vs uniform: gain +2.50 pp, guards fail -> no
+  ML2 test16 vs fc+uniform: gain +0.00 pp, guards fail -> no
+  ML2 FALSE
+  ML3 static FREE: gain +1.24 pp; positive in w08 and w17: True; guards fail -> FALSE
+  ML4 static FREE test13 HGB: Y60 11.65 vs C-30 0.00; sym 81.4 vs 100.0 -> no
+  ML4 static FREE test13 HGB-nostate: Y60 11.65 vs C-30 0.00; sym 81.3 vs 100.0 -> no
+  ML4 static FREE test13 LinQR: Y60 12.89 vs C-30 0.00; sym 87.1 vs 100.0 -> no
+  ML4 static LOCKS test13 HGB: Y60 2.02 vs C-30 0.00; sym 86.7 vs 100.0 -> no
+  ML4 static LOCKS test13 HGB-nostate: Y60 1.64 vs C-30 0.00; sym 80.9 vs 100.0 -> no
+  ML4 static LOCKS test13 LinQR: Y60 2.27 vs C-30 0.00; sym 97.7 vs 100.0 -> no
+  ML4 measured U test15 HGB: Y60 0.69 vs C-30 0.00; sym 98.6 vs 100.0 -> no
+  ML4 measured U test15 HGB-nostate: Y60 0.69 vs C-30 0.00; sym 98.6 vs 100.0 -> no
+  ML4 measured U test15 LinQR: Y60 1.38 vs C-30 0.00; sym 98.6 vs 100.0 -> no
+  ML4 measured U test16 HGB: Y60 0.50 vs C-30 0.00; sym 97.0 vs 99.5 -> no
+  ML4 measured U test16 HGB-nostate: Y60 0.50 vs C-30 0.00; sym 97.0 vs 99.5 -> no
+  ML4 measured U test16 LinQR: Y60 0.50 vs C-30 0.00; sym 99.0 vs 99.5 -> no
+  ML4 TRUE (matches: [])
+  ML5 measured U test15: G_full +0.69, G_nostate +0.69 -> no
+  ML5 measured U test16: G_full +0.00, G_nostate +0.00 (G_full <= 0: not applicable)
+  ML5 static FREE test13: G_full +1.24, G_nostate +1.24 -> no
+  ML5 FALSE
+  KILL (ML2 and ML3 both fail): YES

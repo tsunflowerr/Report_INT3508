@@ -1,0 +1,39 @@
+# Historical-trip ETA, pooled promises and commitment
+
+2026-10-08, resumed Round 10. Primary evidence below separates measured trip labels, simulated pooled outcomes and controllable revisions. Earlier survey preserved as SURVEY-ML-ETA-CODEX-ROUND10A.md.
+
+**Learning from previous trips is established; the remaining question is the measured value of prediction versus commitment at a matched quote cost.** Historical profiles are features or baselines derived from trip observations, so trip training and traffic profiles are compatible.
+
+## Inputs, targets and ground truth
+
+| Primary source / inspected location | Verbatim evidence | What is learned |
+|---|---|---|
+| [Uber DeeprETA, 2022](https://arxiv.org/html/2206.02127), §3/Table 1, §6.3 | “The label is the actual arrival time (ATA)” | O/D, time/day, routing ETA/distance, request type and live/historical speeds predict a routing residual. Pickup ground truth spans acceptance→ride start; drop-off spans trip start→end. About 1.4 billion ETA-request observations, split chronologically; observations need not be unique trips. Unknown driver routes and endpoint delays are included, without isolating future pooled insertion. |
+| [Google Maps GNN, 2021](https://arxiv.org/html/2108.11482), §§3.1.1–3.1.2 | “actual traversal times along segments and supersegments in seconds” | Traversal events supply labels. Pre-traversal live features and past-17-week traffic profiles support several future horizons. Historical trip observations and time profiles have distinct roles within the same predictor. |
+| [DeepTravel, IJCAI 2018](https://www.ijcai.org/proceedings/2018/0508.pdf), abstract; §3/p.3656, §4/p.3658 | “the time stamp of each trajectory point” | Taxi GPS timestamps supervise full-path and intermediate travel times; spatial/time grids, driving state and traffic are inputs. Training uses occupied Porto/Shanghai taxi trajectories. A known candidate path differs from an incumbent pooled rider's route after future requests. |
+
+A historical completion supplies a label, not an input available before it occurs. Taxi durations are not ground truth for simulated pooled trips with different routes/stops. Learning from RideBound completions estimates this simulator and operating policy, even with empirically derived traffic factors.
+
+## Close pooled prior and verified control precedents
+
+**Ding, Dandl and Bogenberger directly limit the novelty claim.** Their [Predicting Offers for Mobility-on-Demand Services](https://mediatum.ub.tum.de/doc/1765899/h05lm74hek2rv3v75ixnj1tr9.pdf), submitted November 2024, pp.6–8, says: “The realized services RS provided for each request by fleetpy are documented as target values”. Request-time information and corresponding fleet routing/position/load state are encoded through pickup likelihood, capacity and detour degree; CNN/task decoders predict serviceability, waiting and driving time. They explicitly describe later pooling requests changing earlier offers and learn realized simulated services. Their case study improves driving-time prediction over an insertion heuristic but has worse waiting-time prediction (p.21). Thus learning pooled outcomes from initial fleet state, including later insertion effects, already exists; it is not measured real-world pooled ground truth or a cumulative revision budget.
+
+A known candidate's immediate insertion cost differs from predicting all future insertions' final effect. Likewise, forecasting demand for anticipatory routing does not establish an individual promise-error model.
+
+**Fielbaum quotations VERIFIED.** [Fielbaum and Alonso-Mora, TR-C 2020](https://autonomousrobots.nl/assets/files/publications/20-Fielbaum-TRC.pdf), p.6 fn.7, says “no public methods”; p.10 proposes “better predictions or to make these changes less frequent”. The footnote concerns effective first announcements under future assignment changes and reports the authors' knowledge in 2020. It is not evidence of an unfilled 2026 gap. Their assignment-rule reliability/service trade-off motivates the two-remedy comparison, without proving commitment increases ML learnability.
+
+**Hörl–Zwick strategy B VERIFIED with a narrower scope.** I independently extracted their [2022 primary PDF, p.8](https://www.moia.io/mobility_analytics/studies/2201_Traffic_uncertainty_in_ride-pooling.pdf) and checked [local text:527](E:/Code/Report_INT3508/ridebound-scratchpad/optimize/codex-debate/claude-work/pdf/hoerl-zwick-2022.txt:527). Each epoch recalculates drop-off expectations along assigned routes under current traffic; the updated expectation replaces the deadline for onboard requests otherwise violating constraints. New pickups must leave them “not dropped off later than what is the absolute minimum, given current traffic conditions”; constraint violations also receive penalties. This is a close traffic-relative recovery/control precedent for at-risk onboard riders. It is not an unconditional lock or an absolute cumulative revision ledger for every rider.
+
+[Leonardi et al., 2024 preprint](https://arxiv.org/pdf/2411.11899), §§3.1–3.3, 5.3, PDF pp.8–10/21–25, learns DRT travel time using even direct-distance-only linear regression and stretched windows. It varies operating constraints and fleet size to trade prediction reliability against service: “the level of predictability of DRT can be seen as a design parameter of the service” (p.25). Simple-input learning plus operational predictability control therefore also has precedent.
+
+## Distributional and calibrated promises
+
+[Uber DeepETA](https://www.uber.com/us/en/blog/deepeta-how-uber-predicts-arrival-times/), asymmetric-loss section, discusses “a specific quantile of the ETA distribution”. [DoorDash NextGen, 2024](https://careersatdoordash.com/blog/improving-etas-with-multi-task-models-deep-learning-and-probabilistic-forecasts/), probabilistic/experiment sections, uses a distributional base model, a separate decision layer and calibration/CRPS; consistency guards that “customers don't see large changes in their ETAs”. Prediction/display separation, asymmetric decisions and stability are established.
+
+[Conformalized Quantile Regression](https://arxiv.org/html/1905.03222), §4/Theorem 1, assumes samples “are exchangeable” for marginal coverage. Chronological incidents, clustered simulation windows and changed policies do not automatically satisfy it. A quantile or a cost-rescaled score does not guarantee per-rider, subgroup or successive-update coverage. Any calibrated remaining-residual bound must be validated under the same deployed policy, quote-time forecast and served cohort.
+
+## Comparison with Claude and contribution boundary
+
+Claude S4 correctly treats generic ETA learning and probabilistic promises as standard. Its [search gap:103](E:/Code/Report_INT3508/ridebound-scratchpad/optimize/codex-debate/claude-work/SURVEY-S4-ml-eta-from-trips.md:103) needs the direct Ding prior; its [industry-control statement:117](E:/Code/Report_INT3508/ridebound-scratchpad/optimize/codex-debate/claude-work/SURVEY-S4-ml-eta-from-trips.md:117) exceeds what those model descriptions establish. Absence of a matched-cost head-to-head study from either survey is a search result, not proof of novelty.
+
+The defensible candidate is a reproducible comparison of prediction and cumulative dispatch control, reporting reliability–extension–service/sharing frontiers plus signed ledger components. The verified identity A−P0=Σc+Σx+z separates recorded revisions from final execution residual ([verification:15](E:/Code/Report_INT3508/ridebound-scratchpad/optimize/codex-debate/codex-work/ROUND9-CODEX.md:15)). A cap need not make dispatch error zero; even static runs contain reprojection x. A simulator estimate is not an upper/lower real-world learnability bound. The specific cumulative ledger/certificate combination remains a scoped contribution candidate; this survey does not establish global novelty or a new ETA algorithm.

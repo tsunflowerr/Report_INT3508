@@ -1,0 +1,470 @@
+{
+  "factor_files": [
+    {
+      "day": "2018-11-11",
+      "rows": 24,
+      "cadence": [
+        3600
+      ],
+      "path": "E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-11_tt_factors_hourly.csv",
+      "sha256": "85326ec5159bc6d996ea67a7b6ab50bd66410889575bb305249a7b39b5dc21f4"
+    },
+    {
+      "day": "2018-11-12",
+      "rows": 96,
+      "cadence": [
+        900
+      ],
+      "path": "E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-12_tt_factors.csv",
+      "sha256": "89f64a74ff7262b93cea7270cd62639cef3fa1dbc8a091f8e3b927d1100c7317"
+    },
+    {
+      "day": "2018-11-13",
+      "rows": 96,
+      "cadence": [
+        900
+      ],
+      "path": "E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-13_tt_factors.csv",
+      "sha256": "442290763bd4f46faa02a8854cacf4b75f7a3b6df97af16b4b9490078c342b0c"
+    },
+    {
+      "day": "2018-11-14",
+      "rows": 96,
+      "cadence": [
+        900
+      ],
+      "path": "E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-14_tt_factors.csv",
+      "sha256": "0f09e2651a1257680d1209518a6f91fba98d2ae57a0b8278458daecfecf2f85f"
+    },
+    {
+      "day": "2018-11-15",
+      "rows": 96,
+      "cadence": [
+        900
+      ],
+      "path": "E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-15_tt_factors.csv",
+      "sha256": "9408bebbdb435e695019e2083068d3c920bcb6da12b982de0f91857a7fbf902b"
+    },
+    {
+      "day": "2018-11-16",
+      "rows": 96,
+      "cadence": [
+        900
+      ],
+      "path": "E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-16_tt_factors.csv",
+      "sha256": "a2510978ad84e86d4b1d42e7ceb2a87e721bc47f23b963ae409d6be28436673f"
+    },
+    {
+      "day": "2018-11-17",
+      "rows": 96,
+      "cadence": [
+        900
+      ],
+      "path": "E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-17_tt_factors.csv",
+      "sha256": "4beb9aa81115eff189b6ed8e6d65cd5827ff531d3ecb9147d0c69585ccd929fc"
+    },
+    {
+      "day": "2018-11-18",
+      "rows": 96,
+      "cadence": [
+        900
+      ],
+      "path": "E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-18_tt_factors.csv",
+      "sha256": "ce67a5d4a25200983edbd380666c4a2fbcfa3b3af04004401d7ca08e422d7412"
+    }
+  ],
+  "total_observations": 696,
+  "factor_errors": [
+    {
+      "window": "07:00-09:00",
+      "horizon_minutes": 15,
+      "n": 56,
+      "naive_mean": 4.877290648276026,
+      "forecast_mean": 1.8985431566002147,
+      "naive_max": 16.188560935456287,
+      "forecast_max": 6.118010594410062
+    },
+    {
+      "window": "07:00-09:00",
+      "horizon_minutes": 30,
+      "n": 49,
+      "naive_mean": 9.788438502802524,
+      "forecast_mean": 2.4396447304937046,
+      "naive_max": 27.897039320562467,
+      "forecast_max": 6.913768511949825
+    },
+    {
+      "window": "07:00-09:00",
+      "horizon_minutes": 45,
+      "n": 42,
+      "naive_mean": 14.849173798695679,
+      "forecast_mean": 3.077202242489089,
+      "naive_max": 35.63471730424326,
+      "forecast_max": 9.252640010433533
+    },
+    {
+      "window": "08:00-10:00",
+      "horizon_minutes": 15,
+      "n": 56,
+      "naive_mean": 2.62006668033765,
+      "forecast_mean": 1.685670515586785,
+      "naive_max": 7.129520115828991,
+      "forecast_max": 6.10530968352232
+    },
+    {
+      "window": "08:00-10:00",
+      "horizon_minutes": 30,
+      "n": 49,
+      "naive_mean": 4.7695447312318535,
+      "forecast_mean": 1.8610388148145116,
+      "naive_max": 10.280759945366835,
+      "forecast_max": 5.9946988630872555
+    },
+    {
+      "window": "08:00-10:00",
+      "horizon_minutes": 45,
+      "n": 42,
+      "naive_mean": 6.974519203733279,
+      "forecast_mean": 2.7039396872101027,
+      "naive_max": 13.415426829300504,
+      "forecast_max": 6.782096406107618
+    },
+    {
+      "window": "17:00-19:00",
+      "horizon_minutes": 15,
+      "n": 56,
+      "naive_mean": 2.3292595535210263,
+      "forecast_mean": 2.2700904512957623,
+      "naive_max": 5.586289322180249,
+      "forecast_max": 8.834865889118426
+    },
+    {
+      "window": "17:00-19:00",
+      "horizon_minutes": 30,
+      "n": 49,
+      "naive_mean": 3.833523443667864,
+      "forecast_mean": 3.1677144345116535,
+      "naive_max": 9.834437629102922,
+      "forecast_max": 13.219556496510254
+    },
+    {
+      "window": "17:00-19:00",
+      "horizon_minutes": 45,
+      "n": 42,
+      "naive_mean": 5.395001000893623,
+      "forecast_mean": 4.131322267075193,
+      "naive_max": 13.78027689705512,
+      "forecast_max": 14.16409171070826
+    }
+  ],
+  "t38": [
+    {
+      "arm": "C-30",
+      "completed": 2338,
+      "exposed": 33,
+      "exposure_percent": 1.4114627887082978,
+      "positive_riders": 29,
+      "positive_rider_percent": 1.2403763900769889,
+      "negative_riders": 4,
+      "nonzero_events": 33,
+      "positive_events": 29,
+      "negative_events": 4,
+      "median_s": 8.295,
+      "p90_nearest_rank_s": 27.973,
+      "maximum_s": 29.239
+    },
+    {
+      "arm": "U",
+      "completed": 2434,
+      "exposed": 174,
+      "exposure_percent": 7.148726376335251,
+      "positive_riders": 172,
+      "positive_rider_percent": 7.066557107641742,
+      "negative_riders": 3,
+      "nonzero_events": 187,
+      "positive_events": 184,
+      "negative_events": 3,
+      "median_s": 108.636,
+      "p90_nearest_rank_s": 260.638,
+      "maximum_s": 554.806
+    }
+  ],
+  "cached_extractions": [
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181114-s10-r3-w07.json",
+      "sha256": "b4c19c8bc91865c04f4b08ee3fed9f84e65f6ff4230f5cb88d7d41b68488a010"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181114-s10-r3-w08.json",
+      "sha256": "13a1612a22617811a54d3b9ae0a4fc88d34a08a1b37095051a697ffced751c8e"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181114-s10-r3-w17.json",
+      "sha256": "2a8df537b10dfd418a9cb153708e572b7010a9ba8c4bf0c40e5889874064688a"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181114-s10-r4-w07.json",
+      "sha256": "6ba3b71ec94542ce9e817e3cfb53425321e969a2783793b96f51b699dca1dad8"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181114-s10-r4-w08.json",
+      "sha256": "e120f364837ea586cfa722d4798f350d713fa616a0f8e8918e5ed0e2c75babd4"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181114-s10-r4-w17.json",
+      "sha256": "add1d130cf83aa3580d2a06a0589b18bf3c583e011b226144f2bb6abf773d0e0"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181115-s10-r1-w07.json",
+      "sha256": "4bb6baa7247a694dd10ae6ed01ee91bf3d00b2d5b54c8afc01ab659ccce7f4dc"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181115-s10-r1-w08.json",
+      "sha256": "36d91b91b70b3a581dda8ac5e08b66397377cedb729a86947665c08f95f5a6ba"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181115-s10-r2-w07.json",
+      "sha256": "269a0e5a109d50470680ff15a41f4f5f88c9bb93e0b557ef3a5e1190ba1179d7"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181115-s10-r2-w08.json",
+      "sha256": "9035d4bc5f4df4479df0450b307e0db9eae6a08c594ff9405832170e6c4570bd"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181115-s10-r4-w07.json",
+      "sha256": "90e39c9874a84803a0eba16407c344612318a01ab20b55166181576ca1cbae4c"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181115-s10-r4-w08.json",
+      "sha256": "57015e5924abbb73488245d341ad5431ed04312f59c1fdd99e116ee8201fd061"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181116-s10-r1-w07.json",
+      "sha256": "32734a632f0f9bacfe382de7b278ff0bd6efd92b1ef2f80594c3884d0de8a70c"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181116-s10-r1-w08.json",
+      "sha256": "6d70e28109b922cd73fc7d7c248e62fc8605ee84e2a7464ec21a56ba7b1ac201"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181116-s10-r1-w17.json",
+      "sha256": "58cf530580af7d76f0c07bd680dafb2091bc24f442b957b79dc27fa9c27400ad"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181116-s10-r2-w07.json",
+      "sha256": "ce824c0b7cf8c9aa652de5118848f422ba582cc023343413c4a9031782ec4cf8"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181116-s10-r2-w08.json",
+      "sha256": "e7b69e5827cdc33f48e982060e849d67ba427073cf580224985f662c68eb606e"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181116-s10-r2-w17.json",
+      "sha256": "44b0224683e4c336b6f0ed8df7aa88ad2ad90168a5bcda6831c2eb3c5c569678"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181116-s10-r4-w07.json",
+      "sha256": "adf80f3b63b68d90948e7552f341a8faba0d537d8d4a0ce9b46916fce0f39398"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181116-s10-r4-w08.json",
+      "sha256": "79f07ba15942d2fd727e310d5ee1edba3e9e357a3be51e4604b50dfb897245e2"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181116-s10-r4-w17.json",
+      "sha256": "a1be824f9bfd570972eee381a09dce85194a52a9ac41f7e67d9467cf10773d04"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181117-s10-r1-w08.json",
+      "sha256": "b96a28423a62d246d46cf81ec3710cfeee5f8519f2fa5c96bd33684f3d6b9676"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181117-s10-r1-w17.json",
+      "sha256": "3857748fbef6092855f46e808ec92c16719b8f17419cafdad1b669941fe04e13"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181117-s10-r2-w08.json",
+      "sha256": "47213d0e83eb13b9956a4bc5050b165d22ea56fef01fbaf118d1b6fd3e2981c8"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181117-s10-r2-w17.json",
+      "sha256": "83e0e9c114482d13dad07f557e144da926204a1888b9a3f5b6dd1e45a8616881"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181117-s10-r3-w07.json",
+      "sha256": "edbb5e230d20693a952f7cac4517feb349edf3c2e9e793960bf14bb018f00e06"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181117-s10-r3-w08.json",
+      "sha256": "c073a65f19aed09bb73c3810270d94f564de7d77a3bf97908023f4af5d892d0e"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181117-s10-r3-w17.json",
+      "sha256": "318ba22a96fc33598653ab99913f3e4f7af0d86ab9a506d59c56222c495103fa"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181118-s10-r2-w08.json",
+      "sha256": "9e0a7a865343c7793907015ca191456daf0e389b8e71ddffde2c3316fe5bd844"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181118-s10-r2-w17.json",
+      "sha256": "d5bba6173e4d8f26c7d379a1be883937ec58e44d08f51bdc2ca015e6ea20a9cd"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181118-s10-r3-w08.json",
+      "sha256": "5811d3f86fe624e4a81ea418b002fb538db5f6c9094d09219545efb076596cf5"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181118-s10-r3-w17.json",
+      "sha256": "16dbf38ce885d8e350d53af4953090ba058ea1bd5200d8b96cd1c828bcf52b4a"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181118-s10-r4-w08.json",
+      "sha256": "ccc3ea82e2fdce7ccc279579aa3b8db8cf91e5475c9e6adb1a5eee22778b2b5f"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\C-30-d20181118-s10-r4-w17.json",
+      "sha256": "91e137b0d5e7e651b7a5a87cfb09e42bd78bf10f81663b0b4e137ada1bc5139e"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181114-s10-r3-w07.json",
+      "sha256": "41a36831f34ede96ae875677ff14f1002f63400a6563a24f7b2e69b2a6475b3d"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181114-s10-r3-w08.json",
+      "sha256": "63051aa9c5ea18379869389ceabd8938e1c2ab923fab6f861a0085fd7c2d5cf2"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181114-s10-r3-w17.json",
+      "sha256": "a8b225f52c34046c69f35c77144612dbfaba15252a0595bfcc48fa689a22febc"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181114-s10-r4-w07.json",
+      "sha256": "4f49e3210e3be0e6a467b319d7805d3d2481a2da1875adf6d46b69daeaca1ffd"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181114-s10-r4-w08.json",
+      "sha256": "d9f0e9b44ff0cbb88d4f4fd55895765bb6f1df2d4c2c5db2241b5de8b67c85cf"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181114-s10-r4-w17.json",
+      "sha256": "6aa14ba952ae7b6980cdf1af624275ae5d88f6ea32c96e59bd7837b5c0b4f783"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181115-s10-r1-w07.json",
+      "sha256": "53e5ab5afa1a87e395645728614ae2f33b2185c313be78edda953186021db8d2"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181115-s10-r1-w08.json",
+      "sha256": "f2ad668460058bb0ef33d9e329da97d891458f016318daedb6f42cb1ce1fa2ea"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181115-s10-r2-w07.json",
+      "sha256": "30a50cfc6af89f8015c096d7ca6ae7bc604cb7882c6562fbe1908780a3f553bc"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181115-s10-r2-w08.json",
+      "sha256": "7c4bc5b588314c3e7f6c64e3e61dc17ccc015a3296673528ae355d1c06bae909"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181115-s10-r4-w07.json",
+      "sha256": "45a308c1410c44d8bbfcd8211d802e577d4700f76a8c3ff9037b0d976f9b6398"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181115-s10-r4-w08.json",
+      "sha256": "661a7f0cfbc7425dae22bf00a7d8c282165178bd324e10762a3a72d484839b8b"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181116-s10-r1-w07.json",
+      "sha256": "b3f98ddfffca3cd5dbc6238382b78ee7c4c5876ff11ddfc2f05c24d30682fd3f"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181116-s10-r1-w08.json",
+      "sha256": "d16ceebce20165786f65029fae1231feb10eb1cd1dacf3647a3f755413164ab5"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181116-s10-r1-w17.json",
+      "sha256": "af77394600061c9184eb416868c68fe6e0b062c5b35fdc9e3353b056f700d9af"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181116-s10-r2-w07.json",
+      "sha256": "2b68824941b42e11fe6b9e2aa63eaa7b1e43f63e7ea6bdc4beb3ba7664aec146"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181116-s10-r2-w08.json",
+      "sha256": "a5c285465d3ab8c0f973dcab2bddfa03d465b245c8204a7a62561a737bb7973f"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181116-s10-r2-w17.json",
+      "sha256": "021b3b3958c869635018291bfd5063a2dceba84c0f88692c214fadc080eac2fc"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181116-s10-r4-w07.json",
+      "sha256": "ac92da9bbf0bd9677bd61de45d39752df16d75caded3dd1683ccccd5b2d913cc"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181116-s10-r4-w08.json",
+      "sha256": "9739907a529826095f78182117d01cd9346895f934a3604ede4b59ff8c068fe6"
+    },
+    {
+      "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\independent-A\\extracted\\U-d20181116-s10-r4-w17.json",
+      "sha256": "13d0deaafc2a5cc10406f5639367a667403e133c0b1248e047d8854b9779f5f0"
+    }
+  ],
+  "new_raw_cells": [
+    [
+      "U",
+      "d20181117-s10-r1-w08"
+    ],
+    [
+      "U",
+      "d20181117-s10-r1-w17"
+    ],
+    [
+      "U",
+      "d20181117-s10-r2-w08"
+    ],
+    [
+      "U",
+      "d20181117-s10-r2-w17"
+    ],
+    [
+      "U",
+      "d20181117-s10-r3-w07"
+    ],
+    [
+      "U",
+      "d20181117-s10-r3-w08"
+    ],
+    [
+      "U",
+      "d20181117-s10-r3-w17"
+    ],
+    [
+      "U",
+      "d20181118-s10-r2-w08"
+    ],
+    [
+      "U",
+      "d20181118-s10-r2-w17"
+    ],
+    [
+      "U",
+      "d20181118-s10-r3-w08"
+    ],
+    [
+      "U",
+      "d20181118-s10-r3-w17"
+    ],
+    [
+      "U",
+      "d20181118-s10-r4-w08"
+    ],
+    [
+      "U",
+      "d20181118-s10-r4-w17"
+    ]
+  ],
+  "new_raw_frames": 23710,
+  "scope": "C-30 uses 34 pre-existing independently checked extractions; U uses 21 cached plus 13 freshly frame-hashed raw transcripts; no simulation executed."
+}

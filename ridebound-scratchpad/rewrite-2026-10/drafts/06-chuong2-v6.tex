@@ -1,0 +1,275 @@
+% =====================================================================================================
+% Chương 2 — bản viết lại, phiên bản 6 (2026-10-13). Dùng như \input{noi-dung/06-chuong2} của main.tex.
+% Các bản 1–5 giữ nguyên. Bản 5 xử lý bản kiểm nguồn Codex R35 (156 mục) và nhận xét R30 của người đọc, giảng viên
+% (B1–B5, N1–N5); bản 6 chỉ rút thêm năm câu của bản 5 cho tổng chữ không tăng quá 5% so với bản 4.
+% Lý do từng thay đổi: reviews/CH2-REVISION-LOG.md; ghi chú: 06-chuong2-v5-NOTES.md (áp cho cả bản 6).
+% Công thức (2.1) tách dòng bằng aligned (bản dựng thử 13/10 báo tràn 80,5 pt); Bảng 2.1 hẹp lại 0,2 cm (tràn 1,9 pt).
+% Mỗi dòng "% EV:" trỏ tới EVIDENCE-REGISTER.md (A01…K52), các phụ lục 1–2 (N-xx, X3-xx),
+% EVIDENCE-REGISTER-ADDENDUM-5-CH2.md (C2-01…C2-24) hoặc trang của bài ghi tại chỗ ("tr." = trang in trên bài).
+% R35 = codex-work/r35-ch2-check/R35-CH2-FACTCHECK-CODEX-v2.md (mã mục F, T, M, P, E; đề xuất C1–C14).
+% =====================================================================================================
+
+\chapter{Cơ sở lý thuyết và các công trình liên quan}
+\label{chuong:coso}
+
+Chương này trình bày bài toán ghép chuyến động mà khóa luận dựa vào, các cách nghiên cứu trước đã đo và ràng buộc
+lời hứa với khách, và những gì đã biết về dự báo thời gian đi và giá trị của độ tin cậy. Khóa luận tập trung vào lời
+hứa giờ trả (promised drop-off time), tức giờ trả báo cho khách. Luật C của khóa luận giới
+hạn tổng độ lớn các lần bộ điều phối dời giờ trả của mỗi khách qua cả chuyến bằng một trần; định nghĩa hình thức của
+nó và của các luật đối chứng nằm ở Chương~\ref{chuong:phuongphap}.
+% EV: A06; K43; 07-chuong3-v4-v3.tex:18-25 (định nghĩa một câu của luật C ở Chương 3)
+
+% -----------------------------------------------------------------------------------------------------
+\section{Bài toán ghép chuyến động và kiến trúc yêu cầu--chuyến--xe}
+\label{muc:c2-baitoan}
+
+Trong dịch vụ đi chung xe, mỗi yêu cầu gồm điểm đón, điểm trả và thời điểm đặt; mỗi xe trong đội chở được nhiều
+khách cùng lúc, nhưng không quá số chỗ. Bộ điều phối (dispatcher) quyết định nhận hay từ chối từng yêu cầu, giao nó
+cho xe nào và xếp các điểm dừng theo thứ tự nào. Đây là một dạng của bài toán đưa đón theo yêu cầu (Dial-a-Ride
+Problem, DARP): tìm các tuyến xe có tổng chi phí nhỏ nhất để chở chung khách theo đặt chỗ, đồng thời giữ các ràng
+buộc về mức dịch vụ~\cite{molenbruch2017}. Ở dạng động, bộ điều phối chỉ biết một yêu cầu khi khách gửi
+nó~\cite{schulz2026}, nên giải lại bài toán ở mỗi lượt quyết định (decision epoch) với trạng thái của đội xe lúc đó.
+% EV: J25; C2-12 (Molenbruch, PDF tr. 3: định nghĩa DARP); C2-07 (Schulz–Pfeiffer tr. 549: yêu cầu không biết trước); X3-01; R35 F01–F05
+
+Alonso-Mora và cộng sự~\cite{alonsomora2017} đề xuất một cách giải theo lô cho dịch vụ đi chung xe. Yêu cầu được gom
+trong một khoảng ngắn, 30 giây trong thí nghiệm của họ, rồi được gán cùng một lần qua hai bước. Bước thứ nhất dựng
+đồ thị yêu cầu--chuyến--xe (request--trip--vehicle graph), trong đó một chuyến là một nhóm yêu cầu mà một xe chở chung
+được trong các ràng buộc dịch vụ; các nhóm được dựng dần từ nhỏ đến lớn. Hörl và Zwick~\cite{horl2022} và bộ mô
+phỏng FleetPy~\cite{engelhardt2026} đều dùng thuật toán này.
+% EV: J17; C2-10 (Alonso-Mora, bản PNAS sớm tr. 3: đồ thị yêu cầu–xe, yêu cầu–chuyến–xe, kiểm nhóm con; tr. 4–5: lô 30 s); C2-02 (Hörl–Zwick tr. 4, PDF tr. 5; tr. 9, PDF tr. 10: cài trong MATSim); J18; C2-11 (FleetPy tr. 11: thuật toán Alonso-Mora); R35 F06–F10
+
+Bước thứ hai, bước chọn, là một quy hoạch nguyên (integer linear program). Gọi $\epsilon_{ij} \in \{0, 1\}$ bằng 1
+khi xe $j$ được giao chuyến $T_i$, và $\chi_k \in \{0, 1\}$ bằng 1 khi yêu cầu $k$ không được xe nào phục vụ. Bài
+toán là
+\begin{equation}
+\begin{aligned}
+\min\quad & \sum_{(i,j)} c_{ij}\,\epsilon_{ij} + \sum_{k} c_{ko}\,\chi_k\\
+\text{thỏa}\quad & \sum_{i} \epsilon_{ij} \le 1 \quad \text{với mọi xe } j,\\
+& \sum_{(i,j):\, k \in T_i} \epsilon_{ij} + \chi_k = 1 \quad \text{với mọi yêu cầu } k .
+\end{aligned}
+\label{eq:c2-chon}
+\end{equation}
+Trong đó, tổng thứ nhất lấy trên các cặp chuyến--xe có trong đồ thị; $c_{ij}$ là tổng độ trễ của mọi khách khi xe $j$
+chạy chuyến $T_i$, kể cả khách đang ngồi trên xe; $c_{ko}$ là một hằng số lớn phạt mỗi yêu cầu không được phục vụ (ký
+hiệu theo bài gốc). Độ trễ của một khách là hiệu giữa giờ trả và giờ sớm nhất khách có thể tới nếu đi thẳng ngay lúc
+gọi, nên gồm cả thời gian chờ. Ràng buộc thứ nhất cho mỗi xe nhận nhiều nhất một chuyến; ràng buộc thứ hai buộc mỗi
+yêu cầu hoặc thuộc đúng một chuyến được chọn, hoặc không được phục vụ.
+% EV: C2-10 (Alonso-Mora tr. 3: hàm chi phí (1), hằng số c_ko cho tập R_ko, định nghĩa độ trễ; tr. 4: giải thuật 1, dòng 2–4); ký hiệu c_ko kiểm lại trên PDF tr. 3 bằng pdftotext ngày 13/10; R35 F11–F15
+
+Hàm mục tiêu~\eqref{eq:c2-chon} có tính độ trễ của khách đang trên xe, nhưng chỉ như một khoản chi phí cộng chung cho
+mọi khách và đo so với chuyến đi thẳng, không so với giờ đã báo; ngoài độ trễ tối đa, bài không đặt trần riêng lên
+tổng độ lớn các lần dời giờ trả của từng khách. Việc các giờ đã báo bị thay đổi được Fielbaum và Alonso-Mora đo và
+kiểm soát (mục~\ref{muc:c2-dolech}).
+% EV: C2-10 (tr. 3: chi phí (1) gồm độ trễ của khách trên xe, đo so với đi thẳng; tr. 4: khách trên xe luôn được trả trong độ trễ tối đa; công thức (1) và giải thuật 1 không có đại lượng nào cộng các lần dời; việc giữ giờ đón của bài nêu ở mục 2.3); J06; K30; R35 F16–F19, C5 (bỏ vế "miễn là mỗi lần tổng chi phí nhỏ hơn" của v4)
+
+RideBound giữ bước chọn theo lối này nhưng không dựng đồ thị yêu cầu--chuyến--xe. Với mỗi xe, bộ sinh chỉ chèn thêm
+(insertion-only generator) tạo các phương án: giữ nguyên kế hoạch cũ, hoặc chèn điểm đón, điểm trả của yêu cầu mới
+vào kế hoạch cũ mà không bỏ hay đảo điểm cũ. Bộ chọn (selector) giao mỗi xe đúng một phương án và so các tiêu chí
+theo thứ tự, trong đó tổng chi phí kế hoạch chỉ là một tiêu chí xếp sau (mục~\ref{muc:baitoan-phatbieu}); yêu cầu đã
+được nhận không bị chuyển sang xe khác. Bảng~\ref{bang:c2-dichvu} so các ràng buộc dịch vụ của tập thử với các nghiên
+cứu trên.
+% EV: X3-03 (GEN:196-212, 231-246, 548-575); X3-22 (ORT:96-125); X3-07 (tổng chi phí kế hoạch là tiêu chí 4); X3-39 (không cấu hình nào chuyển khách đã nhận sang xe khác); A14; A24; 07-chuong3-v4-v3.tex:142-149 (Bảng 3.2); R35 F20–F22
+
+\begin{table}[htbp]
+\centering
+\caption{Ràng buộc dịch vụ của một tuyến xe: cách đặt ở một số nghiên cứu trước và giá trị trong các tập thử của
+khóa luận. Giá trị của khóa luận là cấu hình của tập thử, không phải chuẩn ngành; mỗi nghiên cứu tính từ một mốc
+khác nên các con số không so trực tiếp được.}
+\label{bang:c2-dichvu}
+\small
+\begin{tabular}{@{}p{2.4cm}p{3.4cm}p{5.7cm}p{3.1cm}@{}}
+\toprule
+\textbf{Ràng buộc} & \textbf{Ý nghĩa} & \textbf{Ở một số nghiên cứu trước} & \textbf{Trong các tập thử}\\
+\midrule
+Cửa sổ đón & Khách phải được đón trong một khoảng tối đa kể từ lúc gọi xe & 2, 5 hoặc 7
+phút~\cite{alonsomora2017}; 5 phút~\cite{fielbaum2020,elmi2026}; 8 phút ở nghiên cứu điển hình của
+FleetPy~\cite{engelhardt2026} & 10 phút kể từ lúc gọi\\
+% EV: C2-10 (tr. 5: 120/300/420 s); C2-06 (FAM tr. 18, bảng 6); C2-08 (Elmi tr. 15); C2-11 (FleetPy tr. 11: 480 s); B03 (600 s); C2-22 (NORM:444); R35 T101–T105
+Thời gian ngồi xe hay độ trễ & Giới hạn phần thời gian khách mất thêm so với đi thẳng & Độ trễ tổng, gồm cả thời gian
+chờ, không quá hai lần cửa sổ đón~\cite{alonsomora2017}; độ trễ tổng tối đa 10 phút~\cite{fielbaum2020,elmi2026};
+thời gian đi thẳng cộng một phần vượt tính bằng tỉ lệ của thời gian đi thẳng~\cite{molenbruch2017}; thời gian đi vòng thêm tối đa
+40\% thời gian đi thẳng~\cite{engelhardt2026} & Thời gian ngồi trên xe không quá 1,5 lần thời gian đi thẳng\\
+% EV: C2-10 (tr. 3, 5: δ ≤ ∆, ∆ = 2Ω, gồm thời gian chờ); C2-06 (bảng 6); C2-08 (tr. 15); C2-12 (PDF tr. 5: phần vượt là một tỉ lệ của thời gian đi thẳng); C2-11 (tr. 11: "maximum relative detour time of 40%"); B03; C2-22 (PhysicalPlanValidator.cs:594); R35 T106–T111, C7
+Sức chứa & Số khách tối đa cùng lúc trên một xe & 1, 2, 4 hoặc 10 chỗ~\cite{alonsomora2017}; 4
+chỗ~\cite{engelhardt2026}; 6 chỗ~\cite{schulz2026} & 4 chỗ\\
+% EV: C2-10 (tr. 5); C2-11 (tr. 11: 180 xe 4 chỗ); C2-07 (tr. 562); B03; R35 T112–T115 (8 xe mỗi kịch bản ở Bảng 4.1, không phải sức chứa)
+\bottomrule
+\end{tabular}
+\end{table}
+
+Trong Bảng~\ref{bang:c2-dichvu}, độ trễ tổng của Alonso-Mora và cộng sự gồm cả thời gian chờ, còn giới hạn của khóa
+luận chỉ tính thời gian ngồi trên xe; các giá trị của khóa luận, kể cả cửa sổ đón rộng hơn các giá trị đã trích, chưa
+được hiệu chỉnh theo sở thích của khách.
+% EV: C2-10 (tr. 5); C2-22 (PhysicalPlanValidator.cs:594: thời gian ngồi xe = giờ trả − giờ đón); B03; C2-23 (D03:252, 259-260); R35 F23, T116
+
+% -----------------------------------------------------------------------------------------------------
+\section{Đo lường và kiểm soát độ bất ổn của lời hứa}
+\label{muc:c2-dolech}
+
+Fielbaum và Alonso-Mora~\cite{fielbaum2020} chia độ bất ổn (unreliability) của dịch vụ đi chung xe theo nguồn: từ
+khách, như khách vắng mặt hay hủy chuyến, và từ hãng xe, khi cách gán yêu cầu cho xe thay đổi mỗi lần có yêu cầu mới;
+bài tập trung vào nguồn thứ hai. Với mỗi khách, giá trị báo ban đầu của thời gian chờ, độ vòng (thời gian ngồi xe trừ
+thời gian đi thẳng) và độ trễ tổng là giá trị sẽ đạt nếu lộ trình của xe giữ nguyên từ lần gán thứ nhất. Chỉ số của
+họ là phần giá trị thực tế vượt giá trị báo ban đầu, với giá trị âm đặt bằng 0 để chỉ giữ phần bất lợi; họ còn đếm số
+lần giá trị dự kiến tăng lên.
+% EV: J06; X3-35; C2-06 (FAM tr. 4: định nghĩa 1–2, tập trung vào hãng xe; tr. 5: giá trị báo ban đầu, độ vòng = thời gian trên xe − thời gian đường ngắn nhất, các hiệu, cắt giá trị âm; tr. 7: định nghĩa 9); R35 F24–F26
+
+Thí nghiệm của họ dùng 19.610 yêu cầu taxi Manhattan trong khung 13--15 giờ ngày 15/01/2013, một khung thấp điểm được
+chọn vì thời gian đi khá ổn định, để bỏ qua độ bất ổn do tắc đường. Khi không hạn chế việc chuyển khách sang xe khác,
+hơn một phần ba số yêu cầu không bị từ chối ngay gặp ít nhất một thay đổi.
+% EV: J07; C2-06 (tr. 9: 19.610 yêu cầu, 13–15 giờ ngày 15/01/2013, lý do chọn giờ thấp điểm; tr. 1, tóm tắt: "when reassignment is not restricted ... more than one third of the requests that are not immediately rejected face some change"); R35 F27–F29, C8 (giữ "hơn một phần ba" của tóm tắt, xem NOTES mục 6); F30 không còn trong văn bản
+
+Ở mục 6, họ đưa việc kiểm soát vào bước gán xe. Mức mà bài gọi là kiểm soát hoàn toàn cấm từ chối khách đã gán và
+hạ thời gian chờ tối đa của họ về giá trị dự kiến, nhưng không giữ độ vòng hay giờ trả. Đổi lại, theo bảng 5 của bài,
+tỉ lệ yêu cầu bị từ chối tăng từ 34,5\% lên 45,6\%. Chi phí trung bình của khách, quy ra phút ngồi xe theo trọng số của
+bài, cũng tăng từ 9,56 lên 11,6. Mức trung gian chỉ cấm từ chối khách đã gán: tỉ lệ từ chối còn 31,2\%, nhưng
+thời gian chờ và độ vòng trung bình tăng khoảng 50\%. Bài để ngỏ câu hỏi kiểm soát độ bất ổn mà không tăng từ chối,
+độ trễ hay thời gian chờ.
+% EV: J08; J09; K32; C2-06 (tr. 17: hai mức kiểm soát; mức hoàn toàn chỉ cập nhật thời gian chờ tối đa, độ vòng trung bình vẫn tăng 0,65 → 0,94; bảng 5, "All times are in minutes": cơ sở 1,01/0,65/34,5%/9,56, trung gian 1,51/1,01/31,2%/10,3, hoàn toàn 0,77/0,94/45,6%/11,6, thứ tự hàng đã đối chiếu ảnh trang ở R35; "increased in about 50% on average"; tr. 18, bảng 6: trọng số một phút ngồi xe 1, một phút chờ 2, một lần từ chối 40; tr. 18: câu hỏi mở); R35 F31–F35, C8, P03
+
+Elmi và cộng sự~\cite{elmi2026} tiếp tục hướng này theo từng khách. Độ chùng (slack) của một khách là khoảng còn lại
+giữa giới hạn và giá trị dự kiến lúc gán, tính riêng cho thời gian chờ và cho độ trễ. Điểm khả năng đi chung của mỗi
+khách ước lượng số yêu cầu có thể ghép vào chuyến của họ; khách có điểm thấp nhận độ chùng 0 nên không bị đổi giờ,
+khách khác giữ toàn bộ độ chùng. So với cách siết đều cho mọi khách, ở tỉ lệ từ chối gần bằng nhau (29,1\% và 29,2\%,
+trung bình trên 10 ngày), cách này bảo đảm ngay lúc gán cho 83,9\% số khách rằng giờ không đổi, còn cách siết đều gần
+như không bảo đảm được cho ai, trong mô hình có thời gian đi trên mỗi đoạn đường không đổi.
+% EV: C2-08; J12 (nâng ở ADD5); Elmi tr. 1 (tóm tắt); tr. 2, 5 (không xét giao thông; công thức 2; thời gian đi trên cạnh không đổi); tr. 11 (điểm tích phân từ lúc gán tới lúc trả = số yêu cầu có thể ghép); tr. 12–13 (cách đều, cách theo điểm 0% hay 100%; độ chùng 0 ngăn mọi thay đổi); tr. 16 (mỗi điểm là trung bình 10 ngày); tr. 18 (83,85% có độ chùng 0, tóm tắt làm tròn 83,9%; với cách đều "such a guarantee cannot be provided to anybody", 99,95% còn được phép đổi); tr. 19, bảng 2 (từ chối 29,09% và 29,21%; tóm tắt viết "the same rejection rate of 29%"); R35 F36–F41, C4; R30 N5
+
+Thước đo của Fielbaum và Alonso-Mora so giá trị cuối với giá trị báo ban đầu, nên trong một ví dụ dựng tay, khách bị
+dời muộn 5 phút rồi được kéo về giờ cũ có hiệu bằng 0; chỉ số đếm số lần tăng ghi lần dời đó nhưng không cho biết độ
+lớn. Khóa luận kế thừa ý tách phần thay đổi do cách gán xe và kiểm soát nó trước khi quyết định, nhưng ở từng lượt so
+giờ trả của phương án với giờ trả khi xe giữ nguyên kế hoạch, rồi cộng độ lớn phần chênh qua cả chuyến
+(mục~\ref{muc:bamoc}).
+% EV: C2-06 (tr. 5: hiệu giữa thực tế và báo ban đầu; tr. 7: chỉ đếm số lần tăng); ví dụ 5 phút dựng tay từ định nghĩa; A01; A04; X3-25; K30; K32; R35 F42–F43, C9. Câu "1 mili giây" của v4 bỏ khỏi Chương 2 (R30 B5, R35 F44): Chương 3 nêu nó với đúng phạm vi ở 07-chuong3-v4-v3.tex:297-300 (N-05; ADD1:104-111)
+
+% -----------------------------------------------------------------------------------------------------
+\section{Các dạng ràng buộc lời hứa}
+\label{muc:c2-rangbuoc}
+
+Một số nghiên cứu đặt giới hạn trực tiếp lên giờ đã báo; Bảng~\ref{bang:c2-dangrangbuoc} so các cách đó theo năm câu
+hỏi. Phần lớn chúng giữ cố định một giờ đã báo: giờ đón
+dự kiến lúc ghép xe~\cite{alonsomora2017}, giờ đón hẹn ban đầu cộng một khoảng đệm~\cite{lu2024}, hay thời gian
+chuyến đã báo lúc khách chấp nhận~\cite{laupichler2026}. Schulz và Pfeiffer~\cite{schulz2026} đặt hạn chót trả bằng
+giờ trả trong lời mời (offer) cộng một độ chùng, mặc định 900 giây; với thời gian đi cho trước, họ thấy 10--15 phút là
+đánh đổi hợp lý giữa tỉ lệ từ chối và sức hấp dẫn với khách đã nhận.
+% EV: C2-10 (Alonso-Mora tr. 4); C2-14 (Lu–Kühnel tr. 4: công thức 3, giờ đón hẹn ban đầu cộng đệm); C2-09 (Mt-KaRRi tr. 5: thời gian chuyến so với thời gian chuyến đã chấp nhận); J10; C2-07 (Schulz–Pfeiffer tr. 549: thời gian đi cho trước; tr. 549–551: hạn chót; tr. 562: 900 s; tr. 569, mục 6.3.5 và Finding 5: quét 0–30 phút, l nhỏ làm tăng từ chối, l lớn làm dịch vụ kém hấp dẫn với khách đã nhận); J32; C2-09 (Mt-KaRRi tr. 1: bộ điều phối cho mô phỏng quy mô lớn; tr. 5; tr. 27: α = 1,4, β = 10 phút); R35 F45–F49, C2
+
+Trong các cách ở Bảng~\ref{bang:c2-dangrangbuoc}, gần luật C nhất là cách Hörl và Zwick~\cite{horl2022} xử lý thời
+gian đi thay đổi, thử trong bộ mô phỏng MATSim với nhu cầu lịch sử của dịch vụ MOIA ở Hamburg. Bài chỉ ra rằng khi
+thời gian đi tăng, xe đang chở khách có thể không còn thứ tự trả khách nào kịp giờ trả muộn nhất, tức giờ tính từ thời
+gian chờ tối đa và độ vòng cho phép. Vì vậy, ở đầu mỗi lượt họ tính lại giờ trả dọc tuyến đang gán bằng thời gian đi hiện
+tại, gọi là giờ trả cập nhật. Theo công thức 7 của bài, với các yêu cầu đã gán cho xe đang xét, giờ trả bắt buộc là
+giờ muộn hơn giữa giờ trả cập nhật và giờ trả muộn nhất; tuyến mới phải thỏa giờ này như ràng buộc cứng, còn phần vượt
+giờ trả muộn nhất bị phạt theo từng giây (công thức 11). Như vậy, giờ trả chỉ được nới khi giờ trả cập nhật đã vượt
+giờ trả muộn nhất; giờ đón được xử lý tương tự (công thức 8).
+% EV: J01; J02; J03; J04; X3-36; C2-04; C2-05; Hörl–Zwick (trang in; PDF = trang in + 1), kiểm lại trên PDF 13/10 bằng pdftotext: tr. 4 dòng 34–35 (giờ muộn nhất từ chờ tối đa và độ vòng cho phép); tr. 7 dòng 8–17 (không còn thứ tự trả khả thi), dòng 31–40 (giờ trả cập nhật, phạt mỗi giây); tr. 8 dòng 8–21 (công thức 7 cho "all requests that are assigned to the currently evaluated vehicle", 8, 9–10, 11); tr. 10 (MOIA, MATSim); K26; R35 F50–F54, F84, C1, P01; R30 B1. Câu kết luận của bài chuyển sang mục 2.4
+
+Ví dụ dựng tay: khách A được hứa trả lúc 8:30:00, giờ trả muộn nhất 8:35:00. Tắc đường làm giờ trả của A khi giữ
+nguyên kế hoạch thành 8:32:00; ở hai lượt liên tiếp, hai lần ghép khách mỗi lần làm A tới muộn thêm 20 giây. Công thức
+7 nhận cả hai lần vì A vẫn tới trước 8:35:00; luật C trần 30 giây loại lần thứ hai vì tổng phần dời thành 40 giây,
+và không tính hai phút do tắc đường. Nếu giờ trả khi giữ nguyên kế hoạch đã là 8:36:00 thì ngược lại: công thức 7
+không cho dời thêm, còn luật C vẫn cho dùng phần trần còn lại.
+% EV: ví dụ dựng tay, áp đúng công thức 7 và 10 (Hörl–Zwick tr. 8) và định nghĩa luật C (A06; K43; 07-chuong3-v4-v3.tex:309-326); dựa trên ví dụ của R30 N1, thêm vế ngược lại cho công bằng
+
+\begin{table}[htbp]
+\centering
+\caption{Các dạng ràng buộc lời hứa ở nghiên cứu trước và luật C, mô tả bằng lời. ``Không'' ở cột năm nghĩa là ràng
+buộc so một giờ với một mốc nên các lần dời sớm, muộn có thể bù trừ nhau, dù một hạn chót cố định vẫn giới hạn phần
+dời ròng. Cột ba là cách khóa luận đọc định nghĩa ràng buộc, không phải kết quả đo của các bài. Cửa sổ đón và giới
+hạn ngồi xe ở Bảng~\ref{bang:c2-dichvu} không tách nguồn, nên phần do tắc đường bị tính.}
+\label{bang:c2-dangrangbuoc}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{2.6cm}p{2.7cm}p{2.9cm}p{2.3cm}p{1.8cm}p{2.6cm}@{}}
+\toprule
+\textbf{Dạng ràng buộc} & \textbf{So với mốc nào} & \textbf{Phần do tắc đường có bị tính?} & \textbf{Áp cho ai} &
+\textbf{Cộng độ lớn các lần dời qua cả chuyến?} & \textbf{Dữ liệu giữ riêng cho từng khách}\\
+\midrule
+Giữ giờ đón đã báo~\cite{alonsomora2017,fielbaum2020,lu2024} & Giờ đón dự kiến lúc gán, hay giờ hẹn ban đầu cộng đệm
+2--3 phút & Có, vì không tách nguồn; đệm chừa cho bất định & Khách chưa lên xe & Không & Giờ đón đã báo\\
+% EV: C2-10 (tr. 4); C2-06 (tr. 17); C2-14 (tr. 4); R35 T207–T209
+Hạn chót từ lời mời~\cite{schulz2026} & Giờ trả trong lời mời cộng độ chùng 900 giây & Ngoài phạm vi: thời gian đi
+cho trước & Mọi khách đã nhận lời mời & Không & Hạn chót\\
+% EV: J10; C2-07 (tr. 549–551, 562); R35 T210–T213, C2 (bỏ "khi thời gian đi đổi thì có" và dòng A10 của v4)
+Hạn trả được nới (công thức 7)~\cite{horl2022} & Giờ trả muộn nhất, nới tới giờ trả cập nhật khi giờ này vượt nó &
+Có, tới khi giờ cập nhật vượt hạn; phần vượt sau đó chỉ bị phạt & Các yêu cầu đã gán cho xe đang xét & Không & Giờ
+trả muộn nhất, giờ trả cập nhật\\
+% EV: J01; J03; C2-04 (tr. 7–8); R35 T214–T217, C1
+Bảo đảm theo từng khách~\cite{elmi2026} & Thời gian chờ, độ trễ dự kiến lúc gán & Ngoài phạm vi: thời gian đi cố
+định & Khách điểm thấp: độ chùng 0; khách khác: toàn bộ & Không & Điểm, độ chùng\\
+% EV: C2-08 (tr. 2, 5, 11–13); R35 T218–T221
+Giới hạn thời gian chuyến~\cite{laupichler2026} & 1,4 lần thời gian chuyến đã báo lúc chấp nhận, cộng 10 phút &
+Ngoài phạm vi: thời gian đi cố định & Mọi khách đã chấp nhận & Không & Thời gian chuyến đã báo\\
+% EV: J32; C2-09 (tr. 4, 5, 27); R35 T222–T225
+\textbf{Luật C (khóa luận)} & Giờ trả nếu xe giữ nguyên kế hoạch, tính lại ở mỗi lượt & Không; phần dời do điều phối
+vẫn tính với thời gian đi hiện tại & Mọi khách đã xác nhận đặt xe & Có & Phần trần đã dùng, ghi trong sổ\\
+% EV: A01; A02; A06; A13; K43; X3-25; R35 T226–T228, C3
+\bottomrule
+\end{tabular}
+\end{table}
+
+Bảng~\ref{bang:c2-dangrangbuoc} cho thấy luật C dùng lại mốc giờ trả cập nhật của Hörl và Zwick nhưng giới hạn một
+đại lượng khác: không đặt hạn cho giờ trả mà cộng độ lớn các lần bộ điều phối dời giờ trả so với mốc đó qua cả
+chuyến, dưới cùng một trần cho mọi khách đã xác nhận đặt xe, và ghi phần đã dùng vào sổ của từng khách
+(mục~\ref{muc:luatc}). Phần thay đổi khi giữ nguyên kế hoạch không bị tính, và trần không được nới khi đường đông lên.
+Cộng có dấu cả phần dời do điều phối lẫn phần thay đổi khi giữ nguyên kế hoạch, để các lần dời sớm, muộn bù trừ nhau,
+thì tổng bằng giờ trả mới trừ lời hứa đầu; giới hạn tổng này là luật hạn chót, chỉ mượn thành phần hạn chót của
+Schulz và Pfeiffer với các mức trần như luật C thay cho 900 giây. Cộng độ lớn mọi thay đổi khách thấy thì được luật
+trần độ dời khách thấy. Hai luật này làm đối chứng (mục~\ref{muc:doichung}). Bảo vệ từng khách, giới hạn giờ đến, chèn khách động và chuyển khách sang xe khác đều đã có
+ở các nghiên cứu trên, nên khóa luận không nhận các ý đó là mới.
+% EV: K01; J05; X3-36; A06; X3-25; K26 (không lấy cứng/mềm làm khác biệt); A12; 07-chuong3-v4-v3.tex:442-468 (eq:dongnhat, chuỗi liên tục v_j = p_{j−1}; tiền lệ Hörl–Zwick); J11 (mượn thành phần hạn chót, 30–60 s so với 900 s, không tái lập); D03:214-217; J38; J39; K46; K47; C2-07, C2-08, C2-09, C2-10; R35 F56–F59, C3, C9, C10, P02, P06; R30 B2, B3
+
+% -----------------------------------------------------------------------------------------------------
+\section{Dự báo thời gian đi và lời hứa theo dự báo}
+\label{muc:c2-dubao}
+
+Khi đường đông dần, giờ đón, giờ trả tính bằng thời gian đi lúc ra quyết định có thể sớm hơn giờ xe thực sự tới, dù
+xe giữ nguyên kế hoạch. Hörl và Zwick xét đúng tình huống ước lượng thấp này và kết luận rằng khi đó hãng xe phải chọn
+giữa từ chối khách đã nhận và trả muộn hơn giờ đã báo; với tốc độ thực đổi theo giờ, ảnh hưởng này nhỏ~\cite{horl2022}.
+% EV: A05; F10; C2-05 (Hörl–Zwick tr. 11: sai số ước lượng −40% tới +20%; tr. 10: tốc độ GPS đổi theo giờ, cập nhật mỗi 60 phút; tr. 12 dòng 26–37: kịch bản tốc độ thực, độ trễ thêm trung bình dưới 1 giây; tr. 14 dòng 12–15: kết luận "effects are minor in a scenario with realistic travel times"); R35 F55, F60–F61, C11
+
+Giờ đến dự kiến có vai trò quan trọng ở các nền tảng gọi xe~\cite{hu2022}. Uber dùng nó để tính giá cước, ước lượng
+giờ đón, giờ trả và ghép khách với tài xế; mô hình học sâu DeeprETA của hãng hiệu chỉnh giờ đến do bộ tìm đường tính,
+và các tác giả lưu ý giờ hiển thị cho khách có thể cần lấy theo một phân vị thay cho giá trị trung bình. Leonardi và
+cộng sự~\cite{leonardi2024} học khoảng thời gian chuyến từ một số chuyến quan sát trong mô phỏng xe buýt theo nhu cầu,
+và đề xuất lấy mức dự báo được làm tiêu chí định quy mô dịch vụ. Vì vậy lời hứa theo dự báo
+(forecast-aware promise), tức lời hứa đã cộng sẵn mức tăng tắc đường dự báo, không phải ý mới của khóa luận.
+% EV: J35 (nguồn sơ cấp C2-15); C2-15 (DeeprETA tr. 1: "ride-hailing platforms", công dụng ở Uber, phân vị; tr. 3: bảng 1); J21; C2-13 (Leonardi PDF tr. 2: tóm tắt, xe buýt theo nhu cầu, mô phỏng VISUM ở hai thành phố Ý; tr. 4: định cỡ theo mức dự báo được); K37; R35 F62–F65, C11 (bỏ "hơn 90%")
+
+Bộ dữ liệu chuẩn Manhattan của FleetPy~\cite{engelhardt2026} lấy nhu cầu từ chuyến taxi tuần 11--18/11/2018 và hiệu
+chỉnh thời gian đi bằng một hệ số nhân cho mỗi giờ trong ngày, tính từ thời lượng chuyến ghi trong dữ liệu; gói dữ
+liệu còn có tệp hệ số theo khung 15 phút cho từng ngày. Khóa luận dùng tệp này làm hệ số tắc đường (travel-time
+factor) chung cho cả thành phố, không phải tốc độ từng đoạn đường (mục~\ref{muc:c4-kichban}). Vì cả thành phố dùng
+một hệ số và mô phỏng không có nhiễu ngẫu nhiên, thời gian đi trong mô phỏng có thể dễ dự báo hơn ngoài đời; kết quả
+của lời hứa theo dự báo ở Chương~\ref{chuong:thucnghiem} vì vậy có thể lạc quan hơn khi áp dụng thật.
+% EV: J18; C2-11 (FleetPy tr. 10: tuần dữ liệu, hệ số theo giờ; tệp *_tt_factors.csv 96 dòng cách 900 s; PREF:51-55, 67-93); B06; I02 (bỏ chữ "mức trần" của I02); F10 (thế giới gần như tất định); hai vế "có thể" là suy luận của người viết; R35 F69–F73, C11; R30 B4
+
+Dự báo cho lời hứa trong khóa luận chỉ dựa vào thông tin đã có lúc hứa: hồ sơ tắc đường, tức hệ số tắc đường theo
+khung 15 phút của các ngày đã qua, và mức tắc đường đo được lúc đó (mục~\ref{muc:dubao}). Theo trang dữ liệu của Ủy
+ban Taxi và Xe limousine New York (Taxi \& Limousine Commission, TLC), dữ liệu chuyến công khai hiện được công bố theo
+tháng, thường trễ khoảng hai tháng~\cite{tlc}. Vì vậy, muốn lập hồ sơ từ các ngày ngay trước khi vận hành thật, hãng
+xe cần nguồn dữ liệu kịp thời hơn, ví dụ dữ liệu chuyến của chính mình; đây là giả định của khóa luận, chưa được kiểm
+vì các kết quả chính chỉ tính lại lời hứa trên các lần chạy đã ghi.
+% EV: F02; X3-11; 07-chuong3-v4-v3.tex:517-519 (g = 1 ở khung hiện tại), 547-552 (ngày nguồn), 554-556 (phát lại); B27; C2-16 (trang TLC tải 12/10/2026: "published monthly ... typically with a two-month delay"); F03 (chỉ phần phát lại); câu về dữ liệu của hãng xe là giả định, ghi rõ trong câu; R35 F66–F68, C6, P08; R30 N2
+
+% -----------------------------------------------------------------------------------------------------
+\section{Độ tin cậy có giá trị gì với khách}
+\label{muc:c2-giatri}
+
+Theo phân tích tổng hợp của Wardman và cộng sự~\cite{wardman2026}, một phút tới đích muộn so với giờ biểu hay giờ dự
+kiến được coi nặng bằng trung bình 2,53 phút ngồi xe khi câu hỏi nêu một phân bố nhiều mức trễ (15 giá trị, 2
+nghiên cứu), và 3,12 phút khi câu hỏi nêu một mức trễ cho một phần số chuyến (66 giá trị, 27 nghiên cứu). Với
+dịch vụ đi chung xe, Alonso-González và cộng sự~\cite{alonsogonzalez2020} khảo sát 1.006 người ở Hà Lan, đo độ tin cậy
+qua độ dao động của thời gian và qua khoản tăng thêm có hệ thống so với giờ được báo, và thấy tỉ số giữa giá trị độ
+tin cậy và giá trị thời gian (reliability ratio) khoảng 0,5. Khoản tăng thêm nhỏ, không báo trước nhưng có hệ thống,
+được định giá thấp hơn thời gian đã báo; người trả lời không được đặt vào tình huống tới muộn. Theo phần tóm tắt, trong
+một thí nghiệm ngẫu nhiên trên 1.425.745 chuyến, Yu và cộng sự~\cite{yu2022} thấy cả độ lớn của thời gian chờ báo lúc
+đầu lẫn tần suất cập nhật đều ảnh hưởng tới việc khách bỏ yêu cầu.
+% EV: J23; C2-17 (Wardman tr. 2: hệ số so với thời gian ngồi xe; tr. 3, mục 14–15: MeanLate-Distn là phân bố 5–10 mức trễ, MeanLate-X/Y là một mức trễ cho một phần số chuyến; tr. 10, bảng 5: 2,53 (15; 2) và 3,12 (66; 27)); J24; C2-18 (Alonso-González tr. 1: N = 1.006, tỉ số khoảng 0,5; tr. 11: độ lệch chuẩn và phần dời có hệ thống, "unannounced yet systematic"; tr. 13: không có giờ đến mong muốn); J33; C2-19 (Yu–Zhang–Zhou: chỉ tóm tắt qua Crossref cr13: "magnitude of the initial WTI and the update frequency", "a major ride-sharing platform"); R35 F74–F79, C12
+
+Ba kết quả này đo ba đại lượng khác nhau: tới muộn so với giờ biểu, độ dao động của thời gian, và thông tin thời gian
+chờ trước khi lên xe. Chúng không cho giá tiền hay ngưỡng cảm nhận của trần 30 giây trên phần dời giờ trả do điều
+phối, và khóa luận chưa có căn cứ bên ngoài để coi mức trần này là chuẩn dịch vụ; mỗi mức trần vì vậy được trình bày
+như một điểm trên đường đánh đổi giữa số khách được phục vụ và độ ổn định của lời hứa.
+Chương~\ref{chuong:phuongphap} đặc tả luật C trên nền các khái niệm này.
+% EV: D20 (chỉ phần "chưa có căn cứ WTP/ROI bên ngoài"; bỏ câu "không có chuẩn ngành" theo R35 F82 và R30 N2); K52; J23 và J24 ("hai cấu trúc khác nhau"); C2-23 (D03:260); R35 F80–F83, C12

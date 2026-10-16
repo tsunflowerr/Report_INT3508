@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="453.543307pt" height="198.425197pt" viewBox="0 0 453.543307 198.425197" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-04T18:36:31.201968</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 198.425197 
+L 453.543307 198.425197 
+L 453.543307 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 87.469066 73.430821 
+L 366.074241 73.430821 
+" clip-path="url(#p893570b8e5)" style="fill: none; stroke: #6c737b; stroke-width: 1.1; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="mcaecd2f0ec" d="M 0 3.807887 
+C 1.009863 3.807887 1.978501 3.406664 2.692582 2.692582 
+C 3.406664 1.978501 3.807887 1.009863 3.807887 0 
+C 3.807887 -1.009863 3.406664 -1.978501 2.692582 -2.692582 
+C 1.978501 -3.406664 1.009863 -3.807887 0 -3.807887 
+C -1.009863 -3.807887 -1.978501 -3.406664 -2.692582 -2.692582 
+C -3.406664 -1.978501 -3.807887 -1.009863 -3.807887 0 
+C -3.807887 1.009863 -3.406664 1.978501 -2.692582 2.692582 
+C -1.978501 3.406664 -1.009863 3.807887 0 3.807887 
+z
+" style="stroke: #173f68"/>
+    </defs>
+    <g clip-path="url(#p893570b8e5)">
+     <use xlink:href="#mcaecd2f0ec" x="87.469066" y="73.430821" style="fill: #173f68; stroke: #173f68"/>
+    </g>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 12px; font-family: 'Times New Roman'; text-anchor: middle" x="87.469066" y="47.300469" transform="rotate(-0 87.469066 47.300469)">v: đã công bố</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'Times New Roman'; text-anchor: middle" x="87.469066" y="98.369877" transform="rotate(-0 87.469066 98.369877)">9:10:00</text>
+   </g>
+   <g id="PathCollection_2">
+    <defs>
+     <path id="mbd29d8f58c" d="M -3.807887 3.807887 
+L 3.807887 3.807887 
+L 3.807887 -3.807887 
+L -3.807887 -3.807887 
+z
+" style="stroke: #173f68"/>
+    </defs>
+    <g clip-path="url(#p893570b8e5)">
+     <use xlink:href="#mbd29d8f58c" x="246.672023" y="73.430821" style="fill: #173f68; stroke: #173f68"/>
+    </g>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'Times New Roman'; text-anchor: middle" x="246.672023" y="47.300469" transform="rotate(-0 246.672023 47.300469)">e: giữ tuyến</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'Times New Roman'; text-anchor: middle" x="246.672023" y="98.369877" transform="rotate(-0 246.672023 98.369877)">9:10:40</text>
+   </g>
+   <g id="PathCollection_3">
+    <defs>
+     <path id="md151978860" d="M 0 -3.807887 
+L -3.807887 3.807887 
+L 3.807887 3.807887 
+z
+" style="stroke: #173f68"/>
+    </defs>
+    <g clip-path="url(#p893570b8e5)">
+     <use xlink:href="#md151978860" x="366.074241" y="73.430821" style="fill: #173f68; stroke: #173f68"/>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'Times New Roman'; text-anchor: middle" x="366.074241" y="46.120156" transform="rotate(-0 366.074241 46.120156)">p: phương án mới</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12px; font-family: 'Times New Roman'; text-anchor: middle" x="366.074241" y="98.369877" transform="rotate(-0 366.074241 98.369877)">9:11:10</text>
+   </g>
+   <g id="patch_2">
+    <path d="M 90.583939 123.347582 
+Q 167.068675 123.347582 243.553411 123.347582 
+" style="fill: none; stroke: #505861; stroke-linecap: round"/>
+    <path d="M 95.383939 125.747582 
+L 90.583939 123.347582 
+L 95.383939 120.947582 
+" style="fill: none; stroke: #505861; stroke-linecap: round"/>
+    <path d="M 238.753411 120.947582 
+L 243.553411 123.347582 
+L 238.753411 125.747582 
+" style="fill: none; stroke: #505861; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12px; font-family: 'Times New Roman'; text-anchor: middle" x="167.070545" y="140.160653" transform="rotate(-0 167.070545 140.160653)">x = 40 s</text>
+   </g>
+   <g id="patch_3">
+    <path d="M 249.79054 123.347582 
+Q 306.371976 123.347582 362.953412 123.347582 
+" style="fill: none; stroke: #505861; stroke-linecap: round"/>
+    <path d="M 254.59054 125.747582 
+L 249.79054 123.347582 
+L 254.59054 120.947582 
+" style="fill: none; stroke: #505861; stroke-linecap: round"/>
+    <path d="M 358.153412 120.947582 
+L 362.953412 123.347582 
+L 358.153412 125.747582 
+" style="fill: none; stroke: #505861; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 12px; font-family: 'Times New Roman'; text-anchor: middle" x="306.373132" y="140.160653" transform="rotate(-0 306.373132 140.160653)">c = 30 s</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 90.589405 158.173228 
+Q 226.774628 158.173228 362.959851 158.173228 
+" style="fill: none; stroke: #505861; stroke-linecap: round"/>
+    <path d="M 95.389405 160.573228 
+L 90.589405 158.173228 
+L 95.389405 155.773228 
+" style="fill: none; stroke: #505861; stroke-linecap: round"/>
+    <path d="M 358.159851 155.773228 
+L 362.959851 158.173228 
+L 358.159851 160.573228 
+" style="fill: none; stroke: #505861; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 12px; font-family: 'Times New Roman'; text-anchor: middle" x="226.771654" y="174.9863" transform="rotate(-0 226.771654 174.9863)">z = 70 s</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p893570b8e5">
+   <rect x="31.748031" y="11.905512" width="390.047244" height="170.645669"/>
+  </clipPath>
+ </defs>
+</svg>

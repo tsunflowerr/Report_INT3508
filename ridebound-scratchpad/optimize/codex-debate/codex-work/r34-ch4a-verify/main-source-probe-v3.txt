@@ -1,0 +1,164 @@
+stage scripts ['E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R19-stage1a-analysis.json', 'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R19-stage1a-analysis.md', 'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R19-stage1a-analyze-v2.py', 'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R19-stage1a-analyze-v3.py', 'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R19-stage1a-analyze-v4.py', 'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R19-stage1a-analyze.py', 'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R21-STAGE1A-CODEX.md', 'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R21B-STAGE1A-CODEX.md']
+SOURCE E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\independent\iv_extract.py exists True
+1: """Independent verifier: extract per-run raw metrics from transcripts (own code)."""
+2: import json, base64, os, sys, collections
+3: from multiprocessing import Pool
+4: ROOT = r'C:\RideBoundData\research\tier3-t38-v1'
+5: OUT = r'E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\independent\cache'
+6: ARMS = ['U', 'C-30', 'Mplus-30', 'Mplus-60', 'V-30']
+7: MAN = r'E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\split-t38-v1.json'
+8: 
+9: def resolve(arm, cell):
+10:     job = f'{arm}-{cell}'
+11:     for cand in (job, job + '-rerun1'):
+12:         d = os.path.join(ROOT, cand)
+13:         if os.path.exists(os.path.join(d, 'summary.json')):
+14:             return cand, d
+15:     return None, None
+16: 
+17: def extract(job_dir_pair):
+18:     arm, cell = job_dir_pair
+19:     name, d = resolve(arm, cell)
+20:     if name is None:
+21:         return (arm, cell, None)
+22:     outp = os.path.join(OUT, name + '.json')
+23:     if os.path.exists(outp):
+24:         return (arm, cell, name)
+25:     summ = json.load(open(os.path.join(d, 'summary.json'), encoding='utf-8'))
+26:     decisions = {}          # hash -> (index, normalOperation)
+27:     acked = set()
+28:     alight = {}             # requestId -> simTimeMs of batch
+29:     last_ckpt = None
+30:     idx = 0
+31:     for line in open(os.path.join(d, 'transcript-00.ndjson'), encoding='utf-8'):
+32:         r = json.loads(line)
+33:         env = json.loads(base64.b64decode(r['frameBase64']))
+34:         mt = env['messageType']
+35:         dr = r['direction']
+36:         if mt == 'decision' and dr == 'runnerToAdapter':
+37:             pl = env['payload']
+38:             cert = pl.get('certificate')
+39:             body = cert.get('body') if isinstance(cert, dict) else None
+40:             non_normal = bool(isinstance(body, dict) and body.get('normalOperation') is False)
+41:             decisions.setdefault(pl['decisionHash'], (idx, non_normal))
+42:         elif mt == 'decisionApplied' and dr == 'adapterToRunner':
+43:             h = env['payload']['decisionHash']
+44:             if h in decisions and decisions[h][0] < idx:
+45:                 acked.add(h)
+46:         elif mt == 'eventBatch' and dr == 'adapterToRunner':
+47:             for e in env['payload']['events']:
+48:                 if e['eventType'] == 'passengerAlighted':
+49:                     alight[e['payload']['requestId']] = env.get('simTimeMs')
+50:         elif mt == 'checkpoint' and dr == 'runnerToAdapter':
+51:             last_ckpt = env
+52:         idx += 1
+53:     st = last_ckpt['payload']['content']['onlineState']
+54:     riders = {}
+55:     for h in st['commitmentLedger']:
+56:         ent = h['entries']
+57:         assert ent[0]['kind'] == 'initialPromise' and all(e['kind'] == 'revision' for e in ent[1:])
+58:         p0 = ent[0]['publishedPromise']['projection']
+59:         row = {'p0_drop': p0['dropEtaMs'], 'p0_pick': p0['pickupEtaMs'], 'rev': []}
+60:         for e in ent[1:]:
+61:             v = e['previousPromise']['projection']; ex = e['exogenousProjection']; p = e['publishedPromise']['projection']
+62:             row['rev'].append({
+63:                 'v_d': v['dropEtaMs'], 'e_d': ex['dropEtaMs'], 'p_d': p['dropEtaMs'],
+64:                 'dl_x': e['deltas']['exogenous']['dropEtaTotalMs'],
+65:                 'dl_c': e['deltas']['decisionInduced']['dropEtaTotalMs'],
+66:                 'dl_z': e['deltas']['visible']['dropEtaTotalMs']})
+67:         riders[h['requestId']] = row
+68:     lc = collections.Counter(q['lifecycle'] for q in st['requests'])
+69:     res = {
+70:         'job': name, 'arm': arm, 'cell': cell, 'status': summ.get('status'),
+71:         'requests': len(st['requests']), 'lifecycle': dict(lc), 'served': lc.get('completed', 0),
+72:         'acked': len(acked), 'nonNormalAcked': sum(1 for h in acked if decisions[h][1]),
+73:         'nonNormalAll': sum(1 for h, v in decisions.items() if v[1]),
+74:         'decisionsAll': len(decisions),
+75:         'alight': alight, 'riders': riders,
+76:     }
+77:     json.dump(res, open(outp, 'w'))
+78:     return (arm, cell, name)
+79: 
+80: if __name__ == '__main__':
+81:     os.makedirs(OUT, exist_ok=True)
+82:     m = json.load(open(MAN, encoding='utf-8'))
+83:     jobs = [('C-30', c) for c in m['calibration']] + [(a, c) for c in m['test'] for a in ARMS]
+84:     with Pool(6) as pool:
+85:         for r in pool.imap_unordered(extract, jobs):
+86:             print(r, flush=True)
+SOURCE E:\Code\Report_INT3508\ridebound-scratchpad\optimize\codex-debate\codex-work\R19-stage1a-analysis.py exists False
+C120 dirs first ['C-120-d20181114-s10-r3-w07', 'C-120-d20181114-s10-r3-w08', 'C-120-d20181114-s10-r3-w17', 'C-120-d20181114-s10-r4-w07', 'C-120-d20181114-s10-r4-w08']
+TRANSCRIPT C:\RideBoundData\research\tier3-t38c120-v1\C-120-d20181114-s10-r3-w07\transcript-00.ndjson
+1 {'direction': 'adapterToRunner', 'frameBase64': 'eyJtZXNzYWdlVHlwZSI6ImhlbGxvIiwicGF5bG9hZCI6eyJhZGFwdGVySWQiOiJmbGVldHB5LXJpZGVib3VuZCIsImFkYXB0ZXJWZXJzaW9uIjoiMS4wLjAiLCJjYXBhYmlsaXRpZXMiOlsib2xkUGxhblByb2plY3Rpb24iLCJjYW5jZWxsYXRpb25zIiwiZXhhY3RFdmVudE9yZGVyaW5nIiwiZHluYW1pY1RyYXZlbFRpbWVzIl0sIm1heEZsZWV0U2l6ZSI6NTAwMCwibWF4UmVxdWVzdENvdW50IjoxMDAwMDAsInBvc2l0aW9uTW9kZWwiOiJkaXJlY3RlZEVkZ2VQcm9ncmVzcyIsInN1cHBvcnRlZFNjaGVtYVZlcnNpb25zIjpbIjEuMC4wIl19LCJzY2hlbWFWZXJzaW9uIjoiMS4wLjAifQ==', 'frameLengthBytes': 331, 'frameSha256': '27a9af3a29346c0d36304b58e457ed7a52e99bd196375903325ec1802cf74928', 'ordinal': 1, 'schemaVersion': '1.0.0'}
+2 {'direction': 'runnerToAdapter', 'frameBase64': 'eyJtZXNzYWdlVHlwZSI6ImhlbGxvQWNrIiwicGF5bG9hZCI6eyJjYXBhYmlsaXR5U2VsZWN0aW9uIjp7ImNhcGFiaWxpdGllcyI6WyJkeW5hbWljVHJhdmVsVGltZXMiLCJleGFjdEV2ZW50T3JkZXJpbmciLCJvbGRQbGFuUHJvamVjdGlvbiJdLCJtYXhGbGVldFNpemUiOjUwMDAsIm1heFJlcXVlc3RDb3VudCI6MTAwMDAwLCJwb3NpdGlvbk1vZGVsIjoiZGlyZWN0ZWRFZGdlUHJvZ3Jlc3MiLCJzdGF0dXMiOiJhY2NlcHRlZCJ9LCJzZWxlY3RlZFNjaGVtYVZlcnNpb24iOiIxLjAuMCJ9LCJzY2hlbWFWZXJzaW9uIjoiMS4wLjAifQ==', 'frameLengthBytes': 301, 'frameSha256': '7820852f814c12e150d13d673072b400436edd8c2364005568d0ade52addc33c', 'ordinal': 2, 'schemaVersion': '1.0.0'}
+SNIPPET E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\drafts\08-chuong4-phanA-v4.tex
+155: Một lượt phục vụ là một yêu cầu, tức một khách, được nhận và chở tới nơi. Lượt trễ và lượt tới sớm được đếm trong nhóm
+156: khách được phục vụ, so với lời hứa đầu (Bảng~\ref{bang:c4-chiso}). Số lượt không trễ bằng số lượt phục vụ trừ số lượt
+157: trễ, tính trên toàn bộ yêu cầu, nên yêu cầu bị từ chối không được tính là đúng giờ. Ngưỡng chính là 60 giây; ngưỡng
+158: 120 giây được báo kèm vì có phép so đổi kết luận theo ngưỡng (mục~\ref{muc:c4-ketqua}).
+159: % EV: C01; N-07 (khách được nhận = khách được phục vụ); C06; C08 (DIALPY:8-9: bị từ chối không tính là kịp; ở 120 s U hơn C-30 5 lượt)
+160: 
+161: Lời hứa đầu là giờ trả của kế hoạch lúc khách xác nhận đặt xe, tính với thời gian đi lúc đó. Tính từ lúc đặt xe, nó
+162: dài trung bình 14,15 phút khi không trần và 14,12 phút dưới luật C trần 30 giây (gộp theo khách), nên luật C không hứa
+163: xa hơn.
+164: % EV: A13; A05; B14 (BURD:5,11: promised door-to-door 14,15 / 14,12 phút)
+165: 
+166: Tỉ lệ \emph{gộp theo khách} chia tổng số khách thỏa điều kiện cho tổng số khách được phục vụ; \emph{trung bình theo
+167: kịch bản} lấy trung bình của tỉ lệ từng kịch bản, mỗi kịch bản tính như nhau. Ví dụ dựng tay: với 5 trong 10 khách ở
+168: một kịch bản và 5 trong 90 ở kịch bản kia, gộp theo khách cho 10\%, trung bình theo kịch bản cho 27,8\%. Chênh lệch là
+169: cấu hình được thử trừ đối chứng; số dương nghĩa là nhiều hơn.
+170: % EV: C27 (hai cách gộp cho hai số khác nhau); K24; ví dụ dựng tay (10/100 = 10%; (50% + 5,56%)/2 = 27,78%)
+171: 
+172: Kết quả ``có dự báo'' là phép phát lại trên các lần chạy đã ghi (mục~\ref{muc:dubao}): xe nào chở ai giữ nguyên, chỉ
+173: các giờ báo cho khách được tính lại theo dự báo, và các chỉ số dùng $D_0$. Dự báo chỉ có ở 21 kịch bản ngày thường của
+174: tập kiểm tra chính; 13 kịch bản cuối tuần và tập buổi sáng giữ lời hứa không dự báo.
+175: % EV: C09; F03 (chỉ vế phát lại); X3-11 (D = max(p, S) áp cho mọi lời hứa đón và trả đã công bố); F02; N-28; D02 (12–13/11 không có dự báo)
+325: % EV: C13; N-21
+326: 
+327: Luật C không có quyết định nào bị ép và không vượt trần của khách nào ở cả 34 kịch bản. Đây là điều Nhận
+328: xét~\ref{nx:giunguyen} cho trước dưới giả thiết (N), không phải phát hiện thực nghiệm: phương án giữ nguyên kế hoạch
+329: có phần dời do điều phối bằng 0 nên không bị luật C loại. Điều phối không trần cũng có 0 trong 20.760 quyết định bị
+330: ép, và nhận xét không bảo đảm giờ trả thực tế. Luật hạn chót so giờ trả mới với lời hứa đầu, nên riêng phần thay đổi
+331: khi giữ nguyên kế hoạch cũng có thể làm nó bị ép (ví dụ 40 giây ở mục~\ref{muc:doichung}).
+332: % EV: A21; A22; N-21; X3-16 (U 0 / 20.760); X3-30; A10; K05
+333: 
+334: Tính gộp, luật hạn chót 30 giây bị ép ở 7.710 trong 20.103 lượt quyết định (38,4\%) và phá lời hứa với 289 trong 2.338
+335: khách (12,4\%). Gánh nặng dồn vào khung 7 giờ: cả 9 kịch bản có khách bị phá, với trung bình theo kịch bản 36,5\%
+336: khách bị phá và 75,6\% lượt quyết định bị ép. Ở khung 17 giờ chỉ 5 trong 11 kịch bản có khách bị phá, với 1,0\% và
+337: 5,0\% (cũng trung bình theo kịch bản). Ở mức 60 giây, các tỉ lệ toàn tập giảm nhưng không về 0. Luật trần độ dời khách
+338: thấy bị ép nhiều nhất, phù hợp với định nghĩa: tổng độ lớn các lần cập nhật mà nó kiểm không nhỏ hơn độ lùi so với lời
+339: hứa đầu (công thức~\eqref{eq:dongnhat}).
+340: % EV: N-21 (gộp 7.710/20.103 = 38,35%; 289/2.338 = 12,36%; khung 7 giờ 9/9, 36,53%, 75,62%; 17 giờ 5/11, 1,04%, 4,99% — đều trung bình theo kịch bản); C14; C13 (M⁺-60 22,5% / 4,2%; V-30 53,8%, 34/34); A11; A12; X3-33 (eq:dongnhat: Σ|z| ≥ |Σz| = |p_n − p_0|)
+341: 
+342: Bảng~\ref{bang:c4-nghiavu} không so hai chuẩn đúng giờ: luật C hứa về phần dời do điều phối, còn luật hạn chót hứa về
+343: toàn bộ độ trễ so với lời hứa đầu, một lời hứa lớn hơn. Đo bằng chính thước của luật hạn chót, tức tới muộn hơn lời
+344: hứa đầu quá 30 giây, luật C có 292 trong 2.338 khách (12,5\%), so với 289 khách (12,4\%) của luật hạn chót. Trung bình
+345: theo kịch bản là 14,6\% so với 14,5\%, và cả hai đều có khách như vậy ở 28 kịch bản. Vậy về độ đúng giờ, hai luật gần
+346: như ngang nhau; luật C khác ở chỗ chỉ hứa phần mà bộ điều phối kiểm soát được, nên giữ được lời hứa đó.
+347: % EV: C13; K05; C4A-01 (CK4A check: C-30 292/2.338 = 12,49%, TB theo kịch bản 14,59%, 28/34; khớp ADD1:17 late30 292 và TSV); N-21
+348: 
+349: Bảng~\ref{bang:c4-phanbotre} cho thấy số lượt trễ giảm ở cả bốn ngưỡng đã đo, từ 1 tới 10 phút.
+395: giá là số yêu cầu bị từ chối tăng từ 1.238 lên 1.334; chỉ 148 trong số đó có phương án bị trần chặn được ghi lại.
+396: % EV: C20; N-23; C01 (1.238 = 3.672 − 2.434; CON:3); D13 (1.334; 148)
+397: 
+398: \begin{table}[htbp]
+399: \centering
+400: \caption{Phần dời giờ trả do điều phối trên tập kiểm tra chính, lời hứa đầu không dự báo. Mẫu số của
+401: dòng đầu là số khách được phục vụ (2.434, 2.338 và 2.387); độ dời của một khách là tổng $|c|$ của khách
+402: đó. Dòng cuối lấy tổng phần dời có dấu do điều phối chia cho tổng số giây trễ so với lời hứa đầu của chính các khách
+403: trễ quá 60 s: 23.027 trên 31.353 giây, 82 trên 6.892 giây và 4.836 trên 12.450 giây. Cột trần 120 giây được dùng
+404: lại ở mục~\ref{muc:c4-chontran}.}
+405: \label{bang:c4-doidieuphoi}
+565: \midrule
+566: \multicolumn{4}{@{}l}{\textit{Lời hứa đầu không dự báo}}\\
+567: Lượt phục vụ & 2.434 & 2.338 & 2.387\\
+568: Lượt trễ quá 60 s & 203 & 76 & 132\\
+569: Lượt trễ quá 120 s & 102 & 11 & 21\\
+570: Lượt trễ quá 300 s & 18 & 0 & 0\\
+571: Lượt tới sớm quá 60 s & 7 & 3 & 1\\
+572: Không trễ quá 60 s & 2.231 & 2.262 & 2.255\\
+573: Không trễ quá 120 s & 2.332 & 2.327 & 2.366\\
+574: Khách đi chung & 555 & 313 & 428\\
+575: % EV: L1a-02; L1a-04 (U, C-30 tái lập); N-06; C06; C07; C08; N-09 (L1a-07); C4A-13 (sớm quá 60 s 7 / 3 / 1, ADD1:12,17,22; C120R:14,16,18)
+SNIPPET E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\evidence\EVIDENCE-REGISTER-ADDENDUM-2-CH3.md
+63: | X3-16 | Trên 34 kịch bản chính, số quyết định bị ép trong số quyết định được xác nhận: điều phối không trần 0 / 20.760, trần 30 giây 0 / 20.101, trần 120 giây 0 / 20.435. | 0/20.760; 0/20.101; 0/20.435 | STG:42-44 | VERIFIED-by-me | Khớp ADD1:119-121. |

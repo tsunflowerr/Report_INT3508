@@ -1,0 +1,249 @@
+\chapter{Cơ sở lý thuyết}
+
+Chương này trình bày các nhóm kiến thức nền mà khóa luận dựa vào. Nhóm thứ nhất là bài toán
+ghép chuyến theo yêu cầu và kiến trúc giải bài toán đó đang được dùng phổ biến. Nhóm thứ hai
+là cách văn liệu hiện hành đo độ bất ổn của lời hứa công bố, cùng với giới hạn của cách đo ấy.
+Nhóm thứ ba là khái niệm ổn định lịch trình trong hoạch định sản xuất --- một lĩnh vực đã giải
+quyết vấn đề có cấu trúc rất giống nhưng chưa được bắc cầu sang điều phối xe. Nhóm thứ tư là
+một phân biệt cổ điển trong luật nghĩa vụ, hóa ra lại mô tả chính xác kết quả cấu trúc mà
+chương 3 sẽ chứng minh. Cuối chương là các hệ số định giá độ tin cậy, và một mục ngắn đặt hai cơ
+sở tính sổ cái vào từ vựng của điều khiển trực tuyến có nhiễu.
+
+\section{Bài toán ghép chuyến theo yêu cầu}
+
+\subsection{Phát biểu bài toán}
+
+Xét một mạng lưới giao thông biểu diễn bằng đồ thị có hướng $G=(N,A)$, trong đó mỗi cung mang
+thời gian di chuyển. Một đội xe $V$ hoạt động trên mạng này; mỗi xe $v \in V$ có vị trí hiện
+tại và sức chứa $c_v$. Các yêu cầu đi xe xuất hiện theo thời gian; yêu cầu $r$ được đặc trưng
+bởi bộ $\langle o_r, d_r, t_r, q_r \rangle$ gồm điểm đón, điểm trả, thời điểm xuất hiện và số
+chỗ cần.
+
+Hệ thống hoạt động theo lô. Cứ sau mỗi chu kỳ $\delta$, toàn bộ các yêu cầu mới tích lũy được
+đem gán một lượt cùng với các yêu cầu cũ chưa hoàn thành. Chất lượng dịch vụ được ràng buộc
+bởi hai tham số: thời gian chờ tối đa $\Omega$ và độ trễ tối đa $\Delta$ so với chuyến đi
+thẳng. Một phương án gán là hợp lệ nếu mọi hành khách được phục vụ đều thỏa hai ràng buộc đó,
+và tại mọi thời điểm số khách trên xe không vượt sức chứa.
+
+Bài toán này là dạng động, trực tuyến của Dial-a-Ride Problem, và thuộc lớp NP-khó. Trong thực
+tế, các hệ thống không tìm nghiệm tối ưu toàn cục mà giải lại bài toán ở mỗi chu kỳ với trạng
+thái hiện hành.
+
+\subsection{Kiến trúc Request--Trip--Vehicle}
+
+Đóng góp kỹ thuật bền vững nhất của Alonso-Mora và cộng sự \cite{alonsomora2017} là tách bài
+toán thành hai giai đoạn độc lập. Giai đoạn thứ nhất \emph{sinh} các khả năng: hệ thống dựng
+đồ thị ba tầng gồm các yêu cầu, các nhóm yêu cầu có thể phục vụ chung trong một chuyến, và các
+cặp chuyến--xe khả thi. Việc tìm các nhóm khả thi được tăng tốc nhờ một tính chất quan trọng:
+nếu xe $v$ phục vụ được nhóm $G$ thì nó cũng phục vụ được mọi tập con của $G$, nên có thể mở
+rộng nhóm dần theo kích thước và cắt tỉa sớm.
+
+Giai đoạn thứ hai \emph{chọn} phương án bằng một bài toán quy hoạch tuyến tính nguyên. Gọi
+$\Gamma$ là tập các chuyến khả thi đã sinh, $x_T \in \{0,1\}$ chỉ việc chuyến $T$ có được thực
+hiện hay không, và $z_r \in \{0,1\}$ chỉ việc yêu cầu $r$ bị từ chối. Bài toán có dạng
+
+\begin{equation}
+\min_{x,z} \quad \sum_{T \in \Gamma} \mathrm{cost}(T)\, x_T \;+\; \sum_{r \in R} p_{\mathrm{KO}}\, z_r
+\end{equation}
+\begin{align}
+\text{v.đ.k.}\quad & z_r + \sum_{T:\, r \in \mathrm{req}(T)} x_T = 1 && \forall r \in R\\
+& \sum_{T:\, \mathrm{veh}(T)=v} x_T \le 1 && \forall v \in V
+\end{align}
+
+Ràng buộc (2.2) buộc mỗi yêu cầu hoặc được phục vụ bởi đúng một chuyến, hoặc bị từ chối với
+hình phạt $p_{\mathrm{KO}}$; ràng buộc (2.3) buộc mỗi xe nhận không quá một chuyến. Đây là bài
+toán đóng gói tập, và nó là khung mà hệ thống của khóa luận cũng sử dụng.
+
+\subsection{Số hạng thiệt hại gây cho khách cũ}
+
+Chi phí của một chuyến trong dòng bài này không chỉ gồm chi phí của những khách mới được phục
+vụ. Fielbaum và cộng sự \cite{fielbaum2022scale} viết nó dưới dạng
+
+\begin{equation}
+\mathrm{cost}(T,\pi) = \sum_{r \in \mathrm{req}(T)} c_U(r,T,\pi)
+\;+\; \sum_{r \in S_{\mathrm{veh}(T)}} \Delta c_U(r,T,\pi)
+\;+\; \Delta c_O(\pi)
+\end{equation}
+
+trong đó số hạng thứ hai, theo đúng lời các tác giả, là ``chi phí phát sinh thêm cho những hành
+khách đang được phục vụ bởi chiếc xe trước khi có phân công này''. Nghĩa là văn liệu \emph{đã}
+định giá thiệt hại gây cho khách cũ.
+
+Điểm khác biệt cần nhấn mạnh là số hạng đó có ba đặc điểm. Nó là một đại lượng \emph{biên tại
+một thời điểm} --- so kế hoạch mới với kế hoạch cũ ngay lúc đó, không nhớ gì về những lần trước.
+Nó được \emph{cộng gộp} trên toàn bộ hành khách bị ảnh hưởng, nên người chịu thiệt nặng nhất bị
+pha loãng trong đám đông. Và nó nằm trong \emph{hàm mục tiêu}, tức là một ưu tiên mềm có thể bị
+đánh đổi, chứ không phải một ràng buộc. Ba đặc điểm này là lý do vì sao, như chương 4 sẽ cho
+thấy, một hành khách vẫn có thể bị dời giờ hẹn tích lũy tới mười bốn phút mà hệ thống không hề
+coi đó là bất thường.
+
+\section{Độ bất ổn của lời hứa công bố}
+
+\subsection{Công trình gần nhất}
+
+Fielbaum và Alonso-Mora \cite{fielbaum2020} là công trình gần nhất với khóa luận này, và cần
+được trình bày cẩn thận vì phần trùng lặp là đáng kể. Họ đặt đúng vấn đề mà chương 1 đã nêu:
+khi hệ thống nhận khách mới, khách cũ bị thiệt bao nhiêu so với điều đã được báo lúc đầu.
+
+Đóng góp của họ gồm một hệ thống định nghĩa và một tập chỉ số. Về định nghĩa, họ phân biệt
+nguồn bất ổn \emph{do người dùng gây ra} (khách không có mặt đúng giờ, khách hủy chuyến) với
+nguồn \emph{do nhà điều hành gây ra} (hệ thống thay đổi phân công), và phân biệt bất ổn
+\emph{một lần} --- xảy ra trong một chuyến cụ thể --- với bất ổn \emph{hàng ngày} --- sự khác
+nhau giữa các lần thực hiện cùng một yêu cầu. Về chỉ số, họ định nghĩa
+
+\begin{equation}
+\Delta t_w(r) = t_w(r) - t^1_w(r), \qquad
+\Delta t_d(r) = t_d(r) - t^1_d(r), \qquad
+\Delta D(r) = \Delta t_w(r) + \Delta t_d(r)
+\end{equation}
+
+trong đó $t^1_w(r)$ là thời gian chờ \emph{được báo lần đầu tiên}, còn $t_w(r)$ là thời gian
+chờ \emph{thực tế}. Các giá trị âm được cắt về không. Họ cũng đếm số lần dự báo tăng lên trong
+suốt chuỗi phân công, ký hiệu $NC$.
+
+Kết quả của họ trên Manhattan: hơn một phần ba số yêu cầu không bị từ chối ngay đều gặp ít nhất
+một thay đổi, và khi một hành khách bị tăng thời gian chờ thì phần tăng thêm đó lớn tương đương
+thời gian chờ trung bình của cả hệ thống. Họ cũng thử ba chế độ kiểm soát và kết luận rằng
+kiểm soát chặt hơn thì chất lượng dịch vụ tổng thể xấu đi.
+
+\subsection{Ba giới hạn của cách đo này}
+
+Cách đo trên có ba giới hạn mà khóa luận này nhắm vào.
+
+\textbf{Thứ nhất, nó là hiệu hai đầu chứ không phải độ dài đường đi.} Công thức (2.5) chỉ so
+sánh điểm cuối với điểm đầu. Một hành khách được báo 9:00, rồi 9:10, rồi quay về 9:00 sẽ được
+chấm $\Delta = 0$, trong khi thực tế người đó đã bị làm phiền hai lần. Chỉ số đếm $NC$ có ghi
+nhận chuỗi nhưng lại không mang độ lớn. Nghĩa là văn liệu có \emph{độ lớn nhân với hai đầu} và
+có \emph{số lần nhân với chuỗi}, nhưng không có \emph{độ lớn nhân với chuỗi} --- đại lượng mà khóa
+luận đặt trần. (Trong hệ của khóa luận, kiểu ``quay về'' như ví dụ trên đến từ trôi dạt hai chiều
+chứ không từ quyết định, vì bộ sinh chỉ chèn thêm; mục \ref{muc:dondieu}.)
+
+\textbf{Thứ hai, và quan trọng hơn, thước đo này về mặt toán học không thể trở thành ràng
+buộc.} Đại lượng $t_w(r)$ là thời gian chờ thực tế, chỉ biết được sau khi hành khách đã được
+đón. Tại thời điểm hệ thống phải quyết định chọn phương án nào, giá trị đó chưa tồn tại. Không
+thể chặn ``thực tế trừ lần báo đầu không quá 30 giây'' khi đang chọn phương án, vì chưa biết
+thực tế. Đây không phải lựa chọn thiết kế mà là tính chất của công thức: nó chỉ tồn tại ở thì
+quá khứ. Cơ chế của khóa luận, ngược lại, định nghĩa trên các đại lượng đều biết được tại thời
+điểm quyết định, nên chặn được.
+
+\textbf{Thứ ba, trôi dạt vật lý bị loại khỏi phạm vi thay vì được tách ra.} Các tác giả nêu rõ
+trong mục 2 rằng họ không xét những nguồn bất ổn vốn đã có trong giao thông công cộng truyền
+thống, chẳng hạn tắc đường hay tai nạn; và trong phần thực nghiệm họ chọn khung giờ 13--15 giờ,
+ngoài cao điểm, để tránh đúng hiện tượng đó. Cách xử lý ấy hợp lý trong phạm vi bài của họ,
+nhưng nó không dùng được cho giờ cao điểm, và nó khiến câu hỏi ``phần nào do nhà xe, phần nào
+do đường'' không thể đặt ra được.
+
+\section{Ổn định lịch trình trong hoạch định sản xuất}
+
+Hiện tượng mà khóa luận nghiên cứu không mới trong khoa học quản trị vận hành; nó chỉ chưa
+được chuyển sang lĩnh vực điều phối xe. Trong hoạch định nhu cầu vật tư, từ thập niên 1980 đã
+có khái niệm \emph{nervousness}: hệ thống lập lịch chạy theo chân trời cuốn chiếu, mỗi lần chạy
+lại sinh ra một lịch mới khác lịch cũ, và sự dao động đó lan xuống toàn bộ chuỗi cung ứng gây
+tốn kém.
+
+Điểm đáng chú ý là dòng văn liệu này \emph{đã phân biệt sẵn} hai nguồn dao động: dao động do
+thông tin nhu cầu thay đổi --- ngoại sinh --- và dao động do chính quy tắc lập kế hoạch ---
+nội sinh. Đó chính là phân biệt mà chương 3 sẽ xây dựng lại cho điều phối xe, với mốc tham
+chiếu là vị trí thật của phương tiện thay vì thông tin nhu cầu.
+
+Sridharan, Berry và Udayabhanu \cite{sridharan1987} nghiên cứu việc \emph{đóng băng} một phần
+lịch sản xuất chính như biện pháp giảm dao động, và đo đường cong đánh đổi giữa tỉ lệ đóng băng
+và sai số chi phí. Kết quả của họ cho thấy chi phí tăng vọt khi tỉ lệ đóng băng vượt khoảng
+$80\%$ chân trời. Cơ chế đóng băng ấy tương ứng chính xác với khóa lời hứa trong khóa luận này,
+và đường cong đánh đổi của họ tương ứng với đường cong giá của cam kết ở chương 4. Một trong
+những quan sát liên ngành mà khóa luận rút ra là hai đường cong này có \emph{hình dạng khác
+nhau}, và lý do của sự khác nhau ấy nói lên điều gì đó về cấu trúc của hai bài toán.
+
+Trong một bài đồng hành, nhóm tác giả trên trình bày cả một \emph{họ} thước đo bất ổn, cho phép
+đặt trọng số khác nhau lên những thay đổi xảy ra ở các vị trí khác nhau trên chân trời kế hoạch,
+và cho phép dùng cả biểu thức tuyến tính lẫn bậc hai. Đây là nền cho phân tích độ vững ở mục
+4.5: nếu thứ hạng các cấu hình đổi khi đổi thước đo thì chính điều đó là một phát hiện.
+
+\section{Nghĩa vụ phương tiện và nghĩa vụ kết quả}
+
+Phân biệt giữa hai cơ sở tính sổ cái --- nền của khung bốn họ cổng, kết quả lý thuyết trung tâm
+ở chương 3 --- hóa ra trùng với một phân biệt cổ điển trong luật nghĩa vụ, và việc nêu nó ra giúp
+kết quả kỹ thuật có chỗ đứng khái niệm rõ ràng hơn.
+
+Luật dân sự phân biệt \emph{nghĩa vụ phương tiện} (obligation de moyens) với \emph{nghĩa vụ kết
+quả} (obligation de résultat). Trong nghĩa vụ phương tiện, người có nghĩa vụ không vi phạm nếu
+đã hành xử cẩn trọng, kể cả khi kết quả không đạt được; trong nghĩa vụ kết quả, người có nghĩa
+vụ chịu trách nhiệm vì không đạt kết quả, bất kể đã cố gắng thế nào. Ví dụ kinh điển: luật sư
+chịu nghĩa vụ phương tiện --- cố hết sức nhưng không bảo đảm thắng kiện; thợ lắp thang máy chịu
+nghĩa vụ kết quả --- thang chạy hoặc không.
+
+Phân biệt này tồn tại vì một lý do thực dụng mà luật đã kết luận từ lâu: \emph{không thể áp đặt
+nghĩa vụ kết quả khi một phần kết quả nằm ngoài tầm kiểm soát của người có nghĩa vụ}, vì khi đó
+hợp đồng trở nên bất khả thi. Trong hợp đồng dịch vụ công nghệ thông tin, đúng vấn đề này được
+xử lý bằng điều khoản loại trừ: bên cung cấp không chịu trách nhiệm về những sự cố mức dịch vụ
+phát sinh từ các sự kiện nằm ngoài tầm kiểm soát hợp lý của mình.
+
+Chương 3 sẽ chứng minh rằng hai cơ sở tính sổ cái cam kết --- tính theo hành vi của nhà điều
+hành, hay tính theo kết quả mà khách nhìn thấy --- tương ứng chính xác với hai loại nghĩa vụ
+này, và rằng cơ sở kết quả có thể khiến hệ thống bất khả thi đúng theo nghĩa mà luật đã cảnh
+báo. Điểm mới nằm ở chỗ: luật và các thỏa thuận mức dịch vụ xử lý ranh giới ``ngoài tầm kiểm
+soát hợp lý'' bằng \emph{văn xuôi} --- điều khoản bất khả kháng, tranh cãi sau sự việc --- còn
+mốc tham chiếu ngoại sinh trong khóa luận này \emph{tính được} ranh giới đó, theo từng quyết
+định và từng hành khách.
+
+\section{Giá trị của độ tin cậy}
+
+Phần cuối của chương ghi lại các hệ số định giá được dùng ở mục \ref{muc:phucloi} để quy đổi kết quả kỹ thuật
+sang ngôn ngữ phúc lợi.
+
+Alonso-González và cộng sự \cite{alonsogonzalez2020} ước lượng giá trị thời gian và giá trị độ
+tin cậy cho dịch vụ đi chung theo yêu cầu bằng thực nghiệm lựa chọn công bố. Giá trị thời gian
+trên xe của họ nằm trong khoảng 7{,}88--10{,}80 EUR mỗi giờ. Đáng chú ý, giá trị độ tin cậy mà
+họ đo được --- định nghĩa qua độ lệch chuẩn của thời gian chờ và thời gian đi --- \emph{thấp
+hơn} giá trị thời gian tương ứng, chứ không cao hơn. Đây là một điểm mà khóa luận đã phải đính
+chính trong quá trình thực hiện: giả định ban đầu rằng độ tin cậy được định giá cao gấp hai tới
+ba lần thời gian là sai đối với bối cảnh này, và việc sửa lại đã làm thay đổi đáng kể lập luận
+phúc lợi.
+
+Geržinič và cộng sự \cite{gerzinic2023} định giá riêng phần thời gian chờ \emph{bất ngờ}, tức phần
+phát sinh ngoài dự kiến ban đầu. Nếu dùng được, đây là hệ số gần nhất với đại lượng mà khóa luận
+đo, vì độ dời của một lời hứa đã công bố là thời gian bất ngờ theo nghĩa đó. Mục \ref{muc:phucloi}
+dùng khoảng 20--25 EUR mỗi giờ, quy cho nguồn này, để tính điểm hòa vốn; con số ấy khóa luận
+\emph{chưa đối chiếu được với bản gốc}, nên mục đó báo cáo song song ngưỡng tính bằng giá trị thời
+gian trên xe ở trên, và coi kết quả là một ngưỡng chứ không phải một tuyên bố chiến thắng.
+
+\section{Điều khiển trực tuyến có nhiễu: từ vựng cho hai cơ sở tính}
+\label{muc:dieukhien}
+
+Mục này không đưa ra một kết quả mới; nó chỉ đặt hai cơ sở tính sổ cái vào đúng họ bài toán, để
+người đọc có sẵn từ vựng. Đây là một \emph{tương ứng cấu trúc}, không phải một kết quả về tỉ số
+cạnh tranh đã được chứng minh cho hệ của khóa luận.
+
+Viết lại động học của một lời hứa bằng các ký hiệu sẽ định nghĩa ở chương 3: tại mỗi lần công bố,
+lời hứa mới bằng lời hứa cũ cộng phần thay đổi khi giữ nguyên kế hoạch cộng phần do quyết định,
+$p_t = v_t + x_t + c_t$, và lời hứa mới trở thành lời hứa cũ của lần sau, $v_{t+1} = p_t$. Đây đúng
+là dạng $s_{t+1} = s_t + w_t + u_t$ của \emph{điều khiển trực tuyến với nhiễu} \cite{agarwal2019},
+với nhiễu $w_t = x_t$ và tác động điều khiển $u_t = c_t$. Nhiễu ở đây chỉ \emph{gần} ngoại sinh:
+$x_t$ gồm cả tiến độ thực của xe, mà tiến độ ấy phụ thuộc tuyến đã chọn, nên về nguyên tắc nó có
+thể phụ thuộc yếu vào chính sách (mục \ref{muc:phanra}).
+
+\begin{table}[htbp]
+\centering
+\caption{Hai cơ sở tính sổ cái trong từ vựng của điều khiển có nhiễu}
+\label{bang:dieukhien}
+\small
+\begin{tabular}{@{}p{3.6cm}p{4.6cm}p{5.4cm}@{}}
+\toprule
+\textbf{Khóa luận} & \textbf{Điều khiển có nhiễu} & \textbf{Hệ quả}\\
+\midrule
+Cơ sở hành vi $\sum_t |c_t|$ & phạt \emph{nỗ lực điều khiển} $\sum_t \|u_t\|$ & luôn thỏa được bằng
+$u = 0$, tức không làm gì\\
+Cơ sở kết quả $\sum_t |x_t + c_t|$ & phạt \emph{dịch chuyển trạng thái}
+$\sum_t \|s_{t+1} - s_t\|$, gồm cả nhiễu & có thể vô nghiệm khi riêng nhiễu đã vượt ngân sách\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Trong tối ưu lồi trực tuyến có làm trơn \cite{chen2018} và trong hệ nhiệm vụ metric
+\cite{borodin1992}, chi phí đổi hành động $\sum_t \|a_t - a_{t-1}\|$ chính là tổng biến thiên ---
+nhưng ở đó người ra quyết định \emph{đặt trực tiếp} $a_t$, không có trôi dạt ngoại sinh, nên hai cơ
+sở tính trùng nhau. Phân biệt hành vi và kết quả chỉ xuất hiện khi trạng thái trôi ngoại sinh, và
+lời hứa về giờ giấc đúng là một trạng thái như vậy. Nói gọn: cơ sở hành vi tương ứng với việc chỉ
+phạt nỗ lực điều khiển thay vì phạt dịch chuyển trạng thái --- trong điều khiển có nhiễu, chi phí
+thường gồm cả hai phần, và cơ sở hành vi chỉ ứng với phần điều khiển; cơ sở kết quả quy nhiễu cho
+bộ điều khiển, và đó là lý do nó có thể vô nghiệm.

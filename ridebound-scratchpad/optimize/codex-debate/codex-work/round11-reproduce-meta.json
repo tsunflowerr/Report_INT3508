@@ -1,0 +1,88 @@
+{
+  "canonical": {
+    "roles": {
+      "cal": 1161,
+      "fit": 4282,
+      "test13": 3932,
+      "test15": 292,
+      "test16": 397
+    },
+    "world_arm_role_counts": {
+      "measured/C-30/cal": 100,
+      "measured/C-30/fit": 660,
+      "measured/C-30/test15": 147,
+      "measured/C-30/test16": 197,
+      "measured/U/cal": 100,
+      "measured/U/fit": 665,
+      "measured/U/test15": 145,
+      "measured/U/test16": 200,
+      "static/C-120/cal": 191,
+      "static/C-120/fit": 588,
+      "static/C-120/test13": 784,
+      "static/C-30/cal": 186,
+      "static/C-30/fit": 576,
+      "static/C-30/test13": 772,
+      "static/C-60/cal": 187,
+      "static/C-60/fit": 576,
+      "static/C-60/test13": 777,
+      "static/FREE/cal": 201,
+      "static/FREE/fit": 621,
+      "static/FREE/test13": 807,
+      "static/LOCKS/cal": 196,
+      "static/LOCKS/fit": 596,
+      "static/LOCKS/test13": 792
+    }
+  },
+  "stored": {
+    "roles": {
+      "cal": 1161,
+      "fit": 4282,
+      "test13": 3932,
+      "test15": 292,
+      "test16": 397
+    },
+    "world_arm_role_counts": {
+      "measured/C-30/cal": 100,
+      "measured/C-30/fit": 660,
+      "measured/C-30/test15": 147,
+      "measured/C-30/test16": 197,
+      "measured/U/cal": 100,
+      "measured/U/fit": 665,
+      "measured/U/test15": 145,
+      "measured/U/test16": 200,
+      "static/C-120/cal": 191,
+      "static/C-120/fit": 588,
+      "static/C-120/test13": 784,
+      "static/C-30/cal": 186,
+      "static/C-30/fit": 576,
+      "static/C-30/test13": 772,
+      "static/C-60/cal": 187,
+      "static/C-60/fit": 576,
+      "static/C-60/test13": 777,
+      "static/FREE/cal": 201,
+      "static/FREE/fit": 621,
+      "static/FREE/test13": 807,
+      "static/LOCKS/cal": 196,
+      "static/LOCKS/fit": 596,
+      "static/LOCKS/test13": 792
+    }
+  },
+  "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:28:51) [MSC v.1944 64 bit (AMD64)]",
+  "sklearn": "1.7.2",
+  "source_sha256": "7075ad97b736b3d997a15db069918ac1cd0c8e4e694c0b28ebc6e934cd4e4c0a",
+  "seal_sha256": "93f6b9684709602829319b7a3e39a2206674b077059c4bd401dc219bbc5b19cc",
+  "rows": 10064,
+  "distinct_world_arm_cells": 112,
+  "features": [
+    "clock_min",
+    "horizon_s",
+    "pick_s",
+    "fc_ext_s",
+    "maxride_s",
+    "room_s",
+    "other_assigned",
+    "other_onboard"
+  ],
+  "target_rounding_max_s": 0.0005000000000023874,
+  "delta_rounding_max_s": 0.0005000000000165983
+}

@@ -1,0 +1,9 @@
+{
+  "rows": 2887,
+  "primary_records": 1991,
+  "source_hash_window_matches": 1873,
+  "unknown_primary_windows": 135,
+  "configured_world_unknown_primary": 6,
+  "source_configurations": 218,
+  "rows_sha256": "22255a0f43737925bc785f7b1332dfc9ccbb60ba8724f6f9e993a8ec33cc68d7"
+}

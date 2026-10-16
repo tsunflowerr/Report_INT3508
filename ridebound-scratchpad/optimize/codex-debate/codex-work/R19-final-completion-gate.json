@@ -1,0 +1,18 @@
+{
+    "time_utc":  "2026-10-10T15:34:29.7625654Z",
+    "states":  [
+                   {
+                       "status":  "pass",
+                       "count":  5
+                   },
+                   {
+                       "status":  "no-summary",
+                       "count":  6
+                   },
+                   {
+                       "status":  "missing-directory",
+                       "count":  23
+                   }
+               ],
+    "ready":  false
+}

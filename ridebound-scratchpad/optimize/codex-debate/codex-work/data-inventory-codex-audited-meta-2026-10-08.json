@@ -1,0 +1,1579 @@
+{
+  "combined_rows": 2887,
+  "counts_by_kind": {
+    "run-attempt": 2008,
+    "partial-or-bundle-only": 214,
+    "protocol-output-no-run-json": 68,
+    "ledger-attempt": 447,
+    "legacy-run-store-record": 90,
+    "fleetpy-calibration-csv-run": 40,
+    "fleetpy-initial-state-fixture": 20
+  },
+  "primary_run00_count": 1991,
+  "primary_experiment_count": 51,
+  "primary_field_unknown": {
+    "vehicles": 0,
+    "requests": 0,
+    "world": 0,
+    "runner_commit": 3,
+    "completed_trips": 3
+  },
+  "primary_summary_status": {
+    "pass": 1974,
+    "absent": 17
+  },
+  "completed_unknown_paths": [
+    "E:/RideBoundData/wp7/results/medium-arc-cache-dev-rolling-20260813-01/run-00.json",
+    "E:/RideBoundData/wp7/results/medium-dev-rolling-20260813-04/run-00.json",
+    "E:/RideBoundData/wp7/results/medium-full-snapshot-lazy-checkpoint-dev-rolling-20260813-01/run-00.json"
+  ],
+  "input_snapshots": {
+    "data-inventory-runs-codex-independent-2026-10-08.tsv": "4365f623c6e160ec0e338af67ce3037a1a0257b2ac549ce13d6977af6c11cedf",
+    "data-inventory-supplement-codex-independent-2026-10-08.tsv": "27ca59b550d28f863ce868c921977ea216ee941c29cb78e87bd2e5d8b009d25a"
+  },
+  "experiments": {
+    "C:/RideBoundData/research/tier3-forecast-checks-v1": {
+      "runs": 5,
+      "arms": [
+        "C-30"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w07"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 5
+      },
+      "specified_worlds": [
+        "time-varying measured-profile configuration; actual numeric changes not independently certified"
+      ],
+      "summary_status": {
+        "pass": 5
+      },
+      "completed_known": 429,
+      "completed_unknown": 0,
+      "example_path": "C:/RideBoundData/research/tier3-forecast-checks-v1/control-off/run-00.json"
+    },
+    "C:/RideBoundData/research/tier3-forecast-v1": {
+      "runs": 40,
+      "arms": [
+        "C-30",
+        "C-30F",
+        "Mplus-30",
+        "Mplus-30F"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w07",
+        "w08",
+        "w14",
+        "w15"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 40
+      },
+      "specified_worlds": [
+        "time-varying measured-profile configuration; actual numeric changes not independently certified"
+      ],
+      "summary_status": {
+        "pass": 40
+      },
+      "completed_known": 2694,
+      "completed_unknown": 0,
+      "example_path": "C:/RideBoundData/research/tier3-forecast-v1/C-30-d20181115-s10-r1-w14/run-00.json"
+    },
+    "C:/RideBoundData/research/tier3-sweep-noworse-v1": {
+      "runs": 28,
+      "arms": [
+        "C-30",
+        "Mplus-120",
+        "Mplus-30",
+        "Mplus-300",
+        "Mplus-60",
+        "Mplus-900"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w08",
+        "w17"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 28
+      },
+      "specified_worlds": [
+        "W1 time-varying specified world; source sweep design",
+        "W2 time-varying specified world; source sweep design",
+        "W4 time-varying specified world; source sweep design",
+        "W5 time-varying specified world; source sweep design"
+      ],
+      "summary_status": {
+        "pass": 28
+      },
+      "completed_known": 2402,
+      "completed_unknown": 0,
+      "example_path": "C:/RideBoundData/research/tier3-sweep-noworse-v1/C-30-W2-d20181112-s10-r1-w08/run-00.json"
+    },
+    "C:/RideBoundData/research/tier3-t38-v1": {
+      "runs": 185,
+      "arms": [
+        "C-30",
+        "Mplus-30",
+        "Mplus-60",
+        "U",
+        "V-30"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w07",
+        "w08",
+        "w17"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 185
+      },
+      "specified_worlds": [
+        "time-varying measured-profile configuration; actual numeric changes not independently certified"
+      ],
+      "summary_status": {
+        "pass": 185
+      },
+      "completed_known": 12869,
+      "completed_unknown": 0,
+      "example_path": "C:/RideBoundData/research/tier3-t38-v1/C-30-d20181114-s10-r1-w07/run-00.json"
+    },
+    "C:/RideBoundData/research/tier3-vm-v11-a": {
+      "runs": 24,
+      "arms": [
+        "M-30",
+        "V-30"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w08",
+        "w17"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 24
+      },
+      "specified_worlds": [
+        "W0 static with repeated snapshots",
+        "W1 time-varying specified world; source sweep design",
+        "W2 time-varying specified world; source sweep design",
+        "W3 time-varying specified world; source sweep design",
+        "W4 time-varying specified world; source sweep design",
+        "W5 time-varying specified world; source sweep design"
+      ],
+      "summary_status": {
+        "pass": 24
+      },
+      "completed_known": 2130,
+      "completed_unknown": 0,
+      "example_path": "C:/RideBoundData/research/tier3-vm-v11-a/M-30-W0-d20181112-s10-r1-w08/run-00.json"
+    },
+    "C:/RideBoundData/research/tier3-vm-v11-b": {
+      "runs": 24,
+      "arms": [
+        "M-30",
+        "V-30"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w08",
+        "w17"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 24
+      },
+      "specified_worlds": [
+        "W0 static with repeated snapshots",
+        "W1 time-varying specified world; source sweep design",
+        "W2 time-varying specified world; source sweep design",
+        "W3 time-varying specified world; source sweep design",
+        "W4 time-varying specified world; source sweep design",
+        "W5 time-varying specified world; source sweep design"
+      ],
+      "summary_status": {
+        "pass": 24
+      },
+      "completed_known": 2210,
+      "completed_unknown": 0,
+      "example_path": "C:/RideBoundData/research/tier3-vm-v11-b/M-30-W0-d20181112-s10-r1-w08/run-00.json"
+    },
+    "C:/RideBoundData/research/tier3-w07-v1": {
+      "runs": 88,
+      "arms": [
+        "C-120",
+        "C-30",
+        "C-300",
+        "C-60",
+        "M-30",
+        "Mplus-120",
+        "Mplus-30",
+        "Mplus-300",
+        "Mplus-60",
+        "U",
+        "V-30"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w07"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 88
+      },
+      "specified_worlds": [
+        "time-varying measured-profile configuration; actual numeric changes not independently certified"
+      ],
+      "summary_status": {
+        "pass": 88
+      },
+      "completed_known": 7287,
+      "completed_unknown": 0,
+      "example_path": "C:/RideBoundData/research/tier3-w07-v1/C-120-d20181112-s10-r1-w07/run-00.json"
+    },
+    "C:/RideBoundData/research/tier3-w07x-v1": {
+      "runs": 104,
+      "arms": [
+        "C-150",
+        "C-180",
+        "C-240",
+        "C-90",
+        "Mplus-150",
+        "Mplus-180",
+        "Mplus-240",
+        "Mplus-90",
+        "V-120",
+        "V-150",
+        "V-180",
+        "V-240",
+        "V-90"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w07"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 104
+      },
+      "specified_worlds": [
+        "time-varying measured-profile configuration; actual numeric changes not independently certified"
+      ],
+      "summary_status": {
+        "pass": 104
+      },
+      "completed_known": 8645,
+      "completed_unknown": 0,
+      "example_path": "C:/RideBoundData/research/tier3-w07x-v1/C-150-d20181112-s10-r1-w07/run-00.json"
+    },
+    "C:/RideBoundData/research/tier3-world-v12-smoke": {
+      "runs": 3,
+      "arms": [
+        "v12-C-30",
+        "v12-leak"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 3
+      },
+      "specified_worlds": [
+        "W5 time-varying specified world; source sweep design",
+        "time-varying measured-profile configuration; actual numeric changes not independently certified"
+      ],
+      "summary_status": {
+        "pass": 3
+      },
+      "completed_known": 252,
+      "completed_unknown": 0,
+      "example_path": "C:/RideBoundData/research/tier3-world-v12-smoke/v12-C-30-W5/run-00.json"
+    },
+    "E:/RideBoundData/research/deadline-v1": {
+      "runs": 165,
+      "arms": [
+        "conduct-30-k1",
+        "ctl-conduct-k0",
+        "ctl-visible-k0",
+        "dl-120-k0",
+        "dl-120-k1",
+        "dl-30-k0",
+        "dl-30-k1",
+        "dl-60-k0",
+        "dl-60-k1",
+        "dl2-30-k1"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown",
+        "w08",
+        "w17"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 69,
+        "final-snapshot-version-1; numeric-constancy-not-audited": 96
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate",
+        "unknown; inspect source driver"
+      ],
+      "summary_status": {
+        "pass": 165
+      },
+      "completed_known": 13743,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/research/deadline-v1/conduct-30-k1-d20181112-s10-r1-w08-s7/run-00.json"
+    },
+    "E:/RideBoundData/research/deadline-v1-pilot": {
+      "runs": 1,
+      "arms": [
+        "ctl-conduct-k0"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 1
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 1
+      },
+      "completed_known": 92,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/research/deadline-v1-pilot/ctl-conduct-k0-d20181114-s10-r1-s7/run-00.json"
+    },
+    "E:/RideBoundData/research/tier3-pilot-v1": {
+      "runs": 60,
+      "arms": [
+        "C-30",
+        "M-30",
+        "Mplus-30",
+        "U",
+        "V-30"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w08",
+        "w17"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 60
+      },
+      "specified_worlds": [
+        "W0 static with repeated snapshots",
+        "W1 time-varying specified world; source sweep design",
+        "W2 time-varying specified world; source sweep design",
+        "W3 time-varying specified world; source sweep design",
+        "W4 time-varying specified world; source sweep design",
+        "W5 time-varying specified world; source sweep design"
+      ],
+      "summary_status": {
+        "pass": 60
+      },
+      "completed_known": 5474,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/research/tier3-pilot-v1/C-30-W0-d20181112-s10-r1-w08/run-00.json"
+    },
+    "E:/RideBoundData/research/tier3-sweep-v1": {
+      "runs": 168,
+      "arms": [
+        "C-120",
+        "C-30",
+        "C-300",
+        "C-60",
+        "C-600",
+        "C-900",
+        "Mplus-120",
+        "Mplus-30",
+        "Mplus-300",
+        "Mplus-60",
+        "Mplus-600",
+        "Mplus-900",
+        "U"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w08",
+        "w17"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 168
+      },
+      "specified_worlds": [
+        "W0 static with repeated snapshots",
+        "W1 time-varying specified world; source sweep design",
+        "W2 time-varying specified world; source sweep design",
+        "W3 time-varying specified world; source sweep design",
+        "W4 time-varying specified world; source sweep design",
+        "W5 time-varying specified world; source sweep design"
+      ],
+      "summary_status": {
+        "pass": 156,
+        "absent": 12
+      },
+      "completed_known": 15680,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/research/tier3-sweep-v1/C-120-W0-d20181112-s10-r1-w08/run-00.json"
+    },
+    "E:/RideBoundData/research/tier3-world-smoke-v1": {
+      "runs": 2,
+      "arms": [
+        "t35-leak"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 2
+      },
+      "specified_worlds": [
+        "unknown; inspect source driver"
+      ],
+      "summary_status": {
+        "pass": 2
+      },
+      "completed_known": 158,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/research/tier3-world-smoke-v1/world-a/run-00.json"
+    },
+    "E:/RideBoundData/research/tier3-world-v11-smoke": {
+      "runs": 4,
+      "arms": [
+        "v11-C-30",
+        "v11-V-30",
+        "v11-leak"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 4
+      },
+      "specified_worlds": [
+        "W4 time-varying specified world; source sweep design",
+        "unknown; inspect source driver"
+      ],
+      "summary_status": {
+        "pass": 4
+      },
+      "completed_known": 348,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/research/tier3-world-v11-smoke/v11-C-30-W4/run-00.json"
+    },
+    "E:/RideBoundData/wp13/e1-retained-portfolio-panel-a": {
+      "runs": 40,
+      "arms": [
+        "b1-tight",
+        "c1-tight"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 40
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 40
+      },
+      "completed_known": 3316,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp13/e1-retained-portfolio-panel-a/p-d20181114-s10-r1-b1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp13/e1-retained-portfolio-panel-b": {
+      "runs": 40,
+      "arms": [
+        "b1-tight",
+        "c1-tight"
+      ],
+      "vehicles": [
+        "4"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 40
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 40
+      },
+      "completed_known": 1826,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp13/e1-retained-portfolio-panel-b/pb-d20181114-s10-r1-b1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp14/development-ablation": {
+      "runs": 1,
+      "arms": [
+        "b1-ref"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w14"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 1
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 1
+      },
+      "completed_known": 104,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14/development-ablation/w14-d20181112-s10-r1-w08-b1-ref-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp14/drift-frac-v1": {
+      "runs": 12,
+      "arms": [
+        "df-conduct-k05"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 12
+      },
+      "specified_worlds": [
+        "unknown; inspect source driver"
+      ],
+      "summary_status": {
+        "pass": 12
+      },
+      "completed_known": 864,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14/drift-frac-v1/df-conduct-k05-d20181114-s10-r1-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp14/drift-v1": {
+      "runs": 46,
+      "arms": [
+        "dr-conduct-k0",
+        "dr-conduct-k1",
+        "dr-conduct-k2",
+        "dr-visible-k0"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 36,
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 10
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate",
+        "unknown; inspect source driver"
+      ],
+      "summary_status": {
+        "pass": 46
+      },
+      "completed_known": 3537,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14/drift-v1/dr-conduct-k0-d20181114-s10-r1-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp14/driftwide-v1": {
+      "runs": 15,
+      "arms": [
+        "dw-visible-k0"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 15
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 15
+      },
+      "completed_known": 1334,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14/driftwide-v1/dw-visible-k0-d20181114-s10-r1-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp14/levelc-v1": {
+      "runs": 20,
+      "arms": [
+        "lc"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 20
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 20
+      },
+      "completed_known": 1608,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14/levelc-v1/lc-d20181114-s10-r1-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp14/ratchet-secondary-v1": {
+      "runs": 80,
+      "arms": [
+        "rt-freeze300ratchet",
+        "rt-nopickuplock",
+        "rt-ratchet",
+        "rt-reference"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 80
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 80
+      },
+      "completed_known": 6328,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14/ratchet-secondary-v1/rt-freeze300ratchet-d20181114-s10-r1-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp14/surface-v1": {
+      "runs": 80,
+      "arms": [
+        "sf-budget120",
+        "sf-budget300",
+        "sf-budget60",
+        "sf-nobudget"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 80
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 80
+      },
+      "completed_known": 7227,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14/surface-v1/sf-budget120-d20181114-s10-r1-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp14/wide-window-v1": {
+      "runs": 40,
+      "arms": [
+        "b1",
+        "c1"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 40
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 40
+      },
+      "completed_known": 3691,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14/wide-window-v1/ww-b1-d20181114-s10-r1-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp14r/development-v3-ledger": {
+      "runs": 2,
+      "arms": [
+        "w14"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w14"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 2
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "absent": 1,
+        "pass": 1
+      },
+      "completed_known": 208,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14r/development-v3-ledger/w14-d20181112-s10-r1-w08-b1-ref-s7/attempt-01/output/run-00.json"
+    },
+    "E:/RideBoundData/wp14r/development-v4-ledger": {
+      "runs": 2,
+      "arms": [
+        "w14"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w14"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 2
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 2
+      },
+      "completed_known": 202,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14r/development-v4-ledger/w14-d20181112-s10-r1-w08-b1-ref-s7/attempt-01/output/run-00.json"
+    },
+    "E:/RideBoundData/wp14r/development-v5-ledger": {
+      "runs": 40,
+      "arms": [
+        "w14"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w14"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 40
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 40
+      },
+      "completed_known": 3940,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14r/development-v5-ledger/w14-d20181112-s10-r1-w08-b1-ref-s7/attempt-01/output/run-00.json"
+    },
+    "E:/RideBoundData/wp14r/development-v6-ledger": {
+      "runs": 160,
+      "arms": [
+        "w14"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "w14"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 160
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 160
+      },
+      "completed_known": 15520,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp14r/development-v6-ledger/w14-d20181112-s10-r1-w08-b1-ref-s7/attempt-01/output/run-00.json"
+    },
+    "E:/RideBoundData/wp7/results": {
+      "runs": 13,
+      "arms": [
+        "frozen-hard-vector",
+        "frozen-rolling-cost",
+        "hard-vector-v5-final-a",
+        "hard-vector-v5-smoke01",
+        "rolling-cost-v1-arc-cache-dev01",
+        "rolling-cost-v1-dev04",
+        "rolling-cost-v2-full-snapshot-lazy-checkpoint-dev01",
+        "rolling-cost-v2-transcript-dev01",
+        "rolling-cost-v5-final-a",
+        "v6-hard-vector",
+        "v6-rolling-cost",
+        "v8-hard-vector",
+        "v8-rolling-cost"
+      ],
+      "vehicles": [
+        "32"
+      ],
+      "requests": [
+        "128"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 11,
+        "multiple-snapshot-updates-observed; numeric-variation-not-audited": 2
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate",
+        "unknown; inspect source driver"
+      ],
+      "summary_status": {
+        "pass": 12,
+        "absent": 1
+      },
+      "completed_known": 1280,
+      "completed_unknown": 3,
+      "example_path": "E:/RideBoundData/wp7/results/candidate-portfolio-v6-20260815/medium-hard/run-00.json"
+    },
+    "E:/RideBoundData/wp8/budget-probe-20260819": {
+      "runs": 1,
+      "arms": [
+        "c1-tight"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "128"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 1
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 1
+      },
+      "completed_known": 118,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp8/budget-probe-20260819/C-d20181113-r2-c1-tight/run-00.json"
+    },
+    "E:/RideBoundData/wp8/contended-20260819": {
+      "runs": 6,
+      "arms": [
+        "b1",
+        "c1"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "128"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 6
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 6
+      },
+      "completed_known": 672,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp8/contended-20260819/C-d20181112-r2-b1/run-00.json"
+    },
+    "E:/RideBoundData/wp8/frontier-20260820": {
+      "runs": 25,
+      "arms": [
+        "b1-tight",
+        "b1-unbounded",
+        "c1-loose",
+        "c1-medium",
+        "c1-tight",
+        "c1-unbounded"
+      ],
+      "vehicles": [
+        "16",
+        "4",
+        "8"
+      ],
+      "requests": [
+        "128"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 25
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 25
+      },
+      "completed_known": 2750,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp8/frontier-20260820/C-d20181112-r2-b1-unbounded/run-00.json"
+    },
+    "E:/RideBoundData/wp8/load-probe-20260818c": {
+      "runs": 2,
+      "arms": [
+        "b1",
+        "c1"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "128"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 2
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 2
+      },
+      "completed_known": 234,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp8/load-probe-20260818c/L1-peak2h-veh8-b1/run-00.json"
+    },
+    "E:/RideBoundData/wp8/pareto-relaxed-20260819": {
+      "runs": 1,
+      "arms": [
+        "c1"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "128"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 1
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 1
+      },
+      "completed_known": 99,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp8/pareto-relaxed-20260819/C-d20181112-r2-c1/run-00.json"
+    },
+    "E:/RideBoundData/wp9/confirmatory-h5-panela": {
+      "runs": 60,
+      "arms": [
+        "b1-tight",
+        "c1-tight",
+        "c1-unbounded",
+        "c2-loose"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 60
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 60
+      },
+      "completed_known": 4981,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/confirmatory-h5-panela/p-d20181114-s10-r1-b1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/confirmatory-h5-panelb": {
+      "runs": 9,
+      "arms": [
+        "b1-tight",
+        "c1-tight"
+      ],
+      "vehicles": [
+        "4"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 9
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 6,
+        "absent": 3
+      },
+      "completed_known": 463,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/confirmatory-h5-panelb/pb-d20181114-s10-r1-b1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/confirmatory-h6-panela": {
+      "runs": 60,
+      "arms": [
+        "b1-tight",
+        "c1-tight",
+        "c1-unbounded",
+        "c2-loose"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 60
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 60
+      },
+      "completed_known": 4978,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/confirmatory-h6-panela/p-d20181114-s10-r1-b1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/confirmatory-h6-panela-v2": {
+      "runs": 60,
+      "arms": [
+        "b1-tight",
+        "c1-tight",
+        "c1-unbounded",
+        "c2-loose"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 60
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 60
+      },
+      "completed_known": 4978,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/confirmatory-h6-panela-v2/p-d20181114-s10-r1-b1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/confirmatory-h6-panelb": {
+      "runs": 40,
+      "arms": [
+        "b1-tight",
+        "c1-tight"
+      ],
+      "vehicles": [
+        "4"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 40
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 40
+      },
+      "completed_known": 1826,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/confirmatory-h6-panelb/pb-d20181114-s10-r1-b1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/confirmatory-h6-panelb-v2": {
+      "runs": 40,
+      "arms": [
+        "b1-tight",
+        "c1-tight"
+      ],
+      "vehicles": [
+        "4"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 40
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 40
+      },
+      "completed_known": 1826,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/confirmatory-h6-panelb-v2/pb-d20181114-s10-r1-b1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/diagnostic-adr045-20260822": {
+      "runs": 2,
+      "arms": [
+        "b1-tight",
+        "c1-tight"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 2
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 2
+      },
+      "completed_known": 192,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/diagnostic-adr045-20260822/p-d20181114-s10-r1-b1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/diagnostic-adr047-20260822": {
+      "runs": 2,
+      "arms": [
+        "b1-tight",
+        "c1-tight"
+      ],
+      "vehicles": [
+        "4"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 2
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 2
+      },
+      "completed_known": 97,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/diagnostic-adr047-20260822/pb-d20181115-s10-r1-c1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/diagnostic-adr047b-20260822": {
+      "runs": 2,
+      "arms": [
+        "b1-tight",
+        "c1-tight"
+      ],
+      "vehicles": [
+        "4"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 2
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 2
+      },
+      "completed_known": 82,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/diagnostic-adr047b-20260822/pb-d20181114-s10-r3-b1-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/exploratory-b4-repair-v1": {
+      "runs": 1,
+      "arms": [
+        "x"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 1
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 1
+      },
+      "completed_known": 99,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/exploratory-b4-repair-v1/x-d20181114-s10-r1-b4-tight-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/exploratory-visible-basis-v1": {
+      "runs": 16,
+      "arms": [
+        "c1"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 16
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 16
+      },
+      "completed_known": 1294,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/exploratory-visible-basis-v1/v-d20181114-s10-r1-c1visible-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/exploratory-visible-sweep-v1": {
+      "runs": 28,
+      "arms": [
+        "s"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 28
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 28
+      },
+      "completed_known": 2149,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/exploratory-visible-sweep-v1/s-d20181114-s10-r1-visible120000-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/frontier-v1": {
+      "runs": 141,
+      "arms": [
+        "fr-budget120",
+        "fr-budget300",
+        "fr-budget60",
+        "fr-freeze300",
+        "fr-freeze600",
+        "fr-nobudget",
+        "fr-nopickuplock",
+        "fr-reference"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 141
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 141
+      },
+      "completed_known": 11322,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/frontier-v1/fr-budget120-d20181114-s10-r1-s7/run-00.json"
+    },
+    "E:/RideBoundData/wp9/post-outcome-breach-panela-b1-r1-v1": {
+      "runs": 1,
+      "arms": [
+        "b1-r1-v1"
+      ],
+      "vehicles": [
+        "8"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 1
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 1
+      },
+      "completed_known": 99,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/post-outcome-breach-panela-b1-r1-v1/run-00.json"
+    },
+    "E:/RideBoundData/wp9/post-outcome-breach-panelb-c1-r3-v2": {
+      "runs": 1,
+      "arms": [
+        "c1-r3-v2"
+      ],
+      "vehicles": [
+        "4"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 1
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 1
+      },
+      "completed_known": 35,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/post-outcome-breach-panelb-c1-r3-v2/run-00.json"
+    },
+    "E:/RideBoundData/wp9/wp9-007-repeat-h6-panelb-c1-d20181114-s10-r3": {
+      "runs": 1,
+      "arms": [
+        "c1"
+      ],
+      "vehicles": [
+        "4"
+      ],
+      "requests": [
+        "108"
+      ],
+      "windows": [
+        "unknown"
+      ],
+      "world_observations": {
+        "final-snapshot-version-1; numeric-constancy-not-audited": 1
+      },
+      "specified_worlds": [
+        "single-snapshot execution; static-world candidate"
+      ],
+      "summary_status": {
+        "pass": 1
+      },
+      "completed_known": 35,
+      "completed_unknown": 0,
+      "example_path": "E:/RideBoundData/wp9/wp9-007-repeat-h6-panelb-c1-d20181114-s10-r3/run-00.json"
+    }
+  }
+}

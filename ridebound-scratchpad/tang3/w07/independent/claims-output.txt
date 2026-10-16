@@ -1,0 +1,117 @@
+== Integrity
+runs: 88 missing: [] extra: []
+runs with any integrity anomaly: 0
+total transcript lines: 182917 frameSha256 mismatches: 0
+lifecycle sets seen: [(('completed', 65), ('rejected', 43)), (('completed', 68), ('rejected', 40)), (('completed', 70), ('rejected', 38))] ...
+lifecycle values seen across runs: ['completed', 'rejected']
+
+== Claim 1
+status pass count: 88 / 88
+inventory match count: 88 / 88
+  12r1 distinct sourceScenarioContentSha256: 1  ['9a78a43650e4cbf058c329690728e3a2e7f10e6c91557acac95701a9e9401af1']
+  12r2 distinct sourceScenarioContentSha256: 1  ['23793cec11083b30c0c938c1ffb595e2180e9a19c7339641f5a89529a0ed1bf6']
+  12r3 distinct sourceScenarioContentSha256: 1  ['39161625e7de53d77da3420ba480613f825121a87093a546028d93fdd55126b7']
+  12r4 distinct sourceScenarioContentSha256: 1  ['60b6c1216044519986b612ac8c896d1d47c03e1bdef9dbe3cc5eb72c9a88a048']
+  13r1 distinct sourceScenarioContentSha256: 1  ['2ad780e44c784144921d2aa65a6928fbd29a8feebfae964ac3e266468aa0134e']
+  13r2 distinct sourceScenarioContentSha256: 1  ['3ea1b8c5cc1e3f3fee5db3e8b8fabe966f957ba3e4c85c62dc6dc1f6728097fe']
+  13r3 distinct sourceScenarioContentSha256: 1  ['b62dd08ec64651ef477f95d03b67af2b3f2c863a4a001cdbd30abcf9a277e9ed']
+  13r4 distinct sourceScenarioContentSha256: 1  ['482f5069e563436452c1e9e789762c4c1d94b2d9762a4b6d6adc69e07cf4e9f8']
+  distinct across the 8 cells: 8
+
+== Claim 2
+logs checked: 88 bin lines: 803 max |printed - expected| factor: 0.000050
+bin lines with b>8: 22 ; max bin per log distribution: {7: 11, 8: 55, 9: 22}
+  2018-11-12 expected factors b=0..8: 1.0000, 1.0597, 1.1715, 1.2339, 1.2904, 1.3824, 1.3986, 1.4635, 1.4785 | b>8: 1.4785 | f(25200)=2.167479
+  2018-11-13 expected factors b=0..8: 1.0000, 1.1338, 1.2726, 1.3474, 1.4055, 1.4570, 1.4894, 1.5262, 1.5440 | b>8: 1.5440 | f(25200)=2.515617
+returncode lines not 'returncode=0': []
+
+== Claim 3 (served = completed in last checkpoint)
+cell | U | C-30 | C-60 | C-120 | C-300 | Mplus-30 | Mplus-60 | Mplus-120 | Mplus-300 | V-30 | M-30
+12r1 | 90 87 87 90 90 87 87 89 90 87 87 | OK
+12r2 | 82 82 82 82 82 82 82 82 82 82 82 | OK
+12r3 | 97 97 97 97 97 97 97 97 97 97 97 | OK
+12r4 | 87 86 87 87 87 86 87 87 87 86 86 | OK
+13r1 | 70 68 68 71 70 68 68 70 70 68 68 | OK
+13r2 | 65 65 65 65 65 65 65 65 65 65 65 | OK
+13r3 | 82 83 83 82 82 83 83 82 82 83 83 | OK
+13r4 | 92 92 92 92 92 92 92 92 92 92 92 | OK
+
+== Claim 4 (non-normal acknowledged decisions)
+arm | 12r1 12r2 12r3 12r4 13r1 13r2 13r3 13r4
+U         |    0    0    0    0    0    0    0    0
+C-30      |    0    0    0    0    0    0    0    0
+C-60      |    0    0    0    0    0    0    0    0
+C-120     |    0    0    0    0    0    0    0    0
+C-300     |    0    0    0    0    0    0    0    0
+Mplus-30  |  498  470  486  419  324  268  336  453
+Mplus-60  |  473  141  198  252  324  157  151  249
+Mplus-120 |    0    0    0   66  144  110    0    0
+Mplus-300 |    0    0    0    0   82    0    0    0
+V-30      |  498  470  532  419  350  356  336  534
+M-30      |  498  470  486  419  324  268  336  453
+C-* all zero: True | Mplus-30 & V-30 >=1 in all cells: True | Mplus-300 only 13r1: True
+
+== Claim 5
+  Mplus-60 12r1: 7/87 = 0.0805 (claim 0.080) OK
+  Mplus-60 12r2: 5/82 = 0.0610 (claim 0.061) OK
+  Mplus-60 12r3: 4/97 = 0.0412 (claim 0.041) OK
+  Mplus-60 12r4: 2/87 = 0.0230 (claim 0.023) OK
+  Mplus-60 13r1: 8/68 = 0.1176 (claim 0.118) OK
+  Mplus-60 13r2: 5/65 = 0.0769 (claim 0.077) OK
+  Mplus-60 13r3: 5/83 = 0.0602 (claim 0.060) OK
+  Mplus-60 13r4: 11/92 = 0.1196 (claim 0.120) OK
+  Mplus-60 mean share(A_r>60s) = 0.0725 (claim 0.073) OK
+  Mplus-30 12r1: 24/87 = 0.2759
+  Mplus-30 12r2: 21/82 = 0.2561
+  Mplus-30 12r3: 24/97 = 0.2474
+  Mplus-30 12r4: 14/86 = 0.1628
+  Mplus-30 13r1: 26/68 = 0.3824
+  Mplus-30 13r2: 16/65 = 0.2462
+  Mplus-30 13r3: 13/83 = 0.1566
+  Mplus-30 13r4: 18/92 = 0.1957
+  Mplus-30 mean share(A_r>30s) = 0.2404 (claim 0.240) OK
+  C-30 12r1 max A_r = 109.074 s (claim 109.1) OK
+  C-30 12r2 max A_r = 102.913 s (claim 102.9) OK
+  C-30 12r3 max A_r = 99.659 s (claim 99.7) OK
+  C-30 12r4 max A_r = 148.747 s (claim 148.7) OK
+  C-30 13r1 max A_r = 99.061 s (claim 99.1) OK
+  C-30 13r2 max A_r = 194.045 s (claim 194.0) OK
+  C-30 13r3 max A_r = 88.248 s (claim 88.2) OK
+  C-30 13r4 max A_r = 106.300 s (claim 106.3) OK
+  (context) min A_r over all 88 runs: -0.476 s
+
+== Claim 6 (fleet-action sequences)
+  Mplus-30 == C-30 in 8/8 cells (12r1,12r2,12r3,12r4,13r1,13r2,13r3,13r4); ignoring candidateId: 8/8
+  Mplus-60 == C-60 in 8/8 cells (12r1,12r2,12r3,12r4,13r1,13r2,13r3,13r4); ignoring candidateId: 8/8
+   Mplus-120 vs C-120 12r1 differ: lens 381/383, first divergence at action #165; ignoring candidateId equal: False
+   Mplus-120 vs C-120 13r1 differ: lens 324/327, first divergence at action #162; ignoring candidateId equal: False
+  Mplus-120 == C-120 in 6/8 cells (12r2,12r3,12r4,13r2,13r3,13r4); ignoring candidateId: 6/8
+  Mplus-300 == C-300 in 8/8 cells (12r1,12r2,12r3,12r4,13r1,13r2,13r3,13r4); ignoring candidateId: 8/8
+  V-30 == C-30 in 8/8 cells
+  (context) M-30 == C-30 in 8/8 cells
+  (context) M-30 == V-30 in 8/8 cells
+  (context) M-30 == Mplus-30 in 8/8 cells
+  (context) U == C-30 in 4/8 cells
+
+== Claim 7 (13r1, A_r > 300 s)
+  U         riders with A_r>300: 1 ['rq-a019727097c 307.313']
+  C-30      riders with A_r>300: 0 []
+  C-60      riders with A_r>300: 0 []
+  C-120     riders with A_r>300: 0 []
+  C-300     riders with A_r>300: 1 ['rq-a019727097c 307.313']
+  Mplus-30  riders with A_r>300: 0 []
+  Mplus-60  riders with A_r>300: 0 []
+  Mplus-120 riders with A_r>300: 0 []
+  Mplus-300 riders with A_r>300: 1 ['rq-a019727097c 307.313']
+  V-30      riders with A_r>300: 0 []
+  M-30      riders with A_r>300: 0 []
+  same rider in C-300 and Mplus-300: True
+
+== Verdicts
+Claim 1: MATCH
+Claim 2: MATCH
+Claim 3: MATCH
+Claim 4: MATCH
+Claim 5: MATCH
+Claim 6: MATCH
+Claim 7: MATCH

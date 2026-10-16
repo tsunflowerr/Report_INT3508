@@ -1,0 +1,2 @@
+08a272705d0d4d0d4c5b60cdb0fc7b053020d40c9e7559634984a079531f2358  VM-PLAN.md  sealed 2026-09-29T09:29:51Z (before any job of task A)
+b870d35bfe09f9bb7c2ac0b3afe61fa5dcafa5e3d7aaf760cc2aee3c9d5191b8  run_vm.py  sealed 2026-09-29T09:29:51Z (driver, before any job)

@@ -1,0 +1,264 @@
+Read-only consistency audit; all writes exclusive; no build, simulation or installation.
+SOURCE A E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/08-chuong4-phanA-v4.tex SHA256=F26F2D6D0F3AFD78F328B77C686FC8E52430F5BBCC9BF0627B77E1251941C17E
+SOURCE Ch1 E:\Code\Report_INT3508\ridebound-scratchpad\optimize\codex-debate\codex-work/r30-ch1/05-chuong1-v3.tex SHA256=545145B6CD31AED298F30BA52FC649AD4F21CBD3A5264838F756F8C1F3B5B85B
+SOURCE Ch2 E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/06-chuong2-v4.tex SHA256=B1F1F6BC87AB7E2E50113B66E068202D3E72050F4576C54CF2DBC9B46F3D35DA
+SOURCE Ch3 E:\Code\Report_INT3508\ridebound-scratchpad\optimize\codex-debate\codex-work/r33-ch3v4/07-chuong3-v4-v3.tex SHA256=74CF47CCFABE497EC5D9FA292B15789A39DAC86E4144FA82D2F5991828099FFB
+SOURCE B E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/09-chuong4-phanB-v10.tex SHA256=C0F7AEEB6CEE8D96DD517A629E5BFECD619E9FDD00B7D276A3E2BC1AE324E00E
+SOURCE Appx E:\Code\Report_INT3508\ridebound-scratchpad\optimize\codex-debate\codex-work/r31-ch5/11-phuluc-v2.tex SHA256=7020FDF6D042F5E56C502B5C9E067E0631F49128541AE5FD66E84853B0D4E3EB
+SOURCE Bib E:\Code\Report_INT3508\ridebound-scratchpad\optimize\codex-debate\codex-work/r32-bib/10-tai-lieu-draft.tex SHA256=D204C845C321AD775592111B3096BD98423F0F798FE40D813BD725C45E1CC9CB
+SOURCE TestReport E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/evidence/TESTRUN-45f8026-2026-10-12.md SHA256=2931468D4BBE85D0CE72AFB42255F06E9FBCC8A4ED8976607374BD8007C09ADE
+SOURCE TestLog C:/RideBoundData/research/testrun-45f8026-eollf-dirty-fullrun-2026-10-13.log SHA256=E89CB9D5B63F5382E74A2E4FC4A967CC7FF378001E0C3497370124F356B8C3CE
+SOURCE RUN38 E:/Code/Report_INT3508/ridebound-scratchpad/tang3/t38/run_t38.py SHA256=D20207A664E36F1BA729D6A331B853F6C083F143720838F6C69B13DBF86F45CA
+SOURCE T38 E:/Code/Report_INT3508/ridebound-scratchpad/tang3/t38/T38-REPORT.md SHA256=22871330A2E157703CEF3AE8682E074FB706C035A3BD382F2519227041E1655B
+ALL A REFERENCE TARGETS:
+bang:c4-chinh USE=A:296 TARGET=A:260
+bang:c4-chiso USE=A:156,304 TARGET=A:183
+bang:c4-codinh USE=A:477 TARGET=A:486
+bang:c4-congdon USE=A:703 TARGET=A:711
+bang:c4-doidieuphoi USE=A:394 TARGET=A:405
+bang:c4-lotrinh USE=A:20 TARGET=A:26
+bang:c4-nghiavu USE=A:297,342 TARGET=A:306
+bang:c4-phanbotre USE=A:349 TARGET=A:356
+bang:c4-sang USE=A:514 TARGET=A:522
+bang:c4-taptu USE=A:106 TARGET=A:116
+bang:c4-thamso USE=A:62 TARGET=A:76
+bang:c4-tran120 USE=A:551 TARGET=A:560
+bang:kiemtran USE=A:449 TARGET=Ch3:332
+bang:luat USE=A:115 TARGET=Ch3:414
+bang:rangbuoc USE=A:89,762 TARGET=Ch3:125
+chuong:thucnghiem USE=A:25 TARGET=A:13
+eq:dongnhat USE=A:339 TARGET=Ch3:453
+eq:so USE=A:430 TARGET=Ch3:610
+hinh:c4-tran USE=A:473 TARGET=A:677
+muc:bamoc USE=A:181 TARGET=Ch3:244
+muc:c1-cauhoi USE=A:20 TARGET=Ch1:81
+muc:c4-chontran USE=A:38,226,404,460 TARGET=A:465
+muc:c4-congdon USE=A:33,149,232 TARGET=A:693
+muc:c4-dem USE=A:19,38,246,595 TARGET=B:215
+muc:c4-dieuphoi USE=A:33,231 TARGET=A:391
+muc:c4-dubao USE=A:19,43,380,558 TARGET=B:77
+muc:c4-hople USE=A:33 TARGET=B:356
+muc:c4-ketqua USE=A:18,38,158,552 TARGET=A:237
+muc:c4-taptu USE=A:74 TARGET=A:104
+muc:c4-tuyet USE=A:19,43 TARGET=B:304
+muc:c4-vaitro USE=A:18,38,762 TARGET=B:17
+muc:doichung USE=A:142,206,331 TARGET=Ch3:403
+muc:dubao USE=A:172 TARGET=Ch3:494
+muc:kiemtra USE=A:142 TARGET=Ch3:719
+muc:kientruc USE=A:59 TARGET=Ch3:633
+muc:luatc USE=A:702 TARGET=Ch3:305
+muc:so USE=A:17 TARGET=Ch3:574
+nx:giunguyen USE=A:305,328 TARGET=Ch3:373
+phuluc:A USE=A:224 TARGET=Appx:12
+phuluc:C USE=A:148 TARGET=Appx:60
+DUPLICATE LABELS:
+TOTAL A DISTINCT TARGETS=40, MISSING=0, DUPLICATES=0
+A TEST STATEMENTS:
+B RELEVANT RESIDUAL / RESOLVED SOURCE LINES:
+B:191 mà 90\% khách giống vậy không vượt) từ thông tin đã có ở thời điểm hứa. Đó là cây quyết định tăng cường theo gradient
+B:192 (gradient boosting), mô hình ấy khi bỏ hai biến trạng thái xe (số khách khác đã gán và đang trên xe), và hồi quy phân vị
+B:193 tuyến tính. Mỗi khách được cộng vào lời hứa theo dự báo một phần đệm tỉ lệ với mức ước lượng; đối chứng cộng cùng một
+B:194 khoảng cho mọi khách. Cả hai được chỉnh trên ngày hiệu chỉnh để lời hứa dài thêm trung bình 30 giây so với lời hứa không
+B:195 dự báo, nên trên ngày kiểm mức này có thể khác. Phép thử dùng hồ sơ dự báo cố định của ngày
+B:196 12--13/11 và kiểm trên 15, 16/11 khung 7 giờ và 13/11 của tập tắc đường cố định, các ngày đã được xem trước. Mô hình
+B:197 chỉ được coi là tốt hơn khi, so với đối chứng, thỏa cả bốn điều kiện:
+B:198 \begin{itemize}[leftmargin=1.2cm,itemsep=0pt,topsep=2pt]
+B:199 \item tỉ lệ khách trễ quá một phút thấp hơn;
+B:200 \item độ dài thêm trung bình không hơn quá 1 giây;
+B:201 \item phân vị 90 của độ dài thêm không hơn quá 15 giây;
+B:202 \item tỉ lệ khách tới sớm quá một phút không hơn quá 1 điểm phần trăm.
+B:276 giây, so với 2.324 với luật C, trên 3.672 yêu cầu.
+B:277 % EV: C10; C11; N-04 (±60 s = phục vụ − trễ60 − sớm60, ADD1:92); N4B-09 (ADD1:84-89)
+B:278 
+B:279 Thứ ba, cách đệm 30 giây vẫn có 68 khách trễ quá hai phút, 11 khách quá năm phút và 1 khách quá mười phút; luật C có
+B:280 dự báo không có ai trễ quá hai phút. Cách đệm hơn 28 lượt ở ngưỡng hai phút vì phục vụ nhiều hơn 96 lượt, không phải vì
+B:281 ít khách trễ hơn.
+B:282 % EV: N-01 (68 / 11 / 1 so với 0 / 0 / 0; ADD1:15,19); N-19 (2.366 − 2.338 = 28 = 96 − 68)
+B:283 
+B:284 Khi phát lại cùng lời hứa theo dự báo, luật hạn chót 30 giây cũng có 2.338 lượt phục vụ và 2.328 lượt không trễ quá
+B:285 một phút. Vì phép phát lại không đổi các lần chạy, nghĩa vụ của luật này vẫn tính từ lời hứa đầu không dự báo. Theo
+B:286 nghĩa vụ đó, nó bị ép ở 41,3\% lượt quyết định và có khách bị phá lời hứa ở 28 trong 34 kịch bản, còn luật C không có
+B:287 (Bảng~\ref{bang:c4-nghiavu}).
+B:288 % EV: N-16 (M⁺-30 + dự báo 2.338 / 10 / 2.328 / 2.338, ADD1:29); C13 (41,3% trung bình theo kịch bản); N-21 (phá hứa của M⁺-30 = A − p₀ > 30 s với lời hứa không dự báo; C-30 0/34, 0 quyết định bị ép); X3-16
+B:355 \section{Kiểm tra tính hợp lệ của kết quả}
+B:356 \label{muc:c4-hople}
+B:357 
+B:358 Trên 34 kịch bản của tập kiểm tra chính, không khách nào vượt trần: tổng dời lớn nhất là 29,2 giây với trần 30 giây và
+B:359 118,9 giây với trần 120 giây. Không lượt quyết định nào bị ép, 0 trong 20.101 và 0 trong 20.435 lượt. Đây là phép kiểm cài
+B:360 đặt: dưới giả thiết (N), Nhận xét~\ref{nx:giunguyen} đã cho trước các số 0 này, và điều phối không trần cũng có 0
+B:361 trong 20.760 lượt.
+B:362 % EV: C20; N-07; X3-16 (0/20.101; 0/20.435; U 0/20.760); N-21; A22; chương 3, nx:giunguyen và đoạn sau nó (L_r ≤ B được giữ khi (N) đúng ở mọi lượt)
+B:363 
+B:364 Bộ đếm của bộ sinh được đọc ở điều phối không trần, luật C trần 30, 120 giây và luật hạn chót 30 giây. Ở cả bốn cấu
+B:365 hình, không phương án nào bị bỏ vì giới hạn 100 phương án mỗi xe hay giới hạn số bước tìm cách chèn. Giới hạn 2 yêu cầu
+B:366 mới mỗi lượt chỉ để một yêu cầu sang lượt sau ở mỗi cấu hình. Các số này không đo mọi giới hạn tính toán (mục~\ref{muc:gioihan}): giới hạn
+B:367 của bước kiểm, của bộ giải, một bộ đếm khác của bộ sinh và các bộ đếm ở tập tắc đường cố định chưa được đọc.
+B:368 % EV: N-25 (ADD1:119-122: 34 lần chạy mỗi cấu hình); N4B-11 (GEN:54-95, 236-246, 298-345; CandidateModels.cs:68-82, 100-118: điều kiện đầy đủ còn gồm OmittedRepairRequestCount, chưa đọc); X3-17; X3-03; X3-32; C4A-18 (tập tắc đường cố định: giới hạn chưa kiểm); K34 thu hẹp (N4B8-13)
+B:369 
+B:370 Như mục~\ref{muc:doichung} đã nêu, mức dùng trần lớn nhất của tiêu chí 3 bằng 100\% ở mọi lượt có ghi tiêu chí này:
+B:371 3.503, 3.506 và 3.504 lượt khi không trần, với trần 30 và 120 giây.
+B:372 % EV: A15; N-25 (ADD1:119-121); A07; X3-07 (chương 3 mục doichung nêu hệ quả: tiêu chí 3 chỉ tác dụng qua tổng phần dời)
+B:373 
+B:374 Các số đếm chính của tập kiểm tra chính được ít nhất hai chương trình đọc dữ liệu viết riêng tính lại và khớp nhau
+B:375 (mục~\ref{muc:kiemtra}). Phép so gồm cả từng khách ở 7.159 khách được phục vụ của điều phối không trần và luật C trần
+B:376 30, 120 giây; riêng số khách đi chung chỉ được một quy tắc đếm. Theo bản ghi khởi tạo, 8 lần chạy chiều tuyết dùng cùng
+B:377 bản bộ chạy đã lưu và cùng cấu hình với các lần chạy luật C trần 30 giây của tập kiểm tra chính, kể cả luật phục hồi
+B:378 không tệ hơn.
+B:379 % EV: N4B-14 (ADD1:66-78); K41; C19; N-09 (đi chung: Codex không đếm lại); N4B8-05 (check C: 8 lần chạy chiều tuyết và 51 lần chạy C-30 của T3.8 cùng binarySha256 a631038b…, coreCommitSha 1ce15e92…, policyConfigurationHash a2f11a3a…; sha256 runner-tier3-v2/RideBound.Runner.dll khớp; wp4-tier3-v2.json:7 no-worse-than-reference-v1; R26 Q8)
+B:380 
+B:381 Chạy lại trên đúng mã nguồn đã dựng bộ chạy, 1.024 trong 1.025 kiểm thử tự động đạt, và kiểm thử còn lại đạt khi chạy
+B:382 riêng trong điều kiện nó đòi (Phụ lục~\ref{phuluc:C}). Các phép kiểm trên không cho biết mô phỏng giống thực tế đến
+B:383 đâu.
+B:384 % EV: N4B-13 (TR; TLOG:43-105; TDIRTY:1-6; chi tiết kiểu xuống dòng LF và tệp chưa ghi nhận chuyển sang Phụ lục C); I13; A28; I01; K41
+B:385 
+B:386 % -----------------------------------------------------------------------------------------------------
+B:387 \section{Thảo luận và hạn chế}
+B:419 \item 34 kịch bản của tập kiểm tra chính phụ thuộc nhau, thuộc 5 ngày, mỗi kịch bản chạy một lần; các phép đếm theo
+B:420 kịch bản là mô tả, không phải kiểm định.
+B:421 \item Các kết quả dùng lại dữ liệu đã xem. Ngưỡng phân tích và cách chia tập được chọn sau khi xem tập buổi sáng và các
+B:422 đợt chạy thử trước đó. Mức 120 giây được chọn sau khi xem kết quả của điều phối không trần và luật C trần 30 giây trên
+B:423 chính tập kiểm tra chính. Chiều tuyết và các ngày kiểm học máy cũng đã được xem, nên mọi kết quả là thăm dò.
+B:424 \item Tải thấp: 0,535 khách trên xe kể cả lúc xe rỗi khi không trần, so với khoảng 1,33 trong nghiên cứu điển hình của
+B:425 FleetPy. Ở 49 kịch bản dựng từ dữ liệu thật, chuyến được chọn ngắn hơn mọi chuyến đủ điều kiện (trung vị thời gian đi thẳng 165
+B:426 so với 196 giây). Kết quả không suy ra cho tải cao hay chuyến dài hơn.
+B:427 \end{itemize}
+B:428 % EV: B09; I05; B11; I06; C4A-11 (mức 120 giây, như phần A v4 mục c4-thamdo); MLS:9-10; I11; B12 (LOAD:2-3; FLEET:447-449); J18; B13 (SEL6:2-4: 49/49 kịch bản)
+B:429 
+B:430 \textbf{Tích hợp.}
+CH3 NO-OP / CALIBRATION / TEST SOURCE LINES:
+Ch3:366 Gọi \textbf{(N)} là giả thiết, áp cho lượt đang xét: (i) kế hoạch đang chạy không vi phạm ràng buộc cấu trúc
+Ch3:367 (sức chứa, đón trước trả, phần kế hoạch đã cố định), nên bộ sinh dựng được phương án giữ nguyên; (ii) giờ trả
+Ch3:368 theo phương án giữ nguyên được tính bằng đúng phép chiếu dùng cho $e$. RideBound thỏa (ii) vì dùng cùng một hàm
+Ch3:369 chiếu với cùng đầu vào, và luôn giữ phương án giữ nguyên khi cắt còn 100 phương án.
+Ch3:370 % EV: A22; X3-31 (GEN:171-182, 213-229); ServiceQualityAllowance.cs:66-73; X3-27 (VALID:355-360, 1048-1064; HVA:144-165; CandidatePortfolioRetainer.cs:102-113; WP4:15)
+Ch3:371 
+Ch3:372 \begin{nhanxet}
+Ch3:373 \label{nx:giunguyen}
+Ch3:374 Giả sử (N) và mọi khách có lời hứa của xe có $0 \le L_r \le B$. Khi đó luật C không loại phương án giữ nguyên
+Ch3:375 kế hoạch.
+Ch3:376 \end{nhanxet}
+Ch3:377 
+Ch3:378 \noindent\textit{Chứng minh.} Theo (N)(ii), với mọi khách $r$ có lời hứa của xe, $p_r = e_r$, nên
+Ch3:379 $L_r + |p_r - e_r| = L_r \le B$ và phép kiểm~\eqref{eq:luatc} cho qua. \hfill$\square$
+Ch3:380 % EV: A22 (theo cấu tạo, giả thiết N); A06; X3-27
+Ch3:381 
+Ch3:382 Khóa và các trần 0 cũng so với kế hoạch giữ nguyên, nên phương án này qua cả chúng. Nếu (N) đúng ở mọi lượt thì
+Ch3:383 $L_r \le B$ được giữ: $L_r = 0$ lúc xác nhận, và nếu $L_r \le B$ ở đầu một lượt thì không có miễn trừ nào, phương
+Ch3:384 án được chọn đã qua~\eqref{eq:luatc}, nên $L_r$ mới vẫn không vượt $B$. Khi đó xe dùng luật C hay điều phối không
+Ch3:385 trần không bao giờ bị ép; tính chất này vì vậy không riêng của luật C.
+Ch3:386 % EV: A10 (LOCK:156-161); X3-06; X3-26 (véc-tơ c của phương án giữ nguyên bằng 0 ở mọi chiều); X3-09 (HVA:255-259); X3-25
+Ch3:387 
+Ch3:388 Nhận xét đúng do cách đặt luật, không phải kết quả thực nghiệm; số liệu chỉ phù hợp với nó: trên tập kiểm tra
+Ch3:389 chính, 0 trong 20.101 quyết định bị ép với trần 30 giây và 0 trong 20.435 với trần 120 giây (mỗi quyết định ứng với
+Ch3:721 Kết quả được kiểm ở bốn mức.
+Ch3:722 \begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+Ch3:723 \item \textbf{Kiểm thử phần mềm:} trên đúng mã nguồn đã dựng bộ chạy, cả 1.025 kiểm thử tự động đều đạt khi chạy lại
+Ch3:724 ngày 12/10/2026, với kiểu xuống dòng LF và một tệp chưa ghi nhận trong cây làm việc; chi tiết ở Phụ lục~\ref{phuluc:C}.
+Ch3:725 \item \textbf{Kiểm tính nhất quán của sổ:} ở cả 382.006 bản ghi sửa của 185 lần chạy (170 lần chạy của năm cấu hình
+Ch3:726 trên tập kiểm tra chính và 15 lần chạy luật C trần 30 giây trên 15 kịch bản hiệu chỉnh), $|x|$, $|c|$, $|z|$ tính
+Ch3:727 lại từ $v$, $e$, $p$ trong sổ khớp đúng các trường độ lớn. Phép kiểm này không kiểm $e$ có được tính đúng hay không.
+Ch3:728 \item \textbf{Tính lại độc lập:} một chương trình viết riêng, độc lập về mã nhưng dùng cùng đặc tả chỉ số, tính lại
+Ch3:729 13 hạng mục số liệu từ bản ghi thô và một bất biến, không lệch hạng mục nào; các số đếm chính được ít nhất hai bộ đọc
+Ch3:730 viết độc lập tính lại và khớp trong phạm vi đã kiểm. Các chương trình kiểm ở hai mức này do các mô hình ngôn ngữ lớn
+Ch3:731 Claude và Codex viết và chạy, không phải kiểm thủ công; chúng cho biết con số khớp bản ghi, không cho biết mô phỏng
+Ch3:732 giống thực tế đến đâu.
+Ch3:733 \item \textbf{Tái lập:} tập kiểm tra chính, tập chỉnh trần buổi sáng, các lần chạy trần 120 giây và tám lần chạy chiều
+Ch3:734 tuyết dùng cùng một bản bộ chạy đã biên dịch và lưu lại; tập tắc đường cố định dùng một bản cũ hơn. Bản dựng lại, nếu có,
+Ch3:735 phải cho đúng kết quả cũ trên một số kịch bản trước khi dùng (Phụ lục~\ref{phuluc:C}).
+Ch3:736 \end{itemize}
+Ch3:737 % EV (kiểm thử): TESTRUN-45f8026-2026-10-12.md (mã nguồn bộ chạy; lượt 3 và 3b; điều kiện LF và tệp chưa ghi nhận); A28
+Ch3:738 % EV (sổ): A26 (T38:106; T38I:68); B10 (170 + 15); RUN38:1-8 (15 lần chạy C-30 trên 15 kịch bản hiệu chỉnh)
+Ch3:739 % EV (tính lại): C19 (T38I:79-97: 13 hạng mục + 1 bất biến); ADDENDUM-1:15-19; C04; E01; K41; A26 lưu ý; I01
+Ch3:740 % EV (tái lập): A28 (RUNW07:40-41); X3-10 (run_w07.py:8; run_w07x.py:7; run_t38c120.py:3-8); B17; NEW:13; I13; R26-CH3-OPEN-QUESTIONS-CODEX.md §Q8 (bản bộ chạy chiều tuyết)
+CALIBRATION ORIGINAL RUN SOURCE LINES:
+RUN38:1 """T3.8/T3.9 driver (plan: T38-PLAN.md, sealed in T38-PLAN.sha256 and pushed before any job).
+RUN38:2 
+RUN38:3 Real traffic only, the 49 panel A episodes of ../calib/panelA (days 14-18/11 x r1..r4 x windows 07, 08, 17, minus the
+RUN38:4 11 cells the normalizer could not build), split by split-t38-v1.json:
+RUN38:5   phase calib: C-30 on the 15 calibration episodes (15 jobs);
+RUN38:6   phase test:  U, C-30, Mplus-30, Mplus-60, V-30 on the 34 test episodes (170 jobs). Refused until the calibrated
+RUN38:7                threshold file GAMMA_FILE exists (so gamma is fixed before any test run).
+RUN38:8 World: the measured day and window of the episode (../calib/panelA/worlds/W5-<day>-<window>.json, sigma =
+RUN38:9 shockRate = 0) through world wrapper v1.2; recovery rule (b) for every arm (runner-tier3-v2 + wp4-tier3-v2); fixtures
+RUN38:10 in C:/RideBoundData/research/fixtures-panelA-v1 and drivers in ../calib/panelA/drivers (outside every repository);
+RUN38:11 cwd E:/Code/RideBound-deadline (never modified) with --expected-repository-inventory-sha256.
+RUN38:12 
+RUN38:42 PHASES = {
+RUN38:43     "calib": (("C-30",), tuple(SPLIT["calibration"])),
+RUN38:44     "test": (("U", "C-30", "Mplus-30", "Mplus-60", "V-30"), tuple(SPLIT["test"])),
+RUN38:45 }
+RUN38:46 CONFIG_SHA256 = {  # the files task B and task A ran with (make_configs_w07x.log proves C-30, Mplus-60, V-30)
+RUN38:47     "U": "998a0a94e7865c3b6e890f1bed9bf27f7f6c9e0de1f73d02a349ddc3de91c273",
+RUN38:48     "C-30": "d6124f3f964d8385db381d53b75c142cf2ac870b22823d6675325c3808808beb",
+RUN38:49     "Mplus-30": "cc7d7838836137f432dc025b7c45aa19c10bb82010663a9fb6f1dc52ec7c8f7d",
+RUN38:50     "Mplus-60": "f8d4c74913224cdfcf13f4a1e8ebffe3e87850fd507e542c8ba333ee5d1f22cc",
+RUN38:51     "V-30": "2462484ab8d7e61efc36de8dc1cd00054dd258e9ec0276f734e9a01212f005d5",
+RUN38:52 }
+RUN38:53 OUT_ROOT = pathlib.Path(r"C:/RideBoundData/research/tier3-t38-v1")
+RUN38:54 FIXTURE_ROOT = pathlib.Path(r"C:/RideBoundData/research/fixtures-panelA-v1")
+RUN38:55 DRIVER_ROOT = PANEL / "drivers"
+RUN38:56 WORLDS = PANEL / "worlds"
+RUN38:57 LOG_ROOT = HERE / "logs"
+RUN38:58 STOP_FILE = HERE / "STOP"
+APPENDIX TEST SOURCE LINES:
+Appx:113 Một lần chạy là một cặp kịch bản và cấu hình, lấy bản hoàn tất thay bản hỏng. Số dùng: chính 170 lần và thêm 34 lần C-120; sáng 136 trong 192; cố định 16 mỗi cấu hình; tuyết 8. C-30 dùng bản thay thế \nolinkurl{C-30-d20181114-s10-r3-w17-rerun1}. 1.991 là kiểm kê ngày 08/10/2026.
+Appx:114 % EV: B10; L1a-01; C4A-07; B17; H13; B20; C4A-17; ADD1:6; B19; C4A-20
+Appx:115 
+Appx:116 Các bộ đọc tính lại $v,e,p$, phần dời và lời hứa dự báo từ bản ghi thô. Trễ dùng ngưỡng lớn hơn hẳn; không trễ bằng phục vụ trừ trễ trên mọi yêu cầu. Độ dài thêm gộp theo khách; trung bình theo kịch bản tính riêng. Phát lại giữ nguyên quyết định và giờ trả thực tế.
+Appx:117 % EV: A26; C19; N4B-14; ADDENDUM-1 phần phương pháp; SPEC:28-63; C08; C09; C10; N-16; K41
+Appx:118 
+Appx:119 Ngày 12/10/2026, toàn bộ kiểm thử trên \texttt{45f8026} với kiểu xuống dòng LF đạt 1.024 trong 1.025. Kiểm thử còn lại đòi cây làm việc có tệp chưa ghi nhận và đạt 1 trong 1 khi chạy riêng sau khi thêm tệp đó. Kết quả cần cả hai điều kiện môi trường này.
+Appx:120 % EV: N4B-13; TESTRUN-45f8026-2026-10-12.md:14-17,34-47; TLOG:43-105; TDIRTY:1-6
+TEST ATTEMPT4 REPORT AND LOG:
+TestReport:8 - Each attempt was a fresh `git clone` of `E:/Code/RideBound` (read only) into `C:/RideBoundData/research/`, checked
+TestReport:12 | Attempt | Clone settings | Result | Log |
+TestReport:14 | 1 | machine default `core.autocrlf=true` | 1.020 / 1.025 passed; 5 failed | `C:/RideBoundData/research/testrun-45f8026-2026-10-12.log` |
+TestReport:15 | 2 | `core.autocrlf=false` (eol native = CRLF) | 1.020 / 1.025; same 5 failed | `C:/RideBoundData/research/testrun-45f8026-lf-2026-10-12.log` |
+TestReport:16 | 3 | `core.autocrlf=false`, `core.eol=lf` | 1.024 / 1.025; 1 failed | `C:/RideBoundData/research/testrun-45f8026-eollf-2026-10-12.log` |
+TestReport:17 | 3b | attempt 3 plus one untracked marker file; only the remaining test | 1 / 1 passed | `C:/RideBoundData/research/testrun-45f8026-eollf-dirtycheck-2026-10-12.log` |
+TestReport:18 | 4 (2026-10-13 13:39–13:42) | same clone as 3, untracked marker present (`git status`: `?? DIRTY-MARKER-2026-10-12.txt`); full suite in ONE run | **1.025 / 1.025 passed**, exit 0 | `C:/RideBoundData/research/testrun-45f8026-eollf-dirty-fullrun-2026-10-13.log` |
+TestReport:20 Per-project totals (attempt 3):
+TestReport:35 ## Why attempts 1–2 failed (environment, not code)
+TestReport:37 - **Line endings.** Under `* text=auto`, Git on Windows checks out text files with CRLF unless a pattern gives
+TestReport:38   `eol=lf`.
+TestReport:40   - Two Benchmarking tests fail with "Tiny protocol fixture must use complete LF-framed NDJSON"
+TestReport:41     (`TinyProtocolFixtureCompiler.cs:359`): `TinyProtocolFixtureCompilerTests` and `TinyPairedHarnessProcessTests`.
+TestReport:42   - These four pass once the clone uses `core.eol=lf`. The fifth failure is the clean-tree case below.
+TestReport:47   - A fresh clone is clean, so the test cannot pass there. With one untracked file it passes (attempt 3b).
+TestReport:53 Attempt 4 shows that all 1.025 tests pass in a single run with both conditions present. The Ch3 v4 sentence from Codex
+TestReport:54 R33 ("cả 1.025 kiểm thử tự động đều đạt khi chạy lại …, với kiểu xuống dòng LF và một tệp chưa ghi nhận trong cây làm
+TestReport:55 việc") is therefore literally true. It needs one fix: its date. Attempt 4 ran on 13/10/2026, while attempts 1–3b ran on
+TestReport:59 (cần đặt kiểu xuống dòng LF; một kiểm thử đòi cây làm việc có tệp chưa ghi nhận).»
+TestReport:67 - The three clones (≈ 1,5 GB each) and the marker file stay on C:. Nothing was deleted.
+TestLog:6 ?? DIRTY-MARKER-2026-10-12.txt
+TestLog:10 Test run for C:\RideBoundData\research\testrun-45f8026-eollf-2026-10-12\tests\RideBound.ArchitectureTests\bin\Debug\net10.0\RideBound.ArchitectureTests.dll (.NETCoreApp,Version=v10.0)
+TestLog:13 A total of 1 test files matched the specified pattern.
+TestLog:16 Test run for C:\RideBoundData\research\testrun-45f8026-eollf-2026-10-12\tests\RideBound.Domain.Tests\bin\Debug\net10.0\RideBound.Domain.Tests.dll (.NETCoreApp,Version=v10.0)
+TestLog:18 Test run for C:\RideBoundData\research\testrun-45f8026-eollf-2026-10-12\tests\RideBound.Contracts.Tests\bin\Debug\net10.0\RideBound.Contracts.Tests.dll (.NETCoreApp,Version=v10.0)
+TestLog:22 A total of 1 test files matched the specified pattern.
+TestLog:23 A total of 1 test files matched the specified pattern.
+TestLog:27 Passed!  - Failed:     0, Passed:    10, Skipped:     0, Total:    10, Duration: 2 s - RideBound.ArchitectureTests.dll (net10.0)
+TestLog:29 Test run for C:\RideBoundData\research\testrun-45f8026-eollf-2026-10-12\tests\RideBound.Benchmarking.Contracts.Tests\bin\Debug\net10.0\RideBound.Benchmarking.Contracts.Tests.dll (.NETCoreApp,Version=v10.0)
+TestLog:31 A total of 1 test files matched the specified pattern.
+TestLog:33 Passed!  - Failed:     0, Passed:   191, Skipped:     0, Total:   191, Duration: 503 ms - RideBound.Domain.Tests.dll (net10.0)
+TestLog:37 Test run for C:\RideBoundData\research\testrun-45f8026-eollf-2026-10-12\tests\RideBound.Application.Tests\bin\Debug\net10.0\RideBound.Application.Tests.dll (.NETCoreApp,Version=v10.0)
+TestLog:39 Passed!  - Failed:     0, Passed:   138, Skipped:     0, Total:   138, Duration: 1 s - RideBound.Contracts.Tests.dll (net10.0)
+TestLog:41 A total of 1 test files matched the specified pattern.
+TestLog:43 Test run for C:\RideBoundData\research\testrun-45f8026-eollf-2026-10-12\tests\RideBound.Algorithms.Tests\bin\Debug\net10.0\RideBound.Algorithms.Tests.dll (.NETCoreApp,Version=v10.0)
+TestLog:44 A total of 1 test files matched the specified pattern.
+TestLog:46 Passed!  - Failed:     0, Passed:   108, Skipped:     0, Total:   108, Duration: 555 ms - RideBound.Application.Tests.dll (net10.0)
+TestLog:48 Passed!  - Failed:     0, Passed:    82, Skipped:     0, Total:    82, Duration: 3 s - RideBound.Benchmarking.Contracts.Tests.dll (net10.0)
+TestLog:52 Test run for C:\RideBoundData\research\testrun-45f8026-eollf-2026-10-12\tests\RideBound.Solvers.OrTools.Tests\bin\Debug\net10.0\RideBound.Solvers.OrTools.Tests.dll (.NETCoreApp,Version=v10.0)
+TestLog:55 A total of 1 test files matched the specified pattern.
+TestLog:57 Test run for C:\RideBoundData\research\testrun-45f8026-eollf-2026-10-12\tests\RideBound.Runner.Tests\bin\Debug\net10.0\RideBound.Runner.Tests.dll (.NETCoreApp,Version=v10.0)
+TestLog:58 A total of 1 test files matched the specified pattern.
+TestLog:60 Passed!  - Failed:     0, Passed:   201, Skipped:     0, Total:   201, Duration: 8 s - RideBound.Algorithms.Tests.dll (net10.0)
+TestLog:62 Passed!  - Failed:     0, Passed:    14, Skipped:     0, Total:    14, Duration: 5 s - RideBound.Solvers.OrTools.Tests.dll (net10.0)
+TestLog:64 Test run for C:\RideBoundData\research\testrun-45f8026-eollf-2026-10-12\tests\RideBound.Benchmarking.Tests\bin\Debug\net10.0\RideBound.Benchmarking.Tests.dll (.NETCoreApp,Version=v10.0)
+TestLog:66 Passed!  - Failed:     0, Passed:   133, Skipped:     0, Total:   133, Duration: 5 s - RideBound.Runner.Tests.dll (net10.0)
+TestLog:67 A total of 1 test files matched the specified pattern.
+TestLog:69 Passed!  - Failed:     0, Passed:   148, Skipped:     0, Total:   148, Duration: 2 m 1 s - RideBound.Benchmarking.Tests.dll (net10.0)
+BIBLIOGRAPHY KEYS USED BY A / B:
+Bib:62 \bibitem{engelhardt2026}
+Bib:34 \bibitem{schulz2026}
+Bib:27 \bibitem{horl2022}

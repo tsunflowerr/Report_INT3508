@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-08",
+  "csv_path": "C:/RideBoundData/research/ml-pilot-v1/riders-2026-10-08.csv",
+  "csv_sha256": "2604de641e392da49ffb5cecc22eff0c195fa33f8a680c1e94a182bdd06c733e",
+  "inventory_path": "E:/Code/Report_INT3508/ridebound-scratchpad/optimize/codex-debate/codex-work/data-inventory-runs-codex-corrected-2026-10-08.tsv",
+  "inventory_sha256": "6d929f5acfd60b420b6d0841ac62c793ab8fd7c5e0863fb470df9db693cd7e33",
+  "rows": 15023,
+  "unique_source_arm_cell_groups": 179,
+  "inventory_matches_per_group": "Exactly one primary run per group, mapped by source family, normalized arm and cell.",
+  "csv_completed_count_mismatches": [],
+  "accepted_vs_completed_count_mismatches": [],
+  "matching_errors": [],
+  "interpretation": "All 179 selected run outcomes have accepted count equal to completed lifecycle count, and CSV row count equals completed count. This supports no accepted-rider censoring in this panel. It does not independently prove source-order feature timing, assignment invariance or whole-transcript hash validity."
+}

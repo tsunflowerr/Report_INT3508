@@ -1,0 +1,3829 @@
+{
+  "csv_path": "C:\\RideBoundData\\research\\ml-pilot-v1\\riders-causal-2026-10-08.csv",
+  "csv_sha256": "7075ad97b736b3d997a15db069918ac1cd0c8e4e694c0b28ebc6e934cd4e4c0a",
+  "csv_rows": 10064,
+  "unique_run_cells": 112,
+  "expected_run_cells": 112,
+  "missing_cells": [],
+  "extra_cells": [],
+  "duplicate_prefix_keys": 0,
+  "counts": [
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "role": "cal",
+      "riders": 100
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "role": "fit",
+      "riders": 660
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "role": "test15",
+      "riders": 147
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "role": "test16",
+      "riders": 197
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "role": "cal",
+      "riders": 100
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "role": "fit",
+      "riders": 665
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "role": "test15",
+      "riders": 145
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "role": "test16",
+      "riders": 200
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "role": "cal",
+      "riders": 191
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "role": "fit",
+      "riders": 588
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "role": "test13",
+      "riders": 784
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "role": "cal",
+      "riders": 186
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "role": "fit",
+      "riders": 576
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "role": "test13",
+      "riders": 772
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "role": "cal",
+      "riders": 187
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "role": "fit",
+      "riders": 576
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "role": "test13",
+      "riders": 777
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "role": "cal",
+      "riders": 201
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "role": "fit",
+      "riders": 621
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "role": "test13",
+      "riders": 807
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "role": "cal",
+      "riders": 196
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "role": "fit",
+      "riders": 596
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "role": "test13",
+      "riders": 792
+    }
+  ],
+  "all_csv_fixed_profile_mismatch": {},
+  "fixed_profile": [
+    2.34154813259301,
+    2.5746230289436367,
+    2.870308889868271,
+    3.031985338561332,
+    3.166265200622774,
+    3.3307815645134076,
+    3.38899239016342,
+    3.5058121051382445,
+    3.544354494513157
+  ],
+  "factor_sources": [
+    {
+      "path": "E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-12_tt_factors.csv",
+      "sha256": "89f64a74ff7262b93cea7270cd62639cef3fa1dbc8a091f8e3b927d1100c7317"
+    },
+    {
+      "path": "E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-13_tt_factors.csv",
+      "sha256": "442290763bd4f46faa02a8854cacf4b75f7a3b6df97af16b4b9490078c342b0c"
+    }
+  ],
+  "checked_rows": 23,
+  "checked_runs": 23,
+  "numeric_fields_per_row": 13,
+  "numeric_mismatch_counts": {
+    "other_onboard": 23
+  },
+  "service_state_csv_mismatch_counts": {
+    "other_onboard": 23
+  },
+  "service_state_vs_source_event_counts_disagreement": {
+    "onboard count": 23
+  },
+  "service_order_structural_warning_counts": {
+    "non-pickup/drop stop": 23,
+    "other IDs without drop stop": 23
+  },
+  "all112_accepted_csv_count_mismatches": 0,
+  "rerun_cells": [],
+  "run_metadata": [
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r1-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\C-30-d20181112-s10-r1-w07\\transcript-00.ndjson",
+      "csv_rows": 87,
+      "accepted": 87,
+      "summary": {
+        "label": "C-30-d20181112-s10-r1-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 143564800,
+              "rssBeforeBytes": 81522688,
+              "systemCpuMilliseconds": 20562,
+              "userCpuMilliseconds": 182016,
+              "wallMilliseconds": 1486060
+            },
+            "semanticHash": "7bae4abea78b9a0e5d556e6d5f5bfe6d5162937e5b3f16511190e6eca5602a77"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "7bae4abea78b9a0e5d556e6d5f5bfe6d5162937e5b3f16511190e6eca5602a77",
+        "sourceScenarioContentSha256": "9a78a43650e4cbf058c329690728e3a2e7f10e6c91557acac95701a9e9401af1",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r2-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\C-30-d20181112-s10-r2-w07\\transcript-00.ndjson",
+      "csv_rows": 82,
+      "accepted": 82,
+      "summary": {
+        "label": "C-30-d20181112-s10-r2-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141926400,
+              "rssBeforeBytes": 82407424,
+              "systemCpuMilliseconds": 15500,
+              "userCpuMilliseconds": 173594,
+              "wallMilliseconds": 1002478
+            },
+            "semanticHash": "16a0ea500be690a49c5ca65d547a73b71f6d4b7000c431c9b69f41ad1cc10b5f"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "16a0ea500be690a49c5ca65d547a73b71f6d4b7000c431c9b69f41ad1cc10b5f",
+        "sourceScenarioContentSha256": "23793cec11083b30c0c938c1ffb595e2180e9a19c7339641f5a89529a0ed1bf6",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r3-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\C-30-d20181112-s10-r3-w07\\transcript-00.ndjson",
+      "csv_rows": 97,
+      "accepted": 97,
+      "summary": {
+        "label": "C-30-d20181112-s10-r3-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 146792448,
+              "rssBeforeBytes": 83771392,
+              "systemCpuMilliseconds": 19031,
+              "userCpuMilliseconds": 155234,
+              "wallMilliseconds": 1258235
+            },
+            "semanticHash": "46e13d3e097b10794eac08b4579aea241505ff0d6d37ca547155997c5573d0ee"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "46e13d3e097b10794eac08b4579aea241505ff0d6d37ca547155997c5573d0ee",
+        "sourceScenarioContentSha256": "39161625e7de53d77da3420ba480613f825121a87093a546028d93fdd55126b7",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r4-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\C-30-d20181112-s10-r4-w07\\transcript-00.ndjson",
+      "csv_rows": 86,
+      "accepted": 86,
+      "summary": {
+        "label": "C-30-d20181112-s10-r4-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 142819328,
+              "rssBeforeBytes": 82386944,
+              "systemCpuMilliseconds": 16422,
+              "userCpuMilliseconds": 140297,
+              "wallMilliseconds": 950410
+            },
+            "semanticHash": "e13718fa23a49556ccc6af40f4e291ac4f254aeb411dbe3cbece17ceee1afd3e"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "e13718fa23a49556ccc6af40f4e291ac4f254aeb411dbe3cbece17ceee1afd3e",
+        "sourceScenarioContentSha256": "60b6c1216044519986b612ac8c896d1d47c03e1bdef9dbe3cc5eb72c9a88a048",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r1-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\C-30-d20181113-s10-r1-w07\\transcript-00.ndjson",
+      "csv_rows": 68,
+      "accepted": 68,
+      "summary": {
+        "label": "C-30-d20181113-s10-r1-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 136830976,
+              "rssBeforeBytes": 82370560,
+              "systemCpuMilliseconds": 13875,
+              "userCpuMilliseconds": 141594,
+              "wallMilliseconds": 780383
+            },
+            "semanticHash": "f2ef3d0fd997857632933ba83f6f3148669d7d130c4471850631255f05b14f93"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "f2ef3d0fd997857632933ba83f6f3148669d7d130c4471850631255f05b14f93",
+        "sourceScenarioContentSha256": "2ad780e44c784144921d2aa65a6928fbd29a8feebfae964ac3e266468aa0134e",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r2-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\C-30-d20181113-s10-r2-w07\\transcript-00.ndjson",
+      "csv_rows": 65,
+      "accepted": 65,
+      "summary": {
+        "label": "C-30-d20181113-s10-r2-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 132247552,
+              "rssBeforeBytes": 83673088,
+              "systemCpuMilliseconds": 12297,
+              "userCpuMilliseconds": 132406,
+              "wallMilliseconds": 641467
+            },
+            "semanticHash": "5cad909e98e3ae38e58ff0c45572e5a046a166c23fae6e9657f9b4d592e6084f"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "5cad909e98e3ae38e58ff0c45572e5a046a166c23fae6e9657f9b4d592e6084f",
+        "sourceScenarioContentSha256": "3ea1b8c5cc1e3f3fee5db3e8b8fabe966f957ba3e4c85c62dc6dc1f6728097fe",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r3-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\C-30-d20181113-s10-r3-w07\\transcript-00.ndjson",
+      "csv_rows": 83,
+      "accepted": 83,
+      "summary": {
+        "label": "C-30-d20181113-s10-r3-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 143200256,
+              "rssBeforeBytes": 82485248,
+              "systemCpuMilliseconds": 15547,
+              "userCpuMilliseconds": 130828,
+              "wallMilliseconds": 901199
+            },
+            "semanticHash": "eefe0b5875d9e128bf4ad7b50823dff9942fcc61d3c089b578e6d3eddaedbb11"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "eefe0b5875d9e128bf4ad7b50823dff9942fcc61d3c089b578e6d3eddaedbb11",
+        "sourceScenarioContentSha256": "b62dd08ec64651ef477f95d03b67af2b3f2c863a4a001cdbd30abcf9a277e9ed",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r4-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\C-30-d20181113-s10-r4-w07\\transcript-00.ndjson",
+      "csv_rows": 92,
+      "accepted": 92,
+      "summary": {
+        "label": "C-30-d20181113-s10-r4-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 154062848,
+              "rssBeforeBytes": 82206720,
+              "systemCpuMilliseconds": 18062,
+              "userCpuMilliseconds": 148219,
+              "wallMilliseconds": 1242441
+            },
+            "semanticHash": "7d56b1683a3fe7cd9d93b5d76f459e872600c176443d2fecbabd3f070e5b6141"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "7d56b1683a3fe7cd9d93b5d76f459e872600c176443d2fecbabd3f070e5b6141",
+        "sourceScenarioContentSha256": "482f5069e563436452c1e9e789762c4c1d94b2d9762a4b6d6adc69e07cf4e9f8",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181114-s10-r3-w07",
+      "role": "cal",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w07\\transcript-00.ndjson",
+      "csv_rows": 47,
+      "accepted": 47,
+      "summary": {
+        "label": "C-30-d20181114-s10-r3-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 127234048,
+              "rssBeforeBytes": 81645568,
+              "systemCpuMilliseconds": 16562,
+              "userCpuMilliseconds": 192594,
+              "wallMilliseconds": 921497
+            },
+            "semanticHash": "191ad3a1c1992e7cb1301fa517b900ef1413776e9ecfbbb44d29aae22949d105"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "191ad3a1c1992e7cb1301fa517b900ef1413776e9ecfbbb44d29aae22949d105",
+        "sourceScenarioContentSha256": "ad12d98622fd76c08672e49ffae8d9e74cea39186d6fc02d17bd93ff95858dc5",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181114-s10-r4-w07",
+      "role": "cal",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w07\\transcript-00.ndjson",
+      "csv_rows": 53,
+      "accepted": 53,
+      "summary": {
+        "label": "C-30-d20181114-s10-r4-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 93843456,
+              "rssBeforeBytes": 82006016,
+              "systemCpuMilliseconds": 21266,
+              "userCpuMilliseconds": 226297,
+              "wallMilliseconds": 1738693
+            },
+            "semanticHash": "c31ba06fb1c2d4bd2b91157903df84dffbd59f829f3e124fb0ea5689b646cabb"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "c31ba06fb1c2d4bd2b91157903df84dffbd59f829f3e124fb0ea5689b646cabb",
+        "sourceScenarioContentSha256": "47af58f2a5f574afdaf5020930958ef45defc3b483cd47911426f76856a7e5cc",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181115-s10-r1-w07",
+      "role": "test15",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r1-w07\\transcript-00.ndjson",
+      "csv_rows": 44,
+      "accepted": 44,
+      "summary": {
+        "label": "C-30-d20181115-s10-r1-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 123998208,
+              "rssBeforeBytes": 82055168,
+              "systemCpuMilliseconds": 8719,
+              "userCpuMilliseconds": 113188,
+              "wallMilliseconds": 446559
+            },
+            "semanticHash": "b97a69c4bc397835a05e225d4cff9a5ac5699d73348cf8449a323fd202eb3e86"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "b97a69c4bc397835a05e225d4cff9a5ac5699d73348cf8449a323fd202eb3e86",
+        "sourceScenarioContentSha256": "ce947002c9e4fd8939bcc95d647e83225658367e011b9171e3a60dc8be611227",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181115-s10-r2-w07",
+      "role": "test15",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r2-w07\\transcript-00.ndjson",
+      "csv_rows": 58,
+      "accepted": 58,
+      "summary": {
+        "label": "C-30-d20181115-s10-r2-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 135716864,
+              "rssBeforeBytes": 82403328,
+              "systemCpuMilliseconds": 12781,
+              "userCpuMilliseconds": 123484,
+              "wallMilliseconds": 700210
+            },
+            "semanticHash": "f3ba033e1229a270d2066d896c6102b3572a8f07b7d792ac9d6941ca56c9c5f8"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "f3ba033e1229a270d2066d896c6102b3572a8f07b7d792ac9d6941ca56c9c5f8",
+        "sourceScenarioContentSha256": "6d5965629d97aab41231993e5ca14458ea30d3d8d14cbf1a4d212ac626e3681e",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181115-s10-r4-w07",
+      "role": "test15",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r4-w07\\transcript-00.ndjson",
+      "csv_rows": 45,
+      "accepted": 45,
+      "summary": {
+        "label": "C-30-d20181115-s10-r4-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 125587456,
+              "rssBeforeBytes": 81719296,
+              "systemCpuMilliseconds": 9875,
+              "userCpuMilliseconds": 119625,
+              "wallMilliseconds": 473077
+            },
+            "semanticHash": "4b89f3f8fc34a05e2e58d1a35119bbc64783db1b51711a3a4f892b128fa663f4"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "4b89f3f8fc34a05e2e58d1a35119bbc64783db1b51711a3a4f892b128fa663f4",
+        "sourceScenarioContentSha256": "2ee88908cffe05025befa486b8460d3540085bee768de0f58d1d9462197d341d",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181116-s10-r1-w07",
+      "role": "test16",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w07\\transcript-00.ndjson",
+      "csv_rows": 67,
+      "accepted": 67,
+      "summary": {
+        "label": "C-30-d20181116-s10-r1-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 135471104,
+              "rssBeforeBytes": 82395136,
+              "systemCpuMilliseconds": 12125,
+              "userCpuMilliseconds": 151062,
+              "wallMilliseconds": 764448
+            },
+            "semanticHash": "4f0889d31c012ed4457c50a19e31e83d53fc301354605f6b7fa494710a427987"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "4f0889d31c012ed4457c50a19e31e83d53fc301354605f6b7fa494710a427987",
+        "sourceScenarioContentSha256": "0d87d60d7b84a759f1756a0bc2aa5567d62555e012252586b0dbb76430ade187",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181116-s10-r2-w07",
+      "role": "test16",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w07\\transcript-00.ndjson",
+      "csv_rows": 62,
+      "accepted": 62,
+      "summary": {
+        "label": "C-30-d20181116-s10-r2-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 131629056,
+              "rssBeforeBytes": 81629184,
+              "systemCpuMilliseconds": 12109,
+              "userCpuMilliseconds": 143844,
+              "wallMilliseconds": 624866
+            },
+            "semanticHash": "e882849961502ee03091c13d4a76d55e9cbbb325e5676b5883d6220738babe9c"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "e882849961502ee03091c13d4a76d55e9cbbb325e5676b5883d6220738babe9c",
+        "sourceScenarioContentSha256": "f263b91c29dcbc5bae3d79ac2fa3d00ab60c4c74f17c8bd1b3322cca198917e7",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "C-30",
+      "cell": "d20181116-s10-r4-w07",
+      "role": "test16",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w07\\transcript-00.ndjson",
+      "csv_rows": 68,
+      "accepted": 68,
+      "summary": {
+        "label": "C-30-d20181116-s10-r4-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 135614464,
+              "rssBeforeBytes": 82243584,
+              "systemCpuMilliseconds": 12516,
+              "userCpuMilliseconds": 151766,
+              "wallMilliseconds": 771912
+            },
+            "semanticHash": "cac238b019197f4c26485c45129187445a046e5fd5a1248a21d43bf681edefa2"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "cac238b019197f4c26485c45129187445a046e5fd5a1248a21d43bf681edefa2",
+        "sourceScenarioContentSha256": "cc0dc1bf1d2fca256c9f96ac4cc255f72582ccbc37e3752c29e303feb814420f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181112-s10-r1-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\U-d20181112-s10-r1-w07\\transcript-00.ndjson",
+      "csv_rows": 90,
+      "accepted": 90,
+      "summary": {
+        "label": "U-d20181112-s10-r1-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 145211392,
+              "rssBeforeBytes": 81870848,
+              "systemCpuMilliseconds": 20312,
+              "userCpuMilliseconds": 178938,
+              "wallMilliseconds": 1572394
+            },
+            "semanticHash": "4986f103e9b676849ba34a5850e0460d13a8490bc9dfe14d47df655696ce28f6"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "4986f103e9b676849ba34a5850e0460d13a8490bc9dfe14d47df655696ce28f6",
+        "sourceScenarioContentSha256": "9a78a43650e4cbf058c329690728e3a2e7f10e6c91557acac95701a9e9401af1",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181112-s10-r2-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\U-d20181112-s10-r2-w07\\transcript-00.ndjson",
+      "csv_rows": 82,
+      "accepted": 82,
+      "summary": {
+        "label": "U-d20181112-s10-r2-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141008896,
+              "rssBeforeBytes": 83726336,
+              "systemCpuMilliseconds": 19312,
+              "userCpuMilliseconds": 205094,
+              "wallMilliseconds": 1541955
+            },
+            "semanticHash": "cdf034cd1454dfecac91d84113085b693fd90e87b38919dadf552a4a74a5e705"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "cdf034cd1454dfecac91d84113085b693fd90e87b38919dadf552a4a74a5e705",
+        "sourceScenarioContentSha256": "23793cec11083b30c0c938c1ffb595e2180e9a19c7339641f5a89529a0ed1bf6",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181112-s10-r3-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\U-d20181112-s10-r3-w07\\transcript-00.ndjson",
+      "csv_rows": 97,
+      "accepted": 97,
+      "summary": {
+        "label": "U-d20181112-s10-r3-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 147845120,
+              "rssBeforeBytes": 82210816,
+              "systemCpuMilliseconds": 18234,
+              "userCpuMilliseconds": 154031,
+              "wallMilliseconds": 1269616
+            },
+            "semanticHash": "44106c0522084385d0f0cf10b946d6157929cc060d62bdcb956e10dbe2b54d26"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "44106c0522084385d0f0cf10b946d6157929cc060d62bdcb956e10dbe2b54d26",
+        "sourceScenarioContentSha256": "39161625e7de53d77da3420ba480613f825121a87093a546028d93fdd55126b7",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181112-s10-r4-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\U-d20181112-s10-r4-w07\\transcript-00.ndjson",
+      "csv_rows": 87,
+      "accepted": 87,
+      "summary": {
+        "label": "U-d20181112-s10-r4-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 145006592,
+              "rssBeforeBytes": 82489344,
+              "systemCpuMilliseconds": 16094,
+              "userCpuMilliseconds": 140609,
+              "wallMilliseconds": 987935
+            },
+            "semanticHash": "6ef49fcece6db7a0c60a82dda75c29a9d0a14500c88ad7146a03e862bb974105"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "6ef49fcece6db7a0c60a82dda75c29a9d0a14500c88ad7146a03e862bb974105",
+        "sourceScenarioContentSha256": "60b6c1216044519986b612ac8c896d1d47c03e1bdef9dbe3cc5eb72c9a88a048",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181113-s10-r1-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\U-d20181113-s10-r1-w07\\transcript-00.ndjson",
+      "csv_rows": 70,
+      "accepted": 70,
+      "summary": {
+        "label": "U-d20181113-s10-r1-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141746176,
+              "rssBeforeBytes": 82059264,
+              "systemCpuMilliseconds": 15281,
+              "userCpuMilliseconds": 142453,
+              "wallMilliseconds": 893628
+            },
+            "semanticHash": "fd33a15d0b4dd187d650cadd73db7d4854bee35415c61c1447e0f833ac5ad6a7"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "fd33a15d0b4dd187d650cadd73db7d4854bee35415c61c1447e0f833ac5ad6a7",
+        "sourceScenarioContentSha256": "2ad780e44c784144921d2aa65a6928fbd29a8feebfae964ac3e266468aa0134e",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181113-s10-r2-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\U-d20181113-s10-r2-w07\\transcript-00.ndjson",
+      "csv_rows": 65,
+      "accepted": 65,
+      "summary": {
+        "label": "U-d20181113-s10-r2-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 132460544,
+              "rssBeforeBytes": 82321408,
+              "systemCpuMilliseconds": 12422,
+              "userCpuMilliseconds": 135641,
+              "wallMilliseconds": 630613
+            },
+            "semanticHash": "75286e44d0334678b5e53a100883e25a975c9e0730ecb7c87ec5d8d3c85afc7e"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "75286e44d0334678b5e53a100883e25a975c9e0730ecb7c87ec5d8d3c85afc7e",
+        "sourceScenarioContentSha256": "3ea1b8c5cc1e3f3fee5db3e8b8fabe966f957ba3e4c85c62dc6dc1f6728097fe",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181113-s10-r3-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\U-d20181113-s10-r3-w07\\transcript-00.ndjson",
+      "csv_rows": 82,
+      "accepted": 82,
+      "summary": {
+        "label": "U-d20181113-s10-r3-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 144973824,
+              "rssBeforeBytes": 82255872,
+              "systemCpuMilliseconds": 17109,
+              "userCpuMilliseconds": 128281,
+              "wallMilliseconds": 924139
+            },
+            "semanticHash": "f34b5ea5e603a7db10a5b07ccf76799e2898b4d046733062d5916e63bddf626c"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "f34b5ea5e603a7db10a5b07ccf76799e2898b4d046733062d5916e63bddf626c",
+        "sourceScenarioContentSha256": "b62dd08ec64651ef477f95d03b67af2b3f2c863a4a001cdbd30abcf9a277e9ed",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181113-s10-r4-w07",
+      "role": "fit",
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\U-d20181113-s10-r4-w07\\transcript-00.ndjson",
+      "csv_rows": 92,
+      "accepted": 92,
+      "summary": {
+        "label": "U-d20181113-s10-r4-w07-w07",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 154480640,
+              "rssBeforeBytes": 82165760,
+              "systemCpuMilliseconds": 19016,
+              "userCpuMilliseconds": 146484,
+              "wallMilliseconds": 1236619
+            },
+            "semanticHash": "06716fbf0f47a48f535987e30aba6bfd6140b63209afbf1eab62ec60833396c3"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "06716fbf0f47a48f535987e30aba6bfd6140b63209afbf1eab62ec60833396c3",
+        "sourceScenarioContentSha256": "482f5069e563436452c1e9e789762c4c1d94b2d9762a4b6d6adc69e07cf4e9f8",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181114-s10-r3-w07",
+      "role": "cal",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w07\\transcript-00.ndjson",
+      "csv_rows": 47,
+      "accepted": 47,
+      "summary": {
+        "label": "U-d20181114-s10-r3-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 128167936,
+              "rssBeforeBytes": 81698816,
+              "systemCpuMilliseconds": 17016,
+              "userCpuMilliseconds": 189875,
+              "wallMilliseconds": 906309
+            },
+            "semanticHash": "4fe371e3f09019c5239c5a11c83d4363686aae57d451be94e3e1706885a87b26"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "4fe371e3f09019c5239c5a11c83d4363686aae57d451be94e3e1706885a87b26",
+        "sourceScenarioContentSha256": "ad12d98622fd76c08672e49ffae8d9e74cea39186d6fc02d17bd93ff95858dc5",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181114-s10-r4-w07",
+      "role": "cal",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w07\\transcript-00.ndjson",
+      "csv_rows": 53,
+      "accepted": 53,
+      "summary": {
+        "label": "U-d20181114-s10-r4-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 92450816,
+              "rssBeforeBytes": 82354176,
+              "systemCpuMilliseconds": 18625,
+              "userCpuMilliseconds": 203859,
+              "wallMilliseconds": 1769333
+            },
+            "semanticHash": "2270ef308593401054975d607226c7009626c3986974e77de410fd148867e46c"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "2270ef308593401054975d607226c7009626c3986974e77de410fd148867e46c",
+        "sourceScenarioContentSha256": "47af58f2a5f574afdaf5020930958ef45defc3b483cd47911426f76856a7e5cc",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181115-s10-r1-w07",
+      "role": "test15",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r1-w07\\transcript-00.ndjson",
+      "csv_rows": 44,
+      "accepted": 44,
+      "summary": {
+        "label": "U-d20181115-s10-r1-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 122667008,
+              "rssBeforeBytes": 81903616,
+              "systemCpuMilliseconds": 8984,
+              "userCpuMilliseconds": 114906,
+              "wallMilliseconds": 449828
+            },
+            "semanticHash": "c9863350ad53ba2bfcb9d471a9fa73a1d083963950bfb0a20c416563bef3bc94"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "c9863350ad53ba2bfcb9d471a9fa73a1d083963950bfb0a20c416563bef3bc94",
+        "sourceScenarioContentSha256": "ce947002c9e4fd8939bcc95d647e83225658367e011b9171e3a60dc8be611227",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181115-s10-r2-w07",
+      "role": "test15",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r2-w07\\transcript-00.ndjson",
+      "csv_rows": 56,
+      "accepted": 56,
+      "summary": {
+        "label": "U-d20181115-s10-r2-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 136912896,
+              "rssBeforeBytes": 82071552,
+              "systemCpuMilliseconds": 12828,
+              "userCpuMilliseconds": 125250,
+              "wallMilliseconds": 687244
+            },
+            "semanticHash": "78e51a043ef5f86f1e4cfabad7658575a3ec68d4c5470909a857379285040be5"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "78e51a043ef5f86f1e4cfabad7658575a3ec68d4c5470909a857379285040be5",
+        "sourceScenarioContentSha256": "6d5965629d97aab41231993e5ca14458ea30d3d8d14cbf1a4d212ac626e3681e",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181115-s10-r4-w07",
+      "role": "test15",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r4-w07\\transcript-00.ndjson",
+      "csv_rows": 45,
+      "accepted": 45,
+      "summary": {
+        "label": "U-d20181115-s10-r4-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 125587456,
+              "rssBeforeBytes": 81682432,
+              "systemCpuMilliseconds": 9250,
+              "userCpuMilliseconds": 117797,
+              "wallMilliseconds": 473525
+            },
+            "semanticHash": "0df7d56e7bb3bd3f3124d9e408e0f3c0db54e9a76cb06d5209cc80bbe1344c63"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "0df7d56e7bb3bd3f3124d9e408e0f3c0db54e9a76cb06d5209cc80bbe1344c63",
+        "sourceScenarioContentSha256": "2ee88908cffe05025befa486b8460d3540085bee768de0f58d1d9462197d341d",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181116-s10-r1-w07",
+      "role": "test16",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w07\\transcript-00.ndjson",
+      "csv_rows": 67,
+      "accepted": 67,
+      "summary": {
+        "label": "U-d20181116-s10-r1-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 135118848,
+              "rssBeforeBytes": 82374656,
+              "systemCpuMilliseconds": 12438,
+              "userCpuMilliseconds": 148109,
+              "wallMilliseconds": 771216
+            },
+            "semanticHash": "43e06387b8f284705f4fd0e9590079b6e2839a0e63f936483579d980dc4d7b3c"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "43e06387b8f284705f4fd0e9590079b6e2839a0e63f936483579d980dc4d7b3c",
+        "sourceScenarioContentSha256": "0d87d60d7b84a759f1756a0bc2aa5567d62555e012252586b0dbb76430ade187",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181116-s10-r2-w07",
+      "role": "test16",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w07\\transcript-00.ndjson",
+      "csv_rows": 65,
+      "accepted": 65,
+      "summary": {
+        "label": "U-d20181116-s10-r2-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 134709248,
+              "rssBeforeBytes": 81641472,
+              "systemCpuMilliseconds": 12516,
+              "userCpuMilliseconds": 147078,
+              "wallMilliseconds": 669563
+            },
+            "semanticHash": "e715808c23c3499b51ad449a44a627e71b8127fb78cef740ac5d5d21128e8484"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "e715808c23c3499b51ad449a44a627e71b8127fb78cef740ac5d5d21128e8484",
+        "sourceScenarioContentSha256": "f263b91c29dcbc5bae3d79ac2fa3d00ab60c4c74f17c8bd1b3322cca198917e7",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "measured",
+      "arm": "U",
+      "cell": "d20181116-s10-r4-w07",
+      "role": "test16",
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w07\\transcript-00.ndjson",
+      "csv_rows": 68,
+      "accepted": 68,
+      "summary": {
+        "label": "U-d20181116-s10-r4-w07-t38",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 135680000,
+              "rssBeforeBytes": 82485248,
+              "systemCpuMilliseconds": 12891,
+              "userCpuMilliseconds": 146703,
+              "wallMilliseconds": 770059
+            },
+            "semanticHash": "90da859928e436b8ac080090dacbc61b0a3a2d1bda4b4e67d2454e2619f0cd09"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "90da859928e436b8ac080090dacbc61b0a3a2d1bda4b4e67d2454e2619f0cd09",
+        "sourceScenarioContentSha256": "cc0dc1bf1d2fca256c9f96ac4cc255f72582ccbc37e3752c29e303feb814420f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181112-s10-r1-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181112-s10-r1-w08-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141254656,
+              "rssBeforeBytes": 84062208,
+              "systemCpuMilliseconds": 21875,
+              "userCpuMilliseconds": 51156,
+              "wallMilliseconds": 639183
+            },
+            "semanticHash": "70d7c6ccdb91581e12f6aa5d0f7fc017b01a8b62fb91d5cde22eec329d0815d5"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "70d7c6ccdb91581e12f6aa5d0f7fc017b01a8b62fb91d5cde22eec329d0815d5",
+        "sourceScenarioContentSha256": "9f9c177d806875eba9edb8f247405317fa809347bb6f3957818ee225c0147cd4",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181112-s10-r1-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w17-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 94,
+      "accepted": 94,
+      "summary": {
+        "label": "w14-d20181112-s10-r1-w17-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 143413248,
+              "rssBeforeBytes": 83910656,
+              "systemCpuMilliseconds": 20078,
+              "userCpuMilliseconds": 47625,
+              "wallMilliseconds": 661631
+            },
+            "semanticHash": "1f1a6f6aeed4e75fb5ac77627e9cd8ca2d89314393ac5b7a1c492aa7be0e6e86"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "1f1a6f6aeed4e75fb5ac77627e9cd8ca2d89314393ac5b7a1c492aa7be0e6e86",
+        "sourceScenarioContentSha256": "b8c57b09cc643641b2f7d50cdabf96fa348b61fefe15e5a9931bf900758a244f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181112-s10-r2-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 99,
+      "accepted": 99,
+      "summary": {
+        "label": "w14-d20181112-s10-r2-w08-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140365824,
+              "rssBeforeBytes": 84303872,
+              "systemCpuMilliseconds": 19828,
+              "userCpuMilliseconds": 50141,
+              "wallMilliseconds": 670846
+            },
+            "semanticHash": "72039a269dc1ae263fa1fb015e55d44f99c2afcff3948611e785a5105ecf9424"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "72039a269dc1ae263fa1fb015e55d44f99c2afcff3948611e785a5105ecf9424",
+        "sourceScenarioContentSha256": "aeac0b15efca5345064bad400025606c5ab9d794a2ebf5a10f1eab2575562108",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181112-s10-r2-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w17-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181112-s10-r2-w17-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 137965568,
+              "rssBeforeBytes": 83984384,
+              "systemCpuMilliseconds": 21359,
+              "userCpuMilliseconds": 48859,
+              "wallMilliseconds": 659005
+            },
+            "semanticHash": "5e4fe3cc5b85795a73bd2a22265d554bbb22a67121cf89dd32ccc8171cf3ea85"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "5e4fe3cc5b85795a73bd2a22265d554bbb22a67121cf89dd32ccc8171cf3ea85",
+        "sourceScenarioContentSha256": "8fc38fde100fd459ff7554e82e17174a105d450d9bfadf043ac1309269b1d3b3",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181112-s10-r3-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r3-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181112-s10-r3-w08-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140357632,
+              "rssBeforeBytes": 84000768,
+              "systemCpuMilliseconds": 23422,
+              "userCpuMilliseconds": 52750,
+              "wallMilliseconds": 711400
+            },
+            "semanticHash": "ca14f1bbce71326fe2514e71b52db000cf03f24e9e261c288942794013439a57"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "ca14f1bbce71326fe2514e71b52db000cf03f24e9e261c288942794013439a57",
+        "sourceScenarioContentSha256": "3c173e626c7a1d4abb99d8f6dabe9123450bcb111e142b1daf9cd627842a4410",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181112-s10-r3-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r3-w17-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 89,
+      "accepted": 89,
+      "summary": {
+        "label": "w14-d20181112-s10-r3-w17-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 135479296,
+              "rssBeforeBytes": 84168704,
+              "systemCpuMilliseconds": 17219,
+              "userCpuMilliseconds": 44359,
+              "wallMilliseconds": 507993
+            },
+            "semanticHash": "9293b7a161a994d2b0758cc8f99d6863a698dd49eb19e8092533615cf7a377d1"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "9293b7a161a994d2b0758cc8f99d6863a698dd49eb19e8092533615cf7a377d1",
+        "sourceScenarioContentSha256": "76a581ff37c53d0a75ac7dc642d5d89cd9380081e1274b14310f33a636052793",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181112-s10-r4-w08",
+      "role": "cal",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 95,
+      "accepted": 95,
+      "summary": {
+        "label": "w14-d20181112-s10-r4-w08-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 139526144,
+              "rssBeforeBytes": 83845120,
+              "systemCpuMilliseconds": 18891,
+              "userCpuMilliseconds": 47781,
+              "wallMilliseconds": 663554
+            },
+            "semanticHash": "b68a55e09243c00f1e82de98919e5431049ef9bdd0935b43a393b68cb73c85ef"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "b68a55e09243c00f1e82de98919e5431049ef9bdd0935b43a393b68cb73c85ef",
+        "sourceScenarioContentSha256": "3871c42e58fff92bcaa9ce0de6efc1dded209f0c40a346cd8828663b72019e91",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181112-s10-r4-w17",
+      "role": "cal",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w17-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 96,
+      "accepted": 96,
+      "summary": {
+        "label": "w14-d20181112-s10-r4-w17-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 139313152,
+              "rssBeforeBytes": 84119552,
+              "systemCpuMilliseconds": 20453,
+              "userCpuMilliseconds": 48688,
+              "wallMilliseconds": 603510
+            },
+            "semanticHash": "9f03f319712c10b33cfe8a37c89eb273af3d9252fe9f6f325af8e85d7c7cd5d0"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "9f03f319712c10b33cfe8a37c89eb273af3d9252fe9f6f325af8e85d7c7cd5d0",
+        "sourceScenarioContentSha256": "794802a5087a7c479cca959d21ba35766f1f9685982d9b7ecb6ea1d772e10cda",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181113-s10-r1-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181113-s10-r1-w08-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 136151040,
+              "rssBeforeBytes": 84062208,
+              "systemCpuMilliseconds": 21109,
+              "userCpuMilliseconds": 50047,
+              "wallMilliseconds": 626328
+            },
+            "semanticHash": "25cbe54d48dc18cc5c7ab3aaf6b596894689b0d758f908fde29a2ea37aa1195c"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "25cbe54d48dc18cc5c7ab3aaf6b596894689b0d758f908fde29a2ea37aa1195c",
+        "sourceScenarioContentSha256": "fc8ee9d70043acca4f1c8f49d4701b4bd45bbef0568f9cd8e49132eea72209c3",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181113-s10-r1-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w17-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 92,
+      "accepted": 92,
+      "summary": {
+        "label": "w14-d20181113-s10-r1-w17-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 134389760,
+              "rssBeforeBytes": 83812352,
+              "systemCpuMilliseconds": 18859,
+              "userCpuMilliseconds": 45500,
+              "wallMilliseconds": 574335
+            },
+            "semanticHash": "b901784b4c4911d647c556e2210d14b1bdd0aa771ee230631f3535d78d22c7e7"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "b901784b4c4911d647c556e2210d14b1bdd0aa771ee230631f3535d78d22c7e7",
+        "sourceScenarioContentSha256": "84f53e0eaa4f9a5bddcf4137ac6251d1b0ef6d9627b74b0fb9b868add1141800",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181113-s10-r2-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 105,
+      "accepted": 105,
+      "summary": {
+        "label": "w14-d20181113-s10-r2-w08-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141238272,
+              "rssBeforeBytes": 83927040,
+              "systemCpuMilliseconds": 23016,
+              "userCpuMilliseconds": 51062,
+              "wallMilliseconds": 739770
+            },
+            "semanticHash": "093ab4824ac8d3ef56661c97c94d6ec7754987635d8efbf2853f767e5ac6a716"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "093ab4824ac8d3ef56661c97c94d6ec7754987635d8efbf2853f767e5ac6a716",
+        "sourceScenarioContentSha256": "557dbc4c208fa7d858d10971362574864f5415913df49681f260e12cccb5a3a4",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181113-s10-r2-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w17-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181113-s10-r2-w17-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140509184,
+              "rssBeforeBytes": 84115456,
+              "systemCpuMilliseconds": 22297,
+              "userCpuMilliseconds": 49688,
+              "wallMilliseconds": 680027
+            },
+            "semanticHash": "dfbd4564594e757dbe4fc0667621d8e01e1a06268fd6d91577919e09c6ca0049"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "dfbd4564594e757dbe4fc0667621d8e01e1a06268fd6d91577919e09c6ca0049",
+        "sourceScenarioContentSha256": "43f6e95c4de437f1de091fc8459e0c5d85f663fe089b3e2e84b991396afed75f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181113-s10-r3-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r3-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 99,
+      "accepted": 99,
+      "summary": {
+        "label": "w14-d20181113-s10-r3-w08-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 142065664,
+              "rssBeforeBytes": 83873792,
+              "systemCpuMilliseconds": 20781,
+              "userCpuMilliseconds": 49141,
+              "wallMilliseconds": 641342
+            },
+            "semanticHash": "5832b462290cfa47eeb0d1e89291a2043144faa99cd5cebdc80313c5d5accac8"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "5832b462290cfa47eeb0d1e89291a2043144faa99cd5cebdc80313c5d5accac8",
+        "sourceScenarioContentSha256": "966b0a8b7ca4dc66cb39aba91063869cf237759629e2c8fbc2af1a94c482a848",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181113-s10-r3-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r3-w17-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 94,
+      "accepted": 94,
+      "summary": {
+        "label": "w14-d20181113-s10-r3-w17-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 135270400,
+              "rssBeforeBytes": 83910656,
+              "systemCpuMilliseconds": 19734,
+              "userCpuMilliseconds": 45766,
+              "wallMilliseconds": 570327
+            },
+            "semanticHash": "5ff2856c350ef9b600935802ceacf0af88b427471c6b0cb557da2ebc13aa4e0b"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "5ff2856c350ef9b600935802ceacf0af88b427471c6b0cb557da2ebc13aa4e0b",
+        "sourceScenarioContentSha256": "61726a7a6d3c24832295edd5dfc40ad5bd0d544ca70b7428737d3fb1e7acf578",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181113-s10-r4-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181113-s10-r4-w08-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 138543104,
+              "rssBeforeBytes": 83169280,
+              "systemCpuMilliseconds": 20078,
+              "userCpuMilliseconds": 48703,
+              "wallMilliseconds": 638700
+            },
+            "semanticHash": "1277c441731b5c237b188a2c07a395eee1681949d543d2e4201a6b6e42fcaa3d"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "1277c441731b5c237b188a2c07a395eee1681949d543d2e4201a6b6e42fcaa3d",
+        "sourceScenarioContentSha256": "d0878af1fc45b0687f607dcd786b9908c048bcfd83d2998a5397aab12cf69d64",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-120",
+      "cell": "d20181113-s10-r4-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w17-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 96,
+      "accepted": 96,
+      "summary": {
+        "label": "w14-d20181113-s10-r4-w17-c1-budget120-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 142041088,
+              "rssBeforeBytes": 84312064,
+              "systemCpuMilliseconds": 20812,
+              "userCpuMilliseconds": 47844,
+              "wallMilliseconds": 621000
+            },
+            "semanticHash": "8cd569f065605547b148664fe4c234cf9e29a2ca671b082694ca55a3f418614f"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "8cd569f065605547b148664fe4c234cf9e29a2ca671b082694ca55a3f418614f",
+        "sourceScenarioContentSha256": "f075019a495d45300840782751c2e288a09eb51cb818e74971b1e9d80e210c8e",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r1-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181112-s10-r1-w08-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 138579968,
+              "rssBeforeBytes": 83910656,
+              "systemCpuMilliseconds": 21125,
+              "userCpuMilliseconds": 50406,
+              "wallMilliseconds": 598946
+            },
+            "semanticHash": "28b1e45d4f44b46bdb52b0a805b739e0b1d8bc48ebf26b8e0209c336c88a5762"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "28b1e45d4f44b46bdb52b0a805b739e0b1d8bc48ebf26b8e0209c336c88a5762",
+        "sourceScenarioContentSha256": "9f9c177d806875eba9edb8f247405317fa809347bb6f3957818ee225c0147cd4",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r1-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w17-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 95,
+      "accepted": 95,
+      "summary": {
+        "label": "w14-d20181112-s10-r1-w17-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 143650816,
+              "rssBeforeBytes": 84271104,
+              "systemCpuMilliseconds": 21078,
+              "userCpuMilliseconds": 47469,
+              "wallMilliseconds": 668880
+            },
+            "semanticHash": "8fd4c8a25ec613826755418eace787db062953fbd2c7123fbeef9b3d58727a6e"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "8fd4c8a25ec613826755418eace787db062953fbd2c7123fbeef9b3d58727a6e",
+        "sourceScenarioContentSha256": "b8c57b09cc643641b2f7d50cdabf96fa348b61fefe15e5a9931bf900758a244f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r2-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 100,
+      "accepted": 100,
+      "summary": {
+        "label": "w14-d20181112-s10-r2-w08-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140279808,
+              "rssBeforeBytes": 83877888,
+              "systemCpuMilliseconds": 21625,
+              "userCpuMilliseconds": 49688,
+              "wallMilliseconds": 679009
+            },
+            "semanticHash": "b6398faeaeeac6dc51406a8131dac10ba2c0930e95ec7f941111462411ca2405"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "b6398faeaeeac6dc51406a8131dac10ba2c0930e95ec7f941111462411ca2405",
+        "sourceScenarioContentSha256": "aeac0b15efca5345064bad400025606c5ab9d794a2ebf5a10f1eab2575562108",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r2-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w17-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181112-s10-r2-w17-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141193216,
+              "rssBeforeBytes": 84156416,
+              "systemCpuMilliseconds": 21375,
+              "userCpuMilliseconds": 50125,
+              "wallMilliseconds": 676220
+            },
+            "semanticHash": "d50cf237115dc3ce4b0eb4a5cc2a5b4ebfb03280cb4af37c746a06052f21fb19"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "d50cf237115dc3ce4b0eb4a5cc2a5b4ebfb03280cb4af37c746a06052f21fb19",
+        "sourceScenarioContentSha256": "8fc38fde100fd459ff7554e82e17174a105d450d9bfadf043ac1309269b1d3b3",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r3-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r3-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181112-s10-r3-w08-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140226560,
+              "rssBeforeBytes": 84221952,
+              "systemCpuMilliseconds": 20438,
+              "userCpuMilliseconds": 49031,
+              "wallMilliseconds": 634549
+            },
+            "semanticHash": "85e46a83a4003a30c0958161bb6c945e5e0adc7f575ca09f063fa6a4c1a034b5"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "85e46a83a4003a30c0958161bb6c945e5e0adc7f575ca09f063fa6a4c1a034b5",
+        "sourceScenarioContentSha256": "3c173e626c7a1d4abb99d8f6dabe9123450bcb111e142b1daf9cd627842a4410",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r3-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r3-w17-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 83,
+      "accepted": 83,
+      "summary": {
+        "label": "w14-d20181112-s10-r3-w17-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 130285568,
+              "rssBeforeBytes": 84000768,
+              "systemCpuMilliseconds": 16250,
+              "userCpuMilliseconds": 41375,
+              "wallMilliseconds": 459669
+            },
+            "semanticHash": "f1dd00fc98c8ce2bcb5796b33f939c8515c798b86f49607117eec5e54b98d6b3"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "f1dd00fc98c8ce2bcb5796b33f939c8515c798b86f49607117eec5e54b98d6b3",
+        "sourceScenarioContentSha256": "76a581ff37c53d0a75ac7dc642d5d89cd9380081e1274b14310f33a636052793",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r4-w08",
+      "role": "cal",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 93,
+      "accepted": 93,
+      "summary": {
+        "label": "w14-d20181112-s10-r4-w08-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 137564160,
+              "rssBeforeBytes": 84144128,
+              "systemCpuMilliseconds": 19266,
+              "userCpuMilliseconds": 47547,
+              "wallMilliseconds": 658449
+            },
+            "semanticHash": "9fe563a5058a0fdb3cee7b14df4c74271749b20c7ec0f33f58cf25fe103f1dfe"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "9fe563a5058a0fdb3cee7b14df4c74271749b20c7ec0f33f58cf25fe103f1dfe",
+        "sourceScenarioContentSha256": "3871c42e58fff92bcaa9ce0de6efc1dded209f0c40a346cd8828663b72019e91",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181112-s10-r4-w17",
+      "role": "cal",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w17-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 93,
+      "accepted": 93,
+      "summary": {
+        "label": "w14-d20181112-s10-r4-w17-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 137854976,
+              "rssBeforeBytes": 84131840,
+              "systemCpuMilliseconds": 18844,
+              "userCpuMilliseconds": 46656,
+              "wallMilliseconds": 560225
+            },
+            "semanticHash": "ac6e8fcfc85ecc7c2aae0e3a43bf96f311542552dd52c5c67d4b68a504941b75"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "ac6e8fcfc85ecc7c2aae0e3a43bf96f311542552dd52c5c67d4b68a504941b75",
+        "sourceScenarioContentSha256": "794802a5087a7c479cca959d21ba35766f1f9685982d9b7ecb6ea1d772e10cda",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r1-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 101,
+      "accepted": 101,
+      "summary": {
+        "label": "w14-d20181113-s10-r1-w08-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 136175616,
+              "rssBeforeBytes": 84074496,
+              "systemCpuMilliseconds": 21250,
+              "userCpuMilliseconds": 47328,
+              "wallMilliseconds": 610724
+            },
+            "semanticHash": "26160345eb9651bd2cb6c1dce17b96b2075699207f7b81a5fe82d0fb764d198c"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "26160345eb9651bd2cb6c1dce17b96b2075699207f7b81a5fe82d0fb764d198c",
+        "sourceScenarioContentSha256": "fc8ee9d70043acca4f1c8f49d4701b4bd45bbef0568f9cd8e49132eea72209c3",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r1-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w17-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 88,
+      "accepted": 88,
+      "summary": {
+        "label": "w14-d20181113-s10-r1-w17-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 134221824,
+              "rssBeforeBytes": 84320256,
+              "systemCpuMilliseconds": 18109,
+              "userCpuMilliseconds": 43547,
+              "wallMilliseconds": 528893
+            },
+            "semanticHash": "5b891919ffcca79c42541d3dc4dfbbbe2a416ecd529cc164b608f9846ec84a76"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "5b891919ffcca79c42541d3dc4dfbbbe2a416ecd529cc164b608f9846ec84a76",
+        "sourceScenarioContentSha256": "84f53e0eaa4f9a5bddcf4137ac6251d1b0ef6d9627b74b0fb9b868add1141800",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r2-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 104,
+      "accepted": 104,
+      "summary": {
+        "label": "w14-d20181113-s10-r2-w08-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141697024,
+              "rssBeforeBytes": 84160512,
+              "systemCpuMilliseconds": 22422,
+              "userCpuMilliseconds": 48922,
+              "wallMilliseconds": 704337
+            },
+            "semanticHash": "1ca254b5962da8b1682696f8e9f64fa1db1d6d58ed325ced2e6f6ffbd3b7bf2d"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "1ca254b5962da8b1682696f8e9f64fa1db1d6d58ed325ced2e6f6ffbd3b7bf2d",
+        "sourceScenarioContentSha256": "557dbc4c208fa7d858d10971362574864f5415913df49681f260e12cccb5a3a4",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r2-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w17-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 97,
+      "accepted": 97,
+      "summary": {
+        "label": "w14-d20181113-s10-r2-w17-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 136654848,
+              "rssBeforeBytes": 84299776,
+              "systemCpuMilliseconds": 20250,
+              "userCpuMilliseconds": 46547,
+              "wallMilliseconds": 643262
+            },
+            "semanticHash": "2056fb4329404c0c6f0fbfd06b72555d5de8f88b23b0c24d0306f2f8ed3329c8"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "2056fb4329404c0c6f0fbfd06b72555d5de8f88b23b0c24d0306f2f8ed3329c8",
+        "sourceScenarioContentSha256": "43f6e95c4de437f1de091fc8459e0c5d85f663fe089b3e2e84b991396afed75f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r3-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r3-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181113-s10-r3-w08-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141156352,
+              "rssBeforeBytes": 84197376,
+              "systemCpuMilliseconds": 20234,
+              "userCpuMilliseconds": 49000,
+              "wallMilliseconds": 624002
+            },
+            "semanticHash": "123c1d2f24ec65e69f4cf0fd7fc542797398b949efa55f6bb345836cbb9c9ec1"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "123c1d2f24ec65e69f4cf0fd7fc542797398b949efa55f6bb345836cbb9c9ec1",
+        "sourceScenarioContentSha256": "966b0a8b7ca4dc66cb39aba91063869cf237759629e2c8fbc2af1a94c482a848",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r3-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r3-w17-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 92,
+      "accepted": 92,
+      "summary": {
+        "label": "w14-d20181113-s10-r3-w17-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 134553600,
+              "rssBeforeBytes": 84213760,
+              "systemCpuMilliseconds": 19234,
+              "userCpuMilliseconds": 44812,
+              "wallMilliseconds": 556709
+            },
+            "semanticHash": "a6dc9a2298ca4cb98b0df38e7e0395fbf8cb845d1f60e6a84816610ff9de8759"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "a6dc9a2298ca4cb98b0df38e7e0395fbf8cb845d1f60e6a84816610ff9de8759",
+        "sourceScenarioContentSha256": "61726a7a6d3c24832295edd5dfc40ad5bd0d544ca70b7428737d3fb1e7acf578",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r4-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 97,
+      "accepted": 97,
+      "summary": {
+        "label": "w14-d20181113-s10-r4-w08-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 139051008,
+              "rssBeforeBytes": 84221952,
+              "systemCpuMilliseconds": 20938,
+              "userCpuMilliseconds": 47766,
+              "wallMilliseconds": 641512
+            },
+            "semanticHash": "8bf4796888fdb3eafa44ccdaf9de9f2d1d6a059934a16285dbeb9b36c3a92800"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "8bf4796888fdb3eafa44ccdaf9de9f2d1d6a059934a16285dbeb9b36c3a92800",
+        "sourceScenarioContentSha256": "d0878af1fc45b0687f607dcd786b9908c048bcfd83d2998a5397aab12cf69d64",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-30",
+      "cell": "d20181113-s10-r4-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w17-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 95,
+      "accepted": 95,
+      "summary": {
+        "label": "w14-d20181113-s10-r4-w17-c1-h6ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141455360,
+              "rssBeforeBytes": 84135936,
+              "systemCpuMilliseconds": 21750,
+              "userCpuMilliseconds": 48812,
+              "wallMilliseconds": 629690
+            },
+            "semanticHash": "23843538f4e345e1e060ac6f62399e7c6020fced220853c381ec0b093e62aefd"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "23843538f4e345e1e060ac6f62399e7c6020fced220853c381ec0b093e62aefd",
+        "sourceScenarioContentSha256": "f075019a495d45300840782751c2e288a09eb51cb818e74971b1e9d80e210c8e",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181112-s10-r1-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 100,
+      "accepted": 100,
+      "summary": {
+        "label": "w14-d20181112-s10-r1-w08-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140812288,
+              "rssBeforeBytes": 83841024,
+              "systemCpuMilliseconds": 21375,
+              "userCpuMilliseconds": 50781,
+              "wallMilliseconds": 621730
+            },
+            "semanticHash": "38b6c61501a2aefe0e8621ddaf53778624924e298ed814f96ca3ae0ab7de6e4d"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "38b6c61501a2aefe0e8621ddaf53778624924e298ed814f96ca3ae0ab7de6e4d",
+        "sourceScenarioContentSha256": "9f9c177d806875eba9edb8f247405317fa809347bb6f3957818ee225c0147cd4",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181112-s10-r1-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w17-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 95,
+      "accepted": 95,
+      "summary": {
+        "label": "w14-d20181112-s10-r1-w17-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141852672,
+              "rssBeforeBytes": 84033536,
+              "systemCpuMilliseconds": 19516,
+              "userCpuMilliseconds": 48672,
+              "wallMilliseconds": 668993
+            },
+            "semanticHash": "cca90c678030f48c34449faf4adcbce09c78e8fe617a0a2e22c22abd01b2dcb7"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "cca90c678030f48c34449faf4adcbce09c78e8fe617a0a2e22c22abd01b2dcb7",
+        "sourceScenarioContentSha256": "b8c57b09cc643641b2f7d50cdabf96fa348b61fefe15e5a9931bf900758a244f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181112-s10-r2-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 99,
+      "accepted": 99,
+      "summary": {
+        "label": "w14-d20181112-s10-r2-w08-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 139780096,
+              "rssBeforeBytes": 83914752,
+              "systemCpuMilliseconds": 20938,
+              "userCpuMilliseconds": 50453,
+              "wallMilliseconds": 688812
+            },
+            "semanticHash": "41c8017f678bfb02c34c93d231db5915ed2d5c3cfc322779d91b030ff88858d3"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "41c8017f678bfb02c34c93d231db5915ed2d5c3cfc322779d91b030ff88858d3",
+        "sourceScenarioContentSha256": "aeac0b15efca5345064bad400025606c5ab9d794a2ebf5a10f1eab2575562108",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181112-s10-r2-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w17-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181112-s10-r2-w17-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 138772480,
+              "rssBeforeBytes": 84041728,
+              "systemCpuMilliseconds": 21328,
+              "userCpuMilliseconds": 48766,
+              "wallMilliseconds": 669553
+            },
+            "semanticHash": "5fdfb317266837afc7f59cb62ced61a99ba466b2ed730e5b92ea7a96474a5160"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "5fdfb317266837afc7f59cb62ced61a99ba466b2ed730e5b92ea7a96474a5160",
+        "sourceScenarioContentSha256": "8fc38fde100fd459ff7554e82e17174a105d450d9bfadf043ac1309269b1d3b3",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181112-s10-r3-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r3-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181112-s10-r3-w08-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140390400,
+              "rssBeforeBytes": 84078592,
+              "systemCpuMilliseconds": 21391,
+              "userCpuMilliseconds": 48516,
+              "wallMilliseconds": 631751
+            },
+            "semanticHash": "54cca49293e4ac6698c0f38953160efdba2d833a21d1ad2957db7dae757789eb"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "54cca49293e4ac6698c0f38953160efdba2d833a21d1ad2957db7dae757789eb",
+        "sourceScenarioContentSha256": "3c173e626c7a1d4abb99d8f6dabe9123450bcb111e142b1daf9cd627842a4410",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181112-s10-r3-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r3-w17-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 82,
+      "accepted": 82,
+      "summary": {
+        "label": "w14-d20181112-s10-r3-w17-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 130605056,
+              "rssBeforeBytes": 84062208,
+              "systemCpuMilliseconds": 16219,
+              "userCpuMilliseconds": 41047,
+              "wallMilliseconds": 450878
+            },
+            "semanticHash": "f6c36a9bbfe4c3d3ea944f7ad4054b23d9721415a588a3c068074c7209c1ada2"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "f6c36a9bbfe4c3d3ea944f7ad4054b23d9721415a588a3c068074c7209c1ada2",
+        "sourceScenarioContentSha256": "76a581ff37c53d0a75ac7dc642d5d89cd9380081e1274b14310f33a636052793",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181112-s10-r4-w08",
+      "role": "cal",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 94,
+      "accepted": 94,
+      "summary": {
+        "label": "w14-d20181112-s10-r4-w08-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 137105408,
+              "rssBeforeBytes": 83918848,
+              "systemCpuMilliseconds": 18719,
+              "userCpuMilliseconds": 47656,
+              "wallMilliseconds": 652301
+            },
+            "semanticHash": "04ffe6313e95f753145f72e256fb6b25fad5f3f5272e21c12c6ade12206ca4c5"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "04ffe6313e95f753145f72e256fb6b25fad5f3f5272e21c12c6ade12206ca4c5",
+        "sourceScenarioContentSha256": "3871c42e58fff92bcaa9ce0de6efc1dded209f0c40a346cd8828663b72019e91",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181112-s10-r4-w17",
+      "role": "cal",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w17-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 93,
+      "accepted": 93,
+      "summary": {
+        "label": "w14-d20181112-s10-r4-w17-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 139120640,
+              "rssBeforeBytes": 84017152,
+              "systemCpuMilliseconds": 19891,
+              "userCpuMilliseconds": 45953,
+              "wallMilliseconds": 561589
+            },
+            "semanticHash": "0c0f32a192ce9e2e8341355487e0eea75100b08657947b5fc44fd43e4321310e"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "0c0f32a192ce9e2e8341355487e0eea75100b08657947b5fc44fd43e4321310e",
+        "sourceScenarioContentSha256": "794802a5087a7c479cca959d21ba35766f1f9685982d9b7ecb6ea1d772e10cda",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181113-s10-r1-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 101,
+      "accepted": 101,
+      "summary": {
+        "label": "w14-d20181113-s10-r1-w08-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 135733248,
+              "rssBeforeBytes": 84078592,
+              "systemCpuMilliseconds": 20453,
+              "userCpuMilliseconds": 50031,
+              "wallMilliseconds": 630507
+            },
+            "semanticHash": "b1675b51598d81604d694ee99b3a8e5c3ef6f4c2ebdc5d3803c9b50af87232a7"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "b1675b51598d81604d694ee99b3a8e5c3ef6f4c2ebdc5d3803c9b50af87232a7",
+        "sourceScenarioContentSha256": "fc8ee9d70043acca4f1c8f49d4701b4bd45bbef0568f9cd8e49132eea72209c3",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181113-s10-r1-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w17-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 89,
+      "accepted": 89,
+      "summary": {
+        "label": "w14-d20181113-s10-r1-w17-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 132218880,
+              "rssBeforeBytes": 84230144,
+              "systemCpuMilliseconds": 17125,
+              "userCpuMilliseconds": 45141,
+              "wallMilliseconds": 542844
+            },
+            "semanticHash": "822f410e77ad82003ae1cae3f6c23205e6fc9606ec91d5ad00d4bae3cafed1f0"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "822f410e77ad82003ae1cae3f6c23205e6fc9606ec91d5ad00d4bae3cafed1f0",
+        "sourceScenarioContentSha256": "84f53e0eaa4f9a5bddcf4137ac6251d1b0ef6d9627b74b0fb9b868add1141800",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181113-s10-r2-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 104,
+      "accepted": 104,
+      "summary": {
+        "label": "w14-d20181113-s10-r2-w08-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140681216,
+              "rssBeforeBytes": 84287488,
+              "systemCpuMilliseconds": 22016,
+              "userCpuMilliseconds": 49438,
+              "wallMilliseconds": 697918
+            },
+            "semanticHash": "d955a9d376fa304068bf0ba059118e131e1bb47ba81e25e5b34a5e6f6674fee0"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "d955a9d376fa304068bf0ba059118e131e1bb47ba81e25e5b34a5e6f6674fee0",
+        "sourceScenarioContentSha256": "557dbc4c208fa7d858d10971362574864f5415913df49681f260e12cccb5a3a4",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181113-s10-r2-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w17-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181113-s10-r2-w17-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 138338304,
+              "rssBeforeBytes": 83849216,
+              "systemCpuMilliseconds": 19734,
+              "userCpuMilliseconds": 48703,
+              "wallMilliseconds": 669875
+            },
+            "semanticHash": "b1db91652f9943443d211a7180cba4e0d7a00ec79a7c504e4199f97b4982d4f6"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "b1db91652f9943443d211a7180cba4e0d7a00ec79a7c504e4199f97b4982d4f6",
+        "sourceScenarioContentSha256": "43f6e95c4de437f1de091fc8459e0c5d85f663fe089b3e2e84b991396afed75f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181113-s10-r3-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r3-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181113-s10-r3-w08-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141295616,
+              "rssBeforeBytes": 84406272,
+              "systemCpuMilliseconds": 20500,
+              "userCpuMilliseconds": 49516,
+              "wallMilliseconds": 630413
+            },
+            "semanticHash": "74f4a555576a7dd99dde6ed13a983e03781d6668dfed3c48a5d6a915c3cf0607"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "74f4a555576a7dd99dde6ed13a983e03781d6668dfed3c48a5d6a915c3cf0607",
+        "sourceScenarioContentSha256": "966b0a8b7ca4dc66cb39aba91063869cf237759629e2c8fbc2af1a94c482a848",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181113-s10-r3-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r3-w17-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 94,
+      "accepted": 94,
+      "summary": {
+        "label": "w14-d20181113-s10-r3-w17-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 136392704,
+              "rssBeforeBytes": 84033536,
+              "systemCpuMilliseconds": 19750,
+              "userCpuMilliseconds": 45891,
+              "wallMilliseconds": 565658
+            },
+            "semanticHash": "eae78d9abe5822487f76fabf98958291dbf1fc85050a3a4feb5b93df8748074b"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "eae78d9abe5822487f76fabf98958291dbf1fc85050a3a4feb5b93df8748074b",
+        "sourceScenarioContentSha256": "61726a7a6d3c24832295edd5dfc40ad5bd0d544ca70b7428737d3fb1e7acf578",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181113-s10-r4-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 97,
+      "accepted": 97,
+      "summary": {
+        "label": "w14-d20181113-s10-r4-w08-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 138047488,
+              "rssBeforeBytes": 83996672,
+              "systemCpuMilliseconds": 19516,
+              "userCpuMilliseconds": 49078,
+              "wallMilliseconds": 633132
+            },
+            "semanticHash": "e973d24608a5677b4705575aa95dcbdafa329f20cf81585e2022237fb4fff83d"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "e973d24608a5677b4705575aa95dcbdafa329f20cf81585e2022237fb4fff83d",
+        "sourceScenarioContentSha256": "d0878af1fc45b0687f607dcd786b9908c048bcfd83d2998a5397aab12cf69d64",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "C-60",
+      "cell": "d20181113-s10-r4-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w17-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 96,
+      "accepted": 96,
+      "summary": {
+        "label": "w14-d20181113-s10-r4-w17-c1-budget60-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 139780096,
+              "rssBeforeBytes": 83832832,
+              "systemCpuMilliseconds": 20562,
+              "userCpuMilliseconds": 49609,
+              "wallMilliseconds": 630538
+            },
+            "semanticHash": "0db0d74edc2f9da148f3b774a7dc281708f04ffc4b466b15b5e2d1c73a5fe714"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "0db0d74edc2f9da148f3b774a7dc281708f04ffc4b466b15b5e2d1c73a5fe714",
+        "sourceScenarioContentSha256": "f075019a495d45300840782751c2e288a09eb51cb818e74971b1e9d80e210c8e",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181112-s10-r1-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 104,
+      "accepted": 104,
+      "summary": {
+        "label": "w14-d20181112-s10-r1-w08-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 147034112,
+              "rssBeforeBytes": 83931136,
+              "systemCpuMilliseconds": 22875,
+              "userCpuMilliseconds": 54078,
+              "wallMilliseconds": 735707
+            },
+            "semanticHash": "60400c9083e97abc7d43d334b834b8a384152b05f76be28e9b061cbce491df96"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "60400c9083e97abc7d43d334b834b8a384152b05f76be28e9b061cbce491df96",
+        "sourceScenarioContentSha256": "9f9c177d806875eba9edb8f247405317fa809347bb6f3957818ee225c0147cd4",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181112-s10-r1-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181112-s10-r1-w17-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 147357696,
+              "rssBeforeBytes": 83980288,
+              "systemCpuMilliseconds": 20938,
+              "userCpuMilliseconds": 50250,
+              "wallMilliseconds": 772563
+            },
+            "semanticHash": "cdef311b4d98c78c2eed9981c6bf274ab4fb668a9225c7c15e6cab7028e6dda5"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "cdef311b4d98c78c2eed9981c6bf274ab4fb668a9225c7c15e6cab7028e6dda5",
+        "sourceScenarioContentSha256": "b8c57b09cc643641b2f7d50cdabf96fa348b61fefe15e5a9931bf900758a244f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181112-s10-r2-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w08-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 103,
+      "accepted": 103,
+      "summary": {
+        "label": "w14-d20181112-s10-r2-w08-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 144543744,
+              "rssBeforeBytes": 83808256,
+              "systemCpuMilliseconds": 21141,
+              "userCpuMilliseconds": 51859,
+              "wallMilliseconds": 737944
+            },
+            "semanticHash": "32a5a9dcfd996b6d6cd1cd1dd51d15379834b1d01af3309408fa7d025c665b77"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "32a5a9dcfd996b6d6cd1cd1dd51d15379834b1d01af3309408fa7d025c665b77",
+        "sourceScenarioContentSha256": "aeac0b15efca5345064bad400025606c5ab9d794a2ebf5a10f1eab2575562108",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181112-s10-r2-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 105,
+      "accepted": 105,
+      "summary": {
+        "label": "w14-d20181112-s10-r2-w17-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 144314368,
+              "rssBeforeBytes": 84025344,
+              "systemCpuMilliseconds": 21750,
+              "userCpuMilliseconds": 50859,
+              "wallMilliseconds": 771098
+            },
+            "semanticHash": "1f7de23bae2bda5892bc68bc9dd83c05d72cbb01252d78fdddde94910fc407b9"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "1f7de23bae2bda5892bc68bc9dd83c05d72cbb01252d78fdddde94910fc407b9",
+        "sourceScenarioContentSha256": "8fc38fde100fd459ff7554e82e17174a105d450d9bfadf043ac1309269b1d3b3",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181112-s10-r3-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r3-w08-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 106,
+      "accepted": 106,
+      "summary": {
+        "label": "w14-d20181112-s10-r3-w08-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 149405696,
+              "rssBeforeBytes": 83800064,
+              "systemCpuMilliseconds": 23281,
+              "userCpuMilliseconds": 52109,
+              "wallMilliseconds": 815014
+            },
+            "semanticHash": "c4ad649385a539cb705208621a3395335a36cf36441f98f363575dfbc7937016"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "c4ad649385a539cb705208621a3395335a36cf36441f98f363575dfbc7937016",
+        "sourceScenarioContentSha256": "3c173e626c7a1d4abb99d8f6dabe9123450bcb111e142b1daf9cd627842a4410",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181112-s10-r3-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r3-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 101,
+      "accepted": 101,
+      "summary": {
+        "label": "w14-d20181112-s10-r3-w17-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 144732160,
+              "rssBeforeBytes": 84049920,
+              "systemCpuMilliseconds": 20625,
+              "userCpuMilliseconds": 47438,
+              "wallMilliseconds": 688329
+            },
+            "semanticHash": "27f13f7ee1534f85ac0ab445e4c43b92d09b643b01e4c01f6bcfc7990d367c4a"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "27f13f7ee1534f85ac0ab445e4c43b92d09b643b01e4c01f6bcfc7990d367c4a",
+        "sourceScenarioContentSha256": "76a581ff37c53d0a75ac7dc642d5d89cd9380081e1274b14310f33a636052793",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181112-s10-r4-w08",
+      "role": "cal",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w08-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181112-s10-r4-w08-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 145797120,
+              "rssBeforeBytes": 84103168,
+              "systemCpuMilliseconds": 21531,
+              "userCpuMilliseconds": 51047,
+              "wallMilliseconds": 806072
+            },
+            "semanticHash": "46b9d319a118766f8192e00c693d71a4785228c2e3e3d35931ad5dd9565360d6"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "46b9d319a118766f8192e00c693d71a4785228c2e3e3d35931ad5dd9565360d6",
+        "sourceScenarioContentSha256": "3871c42e58fff92bcaa9ce0de6efc1dded209f0c40a346cd8828663b72019e91",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181112-s10-r4-w17",
+      "role": "cal",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 99,
+      "accepted": 99,
+      "summary": {
+        "label": "w14-d20181112-s10-r4-w17-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 142180352,
+              "rssBeforeBytes": 84017152,
+              "systemCpuMilliseconds": 20969,
+              "userCpuMilliseconds": 48219,
+              "wallMilliseconds": 631203
+            },
+            "semanticHash": "5e9637a9696382f9b96e6cc2798912b9e2202db53c8932f89f891d48759099e0"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "5e9637a9696382f9b96e6cc2798912b9e2202db53c8932f89f891d48759099e0",
+        "sourceScenarioContentSha256": "794802a5087a7c479cca959d21ba35766f1f9685982d9b7ecb6ea1d772e10cda",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181113-s10-r1-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w08-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181113-s10-r1-w08-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140759040,
+              "rssBeforeBytes": 83603456,
+              "systemCpuMilliseconds": 20109,
+              "userCpuMilliseconds": 49594,
+              "wallMilliseconds": 658818
+            },
+            "semanticHash": "8c0c61494c282b0306a682ac2d65a245de1fe2ee8fab004d3dcbebe898a7b74c"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "8c0c61494c282b0306a682ac2d65a245de1fe2ee8fab004d3dcbebe898a7b74c",
+        "sourceScenarioContentSha256": "fc8ee9d70043acca4f1c8f49d4701b4bd45bbef0568f9cd8e49132eea72209c3",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181113-s10-r1-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 96,
+      "accepted": 96,
+      "summary": {
+        "label": "w14-d20181113-s10-r1-w17-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 142118912,
+              "rssBeforeBytes": 84152320,
+              "systemCpuMilliseconds": 20500,
+              "userCpuMilliseconds": 47203,
+              "wallMilliseconds": 653913
+            },
+            "semanticHash": "851602cf25ba3f72a9243ed6c8c3223b695cd87b1b23b014cd5d387f0bf05b40"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "851602cf25ba3f72a9243ed6c8c3223b695cd87b1b23b014cd5d387f0bf05b40",
+        "sourceScenarioContentSha256": "84f53e0eaa4f9a5bddcf4137ac6251d1b0ef6d9627b74b0fb9b868add1141800",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181113-s10-r2-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w08-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 104,
+      "accepted": 104,
+      "summary": {
+        "label": "w14-d20181113-s10-r2-w08-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 142336000,
+              "rssBeforeBytes": 83779584,
+              "systemCpuMilliseconds": 20406,
+              "userCpuMilliseconds": 49516,
+              "wallMilliseconds": 755467
+            },
+            "semanticHash": "a27b1aebd20df60ad0a316556befd76c758fc738f6f28449f607164072833145"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "a27b1aebd20df60ad0a316556befd76c758fc738f6f28449f607164072833145",
+        "sourceScenarioContentSha256": "557dbc4c208fa7d858d10971362574864f5415913df49681f260e12cccb5a3a4",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181113-s10-r2-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 100,
+      "accepted": 100,
+      "summary": {
+        "label": "w14-d20181113-s10-r2-w17-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 141643776,
+              "rssBeforeBytes": 83988480,
+              "systemCpuMilliseconds": 20219,
+              "userCpuMilliseconds": 47016,
+              "wallMilliseconds": 707071
+            },
+            "semanticHash": "4dfa838798d819b3a09bcfa908551c7c34dd77099ce019d7c526a95e3c713b61"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "4dfa838798d819b3a09bcfa908551c7c34dd77099ce019d7c526a95e3c713b61",
+        "sourceScenarioContentSha256": "43f6e95c4de437f1de091fc8459e0c5d85f663fe089b3e2e84b991396afed75f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181113-s10-r3-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r3-w08-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 103,
+      "accepted": 103,
+      "summary": {
+        "label": "w14-d20181113-s10-r3-w08-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 143609856,
+              "rssBeforeBytes": 84295680,
+              "systemCpuMilliseconds": 20359,
+              "userCpuMilliseconds": 49125,
+              "wallMilliseconds": 679964
+            },
+            "semanticHash": "05bdac073ead573076a2e06506f9eb11116f8ea323141b2758d4990c69a081d7"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "05bdac073ead573076a2e06506f9eb11116f8ea323141b2758d4990c69a081d7",
+        "sourceScenarioContentSha256": "966b0a8b7ca4dc66cb39aba91063869cf237759629e2c8fbc2af1a94c482a848",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181113-s10-r3-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r3-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 100,
+      "accepted": 100,
+      "summary": {
+        "label": "w14-d20181113-s10-r3-w17-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 143441920,
+              "rssBeforeBytes": 83685376,
+              "systemCpuMilliseconds": 20969,
+              "userCpuMilliseconds": 48547,
+              "wallMilliseconds": 671846
+            },
+            "semanticHash": "c8c555d05a196d04ca2b085a45d2736a266871503e22d2c4dd4ca9b7152bde82"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "c8c555d05a196d04ca2b085a45d2736a266871503e22d2c4dd4ca9b7152bde82",
+        "sourceScenarioContentSha256": "61726a7a6d3c24832295edd5dfc40ad5bd0d544ca70b7428737d3fb1e7acf578",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181113-s10-r4-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w08-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 101,
+      "accepted": 101,
+      "summary": {
+        "label": "w14-d20181113-s10-r4-w08-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 145649664,
+              "rssBeforeBytes": 83726336,
+              "systemCpuMilliseconds": 20609,
+              "userCpuMilliseconds": 49031,
+              "wallMilliseconds": 694790
+            },
+            "semanticHash": "1dfd73fcc8be7dbf2678e57bb38523ff6998c8f3475bce9fd86dd9c7c840327a"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "1dfd73fcc8be7dbf2678e57bb38523ff6998c8f3475bce9fd86dd9c7c840327a",
+        "sourceScenarioContentSha256": "d0878af1fc45b0687f607dcd786b9908c048bcfd83d2998a5397aab12cf69d64",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "FREE",
+      "cell": "d20181113-s10-r4-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 101,
+      "accepted": 101,
+      "summary": {
+        "label": "w14-d20181113-s10-r4-w17-b1-ref-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 148213760,
+              "rssBeforeBytes": 83808256,
+              "systemCpuMilliseconds": 21703,
+              "userCpuMilliseconds": 50641,
+              "wallMilliseconds": 737734
+            },
+            "semanticHash": "33d3368d8f2e3fe9b58ad200d2a0d0320410bdb57b1c7f54c89685b9bb929337"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "33d3368d8f2e3fe9b58ad200d2a0d0320410bdb57b1c7f54c89685b9bb929337",
+        "sourceScenarioContentSha256": "f075019a495d45300840782751c2e288a09eb51cb818e74971b1e9d80e210c8e",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181112-s10-r1-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 103,
+      "accepted": 103,
+      "summary": {
+        "label": "w14-d20181112-s10-r1-w08-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140472320,
+              "rssBeforeBytes": 84086784,
+              "systemCpuMilliseconds": 22688,
+              "userCpuMilliseconds": 50500,
+              "wallMilliseconds": 645504
+            },
+            "semanticHash": "4a0ee3d82bb6d6b8a898f5e094695a61614e96af36239b5da363929d6d786fd5"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "4a0ee3d82bb6d6b8a898f5e094695a61614e96af36239b5da363929d6d786fd5",
+        "sourceScenarioContentSha256": "9f9c177d806875eba9edb8f247405317fa809347bb6f3957818ee225c0147cd4",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181112-s10-r1-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w17-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 99,
+      "accepted": 99,
+      "summary": {
+        "label": "w14-d20181112-s10-r1-w17-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 146456576,
+              "rssBeforeBytes": 84238336,
+              "systemCpuMilliseconds": 21359,
+              "userCpuMilliseconds": 50938,
+              "wallMilliseconds": 756889
+            },
+            "semanticHash": "3236374627d19ecb3fb9ad31ce34a030f8732e7c28773f66d3d709f2b84ee2c9"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "3236374627d19ecb3fb9ad31ce34a030f8732e7c28773f66d3d709f2b84ee2c9",
+        "sourceScenarioContentSha256": "b8c57b09cc643641b2f7d50cdabf96fa348b61fefe15e5a9931bf900758a244f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181112-s10-r2-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 99,
+      "accepted": 99,
+      "summary": {
+        "label": "w14-d20181112-s10-r2-w08-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 139743232,
+              "rssBeforeBytes": 84086784,
+              "systemCpuMilliseconds": 20422,
+              "userCpuMilliseconds": 48656,
+              "wallMilliseconds": 668098
+            },
+            "semanticHash": "c0168d5c1e4666f6dcff785ef14ec66413bc33ab77def754c0c66db612265b2f"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "c0168d5c1e4666f6dcff785ef14ec66413bc33ab77def754c0c66db612265b2f",
+        "sourceScenarioContentSha256": "aeac0b15efca5345064bad400025606c5ab9d794a2ebf5a10f1eab2575562108",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181112-s10-r2-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w17-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181112-s10-r2-w17-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 138391552,
+              "rssBeforeBytes": 84369408,
+              "systemCpuMilliseconds": 20516,
+              "userCpuMilliseconds": 48469,
+              "wallMilliseconds": 664343
+            },
+            "semanticHash": "d111301c6af531017a96bb251e806af74f4f3dd719c59c6fabb4bfa24d910f83"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "d111301c6af531017a96bb251e806af74f4f3dd719c59c6fabb4bfa24d910f83",
+        "sourceScenarioContentSha256": "8fc38fde100fd459ff7554e82e17174a105d450d9bfadf043ac1309269b1d3b3",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181112-s10-r3-w08",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r3-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181112-s10-r3-w08-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 142241792,
+              "rssBeforeBytes": 83939328,
+              "systemCpuMilliseconds": 21797,
+              "userCpuMilliseconds": 52109,
+              "wallMilliseconds": 681204
+            },
+            "semanticHash": "933a1d0b27bf5bb0256cfe1b1e9c1f34efc86667d0c3db0835b6333e65a8fe49"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "933a1d0b27bf5bb0256cfe1b1e9c1f34efc86667d0c3db0835b6333e65a8fe49",
+        "sourceScenarioContentSha256": "3c173e626c7a1d4abb99d8f6dabe9123450bcb111e142b1daf9cd627842a4410",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181112-s10-r3-w17",
+      "role": "fit",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r3-w17-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 91,
+      "accepted": 91,
+      "summary": {
+        "label": "w14-d20181112-s10-r3-w17-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 137203712,
+              "rssBeforeBytes": 84078592,
+              "systemCpuMilliseconds": 18453,
+              "userCpuMilliseconds": 45453,
+              "wallMilliseconds": 544860
+            },
+            "semanticHash": "8527f02207ca76cddf1b72871dc140dcac6eb7dd05ff4afc508d8cc28a319b4d"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "8527f02207ca76cddf1b72871dc140dcac6eb7dd05ff4afc508d8cc28a319b4d",
+        "sourceScenarioContentSha256": "76a581ff37c53d0a75ac7dc642d5d89cd9380081e1274b14310f33a636052793",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181112-s10-r4-w08",
+      "role": "cal",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181112-s10-r4-w08-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 143093760,
+              "rssBeforeBytes": 84148224,
+              "systemCpuMilliseconds": 20922,
+              "userCpuMilliseconds": 48938,
+              "wallMilliseconds": 735381
+            },
+            "semanticHash": "56a2c6d72a1f4caa2d8c4725efa64270ab9ebb707f35c0b5ca1671f23d12c3db"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "56a2c6d72a1f4caa2d8c4725efa64270ab9ebb707f35c0b5ca1671f23d12c3db",
+        "sourceScenarioContentSha256": "3871c42e58fff92bcaa9ce0de6efc1dded209f0c40a346cd8828663b72019e91",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181112-s10-r4-w17",
+      "role": "cal",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w17-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181112-s10-r4-w17-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 139751424,
+              "rssBeforeBytes": 83914752,
+              "systemCpuMilliseconds": 21016,
+              "userCpuMilliseconds": 48719,
+              "wallMilliseconds": 629112
+            },
+            "semanticHash": "04f56e11b92c2f9fd33a54379207f8a99e71d198bb4bfe61a20a3f2f2dd415cb"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "04f56e11b92c2f9fd33a54379207f8a99e71d198bb4bfe61a20a3f2f2dd415cb",
+        "sourceScenarioContentSha256": "794802a5087a7c479cca959d21ba35766f1f9685982d9b7ecb6ea1d772e10cda",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181113-s10-r1-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 102,
+      "accepted": 102,
+      "summary": {
+        "label": "w14-d20181113-s10-r1-w08-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 137007104,
+              "rssBeforeBytes": 84103168,
+              "systemCpuMilliseconds": 21344,
+              "userCpuMilliseconds": 48578,
+              "wallMilliseconds": 640276
+            },
+            "semanticHash": "e5c20c03ce0e7eabb9a5c401f57770628b4fd164bc060a2f8e457b7a3d43d83d"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "e5c20c03ce0e7eabb9a5c401f57770628b4fd164bc060a2f8e457b7a3d43d83d",
+        "sourceScenarioContentSha256": "fc8ee9d70043acca4f1c8f49d4701b4bd45bbef0568f9cd8e49132eea72209c3",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181113-s10-r1-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w17-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 96,
+      "accepted": 96,
+      "summary": {
+        "label": "w14-d20181113-s10-r1-w17-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 138850304,
+              "rssBeforeBytes": 84123648,
+              "systemCpuMilliseconds": 19516,
+              "userCpuMilliseconds": 47672,
+              "wallMilliseconds": 628011
+            },
+            "semanticHash": "11972073632c36afc529a91afa03335240d7ad93f145b3cb7b117c52e7812056"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "11972073632c36afc529a91afa03335240d7ad93f145b3cb7b117c52e7812056",
+        "sourceScenarioContentSha256": "84f53e0eaa4f9a5bddcf4137ac6251d1b0ef6d9627b74b0fb9b868add1141800",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181113-s10-r2-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 105,
+      "accepted": 105,
+      "summary": {
+        "label": "w14-d20181113-s10-r2-w08-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 142327808,
+              "rssBeforeBytes": 84152320,
+              "systemCpuMilliseconds": 21984,
+              "userCpuMilliseconds": 50625,
+              "wallMilliseconds": 719510
+            },
+            "semanticHash": "d79ad2137e46bebd0f48a099413ad321caa6324fc8b1528555c382618b0456d0"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "d79ad2137e46bebd0f48a099413ad321caa6324fc8b1528555c382618b0456d0",
+        "sourceScenarioContentSha256": "557dbc4c208fa7d858d10971362574864f5415913df49681f260e12cccb5a3a4",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181113-s10-r2-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w17-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181113-s10-r2-w17-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140439552,
+              "rssBeforeBytes": 84205568,
+              "systemCpuMilliseconds": 20344,
+              "userCpuMilliseconds": 48156,
+              "wallMilliseconds": 682110
+            },
+            "semanticHash": "086db89953814d89828083c957ad1697850e21578d3a8e72210ee7ea40fbaff9"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "086db89953814d89828083c957ad1697850e21578d3a8e72210ee7ea40fbaff9",
+        "sourceScenarioContentSha256": "43f6e95c4de437f1de091fc8459e0c5d85f663fe089b3e2e84b991396afed75f",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181113-s10-r3-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r3-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 99,
+      "accepted": 99,
+      "summary": {
+        "label": "w14-d20181113-s10-r3-w08-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 140378112,
+              "rssBeforeBytes": 83808256,
+              "systemCpuMilliseconds": 20109,
+              "userCpuMilliseconds": 49562,
+              "wallMilliseconds": 652228
+            },
+            "semanticHash": "10f1c85b2ea3c2bd419ced00c0944439e91502bad6af8ebdbf7b4e8e15e3b7bc"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "10f1c85b2ea3c2bd419ced00c0944439e91502bad6af8ebdbf7b4e8e15e3b7bc",
+        "sourceScenarioContentSha256": "966b0a8b7ca4dc66cb39aba91063869cf237759629e2c8fbc2af1a94c482a848",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181113-s10-r3-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r3-w17-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 95,
+      "accepted": 95,
+      "summary": {
+        "label": "w14-d20181113-s10-r3-w17-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 136441856,
+              "rssBeforeBytes": 83845120,
+              "systemCpuMilliseconds": 18812,
+              "userCpuMilliseconds": 47328,
+              "wallMilliseconds": 588878
+            },
+            "semanticHash": "cce5b35ae632b1205e4a5b7a413d17a616ae4862c7b015beb30b8a15ebaa2ad7"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "cce5b35ae632b1205e4a5b7a413d17a616ae4862c7b015beb30b8a15ebaa2ad7",
+        "sourceScenarioContentSha256": "61726a7a6d3c24832295edd5dfc40ad5bd0d544ca70b7428737d3fb1e7acf578",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181113-s10-r4-w08",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 98,
+      "accepted": 98,
+      "summary": {
+        "label": "w14-d20181113-s10-r4-w08-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 139882496,
+              "rssBeforeBytes": 84111360,
+              "systemCpuMilliseconds": 19781,
+              "userCpuMilliseconds": 48500,
+              "wallMilliseconds": 646346
+            },
+            "semanticHash": "58c5aa0042cbf4fc35dfb6219253b8b532ffdace47b361405b88e20bc2189c08"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "58c5aa0042cbf4fc35dfb6219253b8b532ffdace47b361405b88e20bc2189c08",
+        "sourceScenarioContentSha256": "d0878af1fc45b0687f607dcd786b9908c048bcfd83d2998a5397aab12cf69d64",
+        "status": "pass"
+      }
+    },
+    {
+      "world": "static",
+      "arm": "LOCKS",
+      "cell": "d20181113-s10-r4-w17",
+      "role": "test13",
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r4-w17-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "csv_rows": 99,
+      "accepted": 99,
+      "summary": {
+        "label": "w14-d20181113-s10-r4-w17-c1-nobudget-s7",
+        "repeatCount": 1,
+        "repositoryInventorySha256": "1a2102ebc9a4ce576059465ff93df3524991f4f875942c0a5ccbe90c8b618ab8",
+        "runs": [
+          {
+            "repeat": 0,
+            "resources": {
+              "rssAfterBytes": 144310272,
+              "rssBeforeBytes": 84090880,
+              "systemCpuMilliseconds": 21000,
+              "userCpuMilliseconds": 49188,
+              "wallMilliseconds": 670119
+            },
+            "semanticHash": "a113da818557b50b5ac69306a7a55622527f958b7db80df6aa847a56d54ca375"
+          }
+        ],
+        "schemaVersion": "1.0.0",
+        "semanticHash": "a113da818557b50b5ac69306a7a55622527f958b7db80df6aa847a56d54ca375",
+        "sourceScenarioContentSha256": "f075019a495d45300840782751c2e288a09eb51cb818e74971b1e9d80e210c8e",
+        "status": "pass"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w07\\transcript-00.ndjson",
+      "sha256": "870f451a90ed7c4c41f229fee20ee37a122cf762cef16bc8e704b96ef5f63172",
+      "frames": 1333,
+      "promised": 47,
+      "completed": 47
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r2-w07\\transcript-00.ndjson",
+      "sha256": "15732e0f1c1243af698531ec158e94c8c4ab9b6c40c9f24c31511c5345df539b",
+      "frames": 1549,
+      "promised": 58,
+      "completed": 58
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w07\\transcript-00.ndjson",
+      "sha256": "3463f78617acd36c816719754961b1cd14b3ca7d342e8d7e9dd672f6b10565c2",
+      "frames": 1777,
+      "promised": 68,
+      "completed": 68
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w07\\transcript-00.ndjson",
+      "sha256": "9d50fe9cd3f7628a77faf67f75a7d05a8293dbd07314907e5637543321873924",
+      "frames": 1333,
+      "promised": 47,
+      "completed": 47
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r2-w07\\transcript-00.ndjson",
+      "sha256": "b04838e43776eb29851cadfcc52298537f760bae961231b7664b0d3577c6672d",
+      "frames": 1504,
+      "promised": 56,
+      "completed": 56
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w07\\transcript-00.ndjson",
+      "sha256": "bb8d914fd6c7d11591cdb341ea94918b5eb788ca151f4c8d8390a2b69d26b6fc",
+      "frames": 1777,
+      "promised": 68,
+      "completed": 68
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\C-30-d20181112-s10-r4-w07\\transcript-00.ndjson",
+      "sha256": "3b4d8fbe54312208121f3db9109dd2bd043a1c99c72b7cc8d71ab52e7c6a9f19",
+      "frames": 2149,
+      "promised": 86,
+      "completed": 86
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\U-d20181112-s10-r4-w07\\transcript-00.ndjson",
+      "sha256": "4e616f4ea5437824112bb1e1c247ee7be42934e54d1033bdd7314f8cf4f4d211",
+      "frames": 2164,
+      "promised": 87,
+      "completed": 87
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "bb3fd4c72c9250753cf259e47fa6785ba5b63b4e2c84920b03fb2fd7065c54a6",
+      "frames": 2434,
+      "promised": 102,
+      "completed": 102
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w17-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "e00cff9548949bb0c0ee83cb63110c8334f4955e261ba8c03081e50085db8a23",
+      "frames": 2368,
+      "promised": 99,
+      "completed": 99
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "9472405faf4976d2077959ed7c8e48b49454a83d15142f8961c0a33867a1a109",
+      "frames": 2386,
+      "promised": 99,
+      "completed": 99
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "f7fff086b7f1c4f48b014a158da62d66f5e6fda603759f01d096fe0ae92dca0a",
+      "frames": 2386,
+      "promised": 99,
+      "completed": 99
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r2-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "c9348ecdf6d4222ba69917a708bf920c04b51096c8c475eeb204790226652e40",
+      "frames": 2410,
+      "promised": 100,
+      "completed": 100
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "ca2bde3c233d77d9f1dd9c5cb7c78d6f20752c72eb1e63b3f08c6f17f840eade",
+      "frames": 2365,
+      "promised": 98,
+      "completed": 98
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "eb47d5df36c29aecc76284625d1c4cfc4cc81af338e3e18941b7689e58f79fbe",
+      "frames": 2368,
+      "promised": 99,
+      "completed": 99
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w17-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "27026119b2edd3c0149da92beedab96e14d9fd77ddbf97bd8c752be878ba7bc4",
+      "frames": 2320,
+      "promised": 96,
+      "completed": 96
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w17-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "1cbb3d9f3eeea970aab64a72ea095f8e6d2cc20be8c32d8078877f57304ba9e8",
+      "frames": 2257,
+      "promised": 93,
+      "completed": 93
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r4-w17-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "54626644bd17f73cf2d31c3778898f5c29978d69984b9e202384f761d4834004",
+      "frames": 2257,
+      "promised": 93,
+      "completed": 93
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r1-w17-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "5bc198304315dcf8eb56a504433273b3dad066eb8ea4a7352f91ad5ddce4d113",
+      "frames": 2320,
+      "promised": 96,
+      "completed": 96
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "3863b5caf37c3a18e61848e6176e27f835376753d795adafe3f3d8b95ce3b527",
+      "frames": 2503,
+      "promised": 105,
+      "completed": 105
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "3154ccb8fcc079e1f062b77de10d59c65e0697462c891e1c7b961bb77f42cdfb",
+      "frames": 2482,
+      "promised": 104,
+      "completed": 104
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "bab309166f5a852123e76fc762a91f0a2e90cb72ce8543a3fe48cf3cedd011e8",
+      "frames": 2482,
+      "promised": 104,
+      "completed": 104
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181113-s10-r2-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "ac47f9076c147a7b2f2ce6264b6bc5722ca8e5dcb70d59854ce8bbd4dc9f7282",
+      "frames": 2503,
+      "promised": 105,
+      "completed": 105
+    }
+  ],
+  "selection_rule": "Highest service-assigned/onboard then forecast-extension rider in each world/arm/role; selected before transcript parsing.",
+  "scope": "Checks numerical and causal timing of selected rows; does not recover source-trip groups or certify global provenance."
+}

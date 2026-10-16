@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-10T15:31:36.872Z",
+  "result": "PASS",
+  "downloadedTextFiles": 49,
+  "selectedRepositories": 6,
+  "downloadBytes": 697963,
+  "sourceHashesVerified": 49,
+  "ruleCount": 37,
+  "allQuoteLocatorsVerified": true,
+  "allRelativeReportLinksExist": true,
+  "unicodeVietnameseVerified": true,
+  "sourceFilesAllowedTypes": [
+    ".md",
+    "LICENSE"
+  ],
+  "downloadsExecuted": false,
+  "installs": false,
+  "builds": false,
+  "simulations": false,
+  "writeMode": "exclusive-create (wx)",
+  "supersededIntermediate": "rule-provenance.json; use rule-provenance-utf8.json",
+  "errors": []
+}

@@ -1,0 +1,3 @@
+21 cells: served 1471, dispatch==0 1452, |A-S_true|<=2s 1452/1452, max dev 1.649 s
+13 cells: served 867, dispatch==0 853, |A-S_true|<=2s 853/853, max dev 1.134 s
+34 cells: served 2338, dispatch==0 2305, |A-S_true|<=2s 2305/2305

@@ -1,0 +1,111 @@
+{
+  "check_time": "2026-10-13T19:27:25.845490+07:00",
+  "files_scanned": {
+    "07-chuong3-v3.tex": [
+      "alonsomora2017",
+      "engelhardt2026",
+      "fielbaum2020",
+      "horl2022",
+      "ortools",
+      "schulz2026"
+    ],
+    "08-chuong4-phanA-v4.tex": [
+      "engelhardt2026",
+      "schulz2026"
+    ],
+    "09-chuong4-phanB-v7.tex": [
+      "engelhardt2026",
+      "horl2022",
+      "schulz2026"
+    ],
+    "06-chuong2-v2.tex": [
+      "alonsogonzalez2020",
+      "alonsomora2017",
+      "elmi2026",
+      "engelhardt2026",
+      "fielbaum2020",
+      "horl2022",
+      "hu2022",
+      "kovacs2014",
+      "laupichler2026",
+      "leonardi2024",
+      "lu2024",
+      "molenbruch2017",
+      "schulz2026",
+      "sridharan1987",
+      "tlc",
+      "wardman2026",
+      "yu2022"
+    ],
+    "06-chuong2-v3.tex": [
+      "alonsogonzalez2020",
+      "alonsomora2017",
+      "elmi2026",
+      "engelhardt2026",
+      "fielbaum2020",
+      "horl2022",
+      "hu2022",
+      "laupichler2026",
+      "leonardi2024",
+      "lu2024",
+      "molenbruch2017",
+      "schulz2026",
+      "tlc",
+      "wardman2026",
+      "yu2022"
+    ],
+    "06-chuong2-v4.tex": [
+      "alonsogonzalez2020",
+      "alonsomora2017",
+      "elmi2026",
+      "engelhardt2026",
+      "fielbaum2020",
+      "horl2022",
+      "hu2022",
+      "laupichler2026",
+      "leonardi2024",
+      "lu2024",
+      "molenbruch2017",
+      "schulz2026",
+      "tlc",
+      "wardman2026",
+      "yu2022"
+    ],
+    "06-chuong2.tex": [
+      "alonsogonzalez2020",
+      "alonsomora2017",
+      "elmi2026",
+      "engelhardt2026",
+      "fielbaum2020",
+      "horl2022",
+      "hu2022",
+      "kovacs2014",
+      "laupichler2026",
+      "leonardi2024",
+      "lu2024",
+      "molenbruch2017",
+      "schulz2026",
+      "sridharan1987",
+      "tlc",
+      "wardman2026",
+      "yu2022"
+    ]
+  },
+  "statuses": {
+    "VERIFIED": 45,
+    "CORRECTED": 7,
+    "CANNOT VERIFY": 1
+  },
+  "bibitems": 23,
+  "missing_cited_keys": [],
+  "unescaped_percent_signs_in_tex": 0,
+  "metadata_rows": 53,
+  "register_mapping_rows": 42,
+  "outputs": [
+    "BIB-VERIFICATION-v2.md",
+    "10-tai-lieu-draft-v2.tex",
+    "HORL-ZWICK-RESOLUTION-v2.md"
+  ],
+  "all_original_files_preserved": true,
+  "latex_build_run": false
+}

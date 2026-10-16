@@ -1,0 +1,65 @@
+{
+  "utc": "2026-10-09T17:12:25.919742+00:00",
+  "results": [
+    {
+      "name": "chicago-meta",
+      "url": "https://data.cityofchicago.org/api/views/m6dm-c72p.json",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "chicago-sample",
+      "url": "https://data.cityofchicago.org/resource/m6dm-c72p.json?%24select=trip_start_timestamp%2Ctrip_end_timestamp%2Ctrip_seconds%2Cshared_trip_authorized%2Ctrips_pooled&%24limit=5",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "nyc-hvf2019-meta",
+      "url": "https://data.cityofnewyork.us/api/views/4p5c-cbgn.json",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "nyc-hvf2019-sample",
+      "url": "https://data.cityofnewyork.us/resource/4p5c-cbgn.json?%24limit=3",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "nyc-tlc-page",
+      "url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+      "final_url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "d2c00c05d39a887caebc2159f24e4a20a655d150e87d4b9fcaf58ca95f490fe0",
+      "bytes": 144617,
+      "file": "R13-public-nyc-tlc-page.txt"
+    },
+    {
+      "name": "nyc-hvf-dictionary",
+      "url": "https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_hvfhs.pdf",
+      "final_url": "https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_hvfhs.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "5458c35b4cb989c69f1211fa9bfe7462d6ba157569de4aa0480e764b2037c41a",
+      "bytes": 117347,
+      "file": "R13-public-nyc-hvf-dictionary.pdf"
+    },
+    {
+      "name": "lyft-help",
+      "url": "https://help.lyft.com/hc/en-us/all/articles/115013078668",
+      "final_url": "https://help.lyft.com/hc/en-us/all/articles/115013078668",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "db3a25a72af5568dbcec96c65fba7e9e8dea5ef027a4072aeb0e4ac2d9ca81e0",
+      "bytes": 293443,
+      "file": "R13-public-lyft-help.txt"
+    },
+    {
+      "name": "grubhub-terms",
+      "url": "https://lp.grubhub.com/legal/ghgterms",
+      "final_url": "https://lp.grubhub.com/legal/ghgterms/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "abede47a6a384c6c3cfc3ec4706d68e831764ac96d37a0e355a2f95455d916b7",
+      "bytes": 134245,
+      "file": "R13-public-grubhub-terms.txt"
+    }
+  ]
+}

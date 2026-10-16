@@ -1,0 +1,35 @@
+{
+  "final_file": "05-chuong1-v4-v4.tex",
+  "log": "05-chuong1-v4-LOG.md",
+  "reader_54": {
+    "A": 32,
+    "M": 21,
+    "R": 1
+  },
+  "ranked_10": {
+    "M": 10
+  },
+  "numeric_49": {
+    "A": 44,
+    "M": 5
+  },
+  "all_113": {
+    "A": 76,
+    "M": 36,
+    "R": 1
+  },
+  "words_opening_sections_1_to_6": [
+    47,
+    492,
+    567,
+    202,
+    1085,
+    394,
+    48
+  ],
+  "total_words": 2835,
+  "rejected": [
+    "P36: unsupported blanket that all rows protect a promise"
+  ],
+  "QA_errors": []
+}

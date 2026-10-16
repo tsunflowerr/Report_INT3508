@@ -1,0 +1,2201 @@
+{
+  "pdf": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\thesis-final-2026-10-04\\thesis_final.pdf",
+  "sha256": "e7a4712663ad2167f2bbbffd7330fa0c64a580964cff558b3d3dc2ecba14454c",
+  "bytes": 594610,
+  "pages": 68,
+  "metadata": {
+    "format": "PDF 1.5",
+    "title": "Lời hứa có biên được chứng nhận trong điều phối xe đi chung theo yêu cầu",
+    "author": "Trần Quang Thành",
+    "subject": "Khóa luận tốt nghiệp Công nghệ thông tin",
+    "keywords": "",
+    "creator": "LaTeX with hyperref",
+    "producer": "xdvipdfmx (0.1)",
+    "creationDate": "D:20261005014616-00'00'",
+    "modDate": "",
+    "trapped": "",
+    "encryption": null
+  },
+  "allFontsEmbedded": true,
+  "fonts": [
+    {
+      "xref": 5,
+      "name": "IHAIZV+TimesNewRomanPS-BoldMT",
+      "extension": "ttf",
+      "kind": "Type0",
+      "embeddedBytes": 68720,
+      "embedded": true
+    },
+    {
+      "xref": 9,
+      "name": "BZIVMZ+TimesNewRomanPSMT",
+      "extension": "ttf",
+      "kind": "Type0",
+      "embeddedBytes": 99719,
+      "embedded": true
+    },
+    {
+      "xref": 21,
+      "name": "YEUUOC+CMR12",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 2649,
+      "embedded": true
+    },
+    {
+      "xref": 22,
+      "name": "AKHCZK+CMMI12",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 7579,
+      "embedded": true
+    },
+    {
+      "xref": 139,
+      "name": "VDVGTR+CMSY9",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 1009,
+      "embedded": true
+    },
+    {
+      "xref": 161,
+      "name": "CAFSZL+CMR9",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 1304,
+      "embedded": true
+    },
+    {
+      "xref": 177,
+      "name": "DDIEWW+CMMI9",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 3967,
+      "embedded": true
+    },
+    {
+      "xref": 178,
+      "name": "FKPJSN+CMSY10",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 2356,
+      "embedded": true
+    },
+    {
+      "xref": 179,
+      "name": "PVTTLK+CMEX10",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 897,
+      "embedded": true
+    },
+    {
+      "xref": 190,
+      "name": "IXFAWU+TimesNewRomanPS-ItalicMT",
+      "extension": "ttf",
+      "kind": "Type0",
+      "embeddedBytes": 56879,
+      "embedded": true
+    },
+    {
+      "xref": 249,
+      "name": "TQTHRL+LMMono12-Regular-Identity-H",
+      "extension": "cid",
+      "kind": "Type0",
+      "embeddedBytes": 7817,
+      "embedded": true
+    },
+    {
+      "xref": 256,
+      "name": "FHXFSG+TimesNewRomanPSMT",
+      "extension": "ttf",
+      "kind": "Type0",
+      "embeddedBytes": 41912,
+      "embedded": true
+    },
+    {
+      "xref": 299,
+      "name": "JAGKKY+CMMI8",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 406,
+      "embedded": true
+    },
+    {
+      "xref": 300,
+      "name": "NOMARO+CMR8",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 480,
+      "embedded": true
+    },
+    {
+      "xref": 303,
+      "name": "KPXLOM+CMR6",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 351,
+      "embedded": true
+    },
+    {
+      "xref": 326,
+      "name": "UTACNV+CMMI6",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 451,
+      "embedded": true
+    },
+    {
+      "xref": 372,
+      "name": "FHXFSG+TimesNewRomanPSMT",
+      "extension": "ttf",
+      "kind": "Type0",
+      "embeddedBytes": 51080,
+      "embedded": true
+    },
+    {
+      "xref": 394,
+      "name": "FHXFSG+TimesNewRomanPSMT",
+      "extension": "ttf",
+      "kind": "Type0",
+      "embeddedBytes": 47904,
+      "embedded": true
+    },
+    {
+      "xref": 401,
+      "name": "FHXFSG+TimesNewRomanPS-BoldMT",
+      "extension": "ttf",
+      "kind": "Type0",
+      "embeddedBytes": 16336,
+      "embedded": true
+    },
+    {
+      "xref": 415,
+      "name": "FZDNHS+CMSY8",
+      "extension": "cff",
+      "kind": "Type1",
+      "embeddedBytes": 379,
+      "embedded": true
+    },
+    {
+      "xref": 436,
+      "name": "FHXFSG+TimesNewRomanPSMT",
+      "extension": "ttf",
+      "kind": "Type0",
+      "embeddedBytes": 46388,
+      "embedded": true
+    },
+    {
+      "xref": 458,
+      "name": "FHXFSG+TimesNewRomanPSMT",
+      "extension": "ttf",
+      "kind": "Type0",
+      "embeddedBytes": 45376,
+      "embedded": true
+    }
+  ],
+  "links": [
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 3,
+      "namedDestination": "chapter*.1"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 4,
+      "namedDestination": "chapter*.2"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 5,
+      "namedDestination": "chapter*.3"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 9,
+      "namedDestination": "section*.4"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 10,
+      "namedDestination": "section*.5"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 11,
+      "namedDestination": "chapter*.6"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 13,
+      "namedDestination": "chapter.1"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 13,
+      "namedDestination": "section.1.1"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 14,
+      "namedDestination": "section.1.2"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 15,
+      "namedDestination": "section.1.3"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 16,
+      "namedDestination": "section.1.4"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 16,
+      "namedDestination": "section.1.5"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 17,
+      "namedDestination": "chapter.2"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 17,
+      "namedDestination": "section.2.1"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 17,
+      "namedDestination": "subsection.2.1.1"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 17,
+      "namedDestination": "subsection.2.1.2"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 18,
+      "namedDestination": "section.2.2"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 18,
+      "namedDestination": "subsection.2.2.1"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 19,
+      "namedDestination": "subsection.2.2.2"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 20,
+      "namedDestination": "subsection.2.2.3"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 20,
+      "namedDestination": "section.2.3"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 21,
+      "namedDestination": "section.2.4"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 21,
+      "namedDestination": "section.2.5"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 23,
+      "namedDestination": "chapter.3"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 23,
+      "namedDestination": "section.3.1"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 23,
+      "namedDestination": "section.3.2"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 23,
+      "namedDestination": "subsection.3.2.1"
+    },
+    {
+      "physicalPage": 6,
+      "kind": 4,
+      "targetPhysicalPage": 24,
+      "namedDestination": "subsection.3.2.2"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 24,
+      "namedDestination": "section.3.3"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 24,
+      "namedDestination": "subsection.3.3.1"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 25,
+      "namedDestination": "subsection.3.3.2"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 26,
+      "namedDestination": "section.3.4"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 26,
+      "namedDestination": "section.3.5"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 26,
+      "namedDestination": "subsection.3.5.1"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 27,
+      "namedDestination": "subsection.3.5.2"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 27,
+      "namedDestination": "subsection.3.5.3"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 28,
+      "namedDestination": "subsection.3.5.4"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 30,
+      "namedDestination": "subsection.3.5.5"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 33,
+      "namedDestination": "subsection.3.5.6"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 33,
+      "namedDestination": "section.3.6"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 34,
+      "namedDestination": "section.3.7"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 34,
+      "namedDestination": "subsection.3.7.1"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 34,
+      "namedDestination": "subsection.3.7.2"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 35,
+      "namedDestination": "subsection.3.7.3"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 35,
+      "namedDestination": "section.3.8"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 36,
+      "namedDestination": "subsection.3.8.1"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 36,
+      "namedDestination": "subsection.3.8.2"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 38,
+      "namedDestination": "subsection.3.8.3"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 39,
+      "namedDestination": "chapter.4"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 39,
+      "namedDestination": "section.4.1"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 39,
+      "namedDestination": "subsection.4.1.1"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 39,
+      "namedDestination": "subsection.4.1.2"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 40,
+      "namedDestination": "subsection.4.1.3"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 42,
+      "namedDestination": "subsection.4.1.4"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 42,
+      "namedDestination": "subsection.4.1.5"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 43,
+      "namedDestination": "section.4.2"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 43,
+      "namedDestination": "subsection.4.2.1"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 44,
+      "namedDestination": "subsection.4.2.2"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 44,
+      "namedDestination": "subsection.4.2.3"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 44,
+      "namedDestination": "section.4.3"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 44,
+      "namedDestination": "subsection.4.3.1"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 45,
+      "namedDestination": "subsection.4.3.2"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 46,
+      "namedDestination": "subsection.4.3.3"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 47,
+      "namedDestination": "subsection.4.3.4"
+    },
+    {
+      "physicalPage": 7,
+      "kind": 4,
+      "targetPhysicalPage": 47,
+      "namedDestination": "section.4.4"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 47,
+      "namedDestination": "subsection.4.4.1"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 48,
+      "namedDestination": "subsection.4.4.2"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 49,
+      "namedDestination": "subsection.4.4.3"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 50,
+      "namedDestination": "subsection.4.4.4"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 50,
+      "namedDestination": "subsection.4.4.5"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 51,
+      "namedDestination": "section.4.5"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 51,
+      "namedDestination": "subsection.4.5.1"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 52,
+      "namedDestination": "subsection.4.5.2"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 52,
+      "namedDestination": "subsection.4.5.3"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 54,
+      "namedDestination": "subsection.4.5.4"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 55,
+      "namedDestination": "subsection.4.5.5"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 56,
+      "namedDestination": "subsection.4.5.6"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 57,
+      "namedDestination": "section.4.6"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 57,
+      "namedDestination": "subsection.4.6.1"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 58,
+      "namedDestination": "subsection.4.6.2"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 58,
+      "namedDestination": "subsection.4.6.3"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 60,
+      "namedDestination": "section.4.7"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 61,
+      "namedDestination": "section.4.8"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 61,
+      "namedDestination": "subsection.4.8.1"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 61,
+      "namedDestination": "subsection.4.8.2"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 62,
+      "namedDestination": "subsection.4.8.3"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 62,
+      "namedDestination": "subsection.4.8.4"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 63,
+      "namedDestination": "chapter.5"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 63,
+      "namedDestination": "section.5.1"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 64,
+      "namedDestination": "section.5.2"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 65,
+      "namedDestination": "section.5.3"
+    },
+    {
+      "physicalPage": 8,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "chapter*.45"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 25,
+      "namedDestination": "figure.caption.12"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 25,
+      "namedDestination": "figure.caption.12"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 46,
+      "namedDestination": "figure.caption.32"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 46,
+      "namedDestination": "figure.caption.32"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 46,
+      "namedDestination": "figure.caption.32"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 46,
+      "namedDestination": "figure.caption.32"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 48,
+      "namedDestination": "figure.caption.33"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 48,
+      "namedDestination": "figure.caption.33"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 48,
+      "namedDestination": "figure.caption.33"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 48,
+      "namedDestination": "figure.caption.33"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 53,
+      "namedDestination": "figure.caption.36"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 53,
+      "namedDestination": "figure.caption.36"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 53,
+      "namedDestination": "figure.caption.36"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 55,
+      "namedDestination": "figure.caption.37"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 55,
+      "namedDestination": "figure.caption.37"
+    },
+    {
+      "physicalPage": 9,
+      "kind": 4,
+      "targetPhysicalPage": 55,
+      "namedDestination": "figure.caption.37"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 20,
+      "namedDestination": "table.caption.10"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 31,
+      "namedDestination": "table.caption.20"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 35,
+      "namedDestination": "table.caption.23"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 40,
+      "namedDestination": "table.caption.27"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 41,
+      "namedDestination": "table.caption.28"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 41,
+      "namedDestination": "table.caption.28"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 41,
+      "namedDestination": "table.caption.29"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 41,
+      "namedDestination": "table.caption.29"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 43,
+      "namedDestination": "table.caption.30"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 45,
+      "namedDestination": "table.caption.31"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 50,
+      "namedDestination": "table.caption.34"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 50,
+      "namedDestination": "table.caption.34"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 53,
+      "namedDestination": "table.caption.35"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 53,
+      "namedDestination": "table.caption.35"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 57,
+      "namedDestination": "table.caption.38"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 57,
+      "namedDestination": "table.caption.38"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 57,
+      "namedDestination": "table.caption.38"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 58,
+      "namedDestination": "table.caption.39"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 58,
+      "namedDestination": "table.caption.39"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 58,
+      "namedDestination": "table.caption.39"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 59,
+      "namedDestination": "table.caption.40"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 60,
+      "namedDestination": "table.caption.41"
+    },
+    {
+      "physicalPage": 10,
+      "kind": 4,
+      "targetPhysicalPage": 60,
+      "namedDestination": "table.caption.41"
+    },
+    {
+      "physicalPage": 13,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.alonsomora2017"
+    },
+    {
+      "physicalPage": 13,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.fielbaum2020"
+    },
+    {
+      "physicalPage": 13,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.alonsogonzalez2020"
+    },
+    {
+      "physicalPage": 13,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.gerzinic2023"
+    },
+    {
+      "physicalPage": 14,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.fielbaum2020"
+    },
+    {
+      "physicalPage": 14,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.elmi2026"
+    },
+    {
+      "physicalPage": 14,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.schulz2026"
+    },
+    {
+      "physicalPage": 16,
+      "kind": 4,
+      "targetPhysicalPage": 68,
+      "namedDestination": "cite.fleetpy2026"
+    },
+    {
+      "physicalPage": 17,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.cordeau2007"
+    },
+    {
+      "physicalPage": 17,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.alonsomora2017"
+    },
+    {
+      "physicalPage": 18,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.fielbaum2022scale"
+    },
+    {
+      "physicalPage": 18,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.fielbaum2020"
+    },
+    {
+      "physicalPage": 19,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.elmi2026"
+    },
+    {
+      "physicalPage": 19,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.schulz2026"
+    },
+    {
+      "physicalPage": 19,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.haferkamp2024"
+    },
+    {
+      "physicalPage": 20,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.sivagnanam2026"
+    },
+    {
+      "physicalPage": 20,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.schmidt2026"
+    },
+    {
+      "physicalPage": 20,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.kovacs2014"
+    },
+    {
+      "physicalPage": 20,
+      "kind": 4,
+      "targetPhysicalPage": 68,
+      "namedDestination": "cite.tellez2022"
+    },
+    {
+      "physicalPage": 20,
+      "kind": 4,
+      "targetPhysicalPage": 68,
+      "namedDestination": "cite.ackermann2025"
+    },
+    {
+      "physicalPage": 20,
+      "kind": 4,
+      "targetPhysicalPage": 68,
+      "namedDestination": "cite.wang2026walking"
+    },
+    {
+      "physicalPage": 20,
+      "kind": 4,
+      "targetPhysicalPage": 20,
+      "namedDestination": "table.caption.10"
+    },
+    {
+      "physicalPage": 21,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.sridharan1987"
+    },
+    {
+      "physicalPage": 21,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.sridharan1988"
+    },
+    {
+      "physicalPage": 21,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.alonsogonzalez2020"
+    },
+    {
+      "physicalPage": 21,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.gerzinic2023"
+    },
+    {
+      "physicalPage": 21,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.bansal2019"
+    },
+    {
+      "physicalPage": 23,
+      "kind": 4,
+      "targetPhysicalPage": 39,
+      "namedDestination": "chapter.4"
+    },
+    {
+      "physicalPage": 24,
+      "kind": 4,
+      "targetPhysicalPage": 27,
+      "namedDestination": "subsection.3.5.3"
+    },
+    {
+      "physicalPage": 25,
+      "kind": 4,
+      "targetPhysicalPage": 25,
+      "namedDestination": "figure.caption.12"
+    },
+    {
+      "physicalPage": 26,
+      "kind": 4,
+      "targetPhysicalPage": 26,
+      "namedDestination": "section.3.5"
+    },
+    {
+      "physicalPage": 26,
+      "kind": 4,
+      "targetPhysicalPage": 24,
+      "namedDestination": "section.3.3"
+    },
+    {
+      "physicalPage": 27,
+      "kind": 4,
+      "targetPhysicalPage": 43,
+      "namedDestination": "section.4.2"
+    },
+    {
+      "physicalPage": 27,
+      "kind": 4,
+      "targetPhysicalPage": 27,
+      "namedDestination": "equation.3.5.5"
+    },
+    {
+      "physicalPage": 27,
+      "kind": 4,
+      "targetPhysicalPage": 43,
+      "namedDestination": "section.4.2"
+    },
+    {
+      "physicalPage": 29,
+      "kind": 4,
+      "targetPhysicalPage": 24,
+      "namedDestination": "subsection.3.3.1"
+    },
+    {
+      "physicalPage": 29,
+      "kind": 4,
+      "targetPhysicalPage": 27,
+      "namedDestination": "equation.3.5.5"
+    },
+    {
+      "physicalPage": 30,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.schulz2026"
+    },
+    {
+      "physicalPage": 30,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.sharifazadeh2022"
+    },
+    {
+      "physicalPage": 30,
+      "kind": 4,
+      "targetPhysicalPage": 27,
+      "namedDestination": "equation.3.5.5"
+    },
+    {
+      "physicalPage": 30,
+      "kind": 4,
+      "targetPhysicalPage": 31,
+      "namedDestination": "table.caption.20"
+    },
+    {
+      "physicalPage": 31,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.schulz2026"
+    },
+    {
+      "physicalPage": 31,
+      "kind": 4,
+      "targetPhysicalPage": 47,
+      "namedDestination": "section.4.4"
+    },
+    {
+      "physicalPage": 31,
+      "kind": 4,
+      "targetPhysicalPage": 32,
+      "namedDestination": "dinhly.3.8"
+    },
+    {
+      "physicalPage": 32,
+      "kind": 4,
+      "targetPhysicalPage": 30,
+      "namedDestination": "dinhly.3.5"
+    },
+    {
+      "physicalPage": 33,
+      "kind": 4,
+      "targetPhysicalPage": 57,
+      "namedDestination": "section.4.6"
+    },
+    {
+      "physicalPage": 35,
+      "kind": 4,
+      "targetPhysicalPage": 51,
+      "namedDestination": "section.4.5"
+    },
+    {
+      "physicalPage": 35,
+      "kind": 4,
+      "targetPhysicalPage": 35,
+      "namedDestination": "table.caption.23"
+    },
+    {
+      "physicalPage": 36,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.fleetpy2022"
+    },
+    {
+      "physicalPage": 36,
+      "kind": 4,
+      "targetPhysicalPage": 58,
+      "namedDestination": "subsection.4.6.3"
+    },
+    {
+      "physicalPage": 36,
+      "kind": 4,
+      "targetPhysicalPage": 34,
+      "namedDestination": "section.3.7"
+    },
+    {
+      "physicalPage": 39,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.tlc"
+    },
+    {
+      "physicalPage": 39,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.fleetpy2022"
+    },
+    {
+      "physicalPage": 39,
+      "kind": 4,
+      "targetPhysicalPage": 40,
+      "namedDestination": "table.caption.27"
+    },
+    {
+      "physicalPage": 39,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.fleetpydata2025"
+    },
+    {
+      "physicalPage": 40,
+      "kind": 4,
+      "targetPhysicalPage": 41,
+      "namedDestination": "table.caption.28"
+    },
+    {
+      "physicalPage": 40,
+      "kind": 4,
+      "targetPhysicalPage": 41,
+      "namedDestination": "table.caption.29"
+    },
+    {
+      "physicalPage": 41,
+      "kind": 4,
+      "targetPhysicalPage": 36,
+      "namedDestination": "subsection.3.8.2"
+    },
+    {
+      "physicalPage": 42,
+      "kind": 4,
+      "targetPhysicalPage": 23,
+      "namedDestination": "chapter.3"
+    },
+    {
+      "physicalPage": 43,
+      "kind": 4,
+      "targetPhysicalPage": 51,
+      "namedDestination": "section.4.5"
+    },
+    {
+      "physicalPage": 43,
+      "kind": 4,
+      "targetPhysicalPage": 43,
+      "namedDestination": "table.caption.30"
+    },
+    {
+      "physicalPage": 44,
+      "kind": 4,
+      "targetPhysicalPage": 28,
+      "namedDestination": "dinhly.3.3"
+    },
+    {
+      "physicalPage": 45,
+      "kind": 4,
+      "targetPhysicalPage": 45,
+      "namedDestination": "table.caption.31"
+    },
+    {
+      "physicalPage": 46,
+      "kind": 4,
+      "targetPhysicalPage": 46,
+      "namedDestination": "figure.caption.32"
+    },
+    {
+      "physicalPage": 48,
+      "kind": 4,
+      "targetPhysicalPage": 48,
+      "namedDestination": "figure.caption.33"
+    },
+    {
+      "physicalPage": 49,
+      "kind": 4,
+      "targetPhysicalPage": 34,
+      "namedDestination": "section.3.7"
+    },
+    {
+      "physicalPage": 50,
+      "kind": 4,
+      "targetPhysicalPage": 50,
+      "namedDestination": "table.caption.34"
+    },
+    {
+      "physicalPage": 52,
+      "kind": 4,
+      "targetPhysicalPage": 53,
+      "namedDestination": "table.caption.35"
+    },
+    {
+      "physicalPage": 52,
+      "kind": 4,
+      "targetPhysicalPage": 53,
+      "namedDestination": "figure.caption.36"
+    },
+    {
+      "physicalPage": 54,
+      "kind": 4,
+      "targetPhysicalPage": 68,
+      "namedDestination": "cite.angelopoulos2023"
+    },
+    {
+      "physicalPage": 54,
+      "kind": 4,
+      "targetPhysicalPage": 35,
+      "namedDestination": "subsection.3.7.3"
+    },
+    {
+      "physicalPage": 55,
+      "kind": 4,
+      "targetPhysicalPage": 55,
+      "namedDestination": "figure.caption.37"
+    },
+    {
+      "physicalPage": 57,
+      "kind": 4,
+      "targetPhysicalPage": 57,
+      "namedDestination": "table.caption.38"
+    },
+    {
+      "physicalPage": 57,
+      "kind": 4,
+      "targetPhysicalPage": 58,
+      "namedDestination": "table.caption.39"
+    },
+    {
+      "physicalPage": 57,
+      "kind": 4,
+      "targetPhysicalPage": 66,
+      "namedDestination": "cite.fielbaum2020"
+    },
+    {
+      "physicalPage": 59,
+      "kind": 4,
+      "targetPhysicalPage": 59,
+      "namedDestination": "table.caption.40"
+    },
+    {
+      "physicalPage": 60,
+      "kind": 4,
+      "targetPhysicalPage": 60,
+      "namedDestination": "table.caption.41"
+    },
+    {
+      "physicalPage": 60,
+      "kind": 4,
+      "targetPhysicalPage": 36,
+      "namedDestination": "subsection.3.8.2"
+    },
+    {
+      "physicalPage": 62,
+      "kind": 4,
+      "targetPhysicalPage": 67,
+      "namedDestination": "cite.schulz2026"
+    },
+    {
+      "physicalPage": 63,
+      "kind": 4,
+      "targetPhysicalPage": 31,
+      "namedDestination": "dinhly.3.6"
+    },
+    {
+      "physicalPage": 63,
+      "kind": 4,
+      "targetPhysicalPage": 51,
+      "namedDestination": "section.4.5"
+    },
+    {
+      "physicalPage": 64,
+      "kind": 4,
+      "targetPhysicalPage": 61,
+      "namedDestination": "section.4.8"
+    },
+    {
+      "physicalPage": 66,
+      "kind": 2,
+      "uri": "https://doi.org/10.1073/pnas.1611675114"
+    },
+    {
+      "physicalPage": 66,
+      "kind": 2,
+      "uri": "https://doi.org/10.5281/zenodo.15187906"
+    },
+    {
+      "physicalPage": 66,
+      "kind": 2,
+      "uri": "https://doi.org/10.1016/j.trc.2020.102831"
+    },
+    {
+      "physicalPage": 66,
+      "kind": 2,
+      "uri": "https://doi.org/10.1016/j.ecotra.2023.100313"
+    },
+    {
+      "physicalPage": 66,
+      "kind": 2,
+      "uri": "https://doi.org/10.1016/j.trc.2020.102621"
+    },
+    {
+      "physicalPage": 66,
+      "kind": 2,
+      "uri": "https://doi.org/10.1016/j.tbs.2023.100616"
+    },
+    {
+      "physicalPage": 66,
+      "kind": 2,
+      "uri": "https://arxiv.org/abs/1904.07987"
+    },
+    {
+      "physicalPage": 66,
+      "kind": 2,
+      "uri": "https://doi.org/10.1287/mnsc.33.9.1137"
+    },
+    {
+      "physicalPage": 66,
+      "kind": 2,
+      "uri": "https://doi.org/10.1002/net.21565"
+    },
+    {
+      "physicalPage": 67,
+      "kind": 2,
+      "uri": "https://arxiv.org/abs/2207.14246"
+    },
+    {
+      "physicalPage": 67,
+      "kind": 2,
+      "uri": "https://doi.org/10.1007/s10479-007-0170-8"
+    },
+    {
+      "physicalPage": 67,
+      "kind": 2,
+      "uri": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page"
+    },
+    {
+      "physicalPage": 67,
+      "kind": 2,
+      "uri": "https://doi.org/10.1016/j.trc.2026.105897"
+    },
+    {
+      "physicalPage": 67,
+      "kind": 2,
+      "uri": "https://doi.org/10.1007/s00291-026-00847-0"
+    },
+    {
+      "physicalPage": 67,
+      "kind": 2,
+      "uri": "https://doi.org/10.1016/j.trb.2022.04.008"
+    },
+    {
+      "physicalPage": 67,
+      "kind": 2,
+      "uri": "https://doi.org/10.1109/ICCPS68698.2026.00012"
+    },
+    {
+      "physicalPage": 67,
+      "kind": 2,
+      "uri": "https://doi.org/10.1016/j.ejtl.2024.100134"
+    },
+    {
+      "physicalPage": 67,
+      "kind": 2,
+      "uri": "https://arxiv.org/abs/2609.11950"
+    },
+    {
+      "physicalPage": 67,
+      "kind": 2,
+      "uri": "https://doi.org/10.1111/j.1540-5915.1988.tb00259.x"
+    },
+    {
+      "physicalPage": 68,
+      "kind": 2,
+      "uri": "https://doi.org/10.1186/s12544-026-00823-3"
+    },
+    {
+      "physicalPage": 68,
+      "kind": 2,
+      "uri": "https://doi.org/10.1007/s00291-025-00809-y"
+    },
+    {
+      "physicalPage": 68,
+      "kind": 2,
+      "uri": "https://doi.org/10.1002/net.22063"
+    },
+    {
+      "physicalPage": 68,
+      "kind": 2,
+      "uri": "https://doi.org/10.1016/j.trc.2026.105645"
+    },
+    {
+      "physicalPage": 68,
+      "kind": 2,
+      "uri": "https://doi.org/10.1561/2200000101"
+    }
+  ],
+  "outline": [
+    [
+      1,
+      "Lời cảm ơn",
+      3
+    ],
+    [
+      1,
+      "Tóm tắt",
+      4
+    ],
+    [
+      1,
+      "Abstract",
+      5
+    ],
+    [
+      1,
+      "Danh sách hình vẽ",
+      9
+    ],
+    [
+      1,
+      "Danh sách bảng",
+      10
+    ],
+    [
+      1,
+      "Danh mục từ viết tắt và ký hiệu",
+      11
+    ],
+    [
+      1,
+      "Đặt vấn đề",
+      13
+    ],
+    [
+      2,
+      "Lời hứa trong điều phối đi chung xe",
+      13
+    ],
+    [
+      2,
+      "Khoảng trống và câu hỏi nghiên cứu",
+      14
+    ],
+    [
+      2,
+      "Mục tiêu và đóng góp",
+      15
+    ],
+    [
+      2,
+      "Phạm vi nghiên cứu",
+      16
+    ],
+    [
+      2,
+      "Tổ chức khóa luận",
+      16
+    ],
+    [
+      1,
+      "Cơ sở lý thuyết và nghiên cứu liên quan",
+      17
+    ],
+    [
+      2,
+      "Điều phối động và chất lượng phục vụ",
+      17
+    ],
+    [
+      3,
+      "Bài toán và các ràng buộc cơ bản",
+      17
+    ],
+    [
+      3,
+      "Sinh phương án và chọn phương án",
+      17
+    ],
+    [
+      2,
+      "Đo thay đổi và giới hạn lời hứa",
+      18
+    ],
+    [
+      3,
+      "Chênh lệch kết quả và lịch sử cập nhật",
+      18
+    ],
+    [
+      3,
+      "Bảo vệ theo độ chùng và theo thông báo đầu",
+      19
+    ],
+    [
+      3,
+      "Nhất quán, nhiều kế hoạch và phương án tham chiếu",
+      20
+    ],
+    [
+      2,
+      "Ổn định lịch trình và cách chọn thước đo",
+      20
+    ],
+    [
+      2,
+      "Độ tin cậy và giá trị đối với hành khách",
+      21
+    ],
+    [
+      2,
+      "Cơ sở ghi sổ và phạm vi so sánh",
+      21
+    ],
+    [
+      1,
+      "Lời hứa có biên và các điều kiện bảo đảm",
+      23
+    ],
+    [
+      2,
+      "Tổng quan cơ chế",
+      23
+    ],
+    [
+      2,
+      "Mô hình bài toán mở rộng",
+      23
+    ],
+    [
+      3,
+      "Lời hứa công bố",
+      23
+    ],
+    [
+      3,
+      "Các chiều cam kết",
+      24
+    ],
+    [
+      2,
+      "Phép phân rã ba mốc",
+      24
+    ],
+    [
+      3,
+      "Định nghĩa",
+      24
+    ],
+    [
+      3,
+      "Ví dụ minh họa",
+      25
+    ],
+    [
+      2,
+      "Sổ cái cam kết",
+      26
+    ],
+    [
+      2,
+      "Hai cơ sở tính, các định lý và khung bốn họ cổng",
+      26
+    ],
+    [
+      3,
+      "Phát biểu hai cơ sở",
+      26
+    ],
+    [
+      3,
+      "Phương án giữ tuyến trong danh mục ứng viên",
+      27
+    ],
+    [
+      3,
+      "Bất đẳng thức ba mốc và điều kiện dấu bằng",
+      27
+    ],
+    [
+      3,
+      "Ba định lý",
+      28
+    ],
+    [
+      3,
+      "Khung so sánh bốn họ cổng",
+      30
+    ],
+    [
+      3,
+      "Khi nào chặn theo chuỗi khác chặn hai đầu",
+      33
+    ],
+    [
+      2,
+      "Các khóa và cơ chế bảo vệ bổ sung",
+      33
+    ],
+    [
+      2,
+      "Chứng nhận và phục hồi có miễn trừ",
+      34
+    ],
+    [
+      3,
+      "Phạm vi của chứng nhận",
+      34
+    ],
+    [
+      3,
+      "Hai quy tắc phục hồi",
+      34
+    ],
+    [
+      3,
+      "Biên nhìn thấy có điều kiện",
+      35
+    ],
+    [
+      2,
+      "Cài đặt và dấu vết tái lập",
+      35
+    ],
+    [
+      3,
+      "Sinh phương án theo lối chèn",
+      36
+    ],
+    [
+      3,
+      "Vòng quyết định và bộ chọn đội xe",
+      36
+    ],
+    [
+      3,
+      "Chứng cứ niêm phong",
+      38
+    ],
+    [
+      1,
+      "Thực nghiệm và đánh giá bằng chứng",
+      39
+    ],
+    [
+      2,
+      "Thiết kế, dữ liệu và mức bằng chứng",
+      39
+    ],
+    [
+      3,
+      "Đầu vào và đối tượng so sánh",
+      39
+    ],
+    [
+      3,
+      "Quy tắc chuẩn hóa và tham số thực thi",
+      39
+    ],
+    [
+      3,
+      "Phiên bản và cấu hình theo lớp bằng chứng",
+      40
+    ],
+    [
+      3,
+      "Cấu hình và phép ghép cặp",
+      42
+    ],
+    [
+      3,
+      "Chỉ số và đối chiếu nguồn",
+      42
+    ],
+    [
+      2,
+      "RQ1: đại lượng được ghi sổ có phản ánh quyết định?",
+      43
+    ],
+    [
+      3,
+      "Tỉ số trung tâm và cách đọc",
+      43
+    ],
+    [
+      3,
+      "Biến động tập trung và tính không cộng của trị tuyệt đối",
+      44
+    ],
+    [
+      3,
+      "Phát biểu được hỗ trợ",
+      44
+    ],
+    [
+      2,
+      "RQ2: giá dịch vụ của gói cam kết và của trần",
+      44
+    ],
+    [
+      3,
+      "Gói chính và tiêu chí H6",
+      44
+    ],
+    [
+      3,
+      "Thang ngân sách với các khóa được giữ",
+      45
+    ],
+    [
+      3,
+      "Cửa sổ rộng hơn có làm cam kết rẻ hơn?",
+      46
+    ],
+    [
+      3,
+      "Cách trả lời RQ2",
+      47
+    ],
+    [
+      2,
+      "RQ3: khả thi khi thời gian đi trôi dạt",
+      47
+    ],
+    [
+      3,
+      "So bốn họ cổng trên cùng bộ sinh",
+      47
+    ],
+    [
+      3,
+      "Phản ví dụ và dự đoán đã niêm phong",
+      48
+    ],
+    [
+      3,
+      "Phục hồi thay đổi câu hỏi so sánh",
+      49
+    ],
+    [
+      3,
+      "Lời hứa chặt trên giờ cao điểm thực",
+      50
+    ],
+    [
+      3,
+      "Khác biệt ở trần trung gian có đáng kể về dịch vụ?",
+      50
+    ],
+    [
+      2,
+      "Kiểm tra T38: dịch vụ, miễn trừ và biên nhìn thấy",
+      51
+    ],
+    [
+      3,
+      "Thiết kế được cố định trước tập kiểm tra",
+      51
+    ],
+    [
+      3,
+      "Giao nhau của chuyến nguồn và đơn vị phân tích",
+      52
+    ],
+    [
+      3,
+      "Số phục vụ gần nhau, nghĩa vụ khác nhau",
+      52
+    ],
+    [
+      3,
+      "Khoảng dự phòng từ phần thay đổi khi giữ tuyến",
+      54
+    ],
+    [
+      3,
+      "Độ phủ quan sát và một trường hợp ngoài biên",
+      55
+    ],
+    [
+      3,
+      "Độ tin cậy thực thi và điều được phép kết luận",
+      56
+    ],
+    [
+      2,
+      "Kiểm tra bổ sung và giới hạn triển khai",
+      57
+    ],
+    [
+      3,
+      "Kết quả phụ thuộc đại lượng được đo",
+      57
+    ],
+    [
+      3,
+      "Bảo vệ giờ đón phụ thuộc khả năng của bộ sinh",
+      58
+    ],
+    [
+      3,
+      "Giới hạn tìm kiếm và các phép thử âm",
+      58
+    ],
+    [
+      2,
+      "Nguồn kết quả và cách tái tính",
+      60
+    ],
+    [
+      2,
+      "Phạm vi kết luận và các đe dọa tính hợp lệ",
+      61
+    ],
+    [
+      3,
+      "Tính hợp lệ của đại lượng",
+      61
+    ],
+    [
+      3,
+      "Tính hợp lệ nội tại và thống kê",
+      61
+    ],
+    [
+      3,
+      "Khả năng khái quát và so sánh với văn liệu",
+      62
+    ],
+    [
+      3,
+      "Kết luận thực nghiệm theo ba câu hỏi",
+      62
+    ],
+    [
+      1,
+      "Kết luận",
+      63
+    ],
+    [
+      2,
+      "Trả lời các câu hỏi nghiên cứu",
+      63
+    ],
+    [
+      2,
+      "Ý nghĩa và giới hạn",
+      64
+    ],
+    [
+      2,
+      "Hướng tiếp theo",
+      65
+    ],
+    [
+      1,
+      "Tài liệu tham khảo",
+      66
+    ]
+  ],
+  "footerSequencePass": true,
+  "texLogIssues": {
+    "overfull": 0,
+    "underfull": 0,
+    "undefinedReference": 0,
+    "missingCharacter": 0,
+    "duplicateDestination": 0,
+    "texError": 0
+  },
+  "inputHashes": [
+    {
+      "path": "hinh/co-che-ba-moc.pdf",
+      "bytes": 30205,
+      "sha256": "3c06ced1de4973d1026d1bb5d583e79ab7c3d65b6f3f465f4eead99c3907c055"
+    },
+    {
+      "path": "hinh/logo-uet.png",
+      "bytes": 35309,
+      "sha256": "b7be8155f938655f3e108a2e260c48aca47e5a105de34a9ca7cd93138bae47e8"
+    },
+    {
+      "path": "hinh/service_budget_final.pdf",
+      "bytes": 37383,
+      "sha256": "00a890e656753343e100cbdb05cc27ed40292e97d07d7c97a282a2d5a5bccdd9"
+    },
+    {
+      "path": "hinh/t38_paired_final.pdf",
+      "bytes": 38071,
+      "sha256": "1b98a9a90fedf7ce1b866196759186950c4d68bce1d78e95cb263559d84be38d"
+    },
+    {
+      "path": "hinh/t38_scores_final.pdf",
+      "bytes": 38755,
+      "sha256": "8461197d2be52a969b851b727b76f1465398112f7d982048c46048831cc745e4"
+    },
+    {
+      "path": "hinh/tier2_gates_final.pdf",
+      "bytes": 46196,
+      "sha256": "482fb9c4000d8c63eadaa10a7055c6a33458239e84292a4d7ce70c7ea7f12122"
+    },
+    {
+      "path": "main.tex",
+      "bytes": 4053,
+      "sha256": "5537d2353f69fa0f121aa1de67d5c30b4659e0738cd4b66e77feceb9317a959a"
+    },
+    {
+      "path": "noi-dung/00-bia.tex",
+      "bytes": 1858,
+      "sha256": "b506adfae526f5fdd955f2919f50cbccdac859eb06b48ac6b7253329b17a17f8"
+    },
+    {
+      "path": "noi-dung/01-loi-cam-on.tex",
+      "bytes": 931,
+      "sha256": "92e79e7e13af02a3f179593e7603131dfffbe8e1133a8869396361a5cbdb6956"
+    },
+    {
+      "path": "noi-dung/02-tom-tat.tex",
+      "bytes": 4942,
+      "sha256": "9682cea4b07ef34f2be983d2bcb4e1055035dfc6fbd8ade2ec9a28a5b84ee064"
+    },
+    {
+      "path": "noi-dung/03-muc-luc.tex",
+      "bytes": 217,
+      "sha256": "85552e1ebfca2e4e3c8db3b9cbf284e637156f011f8f014021bade97633c92e8"
+    },
+    {
+      "path": "noi-dung/04-viet-tat.tex",
+      "bytes": 3395,
+      "sha256": "c2f360f175feaffcbb9ef099a9268ff235cfa21977e2d7af747e8ec586b44efb"
+    },
+    {
+      "path": "noi-dung/05-chuong1.tex",
+      "bytes": 13077,
+      "sha256": "d7572f2049121143b3f84558a7f15579c3927894b1377bbd92df7e2fc1f09882"
+    },
+    {
+      "path": "noi-dung/06-chuong2.tex",
+      "bytes": 17651,
+      "sha256": "174a2d65ef9c1c2c7eb0b3f07e722d765351164468ac7d4229d0e4ac5fec6807"
+    },
+    {
+      "path": "noi-dung/07-chuong3.tex",
+      "bytes": 49325,
+      "sha256": "66663535aac2cd6fc49ffe3cd29f4ccfe73c04101537458060a1489a878952e4"
+    },
+    {
+      "path": "noi-dung/08-cauhinh.tex",
+      "bytes": 7491,
+      "sha256": "cde5fdbf1149199de63bba20b2d4b6a863e27042ea3dbc8b1e9b9563eb61cf33"
+    },
+    {
+      "path": "noi-dung/08-chuong4.tex",
+      "bytes": 682,
+      "sha256": "2a1586091898f664b20e18c467fc522b12d73385f9f21ad2d7d0e020fef02109"
+    },
+    {
+      "path": "noi-dung/08-hanche.tex",
+      "bytes": 5823,
+      "sha256": "159410effb40120aea4fdde9d0b2f7734af38b357fa8bb3c4ad6ba70a5e9a7d0"
+    },
+    {
+      "path": "noi-dung/08-kiemtra-phu.tex",
+      "bytes": 11079,
+      "sha256": "0b4e4d7c5bcb20e259833dbffbf775954eca1c89debab01bf58ed898d16df035"
+    },
+    {
+      "path": "noi-dung/08-nguon-ketqua.tex",
+      "bytes": 4191,
+      "sha256": "b6ed03a97147065c08fb962e5f38f97a8f51ef32d2c4d390499501d98c8d68fa"
+    },
+    {
+      "path": "noi-dung/08-t38.tex",
+      "bytes": 17054,
+      "sha256": "6b87af84037ff3af00db52fcc8d3d36947e2775510827f9acc3c6314aaea2b71"
+    },
+    {
+      "path": "noi-dung/08-thietlap-va-h6.tex",
+      "bytes": 19408,
+      "sha256": "f4dc646d30830cc1a9dc821dfb5a7222bf7ceea96c4ff0b4e4f76d30c91643db"
+    },
+    {
+      "path": "noi-dung/08-trongdiem-troidat.tex",
+      "bytes": 13515,
+      "sha256": "a4c7ad4db3a2e3c8f9af1bd6cf258286faf8fee87ceb4c8fd4f4aaf044d93d9d"
+    },
+    {
+      "path": "noi-dung/09-chuong5.tex",
+      "bytes": 10215,
+      "sha256": "8b5c03453199ae4a45f6e71a0bd7d33c40fefb392bccea460497445bbbfe292c"
+    },
+    {
+      "path": "noi-dung/10-tai-lieu.tex",
+      "bytes": 7066,
+      "sha256": "07d2a86d6ae7810e3410678fab69d626a8d447cdc8afd624449d9ea08b076f06"
+    }
+  ],
+  "environmentNotes": [
+    "Tectonic resolves Times New Roman from C:/Windows/fonts.",
+    "Fontconfig reports no default config; actual fonts embedded and rendered.",
+    "Supervisor name/degree await user input on both covers."
+  ]
+}

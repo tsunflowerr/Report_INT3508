@@ -1,0 +1,345 @@
+{
+  "changes": 33,
+  "unaffected_characters_preserved": 24392,
+  "reverse_reconstruction": true,
+  "float_contents_preserved": true,
+  "old_counts": [
+    {
+      "section": "4.6",
+      "title": "Vai trò của trần và thứ tự tiêu chí của bộ chọn",
+      "prose": 348,
+      "floats": 204
+    },
+    {
+      "section": "4.7",
+      "title": "Lời hứa theo dự báo",
+      "prose": 1000,
+      "floats": 317
+    },
+    {
+      "section": "4.8",
+      "title": "So với cách đệm lời hứa",
+      "prose": 669,
+      "floats": 225
+    },
+    {
+      "section": "4.9",
+      "title": "Khi dự báo không đủ: chiều tuyết 15/11/2018",
+      "prose": 272,
+      "floats": 244
+    },
+    {
+      "section": "4.10",
+      "title": "Kiểm tra tính hợp lệ của kết quả",
+      "prose": 376,
+      "floats": 0
+    },
+    {
+      "section": "4.11",
+      "title": "Thảo luận và hạn chế",
+      "prose": 783,
+      "floats": 0
+    }
+  ],
+  "new_counts": [
+    {
+      "section": "4.6",
+      "title": "Vai trò của trần và thứ tự tiêu chí của bộ chọn",
+      "prose": 345,
+      "floats": 204
+    },
+    {
+      "section": "4.7",
+      "title": "Lời hứa theo dự báo",
+      "prose": 1150,
+      "floats": 317
+    },
+    {
+      "section": "4.8",
+      "title": "So với cách đệm lời hứa",
+      "prose": 788,
+      "floats": 225
+    },
+    {
+      "section": "4.9",
+      "title": "Khi dự báo không đủ: chiều tuyết 15/11/2018",
+      "prose": 275,
+      "floats": 244
+    },
+    {
+      "section": "4.10",
+      "title": "Kiểm tra tính hợp lệ của kết quả",
+      "prose": 433,
+      "floats": 0
+    },
+    {
+      "section": "4.11",
+      "title": "Thảo luận và hạn chế",
+      "prose": 792,
+      "floats": 0
+    }
+  ],
+  "syntax": {
+    "balanced_braces": true,
+    "environment_counts": {
+      "table": 4,
+      "tabular": 11,
+      "figure": 1,
+      "tikzpicture": 1,
+      "itemize": 5
+    },
+    "math_dollar_count": 26,
+    "forbidden_hits": []
+  },
+  "references": [
+    {
+      "line": 20,
+      "target": "bang:rangbuoc",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:125"
+      ]
+    },
+    {
+      "line": 24,
+      "target": "bang:c4-sangloc",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\09-chuong4-phanB-v11-v2.tex:36"
+      ]
+    },
+    {
+      "line": 81,
+      "target": "bang:c4-dubao",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\09-chuong4-phanB-v11-v2.tex:94"
+      ]
+    },
+    {
+      "line": 81,
+      "target": "muc:dubao",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:494"
+      ]
+    },
+    {
+      "line": 129,
+      "target": "hinh:c4-so",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\09-chuong4-phanB-v11-v2.tex:180"
+      ]
+    },
+    {
+      "line": 133,
+      "target": "bang:c4-tran120",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r36-ch4a-v5\\08-chuong4-phanA-v5-v3.tex:573"
+      ]
+    },
+    {
+      "line": 139,
+      "target": "muc:c4-thaoluan",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\09-chuong4-phanB-v11-v2.tex:405"
+      ]
+    },
+    {
+      "line": 176,
+      "target": "eq:so",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:610"
+      ]
+    },
+    {
+      "line": 194,
+      "target": "bang:c4-nghiavu",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r36-ch4a-v5\\08-chuong4-phanA-v5-v3.tex:314"
+      ]
+    },
+    {
+      "line": 236,
+      "target": "bang:c4-dem",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\09-chuong4-phanB-v11-v2.tex:246"
+      ]
+    },
+    {
+      "line": 299,
+      "target": "bang:c4-nghiavu",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r36-ch4a-v5\\08-chuong4-phanA-v5-v3.tex:314"
+      ]
+    },
+    {
+      "line": 322,
+      "target": "hinh:c4-so",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\09-chuong4-phanB-v11-v2.tex:180"
+      ]
+    },
+    {
+      "line": 325,
+      "target": "bang:c4-tuyet",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\09-chuong4-phanB-v11-v2.tex:335"
+      ]
+    },
+    {
+      "line": 360,
+      "target": "eq:so",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:610"
+      ]
+    },
+    {
+      "line": 374,
+      "target": "nx:giunguyen",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:373"
+      ]
+    },
+    {
+      "line": 380,
+      "target": "muc:gioihan",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:702"
+      ]
+    },
+    {
+      "line": 384,
+      "target": "muc:doichung",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:403"
+      ]
+    },
+    {
+      "line": 389,
+      "target": "muc:kiemtra",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:719"
+      ]
+    },
+    {
+      "line": 399,
+      "target": "phuluc:C",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r31-ch5\\11-phuluc-v2.tex:60"
+      ]
+    },
+    {
+      "line": 410,
+      "target": "bang:c4-phanbotre",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r36-ch4a-v5\\08-chuong4-phanA-v5-v3.tex:369"
+      ]
+    },
+    {
+      "line": 441,
+      "target": "muc:c4-thamdo",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r36-ch4a-v5\\08-chuong4-phanA-v5-v3.tex:223"
+      ]
+    },
+    {
+      "line": 451,
+      "target": "muc:c4-dubao",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\09-chuong4-phanB-v11-v2.tex:78"
+      ]
+    },
+    {
+      "line": 451,
+      "target": "muc:c4-dem",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\09-chuong4-phanB-v11-v2.tex:224"
+      ]
+    },
+    {
+      "line": 460,
+      "target": "muc:c4-congdon",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r36-ch4a-v5\\08-chuong4-phanA-v5-v3.tex:706"
+      ]
+    },
+    {
+      "line": 464,
+      "target": "muc:doichung",
+      "definitions": [
+        "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex:403"
+      ]
+    }
+  ],
+  "distinct_ref_targets": 21,
+  "undefined": [],
+  "duplicate_labels": {},
+  "labels_preserved": [
+    "bang:c4-dem",
+    "bang:c4-dubao",
+    "bang:c4-sangloc",
+    "bang:c4-tuyet",
+    "hinh:c4-so",
+    "muc:c4-dem",
+    "muc:c4-dubao",
+    "muc:c4-hople",
+    "muc:c4-thaoluan",
+    "muc:c4-tuyet",
+    "muc:c4-vaitro"
+  ],
+  "existing_citation_keys": [
+    "engelhardt2026",
+    "horl2022",
+    "schulz2026"
+  ],
+  "inputs": {
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\09-chuong4-phanB-v10.tex": {
+      "sha256": "c0f7aeeb6cee8d96dd517a629e5bfecd619e9fdd00b7d276a3e2bc1ae324e00e",
+      "lines": 450
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r36-ch4a-v5\\08-chuong4-phanA-v5-v3.tex": {
+      "sha256": "b2978f741056f3ee2e1e92a3671cd51404492374d2bfd100796417ded746306b",
+      "lines": 782
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r33-ch3v4\\07-chuong3-v4-v3.tex": {
+      "sha256": "74cf47ccfabe497ec5d9fa292b15789a39dac86e4144fa82d2f5991828099ffb",
+      "lines": 744
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r31-ch5\\11-phuluc-v2.tex": {
+      "sha256": "7020fdf6d042f5e56c502b5c9e067e0631f49128541ae5fd66e84853b0d4e3eb",
+      "lines": 120
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r32-bib\\10-tai-lieu-draft-v2.tex": {
+      "sha256": "1795b53115a7245ee6eebeea1289d5312d9d36637a955c845d5b494ffc350b97",
+      "lines": 174
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r39-ch4b-v11\\agent-numbers-v1.json": {
+      "sha256": "18a9d6011b6146a09b78ec5c1f499ad36f57f880ebc61fc3d5ff1100788311e1",
+      "lines": 2141
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\evidence\\TESTRUN-45f8026-2026-10-12.md": {
+      "sha256": "2931468d4bbe85d0ce72afb42255f06e9fbcc8a4ed8976607374bd8007c09ade",
+      "lines": 67
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\ASSEMBLY-NOTES.md": {
+      "sha256": "866abc9df6c2d71c0681bcd46bc875a266ea12f553ea2c48b15bb3c925cec98d",
+      "lines": 79
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R19-stage1a-analysis.json": {
+      "sha256": "a7d4520f26793cf320db98d941ff9ee5533457bf592bfa78708082da9bb1b77d"
+    }
+  },
+  "numeric_arithmetic_rechecked": true,
+  "widths": {
+    "linewidth_cm": 16,
+    "linewidth_pt": 455.2440944881889,
+    "table_scale_from_old_overflow": 0.9397735350067921,
+    "figure_scale_from_old_overflow": 0.9664570823065214,
+    "both_outer_widths": "linewidth"
+  },
+  "no_build": true,
+  "weekday_ledger": {
+    "scenarios": 21,
+    "late_naive_count": 68,
+    "total_s": 6217.406,
+    "historical_s": 5352.646482885391,
+    "historical_pct": 86.09131336903833
+  }
+}

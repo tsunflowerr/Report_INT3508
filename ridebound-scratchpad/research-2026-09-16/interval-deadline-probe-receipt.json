@@ -1,0 +1,133 @@
+{
+  "date": "2026-09-20",
+  "oldCoreComparison": "all 16 baseline/physical/count/state-hash fields match previous all-order audit",
+  "physicalRoutes": 4153,
+  "physicalPass": 9,
+  "originalFullContractAcceptances": 0,
+  "hypotheticalPreDeadlineOpportunities": 3,
+  "epochs": [
+    304,
+    374,
+    394
+  ],
+  "halfWidthMs": 150000,
+  "initialTotalWidthMs": 300000,
+  "noticeMs": 180000,
+  "terminalWidthMs_NOT_EXECUTED": 60000,
+  "details": [
+    {
+      "epoch": 304,
+      "changes": [
+        {
+          "request": "rq-2a6ad52ed3548683aeec52f607a5daba013e9e59a63420f84e4aa3c88f85b035",
+          "initialDropMs": 4030070,
+          "oldEtaMs": 4030241,
+          "newEtaMs": 4116383,
+          "deltaMs": 86142,
+          "changed": true,
+          "lowerMs": 3880070,
+          "upperMs": 4180070,
+          "deadlineMs": 3700070,
+          "nowMs": 2983000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    },
+    {
+      "epoch": 374,
+      "changes": [
+        {
+          "request": "rq-325394a72c62cf6addb87604d7886d48dd7d8f327490cfbf5d90e01bbd8d2942",
+          "initialDropMs": 4708306,
+          "oldEtaMs": 4708391,
+          "newEtaMs": 4831451,
+          "deltaMs": 123060,
+          "changed": true,
+          "lowerMs": 4558306,
+          "upperMs": 4858306,
+          "deadlineMs": 4378306,
+          "nowMs": 3843000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    },
+    {
+      "epoch": 394,
+      "changes": [
+        {
+          "request": "rq-3cbdf20270f2b48398c9dc22d53aee1687c979b489a5fcf6616b27b3d0bcd54a",
+          "initialDropMs": 4461384,
+          "oldEtaMs": 4461414,
+          "newEtaMs": 4533199,
+          "deltaMs": 71785,
+          "changed": true,
+          "lowerMs": 4311384,
+          "upperMs": 4611384,
+          "deadlineMs": 4131384,
+          "nowMs": 4058000,
+          "pastInside": true,
+          "lifecycle": "WaitingPickup"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Not three extra completed passengers; the original factual states are reused independently.",
+    "No new contract was actually published; no post-deadline refinement or whole-fleet historical compliance was simulated.",
+    "Removing only the old drop budget passes the original remaining validator; hypothetical initial interval containment is checked separately.",
+    "Simple budget relaxation is a required comparator and may explain all early opportunity. No advantage over it has been measured.",
+    "Core output uses fail-fast witnesses; first failures are not exclusive causes."
+  ],
+  "files": {
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\research-2026-09-16\\interval-deadline-opportunities.json": {
+      "bytes": 79815,
+      "sha256": "4c1eb4ba9d27868aae9edcb76ee4408f82e8baecadce26711145670ff1e79e2c"
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\research-2026-09-16\\interval-deadline-probe\\Program.cs": {
+      "bytes": 14334,
+      "sha256": "abf251939d5071f0ffad7946a76082200cfedad4cd74498b97d1a694d1d6857a"
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\research-2026-09-16\\interval-deadline-probe\\IntervalDeadlineProbe.csproj": {
+      "bytes": 394,
+      "sha256": "072d9426dcf7025df364ba3acaa45141e268a2a84f8750e7f2b782518490b168"
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\research-2026-09-16\\interval_refinement_math.py": {
+      "bytes": 3579,
+      "sha256": "f79ce692841e72635bd18ad7b4f264b1d9b6ae61a06d2c31955c0ca888929c30"
+    },
+    "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\research-2026-09-16\\interval-refinement-math-checks.json": {
+      "bytes": 591,
+      "sha256": "d8b966e65a01b726fcf97f9b8b9bdb51dcaeef43e9f39bfcda2c7d33ff0f97d3"
+    },
+    "E:\\RideBoundData\\wp13\\e1-runner-v1\\RideBound.Algorithms.dll": {
+      "bytes": 273920,
+      "sha256": "5edf8e4295a8c420daeaaf8fc0a993dbc4367837c73ec767dd3fe9144ecc2156"
+    },
+    "E:\\RideBoundData\\wp13\\e1-runner-v1\\RideBound.Application.dll": {
+      "bytes": 153088,
+      "sha256": "901992af52c4c3ca1268c6b7ff3f958fb3b88d18b39fb0fc4c657a48720cc586"
+    },
+    "E:\\RideBoundData\\wp13\\e1-runner-v1\\RideBound.Contracts.dll": {
+      "bytes": 278016,
+      "sha256": "a194f059fbc0f6d1df2c880855c1d38c8014223aba7cf992a5dcd2d42a75603b"
+    },
+    "E:\\RideBoundData\\wp13\\e1-runner-v1\\RideBound.Domain.dll": {
+      "bytes": 147456,
+      "sha256": "327144ebbb8a835b712562c5f1cd440c60a9c6a99981ce83c5c9b7ef2ea02225"
+    },
+    "E:\\RideBoundData\\wp13\\e1-runner-v1\\RideBound.Infrastructure.dll": {
+      "bytes": 5120,
+      "sha256": "3223827c8d3a3a5e0e472e57716535cbdd42e44b30abfb6a59fbdd3f8e960aae"
+    },
+    "E:\\RideBoundData\\wp13\\e1-runner-v1\\RideBound.Runner.dll": {
+      "bytes": 190976,
+      "sha256": "fdc58c35eaa48137adca3c9227160d1ddbc92b16a64ffe48e5ce8e560d4090a5"
+    },
+    "E:\\RideBoundData\\wp13\\e1-runner-v1\\RideBound.Solvers.OrTools.dll": {
+      "bytes": 20480,
+      "sha256": "c9a9f5d4dfda02cd858137b7bf2547168645424903488e23f7b136318458312b"
+    }
+  }
+}

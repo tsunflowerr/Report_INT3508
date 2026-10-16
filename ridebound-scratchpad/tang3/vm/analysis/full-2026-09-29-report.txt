@@ -1,0 +1,55 @@
+# vm_analyze.py FULL; jobs analysed: 48/48
+== validity (VM-PLAN §5): 0 problem(s)
+  none
+  inventories: 0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe
+
+== served (completed / 108) per world and cell: C-30 | V-30 a/b | M-30 a/b | non-normal share V a/b, M a/b
+  W0 w08: C 97 | V 97/97 | M 97/97 | nn V 0.000/0.000 M 0.000/0.000 | E2 C 0.0 Vb 0.0
+  W0 w17: C 95 | V 95/95 | M 95/95 | nn V 0.000/0.000 M 0.000/0.000 | E2 C 0.0 Vb 0.0
+  W1 w08: C 82 | V 80/82 | M 79/85 | nn V 0.379/0.379 M 0.400/0.375 | E2 C 0.2073170731707317 Vb 0.2073170731707317
+  W1 w17: C 79 | V 78/79 | M 78/79 | nn V 0.280/0.373 M 0.280/0.373 | E2 C 0.22784810126582278 Vb 0.22784810126582278
+  W2 w08: C 85 | V 77/85 | M 77/85 | nn V 0.624/0.714 M 0.638/0.714 | E2 C 0.4117647058823529 Vb 0.4117647058823529
+  W2 w17: C 79 | V 66/79 | M 66/79 | nn V 0.675/0.750 M 0.677/0.681 | E2 C 0.46835443037974683 Vb 0.46835443037974683
+  W3 w08: C 108 | V 108/108 | M 108/105 | nn V 0.177/0.166 M 0.176/0.169 | E2 C 0.009259259259259259 Vb 0.009259259259259259
+  W3 w17: C 107 | V 103/107 | M 102/107 | nn V 0.296/0.316 M 0.262/0.320 | E2 C 0.07476635514018691 Vb 0.07476635514018691
+  W4 w08: C 94 | V 92/94 | M 89/94 | nn V 0.707/0.795 M 0.730/0.795 | E2 C 0.1276595744680851 Vb 0.11702127659574468
+  W4 w17: C 89 | V 85/89 | M 86/89 | nn V 0.776/0.639 M 0.752/0.746 | E2 C 0.10112359550561797 Vb 0.10112359550561797
+  W5 w08: C 90 | V 92/90 | M 87/92 | nn V 0.440/0.447 M 0.445/0.450 | E2 C 0.022222222222222223 Vb 0.022222222222222223
+  W5 w17: C 99 | V 96/99 | M 97/99 | nn V 0.557/0.550 M 0.550/0.345 | E2 C 0.020202020202020204 Vb 0.020202020202020204
+
+== predictions (VM-PLAN §6)
+P1 control (a without forcing => b identical fleet actions): 4/4 identical -> HELD
+P2 W0 no forcing and same completed set as C-30: 8/8 [] -> HELD
+P3 V-30(a) forced in drift cells: 10/10 (not forced: []) -> HELD
+P3 M-30(a) forced in drift cells: 10/10 (not forced: []) -> HELD
+P4 V-30: drift cells 10/10, served (a) 877 (b) 912, (b)>=(a) in 9 -> HELD
+P4 M-30: drift cells 10/10, served (a) 869 (b) 914, (b)>=(a) in 9 -> HELD
+P5 V-30(b) decisions with forcedNoWorse/BUDGET witness over drift cells: 118; M-30(b) decisions with a forcedNoWorse witness in W3: 12 -> HELD
+P6 C-30 - V-30(b) per tangled cell [('W1w08', 0), ('W1w17', 0), ('W2w08', 0), ('W2w17', 0), ('W4w08', 0), ('W4w17', 0), ('W5w08', 0), ('W5w17', 0)]; >=3 in 0/8; totals C 697 V-30(b) 697: criterion NOT met; prediction (NOT met and C total >= V(b) total) -> HELD
+P6-descriptive C-30 - M-30(b) per tangled cell [('W1w08', -3), ('W1w17', 0), ('W2w08', 0), ('W2w17', 0), ('W4w08', 0), ('W4w17', 0), ('W5w08', -2), ('W5w17', 0)]; >=3 in 0/8; totals C 697 M-30(b) 702: criterion NOT met
+P7 E2 V-30(b) <= C-30 in 8/8: [('W1w08', 0.207, 0.207), ('W1w17', 0.228, 0.228), ('W2w08', 0.412, 0.412), ('W2w17', 0.468, 0.468), ('W4w08', 0.117, 0.128), ('W4w17', 0.101, 0.101), ('W5w08', 0.022, 0.022), ('W5w17', 0.02, 0.02)] -> HELD
+P8 V-30(a) W4-w08 vs v11 smoke: identical fleet actions True (754/754 decisions), served 92 -> HELD
+
+== context: U | Mplus-30 (a)/(b) served per cell (sweep and no-worse tables)
+  W0 w08: U 102 | Mplus-30 97/97
+  W0 w17: U 99 | Mplus-30 95/95
+  W1 w08: U 87 | Mplus-30 82/82
+  W1 w17: U 80 | Mplus-30 80/79
+  W2 w08: U 87 | Mplus-30 83/85
+  W2 w17: U 79 | Mplus-30 77/79
+  W3 w08: U 108 | Mplus-30 108/108
+  W3 w17: U 107 | Mplus-30 107/107
+  W4 w08: U 96 | Mplus-30 95/94
+  W4 w17: U 94 | Mplus-30 86/89
+  W5 w08: U 92 | Mplus-30 90/90
+  W5 w17: U 100 | Mplus-30 99/99
+
+== paired diagnostic C-30 vs V-30(b), riders promised by both (drop V > 60 s)
+  world=W1  cell=d20181112-s10-r1-w08  promisedC=82  promisedVb=82  common=82  onlyC=0  onlyVb=0  commonAbove60C=17  commonAbove60Vb=17  onlyCAbove60=0  onlyVbAbove60=0
+  world=W1  cell=d20181112-s10-r1-w17  promisedC=79  promisedVb=79  common=79  onlyC=0  onlyVb=0  commonAbove60C=18  commonAbove60Vb=18  onlyCAbove60=0  onlyVbAbove60=0
+  world=W2  cell=d20181112-s10-r1-w08  promisedC=85  promisedVb=85  common=85  onlyC=0  onlyVb=0  commonAbove60C=35  commonAbove60Vb=35  onlyCAbove60=0  onlyVbAbove60=0
+  world=W2  cell=d20181112-s10-r1-w17  promisedC=79  promisedVb=79  common=79  onlyC=0  onlyVb=0  commonAbove60C=37  commonAbove60Vb=37  onlyCAbove60=0  onlyVbAbove60=0
+  world=W4  cell=d20181112-s10-r1-w08  promisedC=94  promisedVb=94  common=93  onlyC=1  onlyVb=1  commonAbove60C=12  commonAbove60Vb=11  onlyCAbove60=0  onlyVbAbove60=0
+  world=W4  cell=d20181112-s10-r1-w17  promisedC=89  promisedVb=89  common=89  onlyC=0  onlyVb=0  commonAbove60C=9  commonAbove60Vb=9  onlyCAbove60=0  onlyVbAbove60=0
+  world=W5  cell=d20181112-s10-r1-w08  promisedC=90  promisedVb=90  common=90  onlyC=0  onlyVb=0  commonAbove60C=2  commonAbove60Vb=2  onlyCAbove60=0  onlyVbAbove60=0
+  world=W5  cell=d20181112-s10-r1-w17  promisedC=99  promisedVb=99  common=99  onlyC=0  onlyVb=0  commonAbove60C=2  commonAbove60Vb=2  onlyCAbove60=0  onlyVbAbove60=0

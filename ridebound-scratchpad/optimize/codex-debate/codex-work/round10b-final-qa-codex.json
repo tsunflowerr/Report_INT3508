@@ -1,0 +1,50 @@
+{
+  "reports": {
+    "ML-PILOT-REVIEW-CODEX.md": {
+      "words": 984,
+      "sha256": "c5ff22ecdb8d2b941742768e8bab9577ef3eca0a3472b5e2b75c4c78b3fddb82"
+    },
+    "DATA-AUDIT-CODEX.md": {
+      "words": 869,
+      "sha256": "92387cab7235c6999cb21d044a6e200dc1596640d3ad4a399d27f1d5948b38db"
+    },
+    "SURVEY-ML-ETA-CODEX.md": {
+      "words": 908,
+      "sha256": "b636e4acc825cd74faa63b31459a9da60645f9217abc693a9fd9384b193ab47c"
+    }
+  },
+  "local_link_errors": [],
+  "inventory": {
+    "records": 2887,
+    "primary_records": 1991,
+    "experiment_index_rows": 51,
+    "bad_width": 0,
+    "unknown_primary_windows": 0,
+    "unknown_primary_completions": 3,
+    "known_lifecycle_count_mismatches": 0,
+    "completed_exceeds_accepted": 0,
+    "wp14r_v6_arms": [
+      "b1-ref",
+      "c1-budget120",
+      "c1-budget60",
+      "c1-freeze300",
+      "c1-freeze300ratchet",
+      "c1-freeze600",
+      "c1-h6ref",
+      "c1-nobudget",
+      "c1-nopickuplock",
+      "c1-ratchet"
+    ],
+    "wp14r_v6_windows": [
+      "w08",
+      "w17"
+    ]
+  },
+  "spot_check_rows": 30,
+  "fleetpy_csv_verification": {
+    "files": 40,
+    "completed": 3474,
+    "invalid_nonempty_dropoff_times": 0
+  },
+  "no_models_or_simulations_run": true
+}

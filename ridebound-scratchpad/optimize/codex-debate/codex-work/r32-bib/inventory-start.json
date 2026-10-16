@@ -1,0 +1,69 @@
+{
+  "scan_time": "2026-10-12T23:10:44.343615+07:00",
+  "files": [
+    {
+      "path": "E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/07-chuong3-v3.tex",
+      "keys": [
+        "alonsomora2017",
+        "engelhardt2026",
+        "fielbaum2020",
+        "horl2022",
+        "ortools",
+        "schulz2026"
+      ]
+    },
+    {
+      "path": "E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/08-chuong4-phanA-v4.tex",
+      "keys": [
+        "engelhardt2026",
+        "schulz2026"
+      ]
+    },
+    {
+      "path": "E:/Code/Report_INT3508/ridebound-scratchpad/rewrite-2026-10/drafts/09-chuong4-phanB-v7.tex",
+      "keys": [
+        "engelhardt2026",
+        "horl2022",
+        "schulz2026"
+      ]
+    }
+  ],
+  "legacy_keys": [
+    "alonsomora2017",
+    "fielbaum2020",
+    "fielbaum2022scale",
+    "alonsogonzalez2020",
+    "gerzinic2023",
+    "bansal2019",
+    "sridharan1987",
+    "kovacs2014",
+    "fleetpy2022",
+    "cordeau2007",
+    "toth2014",
+    "groer2009",
+    "blackburn1986",
+    "agatz2012",
+    "ortools",
+    "tlc",
+    "li2025",
+    "elmi2026",
+    "schulz2026",
+    "sharifazadeh2022",
+    "sivagnanam2026",
+    "haferkamp2024",
+    "schmidt2026",
+    "zalesak2025",
+    "agarwal2019",
+    "chen2018",
+    "borodin1992"
+  ],
+  "cited_keys": [
+    "alonsomora2017",
+    "engelhardt2026",
+    "fielbaum2020",
+    "horl2022",
+    "ortools",
+    "schulz2026"
+  ],
+  "initial_ch2_files": []
+}

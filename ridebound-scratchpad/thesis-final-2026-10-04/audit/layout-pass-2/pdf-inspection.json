@@ -1,0 +1,3104 @@
+{
+ "path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\thesis-final-2026-10-04\\build\\main.pdf",
+ "pages": 65,
+ "pageSizePoints": [
+  0.0,
+  0.0,
+  595.280029296875,
+  841.8900146484375
+ ],
+ "outline": [
+  [
+   1,
+   "Lời cảm ơn",
+   3
+  ],
+  [
+   1,
+   "Tóm tắt",
+   4
+  ],
+  [
+   1,
+   "Abstract",
+   5
+  ],
+  [
+   1,
+   "Danh sách hình vẽ",
+   9
+  ],
+  [
+   1,
+   "Danh sách bảng",
+   10
+  ],
+  [
+   1,
+   "Danh mục từ viết tắt và ký hiệu",
+   11
+  ],
+  [
+   1,
+   "Đặt vấn đề",
+   13
+  ],
+  [
+   2,
+   "Lời hứa trong điều phối đi chung xe",
+   13
+  ],
+  [
+   2,
+   "Khoảng trống và câu hỏi nghiên cứu",
+   14
+  ],
+  [
+   2,
+   "Mục tiêu và đóng góp",
+   15
+  ],
+  [
+   2,
+   "Phạm vi nghiên cứu",
+   16
+  ],
+  [
+   2,
+   "Tổ chức khóa luận",
+   16
+  ],
+  [
+   1,
+   "Cơ sở lý thuyết và nghiên cứu liên quan",
+   17
+  ],
+  [
+   2,
+   "Điều phối động và chất lượng phục vụ",
+   17
+  ],
+  [
+   3,
+   "Bài toán và các ràng buộc cơ bản",
+   17
+  ],
+  [
+   3,
+   "Sinh phương án và chọn phương án",
+   17
+  ],
+  [
+   2,
+   "Đo thay đổi và giới hạn lời hứa",
+   18
+  ],
+  [
+   3,
+   "Chênh lệch kết quả và lịch sử cập nhật",
+   18
+  ],
+  [
+   3,
+   "Bảo vệ theo độ chùng và theo thông báo đầu",
+   19
+  ],
+  [
+   3,
+   "Nhất quán, nhiều kế hoạch và phương án tham chiếu",
+   20
+  ],
+  [
+   2,
+   "Ổn định lịch trình và cách chọn thước đo",
+   20
+  ],
+  [
+   2,
+   "Độ tin cậy và giá trị đối với hành khách",
+   21
+  ],
+  [
+   2,
+   "Cơ sở ghi sổ và phạm vi so sánh",
+   21
+  ],
+  [
+   1,
+   "Lời hứa có biên và các điều kiện bảo đảm",
+   23
+  ],
+  [
+   2,
+   "Tổng quan cơ chế",
+   23
+  ],
+  [
+   2,
+   "Mô hình bài toán mở rộng",
+   23
+  ],
+  [
+   3,
+   "Lời hứa công bố",
+   23
+  ],
+  [
+   3,
+   "Các chiều cam kết",
+   24
+  ],
+  [
+   2,
+   "Phép phân rã ba mốc",
+   24
+  ],
+  [
+   3,
+   "Định nghĩa",
+   24
+  ],
+  [
+   3,
+   "Ví dụ minh họa",
+   25
+  ],
+  [
+   2,
+   "Sổ cái cam kết",
+   26
+  ],
+  [
+   2,
+   "Hai cơ sở tính, các định lý và khung bốn họ cổng",
+   26
+  ],
+  [
+   3,
+   "Phát biểu hai cơ sở",
+   26
+  ],
+  [
+   3,
+   "Phương án giữ tuyến trong danh mục ứng viên",
+   26
+  ],
+  [
+   3,
+   "Bất đẳng thức ba mốc và điều kiện dấu bằng",
+   27
+  ],
+  [
+   3,
+   "Ba định lý",
+   28
+  ],
+  [
+   3,
+   "Khung so sánh bốn họ cổng",
+   29
+  ],
+  [
+   3,
+   "Khi nào chặn theo chuỗi khác chặn hai đầu",
+   33
+  ],
+  [
+   2,
+   "Các khóa và cơ chế bảo vệ bổ sung",
+   33
+  ],
+  [
+   2,
+   "Chứng nhận và phục hồi có miễn trừ",
+   33
+  ],
+  [
+   3,
+   "Phạm vi của chứng nhận",
+   33
+  ],
+  [
+   3,
+   "Hai quy tắc phục hồi",
+   34
+  ],
+  [
+   3,
+   "Biên nhìn thấy có điều kiện",
+   34
+  ],
+  [
+   2,
+   "Cài đặt và dấu vết tái lập",
+   35
+  ],
+  [
+   3,
+   "Sinh phương án theo lối chèn",
+   35
+  ],
+  [
+   3,
+   "Chứng cứ niêm phong",
+   36
+  ],
+  [
+   1,
+   "Thực nghiệm và đánh giá bằng chứng",
+   37
+  ],
+  [
+   2,
+   "Thiết kế, dữ liệu và mức bằng chứng",
+   37
+  ],
+  [
+   3,
+   "Đầu vào và đối tượng so sánh",
+   37
+  ],
+  [
+   3,
+   "Cấu hình và phép ghép cặp",
+   37
+  ],
+  [
+   3,
+   "Chỉ số và đối chiếu nguồn",
+   38
+  ],
+  [
+   2,
+   "RQ1: đại lượng được ghi sổ có phản ánh quyết định?",
+   39
+  ],
+  [
+   3,
+   "Tỉ số trung tâm và cách đọc",
+   39
+  ],
+  [
+   3,
+   "Biến động tập trung và tính không cộng của trị tuyệt đối",
+   40
+  ],
+  [
+   3,
+   "Phát biểu được hỗ trợ",
+   40
+  ],
+  [
+   2,
+   "RQ2: giá dịch vụ của gói cam kết và của trần",
+   40
+  ],
+  [
+   3,
+   "Gói chính và tiêu chí H6",
+   40
+  ],
+  [
+   3,
+   "Thang ngân sách với các khóa được giữ",
+   41
+  ],
+  [
+   3,
+   "Cửa sổ rộng hơn có làm cam kết rẻ hơn?",
+   41
+  ],
+  [
+   3,
+   "Cách trả lời RQ2",
+   42
+  ],
+  [
+   2,
+   "RQ3: khả thi khi thời gian đi trôi dạt",
+   43
+  ],
+  [
+   3,
+   "So bốn họ cổng trên cùng bộ sinh",
+   43
+  ],
+  [
+   3,
+   "Phản ví dụ và dự đoán đã niêm phong",
+   44
+  ],
+  [
+   3,
+   "Phục hồi thay đổi câu hỏi so sánh",
+   45
+  ],
+  [
+   3,
+   "Lời hứa chặt trên giờ cao điểm thực",
+   45
+  ],
+  [
+   3,
+   "Khác biệt ở trần trung gian có đáng kể về dịch vụ?",
+   46
+  ],
+  [
+   2,
+   "Kiểm tra T38: dịch vụ, miễn trừ và biên nhìn thấy",
+   47
+  ],
+  [
+   3,
+   "Thiết kế được cố định trước tập kiểm tra",
+   47
+  ],
+  [
+   3,
+   "Giao nhau của chuyến nguồn và đơn vị phân tích",
+   48
+  ],
+  [
+   3,
+   "Số phục vụ gần nhau, nghĩa vụ khác nhau",
+   48
+  ],
+  [
+   3,
+   "Khoảng dự phòng từ phần thay đổi khi giữ tuyến",
+   50
+  ],
+  [
+   3,
+   "Độ phủ quan sát và một trường hợp ngoài biên",
+   50
+  ],
+  [
+   3,
+   "Độ tin cậy thực thi và điều được phép kết luận",
+   51
+  ],
+  [
+   2,
+   "Kiểm tra bổ sung và giới hạn triển khai",
+   52
+  ],
+  [
+   3,
+   "Kết quả phụ thuộc đại lượng được đo",
+   52
+  ],
+  [
+   3,
+   "Bảo vệ giờ đón phụ thuộc khả năng của bộ sinh",
+   54
+  ],
+  [
+   3,
+   "Giới hạn tìm kiếm và các phép thử âm",
+   54
+  ],
+  [
+   2,
+   "Nguồn kết quả và cách tái tính",
+   55
+  ],
+  [
+   2,
+   "Phạm vi kết luận và các đe dọa tính hợp lệ",
+   56
+  ],
+  [
+   3,
+   "Tính hợp lệ của đại lượng",
+   56
+  ],
+  [
+   3,
+   "Tính hợp lệ nội tại và thống kê",
+   57
+  ],
+  [
+   3,
+   "Khả năng khái quát và so sánh với văn liệu",
+   57
+  ],
+  [
+   3,
+   "Kết luận thực nghiệm theo ba câu hỏi",
+   58
+  ],
+  [
+   1,
+   "Kết luận",
+   59
+  ],
+  [
+   2,
+   "Trả lời các câu hỏi nghiên cứu",
+   59
+  ],
+  [
+   2,
+   "Ý nghĩa và giới hạn",
+   60
+  ],
+  [
+   2,
+   "Hướng tiếp theo",
+   61
+  ],
+  [
+   1,
+   "Tài liệu tham khảo",
+   63
+  ]
+ ],
+ "records": [
+  {
+   "physicalPage": 1,
+   "textCharacters": 293,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 171
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.94,
+     "characters": 71
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 13.95,
+     "characters": 32
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 5
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 2,
+   "textCharacters": 293,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 197
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.94,
+     "characters": 60
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 13.95,
+     "characters": 17
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 6
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 3,
+   "textCharacters": 632,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 18.65,
+     "characters": 10
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 611
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 4,
+   "textCharacters": 1892,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 18.65,
+     "characters": 7
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1836
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 12
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 3
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 7
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 5,
+   "textCharacters": 2087,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 18.65,
+     "characters": 8
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2022
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 13
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 3
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 9
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 6,
+   "textCharacters": 1787,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 32.22,
+     "characters": 7
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 220
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1477
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 7,
+   "textCharacters": 2892,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2724
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 45
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 8,
+   "textCharacters": 1762,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1645
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 39
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 9,
+   "textCharacters": 1181,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 32.22,
+     "characters": 17
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1117
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 9
+    },
+    {
+     "font": "CMSY9",
+     "size": 8.97,
+     "characters": 1
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 9
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 10,
+   "textCharacters": 1483,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 32.22,
+     "characters": 14
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1412
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 6
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 11,
+   "textCharacters": 1667,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 18.65,
+     "characters": 30
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 102
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1298
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 91
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 9
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 34
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 12
+    },
+    {
+     "font": "CMSY9",
+     "size": 8.97,
+     "characters": 1
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 29
+    },
+    {
+     "font": "CMEX10",
+     "size": 12.95,
+     "characters": 3
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 12,
+   "textCharacters": 354,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 14
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 18
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 297
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 5
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 4
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 13,
+   "textCharacters": 2234,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 18.65,
+     "characters": 19
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 40
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1992
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 149
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 14,
+   "textCharacters": 2061,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 99
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 39
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1767
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 123
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 15,
+   "textCharacters": 2530,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 25
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2362
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 104
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 16,
+   "textCharacters": 2300,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 44
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2223
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 17,
+   "textCharacters": 2055,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 18.65,
+     "characters": 47
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1857
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 41
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 78
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 18,
+   "textCharacters": 1967,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1722
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 20
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 32
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 25
+    },
+    {
+     "font": "CMEX10",
+     "size": 12.95,
+     "characters": 4
+    },
+    {
+     "font": "CMSY9",
+     "size": 8.97,
+     "characters": 3
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 9
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 9.07,
+     "characters": 9
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 14
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 36
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 43
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 19,
+   "textCharacters": 2512,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2415
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 47
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 6
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 1
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 4
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 2
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 20,
+   "textCharacters": 2260,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1544
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 55
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 47
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 517
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 45
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 21,
+   "textCharacters": 2537,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2384
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 18
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 5
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 6
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 7
+    },
+    {
+     "font": "CMEX10",
+     "size": 12.95,
+     "characters": 2
+    },
+    {
+     "font": "CMSY9",
+     "size": 8.97,
+     "characters": 1
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 77
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 22,
+   "textCharacters": 564,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 553
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 23,
+   "textCharacters": 2004,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 18.65,
+     "characters": 49
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1803
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 49
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 22
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 2
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 48
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 24,
+   "textCharacters": 1740,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 92
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1474
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 18
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 24
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 24
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 7
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 19
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 12.95,
+     "characters": 41
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 25,
+   "textCharacters": 1772,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 56
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1335
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 13
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 80
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 20
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.4,
+     "characters": 86
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 9
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 134
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 4
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 26,
+   "textCharacters": 1771,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1344
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 69
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 24
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 12
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 9.07,
+     "characters": 11
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 7
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 12
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 59
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 105
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 12.95,
+     "characters": 74
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 27,
+   "textCharacters": 2028,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1755
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 23
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 36
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 14
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 144
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 19
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 28,
+   "textCharacters": 2265,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 85
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1380
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 655
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 38
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 33
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 26
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 6
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 2
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 29,
+   "textCharacters": 2204,
+   "fonts": [
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 66
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 10
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 12
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1682
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 49
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 278
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 67
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 30,
+   "textCharacters": 1864,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 76
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1322
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 105
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 43
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 47
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 77
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 113
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 12
+    },
+    {
+     "font": "CMEX10",
+     "size": 12.95,
+     "characters": 5
+    },
+    {
+     "font": "CMSY9",
+     "size": 8.97,
+     "characters": 3
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 31,
+   "textCharacters": 2038,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 43
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 187
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 81
+    },
+    {
+     "font": "CMEX10",
+     "size": 11.82,
+     "characters": 2
+    },
+    {
+     "font": "CMMI8",
+     "size": 7.97,
+     "characters": 6
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 28
+    },
+    {
+     "font": "CMR8",
+     "size": 7.97,
+     "characters": 4
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1025
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 27
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 13
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 37
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 9.07,
+     "characters": 12
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 492
+    },
+    {
+     "font": "CMSY9",
+     "size": 8.97,
+     "characters": 6
+    },
+    {
+     "font": "CMR6",
+     "size": 5.98,
+     "characters": 2
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 4
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 9.07,
+     "characters": 12
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 32,
+   "textCharacters": 2251,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1415
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 54
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 18
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 568
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 18
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 14
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 35
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 8
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 9.07,
+     "characters": 48
+    },
+    {
+     "font": "CMEX10",
+     "size": 12.95,
+     "characters": 14
+    },
+    {
+     "font": "CMSY9",
+     "size": 8.97,
+     "characters": 3
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 33,
+   "textCharacters": 2132,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 88
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1464
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 242
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 71
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 43
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 25
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 71
+    },
+    {
+     "font": "CMEX10",
+     "size": 12.95,
+     "characters": 8
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 6
+    },
+    {
+     "font": "CMSY9",
+     "size": 8.97,
+     "characters": 1
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 74
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 34,
+   "textCharacters": 2334,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2060
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 12.95,
+     "characters": 42
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 119
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 34
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 11
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 13
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 17
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 35,
+   "textCharacters": 2215,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1918
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 17
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 3
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 31
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 9
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 43
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 56
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 12.95,
+     "characters": 92
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 36,
+   "textCharacters": 1186,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1126
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 15
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 25
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 37,
+   "textCharacters": 2112,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 18.65,
+     "characters": 43
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1912
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 39
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 73
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 11
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 1
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 38,
+   "textCharacters": 2420,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 49
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 533
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1642
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 12.95,
+     "characters": 18
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 38
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 37
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 1
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 30
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 3
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 3
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 39,
+   "textCharacters": 2177,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1937
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 54
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 45
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 9
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 48
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 18
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 4
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 6
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 40,
+   "textCharacters": 2359,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2086
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 120
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 25
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 21
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 20
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 3
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 48
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 41,
+   "textCharacters": 2230,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1750
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 39
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 87
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 67
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 218
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 2
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 2
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 42,
+   "textCharacters": 1835,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1384
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 16
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.0,
+     "characters": 149
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 9
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 214
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 22
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 43,
+   "textCharacters": 2615,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2363
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 42
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 37
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 43
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 5
+    },
+    {
+     "font": "CMSY9",
+     "size": 8.97,
+     "characters": 1
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 26
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 1
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 59
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 44,
+   "textCharacters": 1789,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1323
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 40
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 18
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 2
+    },
+    {
+     "font": "CMSY9",
+     "size": 8.97,
+     "characters": 1
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.0,
+     "characters": 32
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.0,
+     "characters": 97
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.0,
+     "characters": 2
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 9
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 211
+    },
+    {
+     "font": "CMSY8",
+     "size": 7.97,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 45,
+   "textCharacters": 2468,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2285
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 81
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 26
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 5
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 4
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 29
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 46,
+   "textCharacters": 2254,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1936
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 13
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 27
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 5
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 76
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 9
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 125
+    },
+    {
+     "font": "CMR8",
+     "size": 7.97,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 47,
+   "textCharacters": 2418,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2218
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 2
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 53
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 45
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 12.95,
+     "characters": 16
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 44
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 3
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 48,
+   "textCharacters": 2433,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 144
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1805
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 12.95,
+     "characters": 11
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 10
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 40
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 10
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 30
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 4
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 31
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 288
+    },
+    {
+     "font": "CMR8",
+     "size": 7.97,
+     "characters": 4
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 49,
+   "textCharacters": 1857,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1317
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 46
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.0,
+     "characters": 16
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.0,
+     "characters": 137
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 9
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 204
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 63
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 5
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 15
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 4
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 50,
+   "textCharacters": 2319,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2013
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 39
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 9
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 89
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 8
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 99
+    },
+    {
+     "font": "CMMI9",
+     "size": 8.97,
+     "characters": 2
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 22
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 51,
+   "textCharacters": 1806,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.0,
+     "characters": 139
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 9
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 192
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 15
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 11
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1321
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 29
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 52
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 52,
+   "textCharacters": 2465,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2323
+    },
+    {
+     "font": "CMSY10",
+     "size": 11.96,
+     "characters": 9
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 11
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 2
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 43
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 40
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 53,
+   "textCharacters": 2271,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1583
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 74
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 544
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 54,
+   "textCharacters": 2536,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 89
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2382
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 23
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 4
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 55,
+   "textCharacters": 2530,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 58
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 686
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 11.82,
+     "characters": 19
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1587
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 7
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 2
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 34
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 12.95,
+     "characters": 84
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 56,
+   "textCharacters": 2359,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 11.82,
+     "characters": 63
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 250
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 11.82,
+     "characters": 373
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1358
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 24
+    },
+    {
+     "font": "LMMono12-Regular",
+     "size": 12.95,
+     "characters": 157
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 47
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 31
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 57,
+   "textCharacters": 2615,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2492
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 85
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 58,
+   "textCharacters": 917,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 858
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 43
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 59,
+   "textCharacters": 2295,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 18.65,
+     "characters": 17
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 34
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2070
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 97
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 29
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 12
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 1
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 60,
+   "textCharacters": 2555,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2342
+    },
+    {
+     "font": "CMMI12",
+     "size": 11.96,
+     "characters": 28
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 62
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 60
+    },
+    {
+     "font": "CMR9",
+     "size": 8.97,
+     "characters": 1
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 24
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 61,
+   "textCharacters": 2660,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 2438
+    },
+    {
+     "font": "CMR12",
+     "size": 11.96,
+     "characters": 9
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 15.54,
+     "characters": 20
+    },
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 12.95,
+     "characters": 155
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 62,
+   "textCharacters": 322,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 314
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 63,
+   "textCharacters": 2153,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-BoldMT",
+     "size": 18.65,
+     "characters": 18
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1852
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 236
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 64,
+   "textCharacters": 2218,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 1884
+    },
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 293
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  },
+  {
+   "physicalPage": 65,
+   "textCharacters": 853,
+   "fonts": [
+    {
+     "font": "TimesNewRomanPS-ItalicMT",
+     "size": 12.95,
+     "characters": 150
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 12.95,
+     "characters": 684
+    },
+    {
+     "font": "TimesNewRomanPSMT",
+     "size": 11.82,
+     "characters": 2
+    }
+   ],
+   "outsidePageSpans": []
+  }
+ ]
+}

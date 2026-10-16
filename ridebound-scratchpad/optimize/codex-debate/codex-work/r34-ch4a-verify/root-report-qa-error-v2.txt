@@ -1,0 +1,1 @@
+root-report-qa-v2.py exited 1 because its lexical coverage test required the exact token **192**. The report already contained the count 192 inside the bold arithmetic expression **88 + 104 = 192**. This was a QA token-matching error, corrected in root-report-qa-v3.py; no report fact was changed. Original script retained.

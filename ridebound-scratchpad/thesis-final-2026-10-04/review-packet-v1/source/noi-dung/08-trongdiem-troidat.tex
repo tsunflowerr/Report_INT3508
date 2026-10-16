@@ -1,0 +1,181 @@
+\section{RQ3: khả thi khi thời gian đi trôi dạt}
+
+\label{muc:trongdiem}
+
+\subsection{So bốn họ cổng trên cùng bộ sinh}
+
+Phép kiểm tầng 2 hỏi một câu hẹp: khi thông tin thời gian đi đổi, cổng nào có thể loại
+luôn phương án giữ tuyến? Bốn cổng có cùng bộ sinh chèn và các kiểm tra vật lý. Cổng
+$C$ tính phần do quyết định; $V$ tính biến động nhìn thấy; $M^{+}$ giữ hạn chót một
+phía từ lời hứa đầu; $M^{\pm}$ giữ cả giới hạn sớm và muộn từ lời hứa đầu. Các dạng
+$M$ là đối chứng về hình thức ràng buộc, không phải bản tái lập toàn bộ thuật toán
+của Schulz và Pfeiffer hay một nghiên cứu cửa sổ thời gian khác.
+
+Trong đợt này, hệ số thời gian đi tại thời điểm $t$ là
+$[f(t_0+t)/f(t_0)]^k$, với $f$ lấy từ chuỗi theo ngày. $k=0$ giữ thế giới tĩnh;
+$k=1$ dùng biến thiên của chuỗi; $k=2$ khuếch đại biến thiên một cách tổng hợp.
+Giá trị hiện tại được dùng để chiếu tuyến, không đọc hệ số tương lai. Hệ số áp chung
+cho mọi cung, nên đây chưa phải mô hình tắc đường khác nhau giữa các khu phố.
+
+Phải tách \emph{tập rỗng do cổng cam kết} khỏi \emph{tập rỗng do điều kiện vật lý}.
+Ở loại thứ nhất, các lựa chọn còn lại bị cổng thời gian loại, kể cả giữ tuyến.
+Ở loại thứ hai, khách đã nhận không còn thỏa điều kiện đón hoặc hoàn tất của bộ
+kiểm tra vật lý. Không có định lý nào về sổ hành vi biến một kế hoạch vật lý đã
+hỏng thành khả thi. Nhận định ``cổng $C$ không làm rỗng tập'' vì vậy không được
+viết thành ``hệ thống $C$ luôn chạy được''.
+
+Phép so trên 20 ô chính tách các nguyên nhân dừng. Trong thế giới
+tĩnh, $C$-30 không dừng vì cam kết, còn $V$-30 có bốn ô dừng theo nguyên nhân này.
+Với biến thiên $k=1$, $M^{+}$-30 dừng do cam kết ở 19/20 ô; $C$-30 là 0/20.
+Tuy nhiên, $C$-30 có 11/20 ô dừng vì cửa sổ đón vật lý. Đây là bằng chứng về
+khả năng bảo toàn phương án giữ tuyến của \emph{cổng}, cùng một giới hạn rõ của
+hệ thực thi nghiêm ngặt đang dùng.
+
+Nới hạn chót làm số ô rỗng do cam kết của $M^{+}$ giảm từ 19 ở trần 30 giây,
+xuống 13 ở 60 giây rồi 3 ở 120 giây. Số ô dừng vật lý tương ứng là 1, 5 và 11.
+Một cổng bớt chặt có thể cho thực thi đi xa hơn rồi mới gặp vi phạm vật lý;
+không được đọc những số này như ba ước lượng độc lập về tỉ lệ phục vụ.
+Trên toàn 56 ô $C$ của các panel và hệ số đã xét, không có lần dừng do cam kết,
+nhưng có 14 lần dừng vật lý. Những lần dừng sớm cũng làm so sánh dịch vụ chỉ trên
+các lần chạy sống sót trở nên lệch; khóa luận không thực hiện phép so đó.
+
+\subsection{Phản ví dụ và dự đoán đã niêm phong}
+
+Panel sáng/tối bổ sung dùng ngày 12--13/11, mỗi ngày bốn mẫu; có tám ô cho mỗi
+khung. Nó được tách khỏi panel dùng xây dựng quy tắc dự đoán tầng 2, nhưng vẫn
+là bằng chứng thăm dò trong một miền nhỏ. Buổi sáng, $M^{+}$-30 rỗng do cam kết
+ở 4/8 ô, $V$-30 ở 8/8, còn $C$-30 ở 0/8. Buổi tối, khi thời gian đi giảm,
+$M^{+}$ không rỗng do cam kết ở các trần 30, 60 và 120 giây. Ngược lại,
+$M^{\pm}$-30 rỗng ở 7/8 ô do giới hạn sớm, và $V$-30 rỗng ở 8/8.
+Hình~\ref{hinh:cong-troidat} so quan sát với dự đoán đã niêm phong ở hai khung.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{hinh/tier2_gates_final.pdf}
+\caption{Số ô rỗng do cổng cam kết trong panel phát triển tầng 2, tám ô mỗi khung,
+trần 30 giây. Các cột so quan sát với dự đoán niêm phong; hình không đếm những
+lần dừng vì điều kiện vật lý. $M$ trên hình là khoảng hai phía $M^{\pm}$.}
+\label{hinh:cong-troidat}
+\end{figure}
+
+Kết quả buổi tối giúp phân biệt hai dạng $M$. Xe nhanh lên không làm hỏng một
+hạn chót chỉ cấm muộn; nó có thể làm hỏng một khoảng đối xứng cấm cả sớm. Một
+trần tổng biến động nhìn thấy còn tính cả những dịch chuyển về phía sớm. Vì vậy
+không có căn cứ gộp mọi cổng theo kết quả thành một nhóm luôn kém khả thi như nhau.
+
+Quy tắc dự đoán trên chuỗi thời gian đi được cố định trước các lần chạy cần dự đoán.
+Đối chiếu với kết quả cuối cho 98/102 dự đoán xác định đúng ở panel chính,
+31/32 ở panel sáng và 40/40 ở panel tối. Mẫu số đếm các trường hợp mà quy tắc
+đưa ra một dự đoán xác định, không phải số episode độc lập, số khách hay số định lý.
+Phần dự đoán yếu về vi phạm vật lý được ghi riêng; không gộp vào ba tỉ số trên.
+
+Những dự đoán sai có ý nghĩa phương pháp: quy tắc dùng một quỹ đạo tham chiếu,
+trong khi một nhánh có thể nhận khách khác và đi theo quỹ đạo khác. Một điều kiện
+đúng trên quỹ đạo tham chiếu chưa là điều kiện trên mọi phương án. Do đó độ đúng
+cao kiểm một quy tắc chẩn đoán trong miền này, không chứng minh giả thiết (H)
+của quan hệ bao hàm giữa mọi lịch.
+
+\subsection{Phục hồi thay đổi câu hỏi so sánh}
+
+
+Đợt tầng 2 dừng khi điều kiện nghiêm ngặt bị phá. Để nghiên cứu dịch vụ sau biến
+động, đợt sau cho tiếp tục có ghi nhận vi phạm và so hai luật phục hồi ở
+Mục~\ref{muc:phuchoi}. Luật (a) đóng băng quyết định khi cổng bế tắc. Luật (b)
+cho một miễn trừ giới hạn đối với trạng thái đã vượt ngưỡng: phương án mới không
+được làm đại lượng đang vi phạm xấu hơn phương án giữ tuyến. Các điều kiện khác
+vẫn được kiểm; miễn trừ không xóa sổ hay đổi lại lời hứa đầu.
+
+Trên tám ô có tắc nghẽn của phép kiểm phục hồi, gồm hai ô theo chuỗi thực và sáu
+ô tổng hợp, $C$-30 phục vụ 697 khách. $V$-30 với luật (a) phục vụ 666; đổi sang
+luật (b) thì đạt 697. $M^{+}$-30 với luật (b) cũng đạt 697. Vì vậy chênh dịch vụ
+của một cổng còn phụ thuộc cách xử lý khi cổng không còn khả thi. Không được
+quy toàn bộ chênh của cấu hình đóng băng cho riêng định nghĩa ngân sách.
+
+Các phép kiểm hợp đồng có 28 trường hợp ghép cặp, trong đó sáu trường hợp kiểm
+âm có cùng hành động giữa hai luật. Tổng 49 hành động đổi tuyến có miễn trừ của
+luật (b) được kiểm theo trạng thái giữ tuyến. Đây là kiểm tra hành vi cài đặt
+trong các kịch bản đã dựng, không phải bằng chứng rằng phục hồi sẽ duy trì mọi
+lời hứa cứng. Luật ``không làm xấu thêm'' và ý tưởng phục hồi đã có trong văn
+liệu điều phối; khóa luận không nhận chúng là ý tưởng mới.
+
+Thế giới của đợt sau dùng mốc cập nhật đúng $900$ giây, cùng lịch hệ số giữa các
+nhánh, và chỉ cung cấp hệ số hiện tại. Trong đợt tầng 2 cũ, cập nhật xảy ra ở
+sự kiện mô phỏng kế tiếp: độ trễ so mốc có trung vị 22 giây và cực đại 210 giây.
+Các nhánh cũ có thể nhận bản cập nhật ở thời điểm khác nhau. Vì vậy khóa luận
+giữ các kết quả tầng 2 như kiểm cơ chế của phiên bản đó, không ghép chúng với
+đợt mới thành một ước lượng dịch vụ duy nhất.
+
+\subsection{Lời hứa chặt trên giờ cao điểm thực}
+
+
+Phép kiểm W07 dùng tám ô 07:00--09:00 của ngày 12--13/11, tổng 864 yêu cầu,
+chỉ với biến thiên từ chuỗi thực và luật phục hồi (b). Đây là panel phát triển
+đã được đọc nhiều lần, không phải tập kiểm tra mới. Nhánh $U$ phục vụ 665 khách.
+Ở trần 30 giây, $C$, $M^{+}$ và $V$ đều phục vụ 660; ở 60 giây, $C$ và
+$M^{+}$ đều phục vụ 661. Tuy vậy, chúng có nghĩa vụ và gánh phục hồi khác nhau.
+
+Ở 30 giây, tỉ lệ khách vượt lời hứa \emph{theo thước đo của chính luật}, lấy
+trung bình không trọng số theo tám ô, là 0\% với $C$, 24,0\% với $M^{+}$ và
+29,2\% với $V$. Với $M^{+}$-60, tỉ lệ là 7,3\%. Giá trị trước làm tròn là
+24,04\% và 7,25\%; 7,25\% khác với tỉ lệ gộp theo khách $47/661=7{,}11\%$.
+Các số này không phải kết quả khảo sát về thất vọng của hành khách.
+
+Đối với $M^{+}$, lời hứa là giờ trả thực tế không quá muộn so với thông báo đầu.
+Trôi dạt có thể phá lời hứa ấy ngay cả khi không nhận thêm khách. Cổng $C$
+giữ sổ hành vi dưới trần nhưng vẫn có khách đến muộn theo thước hạn chót. Nếu
+chấm $C$-30 bằng thước hạn chót 30 giây, tỉ lệ vượt cũng là 24,0\% trên panel
+này. Do đó ``$C$ không phá lời hứa của mình'' nói về một hợp đồng hẹp hơn,
+không nói giờ đến của khách tốt hơn một cách tuyệt đối.
+
+Tỉ lệ quyết định có miễn trừ trung bình ở trần 30 giây là 58,6\% cho $M^{+}$
+và 63,2\% cho $V$, còn $C$ là 0\%. Ở trần 60 giây, $M^{+}$ vẫn có 35,5\%
+quyết định có miễn trừ. Cùng số khách phục vụ nhưng phải thường xuyên bỏ qua
+một phần cổng là khác biệt vận hành cần công bố. Nó không làm số khách bị vượt
+hạn chót biến mất, cũng không biến miễn trừ thành một bảo đảm cứng.
+
+\subsection{Khác biệt ở trần trung gian có đáng kể về dịch vụ?}
+
+W07X mở các mức 90--240 giây sau khi đã xem W07. Kế hoạch được niêm phong trước
+lần chạy mới, nhưng vùng trần được chọn từ kết quả phát triển. Phép so vẫn chỉ
+có tám ô của hai ngày; 104 lần chạy mới cộng 80 lần được dùng lại không tạo
+thành 184 mẫu độc lập. Bảng~\ref{bang:w07x} giữ các mức làm đổi cách đọc kết quả.
+
+\begin{table}[htbp]
+\centering
+\caption{Số yêu cầu hoàn tất ở các trần chọn lọc của W07X, trên 864 yêu cầu.
+Cột cuối đếm các ô có cùng toàn bộ chuỗi hành động của $C$ và $M^{+}$.}
+\label{bang:w07x}
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+\textbf{Trần (s)} & \textbf{$C$} & \textbf{$M^{+}$} & \textbf{$V$} & \textbf{Cùng hành động}\\
+\midrule
+30 & 660 & 660 & 660 & 8/8\\
+90 & 664 & 663 & 663 & 7/8\\
+120 & 666 & 664 & 664 & 6/8\\
+150 & 666 & 666 & 666 & 8/8\\
+240 & 665 & 665 & 665 & 8/8\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Một đối chiếu tại quyết định phân kỳ đầu tiên cho thấy đúng cơ chế dự kiến.
+Ở ngày 12/11, mẫu 1, quyết định thứ 294, khách cũ đã có 79,0 giây thay đổi khi
+giữ tuyến. Cách ghép mới thêm 68,262 giây do quyết định. Tổng 147,262 giây vượt
+hạn chót 90 hoặc 120 giây, nhưng phần riêng do quyết định còn dưới các trần đó.
+$C$ nhận cách ghép, còn $M^{+}$ chặn. Đây là giải thích tại một trạng thái đã
+ghi, không phải ước lượng tác động nhân quả tổng thể của trôi dạt.
+
+Khác biệt làm thêm đúng một khách trong ô đó. Ở trần 120 giây có thêm một ô
+khác phân kỳ, nên tổng chênh là hai khách. Không mức nào đạt tiêu chí đã đặt
+cho một lợi ích dịch vụ: ít nhất ba khách và ít nhất ba ô. Từ 150 giây trở lên,
+các nhánh có cùng số khách trên panel. Sáu trong tám dự đoán W07X đúng; hai
+dự đoán về phạm vi phân kỳ và thứ tự gánh phục hồi sai. Khóa luận giữ các
+trường hợp phân kỳ như bằng chứng cơ chế, không dùng chúng để tuyên bố $C$
+phục vụ nhiều hơn các cổng còn lại.
+
+RQ3 vì vậy cần hai lớp trả lời. Sổ hành vi giữ được nghĩa vụ của mình trong
+các trường hợp đã xét, miễn là trạng thái giữ tuyến và ngân sách đáp ứng giả
+thiết. Các cổng theo kết quả có thể cần phục hồi nhiều hơn, nhưng khi được
+phục hồi chúng có thể phục vụ cùng số khách. Còn giờ khách thực sự thấy hoặc
+thực sự đến vẫn phụ thuộc phần thay đổi ngoài sổ hành vi. Mục sau kiểm một
+biên nhìn thấy có tính đến phần đó.

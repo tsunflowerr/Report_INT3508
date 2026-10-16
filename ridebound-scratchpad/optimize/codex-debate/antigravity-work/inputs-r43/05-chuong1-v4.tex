@@ -1,0 +1,344 @@
+% Round 40 — Chương 1 v4; bản mới, giữ nguyên các tệp Round 30.
+% Quyết định từng nhận xét và kiểm số: 05-chuong1-v4-LOG.md; không cần gói mới.
+\chapter{Đặt vấn đề}
+\label{chuong:modau}
+
+Chương này giải thích vì sao giờ khách được báo sẽ tới nơi có thể bị dời. Chương chia độ lệch giữa giờ tới
+thực tế và lời hứa đầu thành ba phần, rồi nêu cách xử lý, câu hỏi nghiên cứu, đóng góp và phạm vi.
+% EV: — (lộ trình chương).
+
+\section{Bối cảnh: lời hứa giờ trả trong dịch vụ đi chung xe}
+\label{muc:c1-boicanh}
+
+Trong dịch vụ đi chung xe, bộ điều phối là phần mềm xếp nhiều khách vào cùng một xe và sửa kế hoạch chạy khi có
+yêu cầu mới. Giờ trả đã báo cho khách được gọi là lời hứa giờ trả, hoặc gọn là lời hứa. Mốc này có thể đổi khi xe
+nhận thêm điểm dừng để đón, trả khách mới. Ngay cả khi giữ nguyên kế hoạch, thời gian đi thay đổi cũng làm giờ
+trả tính lại khác đi. Giờ trả báo lúc khách xác nhận đặt xe được gọi là lời hứa đầu.
+% EV: J17; A01; A02; A13; J01; J06.
+
+Các ví dụ dưới đây lấy từ FleetPy, bộ mô phỏng xe và khách, nối với phần mềm điều phối RideBound của khóa
+luận~\cite{engelhardt2026}. Hai khách trong Hình~\ref{hinh:c1-loihua} minh họa phần tính cho điều phối và dự báo.
+% EV: B01; X3-15; X3-40; D06; C31.
+
+Khách ở hình trên thuộc một kịch bản dùng khi xây dựng phương pháp, ngày 13/11/2018. Cấu hình này cho phép bộ
+điều phối dời giờ trả của mỗi khách tổng cộng tới 300 giây. Khách trễ nhất tới muộn hơn lời hứa đầu 307,3 giây:
+99,1 giây thuộc phần thay đổi khi giữ nguyên kế hoạch, còn 208,2 giây là tổng phần tính cho điều phối.
+Nếu chỉ cho dời tổng cộng 30 giây, khách trễ nhất của cùng kịch bản là một người khác, trễ 99,1 giây, trong đó
+97,1 giây thuộc phần thay đổi khi giữ nguyên kế hoạch. Hai số 99,1 giây này trùng giá trị nhưng thuộc hai khách.
+% EV: D06; N-30; W07:48-54; Q4R:3,9 (khóa Q4R trong LOG).
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,font=\footnotesize]
+  \node[anchor=west] at (0,4.85) {(a) Khách trễ nhất khi cho dời tối đa 300 giây};
+  \draw[->] (0.6,3.75)--(11.8,3.75);
+  \draw (0.6,3.64)--(0.6,3.86);
+  \draw (3.673,3.64)--(3.673,3.86);
+  \draw (10.127,3.64)--(10.127,3.86);
+  \fill (0.6,3.75) circle (1.8pt);
+  \fill (3.673,3.75) circle (1.8pt);
+  \fill (10.127,3.75) circle (1.8pt);
+  \draw[<->] (0.6,4.18)--(3.673,4.18);
+  \node[align=center] at (2.137,4.48) {Giữ kế hoạch\\99,1 giây};
+  \draw[<->] (3.673,4.18)--(10.127,4.18);
+  \node[align=center] at (6.9,4.48) {Phần tính cho điều phối\\208,2 giây};
+  \node[anchor=north,align=center] at (0.6,3.55) {Lời hứa đầu\\0};
+  \node[anchor=north,align=center] at (3.673,3.55) {+99,1};
+  \node[anchor=north,align=center] at (10.127,3.55) {Trả thực tế\\307,3};
+  \node[anchor=west] at (0,2.45) {(b) Một khách khác: lời hứa theo dự báo};
+  \draw[->] (0.6,1.35)--(11.8,1.35);
+  \draw (0.6,1.24)--(0.6,1.46);
+  \draw (8.553,1.24)--(8.553,1.46);
+  \draw (9.363,1.24)--(9.363,1.46);
+  \fill (0.6,1.35) circle (1.8pt);
+  \draw[fill=white] (8.553,1.35) circle (2.4pt);
+  \fill (9.363,1.35) circle (1.8pt);
+  \draw[<->] (0.6,1.8)--(8.553,1.8);
+  \node at (4.58,2.04) {Lời hứa dài thêm 172,9 giây};
+  \node[anchor=north,align=center] at (0.6,1.14) {Lời hứa đầu\\7:34:51\\0};
+  \draw[dashed] (8.553,1.25)--(7.9,0.53);
+  \node[anchor=north,align=center] at (7.9,0.48) {Lời hứa có dự báo\\7:37:44\\172,9};
+  \draw[dashed] (9.363,1.25)--(10.45,0.94);
+  \node[anchor=north,align=center] at (10.45,0.89) {Trả thực tế\\7:38:02\\190,5};
+  \node[anchor=west,align=left] at (10.15,1.87) {Còn trễ\\17,6 giây};
+\end{tikzpicture}
+\caption{Hai khách trong bản ghi mô phỏng. Mỗi trục tính số giây sau lời hứa đầu, với tỉ lệ riêng.
+Hình trên thuộc kịch bản phát triển ngày 13/11/2018, khung 7:00--9:00; hai đoạn là tổng các phần qua các lần cập nhật lời hứa.
+Hình dưới thuộc ngày 15/11/2018, cùng khung giờ; giờ đồng hồ làm tròn tới giây, độ lệch tính trước khi làm tròn.}
+\label{hinh:c1-loihua}
+\end{figure}
+% EV: D06; N-30; C31; W07:48-54; EXAMPLE:1-4,60-61.
+
+Khách ở hình dưới đặt xe lúc 7:11:56, được hứa tới nơi lúc 7:34:51 nhưng tới thật lúc 7:38:02, muộn 190,5 giây.
+Khi tính lại lời hứa bằng mức tăng tắc đường dự báo từ các ngày trước, lời hứa là 7:37:44, dài hơn 172,9 giây;
+độ trễ còn 17,6 giây. Ví dụ này cho thấy dự báo giúp gì và tốn gì, không phải phép đo tác dụng của giới hạn
+đặt cho bộ điều phối. 
+% EV: C31; EXAMPLE:1-3,60-61; F01; F02.
+
+Trang giới thiệu UberX Share nêu thời gian đi thêm trung bình 8 phút và không bảo đảm giờ
+tới~\cite{uberxshare}; con số trung bình không phải giới hạn cho mỗi khách.
+MOIA Express là lựa chọn nâng cấp có trả thêm, với khoảng giờ tới hẹp hơn~\cite{moiaexpress}.
+% EV: J28; J31; BIB-VERIFICATION-v2 (uberxshare, moiaexpress).
+
+Về phía người đi xe, Alonso-González và cộng sự~\cite{alonsogonzalez2020} khảo sát 1.006 người ở Hà Lan về giá
+trị của thời gian đi và mức ổn định của thời gian đó trong dịch vụ đi chung. Wardman và cộng sự~\cite{wardman2026} tổng hợp các ước lượng về
+thời gian tới muộn: một phút muộn được định giá bằng 2,53 phút ngồi xe ở một cách hỏi, và 3,12 phút ở cách khác.
+Hai giá trị lần lượt dựa trên 15 quan sát từ 2 nghiên cứu và 66 quan sát từ 27 nghiên cứu. Đây là những cách
+đo khác nhau; chúng không cho biết khách coi trọng giới hạn của khóa luận đến mức nào.
+% EV: J24; C2-18; J23; C2-17; I07; I10.
+
+\section{Ba phần của độ lệch giờ trả và chỗ xử lý mỗi phần}
+\label{muc:c1-cauhoi}
+
+Khóa luận chia độ lệch giữa giờ tới thực tế và lời hứa đầu thành ba phần ở Hình~\ref{hinh:c1-baphan}.
+Phần thứ nhất là phần tính cho điều phối. Với mỗi khách đã có lời hứa của xe, kể cả khách đang chờ đón, hệ
+thống so hai giờ trả: giờ nếu giữ kế hoạch cũ và giờ theo kế hoạch mới. Cả hai được tính từ cùng vị trí xe
+và cùng thời gian đi hiện tại.
+% EV: A01; A02; X3-20; X3-27.
+
+Ví dụ dựng tay: lời hứa đang là 9:10:00; tính lại kế hoạch cũ cho giờ trả 9:10:40, còn kế hoạch mới cho
+9:11:10. Khi đó 40 giây thuộc phần thay đổi khi giữ nguyên kế hoạch và 30 giây thuộc phần tính cho điều phối.
+Luật C đặt cho mỗi khách một mức tối đa, gọi là trần, cho tổng độ lớn các lần dời thuộc phần này trong cả
+chuyến. Dời sớm hay dời muộn đều cộng vào; mức chính được thử là 30 giây. Khi chia độ lệch, dời muộn cộng, dời sớm
+trừ; riêng trần cộng độ lớn.
+% EV: X3-37 (ví dụ dựng tay); A01; A02; A06; X3-27; X3-12 (cộng giữ dấu khi chia độ lệch).
+
+Phần thứ hai là phần dự báo giải thích được. Hồ sơ tắc đường lịch sử tổng hợp mức tắc đường theo giờ từ
+các ngày trước; hệ thống dùng mức tăng dự báo để tính lời hứa theo dự báo. Phần thứ ba là phần còn lại.
+Sổ theo từng khách ghi các lần cập nhật. Sau lần chạy, sổ cho phép tính cả ba phần và phần dự báo chưa giải
+thích được. Đây là phép tính trên mô hình mô phỏng, không phải phép đo nguyên nhân; phần còn lại
+không đồng nghĩa với phần không thể biết trước.
+% EV: F01; F02; F09; X3-12; X3-25; K04; K19.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,font=\small,
+  part/.style={draw,rounded corners,align=center,text width=5.6cm,minimum height=0.85cm},
+  place/.style={draw,align=center,text width=5.2cm,minimum height=0.85cm}]
+  \node[part] (dispatch) at (0,2.3) {Phần tính cho điều phối};
+  \node[part] (history) at (0,1.15) {Phần dự báo giải thích được};
+  \node[part] (rest) at (0,0) {Phần còn lại};
+  \node[place] (cap) at (7.4,2.3) {Luật C: giới hạn từng khách};
+  \node[place] (forecast) at (7.4,1.15) {Lời hứa theo dự báo};
+  \node[place] (ledger) at (7.4,0) {Sổ theo từng khách: tính phần còn lại};
+  \draw[->] (dispatch)--(cap);
+  \draw[->] (history)--(forecast);
+  \draw[->] (rest)--(ledger);
+\end{tikzpicture}
+\caption{Ba phần của độ lệch giờ trả và chỗ xử lý mỗi phần. Sổ cho phép tính cả ba phần; các mũi tên chỉ vai trò
+được nhấn mạnh, không biểu diễn quan hệ nhân quả.}
+\label{hinh:c1-baphan}
+\end{figure}
+% EV: A06; F01; F09; X3-12; eq:so của Chương 3 v3.
+
+Trên tập kiểm tra chính, gồm 34 kịch bản ở mục~\ref{muc:c1-phamvi}, điều phối không trần vẫn giữ xe, điểm đón,
+điểm trả và giờ đón đã xác nhận, nhưng không giới hạn phần dời giờ trả. Trong 203 khách tới muộn hơn lời hứa
+đầu quá một phút, 134 người từng bị điều phối dời giờ trả. Con số chỉ cho biết hai nhóm trùng nhau, không
+cho biết việc bị dời là nguyên nhân làm họ trễ.
+% EV: B09; A07; A08; C06; C21.
+
+Gộp theo khách, 23.027 trong 31.353 giây trễ của cả 203 khách, tức 73,4\%, thuộc phần tính cho điều phối.
+Trong 2.434 khách được phục vụ, khách bị dời nhiều nhất có tổng độ lớn phần tính cho điều phối 590,1 giây,
+gần 10 phút.
+% EV: C24; C4A-03 (hai tổng chính xác 23.027,239 / 31.353,407 s, làm tròn tới giây); C20.
+
+Từ cách chia trên, khóa luận đặt ba câu hỏi:
+\begin{description}[leftmargin=1.15cm,style=nextline,itemsep=3pt]
+\item[CH1.] Phần dời giờ trả tính cho điều phối được đo thế nào và kiểm vào lúc nào? Trần trên phần này giữ
+được gì cho khách và không giữ được gì? Câu trả lời không bao gồm bảo đảm giờ tới thực tế.
+\item[CH2.] Khi áp trần, số lượt phục vụ, số lượt không trễ quá một và hai phút, cùng độ dài lời hứa thay đổi
+thế nào so với điều phối không trần, luật hạn chót và cách đệm lời hứa? Luật hạn chót giới hạn giờ trả so với
+lời hứa đầu; cách đệm cộng một khoảng cố định vào lời hứa. Kết quả không chỉ ra mức trần tốt nhất.
+\item[CH3.] Lời hứa theo dự báo đổi số lượt không trễ quá một phút thế nào, và phần độ lệch nào vẫn chưa được
+dự báo giải thích? Kết quả không cho biết khách sẽ phản ứng ra sao.
+\end{description}
+% EV: OUTLINE-V2 cuối §1.2; A09; C10; K05; K19; K36; I07.
+
+\section{Các công trình gần nhất và chỗ đứng của khóa luận}
+\label{muc:c1-lienquan}
+
+Các nghiên cứu trước đã đo mức giờ hứa thay đổi, chặn việc đổi giờ khi chọn kế hoạch và đặt giới hạn riêng
+từng khách. Bảng~\ref{bang:c1-chodung} so đại lượng được xét và cách xử lý thời gian đi thay đổi.
+% EV: J01; J03; J06-J10; C2-08; C2-09; C2-15.
+
+\begin{table}[htbp]
+\centering
+\caption{Chỗ đứng của khóa luận so với các cách đo và ràng buộc lời hứa. Thời gian đi cố định nghĩa là
+thời gian đi trên mỗi cạnh không đổi trong mô hình của bài được trích.}
+\label{bang:c1-chodung}
+\footnotesize
+\begin{tabular}{@{}p{2.8cm}p{4.0cm}p{3.3cm}p{4.5cm}@{}}
+\toprule
+\textbf{Cách tiếp cận} & \textbf{Làm gì; đại lượng xét} &
+\textbf{Thời gian đi thay đổi} & \textbf{Khóa luận kế thừa hay làm khác}\\
+\midrule
+Fielbaum và Alonso-Mora (2020)~\cite{fielbaum2020}
+& Đo thay đổi thời gian; kiểm soát giờ chờ khi chọn kế hoạch
+& Chọn giờ thấp điểm để bỏ qua bất ổn giao thông
+& Kế thừa việc đo, kiểm soát và đo đánh đổi với phục vụ\\
+% EV: J06-J09; C2-06.
+Hörl và Zwick (2022)~\cite{horl2022}
+& Tính lại tuyến cũ; nới hạn trả theo giờ tính lại (công thức 7); phạt phần vượt hạn gốc
+& Nới hạn theo giờ trả tính lại với thời gian đi hiện tại
+& Dùng cùng mốc so; chưa chạy luật kiểu này làm đối chứng\\
+% EV: J01; J03; J05; C2-04; K27; Ch4B-v10:445-446.
+Schulz và Pfeiffer (2026)~\cite{schulz2026}
+& Hạn trả tính từ giờ trong lời mời khách đã nhận
+& Thời gian đi được cho trước
+& Cài phần hạn chót làm đối chứng, không tái lập toàn bộ phương pháp\\
+% EV: J10; J11; C2-07; A09.
+Elmi và cộng sự (2026)~\cite{elmi2026}
+& Bảo đảm lời hứa cho nhóm khách được chọn
+& Thời gian đi trên mỗi cạnh cố định
+& Kế thừa bảo vệ từng khách; giới hạn tổng qua cả chuyến\\
+% EV: C2-08; A06.
+Laupichler và cộng sự (2026), bộ điều phối Mt-KaRRi~\cite{laupichler2026}
+& Giới hạn thời gian chuyến theo thời gian khách đã chấp nhận
+& Thời gian đi trên mỗi cạnh cố định
+& Cùng đặt giới hạn cho khách; khác đại lượng được xét\\
+% EV: J32; C2-09; A06.
+Lời hứa theo dự báo~\cite{hu2022}
+& Hiệu chỉnh giờ đến dự kiến từ dữ liệu
+& Dùng thông tin thời gian thực và lịch sử
+& Dùng hồ sơ lịch sử; tính lại lời hứa trên các lần chạy đã ghi\\
+% EV: J35; C2-15; F01; F03.
+Khóa luận
+& Trần tổng độ lớn các lần dời tính cho điều phối, cho mỗi khách có lời hứa
+& Không tính phần thay đổi khi giữ nguyên kế hoạch vào trần
+& Đặc tả, cài đặt, kiểm trần và đo đánh đổi với phục vụ\\
+% EV: A01; A02; A06; X3-12; C02.
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách đọc bảng: các công trình đo hoặc giới hạn những đại lượng khác nhau. Tiền lệ trực tiếp là Hörl và
+Zwick: khóa luận dùng lại giờ trả tính theo tuyến cũ với thời gian đi hiện tại. So hai định nghĩa, luật C
+khác ở trần như nhau cho mọi khách có lời hứa, chỉ tính phần tính cho điều phối và cộng qua cả chuyến.
+Vì không tính phần thay đổi khi giữ nguyên kế hoạch, trần không cần nới theo tắc đường.
+% EV: J01; J03; J05 (suy luận từ hai định nghĩa); C2-04; A06.
+
+Đây là khác biệt về định nghĩa, chưa phải kết quả so sánh với luật kiểu Hörl và Zwick, vì luật đó chưa được
+chạy làm đối chứng. Hai tác giả thử trên nhu cầu MOIA ở Hamburg với tốc độ từ dữ liệu định vị của TomTom,
+khác thiết lập hệ số tắc đường chung toàn thành phố của khóa luận. Tác dụng riêng của phép cộng qua cả
+chuyến cũng chưa được đo.
+% EV: C2-05; B06; K27; E09; Ch4B-v10:445-446.
+
+\section{Mục tiêu và đóng góp}
+\label{muc:c1-donggop}
+
+\noindent\textbf{Mục tiêu.} Khóa luận nhắm tới một giới hạn hãng xe có thể kiểm lại cho từng khách: từ khi
+xác nhận đặt xe, tổng các lần điều phối dời giờ trả không vượt một mức cố định, dù dự báo đúng hay sai.
+Cái giá được đo bằng số lượt phục vụ, số khách đi chung và độ dài lời hứa.
+% EV: A06; A13; X3-20; A22; N-28; K05; C02; N-20; N-18.
+
+\noindent\textbf{Đóng góp của khóa luận.} Khóa luận đặc tả và cài đặt luật C trong RideBound. Mỗi khách đã
+có lời hứa có một trần cố định cho tổng phần dời giờ trả tính cho điều phối trong cả chuyến; dời sớm hay
+muộn đều cộng theo độ lớn. Phương án làm vượt trần bị loại trước khi chọn kế hoạch. Mốc đo là giờ trả nếu
+giữ nguyên kế hoạch cũ, tính lại theo thời gian đi hiện tại, kế thừa Hörl và Zwick~\cite{horl2022}.
+Luật C đi cùng lời hứa theo dự báo, vốn đã có trong thực tiễn, và sổ theo từng khách. Đóng góp là cam kết
+được đặc tả, cài đặt, kiểm và đo cái giá, không phải một thuật toán mới.
+% EV: A06; A13; X3-20; K43; A01; A02; X3-27; J01; J03; C2-04; J35; C2-15; X3-12; OUTLINE-V2 §0.
+
+Phép đo dùng mô phỏng FleetPy với hệ số tắc đường toàn thành phố từ dữ liệu Manhattan: 34 kịch bản,
+3.672 yêu cầu mỗi cấu hình. Điều phối không trần phục vụ 2.434 lượt, còn luật C trần 30 giây phục vụ
+2.338, ít hơn 96 lượt. Khi chưa có dự báo, số lượt không trễ quá một phút so với lời hứa đầu tăng từ
+2.231 lên 2.262, nhưng số lượt không trễ quá hai phút giảm từ 2.332 xuống 2.327: thêm 31 ở ngưỡng một
+phút, mất 5 ở hai phút. Số không trễ tính trên toàn bộ 3.672 yêu cầu và gồm cả khách tới sớm. Khách đi chung giảm từ 555 trong 2.434 xuống 313 trong 2.338 khách.
+Ở lời hứa chưa dự báo, số khách tới sớm quá một phút là 7 trong 2.434 và 3 trong 2.338.
+% EV: B01; X3-40; B06; B09; C01; C02; C06; C08; N-09; N-20; C120R:16-19 (tới sớm).
+
+Luật hạn chót không cho giờ trả mới muộn hơn lời hứa đầu quá 30 giây. Nó mượn phần hạn chót của Schulz và
+Pfeiffer~\cite{schulz2026}, ở mức chặt hơn nhiều so với 900 giây của bài gốc, và cũng phục vụ 2.338 lượt.
+Đo cùng ngưỡng tới muộn hơn lời hứa đầu không dự báo quá 30 giây, luật C có 292 khách tới muộn trong 2.338 khách được phục vụ
+(12,5\%); luật hạn chót có 289 trong 2.338 (12,4\%), gộp theo khách. Mỗi luật đều có khách như vậy
+ở 28 trong 34 kịch bản. Hai tập khách không hoàn toàn giống nhau.
+% EV: A09; J10; J11; C01; C4A-01; N-21; C04.
+
+Hai luật hứa những điều khác nhau. Luật hạn chót tính cả phần thay đổi khi giữ nguyên kế hoạch, nên ở
+28 kịch bản đó nó không giữ được hạn của mình với ít nhất một khách. Luật C chỉ giới hạn phần tính cho
+điều phối. Giới hạn này được giữ nếu ở mọi lượt xe có phương án giữ nguyên kế hoạch hợp lệ về cấu trúc, giờ trả của phương án
+đó được tính bằng đúng cách tính mốc so sánh, và phần đã dùng ở đầu lượt chưa vượt trần
+(mục~\ref{muc:giunguyen}). Phương án giữ nguyên không thêm phần tính cho điều phối nào, nên không bị
+trần loại. Đây không phải ưu thế giữ giờ tới; điều phối không trần cũng không lần nào phải dùng luật phục hồi
+(0 trong 20.760 quyết định được xác nhận). Theo định nghĩa, hạn chót nới tới giờ trả tính lại nếu giờ đó muộn hơn hạn cũ cũng cho qua phương án
+giữ nguyên; biến thể này chưa được chạy làm đối chứng.
+% EV: A09; A10; N-21; A22; X3-27; X3-16; K02; K05; Ch3-v4-v3:muc:giunguyen,muc:doichung.
+
+Khi có dự báo, cộng thêm 30 giây vào lời hứa của điều phối không trần cho cùng 2.328 lượt không trễ quá
+một phút như luật C. Ở hai phút, cách đệm có 2.366 lượt, còn luật C có 2.338, trên 3.672 yêu cầu.
+Đổi lại, lời hứa dài thêm trung bình 37,2 thay vì 7,4 giây, gộp trên 2.434 và 2.338 khách được phục vụ.
+Số khách tới sớm quá một phút là 44 trong 2.434 với cách đệm và 4 trong 2.338 với luật C.
+Cách đệm không đổi quyết định điều phối và không giới hạn phần dời của từng khách.
+% EV: C10; N-16; N-18; N4B-09; K06; K51; C20.
+
+Phép cộng qua cả chuyến hiếm khi là lý do riêng để loại phương án trong tập đã kiểm. Trong 132 lần chạy
+luật C, chỉ 3 trong 1.780 bản ghi loại phương án nêu lý do này, đều ở trần 120 giây; không có bản ghi
+như vậy ở trần 30 giây trong tập đó. Tập này gồm 98 lần chạy với trần từ 30 đến 300 giây trước đó và 34 lần trần 120 giây, không
+bao gồm mọi lần chạy đã lưu. Chưa chạy đối chứng chỉ giới hạn từng lần dời riêng lẻ, nên chưa biết
+phép cộng đổi kết quả cuối thế nào.
+% EV: N-15; N-08; E01; E09; ADDENDUM-1 §0.3; C4A-08.
+
+Trần 120 giây cho một điểm đo thêm: phục vụ 2.387 lượt; khi có dự báo, không trễ quá một và hai phút là
+2.322 và 2.379 lượt trên 3.672 yêu cầu, với lời hứa dài thêm trung bình 7,3 giây trên 2.387 khách.
+Có 2 trong 2.387 khách tới sớm quá một phút. Điểm này không chỉ ra một mức trần tốt nhất.
+% EV: N-06; N-16; K36.
+
+\begin{khungy}
+\textbf{Khóa luận không nhận là mới.} Mốc tuyến cũ tính lại và nới hạn trả; đo, kiểm soát việc đổi giờ và
+đánh đổi với phục vụ; bảo vệ từng khách; hạn chót từ lời mời; lời hứa theo dự báo đều có
+tiền lệ~\cite{horl2022,fielbaum2020,elmi2026,schulz2026,hu2022}.
+% EV: J01; J03; C2-04; J06-J09; C2-06; C2-08; J10; C2-07; J35; C2-15.
+
+Chèn khách động, giới hạn giờ đến, gán lại xe, tương đồng tuyến, cam kết tối thiểu và nhất quán thời gian
+cũng là những ý đã có. Ba tên sau lần lượt chỉ việc xét tuyến giống nhau, trì hoãn cam kết
+khi còn nhiều phương án và giữ tính nhất quán về giờ phục vụ.
+% EV: J38; D03:§1-2 (tiền lệ và giải thích thuật ngữ).
+
+\textbf{Phần khóa luận làm} là đặc tả, cài đặt, kiểm trần từng khách và đo đánh đổi. Luật C phục vụ bằng
+luật hạn chót; so với cách đệm có dự báo, nó hòa ở một phút và kém ở hai phút. Luật C không bảo đảm giờ tới.
+Sổ không kết luận ai có lỗi; phần còn lại không phải phần không thể biết trước. Kết quả không suy rộng
+sang thành phố, mức tải hay mạng khác, không xác nhận lợi ích kinh doanh hay mức hài lòng.
+% EV: A06; C01; C10; X3-12; K05; K19; K36; K38; I07; I10.
+\end{khungy}
+
+\section{Phạm vi}
+\label{muc:c1-phamvi}
+
+\begin{itemize}[leftmargin=0.7cm,itemsep=3pt,topsep=3pt]
+\item \textbf{Môi trường:} RideBound nối với FleetPy 1.0.2 trên bộ dữ liệu chuẩn Manhattan.
+Đồ thị 96 nút có thời gian đi cho từng cặp điểm, không phải mạng đường phố đầy đủ.
+% EV: B01; B02; B03; K48.
+\item \textbf{Quy mô:} mỗi kịch bản có 108 yêu cầu, 8 xe 4 chỗ. Kế hoạch mới được kiểm với giới hạn
+đón trong 600 giây kể từ lúc gọi và ngồi xe không quá 1,5 lần thời gian đi thẳng. Kế hoạch cũ được
+giữ để tiếp tục phục vụ khi tắc đường làm vượt các giới hạn thời gian; lần đón muộn được ghi nhận.
+Các giá trị là cấu hình thử, không phải chuẩn ngành.
+% EV: B02; B03; C2-22; X3-23; X3-24; Ch3-v4-v3:muc:doichung.
+\item \textbf{Tắc đường:} hệ số chung cho cả thành phố đổi theo khung 15 phút; tốc độ gốc của mọi
+kịch bản lấy theo hệ số lúc 0 giờ, tức nửa đêm. Mô hình không mô tả tắc đường riêng trên từng đoạn.
+% EV: B06; B07; K49.
+\item \textbf{Dữ liệu kiểm tra:} tập chính gồm 34 kịch bản của năm ngày 14--18/11/2018; dự báo có ở
+21 kịch bản ngày thường. Các mẫu nhu cầu chồng nhau, nên các kịch bản không độc lập. Dữ liệu này đã
+được xem khi chọn mức thử 120 giây; các ngưỡng phân tích cũng dựa trên các đợt chạy đã xem. Kết quả
+vì vậy có tính thăm dò.
+% EV: B08; B09; B11; I05; F02; F04; I06; C4A-11.
+\item \textbf{Tải và thời gian dừng:} khi không trần, trung bình theo 34 kịch bản có 0,535 khách
+trên mỗi xe trong khung hai giờ, kể cả lúc rỗi. Mức khoảng 1,33 trong nghiên cứu điển hình của
+FleetPy thuộc một thiết lập và thời gian đo khác. Thời gian dừng đón, trả bằng 0 giây trong ba
+lần chạy mẫu đã kiểm. Kết quả chưa cho biết đánh đổi ở tải cao hơn.
+% EV: B12 (LOAD:2-3, [0,2 h]); B05 (SERV:2-4, chỉ ba lần mẫu); C2-11.
+\item \textbf{Ngoài phạm vi:} không có mô hình khách hủy chuyến hay từ chối lời mời; không chuyển
+khách đã nhận sang xe khác; không kiểm mở rộng sang mạng lớn hay hiệu quả kinh doanh. Luật C và
+điều phối không trần dùng cùng cách chọn phương án, chỉ khác trần giờ trả. Chưa chạy mô phỏng đầy đủ
+với thứ tự chọn ưu tiên chi phí, nên chưa biết đánh đổi còn giữ khi đổi cách chọn hay không.
+Lời hứa theo dự báo chỉ được tính lại trên các lần chạy đã ghi, không thay đổi xe nào chở ai.
+% EV: I07; X3-39; B04; I01; I10; A08; H01; H02; H12; F03; X3-12.
+\end{itemize}
+
+\section{Cấu trúc báo cáo}
+\label{muc:c1-cautruc}
+
+Chương~\ref{chuong:coso} trình bày bài toán và các nghiên cứu liên quan.
+Chương~\ref{chuong:phuongphap} nêu luật C, lời hứa theo dự báo và sổ theo từng khách.
+Chương~\ref{chuong:thucnghiem} đo đánh đổi, đối chiếu các luật và nêu hạn chế.
+Chương~\ref{chuong:ketluan} tổng hợp kết quả và các hướng kiểm tra tiếp.
+% EV: — (lộ trình báo cáo).

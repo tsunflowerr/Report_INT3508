@@ -1,0 +1,110 @@
+C:\Code\RideBound-noworse\src\RideBound.Benchmarking\Normalization\FleetPyManhattanNormalizer.cs
+NORM:111 
+NORM:112             var selection = SelectRequests(
+NORM:113                 demand.Eligible,
+NORM:114                 configuration,
+NORM:115                 request.Artifact.Sha256,
+NORM:116                 graph);
+NORM:117             var selected = selection.Selected;
+NORM:118 
+NORM:119             if (selected.Count != configuration.RequestTarget)
+NORM:120             {
+NORM:121                 return FleetPyNormalizationResult.Failed(
+NORM:122                     "source.node-cap-prevents-target",
+NORM:123                     "selection",
+NORM:124                     "HMAC-ranked source selection cannot reach the request target without exceeding the declared node cap.");
+NORM:125             }
+NORM:126 
+NORM:127             var selectedOrdinals = selected
+NORM:128                 .Select(value => value.SourceRecordOrdinal)
+NORM:129                 .ToHashSet();
+NORM:130             var dispositions = demand.Eligible
+NORM:131                 .Select(
+NORM:132                     value => new NormalizationDisposition(
+NORM:133                         value.SourceRecordOrdinal,
+NORM:134                         selectedOrdinals.Contains(value.SourceRecordOrdinal)
+NORM:581             ["request_id", "rq_time", "start", "end"]))
+NORM:582         {
+NORM:583             inputCount++;
+NORM:584 
+NORM:585             if (row.ParseError is not null || row.Fields?.Count != 4)
+NORM:586             {
+NORM:587                 exclusions.Add(Exclusion(row.Ordinal, "source.invalid-record", "csv", "Malformed demand CSV row."));
+NORM:588                 continue;
+NORM:589             }
+NORM:590 
+NORM:591             var fields = row.Fields;
+NORM:592 
+NORM:593             if (fields[0].Length == 0 || !sourceIds.Add(fields[0]))
+NORM:594             {
+NORM:595                 exclusions.Add(Exclusion(row.Ordinal, "source.duplicate-request-id", "request_id", "Missing or duplicate source request identifier."));
+NORM:596                 continue;
+NORM:597             }
+NORM:598 
+NORM:599             if (!TryMilliseconds(fields[1], out var sourceTimeMs))
+NORM:600             {
+NORM:601                 exclusions.Add(Exclusion(row.Ordinal, "source.invalid-time", "rq_time", "Request time is not a finite canonical decimal convertible to ms."));
+NORM:602                 continue;
+NORM:603             }
+NORM:604 
+NORM:618 
+NORM:619             if (!graph.Contains(origin)
+NORM:620                 || !graph.Contains(destination)
+NORM:621                 || !graph.IsStronglyConnected(origin, destination))
+NORM:622             {
+NORM:623                 exclusions.Add(Exclusion(row.Ordinal, "source.unreachable-node-pair", "start/end", "Request endpoints are absent or not in one directed strongly connected component."));
+NORM:624                 continue;
+NORM:625             }
+NORM:626 
+NORM:659                         "RideBound.Wp6.SourceSelection.v1",
+NORM:660                         sourceArtifactSha256,
+NORM:661                         configuration.DemandMemberPath,
+NORM:662                         value.SourceRecordOrdinal.ToString(CultureInfo.InvariantCulture)),
+NORM:663                 })
+NORM:664             .OrderBy(value => value.SelectionRankSha256, StringComparer.Ordinal)
+NORM:665             .ThenBy(value => value.SourceRecordOrdinal)
+NORM:666             .ToArray();
+NORM:667 
+NORM:668         var rankByOrdinal = reranked.ToDictionary(
+NORM:669             value => value.SourceRecordOrdinal,
+NORM:670             value => value.SelectionRankSha256);
+NORM:671 
+NORM:672         for (var index = 0; index < eligible.Count; index++)
+NORM:673         {
+NORM:674             eligible[index] = eligible[index] with
+NORM:675             {
+NORM:676                 SelectionRankSha256 = rankByOrdinal[eligible[index].SourceRecordOrdinal],
+NORM:677             };
+NORM:678         }
+NORM:679 
+NORM:680         var pairCounts = eligible
+NORM:681             .GroupBy(
+NORM:682                 value => OrderedPair(value.OriginNode, value.DestinationNode))
+NORM:683             .ToDictionary(group => group.Key, group => group.Count());
+NORM:684         var endpointFrequencies = eligible
+NORM:735                     })
+NORM:736                 .OrderByDescending(value => value.MarginalCoverage)
+NORM:737                 .ThenByDescending(value => value.EndpointFrequency)
+NORM:738                 .ThenBy(value => value.Rank, StringComparer.Ordinal)
+NORM:739                 .ThenBy(value => value.Node)
+NORM:740                 .FirstOrDefault();
+NORM:741 
+NORM:742             if (next is null)
+NORM:743             {
+NORM:744                 break;
+NORM:745             }
+NORM:746 
+NORM:747             nodePool.Add(next.Node);
+NORM:748         }
+NORM:749 
+NORM:750         var selected = reranked
+NORM:751             .Where(
+NORM:752                 value => nodePool.Contains(value.OriginNode)
+NORM:753                     && nodePool.Contains(value.DestinationNode))
+NORM:754             .Take(checked((int)configuration.RequestTarget))
+NORM:755             .ToArray();
+NORM:756         return new SourceSelectionResult(selected, nodePool);
+NORM:757     }
+C:\RideBoundData\research\fixtures-panelA-v1\d20181114-s10-r3-w08\normalizer-configuration.json
+{"demandMemberPath": "FleetPy_Manhattan/demand/Manhattan_2018/matched/Manhattan_2019_corrected/2018-11-14_sample_10_3.csv", "maximumNodeCount": 96, "requestTarget": 108, "sourceWindowEndSeconds": 36000, "sourceWindowStartSeconds": 28800}
+Scope: one fixture plus current source; not a cross-fixture regeneration or version-equivalence check.

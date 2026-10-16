@@ -1,0 +1,21 @@
+{
+  "own_run00": 1991,
+  "claude_run00": 1991,
+  "own_experiments": 51,
+  "claude_experiments": 51,
+  "missing_paths": [],
+  "extra_paths": [],
+  "comparable_value_mismatches": 0,
+  "raw_tsv_grouping_mismatches": 501,
+  "by_experiment_count_discrepancies": [],
+  "claude_accepted_is_not_completed": "Stored acc matches accepted IDs, not an independent lifecycle completion audit.",
+  "additional_own_categories": {
+    "run-attempt": 17,
+    "partial-or-bundle-only": 214,
+    "protocol-output-no-run-json": 68,
+    "ledger-attempt": 447,
+    "legacy-run-store-record": 90,
+    "fleetpy-calibration-csv-run": 40,
+    "fleetpy-initial-state-fixture": 20
+  }
+}

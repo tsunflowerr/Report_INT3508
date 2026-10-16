@@ -1,0 +1,37 @@
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:59: 
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:87:                 HERE / "snow" / "worlds" / f"W5-{cell[:9]}-{cell[-3:]}.json")
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:88:     return run_t38.FIXTURE_ROOT / cell, run_t38.DRIVER_ROOT / f"{cell}.driver.json", run_t38.world_file(cell)
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:89: 
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:90: 
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:91: def command(name, arm, cell, kind):
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:92:     fixture, driver, _ = inputs(cell, kind)
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:93:     label = f"{arm}-{cell}-t38" if kind == "test" and not name.startswith(arm + "F") else f"{name}-fc"
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:94:     return [str(run_pilot.PYTHON), "-B", str(WRAPPER), "--label", label, "--fleetpy-root", str(run_pilot.FLEETPY),
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:95:             "--runner-root", str(run_w07.RUNNER), "--dotnet", str(run_pilot.DOTNET),
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:96:             "--commitment-config", str(run_pilot.CONFIGS / f"{arm}.json"), "--wp4-config", str(run_w07.WP4),
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:97:             "--scenario", str(fixture / "scenario-content.json"),
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:98:             "--derivative-manifest", str(fixture / "derivative-manifest.json"),
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:99:             "--normalization-report", str(fixture / "normalization-report.json"),
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:100:             "--selection-frame", str(fixture / "selection-frame.json"),
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:101:             "--driver", str(driver), "--output", str(OUT_ROOT / name), "--repeats", "1", "--master-seed", "7",
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:102:             "--expected-repository-inventory-sha256", run_w07.EXPECTED_INVENTORY]
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:103: 
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:104: 
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:105: def free_mib():
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:106:     return shutil.disk_usage("C:\\").free // (1024 * 1024)
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:107: 
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:108: 
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:109: def state_of(name):
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:110:     out = OUT_ROOT / name
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:111:     if not out.exists():
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:112:         return "pending"
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:113:     summary = out / "summary.json"
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:114:     return "status-" + json.loads(summary.read_text(encoding="utf-8")).get("status", "?") if summary.exists() else "exists-no-summary"
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:115: 
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\run_forecast.py:151:     if group in ("tier1", "tier2") and not GATES_PASSED.exists():
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\snow\worlds\W5-d20181115-w14.json:1: { "worldVersion": "world-v1", "worldSeed": 101, "rho": 0.7, "shockMean": 0.4, "shockHalfLife": 2.0, "shockWindow": 12, "sigma": 0.0, "shockRate": 0.0, "base": {"day": "2018-11-15", "exponent": 1, "windowStart": 50400} }
+E:\Code\Report_INT3508\ridebound-scratchpad\optimize\snow\worlds\W5-d20181115-w15.json:1: { "worldVersion": "world-v1", "worldSeed": 101, "rho": 0.7, "shockMean": 0.4, "shockHalfLife": 2.0, "shockWindow": 12, "sigma": 0.0, "shockRate": 0.0, "base": {"day": "2018-11-15", "exponent": 1, "windowStart": 54000} }
+E:\Code\Report_INT3508\ridebound-scratchpad\tang3\configs\wp4-tier3-v2.json:4:   "policyVersion": "tier3-exploratory-v1",
+E:\Code\Report_INT3508\ridebound-scratchpad\tang3\configs\wp4-tier3-v2.json:7:   "commitmentRecovery": "no-worse-than-reference-v1",
+E:\Code\Report_INT3508\ridebound-scratchpad\tang3\configs\wp4-tier3-v2.json:8:   "lateBoarding": "record-v1",
+E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\drafts\08-chuong4-phanA-v4.tex:66: từng đoạn đường; dưới đây gọi là hệ số tắc đường đo được. Thế giới mô phỏng không có nhiễu ngẫu nhiên, nên mỗi cặp

@@ -1,0 +1,250 @@
+{
+  "change_count": 13,
+  "changes": [
+    {
+      "first": 2,
+      "last": 6,
+      "reason": "Siêu dữ liệu của bản v4 và nơi tra thay đổi."
+    },
+    {
+      "first": 63,
+      "last": 64,
+      "reason": "Định nghĩa bị ép theo mã: bị loại phương án giữ nguyên và có khách được miễn; không đòi loại hết phương án khác."
+    },
+    {
+      "first": 73,
+      "last": 73,
+      "reason": "Bổ sung anchor cho định nghĩa đã sửa."
+    },
+    {
+      "first": 85,
+      "last": 86,
+      "reason": "Q1–Q2: cơ chế gọi lượt và thời lượng mô phỏng, phân biệt khung nhu cầu với điểm kết thúc lần chạy."
+    },
+    {
+      "first": 204,
+      "last": 204,
+      "reason": "Gọi đúng bước xét phục hồi trước khi chọn phương án và xác định quyết định bị ép."
+    },
+    {
+      "first": 478,
+      "last": 480,
+      "reason": "Q8: nêu luật phục hồi của chiều tuyết tại đoạn đã mô tả các tập dùng luật này."
+    },
+    {
+      "first": 558,
+      "last": 558,
+      "reason": "Q9: điền số khung của phép thử dự báo trong bộ điều phối đã được nhắc; không coi tắt dự báo là K = 0."
+    },
+    {
+      "first": 588,
+      "last": 587,
+      "reason": "Ví dụ ngắn từ bản ghi mô phỏng thật ở §3.6: phần trần đã dùng và còn lại qua một lần dời, rồi 14 lần sửa c = 0."
+    },
+    {
+      "first": 695,
+      "last": 698,
+      "reason": "Q6: các trung vị là thời gian thực của cả tiến trình, có FleetPy và thời gian chờ, không phải độ trễ mỗi lượt."
+    },
+    {
+      "first": 705,
+      "last": 706,
+      "reason": "Thay số kiểm thử lịch sử chưa chạy lại bằng kết quả chạy lại được cho phép; hai điều kiện môi trường trong một mệnh đề."
+    },
+    {
+      "first": 715,
+      "last": 717,
+      "reason": "Q8: thêm chiều tuyết vào danh sách dùng cùng bản bộ chạy lưu trữ; giữ yêu cầu kiểm kết quả khi dựng lại."
+    },
+    {
+      "first": 719,
+      "last": 719,
+      "reason": "Cập nhật dòng bằng chứng kiểm thử, bỏ anchor chỉ có số lịch sử."
+    },
+    {
+      "first": 722,
+      "last": 722,
+      "reason": "Bổ sung anchor bản bộ chạy chiều tuyết cho mệnh đề tái lập."
+    }
+  ],
+  "base_path": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\rewrite-2026-10\\drafts\\07-chuong3-v3.tex",
+  "base_normalized_sha256": "33f7f0bf64988036980a4190225ae7dc738da9800b64c605e4616fc68a5409e5",
+  "v4_normalized_sha256": "d85156a4aac59fcbd0b061ed9f739710f05e7b1a25317a935a840b813c15142e",
+  "preservation": "Reassembled original slices outside 13 declared edits; no other sentence changed.",
+  "v3_counts": [
+    {
+      "section": "Mở chương",
+      "prose": 158,
+      "floats": 0
+    },
+    {
+      "section": "3.1",
+      "prose": 556,
+      "floats": 1129
+    },
+    {
+      "section": "3.2",
+      "prose": 362,
+      "floats": 76
+    },
+    {
+      "section": "3.3",
+      "prose": 708,
+      "floats": 137
+    },
+    {
+      "section": "3.4",
+      "prose": 738,
+      "floats": 242
+    },
+    {
+      "section": "3.5",
+      "prose": 514,
+      "floats": 142
+    },
+    {
+      "section": "3.6",
+      "prose": 337,
+      "floats": 75
+    },
+    {
+      "section": "3.7",
+      "prose": 673,
+      "floats": 301
+    }
+  ],
+  "v4_counts": [
+    {
+      "section": "Mở chương",
+      "prose": 158,
+      "floats": 0
+    },
+    {
+      "section": "3.1",
+      "prose": 647,
+      "floats": 1149
+    },
+    {
+      "section": "3.2",
+      "prose": 362,
+      "floats": 76
+    },
+    {
+      "section": "3.3",
+      "prose": 708,
+      "floats": 137
+    },
+    {
+      "section": "3.4",
+      "prose": 743,
+      "floats": 242
+    },
+    {
+      "section": "3.5",
+      "prose": 552,
+      "floats": 142
+    },
+    {
+      "section": "3.6",
+      "prose": 382,
+      "floats": 75
+    },
+    {
+      "section": "3.7",
+      "prose": 711,
+      "floats": 301
+    }
+  ],
+  "syntax": {
+    "label_count": 34,
+    "labels": [
+      "chuong:phuongphap",
+      "muc:baitoan",
+      "muc:thuatngu",
+      "bang:thuatngu",
+      "muc:baitoan-phatbieu",
+      "eq:chon",
+      "bang:rangbuoc",
+      "muc:luotquyetdinh",
+      "hinh:vongquyetdinh",
+      "bang:luotquyetdinh",
+      "muc:bamoc",
+      "eq:bamoc",
+      "hinh:bamoc",
+      "muc:luatc",
+      "dn:luatc",
+      "eq:luatc",
+      "bang:kiemtran",
+      "muc:giunguyen",
+      "nx:giunguyen",
+      "muc:doichung",
+      "bang:luat",
+      "eq:dongnhat",
+      "muc:dubao",
+      "eq:keodan",
+      "bang:dubao",
+      "muc:so",
+      "bang:vidu-so",
+      "eq:so",
+      "muc:caidat",
+      "muc:kientruc",
+      "bang:kientruc",
+      "hinh:bantin",
+      "muc:gioihan",
+      "muc:kiemtra"
+    ],
+    "references": [
+      "bang:dubao",
+      "bang:kiemtran",
+      "bang:kientruc",
+      "bang:luat",
+      "bang:luotquyetdinh",
+      "bang:rangbuoc",
+      "bang:thuatngu",
+      "bang:vidu-so",
+      "chuong:thucnghiem",
+      "eq:chon",
+      "eq:dongnhat",
+      "eq:luatc",
+      "hinh:bamoc",
+      "hinh:bantin",
+      "hinh:vongquyetdinh",
+      "muc:c2-baitoan",
+      "muc:c2-dolech",
+      "muc:c2-dubao",
+      "muc:c2-rangbuoc",
+      "muc:c4-congdon",
+      "muc:c4-dubao",
+      "muc:c4-hople",
+      "muc:c4-thietlap",
+      "muc:c4-vaitro",
+      "muc:doichung",
+      "muc:dubao",
+      "muc:kientruc",
+      "muc:so",
+      "nx:giunguyen",
+      "phuluc:C"
+    ],
+    "cite_keys": [
+      "alonsomora2017",
+      "engelhardt2026",
+      "fielbaum2020",
+      "horl2022",
+      "ortools",
+      "schulz2026"
+    ],
+    "braces_balanced": true,
+    "environments_balanced": true,
+    "dollar_count_even": true
+  },
+  "real_trace": {
+    "revisions": 15,
+    "subsequent_zero_c_revisions": 14,
+    "dispatch_ms": 14920,
+    "remaining_ms": 105080,
+    "max_later_abs_x_ms": 213
+  },
+  "build_performed": false,
+  "simulations_performed": false,
+  "installations_performed": false
+}

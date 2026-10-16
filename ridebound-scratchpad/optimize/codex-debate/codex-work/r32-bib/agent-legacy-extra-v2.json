@@ -1,0 +1,36 @@
+[
+  {
+    "key": "ackermann2025",
+    "status": "VERIFIED",
+    "metadata": "Christian Ackermann; Julia Rieck. Multiple plan approach for a dynamic dial-a-ride problem. OR Spectrum 47(3):781–815 (2025). DOI 10.1007/s00291-025-00809-y.",
+    "url": "https://link.springer.com/article/10.1007/s00291-025-00809-y",
+    "notes": "Opened publisher full article and official Volume47 Issue3 contents page https://link.springer.com/journal/291/volumes-and-issues/47-3. Authors/title/year/pages/DOI and issue checked. Bibliographic verification only; does not certify every component of register body claim J14.",
+    "register_ids": [
+      "J14"
+    ],
+    "tex": "\\bibitem{ackermann2025}\nC.~Ackermann and J.~Rieck.\n\\newblock Multiple plan approach for a dynamic dial-a-ride problem.\n\\newblock \\emph{OR Spectrum}, 47(3):781--815, 2025.\n\\newblock \\url{https://doi.org/10.1007/s00291-025-00809-y}\n"
+  },
+  {
+    "key": "tellez2022",
+    "status": "VERIFIED",
+    "metadata": "Oscar Tellez; Samuel Vercraene; Fabien Lehuédé; Olivier Péton; Thibaud Monteiro. The time-consistent dial-a-ride problem. Networks 79(4):452–478 (2022). DOI 10.1002/net.22063.",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1002/net.22063",
+    "notes": "Ordered authors/title/volume/issue/pages/DOI checked on publisher page (heading specifies2022). First online11June2021; retain journal issue year2022. Publisher abstract explicitly calls this a multiperiod dial-a-ride problem and defines consistency across planning horizon; metadata verification does not substitute for all body details J15.",
+    "register_ids": [
+      "J15"
+    ],
+    "tex": "\\bibitem{tellez2022}\nO.~Tellez, S.~Vercraene, F.~Lehu{\\'e}d{\\'e}, O.~P{\\'e}ton, and T.~Monteiro.\n\\newblock The time-consistent dial-a-ride problem.\n\\newblock \\emph{Networks}, 79(4):452--478, 2022.\n\\newblock \\url{https://doi.org/10.1002/net.22063}\n"
+  },
+  {
+    "key": "gschwind2019",
+    "status": "VERIFIED",
+    "metadata": "Timo Gschwind; Michael Drexl. Adaptive Large Neighborhood Search with a Constant-Time Feasibility Test for the Dial-a-Ride Problem. Transportation Science 53(2):480–491 (2019). DOI 10.1287/trsc.2018.0837.",
+    "url": "https://pubsonline.informs.org/doi/10.1287/trsc.2018.0837",
+    "notes": "Ordered authors/title/volume/issue/pages/year/DOI checked on INFORMS article page. Published online14January2019, issueMarch–April2019. DOI contains2018 but is not publication year. Publisher abstract calls insertion-feasibility check exact amortized constant-time; use amortized if describing the guarantee rather than unqualified constant-time. The local-code comparison in J40 was not rechecked.",
+    "register_ids": [
+      "J40"
+    ],
+    "tex": "\\bibitem{gschwind2019}\nT.~Gschwind and M.~Drexl.\n\\newblock Adaptive large neighborhood search with a constant-time feasibility test for the dial-a-ride problem.\n\\newblock \\emph{Transportation Science}, 53(2):480--491, 2019.\n\\newblock \\url{https://doi.org/10.1287/trsc.2018.0837}\n"
+  }
+]
+

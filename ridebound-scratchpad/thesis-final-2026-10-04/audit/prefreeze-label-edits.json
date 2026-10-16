@@ -1,0 +1,39 @@
+{
+ "noi-dung\\06-chuong2.tex": [
+  "muc:chodung"
+ ],
+ "noi-dung\\07-chuong3.tex": [
+  "dl:hanhvi",
+  "dl:ketqua",
+  "eq:biendukien",
+  "hq:dai",
+  "hq:tatdinh",
+  "md:dondieu",
+  "muc:badinhly",
+  "muc:caidat",
+  "muc:dondieu",
+  "muc:hocong"
+ ],
+ "noi-dung\\08-kiemtra-phu.tex": [
+  "muc:dovung",
+  "muc:ratchet"
+ ],
+ "noi-dung\\08-nguon-ketqua.tex": [
+  "muc:nguonketqua"
+ ],
+ "noi-dung\\08-t38.tex": [
+  "eq:gamma-t38",
+  "muc:t38-giaonhau"
+ ],
+ "noi-dung\\08-thietlap-va-h6.tex": [
+  "muc:cuaso",
+  "muc:duongbien",
+  "muc:matcong",
+  "muc:thietlap"
+ ],
+ "noi-dung\\08-trongdiem-troidat.tex": [
+  "muc:haunghiem",
+  "muc:phuchoi-thucnghiem",
+  "muc:troidat"
+ ]
+}

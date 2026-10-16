@@ -1,0 +1,132 @@
+[
+  {
+    "key": "alonsomora2017",
+    "status": "VERIFIED",
+    "metadata": "Javier Alonso-Mora; Samitha Samaranayake; Alex Wallar; Emilio Frazzoli; Daniela Rus. On-demand high-capacity ride-sharing via dynamic trip-vehicle assignment. Proceedings of the National Academy of Sciences 114(3):462–467 (2017). DOI 10.1073/pnas.1611675114.",
+    "url": "https://www.pnas.org/doi/full/10.1073/pnas.1611675114",
+    "notes": "Publisher opened: ordered five authors, exact title, issue, page range and DOI match old bibliography. Main text eq.1, constraints and 30-second batch/reassignment rules support C2-10. A 2018 correction (https://www.pnas.org/doi/10.1073/pnas.1721622115) was also opened: it corrects mean travel distance in Fig.5D and SI figures/table2; the cited assignment/constraint text is unaffected. Original DOI remains the bibliography identity.",
+    "tex": "\\bibitem{alonsomora2017}\nJ.~Alonso-Mora, S.~Samaranayake, A.~Wallar, E.~Frazzoli, and D.~Rus.\n\\newblock On-demand high-capacity ride-sharing via dynamic trip-vehicle assignment.\n\\newblock \\emph{Proceedings of the National Academy of Sciences}, 114(3):462--467, 2017.\n\\newblock \\url{https://doi.org/10.1073/pnas.1611675114}",
+    "register_ids": [
+      "J17",
+      "C2-10"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "fielbaum2020",
+    "status": "VERIFIED",
+    "metadata": "Andrés Fielbaum; Javier Alonso-Mora. Unreliability in ridesharing systems: Measuring changes in users’ times due to new requests. Transportation Research Part C: Emerging Technologies 121:102831 (2020). DOI 10.1016/j.trc.2020.102831.",
+    "url": "https://pure.tudelft.nl/ws/files/84615509/1_s2.0_S0968090X2030735X_main.pdf",
+    "notes": "Official TU Delft final published PDF opened, including cover citation and article first page. Old bibliography metadata matches. Body defines operator/user causes and first-announced waiting/detour; section6 controls unreliability, so this source is not merely retrospective measurement. TU Delft PDF has a repository cover: physical PDF page = printed article page +1.",
+    "tex": "\\bibitem{fielbaum2020}\nA.~Fielbaum and J.~Alonso-Mora.\n\\newblock Unreliability in ridesharing systems: Measuring changes in users' times due to new requests.\n\\newblock \\emph{Transportation Research Part C: Emerging Technologies}, 121:102831, 2020.\n\\newblock \\url{https://doi.org/10.1016/j.trc.2020.102831}",
+    "register_ids": [
+      "J06",
+      "J07",
+      "J08",
+      "J09",
+      "C2-06"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "fielbaum2022scale",
+    "status": "CORRECTED",
+    "metadata": "Andrés Fielbaum; Alejandro Tirachini; Javier Alonso-Mora. Economies and diseconomies of scale in on-demand ridepooling systems. Economics of Transportation 34:100313 (2023). DOI 10.1016/j.ecotra.2023.100313.",
+    "url": "https://ris.utwente.nl/ws/portalfiles/portal/306113346/1_s2.0_S2212012223000138_main.pdf",
+    "notes": "Final published PDF p1 opened on official University of Twente repository. Old title 'Economies and diseconomies of scale in on-demand ridepooling systems and comparison with public transport' → final title without suffix. Incomplete 'Economics of Transportation, 2023' → 34:100313; add DOI. Legacy key year is retained, but final reference year is 2023. Do not use guessed DOI10.1016/j.ecotra.2022.100287. Not currently cited by final Ch2v4; planned/legacy role must be decided from root inventory.",
+    "tex": "\\bibitem{fielbaum2022scale}\nA.~Fielbaum, A.~Tirachini, and J.~Alonso-Mora.\n\\newblock Economies and diseconomies of scale in on-demand ridepooling systems.\n\\newblock \\emph{Economics of Transportation}, 34:100313, 2023.\n\\newblock \\url{https://doi.org/10.1016/j.ecotra.2023.100313}",
+    "register_ids": [
+      "C2-24"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "fleetpy2022",
+    "status": "CORRECTED",
+    "metadata": "Roman Engelhardt; Florian Dandl; Arslan-Ali Syed; Yunfei Zhang; Fabian Fehn; Fynn Wolf; Klaus Bogenberger. FleetPy: A Modular Open-Source Simulation Tool for Mobility On-Demand Services. arXiv:2207.14246v1 (28 July 2022). DOI 10.48550/arXiv.2207.14246.",
+    "url": "https://arxiv.org/abs/2207.14246",
+    "notes": "Official arXiv abstract opened. Seven authors, order/title/year/arXivID confirmed. Old third-author initial A.~Syed → A.-A.~Syed (Arslan-Ali); add archival DOI URL in place of using GitHub as sole reference link. This preprint has a different title and author list from the 2026 journal paper; keep identities distinct. Final Ch2 cites engelhardt2026.",
+    "tex": "\\bibitem{fleetpy2022}\nR.~Engelhardt, F.~Dandl, A.-A.~Syed, Y.~Zhang, F.~Fehn, F.~Wolf, and K.~Bogenberger.\n\\newblock FleetPy: A Modular Open-Source Simulation Tool for Mobility On-Demand Services.\n\\newblock arXiv:2207.14246, 2022.\n\\newblock \\url{https://doi.org/10.48550/arXiv.2207.14246}",
+    "register_ids": [
+      "J18"
+    ],
+    "body_status": "METADATA/ABSTRACT ONLY"
+  },
+  {
+    "key": "engelhardt2026",
+    "status": "VERIFIED",
+    "metadata": "Roman Engelhardt; Florian Dandl; Arslan Ali Syed; Chenhao Ding; Santiago Alvarez-Ossorio Martinez; Yunfei Zhang; Hoda Hamdy; Joel Brodersen; Zhipu Chen; Klaus Bogenberger. FleetPy: an open source simulator for reproducible research on mobility-on-demand services. European Transport Research Review 18(1):52 (2026). DOI 10.1186/s12544-026-00823-3.",
+    "url": "https://link.springer.com/article/10.1186/s12544-026-00823-3",
+    "notes": "Publisher full text opened, version of record15July2026; ten ordered authors, article52, volume18 confirmed. Issue1 corroborated by official TUM author bibliography https://www.mos.ed.tum.de/vt/mitarbeiter-innen/dr-ing-dandl-florian/ (opened). Ch2BIB and C2-11 metadata agree. Body section3.1 confirms4,410nodes/9,574edges, week11–18Nov2018,1,807,255trips and hourly travel-time factors. Use canonical engelhardt2026 key, not a second alias for same journal paper.",
+    "tex": "\\bibitem{engelhardt2026}\nR.~Engelhardt, F.~Dandl, A.~A.~Syed, C.~Ding, S.~Alvarez-Ossorio Martinez, Y.~Zhang, H.~Hamdy,\nJ.~Brodersen, Z.~Chen, and K.~Bogenberger.\n\\newblock FleetPy: an open source simulator for reproducible research on mobility-on-demand services.\n\\newblock \\emph{European Transport Research Review}, 18(1):52, 2026.\n\\newblock \\url{https://doi.org/10.1186/s12544-026-00823-3}",
+    "register_ids": [
+      "J18",
+      "C2-11"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "schulz2026",
+    "status": "CORRECTED",
+    "metadata": "Arne Schulz; Christian Pfeiffer. Efficient insertion and reoptimization algorithms for a customer-oriented dynamic dial-a-ride problem. OR Spectrum 48(2):541–586 (2026). DOI 10.1007/s00291-026-00847-0.",
+    "url": "https://link.springer.com/article/10.1007/s00291-026-00847-0 ; https://link.springer.com/journal/291/volumes-and-issues/48-2",
+    "notes": "Publisher article and official issue page both opened. Add missing issue: old48:541–586 →48(2):541–586. Other metadata unchanged; online2February2026, issueJune2026. Body section3.1 states deadline l_i = B_i + l fixed just after offer acceptance; section6.2 gives l=900s. Matches Ch2BIB/C2-07.",
+    "tex": "\\bibitem{schulz2026}\nA.~Schulz and C.~Pfeiffer.\n\\newblock Efficient insertion and reoptimization algorithms for a customer-oriented dynamic dial-a-ride problem.\n\\newblock \\emph{OR Spectrum}, 48(2):541--586, 2026.\n\\newblock \\url{https://doi.org/10.1007/s00291-026-00847-0}",
+    "register_ids": [
+      "J10",
+      "C2-07"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "elmi2026",
+    "status": "VERIFIED",
+    "metadata": "Amir Elmi; Emily Moylan; Javier Alonso-Mora; Andres Fielbaum. Improving ridepooling reliability using shareability shadows. Transportation Research Part C: Emerging Technologies 192:105897 (2026). DOI 10.1016/j.trc.2026.105897.",
+    "url": "https://research.tudelft.nl/en/publications/improving-ridepooling-reliability-using-shareability-shadows/",
+    "notes": "Official TU Delft portal opened: four authors/order, exact title, volume192/article105897/year/DOI match old bibliography and Ch2BIB. Independently read existing TU Delft final PDF using local pdftotext: printed p5 defines constant arc times and initial residual waiting/delay slack; p12 uniform slack control and passenger-specific0%/100% control; p13 guaranteed fixed time for zero-slack passengers. J12 body now VERIFIED. Probe script/output saved r32-bib/core-body-probe-v2.ps1 and core-body-probe-output-v2.txt. Direct PDF web fetch blocked, but existing primary PDF was read.",
+    "tex": "\\bibitem{elmi2026}\nA.~Elmi, E.~Moylan, J.~Alonso-Mora, and A.~Fielbaum.\n\\newblock Improving ridepooling reliability using shareability shadows.\n\\newblock \\emph{Transportation Research Part C: Emerging Technologies}, 192:105897, 2026.\n\\newblock \\url{https://doi.org/10.1016/j.trc.2026.105897}",
+    "register_ids": [
+      "J12",
+      "C2-08"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "laupichler2026",
+    "status": "VERIFIED",
+    "metadata": "Moritz Laupichler; Robin Andre; Kim Kandler; Peter Sanders; Peter Vortisch. Advancing Dynamic Ride-Pooling Simulation – A Highly Scalable Dispatcher. arXiv:2605.11798v1 (12 May 2026). DOI 10.48550/arXiv.2605.11798.",
+    "url": "https://arxiv.org/abs/2605.11798 ; https://arxiv.org/pdf/2605.11798",
+    "notes": "Official arXiv abstract and full PDF opened. Metadata agrees with Ch2BIB/C2-09. Mt-KaRRi is dispatcher name, not paper title. PDF p5 explicitly bounds previously accepted trip time by alpha*T_accepted+beta; p27 AppendixB.2 choosesalpha=1.4,beta=10min. J32 body independently verified.",
+    "tex": "\\bibitem{laupichler2026}\nM.~Laupichler, R.~Andre, K.~Kandler, P.~Sanders, and P.~Vortisch.\n\\newblock Advancing Dynamic Ride-Pooling Simulation -- A Highly Scalable Dispatcher.\n\\newblock arXiv:2605.11798, 2026.\n\\newblock \\url{https://doi.org/10.48550/arXiv.2605.11798}",
+    "register_ids": [
+      "J32",
+      "C2-09"
+    ],
+    "body_status": "VERIFIED"
+  },
+  {
+    "key": "wang2026",
+    "status": "VERIFIED",
+    "metadata": "Xinyu Wang; Andres Fielbaum. Where should the last passenger be dropped off? Anticipatory walking in ridepooling. Transportation Research Part C: Emerging Technologies 187:105645 (2026). DOI 10.1016/j.trc.2026.105645.",
+    "url": "https://andresfielbaum.com/on-demand-ridepooling/ ; https://www.sciencedirect.com/science/article/pii/S0968090X26001336 (publisher search result read; direct full-text fetch failed)",
+    "notes": "Proposed new key for plannedJ16; no existing key found. Bibliographic identity VERIFIED via opened author's official publication list and publisher search result containing DOI,title,two ordered authors,June2026,volume187/article105645. Publisher highlights/abstract mention an alternative no-walking schedule and a reverting mechanism. CANNOT VERIFY(full body): direct publisher,DOI,/abs and PDF fetches failed; no official full text found. Do not upgrade J16 detailed reference-schedule/no-worse interpretation from UNVERIFIED based on abstract alone. Metadata may be retained as planned reference, but body details must remain missing evidence until full text is read.",
+    "tex": "\\bibitem{wang2026}\nX.~Wang and A.~Fielbaum.\n\\newblock Where should the last passenger be dropped off? Anticipatory walking in ridepooling.\n\\newblock \\emph{Transportation Research Part C: Emerging Technologies}, 187:105645, 2026.\n\\newblock \\url{https://doi.org/10.1016/j.trc.2026.105645}",
+    "register_ids": [
+      "J16"
+    ],
+    "body_status": "CANNOT VERIFY"
+  },
+  {
+    "key": "ding2025",
+    "status": "VERIFIED",
+    "metadata": "Chenhao Ding; Florian Dandl; Klaus Bogenberger. Predicting Offers for Mobility-on-Demand Services: A Machine Learning-Based Approach. 104th Annual Meeting of the Transportation Research Board (2025). Manuscript dated12November2024,24PDFpages. No DOI, volume/issue or published page range verified.",
+    "url": "https://mediatum.ub.tum.de/doc/1765899/1765899.pdf ; https://www.mos.ed.tum.de/vt/mitarbeiter-innen/dr-ing-dandl-florian/",
+    "notes": "Proposed new key for plannedJ41. Official TUM full manuscript successfully opened(24pages): title and three ordered authors onp1,date12Nov2024. Official TUM author bibliography lists104thTRBAnnualMeeting2025; official TRB2025sessions program also identifiesTRBAM-25-06187. Use2025conference year, distinguish2024manuscript date. Bodyp7 explicitly uses FleetPy requests/fleet-state as inputs and realized service as target values; J41 now VERIFIED. No DOI or proceedings page range invented;24pages is manuscript length, not a published page range.",
+    "tex": "\\bibitem{ding2025}\nC.~Ding, F.~Dandl, and K.~Bogenberger.\n\\newblock Predicting Offers for Mobility-on-Demand Services: A Machine Learning-Based Approach.\n\\newblock In \\emph{104th Annual Meeting of the Transportation Research Board}, 2025.\n\\newblock \\url{https://mediatum.ub.tum.de/doc/1765899/1765899.pdf}",
+    "register_ids": [
+      "J41"
+    ],
+    "body_status": "VERIFIED"
+  }
+]
+

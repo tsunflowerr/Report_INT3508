@@ -4,78 +4,57 @@
 
 \subsubsection{Những việc đã hoàn thành}
 
-Trong sáu tháng, em hoàn thành 173 phiếu công việc, tương ứng 342 đầu việc khác nhau, trải trên chín kho mã của sản phẩm. Những phần đáng kể nhất gồm:
+Trong suốt thời gian thực tập, em đã tiếp nhận và hoàn thành hơn 170 phiếu công việc (bao gồm các yêu cầu tính năng nhỏ, tác vụ cải tiến và sửa lỗi) tương ứng với các đầu việc kỹ thuật trên các kho mã nguồn của sản phẩm. Các hạng mục đóng góp chính bao gồm:
 
 \begin{itemize}[leftmargin=1.2cm, itemsep=1pt, topsep=2pt]
-\item Tính năng khoá phòng để sửa chữa, làm trọn vẹn từ bảng dữ liệu, quy tắc nghiệp vụ, đầu giao tiếp cho tới giao diện, bản dịch ba ngôn ngữ và kiểm thử tự động, kèm việc sửa các phép tính công suất phòng để phòng đang khoá không bị tính sai.
-\item Hai chỉ tiêu thống kê mới về lượt khách nghỉ qua đêm và tổng số đêm nghỉ, với phần tính toán tách thành một lớp thuần và có mười ba trường hợp kiểm thử.
-\item Việc tách một quyền hạn cũ thành hai quyền riêng, gồm cả tập lệnh chuyển đổi dữ liệu cho toàn bộ khách hàng đang dùng và tập lệnh đưa về trạng thái trước đó.
-\item Bốn hạng mục tối ưu hiệu năng: giảm số lượt truy vấn và hạ chi phí tính toán khi xuất tệp sổ quỹ, chặn hiện tượng người dùng phải chờ nhau khi xuất tệp hoá đơn, đặt thời gian sống cho khoá phân tán, và áp dụng quy ước tránh tính toán lại trên giao diện.
-\item Các màn hình cho bản quản lý viết lại, gồm màn hình tổng quan với các biểu đồ doanh thu, màn hình danh sách và chi tiết phòng, phần sổ tay hướng dẫn tích hợp kênh bán phòng trực tuyến kèm ô tìm kiếm, và việc tái cấu trúc bảng tổng kết của phiếu bàn giao ca.
-\item Phần đa ngôn ngữ và bối cảnh địa phương, gồm bổ sung tiếng Hàn, tiếng Trung, tiếng Lào cho nhiều màn hình và sửa các lỗi định dạng ngày tháng, đơn vị tiền tệ, múi giờ. Cùng với đó là khoảng một nghìn chín trăm dòng kiểm thử tự động ở cả hai phía.
+\item Tham gia phát triển tính năng khóa phòng bảo trì: từ mô hình dữ liệu, quy tắc nghiệp vụ, API phía máy chủ đến giao diện người dùng, bản dịch đa ngôn ngữ và viết kiểm thử tự động, đồng thời cập nhật công thức tính công suất phòng để loại trừ phòng đang ngừng kinh doanh.
+\item Nghiên cứu và hiện thực hai chỉ tiêu thống kê mới về lượt khách nghỉ qua đêm và tổng số đêm nghỉ, đóng gói phần tính toán thành lớp xử lý thuần túy với các trường hợp kiểm thử tự động bao phủ các tình huống biên.
+\item Tái cấu trúc cơ chế phân quyền hủy đơn thành hai quyền độc lập, chuẩn bị tập lệnh chuyển đổi dữ liệu an toàn cho các cơ sở đang hoạt động.
+\item Các hạng mục tối ưu hiệu năng: giảm số lượt truy vấn và hạ độ phức tạp tính toán khi xuất tệp sổ quỹ, xử lý hiện tượng nghẽn tài nguyên cơ sở dữ liệu khi xuất hóa đơn chi tiết, bổ sung thời gian sống (TTL) cho khóa phân tán Redis và áp dụng quy ước tránh tính toán lặp trên giao diện.
+\item Xây dựng các phân hệ giao diện cho bản quản lý mới: trang tổng quan (dashboard) với các biểu đồ doanh thu, danh mục phòng, tài liệu hướng dẫn tích hợp kênh bán phòng trực tuyến và bảng tổng kết bàn giao ca.
+\item Địa phương hóa và đa ngôn ngữ: bổ sung tiếng Hàn, tiếng Trung, tiếng Lào cho các màn hình, xử lý đồng bộ định dạng ngày tháng, đơn vị tiền tệ và múi giờ, cùng các bài kiểm thử tự động trên cả hai tầng hệ thống.
 \end{itemize}
-
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[font=\small]
-\def\bw{1.0}
-\foreach \i/\h/\v/\m in {0/1.17/49/3, 1/1.93/81/4, 2/2.17/91/5, 3/2.60/109/6, 4/3.94/165/7, 5/4.20/176/8, 6/0.64/27/9} {
-  \pgfmathsetmacro{\x}{\i*1.45}
-  \fill[cotbieudo, rounded corners=1.5pt] (\x,0) rectangle (\x+\bw,\h);
-  \node[font=\small, text=xanhkv, above=1.5pt] at (\x+\bw/2,\h) {\v};
-  \node[font=\small, below=3pt] at (\x+\bw/2,0) {\m};
-}
-\draw[draw=xamvien, line width=0.8pt] (-0.25,0) -- (9.95,0);
-\node[font=\scriptsize, below=26pt] at (4.85,0) {tháng, năm 2026};
-\end{tikzpicture}
-\caption{Số lần ghi mã theo từng tháng trong kỳ thực tập.\\ Tháng 9 chỉ gồm 7 ngày đầu nên cột thấp hơn hẳn.}
-\label{hinh:tiendo}
-\end{figure}
-
-Hình \ref{hinh:tiendo} nói về kỳ thực tập của em chính xác hơn mọi lời tự nhận xét. Tháng đầu em ghi mã ít nhất, không phải vì làm ít mà vì phần lớn thời gian ngồi đọc; con số tăng dần và cao nhất vào tháng 7 và tháng 8, đúng giai đoạn em đã đủ quen để tự nhận những phiếu lớn hơn. Nhưng cách hiểu đúng không phải là em làm việc hiệu quả hơn theo thời gian, mà là thời gian đọc hiểu ở giai đoạn đầu không mất đi, nó chuyển thành khả năng làm nhanh ở giai đoạn sau.
 
 \subsubsection{Kiến thức kỹ thuật}
 
-Về cơ sở dữ liệu, em học được cách đọc để hiểu một câu truy vấn thật sự làm gì thay vì chỉ đọc mã sinh ra nó, và cách nhận ra dấu hiệu của một truy vấn tồi như nối quá nhiều bảng, lọc trùng trên tập lớn, hay lấy kèm dữ liệu không dùng. Em cũng lần đầu viết câu lệnh sẵn phía cơ sở dữ liệu cho một chỗ cần hiệu năng, và lần đầu viết tập lệnh chuyển đổi dữ liệu cho hệ thống đang chạy thật.
+Về cơ sở dữ liệu, em học được phương pháp phân tích câu truy vấn thực tế thay vì phụ thuộc vào mã sinh tự động từ ORM, nhận diện các điểm nghẽn phổ biến như phép nối bảng dư thừa, lọc trùng trên tập dữ liệu lớn hay nạp trước quan hệ không cần thiết. Em cũng tích lũy kinh nghiệm viết thủ tục lưu trữ tối ưu và xây dựng các kịch bản chuyển đổi dữ liệu an toàn cho môi trường sản xuất.
 
-Về hiệu năng, em hiểu rằng phần lớn vấn đề không nằm ở thuật toán tinh vi mà ở những việc rất cơ bản: làm nhiều lần một việc chỉ cần làm một lần, mang về nhiều dữ liệu hơn mức cần dùng, và tìm kiếm tuần tự trong khi có thể tra theo chìa khoá. Trong bốn hạng mục tối ưu em làm, không hạng mục nào cần đến một thuật toán khó.
+Về tối ưu hiệu năng, em hiểu rằng phần lớn giải pháp trong thực tế không đòi hỏi thuật toán phức tạp mà bắt nguồn từ những nguyên tắc rất cơ bản: hạn chế thực hiện lặp lại các phép tính tĩnh, không vận chuyển dữ liệu dư thừa qua mạng và thay thế quét tuần tự bằng tra cứu theo bảng băm.
 
-Về kiến trúc, em chuyển từ chỗ thấy việc chia tầng là rườm rà sang chỗ hiểu nó giải quyết vấn đề gì, và học được một nguyên tắc em tin sẽ theo mình lâu: phần tính toán nên nằm ở nơi sở hữu dữ liệu, và cùng một chỉ tiêu thì chỉ nên được định nghĩa ở đúng một chỗ. Về kiểm thử, em cũng thay đổi hẳn quan niệm: trước đây em coi nó là việc phải làm để đủ thủ tục, giờ em coi nó là một bản mô tả hành vi mà người sau đọc được, và một tấm lưới bảo vệ những hành vi cũ. Về xử lý nhiều ngôn ngữ và nhiều vùng, em nhận ra đây không phải việc thay chuỗi chữ như em từng nghĩ, mà gồm cả định dạng ngày tháng, cách viết số, ký hiệu tiền tệ, và quan trọng nhất là múi giờ: câu hỏi hôm nay bán được bao nhiêu là câu hỏi không có nghĩa cho đến khi xác định được hôm nay là theo giờ ở đâu.
+Về kiến trúc phần mềm, em hiểu được giá trị của việc phân tầng và nguyên tắc phân định quyền sở hữu dữ liệu: trong hệ thống mà em tham gia, nhóm ưu tiên đặt logic tính toán nghiệp vụ tại dịch vụ sở hữu dữ liệu nguồn, tránh để cùng một chỉ tiêu bị tính toán độc lập ở nhiều nơi. Về kiểm thử tự động, nhận thức của em chuyển biến từ việc xem đây là thủ tục sang nhìn nhận kiểm thử như một bản đặc tả hành vi hệ thống và là cơ chế bảo vệ giúp hạn chế lỗi hồi quy khi mã nguồn thay đổi. Về đa ngôn ngữ, em nhận thức sâu sắc rằng địa phương hóa không chỉ là dịch chuỗi giao diện, mà bao gồm chuẩn hóa định dạng thời gian, số học, tiền tệ và đặc biệt là ranh giới múi giờ địa phương.
 
 \subsubsection{Kỹ năng làm việc}
 
-Có những thứ em học được mà không liên quan đến kỹ thuật, và em nghĩ chúng quan trọng không kém.
+Bên cạnh kiến thức chuyên môn, kỳ thực tập đem lại cho em những kỹ năng làm việc quan trọng trong môi trường doanh nghiệp:
 
-Thứ nhất là biết hỏi. Tháng đầu em hay ngồi tự mò hai ba giờ vì sợ hỏi thì bị đánh giá là không biết gì. Sau vài lần được nhắc, em đổi cách: tự tìm khoảng ba mươi phút, nếu vẫn bí thì hỏi, nhưng hỏi kèm những gì mình đã thử và đang nghi ngờ ở đâu.
+Kỹ năng đặt câu hỏi kỹ thuật: Thay vì mất nhiều thời gian tự tìm kiếm trong bế tắc, em hình thành phương pháp làm việc chủ động: sau một khoảng thời gian tự nghiên cứu và thử nghiệm hợp lý, nếu chưa tìm ra hướng đi thì chủ động trao đổi với người hướng dẫn kèm theo các phương án đã thử và giả thuyết cụ thể.
 
-Thứ hai là viết mô tả cho thay đổi của mình. Đầu kỳ em viết những dòng như sửa lỗi hoặc cập nhật, và chính em hai tuần sau đó không hiểu mình đã sửa gì; về sau em viết rõ mã phiếu và nội dung thay đổi, mất thêm ba mươi giây nhưng tiết kiệm rất nhiều thời gian cho người phải lần lại.
+Kỹ năng viết nội dung commit: Từ thói quen viết nội dung commit chung chung, em dần hình thành cách mô tả rõ mã phiếu công việc và nội dung thay đổi, giúp tiết kiệm thời gian cho quá trình rà soát và truy vết mã nguồn sau này.
 
-Thứ ba là làm việc với bộ phận kiểm thử. Ban đầu em thấy hơi khó chịu khi phiếu bị trả lại, về sau em hiểu họ đang làm phần việc em khó tự làm được: em luôn thử theo đúng cách em hình dung khi viết mã, còn họ thử theo cách người dùng thật hành xử. Rất nhiều lỗi họ tìm ra là những trường hợp em không nghĩ tới.
+Phối hợp cùng bộ phận kiểm tra chất lượng (QA): Em hiểu rằng việc nhận phản hồi lỗi từ môi trường kiểm thử là một phần tất yếu của quy trình phát triển. Bộ phận QA tiếp cận hệ thống từ góc nhìn khách quan của người dùng thật, giúp phát hiện các tình huống biên mà lập trình viên dễ bỏ sót.
 
-Thứ tư là chấp nhận bỏ đi phần việc đã làm. Lần em huỷ bỏ toàn bộ phần thống kê đã hiện thực ở một dịch vụ để làm lại ở dịch vụ khác là lần khó chịu nhất, nhưng cũng là lần em trưởng thành nhất về nghề, vì công sức đã bỏ ra không phải lý do để giữ một quyết định sai.
+Sẵn sàng điều chỉnh giải pháp chưa tối ưu: Qua lần phải bỏ phần mã đã làm để chuyển logic sang đúng phân hệ, em hiểu rằng cần ưu tiên tính đúng đắn của kiến trúc hệ thống thay vì cố giữ lại giải pháp chỉ vì đã dành nhiều thời gian xây dựng.
 
 \subsubsection{Những bài học em cho là quan trọng nhất}
 
-\begin{enumerate}[leftmargin=1.2cm, itemsep=1pt, topsep=2pt]
-\item Một tính năng chưa xong khi nó chạy được. Nó xong khi ta đã đi tìm và xử lý những chỗ nó âm thầm làm sai.
-\item Phạm vi của một thay đổi quan trọng ngang với nội dung của nó. Một lỗi hẹp nên được sửa bằng một thay đổi hẹp, còn dọn mã phải là một việc riêng có kế hoạch riêng.
-\item Mọi tầng trừu tượng đều có giá. Viết truy vấn bằng ngôn ngữ lập trình rất tiện, nhưng ở chỗ nóng thì phải biết câu lệnh thật sự được gửi đi là gì.
-\item Việc chặn phải nằm ở phía máy chủ. Ẩn một cái nút trên giao diện là trải nghiệm người dùng, không phải bảo mật.
-\item Phần tính toán nên nằm ở nơi sở hữu dữ liệu, vì hai chỗ cùng định nghĩa một chỉ tiêu là một quả bom hẹn giờ. Và khi cùng một hiện tượng xuất hiện ở nhiều chỗ, rất có thể đó không phải nhiều lỗi mà là một vấn đề về thiết kế.
-\item Hãy viết phần quay lại trước khi cần đến nó. Điều cần chuẩn bị không phải cho trường hợp mình sai, mà cho trường hợp mình không có thời gian tìm hiểu vì sao mình sai.
-\item Kiểm thử có giá trị nhất là kiểm thử bảo vệ hành vi cũ, chứ không phải kiểm thử lại đúng cái mình vừa viết. Và hiệu năng là một thói quen viết mã, không phải một giai đoạn làm sau.
+\begin{enumerate}[leftmargin=1.2cm, itemsep=2pt, topsep=2pt]
+\item Một tính năng chỉ thực sự hoàn thành khi nó hoạt động chuẩn xác và không gây ảnh hưởng tiêu cực đến các hành vi nghiệp vụ hiện có trên hệ thống.
+\item Phạm vi của một thay đổi quan trọng tương đương nội dung của nó: với một lỗi cục bộ, cần ưu tiên giải pháp sửa đổi an toàn, có phạm vi hẹp thay vì vội vàng tái cấu trúc diện rộng khi chưa có kiểm thử bảo vệ.
+\item Sử dụng ORM giúp tăng tốc độ phát triển nhưng không có nghĩa là có thể bỏ qua câu lệnh SQL thực tế được sinh ra; ở các tác vụ dữ liệu lớn, việc xem xét kế hoạch thực thi là cần thiết để phát hiện và xử lý các điểm nghẽn.
+\item Quyền thao tác của người dùng phải được kiểm tra ở phía máy chủ, thay vì chỉ ẩn hoặc vô hiệu hóa nút trên giao diện; các ràng buộc trên giao diện chỉ hỗ trợ trải nghiệm người dùng chứ không thể thay thế cho việc kiểm soát quyền thực tế.
+\item Kiểm thử tự động có giá trị lớn nhất trong việc bảo vệ hành vi hiện hữu của hệ thống; các ca kiểm thử giúp em tự tin hơn khi sửa đổi mã nguồn và hạn chế tối đa lỗi hồi quy phát sinh.
 \end{enumerate}
 
 \subsubsection{Những điều em chưa làm được}
 
-Một báo cáo chỉ kể phần tốt thì không trung thực, nên em xin ghi lại cả những hạn chế của mình. Em vẫn ước lượng thời gian kém, có phiếu nói hai ngày mà làm bốn ngày, và phần vượt gần như luôn nằm ở khâu đọc hiểu phần đã có chứ không nằm ở khâu viết mã. Em viết kiểm thử cũng chưa đồng đều: với những phần logic rõ ràng thì khá đầy đủ, nhưng với những phần chủ yếu là hiển thị thì em hay bỏ qua và chỉ thử bằng tay. Em còn phụ thuộc vào việc được hỏi, vì nhiều lần em giải quyết được vấn đề sau khi anh hướng dẫn đặt lại câu hỏi theo một hướng khác, còn em thì chưa tự đặt được những câu hỏi như vậy cho chính mình. Cuối cùng, em hiểu hệ thống theo từng mảng chứ chưa hiểu toàn cục: những phần mình đã chạm vào thì nắm khá rõ, nhưng nếu được hỏi về một phân hệ chưa làm thì vẫn phải mở mã ra đọc lại từ đầu.
+Nhìn nhận một cách khách quan, em nhận thấy bản thân còn một số hạn chế cần tiếp tục hoàn thiện. Năng lực ước lượng thời gian thực hiện công việc đôi khi chưa sát với thực tế, chủ yếu do chưa lường hết thời gian cần thiết để đọc hiểu mã nguồn kế thừa. Việc viết kiểm thử tự động chưa thực sự đồng đều giữa các tầng: em tập trung nhiều vào logic nghiệp vụ phía máy chủ nhưng còn hạn chế ở tầng hiển thị giao diện. Em vẫn cần rèn luyện thêm khả năng tự chất vấn đa chiều các trường hợp ngoại lệ thay vì trông đợi vào sự định hướng của người hướng dẫn. Cuối cùng, mức độ hiểu biết của em về hệ thống mới tập trung sâu vào các phân hệ trực tiếp đảm nhiệm chứ chưa bao quát toàn diện mọi nhánh dịch vụ của sản phẩm.
 
 \subsection{Hướng phát triển tiếp theo}
 
-Tính năng khoá phòng hiện xử lý tốt trường hợp khoá theo một khoảng thời gian cụ thể. Hướng mở rộng tự nhiên là khoá theo chu kỳ lặp lại, ví dụ bảo trì định kỳ hằng tháng, và gắn lượt khoá với một kế hoạch bảo trì để người quản lý thấy được lịch sử sửa chữa của từng phòng; phần sinh lệnh theo sai khác trạng thái mà em đã viết có thể dùng lại cho hướng này mà không phải viết lại từ đầu.
+Đối với tính năng khóa phòng bảo trì, hướng phát triển tiếp theo là mở rộng cơ chế khóa phòng lặp lại theo chu kỳ định kỳ tự động và liên kết với kế hoạch quản lý tài sản, giúp chủ cơ sở theo dõi toàn diện lịch sử sửa chữa của từng phòng; mô hình sinh lệnh theo trạng thái thay đổi đã xây dựng có thể tái sử dụng trực tiếp cho yêu cầu này.
 
-Phần tính toán thống kê hiện chạy trực tiếp mỗi lần người dùng xem báo cáo, nên với những cơ sở có lượng khách lớn và khoảng thời gian xem rộng thì sẽ dần chậm. Hướng cải thiện là tính trước theo từng ngày rồi lưu lại, khi người dùng xem một khoảng thì chỉ cần cộng các ngày trong khoảng đó; vì phần tính toán đã được tách thành một lớp thuần nên việc chuyển đổi không ảnh hưởng tới quy tắc nghiệp vụ. Với phần tối ưu, em mới chỉ xử lý những chỗ đã có người báo là chậm, nên việc nên làm tiếp là đo đạc chủ động để tìm ra những chỗ chậm mà chưa ai kịp phàn nàn. Với phần kiểm thử, khoảng trống rõ nhất là phần hiển thị.
+Đối với phân hệ thống kê lưu trú, giải pháp nâng cao hiệu năng trong dài hạn là áp dụng cơ chế tổng hợp trước (pre-aggregation) theo từng ngày và lưu vào bảng tổng hợp đệm; khi người dùng tra cứu khoảng thời gian tùy chọn, hệ thống chỉ cần cộng dồn các bản ghi ngày đã xử lý mà không phải quét lại toàn bộ dữ liệu gốc. Với công tác tối ưu hiệu năng, hướng đi tiếp theo là thiết lập hệ thống giám sát hiệu năng ứng dụng (Application Performance Monitoring - APM) để phát hiện sớm các truy vấn chậm trước khi phát sinh phản ánh từ khách hàng.
 
-Về bản thân, em muốn tiếp tục làm ở vị trí có thể chạm vào cả phần giao diện và phần máy chủ, vì sáu tháng qua cho em thấy nhiều vấn đề chỉ nhìn ra được khi ta thấy cả hai đầu. Ba việc cụ thể em muốn làm tiếp là học kỹ hơn về cơ sở dữ liệu, cụ thể là cách đọc kế hoạch thực thi của câu truy vấn và cách thiết kế chỉ mục; tập viết kiểm thử trước khi viết mã cho những phần có logic rõ; và tập tự trả lời câu hỏi thay đổi này sẽ ảnh hưởng tới những đâu trước khi viết dòng mã đầu tiên. Sáu tháng qua em thường trả lời được câu hỏi đó sau khi đã làm xong, và khoảng cách giữa sau khi làm xong và trước khi bắt đầu chính là khoảng cách em cần đi tiếp.
+Về định hướng cá nhân, em đặt mục tiêu tiếp tục phát triển theo hướng kỹ sư toàn diện có khả năng bao quát cả tầng giao diện lẫn tầng máy chủ. Ba mục tiêu cụ thể em tập trung theo đuổi gồm: nghiên cứu chuyên sâu về tối ưu chỉ mục và kế hoạch thực thi câu truy vấn cơ sở dữ liệu; rèn luyện phương pháp phát triển hướng kiểm thử (Test-Driven Development - TDD) cho các phân hệ nghiệp vụ phức tạp; và nâng cao năng lực phân tích tác động toàn diện trước khi bắt tay vào hiện thực mã nguồn.
 
-Sáu tháng ở KiotViet không dạy em thêm nhiều cú pháp hay công cụ. Nó dạy em cách làm việc với một hệ thống mình không viết ra, đang có người dùng thật, và không cho phép mình làm hỏng. Đó là thứ khó tự học ở nhà nhất.
+Kỳ thực tập tại doanh nghiệp không chỉ củng cố kiến thức học đường, mà quan trọng hơn đã trang bị cho em phương pháp làm việc chuẩn mực trên một hệ thống thương mại thực tế đang vận hành và phục vụ hàng nghìn người dùng mỗi ngày.

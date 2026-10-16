@@ -1,0 +1,78 @@
+﻿\chapter*{Tóm tắt}
+\addcontentsline{toc}{chapter}{Tóm tắt}
+
+Điều phối đi chung xe cập nhật kế hoạch khi có yêu cầu mới, làm thay đổi giờ đã báo cho
+hành khách. Khóa luận nghiên cứu đại lượng nào có thể được giới hạn trước quyết định,
+chi phí phục vụ của giới hạn ấy, và phạm vi bảo đảm khi thời gian đi thay đổi.
+
+RideBound đối chiếu ba mốc: lời hứa trước, phép chiếu tuyến giữ nguyên trên trạng thái
+hiện tại, và lời hứa của phương án mới. Sổ cái theo từng khách và chiều cam kết cộng
+phần chênh giữa phương án mới với tuyến giữ nguyên; cổng loại phương án vượt trần và
+ghi chứng cứ quyết định. Đây là hạch toán vận hành, không phải nhận diện tác động nhân
+quả thuần. Khung phân tích so bốn họ cổng: hành vi, hạn chót một chiều, độ lệch hai chiều
+và biến động nhìn thấy. Khi ngân sách trước còn hợp lệ và tuyến giữ nguyên qua các kiểm
+tra khác, cổng hành vi giữ được tuyến đó. Kết quả không bảo đảm tính khả thi vật lý hay
+giờ đến thực tế.
+
+Thực nghiệm dùng nhu cầu taxi Manhattan dẫn xuất và mô phỏng FleetPy. Trên tập ô chính,
+tỉ số tổng phần do quyết định trên tổng biến động nhìn thấy giảm từ $89{,}06\%$ ở B1
+xuống $1{,}37\%$ ở gói C1 có trần hành vi 30 giây. Tỉ lệ phục vụ giảm $7{,}13$ điểm
+phần trăm; gói C1 không đạt tiêu chí tổng hợp H6 đã niêm phong. Chi phí này gồm cả khóa
+xác nhận, không chỉ trần giờ trả. Các thử nghiệm thăm dò dưới trôi dạt cho thấy cổng
+hành vi giữ sổ của mình, trong khi hạn chót và cổng nhìn thấy có thể cần miễn trừ để
+tiếp tục phục vụ. Biên nhìn thấy cần thêm khoảng dự phòng cho phần thay đổi khi giữ
+tuyến; phụ thuộc giữa các nhóm và giao nhau của chuyến nguồn ngăn suy rộng độ phủ
+thực nghiệm thành bảo đảm xác suất cho quần thể.
+
+Kết quả cung cấp cách phân biệt nội dung lời hứa, vi phạm và phục hồi. Giảm biến động
+hành vi có chi phí đo được trong mô phỏng; chưa có bằng chứng rằng nó cải thiện mức
+hài lòng hoặc bảo đảm giờ đến trong vận hành thực.
+
+\vspace{6pt}
+\noindent\textbf{Từ khóa:} điều phối đi chung xe, sổ cái cam kết, biến động lời hứa,
+trôi dạt, đánh đổi phục vụ--ổn định.
+
+\clearpage
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\begingroup
+\hyphenpenalty=50
+\exhyphenpenalty=50
+
+Ride-pooling dispatchers update plans as new requests arrive, changing the times
+previously announced to passengers. This thesis examines which quantity can be bounded
+before a decision, its service cost, and the scope of that guarantee under changing
+travel times.
+
+RideBound compares three reference points: the previous promise, the unchanged route
+projected from the current state, and the proposed promise. A per-passenger,
+per-dimension ledger accumulates the difference between the proposed and unchanged
+routes; a gate rejects candidates exceeding the cap and records decision evidence.
+This is operational accounting rather than identification of a pure causal effect.
+The analysis compares four gates: conduct, a one-sided deadline, two-sided deviation,
+and visible variation. Given a valid prior ledger and an unchanged route passing other
+checks, the conduct gate retains that route. This result does not guarantee physical
+feasibility or actual arrival times.
+
+Experiments use derived Manhattan taxi demand and FleetPy simulation. On the main panel,
+the ratio of total decision-induced to total visible variation falls from $89.06\%$
+under B1 to $1.37\%$ under the C1 package with a 30-second conduct cap. Service falls
+by $7.13$ percentage points; C1 fails the sealed composite H6 criterion. This cost
+includes confirmation locks as well as the drop-off-time cap. Exploratory drift
+experiments show that the conduct gate respects its own ledger, whereas deadline and
+visible-variation gates may require exemptions to continue service. A visible bound
+requires additional slack for variation along the unchanged route. Group dependencies
+and overlapping source trips prevent extrapolating empirical coverage into a
+population-level probability guarantee.
+
+The findings distinguish promise content, violations, and recovery. Reducing conduct
+variation carries a measured simulation cost; improved satisfaction and real-world
+arrival guarantees remain unestablished.
+
+\vspace{6pt}
+\noindent\textbf{Keywords:} ride-pooling dispatch, commitment ledger, promise variation,
+drift, service--stability trade-off.
+
+\endgroup
+\clearpage

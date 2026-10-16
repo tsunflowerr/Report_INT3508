@@ -1,0 +1,160 @@
+{
+  "kind": "timestamp-only-waiting-opportunity-audit",
+  "sourceSha256": "56c3cfe033d11ce3c17314e98f0824ca76a1ef5443636439bd542a8641ac0e92",
+  "captureReceiptSha256": "3309a390ff62263fa2ef6daed95778c9d84efd3b4e145488878b3df8e4b28cf5",
+  "stateCount": 16,
+  "eventTypes": {
+    "requestArrived": 16,
+    "vehicleAdvanced": 128,
+    "timerTick": 16
+  },
+  "allKnownPickupWindowsAlreadyOpen": true,
+  "scope": "All before-state requests plus newly arrived requests, including inactive historical requests; no state reduction or simulation performed.",
+  "limitation": "Does not test forecast value of waiting, execution adapter behavior, or another demand regime.",
+  "rows": [
+    {
+      "epoch": 20,
+      "simTimeMs": 238000,
+      "requestsExaminedIncludingHistorical": 7,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "9fd92358730bd2f7a9f76ba80ed855ac66282a58484950ce0ac1f250ec2607fb",
+      "eventSha256": "4da0661c7464679178687f722d31a5ea04410fccd5b847efdf1bff917bc8712c"
+    },
+    {
+      "epoch": 275,
+      "simTimeMs": 2757000,
+      "requestsExaminedIncludingHistorical": 40,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "7a2c9323fd7cbe48212c8e7908a631b2d8d228c6ee33b30b62fe79967a7b796a",
+      "eventSha256": "fbb710f5e7a53b351bb8b99bc25e655616bce39124abeb23f0051b191f185938"
+    },
+    {
+      "epoch": 304,
+      "simTimeMs": 2983000,
+      "requestsExaminedIncludingHistorical": 46,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "9994cce975ecb05341e9322383c4d02f306f2a4a556afc97829f864000511ada",
+      "eventSha256": "edaba655eb97a77031a463a29fbb271932b229fa62b263eca129b75a961d20a0"
+    },
+    {
+      "epoch": 321,
+      "simTimeMs": 3091000,
+      "requestsExaminedIncludingHistorical": 49,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "a764e13f76c2e06f1ce6ee012fa0ccc9d7bcf968d3eec1a12a2b5695fbb644ce",
+      "eventSha256": "d1be703890c0f4910f9fecef19b56bd08033e5e75343c483c268eb2b8d5c1e51"
+    },
+    {
+      "epoch": 334,
+      "simTimeMs": 3272000,
+      "requestsExaminedIncludingHistorical": 50,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "43311e3d4f08e9fedce0dc32029f7a7138a754b7e790bfc5d49dce2e2e4653d2",
+      "eventSha256": "795c6793f0b03689936a8e377e7b6309aa3df736c231589540eb19614ee484a2"
+    },
+    {
+      "epoch": 373,
+      "simTimeMs": 3837000,
+      "requestsExaminedIncludingHistorical": 58,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "1153e57af9ba32c5497bbac94d57c19b29ec9a94425a12a692fdd67810a85ced",
+      "eventSha256": "7b698292776e948c7caef5063f09496ac2250b5212adfb82c62798ba0ffc33f2"
+    },
+    {
+      "epoch": 374,
+      "simTimeMs": 3843000,
+      "requestsExaminedIncludingHistorical": 59,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "c67305a320d38ed9ca29dd8c7bda73e02ec24fc247487d1dd4a630da2c7ad308",
+      "eventSha256": "ef43935dce3d0bf34c90d8c1f8dc8104a15e39fbfc213827fe6dc8df48e65742"
+    },
+    {
+      "epoch": 378,
+      "simTimeMs": 3948000,
+      "requestsExaminedIncludingHistorical": 60,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "2210e355973692821cadb063ecddb955d810053d1aba015f0e88298fe2697d8e",
+      "eventSha256": "172e13c20395cf34401c15fdba1b8f3aa115a68627016fc1bef6527745252933"
+    },
+    {
+      "epoch": 388,
+      "simTimeMs": 3975000,
+      "requestsExaminedIncludingHistorical": 61,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "8d9212178f0d8cffa14025dcc481c72fbc7885d13a613b5e308fb7e2abcbfc83",
+      "eventSha256": "c0ccf44e84f0fc134f8b73b9f4b3250650abbe27815abf76170799b3d8fad6f9"
+    },
+    {
+      "epoch": 394,
+      "simTimeMs": 4058000,
+      "requestsExaminedIncludingHistorical": 63,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "426ec39613cfd5cc990577a9cd17e670272d215bc9619a209c2e201cf838cc34",
+      "eventSha256": "99c48714f47879baad51e14c73578860ab7cfac354069011ea71da293d3602e2"
+    },
+    {
+      "epoch": 406,
+      "simTimeMs": 4111000,
+      "requestsExaminedIncludingHistorical": 65,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "8d6d56adb693a82c50799967c176e788db8ac7a56d06bb4bc9bf43b15c939769",
+      "eventSha256": "7ea27c7a2ddc1b10ac81779d735aace72e59ff7271adcbf1e19278df7da2d04b"
+    },
+    {
+      "epoch": 457,
+      "simTimeMs": 4837000,
+      "requestsExaminedIncludingHistorical": 73,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "a988be9fcc8765cad179dd99367b3e837e92deec01359b8f707d77319b9e4806",
+      "eventSha256": "80c1a09deb4990a9c9693396e9476b31c45d920566c84cac04585bad57d9b5db"
+    },
+    {
+      "epoch": 458,
+      "simTimeMs": 4863000,
+      "requestsExaminedIncludingHistorical": 74,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "102d252a999dc403118f39c1716fc52db330e44a1e5f9e579ec0d507059dac83",
+      "eventSha256": "a3a8d09298f9f775c9dda55176032279e2353571bb235bf9e5dd677464edcb7a"
+    },
+    {
+      "epoch": 459,
+      "simTimeMs": 4882000,
+      "requestsExaminedIncludingHistorical": 75,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "17a3032c61b440a4853ca0867d3e7e41e1704a80f97bf233a509149d3660c1d5",
+      "eventSha256": "f92892986daf58cab65690ccccbac7736fa5316d23742269363556c998dd0808"
+    },
+    {
+      "epoch": 460,
+      "simTimeMs": 4887000,
+      "requestsExaminedIncludingHistorical": 76,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "01db74f2a1f7aed0041ab56e75cd7b12e6e866b5a9730bace34f408ca1101ec8",
+      "eventSha256": "fb419a7782b02bc653cf43d37bdd805d15de186fca533836d172a82d061b0f2c"
+    },
+    {
+      "epoch": 673,
+      "simTimeMs": 7026000,
+      "requestsExaminedIncludingHistorical": 104,
+      "maximumEarliestPickupMinusNowMs": 0,
+      "futurePickupOpeningRequestIds": [],
+      "beforeSha256": "4798e2959add05de673cb23d774e9c0b4b5def4783bc152571df21764f6a4060",
+      "eventSha256": "3e02dfac8912103aa446de9f977c82e5bfcc9e76d1f9e6e956376f38610f9663"
+    }
+  ]
+}

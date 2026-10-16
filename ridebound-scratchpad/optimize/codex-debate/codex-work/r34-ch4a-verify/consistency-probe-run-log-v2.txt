@@ -1,0 +1,7 @@
+2026-10-12 static/source audit invocation log
+1. python consistency-audit.py: failed, python command not found; script was already created exclusively.
+2. E:/RideBoundData/wp7/envs/fleetpy-1.0.2/python.exe -B -I consistency-audit.py: output file written successfully; console print failed with UnicodeEncodeError cp1252 at print(output), exit1. Output retained and read with UTF8.
+3. Pinned interpreter -X utf8 -B -I consistency-source-probe-v2.py: exit0; source-probe-output-v2.txt written exclusively.
+4. rg -n SelectRequests|ReadDemand|SelectionRank|WindowStart|WindowEnd C:/Code/RideBound-noworse/src/RideBound.Benchmarking/Normalization/FleetPyManhattanNormalizer.cs: failed, rg command not found. Used read-only Python/PowerShell reads as fallback.
+5. Pinned interpreter -X utf8 -B -I consistency-normalizer-probe-v3.py: exit0; normalizer-probe-output-v3.txt written exclusively.
+No simulations, builds, installs or source mutations executed. Only exclusive small-text outputs in assigned subfolder.

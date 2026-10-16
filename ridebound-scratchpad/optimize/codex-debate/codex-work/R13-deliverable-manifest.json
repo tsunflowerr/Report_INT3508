@@ -1,0 +1,15 @@
+{
+  "scope": "Independent Round13; no simulations/builds; exclusive creation; write root codex-work.",
+  "files": [
+    {
+      "file": "R13-SURVEY-CODEX.md",
+      "bytes": 29955,
+      "sha256": "95e02e8f2fce0d2968e39e215495c07d8675110ae9fd6a5461d27be2ca3d41e3"
+    },
+    {
+      "file": "R13-PROPOSALS-CODEX.md",
+      "bytes": 33672,
+      "sha256": "64a2afa8e53d3a1925567617f3f6738aa8ae5033713ae733045e30e0a8ca1b3a"
+    }
+  ]
+}

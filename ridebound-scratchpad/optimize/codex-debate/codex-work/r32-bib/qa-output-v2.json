@@ -1,0 +1,35 @@
+{
+  "records": 53,
+  "statuses": {
+    "VERIFIED": 45,
+    "CORRECTED": 7,
+    "CANNOT VERIFY": 1
+  },
+  "legacy_count": 27,
+  "draft_bibitems": 23,
+  "latest_ch2_count": 15,
+  "missing_cited_keys": [],
+  "duplicate_bibitems": false,
+  "register_rows": 42,
+  "legacy_drop_count": 18,
+  "corrected_keys": [
+    "alonsogonzalez2020",
+    "fielbaum2022scale",
+    "fleetpy2022",
+    "horl2022",
+    "li2025",
+    "molenbruch2017",
+    "ortools"
+  ],
+  "cannot_verify_keys": [
+    "ecfr37131"
+  ],
+  "final_ch2_files": [
+    "06-chuong2-v2.tex",
+    "06-chuong2-v3.tex",
+    "06-chuong2-v4.tex",
+    "06-chuong2.tex"
+  ],
+  "no_build": true,
+  "exclusively_new_outputs": true
+}

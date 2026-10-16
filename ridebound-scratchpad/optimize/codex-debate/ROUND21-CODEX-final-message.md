@@ -1,0 +1,3 @@
+Wrote [R21-STAGE1A-CODEX.md](E:/Code/Report_INT3508/ridebound-scratchpad/optimize/codex-debate/codex-work/R21-STAGE1A-CODEX.md).
+
+The analyzer ran exactly once and read all 34 passing C-120 runs, then stopped because it opened a failed original C-30 folder instead of the indexed passing rerun. No analyzer JSON/MD outputs were created, and inputs remain untouched. P1–P5 remain unverified overall, so this round supplies no verified C-120 point for the thesis’s cap-dial section.

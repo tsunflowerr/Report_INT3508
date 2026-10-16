@@ -1,0 +1,268 @@
+\section{Thiết kế, dữ liệu và mức bằng chứng}
+
+
+\subsection{Đầu vào và đối tượng so sánh}
+
+Nhu cầu được lấy từ các chuyến taxi công khai của New York TLC~\cite{tlc}, qua bộ dữ
+liệu Manhattan đóng gói cho FleetPy~\cite{fleetpy2022}. Mỗi ô là một tổ hợp ngày, mẫu nhu
+cầu và khung giờ. Panel chính gồm năm ngày 14--18/11/2018, mỗi ngày bốn mẫu, khung
+08:00--10:00. Các ngày này gồm ba ngày làm việc và hai ngày cuối tuần. Mỗi ô có 108 yêu
+cầu, 8 xe bốn chỗ và cửa sổ đón 600 giây; tổng 20 ô có 2.160 yêu cầu.
+
+Mạng thử không phải mạng phố Manhattan đầy đủ. Công cụ chuẩn hóa chọn 96 điểm và dựng
+bao đóng thời gian đi, với một cung cho mỗi cặp điểm khác nhau: $96\times95=9.120$ cung.
+Tọa độ nút là tổng hợp. Đây là một thực thể nhỏ để kiểm cơ chế trên cùng đầu vào; khóa luận
+không gọi nó là thí nghiệm vận hành quy mô Manhattan.
+
+Trong panel chính, thời gian đi được giữ bằng một ảnh chụp. Xe vẫn có tiến độ và thời gian
+dừng trong mô phỏng rời rạc, nên phần thay đổi khi giữ tuyến không nhất thiết bằng không.
+Các đợt có trôi dạt dùng hệ số thời gian đi theo ngày, mỗi 900 giây, áp chung cho mạng.
+Chúng được tách khỏi panel tĩnh vì mô hình thông tin và các quy tắc thực thi khác nhau.
+
+\begin{table}[htbp]
+\centering
+\caption{Các tập bằng chứng dùng để trả lời câu hỏi nghiên cứu}
+\label{bang:lotrinh}
+\small
+\begin{tabularx}{\linewidth}{@{}p{2.5cm}p{3.4cm}Xp{3.2cm}@{}}
+\toprule
+\textbf{Tập} & \textbf{Đơn vị và phạm vi} & \textbf{Câu hỏi} & \textbf{Mức bằng chứng}\\
+\midrule
+H6 chính & 20 ô tĩnh, 2.160 yêu cầu mỗi nhánh & Ba mốc và chi phí của gói cam kết & Phép so chính đã niêm phong\\
+Thang ngân sách & Cùng 20 ô; cửa sổ 600 và 900 s & Giá theo trần và cửa sổ & Phân tích bổ sung\\
+Tầng 2 & 20 ô chính; 16 ô phát triển sáng/tối & Bốn họ cổng và nguyên nhân dừng & Thăm dò, dự đoán niêm phong trước\\
+W07/W07X & 8 ô 07:00--09:00, ngày 12--13/11 & Lời hứa chặt và phục hồi & Phát triển, thăm dò có niêm phong\\
+T38 & 15 ô hiệu chỉnh, 34 ô kiểm tra & Số khách, miễn trừ và biên nhìn thấy & Thăm dò, ngưỡng cố định trước tập kiểm tra\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Bảng~\ref{bang:lotrinh} chỉ đếm các đơn vị cần cho lập luận, không lấy tổng số lần chạy hay
+dung lượng lưu trữ làm mức mạnh của bằng chứng. Chạy nhiều cấu hình trên cùng một ô không
+biến ô đó thành nhiều mẫu độc lập. Hạt giống của bộ điều phối được giữ bằng 7 trong các
+phép so; lặp cùng cấu hình kiểm tính tái lập, không ước lượng biến thiên giữa các hạt giống.
+
+\subsection{Cấu hình và phép ghép cặp}
+
+Ở panel chính, \textbf{B1} không bật sổ ngân sách cam kết; nó vẫn tuân theo các ràng buộc
+vật lý và không cho tái gán khách đã nhận sang xe khác. Vì vậy B1 không phải đối chứng
+``tái gán tự do''. \textbf{C1} bật gói khóa xác nhận và trần hành vi 30 giây trên tổng độ
+dời giờ trả. Các nhánh ngân sách khác giữ gói khóa và chỉ thay trần giờ trả. Nhánh
+\texttt{nobudget} bỏ trần cộng dồn, nhưng \emph{vẫn khóa giờ đón}, cùng xe và điểm đón.
+
+So B1 với C1 đo chi phí của cả gói, không riêng trần 30 giây. So \texttt{nobudget} với các
+mức ngân sách gần hơn với câu hỏi về trần giờ trả, vì các khóa xác nhận được giữ. Cùng ô
+dùng cùng yêu cầu, đội xe, bộ sinh và hạt giống. Dù vậy, các nhánh có thể chọn tuyến khác
+nhau, kéo theo trạng thái và cơ hội ghép về sau khác nhau.
+
+Ở tầng thực nghiệm mới, $U$ là nhánh không cổng thời gian đang xét; $C$-$x$, $M^{+}$-$x$
+và $V$-$x$ lần lượt bật trần hành vi, hạn chót từ lời hứa đầu và trần nhìn thấy. Các khóa
+và điều kiện vật lý khác được giữ theo cấu hình của đợt. $U$ ở T38 không được ghép trực
+tiếp với B1 của H6, vì runner, thế giới và quy tắc ghi nhận vi phạm đón khác nhau.
+
+\subsection{Chỉ số và đối chiếu nguồn}
+
+Tỉ lệ phục vụ là số yêu cầu hoàn tất chia toàn bộ yêu cầu của ô. Chênh tỉ lệ có cùng mẫu số
+được báo bằng điểm phần trăm. Biến động được tính từ chuỗi lời hứa, với tổng $C$, $X$, $V$
+định nghĩa ở Chương~\ref{ch:phuongphap}. Với H6, phép đo trung tâm cộng cả hai tọa độ đón
+và trả, chỉ khi tọa độ tương ứng còn mở. Các phép thử cổng và T38 tập trung vào giờ trả;
+không trộn hai phạm vi thành một chỉ số.
+
+Tỉ lệ thất hứa của một luật phải dùng \emph{đại lượng của luật đó}: $C_r>x$ cho cổng hành
+vi; giờ trả thật muộn hơn lời hứa đầu quá $x$ cho hạn chót; $V_r>x$ cho cổng nhìn thấy.
+Tỉ lệ này không phải một thang trải nghiệm chung giữa ba luật. Chỉ số chung E2 là tỉ lệ
+khách đã được hứa có $V_r>60$ giây. Ngưỡng là dấu $>$ nghiêm ngặt, không phải $\ge$.
+
+Một tỉ lệ có thể được gộp theo khách hoặc lấy trung bình không trọng số theo ô. Hai cách
+có thể cho số khác nhau khi số khách mỗi ô khác nhau. Khóa luận ghi cách gộp cạnh mỗi bảng.
+Tỉ lệ quyết định có miễn trừ dùng số quyết định đã được xác nhận làm mẫu số; không so
+trực tiếp nó với tỉ lệ khách vượt lời hứa.
+
+Trong lần biên tập này, phép đo H6 được đối chiếu lại với 40 biên bản gốc của B1/C1 và
+điểm kiểm tra cuối của 180 lần chạy thuộc chín nhánh. Số phục vụ trên hai cửa sổ được
+tính lại từ kết quả từng ô. Với T38, cả 185 điểm kiểm tra cuối được giải mã, kiểm băm
+khung và tái tính lịch sử. Mục~\ref{muc:t38} báo phạm vi kiểm delta riêng. Những kiểm
+tra này xác nhận số liệu mô tả; chúng không biến kết quả thăm dò thành xác nhận độc lập.
+
+\section{RQ1: đại lượng được ghi sổ có phản ánh quyết định?}
+\label{muc:quytrach}
+
+\subsection{Tỉ số trung tâm và cách đọc}
+
+Câu hỏi ở đây là phần khác biệt giữa phương án mới với tuyến giữ nguyên lớn bao nhiêu so
+với biến động khách nhìn thấy. Bảng~\ref{bang:quytrach} tổng hợp theo khách đã được nhận,
+cộng hai tọa độ đón và trả khi còn mở, trên toàn 20 ô mỗi nhánh. Đơn vị của các tổng là
+giây; giá trị bảng đã làm tròn từ mili giây nguyên.
+
+\begin{table}[htbp]
+\centering
+\caption{Các tổng biến động của B1 và C1 trên panel H6}
+\label{bang:quytrach}
+\begin{tabularx}{\linewidth}{@{}Xrr@{}}
+\toprule
+\textbf{Đại lượng} & \textbf{B1} & \textbf{C1}\\
+\midrule
+Yêu cầu hoàn tất & 1.735 & 1.581\\
+Tỉ lệ phục vụ (\%) & 80,32 & 73,19\\
+Số lần công bố lời hứa & 54.311 & 45.542\\
+Tổng biến động nhìn thấy (s) & 83.587,440 & 9.332,101\\
+Tổng phần do quyết định (s) & 74.443,002 & 128,020\\
+Tổng phần thay đổi khi giữ tuyến (s) & 9.202,610 & 9.204,481\\
+Tỉ số tổng do quyết định / tổng nhìn thấy (\%) & 89,06 & 1,37\\
+Khách có phần do quyết định khác không & 403 & 11\\
+Tổng độ dời hành vi lớn nhất theo khách (s) & 840,910 & 27,588\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Tỉ số 89,06\% được tính bằng $74.443{,}002/83.587{,}440$. Nó cho thấy trong thiết lập
+B1, tổng phần do quyết định gần bằng chín phần mười tổng biến động nhìn thấy. Đây là tỉ
+số giữa hai tổng, \emph{không} phải 89,06\% tác động nhân quả của chính sách, và không
+bảo đảm mỗi khách đều có tỉ số đó. Do có triệt tiêu dấu, tổng do quyết định cộng tổng giữ
+tuyến không đúng bằng tổng nhìn thấy.
+
+Dưới C1, tổng phần do quyết định còn 128,020 giây, trong khi phần giữ tuyến vẫn khoảng
+9.204 giây. Tỉ số xuống 1,37\% cho thấy trần đã làm biến động còn lại chủ yếu nằm ngoài
+phần bị tính phí. Nó cũng chỉ ra giới hạn thực dụng: giảm mạnh sổ hành vi không làm giờ
+hẹn trên ứng dụng hoàn toàn bất động.
+
+Hai tổng giữ tuyến của B1/C1 gần bằng nhau không tạo thành một ``nhóm chứng tự nhiên''
+chứng minh nhân quả. Tuyến đã chọn có thể tác động tiến độ xe và số lần công bố. Trên
+những cấu hình khác, tổng này cũng thay đổi. Điểm được kiểm ở đây là cách hạch toán và
+phản ứng của các đại lượng trong panel, không phải tính độc lập của một nhiễu ngoại sinh.
+
+\subsection{Biến động tập trung và tính không cộng của trị tuyệt đối}
+
+Ở B1, 403/1.735 khách, tức 23,2\%, có phần do quyết định khác không. Khách có tổng độ
+dời hai tọa độ lớn nhất đạt 840,910 giây. Đây là gần 14 phút \emph{tổng dịch chuyển lời
+hứa}, không phải 14 phút trễ đến nơi hay chờ thêm: cộng hai tọa độ và nhiều lần sửa có
+thể tính cùng một thay đổi ở nhiều thời điểm. Dưới C1, chỉ 11/1.581 khách có độ dời hành
+vi khác không. Trần theo từng khách bảo vệ trường hợp lớn nhất mà một trung bình toàn
+đội có thể làm mờ.
+
+Kiểm riêng tọa độ giờ trả làm rõ vì sao cần bất đẳng thức. Ở B1, trong 54.311 lần công
+bố, 228 lần có $A+d>B$; ở C1 có 3/45.542 lần. Trong 476 lần của B1 mà cả $A$ và $d$
+đều khác không, dấu bằng hỏng ở 228 lần, tức 47,9\%. Vì vậy tỉ lệ dấu bằng đúng trên
+mọi lần công bố rất cao phần lớn do một thành phần bằng không, không phải một kiểm
+chứng mạnh cho đẳng thức phân rã.
+
+Những phép kiểm dấu bằng không kiểm trực tiếp giả thiết (H), $A\le B$, của Định
+lý~\ref{dl:tapcon}; dấu bằng hỏng chưa tự động có nghĩa $A>B$. Hơn nữa, bản ghi chỉ
+chứa phương án đã chọn, trong khi (H) cần đúng trên mọi quỹ đạo được so. Không được
+coi tỉ lệ dấu bằng cao là bằng chứng đã thỏa giả thiết đó. Quan hệ bao hàm có điều
+kiện chỉ là công cụ hiểu mô hình; so số khách của các nhánh vẫn cần dữ liệu riêng.
+
+\subsection{Phát biểu được hỗ trợ}
+
+RQ1 có hai câu trả lời tách biệt. Về cài đặt, các mốc trước, giữ tuyến và đề xuất cho phép
+tái tính phần được ghi sổ ở thời điểm quyết định. Về quan sát, gói C1 giảm mạnh phần này
+trên cùng panel. Không có dữ liệu hài lòng, hành vi hủy hoặc lựa chọn người dùng để kết
+luận rằng mức giảm đó cải thiện trải nghiệm một lượng xác định. Vì thế ``giảm biến động
+hành vi'' là kết quả kỹ thuật, còn lợi ích người dùng là câu hỏi chưa được đo.
+
+\section{RQ2: giá dịch vụ của gói cam kết và của trần}
+
+
+\subsection{Gói chính và tiêu chí H6}
+
+H6 là phép so chính được niêm phong, với yêu cầu đồng thời về giảm gánh sửa lời hứa và
+giữ chi phí dịch vụ trong mức đã đặt. B1 hoàn tất 1.735/2.160 yêu cầu; C1 hoàn tất
+1.581/2.160. Chênh 154 yêu cầu tương ứng $154/2.160\times100=7{,}13$ điểm phần trăm.
+Đây là chi phí có thật, không phải phần trăm giảm tương đối so với B1.
+
+Tiêu chí dịch vụ của H6 chỉ cho phép mất tối đa 1 điểm phần trăm. C1 không đạt tiêu chí
+đó, dù phần kiểm ngân sách và giảm gánh sửa lời hứa đạt. Vì giả thuyết chính cần cả hai,
+khóa luận ghi nhận \emph{kết quả âm đối với tiêu chí tổng hợp H6}. Việc bổ sung kết quả
+thăm dò về sau không làm tiêu chí cũ trở thành đạt. Các đợt chỉnh adapter và chạy lại đã
+giữ các số phục vụ trung tâm; không có bằng chứng chi phí 7,13 điểm đã biến mất.
+
+Không thể quy 7,13 điểm riêng cho trần giờ trả 30 giây. Gói C1 còn gồm khóa xác nhận.
+Trong các cấu hình được đo, nhánh không trần cộng dồn nhưng còn khóa xác nhận hoàn tất
+1.655 yêu cầu, mất 3,70 điểm so B1. Vì nhánh này vẫn khóa giờ đón, kết quả không chứng
+minh ``chỉ khóa danh tính đã tốn hơn nửa chi phí trước khi hứa về thời gian''.
+
+\subsection{Thang ngân sách với các khóa được giữ}
+
+Bảng~\ref{bang:thang1} giữ số chính xác để đọc giá ở mỗi mức. Phần do quyết định cộng
+cả giờ đón và trả; với các khóa giờ đón của thang này, biến động chủ yếu nằm ở giờ trả.
+Cột trần không áp cho B1; không được đọc giá trị lớn nhất của B1 như một vi phạm ngân
+sách chưa được cấu hình.
+
+\begin{table}[htbp]
+\centering
+\caption{Thang ngân sách hành vi, cửa sổ đón 600 giây, 20 ô}
+\label{bang:thang1}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Cấu hình} & \textbf{Hoàn tất} & \textbf{Mất so B1 (pp)} & \textbf{Tổng hành vi (s)} & \textbf{Lớn nhất (s)}\\
+\midrule
+B1 & 1.735 & 0,00 & 74.443,0 & 840,9\\
+Khóa, không trần & 1.655 & 3,70 & 22.485,2 & 595,3\\
+300 s & 1.641 & 4,35 & 15.808,8 & 290,8\\
+120 s & 1.608 & 5,88 & 5.063,3 & 119,0\\
+60 s & 1.579 & 7,22 & 1.108,8 & 59,0\\
+30 s (C1) & 1.581 & 7,13 & 128,0 & 27,6\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Các mức có trần đều giữ giá trị lớn nhất theo khách dưới trần: 290,845/300;
+118,958/120; 58,981/60 và 27,588/30 giây. Đây là đối chiếu trực tiếp của sổ cái trong
+những lần chạy bình thường được xét. Từ không trần xuống 300 giây, số hoàn tất giảm
+14; từ 300 xuống 120 giảm 33; từ 120 xuống 60 giảm 29. Mỗi bước mua thêm giới hạn cho
+khách chịu biến động lớn nhất, nhưng giá dịch vụ không tuyến tính theo số giây của trần.
+
+Trần 30 giây hoàn tất nhiều hơn 60 giây đúng hai khách. So từng ô, có khác biệt theo cả
+hai chiều; tám trong 20 ô không theo thứ tự đơn điệu của mức trần. Đây là độ nhạy quỹ
+đạo của bộ chọn cận thị trên đầu vào cố định. Không có cơ sở đặt một ``sàn nhiễu''
+$\pm0{,}3$ điểm phần trăm rồi gọi những bước dưới sàn là thuần nhiễu. Chênh hai khách
+nhỏ và không hỗ trợ một ưu thế dịch vụ có thể khái quát cho trần 30 giây.
+
+\subsection{Cửa sổ rộng hơn có làm cam kết rẻ hơn?}
+
+
+
+Phép kiểm bổ sung nới cửa sổ đón từ 600 lên 900 giây, giữ cùng panel. Cửa sổ rộng hơn
+làm B1 hoàn tất 1.938 yêu cầu thay vì 1.735; C1 đạt 1.753 thay vì 1.581. Dịch vụ tăng
+ở cả hai, nhưng khoảng cách tăng từ 154 lên 185 yêu cầu, tức từ 7,13 lên 8,56 điểm phần
+trăm. Nới cửa sổ không làm giá của gói cam kết co lại trong phép kiểm này.
+
+Hình~\ref{hinh:ngansach} so toàn thang trần bằng mức mất so với B1 \emph{của từng cửa
+sổ}. Cách chuẩn hóa này tránh lẫn tăng dịch vụ do cửa sổ với tăng chi phí tương đối của
+gói. Ở cả năm mức, khoảng cách so B1 của cửa sổ 900 giây lớn hơn của cửa sổ 600 giây.
+Chênh khoảng cách ở trần 300 giây là 0,42 điểm; ở trần 30 giây là 1,44 điểm.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{hinh/service_budget_final.pdf}
+\caption{Chi phí dịch vụ theo trần hành vi, so với B1 của từng cửa sổ đón. Mỗi điểm gộp
+2.160 yêu cầu của cùng 20 ô; đường chỉ nối các cấu hình, không là hàm khớp hay khoảng bất
+định. Điểm không trần vẫn giữ gói khóa xác nhận.}
+\label{hinh:ngansach}
+\end{figure}
+
+Quan sát này phù hợp với khả năng cửa sổ rộng tạo thêm lựa chọn mà trần chặt không cho
+khai thác. Tuy nhiên, hai mức cửa sổ chưa chứng minh một quy luật rằng mọi loại tự do
+đội xe đều làm lời hứa đắt hơn. Tăng số xe, đổi mật độ nhu cầu hoặc cho tái gán có thể
+tác động khác. Kết quả được giữ như độ nhạy theo cửa sổ, không nâng thành định luật
+chung của các hệ điều phối.
+
+Nới cửa sổ cũng thay chất lượng dịch vụ của người được nhận. Ở cấu hình C1, thời gian
+chờ trung vị tăng từ 407 lên 636 giây trong phân tích bổ sung. Vì vậy tăng số khách
+hoàn tất không đủ để gọi cấu hình 900 giây tốt hơn. Khóa luận không quy tổng độ dời
+lời hứa thành tiền hay phúc lợi, vì chưa có hệ số định giá đúng đại lượng và quần thể
+đang xét.
+
+\subsection{Cách trả lời RQ2}
+
+Trên panel chính, gói C1 mua được một trần hành vi kiểm được và giảm mạnh tổng biến
+động do quyết định, với chi phí 7,13 điểm phần trăm dịch vụ. Đây là một đánh đổi, đồng
+thời là thất bại đối với mức chi phí H6 đã đặt. Thang ngân sách giúp chọn một điểm
+vận hành theo ưu tiên cụ thể; không có một mức trần tốt nhất cho mọi nhu cầu.
+
+Giá của trần phải được tách khỏi giá của các khóa đi kèm. Việc chọn trần cũng cần xét
+cửa sổ dịch vụ và biến động nhìn thấy. Chỉ đặt một trần nhỏ rồi báo số chuyến giảm
+không đủ để kết luận khách sẽ hài lòng hơn hoặc người vận hành nên chấp nhận chi phí
+đó. Những quyết định này cần dữ liệu người dùng và điều kiện vận hành chưa có trong
+khóa luận.

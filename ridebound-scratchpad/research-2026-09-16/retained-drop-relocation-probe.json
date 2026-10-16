@@ -1,0 +1,278 @@
+{
+  "kind": "single-incumbent-drop-relocation-same-state-original-E1-validator-audit",
+  "limitation": "No closed-loop or exact FleetPy locked-leg claim; generic local search is prior art",
+  "rows": [
+    {
+      "epoch": 20,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 174,
+      "screenRemoved": 104,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 54,
+        "physical:PRECEDENCE": 12,
+        "physical:MAX_RIDE_TIME": 4
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 6.9691,
+      "inputStateSha256": "9fd92358730bd2f7a9f76ba80ed855ac66282a58484950ce0ac1f250ec2607fb"
+    },
+    {
+      "epoch": 275,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 168,
+      "screenRemoved": 117,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:MAX_RIDE_TIME": 5,
+        "physical:PICKUP_WINDOW": 40,
+        "physical:PRECEDENCE": 6
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 7.8504,
+      "inputStateSha256": "7a2c9323fd7cbe48212c8e7908a631b2d8d228c6ee33b30b62fe79967a7b796a"
+    },
+    {
+      "epoch": 304,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 190,
+      "screenRemoved": 125,
+      "physicalPass": 1,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 27,
+        "commitment:COMMITMENT_BUDGET_EXCEEDED": 1,
+        "physical:MAX_RIDE_TIME": 27,
+        "physical:PRECEDENCE": 10
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 13.9323,
+      "inputStateSha256": "9994cce975ecb05341e9322383c4d02f306f2a4a556afc97829f864000511ada"
+    },
+    {
+      "epoch": 321,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 114,
+      "screenRemoved": 85,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 9,
+        "physical:MAX_RIDE_TIME": 20
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 4.1134,
+      "inputStateSha256": "a764e13f76c2e06f1ce6ee012fa0ccc9d7bcf968d3eec1a12a2b5695fbb644ce"
+    },
+    {
+      "epoch": 334,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 49,
+      "screenRemoved": 37,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 8,
+        "physical:MAX_RIDE_TIME": 4
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 1.0933,
+      "inputStateSha256": "43311e3d4f08e9fedce0dc32029f7a7138a754b7e790bfc5d49dce2e2e4653d2"
+    },
+    {
+      "epoch": 373,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 236,
+      "screenRemoved": 153,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 29,
+        "physical:MAX_RIDE_TIME": 26,
+        "physical:PRECEDENCE": 28
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 6.4052,
+      "inputStateSha256": "1153e57af9ba32c5497bbac94d57c19b29ec9a94425a12a692fdd67810a85ced"
+    },
+    {
+      "epoch": 374,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 236,
+      "screenRemoved": 153,
+      "physicalPass": 1,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 39,
+        "physical:MAX_RIDE_TIME": 15,
+        "physical:PRECEDENCE": 28,
+        "commitment:COMMITMENT_BUDGET_EXCEEDED": 1
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 8.7264,
+      "inputStateSha256": "c67305a320d38ed9ca29dd8c7bda73e02ec24fc247487d1dd4a630da2c7ad308"
+    },
+    {
+      "epoch": 378,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 234,
+      "screenRemoved": 151,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 44,
+        "physical:MAX_RIDE_TIME": 14,
+        "physical:PRECEDENCE": 25
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 7.2857,
+      "inputStateSha256": "2210e355973692821cadb063ecddb955d810053d1aba015f0e88298fe2697d8e"
+    },
+    {
+      "epoch": 388,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 139,
+      "screenRemoved": 109,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 13,
+        "physical:MAX_RIDE_TIME": 8,
+        "physical:PRECEDENCE": 9
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 3.4098,
+      "inputStateSha256": "8d9212178f0d8cffa14025dcc481c72fbc7885d13a613b5e308fb7e2abcbfc83"
+    },
+    {
+      "epoch": 394,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 112,
+      "screenRemoved": 83,
+      "physicalPass": 1,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 19,
+        "physical:MAX_RIDE_TIME": 3,
+        "commitment:COMMITMENT_BUDGET_EXCEEDED": 1,
+        "physical:PRECEDENCE": 6
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 3.3735,
+      "inputStateSha256": "426ec39613cfd5cc990577a9cd17e670272d215bc9619a209c2e201cf838cc34"
+    },
+    {
+      "epoch": 406,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 67,
+      "screenRemoved": 49,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 16,
+        "physical:MAX_RIDE_TIME": 2
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 2.0321,
+      "inputStateSha256": "8d6d56adb693a82c50799967c176e788db8ac7a56d06bb4bc9bf43b15c939769"
+    },
+    {
+      "epoch": 457,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 143,
+      "screenRemoved": 107,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 16,
+        "physical:MAX_RIDE_TIME": 8,
+        "physical:PRECEDENCE": 12
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 3.9725,
+      "inputStateSha256": "a988be9fcc8765cad179dd99367b3e837e92deec01359b8f707d77319b9e4806"
+    },
+    {
+      "epoch": 458,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 143,
+      "screenRemoved": 107,
+      "physicalPass": 1,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 16,
+        "physical:MAX_RIDE_TIME": 7,
+        "commitment:COMMITMENT_PHASE_LOCK": 1,
+        "physical:PRECEDENCE": 12
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 5.5625,
+      "inputStateSha256": "102d252a999dc403118f39c1716fc52db330e44a1e5f9e579ec0d507059dac83"
+    },
+    {
+      "epoch": 459,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 143,
+      "screenRemoved": 109,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 18,
+        "physical:MAX_RIDE_TIME": 4,
+        "physical:PRECEDENCE": 12
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 4.7298,
+      "inputStateSha256": "17a3032c61b440a4853ca0867d3e7e41e1704a80f97bf233a509149d3660c1d5"
+    },
+    {
+      "epoch": 460,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 143,
+      "screenRemoved": 107,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 20,
+        "physical:MAX_RIDE_TIME": 4,
+        "physical:PRECEDENCE": 12
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 3.6517,
+      "inputStateSha256": "01db74f2a1f7aed0041ab56e75cd7b12e6e866b5a9730bace34f408ca1101ec8"
+    },
+    {
+      "epoch": 673,
+      "baselineAccept": 0,
+      "controlAccept": 0,
+      "total": 172,
+      "screenRemoved": 129,
+      "physicalPass": 0,
+      "firstWitnessCounts": {
+        "physical:PICKUP_WINDOW": 34,
+        "physical:PRECEDENCE": 9
+      },
+      "validCount": 0,
+      "valid": [],
+      "elapsedMs": 8.8335,
+      "inputStateSha256": "4798e2959add05de673cb23d774e9c0b4b5def4783bc152571df21764f6a4060"
+    }
+  ]
+}

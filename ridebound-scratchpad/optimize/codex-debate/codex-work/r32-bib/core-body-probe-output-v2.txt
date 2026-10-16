@@ -1,0 +1,223 @@
+A. Elmi et al.                                                                                                Transportation Research Part C 192 (2026) 105897
+
+2.1. Preliminaries
+
+2.1.1. Definitions and concepts
+    Let us define ( , ) as the directed graph representing the urban network, which we assume is strongly connected. Each arc has
+
+a constant travelling time, and (, ) represents the time it takes for the vehicle to move from node  to node  following the shortest
+path3. We define  as the set of trip requests (or passengers, as we use `passenger' and `request' interchangeably in this paper) and
+ as the set of vehicles. Each request    is a 4-tuple, defined by its request time (), origin (), destination (), and number
+of people involved . Note that a single request can include more than one person, but they all have to share the same origin and
+destination, and they need to be assigned to the same vehicle. In other words, they can be treated as a single passenger who occupies
+extra seats. Furthermore, for each request , a direct travel time  = (, ) is calculated, representing the time it takes to travel
+from the origin to the destination following the shortest path, as if the passenger were using a personal vehicle. Finally, each vehicle
+   has a maximum number of seats, referred to as its capacity .
+
+2.1.2. Travel-time components
+    When a passenger uses a ridepooling system, there are several definitions indicating different components of the passenger's
+
+journey:
+
+ � Pick-up Time (  ), which is the moment the passenger is picked up at their origin .
+ � Drop-off Time (), which is the moment the passenger is dropped off at their destination .
+ � Waiting Time (), which is the time that the passenger has to wait until they are picked up at their origin, i.e.,  =   - .
+ � In-vehicle Time (), which is the total time the passenger spends in the vehicle to reach their destination, i.e.,  =  -   .
+ � Detour Time ( ), which is the time that the passenger spends onboard while the vehicle deviates from the direct route to serve
+
+    other assigned passengers, i.e.,  =  - .
+ � Delay Time (), which is the sum of the waiting time and the detour time and indicates the total additional travel time compared
+
+    to the direct travel time, i.e.,  =  +  .
+
+    Given these, a maximum tolerable waiting time () and a maximum tolerable delay time () are defined for each request  to
+ensure user satisfaction.
+
+2.1.3. Unreliability in travel time
+    As it was discussed in the example of Fig. 2, when a passenger is assigned to a vehicle, their components of travel time might get
+
+updated throughout the trip due to the insertion of new requests. Therefore, to study the unreliability of the travel time components,
+we define the initial values of the components at the moment of assignment by  ,  ,  , which can be different from the actual
+experienced values defined in Section 2.1.2. The other three components can also be defined similarly, but we use these three as the
+main ones to study unreliability. Unreliability, defined as an increase in the value of any component of travel time, is computed by
+Eq. (1).
+
+          =  -  ,  =  -  ,  =  -  (1)
+    If  > 0 (for  = , , ), then passenger  has experienced an increase in their travel time, i.e., unreliability. This is because
+the passenger accepts the ride with full knowledge of the initial travel time. What remains unknown-and thus unreliable from the
+passenger's perspective-is subsequent updates to this delay. It is worth mentioning that a passenger can experience several changes
+throughout a single trip, each of which holds a unique value, but Eq. (1) is the result of all changes, i.e., the final values at the
+moment of drop off.
+
+2.1.4. Residual slack after initial assignment
+    We have defined the type of unreliability this study aims to address, and we now identify another trip characteristic that enables
+
+such unreliability to occur. It is quite likely that, at the time of the assignment of a passenger to a vehicle, the initial values of
+travel-time components do not fully utilise the maximum waiting time and maximum delay time. Therefore, the remaining capac-
+ity of maximum waiting/delay time can be used for future matching with new passengers. We refer to this remaining capacity as
+residual slack after initial assignment, defined as the difference between the maximum waiting/delay time and the initial value
+of waiting/delay time. For simplicity, we refer to this quantity as slack in the remainder of the paper. Slack is the source that allows
+future changes, i.e., unreliability in travel time, and is defined by Eq. (2).
+
+Waiting Slack =  =  -  ,  Delay Slack =  =  -                                                                 (2)
+
+    The concept of slack is illustrated in Fig. 4. In this example, passenger A requests a ride and, after the initial assignment, is expected
+to experience 2 min of waiting time and 2 min of detour time due to serving the onboard passenger B. This results in an initial delay
+of 4 min, leaving out 6 min of delay slack. If another passenger, such as passenger C, is to be matched with passenger A, the feasibility
+of this match depends on whether the extra time the vehicle needs to pick up and drop off passenger C is less than 6 min, i.e., can
+be accommodated within this available delay slack. It should be noted that similar reasoning applies to the waiting slack and the
+maximum waiting time, where we only consider the first detour to pick up the new passenger, as the second detour to drop off the
+new passenger is after the waiting phase.
+
+3 If there are two or more shortest paths between  and , we select one arbitrarily
+                                                                                                           5
+
+A. Elmi et al.                                               Transportation Research Part C 192 (2026) 105897
+
+equation to compute the time-integrated shareability score.
+                
+ =                    ()                                     (11)
+
+                 ( )
+
+    Here,  () is the set of times at which the vehicle is scheduled to visit nodes in the current itinerary  of vehicle  to serve target
+passenger . The nodes in the itinerary start from the current position of the vehicle at the time of assignment, include all main or
+intermediate nodes between, and end at the drop-off node of the target passenger. Considering  as the visit time of the node , 
+is the time it takes for a vehicle to travel from the previous node to that node. This is the time interval during which the appearing
+potential passengers are predicted in the instantaneous shareability shadow constructed when visiting node .
+
+    Based on the shareability score equation, we calculate two finer-grained scores:
+
+� Waiting Shareability Score  . This score is computed using Eq. (11) when the set  ((), ) is constrained to include only
+   the zones (either origin or destination) that would be visited before the origin node of the target passenger. This score positively
+
+   correlates with the chance of emergence of the potential passenger such that the waiting time of the target passenger is impacted.
+� Detour Shareability Score  . This score is computed using Eq. (11) when the set  ((), ) is constrained to include only
+
+   the zones (either origin or destination) that would be visited after the origin node and before the destination node of the target
+
+   passenger. This score positively correlates with the chance of emergence of the potential passenger such that the detour time of
+
+   the target passenger is impacted.
+
+    It is worth mentioning that if some nodes of a zone are visited before the origin/destination node of the target passenger and some
+are visited after, then the zone is temporarily split into two subzones for the purpose of the calculation.
+
+2.4. Utilisation of the shareability score
+
+    We now know how to compute shareability score  for every passenger at the moment they are assigned. In what follows, we
+propose two methods to utilise the shareability score in order to favour the reliability of the system. If we are to reduce unreliability
+using shareability scores, we first need to define a metric by which we study the unreliability. The primary metric to study unreliability
+is whether each passenger did or did not face any changes at all, and calculate the percentage of passengers who faced a change
+throughout their trip. This is because users primarily value trips without any unexpected changes, as this ensures a reliable estimated
+time of arrival. Therefore, the first change is a key aspect in the study of unreliability (DfT, 2021; Concas and Kolpakov, 2009).
+Accordingly, throughout this paper, we focus on the first change, as it enables a clear distinction between reliable and unreliable
+trips.
+
+2.4.1. Slack management
+    The primary usage of the shareability score is to directly reduce the unreliability of the system, without significantly affecting its
+
+efficiency. As discussed in Section 2.1.4, the main source of unreliability is the slack that exists for each passenger after the initial
+assignment. Therefore, slack management is the key to controlling unreliability. Having passengers with a zero value of slack would
+ensure that those passengers would not face a change (the primary metric of unreliability in this paper) because it will not allow
+additional travel time, but this would be at the cost of increased rejection rate (the primary metric of inefficiency in this paper), as
+explained and shown in Fig. 3 and Fielbaum and Alonso-Mora (2020). This means that there is a trade-off between the unreliability
+and the inefficiency of ridepooling systems. Therefore, we must attempt to reduce unreliability while also not increasing inefficiency.
+In other words, reliability and efficiency are two conflicting objectives in ridepooling systems, and we should aim to take both of
+them into account when we try to improve one of them.
+
+    To study the trade-off between unreliability and inefficiency, we construct policy curves using two different slack management
+policies. Each curve is generated by varying the level of unreliability management within a given policy, resulting in different opera-
+tional rules and different points along the curve. In the first policy, which acts as our benchmark, the trade-off between unreliability
+and rejection rate is explored by directly manipulating the slack uniformly across passengers; in the second, we use the shareability
+score to manage slack in a more targeted way. Specifically:
+
+ � Ordinary Control. In this model, we do not use the shareability scores. The ordinary control curve in this scenario is created
+    by allocating the same percentage of the slack value to all passengers, and changing the percentage from 0% to 100% to induce
+    different conditions, i.e., different points on the curve. The smaller the slack, the greater the reliability but the lower the efficiency.
+    This will be used as a benchmark to study the benefits of our model. It is worth mentioning that this benchmark is also related
+    to how previous papers studied unreliability. In particular, previous studies have addressed unreliability by applying uniform
+    controls across all passengers. For example, Fielbaum and Alonso-Mora (2020) directly prohibit further changes for all passengers
+    to eliminate unreliability, while analytical approaches such as Daganzo et al. (2020) and Wang et al. (2021) adjust system-wide
+    constraints (e.g., maximum delay or detour) to study their impact on matching rates.
+
+ � Shadow Control. This policy leverages the shareability scores. In this scenario, passengers with low shareability scores are given
+    0% of their slack values, and passengers with high shareability scores are allowed to use 100% of their slack values. The different
+    points on the shadow control curve are obtained via the threshold that distinguishes between high and low shareability scores. This
+    is done by sorting the passengers in ascending order based on their shareability scores, and marking the first % of passengers as
+    low probability, with  varying from 0% to 100%. In this context, the threshold is defined in a percentile-based (relative) manner.
+
+                                                                                                            12
+A. Elmi et al.  Transportation Research Part C 192 (2026) 105897
+
+    It is worth mentioning that drastic slack management in the shadow policy (allocating either 0% or 100% of the slack) is due
+to the fact that, from the user's perspective, the occurrence of the first increase in the travel time is more irritating and frustrating
+than the value of that increase, and also than the occurrence or value of subsequent increases (DfT, 2021; Concas and Kolpakov,
+2009). Therefore, by setting the slack to zero, we prevent low-score passengers from facing any changes. We remark that this method
+provides an additional benefit not captured in the shadow control curve: passengers deemed as low probability ones are given a
+guarantee of a fully reliable trip at the time of their request, because of their zero slack.
+
+    In an alternative approach, instead of computing the time-integrated shareability score only at the moment of assignment for
+the entire trip, one could update the score by recomputing it at intermediate points during the trip, considering only the remaining
+trajectory from that point until the drop-off. This would allow for a more refined and continuous slack management, where decisions
+are updated based on the evolving system state. However, such an approach would not align with the objective of this work, which
+is to determine the passenger's level of unreliability at the moment of assignment. In particular, updating the score during the trip
+would imply that the passenger may be exposed to unreliability before the adjustment takes place, and would also make the assigned
+level of reliability subject to change over time11. For these reasons, we compute the score once at the moment of assignment and use
+it for the entire trip.
+
+    Furthermore, the choice of assigning zero slack to low-shareability passengers and full slack to high-shareability passengers is
+driven by the asymmetric impact on system efficiency. Setting the slack to zero removes future pooling opportunities for a passenger,
+and the resulting efficiency loss depends on how likely that passenger is to be matched with future requests. For low-shareability
+passengers, this loss is limited, as their pooling potential is already low. In contrast, high-shareability passengers have a much greater
+potential for future matches, and restricting their slack would eliminate a significant number of feasible pooling opportunities, leading
+to a substantial reduction in efficiency. Therefore, the proposed policy targets slack reduction where it has minimal impact on
+efficiency, while preserving flexibility where it is most valuable.
+
+    The proposed approach can be naturally extended to subsequent changes along a passenger's trip. Specifically, while in this work
+we adjust the slack immediately after the initial assignment to control the occurrence of the first change, a similar mechanism could
+be applied after the first change to control the second change, and so on. However, we focus on the first change as it allows us to
+clearly distinguish between fully reliable and unreliable trips. By preventing the first increase in travel time for low-score passengers,
+we are able to provide a guarantee of a fixed travel time at the time of assignment. Such a guarantee would not be possible if even a
+single change were allowed, as passengers would still face uncertainty regarding whether their travel time may increase.
+
+2.4.2. Informing passengers
+    This approach considers a setting in which no operational constraints, such as slack, are modified. Its purpose is to explore
+
+an alternative way of addressing unreliability, where passengers are informed about the uncertainty of their travel time rather than
+controlling it through system decisions. In this setting, all passengers remain eligible for future insertions and may experience updates
+to their travel time. As a result, system efficiency is fully preserved while reliability is addressed through information provision. We
+assume that providing this information does not induce behavioural responses, such as passengers reconsidering their trips.
+
+    To support this objective, the shareability score is used in a different way compared to the slack management approach. Instead
+of restricting passengers, the score is used to distinguish between those with higher and lower likelihood of experiencing a change
+in travel time, and this information is communicated to them. The passengers classification is similar to Section 2.4.1 but requires a
+different implementation: while slack management relies on a static, exogenous threshold to separate low- and high-score passengers-
+where the threshold is varied across simulations to generate the policy curves-the informing passengers strategy uses a dynamic,
+endogenous threshold that is optimised and updated during the simulation based on recent prediction performance. This ensures
+that the classification remains meaningful for informing passengers, as the goal is not to control system behaviour but to provide
+accurate and relevant information. In this case, the threshold is defined as an absolute (value-based) cutoff on the shareability score,
+as opposed to the percentile-based (relative) threshold used in Section 2.4.1.
+
+    In particular, after the calculation of the shareability score at the time of assignment, we categorise the passenger into one of the
+following two groups based on their shareability score: low probability or high probability. This is done by comparing the shareability
+score with an endogenous dynamic threshold explained below. If the score is lower than the threshold, the passenger is labelled as
+low probability; if it is higher than the threshold, the passenger has high probability.
+
+    However, since demand is inherently stochastic, a fixed threshold is not sufficient to maintain reliable predictions under varying
+demand patterns. Therefore, the threshold is optimised and updated over time to adapt to these changes. Once passengers are cate-
+gorised, the system is executed-without modifying the assignment algorithm (i.e., without adjusting the slack)- to reveal their actual
+trip experiences. Then, the predicted information given to users is compared against their actual experience to assess the accuracy of
+the prediction. Based on the predicted probability of facing a change and the actual experience of the trip, each passenger can have
+four different prediction outcomes:
+
+ � True Positive is when the passenger is predicted as high probability, and they actually faced a change in their trip.
+ � True Negative is when the passenger is predicted as low probability, and they actually did not face a change in their trip.
+
+ 11 For example, if a passenger is initially classified as high-score and later reclassified as low-score, then the portion of the trip before the adjustment
+remains exposed to unreliability. Conversely, if a passenger is initially classified as low-score and later reclassified as high-score, not only does the
+remaining portion of the trip become unreliable, but the initial segment also loses its perceived reliability, as the passenger may anticipate further
+adjustments to their slack.
+
+                                                                                                            13
+

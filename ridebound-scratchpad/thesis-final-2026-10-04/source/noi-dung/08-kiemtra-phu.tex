@@ -1,0 +1,156 @@
+\section{Kiểm tra bổ sung và giới hạn triển khai}
+\label{muc:kiemtraphu}
+
+Các phép kiểm trong mục này trả lời ba phản biện đối với kết quả chính: giảm dịch chuyển
+có phụ thuộc cách đo hay không, các cơ chế bảo vệ có thực sự khác nhau trên bộ sinh đang
+dùng hay không, và chi phí phục vụ có phải do giới hạn tìm kiếm. Đây là các phân tích bổ
+sung trên những lần chạy đã có. Chúng không thay thế phép so sánh chính và không mở rộng
+phạm vi kết luận sang hệ điều phối khác.
+
+\subsection{Kết quả phụ thuộc đại lượng được đo}
+
+
+Phân tích ban đầu dùng chín đại lượng mô tả: tổng tuyến tính, tổng bậc hai, hai tổng có
+trọng số theo thời gian còn lại, số lần dời, cực đại và hai phân vị của gánh nặng mỗi khách,
+cùng số khách bị dời. Bảng~\ref{bang:kiemtra-thuocdo} giữ bốn đại lượng có ý nghĩa trực
+tiếp. Tổng và cực đại trong bảng cộng hai chiều giờ đón và giờ trả; chúng không phải riêng
+sổ cái giờ trả được chặn ở trần 30 giây. ``Một lần dời'' là một lần công bố có tổng phần
+dịch chuyển do quyết định lớn hơn không, còn ``khách bị dời'' đếm định danh khách riêng biệt.
+
+\begin{table}[htbp]
+\centering
+\caption{Bốn đại lượng mô tả dịch chuyển do quyết định trên cùng tập 20 ô.
+Hai cột thời gian có đơn vị giây; ngân sách trong tên cấu hình chỉ áp cho giờ trả.}
+\label{bang:kiemtra-thuocdo}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Cấu hình} & \textbf{Tổng} & \textbf{Cực đại/khách} & \textbf{Lần dời} & \textbf{Khách bị dời}\\
+\midrule
+B1 & 74.443 & 840{,}9 & 479 & 403\\
+Không trần giờ trả & 22.485 & 595{,}3 & 155 & 142\\
+Trần 300 s & 15.809 & 290{,}8 & 135 & 128\\
+Trần 120 s & 5.063 & 119{,}0 & 79 & 76\\
+Trần 60 s & 1.109 & 59{,}0 & 34 & 34\\
+C1, trần 30 s & 128 & 27{,}6 & 11 & 11\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Bốn đại lượng đều giảm theo thứ tự cấu hình được trình bày; các đại lượng bổ sung trong
+phân tích chín thước đo cho cùng hướng trên tập ô này. Tuy nhiên, độ lớn của thay đổi phụ
+thuộc câu hỏi: tổng dịch chuyển, số lần dời và mức một khách chịu không thể dùng thay cho
+nhau. Kết quả này chỉ mô tả thứ hạng tổng hợp trên sáu cấu hình, không chứng minh thứ hạng
+ở mọi ô, mọi định nghĩa bất ổn hay mọi dữ liệu. Đặc biệt, tính đơn điệu của các tổng dịch
+chuyển không kéo theo tính đơn điệu của số khách phục vụ.
+
+Một khác biệt khác là đo theo hai đầu hay theo cả chuỗi. Phép đối chiếu lấy độ muộn dương
+của giờ trả công bố cuối so với giờ trả công bố đầu, và so với tổng độ lớn các thay đổi
+giữa các lần công bố. Bảng~\ref{bang:kiemtra-hai-dau} cho kết quả trên hai nhánh gốc.
+Đại lượng hai đầu liên quan đến thước đo của Fielbaum và Alonso-Mora
+\cite{fielbaum2020}, nhưng ở đây dùng giờ công bố cuối làm mốc cuối. Nó không thay thế
+việc nối bản ghi với giờ thực hiện khi cần đo độ tin cậy thực tế.
+
+\begin{table}[htbp]
+\centering
+\caption{Độ lệch hai đầu và độ dài chuỗi giờ trả trên cùng dữ liệu, tính bằng giây.
+Hai đại lượng đều tính theo giờ khách thấy, khác với tổng phần do quyết định.}
+\label{bang:kiemtra-hai-dau}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Đại lượng} & \textbf{B1} & \textbf{C1}\\
+\midrule
+Tổng độ muộn dương, công bố cuối so với đầu & 64.814 & 126\\
+Tổng biến động trên chuỗi công bố giờ trả & 71.529 & 6.822\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ở B1, hai tổng gần nhau vì phần dịch chuyển lớn do quyết định chủ yếu làm muộn giờ.
+Ở C1, biến động trên chuỗi vẫn lớn hơn độ lệch hai đầu nhiều lần. Phần chênh gần như
+toàn là thay đổi khi giữ nguyên tuyến, đi theo cả hai chiều và triệt tiêu ở hai đầu;
+bộ sinh không tạo những sửa chữa kéo giờ khách cũ sớm lên. Vì thế không được diễn giải
+bảng thành bằng chứng rằng thước đo hai đầu bỏ sót một lượng lớn hành vi có hại của
+điều phối. Hai cách đo trả lời hai câu hỏi khác nhau; cả hai cần được đọc cùng phép
+phân rã vận hành.
+
+\subsection{Bảo vệ giờ đón phụ thuộc khả năng của bộ sinh}
+
+
+Bảo đảm một chiều cho phép giờ đón tốt lên nhưng cấm xấu đi. Nó là một cơ chế đã có
+trong văn liệu, không phải đóng góp mới của khóa luận. Trong bộ sinh chèn thuần đang
+dùng, thêm điểm dừng không tạo một phương án kéo giờ đón khách cũ sớm hơn mốc giữ tuyến.
+Do đó quyền cải thiện mà bảo đảm một chiều cho phép ít có tác dụng trong thiết lập này.
+
+Phép thử cơ chế này dùng một bộ chạy riêng vì bộ chạy gốc chưa hỗ trợ trường cấu
+hình tương ứng. Hai nhánh đối chứng được chạy trên đủ 20 ô và tái lập kết quả của
+bộ chạy gốc trước khi đọc nhánh mới. Nhánh bảo đảm một chiều và nhánh khóa giờ đón
+đều phục vụ $1.581$ khách, có tổng dịch chuyển do quyết định $128$ giây, $11$ lần
+dời và cực đại $27{,}6$ giây trên một khách. Đây là sự tương đương quan sát được
+trong bộ sinh và cấu hình đã thử, không phải một phép tái lập đầy đủ thuật toán
+của nghiên cứu trước, cũng không phải khẳng định hai cơ chế luôn tương đương.
+
+Hàng rào đóng băng 600 giây cũng cho cùng các kết quả chính với khóa giờ đón.
+Nhưng tầm đặt chỗ của kịch bản chỉ là 600 giây: một hàng rào phủ toàn tầm đặt chỗ
+không có cơ hội mở. Vì vậy phép thử không đánh giá lợi ích của hàng rào dài trên
+yêu cầu đặt trước xa hơn. Các kết quả này cho thấy phải kiểm cả cơ chế bảo vệ và
+khả năng bộ sinh tạo phương án sử dụng phần tự do còn lại.
+
+\subsection{Giới hạn tìm kiếm và các phép thử âm}
+\label{muc:bosinh}
+
+Trong 40 lần chạy của hai nhánh H6 gốc, bằng chứng sinh phương án không ghi nhận
+lần nào cạn ngân sách tìm kiếm, chạm trần ứng viên, bỏ ứng viên khả thi do trần
+hay bỏ nhánh chưa khai triển. Các số không này loại được một giải thích cụ thể:
+chênh lệch chính không đến từ việc một nhánh bị cắt sớm bởi các giới hạn đã cấu
+hình. Chúng không chứng minh tìm kiếm tối ưu trong toàn bộ không gian DARP.
+Tập được xét vẫn do bộ sinh chèn, khóa phân công và các kiểm tra vật lý xác định.
+
+Tập vị trí chèn thực sự khá nhỏ. Nếu chỉ lấy các kỷ nguyên có quyết định nhận
+hoặc từ chối khách, tỉ lệ tập ứng viên của một xe có ít nhất hai vị trí chèn là
+$2{,}48\%$ ở B1 và $2{,}95\%$ ở C1. Phải dùng mẫu số này thay cho mọi kỷ nguyên,
+vì các bước chỉ cập nhật tiến độ xe thường chỉ có phương án giữ tuyến. Không
+chạm trần ứng viên còn có nghĩa việc đổi thứ tự ưu tiên vị trí chèn không làm
+đổi đầu vào bộ giải trong những lần chạy này. Tuy nhiên, điều đó không chứng
+minh cắt tỉa sớm không thể giảm thời gian tính ở một triển khai khác.
+
+Bảng~\ref{bang:kiemtra-am} tóm tắt những can thiệp bổ sung có liên quan đến cách
+đọc kết quả. Chỉ giữ các trường hợp cho biết giới hạn của mô hình hoặc loại
+một giải thích về chi phí phục vụ; không dùng chúng như nhật ký thử nghiệm.
+
+\begin{table}[htbp]
+\centering
+\caption{Các phép thử bổ sung và giới hạn của điều có thể suy ra.}
+\label{bang:kiemtra-am}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{4.1cm}>{\raggedright\arraybackslash}p{7.8cm}@{}}
+\toprule
+\textbf{Can thiệp} & \textbf{Kết quả quan sát} & \textbf{Điều học được và giới hạn}\\
+\midrule
+Ưu tiên vị trí chèn & Không có ứng viên bị bỏ do trần trong tập ô gốc &
+Đổi thứ tự sinh không đổi tập đưa vào bộ giải ở thiết lập này; không kết luận về
+tập ô lớn hoặc có giới hạn tính toán chặt.\\
+Ngưỡng cảnh báo 60 s, trần cứng 120 s & Trùng chuỗi lựa chọn với đối chứng ở 20/20 ô &
+Tầng cảnh báo không đổi quyết định. Bằng chứng hiện có chưa xác định nguyên nhân
+xếp hạng; đây là kết quả âm trong tập ô, không phải chứng minh cơ chế luôn vô hiệu.\\
+Sắp xếp lại trên cùng xe & 18/20 ô gặp \texttt{LOCKED\_LEG\_MISMATCH} &
+Bộ mô phỏng khóa chặng đang chạy khác với thời điểm đóng băng trong mô hình của
+phép thử. Không có phép so hiệu quả hợp lệ cho cả tập ô; không suy ra sắp xếp lại
+là bất khả thi về thuật toán.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Phép thử ngưỡng cảnh báo còn cho một chẩn đoán triển khai đáng giữ: tầng mức sử
+dụng ngân sách tệ nhất nhận cùng giá trị $1.000.000$ ở các quyết định có tầng này,
+do cách xử lý chiều có trần cứng bằng không. Tầng đó luôn hòa trong dữ liệu đã
+đọc, nên không giải thích được việc tầng cảnh báo không đổi lựa chọn. Những tầng
+khác hoặc việc các ứng viên cùng mức vượt cảnh báo vẫn là các giải thích chưa
+được phân biệt, vì chứng cứ không ghi đầy đủ điểm mọi ứng viên còn cạnh tranh.
+
+Các phép kiểm bổ sung củng cố cách đọc hẹp của kết quả chính: các cấu hình đã
+thực hiện những hành vi được mô tả, và giới hạn tìm kiếm đã ghi không giải thích
+chênh lệch H6. Chúng đồng thời cho thấy bảo đảm, bộ sinh, trạng thái chặng đang
+chạy và luật phục hồi cần có hợp đồng thống nhất. Một kết quả âm của tổ hợp hiện
+tại không đủ để bác bỏ các thiết kế điều phối có khả năng sửa tuyến hoặc tái gán.

@@ -1,0 +1,10 @@
+{
+  "deliverable": "R37-CH4B-V10-VERIFY-CODEX.md",
+  "bytes": 41618,
+  "r29_rows": 24,
+  "rejected_comments_checked": 14,
+  "numeric_probe_finished": true,
+  "common_cohort_verified": true,
+  "suggested_new_reference_defined": true,
+  "status": "PASS; source-level review only, no layout build"
+}

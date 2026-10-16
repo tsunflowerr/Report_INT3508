@@ -1,0 +1,229 @@
+﻿\chapter{Cơ sở lý thuyết và nghiên cứu liên quan}
+
+Chương này tổ chức văn liệu theo đối tượng được kiểm soát: tính khả thi của chuyến,
+chất lượng của thông báo và lịch sử thay đổi thông báo. Phân biệt này xác định điều
+RideBound kế thừa, điều cơ chế của khóa luận bổ sung và phạm vi cần kiểm tra bằng thực nghiệm.
+
+\section{Điều phối động và chất lượng phục vụ}
+
+\subsection{Bài toán và các ràng buộc cơ bản}
+
+Bài toán Dial-a-Ride Problem (DARP) ghép việc gán hành khách cho xe với việc sắp xếp
+các điểm đón và trả \cite{cordeau2007}. Trong dạng động, yêu cầu chưa biết trước toàn bộ
+mà xuất hiện trong lúc xe đang vận hành. Một yêu cầu gồm điểm đón, điểm trả, thời điểm
+yêu cầu và số chỗ cần. Trạng thái hiện tại gồm vị trí xe, khách đã nhận, khách đang trên
+xe và các điểm dừng đã cam kết.
+
+Tính khả thi vật lý thường gồm sức chứa, đón trước trả, cửa sổ đón và giới hạn thời gian
+trên xe. Giữ nguyên một tiền tố tuyến còn tránh đổi những chặng đã thực hiện hoặc đang
+không thể đổi. Chúng trả lời câu hỏi ``xe có thể thực hiện kế hoạch này hay không''.
+Một ràng buộc lời hứa trả lời thêm câu hỏi ``kế hoạch này có được phép thay đổi thông tin
+đã báo cho khách hay không''. Hai câu hỏi cần được kiểm tra riêng vì có thể thất bại vì
+những lý do khác nhau.
+
+Chẳng hạn, hai phương án đón khách ở phút thứ ba và phút thứ sáu đều thỏa thời gian chờ
+tối đa mười phút. Nếu khách đã nhận thông báo đón ở phút thứ ba, phương án thứ hai thay
+đổi thông báo dù vẫn khả thi vật lý. Ngược lại, giữ nguyên tuyến trong một đợt tăng thời
+gian đi có thể làm xe đón sau phút thứ mười. Một cổng cam kết chấp nhận việc giữ tuyến
+không khôi phục được cửa sổ đón đã vi phạm ấy.
+
+\subsection{Sinh phương án và chọn phương án}
+
+Alonso-Mora và cộng sự \cite{alonsomora2017} sử dụng đồ thị
+Request--Trip--Vehicle để biểu diễn các nhóm yêu cầu và xe có thể phục vụ nhóm đó,
+rồi giải bài toán gán. Trong thực nghiệm taxi New York của họ, 3.000 xe sức chứa bốn
+người phục vụ 98\% nhu cầu, với thời gian chờ trung bình 2,8 phút và độ trễ chuyến trung
+bình 3,5 phút. Đây là kết quả trong mô hình và điều kiện của bài; khóa luận không dùng
+98\% như một mốc tỉ lệ phục vụ mà mạng dẫn xuất nhỏ phải đạt.
+
+Một dạng bài toán chọn phương án có thể viết như sau. Gọi $\Gamma$ là tập phương án
+xe--chuyến đã sinh, $x_T$ là biến chọn phương án $T$ và $z_r$ là biến từ chối yêu cầu $r$:
+
+\begin{equation}
+\min_{x,z}\quad \sum_{T\in\Gamma}\mathrm{cost}(T)x_T
+  +p_{\mathrm{KO}}\sum_{r\in R}z_r
+\end{equation}
+\begin{align}
+z_r+\sum_{T:\,r\in\mathrm{req}(T)}x_T&=1 &&\forall r\in R,\\
+\sum_{T:\,\mathrm{veh}(T)=v}x_T&\leq1 &&\forall v\in V,\\
+x_T,z_r&\in\{0,1\}.&&
+\end{align}
+
+Mô hình này buộc mỗi yêu cầu hoặc được phục vụ bởi một phương án, hoặc chịu hình phạt
+từ chối; mỗi xe được chọn tối đa một phương án. Nó minh họa sự tách biệt giữa sinh và chọn.
+Chương 3 mô tả bộ sinh và thứ tự mục tiêu thực tế của RideBound, gồm ưu tiên số khách
+nhận rồi mới so chi phí. Vì vậy, công thức trên là kiến thức nền, không phải lời khẳng
+định rằng mọi hệ thống dùng cùng một hàm mục tiêu.
+
+Chi phí có thể xét cả khách mới và phần thiệt hại tăng thêm của khách cũ. Fielbaum,
+Tirachini và Alonso-Mora \cite{fielbaum2022scale} phân tích các chi phí của người dùng
+và nhà điều hành trong mô hình ghép chuyến. Việc đưa thiệt hại của khách cũ vào hàm mục
+tiêu là một tiền lệ quan trọng. Tuy nhiên, ưu tiên mềm được tổng hợp giữa nhiều khách
+khác với ngân sách cứng kiểm riêng từng khách. Một phương án có chi phí tổng thấp vẫn
+có thể gây thay đổi lớn cho một người; ngân sách theo hành khách kiểm tra đúng trường
+hợp đó trước khi chọn.
+
+\section{Đo thay đổi và giới hạn lời hứa}
+
+
+\subsection{Chênh lệch kết quả và lịch sử cập nhật}
+
+Fielbaum và Alonso-Mora \cite{fielbaum2020} phân biệt bất ổn trong một chuyến với
+bất ổn giữa các lần thực hiện cùng yêu cầu. Với một chuyến, họ so thời gian thực tế với
+thông báo đầu và đếm số lần dự báo tăng. Phép so hai đầu về giờ chờ có dạng
+$\Delta t_w=t_w-t_w^1$; các phần âm được cắt về không khi đo sự xấu đi.
+
+Một thước đo hai đầu phù hợp khi câu hỏi là độ lệch cuối cùng so với thông báo đầu.
+Nó không mô tả đầy đủ độ dài chuỗi cập nhật: một dự báo tăng rồi giảm về mốc ban đầu
+có chênh lệch cuối bằng không nhưng tổng biến thiên dương. Đếm số lần cập nhật cung
+cấp thông tin bổ sung, song hai chuỗi cùng số lần có thể có độ lớn rất khác nhau.
+Khóa luận vì thế báo cả chỉ số kết quả và chỉ số lịch sử, thay vì xem một chỉ số thay
+thế toàn bộ các chỉ số còn lại.
+
+Đại lượng thực tế chỉ xác định sau chuyến; dự báo của một phương án có thể xác định
+trước khi chọn phương án. Sự khác biệt này đòi hỏi xác định rõ đại lượng nào được
+kiểm ở mỗi thời điểm. Nó không có nghĩa là hiện tượng trong thước đo kết quả không
+thể kiểm soát. Chính phần 6 của bài năm 2020 đã siết thời gian chờ tối đa xuống dự báo
+và cấm từ chối lại khách đã nhận, trong kịch bản kiểm soát hoàn toàn. Tỉ lệ từ chối ở
+bảng 5 tăng từ 34,5\% lên 45,6\%, tức 11,1 điểm phần trăm, trong hệ của các tác giả.
+
+Phần mở rộng được xét trong RideBound là dùng mốc chiếu giữ tuyến tại cùng trạng thái
+để phân biệt cập nhật gắn với lựa chọn kế hoạch và cập nhật khi kế hoạch không đổi.
+Bài năm 2020 loại tắc đường và tai nạn khỏi phạm vi phân tích của nó. Vì vậy, đối
+chiếu với RideBound dưới trôi dạt cần giữ khác biệt mô hình này; không thể lấy kết
+quả của hai hệ như một cuộc so sánh trực tiếp về hiệu quả.
+
+\subsection{Bảo vệ theo độ chùng và theo thông báo đầu}
+
+Elmi và cộng sự \cite{elmi2026} dùng chỉ số shareability để dự báo khả năng hành khách
+bị đổi thời gian, rồi phân bổ độ chùng có chọn lọc: nhóm chỉ số thấp không được tăng
+thời gian, nhóm chỉ số cao giữ độ chùng. Đối chứng của họ điều chỉnh cùng một tỉ lệ độ
+chùng cho mọi khách. Cả hai đều là cơ chế kiểm soát theo từng khách, không chỉ một
+hình phạt trung bình trên toàn đội xe.
+
+Điều này thu hẹp ranh giới của khóa luận. Một trần áp cho mọi khách không tự nó tạo
+tính mới. Khác biệt cần kiểm tra là ngân sách đang chặn độ lệch từ lúc gán, tổng độ
+lớn các cập nhật, hay phần do quyết định sau khi đối chiếu với phương án giữ tuyến.
+Trong mạng có thời gian đi cố định và một bộ sinh chỉ chèn thêm, các đại lượng này
+có thể gần nhau. Khi thời gian đi trôi dạt hoặc dự báo đổi chiều, chúng có thể tách
+nhau. Chương 3 phát biểu điều kiện; chương 4 kiểm tra mức tách quan sát được.
+
+Schulz và Pfeiffer \cite{schulz2026} giới hạn thời điểm đến điểm trả của khách đã
+chấp nhận bằng thông báo lúc nhận cộng một khoảng chung. Một dạng ký hiệu là
+\begin{equation}
+p_t-p_0\leq\kappa,
+\end{equation}
+với $p_0$ là giờ trả đã công bố khi nhận khách. Đây là tiền lệ trực tiếp cho cổng
+hạn chót một chiều. Nó giới hạn mức muộn hiện tại, không cộng độ lớn mọi lần sửa
+thông báo và không chặn chiều sớm. Khóa luận cài đặt một đối chứng cùng dạng ràng
+buộc này, không tái lập toàn bộ thuật toán, mô hình chấp nhận hoặc dữ liệu của bài.
+
+Haferkamp \cite{haferkamp2024} nghiên cứu nhiều lựa chọn giờ đón và sự đánh đổi giữa
+khả năng khách nhận đề nghị với công sức định tuyến. Sau khi khách chọn đề nghị, giờ đón
+và phương án gán đã thống nhất trở thành ràng buộc. Các lần sửa tuyến phải giữ giờ đến
+trong cửa sổ phục vụ tương ứng, có cho phép một độ trễ đón nhỏ.
+Sivagnanam và cộng sự
+\cite{sivagnanam2026} kết hợp xác nhận nhanh yêu cầu đặt trước với tối ưu tiếp tuyến
+cho khách đã nhận. Schmidt và cộng sự \cite{schmidt2026} xét cam kết giờ đến trong
+một bài toán người bán hàng có nhu cầu phụ thuộc lời chào. Những cơ chế này cho thấy
+công bố thông tin, giữ khách đã nhận và kiểm soát giờ phục vụ đều đã có tiền lệ.
+Chúng không được dùng như đối chứng số trong thực nghiệm RideBound vì khác bài toán
+và khác mô hình nhu cầu.
+
+\subsection{Nhất quán, nhiều kế hoạch và phương án tham chiếu}
+
+Tính nhất quán giờ phục vụ đã được xem xét trong các bài toán định tuyến nhiều kỳ
+\cite{kovacs2014}. Tellez và cộng sự \cite{tellez2022} xét mức nhất quán thời gian
+cho từng hành khách qua các ngày và sự đánh đổi với chi phí. Đối tượng đó khác lịch
+sử sửa một thông báo trong cùng chuyến. Khác biệt về đối tượng cho phép chọn phép
+đo khác; nó không cho phép gọi tính nhất quán thời gian nói chung là một phát hiện mới.
+
+Ackermann và Rieck \cite{ackermann2025} giữ nhiều kế hoạch để hỗ trợ chèn yêu cầu động
+và bàn cách tránh cam kết sớm vào một kế hoạch. Vì vậy, nhiều kế hoạch và trì hoãn cam
+kết không thuộc phần tính mới của RideBound. Tương tự, Wang và Fielbaum
+\cite{wang2026walking} dùng lịch tham chiếu và cơ chế quay lại trong việc chọn điểm
+trả có đi bộ. Bảo vệ không làm xấu một cập nhật đã có tiền lệ; đối tượng cần xét ở
+đây là cách ghi ngân sách xuyên suốt lịch sử và xử lý vi phạm dưới trôi dạt.
+
+Bảng~\ref{bang:ranhgioivanlieu} tóm tắt đối tượng được kiểm soát và ranh giới so sánh.
+
+\begin{table}[htbp]
+\centering
+\caption{Đối tượng kiểm soát của các cơ chế gần nhất}
+\label{bang:ranhgioivanlieu}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{5.4cm}>{\raggedright\arraybackslash}p{5.4cm}@{}}
+\toprule
+\textbf{Cơ chế} & \textbf{Đối tượng chính} & \textbf{Phân biệt cần giữ}\\
+\midrule
+Fielbaum và Alonso-Mora & Thời gian so với thông báo đầu; siết dự báo giờ chờ & Đã có kiểm
+soát trước quyết định; không nghiên cứu trôi dạt giao thông\\[3pt]
+Elmi và cộng sự & Độ chùng từng khách, phân bổ theo shareability & Bảo vệ theo khách đã có;
+không đồng nhất độ chùng với sổ cái hành vi\\[3pt]
+Schulz--Pfeiffer & Hạn chót điểm trả từ lúc nhận khách & Trần muộn một chiều khác tổng
+biến thiên qua nhiều lần sửa\\[3pt]
+RideBound & Sổ cái lịch sử theo khách, có mốc chiếu giữ tuyến & Giới hạn phần do quyết định
+khác bảo đảm toàn bộ kết quả thực tế\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Ổn định lịch trình và cách chọn thước đo}
+
+Dao động giữa các lần lập kế hoạch không chỉ xuất hiện trong điều phối xe. Văn liệu
+hoạch định sản xuất đã nghiên cứu nervousness và việc đóng băng một phần lịch.
+Sridharan, Berry và Udayabhanu \cite{sridharan1987} xem xét các quyết định đóng băng
+lịch sản xuất; bài năm 1988 \cite{sridharan1988} nghiên cứu cách đo độ ổn định dưới
+chân trời cuốn chiếu. Hai bài có vai trò khác nhau và cần được trích riêng.
+
+Khóa luận mượn tư tưởng đo thay đổi qua nhiều lần lập kế hoạch và kiểm tra độ nhạy với
+trọng số theo chân trời. Nó không giả định bài toán sản xuất và bài toán vận tải có
+cùng chi phí, cùng tính khả thi hoặc cùng đường cong đánh đổi. Việc dùng thước đo
+được điều chỉnh cho lời hứa của hành khách là một lựa chọn đo lường, chưa chứng minh
+sự tương đương giữa hai lĩnh vực.
+
+Đối với một chuỗi dự báo $p_0,\ldots,p_T$, ba đại lượng cơ bản là chênh lệch cuối
+$p_T-p_0$, số lần thay đổi và tổng biến thiên $\sum_{t=1}^T|p_t-p_{t-1}|$.
+Trọng số thời gian hoặc phép bình phương nhấn mạnh những khía cạnh khác nhau của
+chuỗi. Chương 4 dùng các biến thể này như kiểm tra độ nhạy của kết luận. Nếu thứ hạng
+không đổi thì kết luận ổn định hơn đối với các phép đo đã thử; điều đó vẫn không
+chứng minh mọi phép đo hoặc mọi đánh giá của người dùng sẽ cho cùng thứ hạng.
+
+\section{Độ tin cậy và giá trị đối với hành khách}
+
+Nghiên cứu lựa chọn dịch vụ cung cấp động lực cho việc đo thông báo, nhưng không trực
+tiếp đặt được ngân sách số cho RideBound. Alonso-González và cộng sự
+\cite{alonsogonzalez2020} nghiên cứu đánh đổi thời gian, độ tin cậy và chi phí bằng
+thực nghiệm lựa chọn công bố tại Hà Lan. Trong mô hình của họ, giá trị độ tin cậy
+tương đối được xác định qua độ biến thiên của thời gian; nó không phải đơn giá cho
+mỗi giây sửa ETA.
+
+Geržinič và cộng sự \cite{gerzinic2023} xét chênh lệch giữa thời gian chờ dự kiến và
+thời gian chờ trải nghiệm trong các lựa chọn dịch vụ ride-hailing lặp lại. Cảm nhận
+thời gian chờ ngoài dự kiến và kinh nghiệm trước ảnh hưởng tới lựa chọn. Đối tượng
+đo này cũng khác tổng độ lớn cập nhật dự báo giờ trả của một chuỗi quyết định.
+Không có phép chuyển đổi được kiểm chứng từ một trong hai mô hình đó sang phúc lợi
+của những hành khách trong mô phỏng RideBound.
+
+Bansal và cộng sự \cite{bansal2019} nghiên cứu cách hiển thị thời gian chờ dự báo và
+mô phỏng chiến lược công bố. Kết quả về tăng mức nhận chuyến trong bài là kết quả
+của mô hình lựa chọn và tối ưu thông tin, không phải bằng chứng rằng một sổ cái cam
+kết bất kỳ sẽ làm tăng nhu cầu. Khóa luận vì thế giữ tỉ lệ phục vụ và biến động lời
+hứa như hai đầu ra riêng, chưa tổng hợp chúng thành một chỉ số tiền tệ hoặc hài lòng.
+
+\section{Cơ sở ghi sổ và phạm vi so sánh}
+
+Các nhóm văn liệu trên chuẩn bị hai lựa chọn sẽ được định nghĩa trong chương 3.
+Lựa chọn thứ nhất ghi toàn bộ biến động theo cơ sở thông báo nhìn thấy. Lựa chọn thứ hai
+dùng mốc chiếu giữ tuyến tại cùng trạng thái để chỉ ghi phần chênh lệch của phương án được chọn.
+Cả hai có thể dùng lịch sử tích lũy, nhưng chúng cam kết với khách về những đại lượng
+khác nhau. Điều này giải thích vì sao một chính sách có ngân sách được tôn trọng vẫn
+có thể không giữ được một trần trên biến động nhìn thấy.
+
+Khóa luận dùng các nguồn gần nhất để xác định cơ chế đối chứng và ranh giới của câu
+hỏi, không để khẳng định chưa từng có mọi thành phần tương tự. Những so sánh định
+lượng trong chương 4 đều được thực hiện trên cùng bộ thực thi và đầu vào. Chúng đánh giá
+các dạng cổng và cấu hình đã hiện thực; chúng chưa xác định thứ hạng giữa RideBound
+với toàn bộ thuật toán của các bài gốc. Phần giá trị cần kiểm tra còn lại là tính
+nhất quán của sổ cái, hệ quả của từng cơ sở ghi sổ và sự đánh đổi dịch vụ trong phạm
+vi thực nghiệm đã khóa.

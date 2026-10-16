@@ -1,0 +1,26 @@
+# forecast_family_a.py population=dev rule=loo-no15; cells 8; active weekday cells 8
+pads (promises only): per window {'w07': 0.02893001524646553}; citywide 0.028930
+U         active weekday  n= 8 | Y naive 0.0767 disp 0.0150 pad 0.0287 | E naive 0.0000 disp 0.0028 | Vis naive 0.0900 disp 0.0207 | ext 21.1s p90 47.7s pick 5.5s | MAE 21.5->7.9s bias +21.4->+0.4s | late120 0.0155->0.0054 late300 0.0018->0.0000
+U         w07             n= 8 | Y naive 0.0767 disp 0.0150 pad 0.0287 | E naive 0.0000 disp 0.0028 | Vis naive 0.0900 disp 0.0207 | ext 21.1s p90 47.7s pick 5.5s | MAE 21.5->7.9s bias +21.4->+0.4s | late120 0.0155->0.0054 late300 0.0018->0.0000
+U         all cells       n= 8 | Y naive 0.0767 disp 0.0150 pad 0.0287 | E naive 0.0000 disp 0.0028 | Vis naive 0.0900 disp 0.0207 | ext 21.1s p90 47.7s pick 5.5s | MAE 21.5->7.9s bias +21.4->+0.4s | late120 0.0155->0.0054 late300 0.0018->0.0000
+C-30      active weekday  n= 8 | Y naive 0.0725 disp 0.0000 pad 0.0180 | E naive 0.0000 disp 0.0029 | Vis naive 0.0878 disp 0.0043 | ext 21.2s p90 49.0s pick 5.7s | MAE 19.9->6.4s bias +19.8->-1.4s | late120 0.0034->0.0000 late300 0.0000->0.0000
+C-30      w07             n= 8 | Y naive 0.0725 disp 0.0000 pad 0.0180 | E naive 0.0000 disp 0.0029 | Vis naive 0.0878 disp 0.0043 | ext 21.2s p90 49.0s pick 5.7s | MAE 19.9->6.4s bias +19.8->-1.4s | late120 0.0034->0.0000 late300 0.0000->0.0000
+C-30      all cells       n= 8 | Y naive 0.0725 disp 0.0000 pad 0.0180 | E naive 0.0000 disp 0.0029 | Vis naive 0.0878 disp 0.0043 | ext 21.2s p90 49.0s pick 5.7s | MAE 19.9->6.4s bias +19.8->-1.4s | late120 0.0034->0.0000 late300 0.0000->0.0000
+Mplus-30  active weekday  n= 8 | Y naive 0.0725 disp 0.0000 pad 0.0180 | E naive 0.0000 disp 0.0029 | Vis naive 0.0878 disp 0.0043 | ext 21.2s p90 49.0s pick 5.7s | MAE 19.9->6.4s bias +19.8->-1.4s | late120 0.0034->0.0000 late300 0.0000->0.0000
+Mplus-30  w07             n= 8 | Y naive 0.0725 disp 0.0000 pad 0.0180 | E naive 0.0000 disp 0.0029 | Vis naive 0.0878 disp 0.0043 | ext 21.2s p90 49.0s pick 5.7s | MAE 19.9->6.4s bias +19.8->-1.4s | late120 0.0034->0.0000 late300 0.0000->0.0000
+Mplus-30  all cells       n= 8 | Y naive 0.0725 disp 0.0000 pad 0.0180 | E naive 0.0000 disp 0.0029 | Vis naive 0.0878 disp 0.0043 | ext 21.2s p90 49.0s pick 5.7s | MAE 19.9->6.4s bias +19.8->-1.4s | late120 0.0034->0.0000 late300 0.0000->0.0000
+oracle (C-30, dispatch part 0): |A - true stretch| <= 2 s for 658/658
+pickups displayed after latestPickup (C-30, all cells): 27
+ledger C-30 active weekday, riders late > 60 s vs naive: total 3846.7s = dispatch 2.0 + anticipated 3743.1 + unanticipated 101.6
+
+inference on C-30 active weekday cells (stratified day-window cluster bootstrap; cluster-t)
+  dY        point -7.254 pp  boot95 [-9.359, -5.148]  cluster-t(df=1) [-34.008, +19.500]
+  dE        point +0.289 pp  boot95 [+0.000, +0.578]  cluster-t(df=1) [-3.383, +3.961]
+  dVis      point -8.352 pp  boot95 [-11.006, -5.699]  cluster-t(df=1) [-42.068, +25.364]
+  dPad      point -1.801 pp  boot95 [-2.157, -1.446]  cluster-t(df=1) [-6.324, +2.721]
+  dPadCity  point -1.801 pp  boot95 [-2.157, -1.446]  cluster-t(df=1) [-6.324, +2.721]
+  dY per weekday-w07 day-window: {'d20181112-w07': -5.148, 'd20181113-w07': -9.359}
+  leave-one-day-out point dY (pp): {'2018-11-12': -9.359, '2018-11-13': -5.148}
+  A1 FAIL; A2 not tested; A3 not tested; labels: ['fragile to small-cluster inference']
+  34-cell deployment mean dY (inactive cells = 0): -7.254 pp
+  T3.8-style cell bootstrap dY: [-9.446, -5.095] pp

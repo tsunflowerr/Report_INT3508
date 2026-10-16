@@ -1,0 +1,209 @@
+\chapter{Đặt vấn đề}
+
+\section{Bối cảnh và động lực nghiên cứu}
+
+Đi chung xe theo yêu cầu đã trở thành một trong những hướng được kỳ vọng nhiều nhất để giảm
+áp lực giao thông đô thị. Ý tưởng rất trực tiếp: thay vì mỗi người một xe, hệ thống gom những
+yêu cầu có lộ trình tương đồng vào cùng một phương tiện, nhờ đó giảm số xe lưu thông mà vẫn
+phục vụ được cùng lượng nhu cầu. Công trình của Alonso-Mora và cộng sự \cite{alonsomora2017}
+đã cho thấy tiềm năng của hướng này ở quy mô thật: với ba nghìn xe bốn chỗ, hệ thống của họ
+phục vụ được khoảng $98\%$ nhu cầu taxi của Manhattan. Kết quả đó xác lập một chuẩn mực kỹ
+thuật mà phần lớn các nghiên cứu sau này đều kế thừa, gồm đồ thị ba tầng Request--Trip--Vehicle
+để sinh các khả năng ghép và một bài toán quy hoạch nguyên để chọn ra phương án tốt nhất.
+
+Tuy nhiên, cách vận hành của các hệ thống này có một đặc điểm ít được nói tới. Chúng hoạt động
+theo chu kỳ: cứ sau một khoảng thời gian ngắn, toàn bộ bài toán gán khách cho xe lại được giải
+lại từ đầu với trạng thái mới. Mỗi lần giải lại, kế hoạch của một chiếc xe có thể thay đổi --
+chèn thêm một điểm đón, đảo thứ tự hai điểm dừng, thậm chí chuyển một hành khách sang xe khác.
+Điều đó là cần thiết để hệ thống tận dụng được mọi cơ hội ghép chuyến, và cũng chính là nguồn
+gốc hiệu quả của nó.
+
+Vấn đề nằm ở chỗ hành khách không nhìn thấy quá trình tối ưu ấy. Cái họ nhìn thấy là một con
+số trên màn hình điện thoại: ``xe sẽ đón bạn lúc 9 giờ 10''. Khi hệ thống tối ưu lại và con số
+đó trở thành 9 giờ 13, rồi 9 giờ 11, rồi 9 giờ 16, hành khách trải nghiệm một chuỗi lời hứa bị
+rút lại chứ không phải một quá trình tối ưu. Và đây mới là điểm đáng chú ý: trong toàn bộ dòng
+văn liệu hiện hành, chuỗi ấy \emph{hoàn toàn không được ghi nhận}. Các hệ thống này ràng buộc
+hai tham số --- thời gian chờ tối đa $\Omega$ và độ trễ tối đa $\Delta$ --- và miễn là kế hoạch
+còn nằm trong cửa sổ đó, nó được phép nhảy tùy ý, bao nhiêu lần cũng được. Một hành khách được
+báo đúng một lần và một hành khách bị đổi giờ mười hai lần là hai đối tượng giống hệt nhau
+trong mọi hàm mục tiêu của dòng bài này.
+
+Sự thiếu vắng đó không phải chuyện nhỏ về mặt kinh tế. Một nhánh văn liệu khác, thuộc về phía
+cầu, đã đo được rất rõ rằng hành khách trả giá cho độ tin cậy. Alonso-González và cộng sự
+\cite{alonsogonzalez2020} ước lượng giá trị độ tin cậy cho dịch vụ đi chung theo yêu cầu;
+Geržinič và cộng sự \cite{gerzinic2023} định giá riêng phần \emph{thời gian chờ bất ngờ} ---
+tức phần chờ phát sinh ngoài dự kiến ban đầu --- ở mức cao hơn hẳn thời gian chờ thông thường.
+Bansal và cộng sự \cite{bansal2019} cho thấy việc công bố ETA một cách trung thực làm tỉ lệ
+chấp nhận chuyến tăng gần $10\%$. Nhưng chính các tác giả đó viết rõ trong bài rằng họ không
+mô hình hóa chi phí phía cung: khung của họ giả định nhà điều hành \emph{luôn} có thể giao
+khách đúng mốc đã hiển thị.
+
+Nói cách khác, có cả một nhánh nghiên cứu chứng minh rằng giữ lời rất đáng tiền, và một nhánh
+khác xây dựng những hệ thống điều phối hiệu quả, nhưng chưa ai trả lời câu hỏi nối hai nhánh
+ấy lại:
+
+\begin{khungy}
+Giữ lời tốn bao nhiêu? Và liệu một lời hứa như thế có cưỡng chế được về mặt thuật toán hay
+không, hay nó chỉ là một chỉ tiêu mong muốn?
+\end{khungy}
+
+\section{Hạn chế của các phương pháp hiện tại}
+
+Để xác định chính xác chỗ đứng của khóa luận, chúng tôi đã khảo sát mười bốn trục văn liệu liên
+quan. Từ đó rút ra bốn hạn chế mang tính hệ thống của dòng bài hiện hành, không phải những
+thiếu sót ngẫu nhiên của một bài cụ thể.
+
+\textbf{Thứ nhất, hành khách được mô hình hóa như một ràng buộc chứ không phải một đối tác.}
+Cửa sổ $\Omega$ và $\Delta$ là tất cả những gì hệ thống nợ hành khách. Không tồn tại khái niệm
+``điều đã nói với khách'' trong mô hình. Hệ quả trực tiếp là cửa sổ hợp lệ không hề bảo vệ lời
+đã hứa: trong thực nghiệm của chúng tôi, một hành khách bị dời giờ trả tích lũy tới 573 giây
+mà hệ thống vẫn tính là phục vụ thành công, vì mọi mốc vẫn nằm trong cửa sổ.
+
+\textbf{Thứ hai, không có quy trách nguyên nhân.} Khi giờ hẹn của một hành khách xấu đi, không
+ai tách phần do nhà điều hành quyết định lại khỏi phần do xe chạy chậm hoặc do đường tắc.
+Fielbaum và Alonso-Mora \cite{fielbaum2020} là ngoại lệ đáng kể nhất --- họ phân loại nguyên
+nhân thành ``do người dùng gây ra'' và ``do nhà điều hành gây ra'' --- nhưng đó là một phân
+loại định tính bằng lời, và bản thân thước đo của họ thì loại tắc đường ra khỏi phạm vi ngay
+từ đầu.
+
+\textbf{Thứ ba, chỉ có thước đo kết quả, không có thước đo hành vi.} Bộ chỉ số chuẩn gồm tỉ lệ
+phục vụ, thời gian chờ, quãng đường phương tiện và tỉ lệ ghép. Không chỉ số nào trả lời câu hỏi
+``hệ thống này cư xử có giữ lời hay không''.
+
+\textbf{Thứ tư, các khái niệm về ổn định lịch trình đã tồn tại ở ngành khác nhưng chưa được
+chuyển sang lĩnh vực này.} Trong hoạch định sản xuất, hiện tượng ``MRP nervousness'' đã được
+nghiên cứu từ thập niên 1980. Sridharan, Berry và Udayabhanu \cite{sridharan1987} đo độ ổn định
+của lịch sản xuất chính dưới chân trời cuốn chiếu, và ``phương thuốc'' kinh điển của họ ---
+đóng băng một phần lịch --- chính là cơ chế mà chúng tôi gọi là khóa lời hứa. Trong vận trù
+giao hàng, bài toán Consistent VRP \cite{kovacs2014} có ràng buộc nhất quán giờ đến giữa các
+ngày. Nhưng đó là bài toán tĩnh, nhiều ngày, cho hàng hóa; nó không nói gì về một lời hứa động
+đưa ra cho một hành khách trong vòng vài phút.
+
+\section{Chỗ đứng so với công trình gần nhất}
+
+Trước khi trình bày đóng góp, cần nói rõ ranh giới với công trình gần nhất, vì phần chồng lấn
+là đáng kể và việc giấu nó đi sẽ chỉ làm người đọc tự phát hiện ra ở chương sau.
+
+Fielbaum và Alonso-Mora \cite{fielbaum2020} đã đặt đúng vấn đề nêu ở mục 1.1 và đã làm sáu việc
+mà khóa luận này cũng làm: nêu khái niệm lời hứa công bố bị xê dịch, đo độ lớn dịch chuyển trên
+từng hành khách, đếm số lần dự báo bị đổi, phân loại nguyên nhân thành do người dùng và do nhà
+điều hành, dựng đường cong đánh đổi giữa mức kiểm soát và chất lượng dịch vụ, và thử cơ chế
+ratchet trên giờ đón. Khóa luận coi sáu hạng mục ấy là \emph{nền}, và phần tương ứng trong
+chương 4 là một cuộc \emph{tái lập độc lập} trên một thực thể khác --- có giá trị nhưng không
+phải đóng góp mới.
+
+Khác biệt nằm ở một điểm cấu trúc, và nó không phải chuyện mức độ mà là bản chất. Thước đo của
+họ, công thức (2.5) ở chương sau, định nghĩa qua $t_w(r)$ --- thời gian chờ \emph{thực tế} ---
+tức một đại lượng chỉ biết được sau khi hành khách đã được đón. Tại thời điểm hệ thống phải
+chọn phương án nào, giá trị đó chưa tồn tại. Nghĩa là thước đo ấy, về mặt toán học, \emph{không
+thể trở thành ràng buộc}: không ai chặn được ``thực tế trừ lần báo đầu không quá 30 giây'' khi
+chưa biết thực tế. Nó chỉ tồn tại ở thì quá khứ.
+
+\begin{khungy}
+Công trình gần nhất \emph{mô tả} hiện tượng lời hứa bị xê dịch. Khóa luận này \emph{chặn} nó.
+Để chặn được, đại lượng bị chặn phải định nghĩa trên những gì biết được tại thời điểm quyết
+định --- và đó là lý do phép phân rã ba mốc ở chương 3 tồn tại.
+\end{khungy}
+
+Từ khác biệt cấu trúc ấy nảy sinh một câu hỏi mà trước đó không có lý do gì để đặt ra:
+\emph{khi biến thước đo thành ràng buộc, nên tính sổ theo cái gì?} Chương 3 chứng minh rằng câu
+trả lời quyết định hệ thống có vận hành nổi hay không, và rằng cách tự nhiên nhất để biến thước
+đo của văn liệu thành ràng buộc lại chính là cách hỏng.
+
+\section{Mục tiêu và đóng góp của khóa luận}
+
+Từ bốn hạn chế ở mục 1.2 và khác biệt cấu trúc ở mục 1.3, khóa luận đặt mục tiêu xây dựng và
+đánh giá một cơ chế cho phép hệ thống điều phối \emph{đưa ra lời hứa mà nó cưỡng chế được},
+đồng thời đo chính xác cái giá của việc đó. Cụ thể gồm ba mục tiêu.
+
+Mục tiêu thứ nhất là thiết kế cơ chế \textbf{lời hứa có biên được chứng nhận}: một sổ cái cam
+kết riêng cho từng hành khách, cộng dồn theo thời gian và đối chiếu với một trần $\beta$, được
+kiểm tra ngay tại thời điểm ra quyết định chứ không phải sau sự việc. Mục tiêu thứ hai là xây
+dựng phép \textbf{phân rã ba mốc} để tách phần dịch chuyển do nhà điều hành gây ra khỏi phần
+do thế giới vật lý gây ra, qua đó xác định chính xác cái gì nên bị tính vào sổ cái. Mục tiêu
+thứ ba là đo bằng thực nghiệm có kiểm soát toàn bộ đường cong đánh đổi giữa mức độ chặt chẽ
+của lời hứa và tỉ lệ phục vụ.
+
+Các đóng góp chính của khóa luận gồm:
+
+\begin{itemize}[leftmargin=1.2cm,itemsep=3pt,topsep=4pt]
+\item \textbf{Ràng buộc cam kết cưỡng chế được.} Một sổ cái riêng cho từng hành khách, cộng dồn
+theo chuỗi các lần công bố và đối chiếu với một trần $\beta$ ngay tại thời điểm quyết định.
+Đây là điểm khác biệt cấu trúc đã nêu ở mục 1.3: đại lượng bị chặn định nghĩa hoàn toàn trên
+những gì biết được trước khi chọn phương án, nên chặn được. Thực nghiệm xác nhận trần luôn được
+tôn trọng ở mọi cấu hình --- $291 < 300$, $119 < 120$, $59 < 60$, $27{,}6 < 30$ giây.
+
+\item \textbf{Kết quả cấu trúc về hai cơ sở tính sổ cái.} Chúng tôi chứng minh ba định lý cho
+thấy cơ sở \emph{hành vi} luôn thỏa được, cơ sở \emph{kết quả} có thể khiến hệ thống không còn
+quyết định hợp lệ nào, và cơ sở kết quả không bao giờ phục vụ được nhiều hơn cơ sở hành vi với
+bất kỳ trần $\beta$ nào. Ba định lý này được kiểm chứng bằng thực nghiệm, bao gồm cả một thí
+nghiệm bơm dữ liệu tắc đường đo thật của Manhattan, nơi cơ sở kết quả tê liệt trên 19 trên 20 ô
+còn cơ sở hành vi không hỏng một ô nào.
+
+\item \textbf{Phép phân rã ba mốc và quy trách định lượng.} Bằng cách chiếu lại chính kế hoạch
+cũ từ vị trí thật hiện tại của xe, hệ thống tách được nguyên nhân của mỗi lần dời lời hứa theo
+từng quyết định và từng hành khách. Đây là điều kiện kỹ thuật để hai đóng góp trên tồn tại, và
+tự nó cho một con số: $89{,}06\%$ lượng dịch chuyển mà hành khách nhìn thấy trong chế độ không
+cam kết là do bộ điều phối tự gây ra.
+
+\item \textbf{Đường cong giá của cam kết.} Chín cấu hình cam kết khác nhau được đo trên cùng
+một panel với cùng hạt giống, cho phép định lượng chi phí của từng mức chặt chẽ. Con số trung
+tâm: một trần 30 giây cắt xáo trộn xuống còn $0{,}17\%$ mức ban đầu với giá $7{,}13$ điểm phần
+trăm tỉ lệ phục vụ.
+
+\item \textbf{Phân tích độ vững với cách đo.} Chín thước đo thuộc họ Sridharan (1988) được áp
+dụng song song; thứ hạng các cấu hình không đổi dưới bất kỳ thước đo nào, trong khi độ lớn
+chênh nhau tới hai bậc. Đi kèm là một cảnh báo phương pháp luận: tỉ lệ phục vụ nhiễu hơn nhiều
+so với các thước đo ổn định, và một báo cáo chỉ dựa vào tỉ lệ phục vụ dễ đọc nhầm nhiễu thành
+kết quả.
+
+\item \textbf{Đối chiếu trực tiếp với Fielbaum và Alonso-Mora (2020).} Chúng tôi cài đặt lại
+thước đo của họ trên dữ liệu của mình và chỉ ra rằng thước đo hai đầu của họ bỏ sót $49\%$ số
+hành khách thực sự bị dời lời hứa dưới chế độ cam kết, đồng thời tái lập được kết luận định
+tính trung tâm của họ trên một thực thể nhỏ hơn 185 lần.
+\end{itemize}
+
+Một điểm cần nói rõ ngay từ đầu, và sẽ được nhắc lại trong chương thực nghiệm: khóa luận này
+\emph{không} tuyên bố vượt trội về tỉ lệ phục vụ. Mọi cấu hình có cam kết đều phục vụ ít hành
+khách hơn cấu hình không cam kết. Đóng góp nằm ở chỗ khác --- ở việc biến một đại lượng trước
+nay chỉ đo được sau sự việc thành một ràng buộc cưỡng chế được trước khi quyết định, và ở việc
+chỉ ra rằng cách tính sổ cái quyết định hệ thống có vận hành nổi hay không.
+
+\section{Phạm vi và giới hạn}
+
+Khóa luận giới hạn phạm vi như sau. Dữ liệu là bộ chuyến đi taxi công khai của Manhattan
+(nguồn TLC, giấy phép CC-BY) đã được chuẩn hóa sẵn trong bộ FleetPy \cite{fleetpy2022}, khung
+thời gian 08:00--10:00 các ngày làm việc từ 14 đến 18 tháng 11 năm 2018. Quy mô mỗi ô thực
+nghiệm là 108 yêu cầu, 8 xe sức chứa 4 chỗ, cửa sổ đón 600 giây, ràng buộc thời gian trên xe
+bằng $1{,}5$ lần thời gian đi thẳng. Toàn bộ thực nghiệm dùng một hạt giống cố định nên hoàn
+toàn tất định và tái lập được.
+
+Quy mô này nhỏ hơn đáng kể so với các thực nghiệm của Alonso-Mora và cộng sự. Đó là lựa chọn
+có chủ ý: mục tiêu của khóa luận là so sánh có kiểm soát giữa các cấu hình cam kết trên cùng
+một đầu vào, chứ không phải chứng minh khả năng mở rộng. Hệ quả là các con số tuyệt đối trong
+báo cáo này không so sánh trực tiếp được với con số trong các bài quy mô lớn; chỉ có các so
+sánh nội bộ giữa các cấu hình mới có ý nghĩa. Chương 4 sẽ trở lại điểm này khi đối chiếu với
+văn liệu.
+
+\section{Cấu trúc báo cáo}
+
+Phần còn lại của báo cáo được tổ chức theo đúng mạch lập luận đã nêu ở mục 1.3, tức đi từ chỗ
+``thước đo không chặn được'' tới chỗ ``ràng buộc chặn được, và cái đó tốn bao nhiêu''.
+
+Chương 2 trình bày cơ sở lý thuyết. Ngoài bài toán ghép chuyến và kiến trúc giải nó, chương này
+dành một mục riêng để phân tích ba giới hạn của cách đo trong văn liệu, trong đó giới hạn thứ
+hai --- thước đo chỉ tồn tại ở thì quá khứ --- là nền trực tiếp cho chương sau. Chương cũng vay
+mượn hai khung khái niệm từ ngoài lĩnh vực: độ ổn định lịch trình trong hoạch định sản xuất, và
+phân biệt nghĩa vụ phương tiện với nghĩa vụ kết quả trong luật hợp đồng.
+
+Chương 3 là trọng tâm về phương pháp. Nó xây dựng phép phân rã ba mốc như lời giải cho vấn đề
+``đại lượng bị chặn phải biết được tại thời điểm quyết định'', rồi từ đó dựng sổ cái cam kết,
+và chứng minh ba định lý về hai cơ sở tính sổ. Chương kết thúc bằng kiến trúc cài đặt và cơ chế
+chứng cứ niêm phong.
+
+Chương 4 trình bày thực nghiệm, tổ chức theo khẳng định chứ không theo thứ tự các đợt chạy;
+bảng lộ trình ở đầu chương nối mỗi khẳng định với mục chứng minh nó. Chương gồm cả phần đối
+chiếu ranh giới với công trình gần nhất, phần ghi nhận các hướng đã thử và phải từ bỏ, và phần
+liệt kê hạn chế.
+
+Chương 5 tổng kết đóng góp, nêu rõ những hạn chế còn lại và đề xuất bốn hướng phát triển.

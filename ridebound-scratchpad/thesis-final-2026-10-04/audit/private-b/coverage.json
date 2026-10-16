@@ -1,0 +1,24 @@
+{
+  "reviewer": "R2(B)",
+  "packet": "review-packet-v1",
+  "coverage": {
+    "novelty-significance": "applicable",
+    "mechanism-evidence": "applicable",
+    "experimental-design": "applicable",
+    "statistical-rigor": "applicable",
+    "reproducibility": "applicable",
+    "clinical-validity": "not applicable",
+    "ethical-governance": "not applicable",
+    "data-resource-quality": "applicable",
+    "figures-and-tables": "applicable",
+    "writing-clarity": "applicable",
+    "claim-moderation": "applicable",
+    "causal-vs-correlative": "applicable"
+  },
+  "boundary": "Full execution validity is not assessable from selected code and extraction evidence. No independent new simulation or .NET validation was performed.",
+  "concerns": [
+    {"id": "R2-M1", "issue_key": "missing-self-contained-dispatch-and-experiment-configuration", "axis": "reproducibility", "severity": "major", "blocking": false, "evidence_status": "located"},
+    {"id": "R2-m1", "issue_key": "service-loss-upper-limit-labelled-floor", "axis": "writing-clarity", "severity": "minor", "blocking": false, "evidence_status": "located"},
+    {"id": "R2-m2", "issue_key": "tier2-configured-run-count-labelled-input-cell-count", "axis": "experimental-design", "severity": "minor", "blocking": false, "evidence_status": "located"}
+  ]
+}

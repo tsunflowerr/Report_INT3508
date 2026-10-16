@@ -1,0 +1,115 @@
+{
+  "kind": "bounded-all-orders-original-core-negative-audit",
+  "sourceSha256": "643ee45fb3b8f9abab270c7619dd33aa61c981ccd1bb1ba40c70597e7980ac2d",
+  "states": 16,
+  "routesEnumerated": 4153,
+  "maximumIncumbentMutableStops": 4,
+  "physicalPassRoutes": 9,
+  "newIncumbentOrderPhysicalPassRoutes": 0,
+  "fullContractAcceptances": 0,
+  "firstPhysicalWitnessCounts": {
+    "physical:PICKUP_WINDOW": 1710,
+    "physical:PRECEDENCE": 1768,
+    "physical:MAX_RIDE_TIME": 666
+  },
+  "hardWitnesses": [
+    {
+      "epoch": 304,
+      "unchangedIncumbentOrder": true,
+      "preservesHead": true,
+      "code": "COMMITMENT_BUDGET_EXCEEDED",
+      "dimension": "drop_eta_total_ms",
+      "signedServiceStartShiftMs": 86142,
+      "limit": 30000,
+      "budgetBefore": 0
+    },
+    {
+      "epoch": 374,
+      "unchangedIncumbentOrder": true,
+      "preservesHead": true,
+      "code": "COMMITMENT_BUDGET_EXCEEDED",
+      "dimension": "drop_eta_total_ms",
+      "signedServiceStartShiftMs": 123060,
+      "limit": 30000,
+      "budgetBefore": 0
+    },
+    {
+      "epoch": 388,
+      "unchangedIncumbentOrder": true,
+      "preservesHead": false,
+      "code": "COMMITMENT_BUDGET_EXCEEDED",
+      "dimension": "drop_eta_total_ms",
+      "signedServiceStartShiftMs": 118958,
+      "limit": 30000,
+      "budgetBefore": 0
+    },
+    {
+      "epoch": 388,
+      "unchangedIncumbentOrder": true,
+      "preservesHead": false,
+      "code": "COMMITMENT_BUDGET_EXCEEDED",
+      "dimension": "drop_eta_total_ms",
+      "signedServiceStartShiftMs": 118958,
+      "limit": 30000,
+      "budgetBefore": 0
+    },
+    {
+      "epoch": 394,
+      "unchangedIncumbentOrder": true,
+      "preservesHead": false,
+      "code": "COMMITMENT_PHASE_LOCK",
+      "dimension": "pickup_eta_ms",
+      "signedServiceStartShiftMs": 215355,
+      "limit": null,
+      "budgetBefore": null
+    },
+    {
+      "epoch": 394,
+      "unchangedIncumbentOrder": true,
+      "preservesHead": true,
+      "code": "COMMITMENT_BUDGET_EXCEEDED",
+      "dimension": "drop_eta_total_ms",
+      "signedServiceStartShiftMs": 71785,
+      "limit": 30000,
+      "budgetBefore": 0
+    },
+    {
+      "epoch": 458,
+      "unchangedIncumbentOrder": true,
+      "preservesHead": true,
+      "code": "COMMITMENT_PHASE_LOCK",
+      "dimension": "pickup_eta_ms",
+      "signedServiceStartShiftMs": 229712,
+      "limit": null,
+      "budgetBefore": null
+    },
+    {
+      "epoch": 459,
+      "unchangedIncumbentOrder": true,
+      "preservesHead": false,
+      "code": "COMMITMENT_BUDGET_EXCEEDED",
+      "dimension": "drop_eta_total_ms",
+      "signedServiceStartShiftMs": 258426,
+      "limit": 30000,
+      "budgetBefore": 0
+    },
+    {
+      "epoch": 459,
+      "unchangedIncumbentOrder": true,
+      "preservesHead": false,
+      "code": "COMMITMENT_BUDGET_EXCEEDED",
+      "dimension": "drop_eta_total_ms",
+      "signedServiceStartShiftMs": 258426,
+      "limit": 30000,
+      "budgetBefore": 0
+    }
+  ],
+  "scope": "All incumbent suffix permutations plus one pending pickup/drop pair on each vehicle independently; existing vehicle assignments/frozen prefix/travel remain fixed; earliest-feasible schedules; no active-head screen in this final audit.",
+  "notEstablished": [
+    "Global DARP infeasibility",
+    "No benefit from different earlier decisions",
+    "Closed-loop performance or held-out generalization",
+    "Optimal waiting-time scheduling",
+    "Cross-vehicle reassignment feasibility"
+  ]
+}

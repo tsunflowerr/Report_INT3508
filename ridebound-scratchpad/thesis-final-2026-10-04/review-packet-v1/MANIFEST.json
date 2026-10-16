@@ -1,0 +1,382 @@
+[
+ {
+  "path": "code\\src\\RideBound.Algorithms\\Candidates\\ForwardSlackProfile.cs",
+  "bytes": 17956,
+  "sha256": "63bccacc43b7415cfb361980635b4a7d258241c21d0d0e6911a6dbcade2bedf7"
+ },
+ {
+  "path": "code\\src\\RideBound.Algorithms\\Commitments\\HardVectorCandidateAssessor.cs",
+  "bytes": 34608,
+  "sha256": "eb544d54e3056396172a71ea70152bfe75ebb015df6a6547b3fb0f629ac778be"
+ },
+ {
+  "path": "code\\src\\RideBound.Application\\Commitments\\CommitmentDecisionValidator.cs",
+  "bytes": 48375,
+  "sha256": "bd0d5bb298423114feb818b083350dc3bf45fd35feb5401297e009df208bced6"
+ },
+ {
+  "path": "code\\src\\RideBound.Application\\Promises\\PromiseDeltaCalculator.cs",
+  "bytes": 8359,
+  "sha256": "e7dcf38ce3ab5e265c52f2f46e45a3e0d3f8131c65eeb2ce98c43d338e7ac7d9"
+ },
+ {
+  "path": "code\\src\\RideBound.Domain\\Commitments\\CommitmentBudgetEvaluator.cs",
+  "bytes": 3620,
+  "sha256": "83dedf68ab453a7d2d6c406716fe63c7e6e6894290fa71f5a442ab36f4d208bb"
+ },
+ {
+  "path": "COMMON-CRITERIA.md",
+  "bytes": 2298,
+  "sha256": "0b09ef64b9834c4a926f0088d7517b91a924cc22eabd5fc970b497816aa51ff4"
+ },
+ {
+  "path": "evidence\\build_verified_figures.py",
+  "bytes": 10425,
+  "sha256": "b23b3994bef1ffb177969e17bd907114c0b2dceef72d169f2716d6928de8d8b3"
+ },
+ {
+  "path": "evidence\\check_trip_overlap.py",
+  "bytes": 5097,
+  "sha256": "7323fe5d6d8c84202e04cd8d230fb2458e55af92275c450b2c1983ced0bcee21"
+ },
+ {
+  "path": "evidence\\endpoint-recomputed.txt",
+  "bytes": 3346,
+  "sha256": "3e1ecccd0985c40b194348ae2049343e1dc4938f0013861d18ab85adc9d6686f"
+ },
+ {
+  "path": "evidence\\h6-frontier-per-cell-figure-data.csv",
+  "bytes": 47458,
+  "sha256": "211edd9e5ec0edbd96e8bf5830da196c0b39fb1d7c9f1b3a18e9614252bb6797"
+ },
+ {
+  "path": "evidence\\h6-frontier-summary-figure-data.csv",
+  "bytes": 1119,
+  "sha256": "ff52d25ff37999c6929869e59cc3aadc3dc7ac7c1959b2b880b6cbb3da59428c"
+ },
+ {
+  "path": "evidence\\h6-raw-movement-recheck.json",
+  "bytes": 1306509,
+  "sha256": "58975b9cf2eb91bc0b5c3dccbf83e18ee9abecb3bac3778f6b8a8ecfa14c6006"
+ },
+ {
+  "path": "evidence\\literature-crossref-metadata.json",
+  "bytes": 57775,
+  "sha256": "a17711277c48a0601a35a8fa95746e2dd5192f9fee9908f6a00279e45a7f496b"
+ },
+ {
+  "path": "evidence\\mechanism_figure.py",
+  "bytes": 1767,
+  "sha256": "94e8e2a17f1206dab052feba743da24003ec6fda2cf93d49d2133cb0bd3093e2"
+ },
+ {
+  "path": "evidence\\recheck_h6_frontier.py",
+  "bytes": 4129,
+  "sha256": "544936568601a36103cdfd137affad0c1fd52f002a94d121d0384d7fd9380c36"
+ },
+ {
+  "path": "evidence\\recheck_t38.py",
+  "bytes": 7432,
+  "sha256": "1abfbfc07ad1e6840e9afc8350ea4fd50aa801852ba5c228eb5596224f549c9d"
+ },
+ {
+  "path": "evidence\\recheck_wide_service.py",
+  "bytes": 2000,
+  "sha256": "cfc4162a2380688cfd36790a0d463ec2155e3ad50f75bea3b2c79ac7b253ee13"
+ },
+ {
+  "path": "evidence\\service-budget-per-cell.csv",
+  "bytes": 27794,
+  "sha256": "0ef3763b77c2cef024d2bc6238b529acd78b6190d1ad03091bbf6c8691a76ac6"
+ },
+ {
+  "path": "evidence\\service-budget-summary.csv",
+  "bytes": 844,
+  "sha256": "a1236b70e785a8819e5f6b9990797a026438955515569a9b6155050ab2308c2c"
+ },
+ {
+  "path": "evidence\\t38-actual-trip-id-overlap.json",
+  "bytes": 828359,
+  "sha256": "0f46410733c7817c560e1b1bc0c0cd2d45cd601eee390de5cd0734334c7a3a17"
+ },
+ {
+  "path": "evidence\\t38-per-episode-figure-data.csv",
+  "bytes": 66542,
+  "sha256": "5d29763a0cb88bdadb1d07a6f44252c8d0ff7253838bb349f2e0f4eb2a1c754a"
+ },
+ {
+  "path": "evidence\\t38-raw-checkpoint-recheck.json",
+  "bytes": 142862,
+  "sha256": "6f2a32bd11e6b990cc393ec5c8bd5cf9e21e1b9895d0b9ece8eb00896c2c1c18"
+ },
+ {
+  "path": "evidence\\tier2-gates-figure-data.csv",
+  "bytes": 291,
+  "sha256": "329f508342d2cbe7cc31fac269dfe31d15cd09e78817bda9fdde2d6050f099a0"
+ },
+ {
+  "path": "evidence\\tier2-recomputed-report.txt",
+  "bytes": 27736,
+  "sha256": "a20c53db94745739c90296349cb8372c0573db91e05cae9cb6167a62ae3fae0d"
+ },
+ {
+  "path": "evidence\\w07-per-cell-own-promise.csv",
+  "bytes": 2617,
+  "sha256": "2b7e8ca1acea71ef8af8b8970d432b0caf9e2c2815faa936c12e2e18075f36be"
+ },
+ {
+  "path": "papers\\bansal2019.pdf",
+  "bytes": 355732,
+  "sha256": "1c996c026e82041b3006233c505e597be6545b3655212e7b633f23ce2b748d9c"
+ },
+ {
+  "path": "papers\\bansal2019.txt",
+  "bytes": 25710,
+  "sha256": "8fda7c39c6adfbfbca052129974aff7c8d16d55abce2c8838bbfd6106311f616"
+ },
+ {
+  "path": "papers\\fielbaum2020.pdf",
+  "bytes": 8923873,
+  "sha256": "f2d952ff2ae60ba6aaf322118d9e34092f848cce787ddcf8afe663e4eb5ee7e5"
+ },
+ {
+  "path": "papers\\fielbaum2020.txt",
+  "bytes": 94445,
+  "sha256": "6b5be7ff0dfaa5a840b6224bdc5ee681e84a5ea78f139f6b5af9a039f118f79e"
+ },
+ {
+  "path": "papers\\fielbaum2023.pdf",
+  "bytes": 6879493,
+  "sha256": "101e216ac21583329c2bddbfe4881f5eed1066dd7fe6d80f55f5b4ac2c38800e"
+ },
+ {
+  "path": "papers\\fielbaum2023.txt",
+  "bytes": 121071,
+  "sha256": "9609d85b021e081ffd0e43b6055eefbb865df406377f3579f76c47aff3fbde4a"
+ },
+ {
+  "path": "papers\\gerzinic2023.pdf",
+  "bytes": 1680347,
+  "sha256": "a514390ee36ff76bc64c8c7682636471d39aa39e166f3ff7f00bbb745d91898b"
+ },
+ {
+  "path": "papers\\gerzinic2023.txt",
+  "bytes": 76526,
+  "sha256": "76e798a40df288178c67eb5844502abde567bfabf4edbb75bf15248116214aad"
+ },
+ {
+  "path": "papers\\haferkamp2024.pdf",
+  "bytes": 1347308,
+  "sha256": "01c1c83c66493124845e6061fdfbe4b06ca6253d557ea7ca729156ed9934f262"
+ },
+ {
+  "path": "papers\\haferkamp2024.txt",
+  "bytes": 75782,
+  "sha256": "21e80b956804d6ce0f215b40be8d2c3a71e3707e7a03d649dd837dedb434d4a0"
+ },
+ {
+  "path": "plans\\deadline\\AMENDMENTS.md",
+  "bytes": 5900,
+  "sha256": "3167cced07d0d0ae165c9e946bb411b0ef93aa4483f789f1d5ea81250ce96b65"
+ },
+ {
+  "path": "plans\\deadline\\predictions.csv",
+  "bytes": 20441,
+  "sha256": "6c5451a0e9ab61a0c4b12da48c6dd517623dfdb35aff7fa73494a79dacb6f981"
+ },
+ {
+  "path": "plans\\deadline\\PREREGISTRATION.md",
+  "bytes": 10090,
+  "sha256": "8eb6a68594e11c9cde55ef07812a1b95adc614d1b930b18a8cdfbbbb669cd451"
+ },
+ {
+  "path": "plans\\tang3\\t38\\GAMMA-t38-v1.json",
+  "bytes": 1189,
+  "sha256": "2bdd3b0e83a6cd3d09550a4551f063101c68a97b783fe49a8729f1ace9f198cd"
+ },
+ {
+  "path": "plans\\tang3\\t38\\split-t38-v1.json",
+  "bytes": 1723,
+  "sha256": "b72ac0f731fa7425891f364f0976054ae172a3117a507155ebe7e5c122ea03f1"
+ },
+ {
+  "path": "plans\\tang3\\t38\\T38-AMENDMENTS.md",
+  "bytes": 5515,
+  "sha256": "bc18413fd43b49d3f4d6f168f774b79ff3325223a2fb272a65a4cc389b16d300"
+ },
+ {
+  "path": "plans\\tang3\\t38\\T38-PLAN.md",
+  "bytes": 14301,
+  "sha256": "78954a15201bc8225a7513401b9a3c8f31a9016baa6820ef6de987c9033f8a60"
+ },
+ {
+  "path": "plans\\tang3\\w07x\\W07X-PLAN.md",
+  "bytes": 8207,
+  "sha256": "72f8b48122e47efc5c83c39c4f86cc0e9b8b5d441b75eef5ff67d72efa9b5be6"
+ },
+ {
+  "path": "source\\hinh\\co-che-ba-moc.pdf",
+  "bytes": 30205,
+  "sha256": "3c06ced1de4973d1026d1bb5d583e79ab7c3d65b6f3f465f4eead99c3907c055"
+ },
+ {
+  "path": "source\\hinh\\co-che-ba-moc.png",
+  "bytes": 27283,
+  "sha256": "718e52a30822227cc7b8ed60faf01cde68fe718156433845acc53bb4d2338232"
+ },
+ {
+  "path": "source\\hinh\\co-che-ba-moc.svg",
+  "bytes": 6336,
+  "sha256": "59b303a5c20b0a13d0e71ce01d74d1e4b83e28b55fc33676f40a8a8290b64e82"
+ },
+ {
+  "path": "source\\hinh\\logo-uet.png",
+  "bytes": 35309,
+  "sha256": "b7be8155f938655f3e108a2e260c48aca47e5a105de34a9ca7cd93138bae47e8"
+ },
+ {
+  "path": "source\\hinh\\service_budget_final.pdf",
+  "bytes": 37383,
+  "sha256": "00a890e656753343e100cbdb05cc27ed40292e97d07d7c97a282a2d5a5bccdd9"
+ },
+ {
+  "path": "source\\hinh\\service_budget_final.svg",
+  "bytes": 13992,
+  "sha256": "58022ecd54a6e66e13e7b9b2634fd7b1d581769edae79471e82c4af96a5fddca"
+ },
+ {
+  "path": "source\\hinh\\t38_paired_final.pdf",
+  "bytes": 38071,
+  "sha256": "1b98a9a90fedf7ce1b866196759186950c4d68bce1d78e95cb263559d84be38d"
+ },
+ {
+  "path": "source\\hinh\\t38_paired_final.svg",
+  "bytes": 36577,
+  "sha256": "21da1308f351c2040d37cbf8fcab3c5b88e0cda5d7464760ac179476a649a20b"
+ },
+ {
+  "path": "source\\hinh\\t38_scores_final.pdf",
+  "bytes": 38755,
+  "sha256": "8461197d2be52a969b851b727b76f1465398112f7d982048c46048831cc745e4"
+ },
+ {
+  "path": "source\\hinh\\t38_scores_final.svg",
+  "bytes": 21720,
+  "sha256": "63d1d7bd3ee090479fef95dec9e3e8cfff0ff700aedcdeb2665a6f36b858e269"
+ },
+ {
+  "path": "source\\hinh\\tang2-bon-ho-v2.pdf",
+  "bytes": 24550,
+  "sha256": "79a74a2c956dbdbfc0985100a3b59a136c40107e350598668ea4288cc398879f"
+ },
+ {
+  "path": "source\\hinh\\tang2-bon-ho.pdf",
+  "bytes": 24030,
+  "sha256": "848b4c4ccd5037c1ce251006417292d42b80b19d18ce27de3674434012c14633"
+ },
+ {
+  "path": "source\\hinh\\tier2_gates_final.pdf",
+  "bytes": 46196,
+  "sha256": "482fb9c4000d8c63eadaa10a7055c6a33458239e84292a4d7ce70c7ea7f12122"
+ },
+ {
+  "path": "source\\hinh\\tier2_gates_final.svg",
+  "bytes": 18259,
+  "sha256": "a4377cadc1116c0de972705897e4f92ea7826774c76a59aa87ebfc5211507494"
+ },
+ {
+  "path": "source\\main.tex",
+  "bytes": 3738,
+  "sha256": "6103c22a6309f1cbcbd145237ee0dd9b307574046692e97a63656d1da3b11ede"
+ },
+ {
+  "path": "source\\noi-dung\\00-bia.tex",
+  "bytes": 1858,
+  "sha256": "b506adfae526f5fdd955f2919f50cbccdac859eb06b48ac6b7253329b17a17f8"
+ },
+ {
+  "path": "source\\noi-dung\\01-loi-cam-on.tex",
+  "bytes": 931,
+  "sha256": "92e79e7e13af02a3f179593e7603131dfffbe8e1133a8869396361a5cbdb6956"
+ },
+ {
+  "path": "source\\noi-dung\\02-tom-tat.tex",
+  "bytes": 4880,
+  "sha256": "4cc5aab12e42df797c4e267f1c11453ec1803bb16e4dba81fbb5bad0742b45fc"
+ },
+ {
+  "path": "source\\noi-dung\\03-muc-luc.tex",
+  "bytes": 217,
+  "sha256": "85552e1ebfca2e4e3c8db3b9cbf284e637156f011f8f014021bade97633c92e8"
+ },
+ {
+  "path": "source\\noi-dung\\04-viet-tat.tex",
+  "bytes": 3288,
+  "sha256": "7a1b0e636890a2d69e6cb7e688f8bbc3ea3146e44288f0ef75b7d0cd0d30ed89"
+ },
+ {
+  "path": "source\\noi-dung\\05-chuong1.tex",
+  "bytes": 12851,
+  "sha256": "c3fbed0740c78704e4fe7c6de6dc9360d63475f2e3ffaf7a16db9d60f2d84cc7"
+ },
+ {
+  "path": "source\\noi-dung\\06-chuong2.tex",
+  "bytes": 17265,
+  "sha256": "393bb8c47c3b3f7c055c1c6a904fedd9323d693f42dbc2724ea771a9add6780b"
+ },
+ {
+  "path": "source\\noi-dung\\07-chuong3.tex",
+  "bytes": 41813,
+  "sha256": "48cf61d1bac9e02c4dd9b5dfbfcfaf8701af844bba39b5ff575a4369f0132054"
+ },
+ {
+  "path": "source\\noi-dung\\08-chuong4.tex",
+  "bytes": 682,
+  "sha256": "2a1586091898f664b20e18c467fc522b12d73385f9f21ad2d7d0e020fef02109"
+ },
+ {
+  "path": "source\\noi-dung\\08-hanche.tex",
+  "bytes": 5817,
+  "sha256": "774f31245f11b583cdbf8572e15d3f2bfbb6cfd4369aa31b80f274cbc05591c5"
+ },
+ {
+  "path": "source\\noi-dung\\08-kiemtra-phu.tex",
+  "bytes": 10981,
+  "sha256": "37c706f9d926045bdd9f8a2f7fc8c6613e2a811e8a9826a91ee42683d3044236"
+ },
+ {
+  "path": "source\\noi-dung\\08-nguon-ketqua.tex",
+  "bytes": 3884,
+  "sha256": "9dd8747fd92e0b92bc702af87f22b0d43260aeb7c6b475ed6d7a81987e54a279"
+ },
+ {
+  "path": "source\\noi-dung\\08-t38.tex",
+  "bytes": 16765,
+  "sha256": "ea3075873783563db50b2eba59367e7866535751935a85753508df75c32a174e"
+ },
+ {
+  "path": "source\\noi-dung\\08-thietlap-va-h6.tex",
+  "bytes": 19051,
+  "sha256": "587ae0c92c7b0dc0fd556d2affc830a051310b241ce94d7f1da3133a92d82d9e"
+ },
+ {
+  "path": "source\\noi-dung\\08-trongdiem-troidat.tex",
+  "bytes": 13304,
+  "sha256": "8b1276eb5b04200827524aa9505a7428d51886a706a8029f53274232d8d05124"
+ },
+ {
+  "path": "source\\noi-dung\\09-chuong5.tex",
+  "bytes": 11062,
+  "sha256": "ba17301cefc1e382df2864f43f69e774eac46f116ae4d4d691ff14799cced80b"
+ },
+ {
+  "path": "source\\noi-dung\\10-tai-lieu.tex",
+  "bytes": 6841,
+  "sha256": "127df5574cb737f39de09478b39e13f3192251c932aecebc1157f070d3a71ec5"
+ },
+ {
+  "path": "thesis_draft.pdf",
+  "bytes": 577258,
+  "sha256": "f1d962400b2c3fa761211e3ed9acd5964f641bbe7a442f0d900553471faf20c9"
+ }
+]

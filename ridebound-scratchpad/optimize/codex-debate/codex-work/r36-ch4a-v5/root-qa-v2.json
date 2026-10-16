@@ -1,0 +1,578 @@
+{
+  "change_count": 25,
+  "edits": [
+    {
+      "first": 2,
+      "last": 9,
+      "old": "% Chương 4, PHẦN A (mở chương, mục 4.1–4.5) — bản sửa v4 (2026-10-12), BẢN DÙNG ĐỂ GHÉP.\n% Theo ba bản nhận xét R25 (Codex, kiểm chứng sự kiện, người đọc và giảng viên); lý do từng thay đổi:\n% reviews/CH4A-REVISION-LOG.md; ghi chú: drafts/08-chuong4-phanA-v2-NOTES.md.\n% Bản 1 (08-chuong4-phanA.tex), v2 (lượt sửa đầu) và v3 (lượt rút gọn thứ nhất) giữ nguyên; v4 chỉ rút gọn câu\n% chữ để vừa ngân sách trang; mọi chỗ cắt so với v2 ghi ở NOTES. Phần B (mục 4.6–4.11) nối ngay sau tệp này.\n% Mỗi dòng \"% EV:\" trỏ tới EVIDENCE-REGISTER.md (A01…K52), EVIDENCE-REGISTER-ADDENDUM-1.md (N-xx, L1a-xx,\n% mục 0.x), EVIDENCE-REGISTER-ADDENDUM-2-CH3.md (X3-xx) hoặc EVIDENCE-REGISTER-ADDENDUM-4-CH4A.md (C4A-xx).\n% Không dùng gói mới: hình vẽ bằng TikZ thường (thư viện shapes.geometric đã nạp trong main.tex).\n",
+      "new": "% Chương 4, PHẦN A (mở chương, mục 4.1–4.5) — bản sửa v5 (2026-10-13), BẢN DÙNG ĐỂ GHÉP.\n% Sửa có mục tiêu từ drafts/08-chuong4-phanA-v4.tex theo R34-CH4A-V4-VERIFY-CODEX-v2.md và brief R36.\n% Quyết định trước: reviews/CH4A-REVISION-LOG-v2.md; ghi chú cũ: drafts/08-chuong4-phanA-v2-NOTES.md.\n% Bản v4 và mọi bản trước giữ nguyên. Tệp tiếp tục R36: 08-chuong4-phanA-v5-v2.tex;\n% từng thay đổi, bằng chứng mới và việc bàn giao: 08-chuong4-phanA-v5-CHANGES-v2.md. Phần B v10 nối sau tệp này.\n% Mỗi dòng \"% EV:\" trỏ tới EVIDENCE-REGISTER.md (A01…K52), các phụ lục 1 (N-xx, L1a-xx), 2 (X3-xx),\n% 4 (C4A-xx), 6 (N4B8-xx), hoặc sổ bổ sung R36-A01…03 trong tệp CHANGES-v2.md bên cạnh.\n% Không dùng gói mới: TikZ và array đã nạp trong main.tex; chỉ sửa độ rộng các bảng được brief chỉ ra.\n",
+      "reason": "Thông tin bản sửa, nhật ký quyết định đúng và sổ bằng chứng cục bộ.",
+      "evidence": "R34 §7.9; ROUND36-CH4A-V5-APPLY.md; main.tex:17,25."
+    },
+    {
+      "first": 66,
+      "last": 66,
+      "old": "từng đoạn đường; dưới đây gọi là hệ số tắc đường đo được. Thế giới mô phỏng không có nhiễu ngẫu nhiên, nên mỗi cặp\n",
+      "new": "từng đoạn đường; dưới đây gọi là hệ số tắc đường đo được. Mô phỏng không có nhiễu ngẫu nhiên, nên mỗi cặp\n",
+      "reason": "Bỏ thuật ngữ đã loại theo addendum.",
+      "evidence": "Addendum R36 ý 2; B-v8-NOTES §8.2; GLOSSARY-VI-v2 §E."
+    },
+    {
+      "first": 101,
+      "last": 101,
+      "old": "% EV (bộ sinh, bộ giải): A24; X3-17; X3-32 (giới hạn 2 yêu cầu áp cho cả lô của lượt, GEN:54-96); C4A-18 (tập tắc đường cố định: bộ chạy khác, NEW:13; giới hạn chưa kiểm)\n",
+      "new": "% EV (bộ sinh, bộ giải): X3-17; X3-32 (giới hạn 2 yêu cầu áp cho cả lô của lượt, GEN:54-96); C4A-18 (tập tắc đường cố định: bộ chạy khác, NEW:13; giới hạn chưa kiểm)\n",
+      "reason": "Bỏ anchor cũ mâu thuẫn về giới hạn của cả lô yêu cầu.",
+      "evidence": "R34 §7.9; X3-32 (GEN:54–96); giữ X3-17 và C4A-18."
+    },
+    {
+      "first": 106,
+      "last": 109,
+      "old": "Chương này dùng bốn tập kịch bản (Bảng~\\ref{bang:c4-taptu}). Từ các ngày 14--18/11/2018 dựng được 49 kịch bản, chia\ntheo cặp ngày và mẫu để ba khung giờ của một cặp nằm cùng một phía. 34 kịch bản làm tập kiểm tra chính; 15 kịch bản\ndành cho một phép hiệu chỉnh không dùng trong khóa luận. Ngày 14--16/11 là ngày thường, 17 và 18/11 là cuối tuần.\n% EV: B08 (SPLIT: chia theo nhóm ngày, mẫu); C17 (15 kịch bản hiệu chỉnh khoảng dự phòng γ); B09; B21 (11/11/2018 là Chủ nhật)\n",
+      "new": "Chương này dùng bốn tập kịch bản (Bảng~\\ref{bang:c4-taptu}). Từ các ngày 14--18/11/2018 dựng được 49 kịch bản, chia\ntheo cặp ngày và mẫu để ba khung giờ của một cặp nằm cùng một phía. 34 kịch bản làm tập kiểm tra chính; 15 kịch bản\ncòn lại không dùng để tính các kết quả phục vụ và đúng giờ của chương này. Các lần chạy trên 15 kịch bản đó chỉ tham\ngia phép kiểm tính nhất quán của sổ ở mục~\\ref{muc:kiemtra}. Ngày 14--16/11 là ngày thường, 17 và 18/11 là cuối tuần.\n% EV: B08 (SPLIT: chia theo nhóm ngày, mẫu); C17 (15 kịch bản hiệu chỉnh khoảng dự phòng γ); B09; B21 (11/11/2018 là Chủ nhật); A26; RUN38; T38:99-106; chương 3 v4-v3:725-727 (185 lần chạy gồm 15 lần hiệu chỉnh)\n",
+      "reason": "Thu hẹp loại trừ dữ liệu hiệu chỉnh đúng phạm vi kết quả phục vụ/đúng giờ.",
+      "evidence": "R34 §7.3; Ch3 v4-v3:725–727; RUN38:9–10; T38:99–106; agent-consistency-v2-output.txt."
+    },
+    {
+      "first": 118,
+      "last": 118,
+      "old": "\\setlength{\\tabcolsep}{3pt}\n",
+      "new": "\\setlength{\\tabcolsep}{2.5pt}\n",
+      "reason": "Thu bảng tập thử dưới bề rộng 16 cm, giữ nguyên các cột và nội dung.",
+      "evidence": "Addendum R36 ý 6; trial main.log:1751 (1,54718 pt); main.tex:28."
+    },
+    {
+      "first": 135,
+      "last": 136,
+      "old": "Chưa kiểm lại & 8\\\\\n% EV: B20; N-26 (8 lần chạy C-30, 601 khách được phục vụ); C4A-06 (864 = 8 × 108, INV:14-15,17-22); X3-10 (bộ chạy chiều tuyết chưa kiểm)\n",
+      "new": "Như tập chính & 8\\\\\n% EV: B20; N-26 (8 lần chạy C-30, 601 khách được phục vụ); C4A-06 (864 = 8 × 108, INV:14-15,17-22); N4B8-05 (CK8:65-72); R26 §Q8; agent-numeric-output-v2.txt (manifest, cấu hình phục hồi và DLL)\n",
+      "reason": "Thay lưu ý chưa kiểm bộ chạy chiều tuyết bằng kết quả đã kiểm.",
+      "evidence": "Addendum R36 ý 1; N4B8-05; CK8:65–72; R26 §Q8; agent-numeric-output-v2.txt."
+    },
+    {
+      "first": 141,
+      "last": 145,
+      "old": "Bản đã lưu là bản bộ chạy biên dịch và lưu lại, dùng chung cho tập kiểm tra chính, tập buổi sáng và các lần chạy trần\n120 giây; bản cũ chưa có luật phục hồi (mục~\\ref{muc:doichung}, \\ref{muc:kiemtra}). Số của chiều tuyết mang lưu ý bộ\nchạy chưa được kiểm lại. Trừ ghép tự do, mọi cấu hình dùng cùng bộ sinh, bộ kiểm và bộ chọn với luật C; điều phối\nkhông trần chỉ khác luật C trần 30 giây ở trần giờ trả. Ghép tự do không khóa gì và không qua bộ kiểm cam kết.\n% EV: A28; X3-10 (RW7:1-8; RW7X:6-8; R120:3-8; bộ chạy chiều tuyết chưa kiểm); B17; NEW:13 (bộ chạy cũ không có commitmentRecovery); A08; H01; A17; K50; X3-38 (HO:109, b1-rolling-cost)\n",
+      "new": "Bản đã lưu là bản bộ chạy biên dịch và lưu lại, dùng chung cho tập kiểm tra chính, tập buổi sáng, các lần chạy trần\n120 giây và chiều tuyết; bản cũ chưa có luật phục hồi (mục~\\ref{muc:doichung}, \\ref{muc:kiemtra}). Trừ ghép tự do, mọi\ncấu hình dùng cùng bộ sinh, bộ kiểm và bộ chọn với luật C; điều phối không trần chỉ khác luật C trần 30 giây ở trần giờ\ntrả. Ghép tự do không khóa gì và không qua bộ kiểm cam kết.\n% EV: A28; X3-10 (RW7:1-8; RW7X:6-8; R120:3-8); N4B8-05 (CK8:65-72); R26 §Q8; B17; NEW:13 (bộ chạy cũ không có commitmentRecovery); A08; H01; A17; K50; X3-38 (HO:109, b1-rolling-cost)\n",
+      "reason": "Bổ sung chiều tuyết vào danh sách dùng chung bản bộ chạy và bỏ lưu ý đã hết hiệu lực.",
+      "evidence": "Addendum R36 ý 1; N4B8-05; R26 §Q8; agent-numeric-output-v2.txt; Ch3 v4-v3:496–498,733–735."
+    },
+    {
+      "first": 161,
+      "last": 164,
+      "old": "Lời hứa đầu là giờ trả của kế hoạch lúc khách xác nhận đặt xe, tính với thời gian đi lúc đó. Tính từ lúc đặt xe, nó\ndài trung bình 14,15 phút khi không trần và 14,12 phút dưới luật C trần 30 giây (gộp theo khách), nên luật C không hứa\nxa hơn.\n% EV: A13; A05; B14 (BURD:5,11: promised door-to-door 14,15 / 14,12 phút)\n",
+      "new": "Lời hứa đầu là giờ trả của kế hoạch lúc khách xác nhận đặt xe, tính với thời gian đi lúc đó. Tính từ lúc gọi xe, độ dài\ntrung bình của lời hứa là 14,15 phút trên 2.434 khách khi không trần và 14,12 phút trên 2.338 khách dưới luật C trần 30\ngiây, gộp theo khách được phục vụ. Hai giá trị trung bình gần nhau trên hai tập khách khác nhau; phép so này không nói\nvề độ dài lời hứa của từng khách.\n% EV: A13; A05; B14 (BURD:5,11); R36-A03 (p0 trừ request.arrivalTimeMs, gộp theo khách); agent-numeric-output-v2.txt\n",
+      "reason": "Nêu mốc lúc gọi xe, mẫu số và giới hạn suy luận về hai trung bình.",
+      "evidence": "R34 §7.6; B14; MAIN:128–129; R36-A03; agent-numeric-output-v2.txt (68 checkpoint cuối)."
+    },
+    {
+      "first": 206,
+      "last": 207,
+      "old": "(mục~\\ref{muc:doichung}) & Trong mỗi kịch bản, chia cho số lượt quyết định đã được bộ mô phỏng xác nhận áp dụng;\nrồi lấy trung bình theo kịch bản. Số gộp ghi riêng & Luật có tự giữ được nghĩa vụ không\\\\\n",
+      "new": "(mục~\\ref{muc:doichung}) & Chia cho số lượt quyết định đã được bộ mô phỏng xác nhận áp dụng; gộp theo\nlượt quyết định, mỗi lượt đếm một lần & Luật có tự giữ được nghĩa vụ không\\\\\n",
+      "reason": "Định nghĩa cách gộp khớp bảng nghĩa vụ chuyển sang số đếm.",
+      "evidence": "R34 §7.2; C4A-10; X3-30; R36-A01."
+    },
+    {
+      "first": 209,
+      "last": 210,
+      "old": "$a - p_0 > B$; luật trần độ dời khách thấy: $\\sum|z| > B$ & Trong mỗi kịch bản, chia cho số khách được phục vụ;\nrồi lấy trung bình theo kịch bản. Số gộp ghi riêng & Luật có giữ được điều nó hứa không\\\\\n",
+      "new": "$a - p_0 > B$; luật trần độ dời khách thấy: $\\sum|z| > B$ & Chia cho số khách được phục vụ; gộp theo\nkhách & Luật có giữ được điều nó hứa không\\\\\n",
+      "reason": "Mẫu số của khách bị phá lời hứa khớp cách gộp đã chọn.",
+      "evidence": "R34 §7.2; N-21; R36-A01."
+    },
+    {
+      "first": 231,
+      "last": 231,
+      "old": "C trần 30 giây trên chính tập kiểm tra chính, kể cả các phép sàng lọc ở 120 giây (mục~\\ref{muc:c4-dieuphoi},\n",
+      "new": "C trần 30 giây trên chính tập kiểm tra chính, kể cả các phép tính thử ở 120 giây (mục~\\ref{muc:c4-dieuphoi},\n",
+      "reason": "Phân biệt phép tính thử trần với phép sàng lọc bộ chọn ở phần B.",
+      "evidence": "Addendum R36 ý 3; B-v8-NOTES §8.3; C4A-11; B-v10:24–29."
+    },
+    {
+      "first": 261,
+      "last": 265,
+      "old": "\\small\n\\begin{tabular}{@{}lrrrrr@{}}\n\\toprule\n\\textbf{Cấu hình} & \\textbf{Phục vụ} & \\textbf{Trễ quá 60 s} & \\textbf{Không trễ quá 60 s} &\n\\textbf{Không trễ quá 120 s} & \\textbf{Khách đi chung}\\\\\n",
+      "new": "\\small\n\\setlength{\\tabcolsep}{4pt}\n\\begin{tabular}{@{}p{\\dimexpr .12\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .13\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .16\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .22\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .23\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .14\\linewidth-2\\tabcolsep\\relax}@{}}\n\\toprule\n\\textbf{Cấu hình} & \\textbf{Phục vụ} & \\textbf{Trễ quá 60 s} & \\textbf{Không trễ quá 60 s} &\n\\textbf{Không trễ quá 120 s} & \\textbf{Khách đi chung}\\\\\n",
+      "reason": "Giới hạn bề rộng bảng chính bằng cột tự xuống dòng; mọi tiêu đề và ô giữ nguyên.",
+      "evidence": "Addendum R36 ý 6; trial main.log:1817 (33,99846 pt); array đã nạp ở main.tex:17."
+    },
+    {
+      "first": 302,
+      "last": 305,
+      "old": "\\caption{Nghĩa vụ của chính từng luật trên tập kiểm tra chính. Hai cột tỉ lệ là trung bình theo kịch bản (34\nkịch bản); trong mỗi kịch bản, mẫu số lần lượt là số lượt quyết định được xác nhận và số khách được phục vụ. Số gộp\nghi riêng trong lời văn. Định nghĩa ``bị ép'' và ``bị phá lời hứa'' của từng luật ở Bảng~\\ref{bang:c4-chiso}. Ở\nhàng luật C, các số 0 là điều Nhận xét~\\ref{nx:giunguyen} cho trước dưới giả thiết (N).}\n",
+      "new": "\\caption{Nghĩa vụ của chính từng luật trên tập kiểm tra chính (34 kịch bản). Hai cột đầu ghi số đếm gộp: số quyết\nđịnh bị ép trên số quyết định được xác nhận, và số khách bị phá lời hứa trên số khách được phục vụ. Cột cuối ghi số\nkịch bản có ít nhất một khách bị phá lời hứa trên 34 kịch bản. Định nghĩa ở Bảng~\\ref{bang:c4-chiso}. Ở hàng luật C,\ncác số 0 là số đo trên tập đã chạy, phù hợp với tính chất có điều kiện ở Nhận xét~\\ref{nx:giunguyen}.}\n",
+      "reason": "Chú thích phân biệt số đếm gộp với trung bình theo kịch bản; số 0 là quan sát phù hợp tính chất có điều kiện.",
+      "evidence": "R34 §7.1–2; R36-A01; Ch3 v4-v3:371–390."
+    },
+    {
+      "first": 307,
+      "last": 317,
+      "old": "\\small\n\\begin{tabular}{@{}lrrr@{}}\n\\toprule\n\\textbf{Cấu hình} & \\textbf{\\begin{tabular}[b]{@{}r@{}}Quyết định\\\\ bị ép (\\%)\\end{tabular}} &\n\\textbf{\\begin{tabular}[b]{@{}r@{}}Khách bị phá\\\\ lời hứa (\\%)\\end{tabular}} &\n\\textbf{\\begin{tabular}[b]{@{}r@{}}Kịch bản có ít nhất\\\\ một khách bị phá\\end{tabular}}\\\\\n\\midrule\nC-30 & 0 & 0 & 0\\\\\nM$^{+}$-30 & 41,3 & 14,5 & 28\\\\\nM$^{+}$-60 & 22,5 & 4,2 & 22\\\\\nV-30 & 53,8 & 21,6 & 34\\\\\n",
+      "new": "\\small\n\\setlength{\\tabcolsep}{4pt}\n\\begin{tabular}{@{}p{\\dimexpr .12\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .28\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .31\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .29\\linewidth-2\\tabcolsep\\relax}@{}}\n\\toprule\n\\textbf{Cấu hình} & \\textbf{Quyết định bị ép / được xác nhận} &\n\\textbf{Khách bị phá lời hứa / được phục vụ} &\n\\textbf{Kịch bản có khách bị phá / tổng kịch bản}\\\\\n\\midrule\nC-30 & 0 / 20.101 & 0 / 2.338 & 0 / 34\\\\\nM$^{+}$-30 & 7.710 / 20.103 & 289 / 2.338 & 28 / 34\\\\\nM$^{+}$-60 & 4.031 / 20.163 & 79 / 2.347 & 22 / 34\\\\\nV-30 & 10.442 / 20.090 & 456 / 2.336 & 34 / 34\\\\\n",
+      "reason": "Thay bốn hàng phần trăm thiếu cặp đếm bằng số đếm có mẫu số; khai báo rõ cách gộp.",
+      "evidence": "R34 §7.2 (phương án ngắn); R36-A01; agent-numeric-output-v2.txt (170 tệp IVC)."
+    },
+    {
+      "first": 321,
+      "last": 321,
+      "old": "% EV: C13 (trung bình theo kịch bản; kịch bản có ≥ 1 phá hứa 0/28/22/34); N-21 (C-30 0/34 kịch bản, 0 quyết định bị ép); X3-30; A22\n",
+      "new": "% EV: R36-A01 (sổ bổ sung trong CHANGES-v2.md; 170 tệp IVC và đối chiếu PAIRS); N-21; X3-30; A22\n",
+      "reason": "Đăng ký và dẫn trực tiếp các tổng mới; không gán chúng cho một mã sổ cũ không có.",
+      "evidence": "R34 §7.2; R36-A01; agent-numeric-output-v2.txt."
+    },
+    {
+      "first": 323,
+      "last": 325,
+      "old": "Cách đọc bảng: với luật hạn chót 30 giây, trung bình mỗi kịch bản có 41,3\\% lượt quyết định bị ép và 14,5\\% khách được\nphục vụ tới muộn hơn lời hứa đầu quá 30 giây. Có 28 trong 34 kịch bản có ít nhất một khách như vậy.\n% EV: C13; N-21\n",
+      "new": "Cách đọc bảng: luật hạn chót 30 giây có 7.710 trong 20.103 lượt quyết định bị ép và 289 trong 2.338 khách tới muộn\nhơn lời hứa đầu quá 30 giây; những khách này nằm ở 28 trong 34 kịch bản.\n% EV: N-21; R36-A01\n",
+      "reason": "Câu đọc bảng theo số đếm gộp, không giữ tỉ lệ trung bình cũ.",
+      "evidence": "R34 §7.2; N-21; R36-A01."
+    },
+    {
+      "first": 327,
+      "last": 332,
+      "old": "Luật C không có quyết định nào bị ép và không vượt trần của khách nào ở cả 34 kịch bản. Đây là điều Nhận\nxét~\\ref{nx:giunguyen} cho trước dưới giả thiết (N), không phải phát hiện thực nghiệm: phương án giữ nguyên kế hoạch\ncó phần dời do điều phối bằng 0 nên không bị luật C loại. Điều phối không trần cũng có 0 trong 20.760 quyết định bị\nép, và nhận xét không bảo đảm giờ trả thực tế. Luật hạn chót so giờ trả mới với lời hứa đầu, nên riêng phần thay đổi\nkhi giữ nguyên kế hoạch cũng có thể làm nó bị ép (ví dụ 40 giây ở mục~\\ref{muc:doichung}).\n% EV: A21; A22; N-21; X3-16 (U 0 / 20.760); X3-30; A10; K05\n",
+      "new": "Trên cả 34 kịch bản đã chạy, luật C không có quyết định bị ép và không khách nào vượt trần. Theo Nhận\nxét~\\ref{nx:giunguyen}, nếu giả thiết (N) đúng ở lượt đang xét và mọi khách có lời hứa của xe có $0 \\le L_r \\le B$,\nphương án giữ nguyên không thêm phần dời do điều phối nên vẫn qua kiểm tra trần. Khi (N) đúng ở mọi lượt, trần được\ngiữ từ lúc xác nhận. Các số đo ở đây phù hợp với tính chất đó; nhận xét không bảo đảm giờ trả thực tế. Điều phối không\ntrần cũng có 0 trong 20.760 quyết định bị ép. Luật hạn chót so giờ trả mới với lời hứa đầu, nên phần thay đổi khi giữ\nnguyên kế hoạch vẫn có thể làm xe bị ép (mục~\\ref{muc:doichung}).\n% EV: A21; A22; N-21; X3-16 (U 0 / 20.760); X3-30; A10; K05; Ch3 v4-v3:371-390; R36-A01\n",
+      "reason": "Khôi phục điều kiện sổ hợp lệ ở lượt đang xét và (N) ở mọi lượt; tách số đo khỏi hệ quả có điều kiện.",
+      "evidence": "R34 §7.1; Ch3 v4-v3:371–390; A22; R36-A01."
+    },
+    {
+      "first": 334,
+      "last": 340,
+      "old": "Tính gộp, luật hạn chót 30 giây bị ép ở 7.710 trong 20.103 lượt quyết định (38,4\\%) và phá lời hứa với 289 trong 2.338\nkhách (12,4\\%). Gánh nặng dồn vào khung 7 giờ: cả 9 kịch bản có khách bị phá, với trung bình theo kịch bản 36,5\\%\nkhách bị phá và 75,6\\% lượt quyết định bị ép. Ở khung 17 giờ chỉ 5 trong 11 kịch bản có khách bị phá, với 1,0\\% và\n5,0\\% (cũng trung bình theo kịch bản). Ở mức 60 giây, các tỉ lệ toàn tập giảm nhưng không về 0. Luật trần độ dời khách\nthấy bị ép nhiều nhất, phù hợp với định nghĩa: tổng độ lớn các lần cập nhật mà nó kiểm không nhỏ hơn độ lùi so với lời\nhứa đầu (công thức~\\eqref{eq:dongnhat}).\n% EV: N-21 (gộp 7.710/20.103 = 38,35%; 289/2.338 = 12,36%; khung 7 giờ 9/9, 36,53%, 75,62%; 17 giờ 5/11, 1,04%, 4,99% — đều trung bình theo kịch bản); C14; C13 (M⁺-60 22,5% / 4,2%; V-30 53,8%, 34/34); A11; A12; X3-33 (eq:dongnhat: Σ|z| ≥ |Σz| = |p_n − p_0|)\n",
+      "new": "Tính gộp, luật hạn chót 30 giây bị ép ở 7.710 trong 20.103 lượt quyết định (38,4\\%) và phá lời hứa với 289 trong 2.338\nkhách (12,4\\%). Gánh nặng dồn vào khung 7 giờ: cả 9 kịch bản có khách bị phá lời hứa, với 181 trong 509 khách được phục\nvụ và 3.447 trong 4.564 lượt quyết định bị ép. Ở khung 17 giờ, 5 trong 11 kịch bản có khách bị phá, với 8 trong 852\nkhách và 328 trong 7.163 lượt quyết định bị ép. Các số này được gộp theo từng khung giờ. Ở mức 60 giây, các tỉ lệ toàn\ntập giảm nhưng không về 0. Luật trần độ dời khách thấy bị ép nhiều nhất, phù hợp với định nghĩa: tổng độ lớn các lần\ncập nhật mà nó kiểm không nhỏ hơn độ lùi so với lời hứa đầu (công thức~\\eqref{eq:dongnhat}).\n% EV: N-21 (gộp 7.710/20.103 và 289/2.338); R36-A02 (cặp đếm theo khung giờ, sổ bổ sung trong CHANGES-v2.md); C14; C13; R36-A01; A11; A12; X3-33 (eq:dongnhat: Σ|z| ≥ |Σz| = |p_n − p_0|)\n",
+      "reason": "Thay trung bình theo khung giờ thiếu tử số bằng cặp đếm và nêu cách gộp.",
+      "evidence": "R34 §7.2; R36-A02; agent-numeric-output-v2.txt; đối chiếu SUPP:17–19."
+    },
+    {
+      "first": 344,
+      "last": 347,
+      "old": "hứa đầu quá 30 giây, luật C có 292 trong 2.338 khách (12,5\\%), so với 289 khách (12,4\\%) của luật hạn chót. Trung bình\ntheo kịch bản là 14,6\\% so với 14,5\\%, và cả hai đều có khách như vậy ở 28 kịch bản. Vậy về độ đúng giờ, hai luật gần\nnhư ngang nhau; luật C khác ở chỗ chỉ hứa phần mà bộ điều phối kiểm soát được, nên giữ được lời hứa đó.\n% EV: C13; K05; C4A-01 (CK4A check: C-30 292/2.338 = 12,49%, TB theo kịch bản 14,59%, 28/34; khớp ADD1:17 late30 292 và TSV); N-21\n",
+      "new": "hứa đầu quá 30 giây, luật C có 292 trong 2.338 khách (12,5\\%), so với 289 khách (12,4\\%) của luật hạn chót. Cả hai\nluật đều có khách tới muộn hơn lời hứa đầu quá 30 giây ở 28 trong 34 kịch bản. Vậy về độ đúng giờ, hai luật gần như\nngang nhau; luật C khác ở chỗ chỉ hứa phần mà bộ điều phối kiểm soát được, nên giữ được lời hứa đó.\n% EV: C13; K05; C4A-01 (C-30 292/2.338 = 12,49%, 28/34); N-21; R36-A01\n",
+      "reason": "Bỏ hai trung bình không có cặp đếm, giữ cặp gộp và bổ sung 28 trên 34.",
+      "evidence": "R34 §7.2; C4A-01; N-21; R36-A01."
+    },
+    {
+      "first": 435,
+      "last": 438,
+      "old": "dời lớn nhất của một khách là 29,2 giây ở trần 30 giây và 116,5 giây ở trần 120 giây. Trên 8 kịch bản chiều tuyết (bộ\nchạy chưa kiểm lại), 8 trong 601 khách được phục vụ bị dời, lớn nhất 25,2 giây; không ai vượt trần và không quyết định\nnào bị ép trong 5.067 lượt.\n% EV: F03; X3-11 (D chỉ tính sau khi chạy); N-28; N-26 (thay anchor F13 của RD §8 mục 4, ADDENDUM-1 mục 0.4); X3-10 (bộ chạy chiều tuyết chưa kiểm)\n",
+      "new": "dời lớn nhất của một khách là 29,2 giây ở trần 30 giây và 116,5 giây ở trần 120 giây. Trên 8 kịch bản chiều tuyết,\n8 trong 601 khách được phục vụ bị dời, lớn nhất 25,2 giây; không ai vượt trần và không quyết định nào bị ép trong\n5.067 lượt.\n% EV: F03; X3-11 (D chỉ tính sau khi chạy); N-28; N-26 (thay anchor F13 của RD §8 mục 4, ADDENDUM-1 mục 0.4); N4B8-05 (CK8:65-72); R26 §Q8\n",
+      "reason": "Bỏ lưu ý bộ chạy chiều tuyết chưa kiểm; giữ nguyên tất cả số đo.",
+      "evidence": "Addendum R36 ý 1; N4B8-05; R26 §Q8; N-26."
+    },
+    {
+      "first": 444,
+      "last": 446,
+      "old": "ở đúng ba chỗ cùng kiểu, ở mức 90 hoặc 120 giây; mỗi chỗ luật C nhận thêm một khách. Đây là phép tính trên giờ trả dự\nkiến của mô hình, không phải phép đo nhân quả.\n% EV: D05 (79,0 + 68,3 s; 60,9 + 61,2 s); C4A-12 (W07XM:6,11,16: \"sum x 79.0, sum c 0.0, p_last − p_first 79.0\", c = 68,3 s, x = 0,1 s; W07X:54-62: \"khách đang có\", giai đoạn chờ đón hay trên xe không ghi); K04\n",
+      "new": "ở đúng ba chỗ cùng kiểu, ở mức 90 hoặc 120 giây; mỗi chỗ luật C nhận thêm một khách. Đây là phép so hai luật trên\ngiờ trả dự kiến tại cùng một trạng thái của mô hình, không phải phép đo nhân quả.\n% EV: D05 (79,0 + 68,3 s; 60,9 + 61,2 s); C4A-12 (W07XM:6,11,16: \"sum x 79.0, sum c 0.0, p_last − p_first 79.0\", c = 68,3 s, x = 0,1 s; W07X:54-62: \"khách đang có\", giai đoạn chờ đón hay trên xe không ghi); K04\n",
+      "reason": "Khôi phục phạm vi so hai luật tại cùng trạng thái dự kiến.",
+      "evidence": "R34 §7.7; D05; C4A-12 (W07XM:6,11,16)."
+    },
+    {
+      "first": 453,
+      "last": 454,
+      "old": "cầu, và 495 yêu cầu trong số đó cuối cùng vẫn được phục vụ.\n% EV: X3-05 (nội dung bản ghi chặn); D13 (BUD:2-5: 148 = 116 + 32; 1.186 = 111 + 1.075); K10; C4A-09 (BUDPY:29-44: nhóm 1.186 là phần dư không có bản ghi chặn được ghi, không phải lý do cấu trúc đã chứng minh); D16 (SF:2: 643 cặp, 495 phục vụ, 148 từ chối); E01 (845)\n",
+      "new": "cầu, và 495 yêu cầu trong số đó cuối cùng vẫn được phục vụ.\nCác số đếm theo yêu cầu trong đoạn này tính theo từng cặp kịch bản và yêu cầu.\n% EV: X3-05 (nội dung bản ghi chặn); D13 (BUD:2-5: 148 = 116 + 32; 1.186 = 111 + 1.075); K10; C4A-09 (BUDPY:29-44: nhóm 1.186 là phần dư không có bản ghi chặn được ghi, không phải lý do cấu trúc đã chứng minh); D16 (SF:2: 643 cặp, 495 phục vụ, 148 từ chối); E01 (845)\n",
+      "reason": "Nêu khóa đếm kịch bản/yêu cầu của nhóm từ chối và bản ghi chặn.",
+      "evidence": "R34 §7.7; D13; D16; C4A-09 (BUDPY:29–44); BUDPY."
+    },
+    {
+      "first": 546,
+      "last": 549,
+      "old": "không trễ quá 60 giây. Tỉ lệ lượt quyết định luật hạn chót bị ép (trung bình theo kịch bản) giảm từ 58,6\\% ở mức 30\ngiây xuống 6,6\\% ở 120 giây và 1,7\\% ở 240--300 giây; luật C luôn 0\\%. Ở cả tám mức, hai luật phục vụ chênh nhau không\nquá 2 lượt.\n% EV: D01; K12; D03 (+6 / +4 / +2); D04 (trung bình theo kịch bản; W07X:20-29); X3-28 (luật hạn chót chạy 30–300 s ở tập này)\n",
+      "new": "không trễ quá 60 giây. Luật C không có quyết định bị ép trong 64 lần chạy của tám mức trần này. Ở cả tám mức, hai\nluật phục vụ chênh nhau không quá 2 lượt.\n% EV: D01; K12; D03 (+6 / +4 / +2); D04; X3-28 (tám mức 30–300 s); E01 (64 lần C, 0 bị ép); agent-numeric-output-v2.txt (0 / 44.270 lượt quyết định)\n",
+      "reason": "Bỏ dãy trung bình thiếu cặp đếm; giữ kết luận có số lần chạy xác định.",
+      "evidence": "R34 §7.2; E01; D04; A-v4:719; agent-numeric-output-v2.txt (64 transcript buổi sáng)."
+    },
+    {
+      "first": 712,
+      "last": 716,
+      "old": "\\small\n\\begin{tabular}{@{}p{6.0cm}rrrr@{}}\n\\toprule\n\\textbf{Lần chạy} & \\textbf{Số lần chạy} & \\textbf{Bản ghi chặn} & \\textbf{Chỉ do cộng dồn} &\n\\textbf{\\begin{tabular}[b]{@{}r@{}}Khách phục vụ bị\\\\ dời từ hai lần\\end{tabular}}\\\\\n",
+      "new": "\\small\n\\setlength{\\tabcolsep}{4pt}\n\\begin{tabular}{@{}>{\\raggedright\\arraybackslash}p{\\dimexpr .38\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .11\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .16\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .16\\linewidth-2\\tabcolsep\\relax}\n>{\\raggedleft\\arraybackslash}p{\\dimexpr .19\\linewidth-2\\tabcolsep\\relax}@{}}\n\\toprule\n\\textbf{Lần chạy} & \\textbf{Số lần chạy} & \\textbf{Bản ghi chặn} & \\textbf{Chỉ do cộng dồn} &\n\\textbf{Khách phục vụ bị dời từ hai lần}\\\\\n",
+      "reason": "Thu bảng kiểm bản ghi chặn bằng cột tự xuống dòng; giữ nguyên tiêu đề và ô số.",
+      "evidence": "Addendum R36 ý 6; trial main.log:1827 (60,8016 pt); main.tex:17,28."
+    },
+    {
+      "first": 724,
+      "last": 724,
+      "old": "% EV: N-26 (163 bản ghi, 0 chỉ do cộng dồn, ≥ 2 lần 0); X3-10 (bộ chạy chưa kiểm)\n",
+      "new": "% EV: N-26 (163 bản ghi, 0 chỉ do cộng dồn, ≥ 2 lần 0); N4B8-05 (bộ chạy chiều tuyết đã kiểm, CK8:65-72); R26 §Q8\n",
+      "reason": "Xóa thêm lưu ý chiều tuyết hết hiệu lực trong EV của bảng cộng dồn.",
+      "evidence": "Addendum R36 ý 1; N4B8-05; R26 §Q8."
+    }
+  ],
+  "base_sha256": "f26f2d6d0f3afd78f328b77c686fc8e52430f5bbcc9bf0627b77e1251941c17e",
+  "output_sha256": "5aa448fc7f7beb7f35078edab8e019ac38a1955a489b1321913668417490ae8b",
+  "old_counts": [
+    {
+      "section": "Mở chương",
+      "prose": 122,
+      "floats": 198
+    },
+    {
+      "section": "4.1",
+      "prose": 875,
+      "floats": 876
+    },
+    {
+      "section": "4.2",
+      "prose": 1151,
+      "floats": 336
+    },
+    {
+      "section": "4.3",
+      "prose": 728,
+      "floats": 183
+    },
+    {
+      "section": "4.4",
+      "prose": 872,
+      "floats": 644
+    },
+    {
+      "section": "4.5",
+      "prose": 685,
+      "floats": 114
+    }
+  ],
+  "new_counts": [
+    {
+      "section": "Mở chương",
+      "prose": 122,
+      "floats": 198
+    },
+    {
+      "section": "4.1",
+      "prose": 920,
+      "floats": 859
+    },
+    {
+      "section": "4.2",
+      "prose": 1174,
+      "floats": 364
+    },
+    {
+      "section": "4.3",
+      "prose": 748,
+      "floats": 183
+    },
+    {
+      "section": "4.4",
+      "prose": 853,
+      "floats": 644
+    },
+    {
+      "section": "4.5",
+      "prose": 685,
+      "floats": 114
+    }
+  ],
+  "prose_growth_percent": 1.5565080081209048,
+  "visible_growth_percent": 1.1792452830188704,
+  "syntax": {
+    "label_count": 23,
+    "labels": [
+      "chuong:thucnghiem",
+      "bang:c4-lotrinh",
+      "muc:c4-thietlap",
+      "muc:c4-kichban",
+      "bang:c4-thamso",
+      "muc:c4-taptu",
+      "bang:c4-taptu",
+      "muc:c4-chiso",
+      "bang:c4-chiso",
+      "muc:c4-thamdo",
+      "muc:c4-ketqua",
+      "bang:c4-chinh",
+      "bang:c4-nghiavu",
+      "bang:c4-phanbotre",
+      "muc:c4-dieuphoi",
+      "bang:c4-doidieuphoi",
+      "muc:c4-chontran",
+      "bang:c4-codinh",
+      "bang:c4-sang",
+      "bang:c4-tran120",
+      "hinh:c4-tran",
+      "muc:c4-congdon",
+      "bang:c4-congdon"
+    ],
+    "references": [
+      "bang:c4-chinh",
+      "bang:c4-chiso",
+      "bang:c4-codinh",
+      "bang:c4-congdon",
+      "bang:c4-doidieuphoi",
+      "bang:c4-lotrinh",
+      "bang:c4-nghiavu",
+      "bang:c4-phanbotre",
+      "bang:c4-sang",
+      "bang:c4-taptu",
+      "bang:c4-thamso",
+      "bang:c4-tran120",
+      "bang:kiemtran",
+      "bang:luat",
+      "bang:rangbuoc",
+      "chuong:thucnghiem",
+      "eq:dongnhat",
+      "eq:so",
+      "hinh:c4-tran",
+      "muc:bamoc",
+      "muc:c1-cauhoi",
+      "muc:c4-chontran",
+      "muc:c4-congdon",
+      "muc:c4-dem",
+      "muc:c4-dieuphoi",
+      "muc:c4-dubao",
+      "muc:c4-hople",
+      "muc:c4-ketqua",
+      "muc:c4-taptu",
+      "muc:c4-tuyet",
+      "muc:c4-vaitro",
+      "muc:doichung",
+      "muc:dubao",
+      "muc:kiemtra",
+      "muc:kientruc",
+      "muc:luatc",
+      "muc:so",
+      "nx:giunguyen",
+      "phuluc:A",
+      "phuluc:C"
+    ],
+    "cite_keys": [
+      "engelhardt2026",
+      "schulz2026"
+    ],
+    "braces_balanced": true,
+    "environments_balanced": true,
+    "dollar_count_even": true
+  },
+  "reference_owners": {
+    "bang:c4-chinh": [
+      "A-v5-v2"
+    ],
+    "bang:c4-chiso": [
+      "A-v5-v2"
+    ],
+    "bang:c4-codinh": [
+      "A-v5-v2"
+    ],
+    "bang:c4-congdon": [
+      "A-v5-v2"
+    ],
+    "bang:c4-doidieuphoi": [
+      "A-v5-v2"
+    ],
+    "bang:c4-lotrinh": [
+      "A-v5-v2"
+    ],
+    "bang:c4-nghiavu": [
+      "A-v5-v2"
+    ],
+    "bang:c4-phanbotre": [
+      "A-v5-v2"
+    ],
+    "bang:c4-sang": [
+      "A-v5-v2"
+    ],
+    "bang:c4-taptu": [
+      "A-v5-v2"
+    ],
+    "bang:c4-thamso": [
+      "A-v5-v2"
+    ],
+    "bang:c4-tran120": [
+      "A-v5-v2"
+    ],
+    "bang:kiemtran": [
+      "Ch3-v4-v3"
+    ],
+    "bang:luat": [
+      "Ch3-v4-v3"
+    ],
+    "bang:rangbuoc": [
+      "Ch3-v4-v3"
+    ],
+    "chuong:thucnghiem": [
+      "A-v5-v2"
+    ],
+    "eq:dongnhat": [
+      "Ch3-v4-v3"
+    ],
+    "eq:so": [
+      "Ch3-v4-v3"
+    ],
+    "hinh:c4-tran": [
+      "A-v5-v2"
+    ],
+    "muc:bamoc": [
+      "Ch3-v4-v3"
+    ],
+    "muc:c1-cauhoi": [
+      "Ch1-v3"
+    ],
+    "muc:c4-chontran": [
+      "A-v5-v2"
+    ],
+    "muc:c4-congdon": [
+      "A-v5-v2"
+    ],
+    "muc:c4-dem": [
+      "B-v10"
+    ],
+    "muc:c4-dieuphoi": [
+      "A-v5-v2"
+    ],
+    "muc:c4-dubao": [
+      "B-v10"
+    ],
+    "muc:c4-hople": [
+      "B-v10"
+    ],
+    "muc:c4-ketqua": [
+      "A-v5-v2"
+    ],
+    "muc:c4-taptu": [
+      "A-v5-v2"
+    ],
+    "muc:c4-tuyet": [
+      "B-v10"
+    ],
+    "muc:c4-vaitro": [
+      "B-v10"
+    ],
+    "muc:doichung": [
+      "Ch3-v4-v3"
+    ],
+    "muc:dubao": [
+      "Ch3-v4-v3"
+    ],
+    "muc:kiemtra": [
+      "Ch3-v4-v3"
+    ],
+    "muc:kientruc": [
+      "Ch3-v4-v3"
+    ],
+    "muc:luatc": [
+      "Ch3-v4-v3"
+    ],
+    "muc:so": [
+      "Ch3-v4-v3"
+    ],
+    "nx:giunguyen": [
+      "Ch3-v4-v3"
+    ],
+    "phuluc:A": [
+      "Appx-v2"
+    ],
+    "phuluc:C": [
+      "Appx-v2"
+    ]
+  },
+  "paired_ch4_refs": {
+    "B-v10": [
+      "bang:c4-dem",
+      "bang:c4-dubao",
+      "bang:c4-nghiavu",
+      "bang:c4-phanbotre",
+      "bang:c4-sangloc",
+      "bang:c4-tran120",
+      "bang:c4-tuyet",
+      "hinh:c4-so",
+      "muc:c4-congdon",
+      "muc:c4-dem",
+      "muc:c4-dubao",
+      "muc:c4-thaoluan"
+    ],
+    "Ch3-v4-v3": [
+      "muc:c4-congdon",
+      "muc:c4-dubao",
+      "muc:c4-hople",
+      "muc:c4-thietlap",
+      "muc:c4-vaitro"
+    ]
+  },
+  "table_widths": {
+    "scenario-set": {
+      "column_cm": 15,
+      "intercolumn_spaces": 10,
+      "tabcolsep_pt": 2.5,
+      "width_cm": 15.878649508786495,
+      "available_cm": 16
+    },
+    "main-results": {
+      "fractions": [
+        0.12,
+        0.13,
+        0.16,
+        0.22,
+        0.23,
+        0.14
+      ],
+      "columns": 6,
+      "outer_width": "linewidth - 2 tabcolsep = linewidth - 8 pt"
+    },
+    "obligations": {
+      "fractions": [
+        0.12,
+        0.28,
+        0.31,
+        0.29
+      ],
+      "columns": 4,
+      "outer_width": "linewidth - 2 tabcolsep = linewidth - 8 pt"
+    },
+    "cumulative": {
+      "fractions": [
+        0.38,
+        0.11,
+        0.16,
+        0.16,
+        0.19
+      ],
+      "columns": 5,
+      "outer_width": "linewidth - 2 tabcolsep = linewidth - 8 pt"
+    }
+  },
+  "builds_run": false,
+  "simulations_run": false,
+  "source_unchanged": true,
+  "root_main_totals": {
+    "U": {
+      "served": 2434,
+      "breach": 0,
+      "forced": 0,
+      "acked": 20760
+    },
+    "C-30": {
+      "served": 2338,
+      "breach": 0,
+      "forced": 0,
+      "acked": 20101
+    },
+    "Mplus-30": {
+      "served": 2338,
+      "breach": 289,
+      "forced": 7710,
+      "acked": 20103
+    },
+    "Mplus-60": {
+      "served": 2347,
+      "breach": 79,
+      "forced": 4031,
+      "acked": 20163
+    },
+    "V-30": {
+      "served": 2336,
+      "breach": 456,
+      "forced": 10442,
+      "acked": 20090
+    }
+  },
+  "root_morning_count": {
+    "runs": 64,
+    "forced": 0,
+    "acked": 44270
+  },
+  "preserved_numeric_probe_failure": "stale denominator expectation; reconciled by confirm output"
+}

@@ -1,0 +1,556 @@
+{
+  "canonical": {
+    "ML1": true,
+    "ML2": false,
+    "ML3": false,
+    "ML4": true,
+    "ML5": false,
+    "ML1_detail": [
+      {
+        "version": "canonical",
+        "world": "measured",
+        "arm": "C-30",
+        "day": "2018-11-15",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "fc+uniform",
+        "gain_pp": 0.0,
+        "lower_y": false,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": true,
+        "WIN": false
+      },
+      {
+        "version": "canonical",
+        "world": "measured",
+        "arm": "C-30",
+        "day": "2018-11-16",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "fc+uniform",
+        "gain_pp": 0.0,
+        "lower_y": false,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": true,
+        "WIN": false
+      }
+    ],
+    "ML2_detail": [
+      {
+        "version": "canonical",
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "uniform",
+        "gain_pp": 8.275862068965516,
+        "lower_y": true,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": true,
+        "WIN": false
+      },
+      {
+        "version": "canonical",
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "fc+uniform",
+        "gain_pp": 0.6896551724137931,
+        "lower_y": true,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": true,
+        "WIN": false
+      },
+      {
+        "version": "canonical",
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-16",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "uniform",
+        "gain_pp": 2.5,
+        "lower_y": true,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": false,
+        "WIN": false
+      },
+      {
+        "version": "canonical",
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-16",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "fc+uniform",
+        "gain_pp": 0.0,
+        "lower_y": false,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": true,
+        "WIN": false
+      }
+    ],
+    "ML3_detail": {
+      "version": "canonical",
+      "world": "static",
+      "arm": "FREE",
+      "day": "2018-11-13",
+      "window": "ALL",
+      "model": "HGB",
+      "control": "uniform",
+      "gain_pp": 1.2391573729863676,
+      "lower_y": true,
+      "mean_guard": true,
+      "p90_guard": false,
+      "early_guard": false,
+      "WIN": false
+    },
+    "ML3_windows": [
+      {
+        "version": "canonical",
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "window": "w08",
+        "model": "HGB",
+        "control": "uniform",
+        "gain_pp": 0.7317073170731696,
+        "lower_y": true,
+        "mean_guard": true,
+        "p90_guard": false,
+        "early_guard": false,
+        "WIN": false
+      },
+      {
+        "version": "canonical",
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "window": "w17",
+        "model": "HGB",
+        "control": "uniform",
+        "gain_pp": 1.7632241813602025,
+        "lower_y": true,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": false,
+        "WIN": false
+      }
+    ],
+    "ML4_detail": [
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "model": "HGB",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "model": "HGB-nostate",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "model": "LinQR",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-16",
+        "model": "HGB",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-16",
+        "model": "HGB-nostate",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-16",
+        "model": "LinQR",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "model": "HGB",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "model": "HGB-nostate",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "model": "LinQR",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "LOCKS",
+        "day": "2018-11-13",
+        "model": "HGB",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "LOCKS",
+        "day": "2018-11-13",
+        "model": "HGB-nostate",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "LOCKS",
+        "day": "2018-11-13",
+        "model": "LinQR",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      }
+    ],
+    "ML5_detail": [
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "G_full": 0.6896551724137931,
+        "G_nostate": 0.6896551724137931,
+        "condition": false
+      },
+      {
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "G_full": 1.2391573729863676,
+        "G_nostate": 1.2391573729863676,
+        "condition": false
+      }
+    ],
+    "kill": true
+  },
+  "stored": {
+    "ML1": true,
+    "ML2": false,
+    "ML3": false,
+    "ML4": true,
+    "ML5": false,
+    "ML1_detail": [
+      {
+        "version": "stored",
+        "world": "measured",
+        "arm": "C-30",
+        "day": "2018-11-15",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "fc+uniform",
+        "gain_pp": 0.0,
+        "lower_y": false,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": true,
+        "WIN": false
+      },
+      {
+        "version": "stored",
+        "world": "measured",
+        "arm": "C-30",
+        "day": "2018-11-16",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "fc+uniform",
+        "gain_pp": 0.0,
+        "lower_y": false,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": false,
+        "WIN": false
+      }
+    ],
+    "ML2_detail": [
+      {
+        "version": "stored",
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "uniform",
+        "gain_pp": 8.275862068965516,
+        "lower_y": true,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": true,
+        "WIN": false
+      },
+      {
+        "version": "stored",
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "fc+uniform",
+        "gain_pp": 0.6896551724137931,
+        "lower_y": true,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": true,
+        "WIN": false
+      },
+      {
+        "version": "stored",
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-16",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "uniform",
+        "gain_pp": 2.5,
+        "lower_y": true,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": false,
+        "WIN": false
+      },
+      {
+        "version": "stored",
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-16",
+        "window": "ALL",
+        "model": "HGB",
+        "control": "fc+uniform",
+        "gain_pp": 0.0,
+        "lower_y": false,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": false,
+        "WIN": false
+      }
+    ],
+    "ML3_detail": {
+      "version": "stored",
+      "world": "static",
+      "arm": "FREE",
+      "day": "2018-11-13",
+      "window": "ALL",
+      "model": "HGB",
+      "control": "uniform",
+      "gain_pp": 1.2391573729863676,
+      "lower_y": true,
+      "mean_guard": true,
+      "p90_guard": false,
+      "early_guard": false,
+      "WIN": false
+    },
+    "ML3_windows": [
+      {
+        "version": "stored",
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "window": "w08",
+        "model": "HGB",
+        "control": "uniform",
+        "gain_pp": 0.7317073170731696,
+        "lower_y": true,
+        "mean_guard": true,
+        "p90_guard": false,
+        "early_guard": false,
+        "WIN": false
+      },
+      {
+        "version": "stored",
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "window": "w17",
+        "model": "HGB",
+        "control": "uniform",
+        "gain_pp": 1.7632241813602025,
+        "lower_y": true,
+        "mean_guard": false,
+        "p90_guard": false,
+        "early_guard": false,
+        "WIN": false
+      }
+    ],
+    "ML4_detail": [
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "model": "HGB",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "model": "HGB-nostate",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "model": "LinQR",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-16",
+        "model": "HGB",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-16",
+        "model": "HGB-nostate",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-16",
+        "model": "LinQR",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "model": "HGB",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "model": "HGB-nostate",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "model": "LinQR",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "LOCKS",
+        "day": "2018-11-13",
+        "model": "HGB",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "LOCKS",
+        "day": "2018-11-13",
+        "model": "HGB-nostate",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      },
+      {
+        "world": "static",
+        "arm": "LOCKS",
+        "day": "2018-11-13",
+        "model": "LinQR",
+        "matches_y": false,
+        "matches_symmetric": false,
+        "jointly_matches": false
+      }
+    ],
+    "ML5_detail": [
+      {
+        "world": "measured",
+        "arm": "U",
+        "day": "2018-11-15",
+        "G_full": 0.6896551724137931,
+        "G_nostate": 0.6896551724137931,
+        "condition": false
+      },
+      {
+        "world": "static",
+        "arm": "FREE",
+        "day": "2018-11-13",
+        "G_full": 1.2391573729863676,
+        "G_nostate": 1.2391573729863676,
+        "condition": false
+      }
+    ],
+    "kill": true
+  }
+}

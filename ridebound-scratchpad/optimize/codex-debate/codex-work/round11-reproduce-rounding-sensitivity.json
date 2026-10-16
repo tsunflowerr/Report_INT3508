@@ -1,0 +1,90 @@
+{
+  "Y60_pct": {
+    "key": [
+      "measured",
+      "C-30",
+      "2018-11-15",
+      "ALL",
+      "own",
+      "uniform"
+    ],
+    "canonical": 8.16326530612245,
+    "stored": 8.16326530612245,
+    "abs_difference": 0.0
+  },
+  "early60_pct": {
+    "key": [
+      "measured",
+      "U",
+      "2018-11-16",
+      "ALL",
+      "own",
+      "HGB"
+    ],
+    "canonical": 1.5,
+    "stored": 2.5,
+    "abs_difference": 1.0
+  },
+  "symmetric_pct": {
+    "key": [
+      "measured",
+      "U",
+      "2018-11-16",
+      "ALL",
+      "own",
+      "HGB"
+    ],
+    "canonical": 98.0,
+    "stored": 97.0,
+    "abs_difference": 1.0
+  },
+  "mean_extension_s": {
+    "key": [
+      "measured",
+      "U",
+      "2018-11-15",
+      "ALL",
+      "own",
+      "HGB"
+    ],
+    "canonical": 41.26543345373472,
+    "stored": 41.62427939584975,
+    "abs_difference": 0.35884594211502474
+  },
+  "p90_extension_s": {
+    "key": [
+      "measured",
+      "U",
+      "2018-11-16",
+      "ALL",
+      "own",
+      "HGB"
+    ],
+    "canonical": 83.401270424271,
+    "stored": 85.83563009388092,
+    "abs_difference": 2.4343596696099183
+  },
+  "mean_horizon_s": {
+    "key": [
+      "measured",
+      "U",
+      "2018-11-15",
+      "ALL",
+      "own",
+      "HGB"
+    ],
+    "canonical": 852.9639093158038,
+    "stored": 853.3227552579187,
+    "abs_difference": 0.3588459421149537
+  },
+  "rho_max_difference": {
+    "key": [
+      "measured",
+      "C-30",
+      "HGB"
+    ],
+    "canonical": 2.217643899477963,
+    "stored": 2.27034549127675,
+    "abs_difference": 0.05270159179878675
+  }
+}

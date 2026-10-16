@@ -1,0 +1,2311 @@
+{
+  "counts": {
+    "fixtures": 80,
+    "multiple": 75,
+    "different_future_counts": 52,
+    "equal_usage_different_future": 34,
+    "equal_usage_cost_different_future": 9,
+    "cost_min_loses_future": 2,
+    "equal_usage_vectors_different_future": 31
+  },
+  "witnesses": {
+    "different_future_counts": [
+      {
+        "budget": 1000,
+        "currentRequest": "0->1",
+        "a": {
+          "CandidateId": "candidate-v1-3dddd99e2a1e0bc8f6693a1315df132ae9b315c0e564c41d6412d96c3ffbf5c7",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 5000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-cfb29b73e037b5cd17c11e2c5c8dbda2f0616176204ef5531572a11527354b74",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 3000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        }
+      },
+      {
+        "budget": 1000,
+        "currentRequest": "0->2",
+        "a": {
+          "CandidateId": "candidate-v1-033afa7ffced7bc59549306bfdb9c386738ed51e596019551c13d5e160cbd920",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 3000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-1a23d8d3a47065cb597a642bc3670d3739f9afd6c9b4381257bcd01fb989de4f",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 4000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        }
+      },
+      {
+        "budget": 1000,
+        "currentRequest": "1->2",
+        "a": {
+          "CandidateId": "candidate-v1-a3f70ccacaf5eacddf51399fe9c62bd729e803117817a9a19827a5f446addf3f",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 6000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-d13e1bfe66cc27754d36d1c40fd3d0ea9371dead46223505af2858e906664541",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 3000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        }
+      }
+    ],
+    "equal_usage_different_future": [
+      {
+        "budget": 1000,
+        "currentRequest": "0->1",
+        "a": {
+          "CandidateId": "candidate-v1-3dddd99e2a1e0bc8f6693a1315df132ae9b315c0e564c41d6412d96c3ffbf5c7",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 5000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-cfb29b73e037b5cd17c11e2c5c8dbda2f0616176204ef5531572a11527354b74",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 3000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        }
+      },
+      {
+        "budget": 1000,
+        "currentRequest": "0->2",
+        "a": {
+          "CandidateId": "candidate-v1-033afa7ffced7bc59549306bfdb9c386738ed51e596019551c13d5e160cbd920",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 3000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-1a23d8d3a47065cb597a642bc3670d3739f9afd6c9b4381257bcd01fb989de4f",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 4000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        }
+      },
+      {
+        "budget": 1000,
+        "currentRequest": "1->2",
+        "a": {
+          "CandidateId": "candidate-v1-a3f70ccacaf5eacddf51399fe9c62bd729e803117817a9a19827a5f446addf3f",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 6000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-d13e1bfe66cc27754d36d1c40fd3d0ea9371dead46223505af2858e906664541",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 3000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        }
+      }
+    ],
+    "equal_usage_cost_different_future": [
+      {
+        "budget": 2000,
+        "currentRequest": "1->0",
+        "a": {
+          "CandidateId": "candidate-v1-38b40ac613858350ed70cad93b996e33a715801cb33b36e80dad6d5c24f1ff1e",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 6000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-91d573638762e57fa85efc902a2cd2bf3c4a1857f9d73d159ee7e88ea013b500",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 6000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        }
+      },
+      {
+        "budget": 2000,
+        "currentRequest": "2->0",
+        "a": {
+          "CandidateId": "candidate-v1-6b2aaafd10ef5cab771ba0f49464189edab1a02d259aa97458fd6a620bf3efff",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 6000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-f0e7ea1925553d63378f843d2ad038f0191f47a8e535f69f0d849a379514c736",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 6000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        }
+      },
+      {
+        "budget": 2000,
+        "currentRequest": "2->1",
+        "a": {
+          "CandidateId": "candidate-v1-792d9a1c581aa2d2f5e0e64f4a425ca1943c6935017034b276264de9b47ff499",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 5000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-7d3ab75ba879b7d349a0da909d95242455f44da50ce38eb18c1a14c64cfe8a37",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 5000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        }
+      }
+    ],
+    "cost_min_loses_future": [
+      {
+        "budget": 2000,
+        "currentRequest": "1->0",
+        "a": {
+          "CandidateId": "candidate-v1-41a16ce6a04eed5468ea4f46832ae9545b88e729d7ad32e8d8fd109a7e930cee",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 5000,
+          "etaUsageTotal": 2000,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 2000,
+                "MaterialEtaRevisionCount": 1,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 12,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-54ee9c1f0edc51c011a7745edf62aed5c401778103c42855cff977c0270f7165",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 6000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        }
+      },
+      {
+        "budget": 4000,
+        "currentRequest": "1->0",
+        "a": {
+          "CandidateId": "candidate-v1-41a16ce6a04eed5468ea4f46832ae9545b88e729d7ad32e8d8fd109a7e930cee",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 5000,
+          "etaUsageTotal": 2000,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 2000,
+                "MaterialEtaRevisionCount": 1,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 12,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-54ee9c1f0edc51c011a7745edf62aed5c401778103c42855cff977c0270f7165",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 6000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        }
+      }
+    ],
+    "equal_usage_vectors_different_future": [
+      {
+        "budget": 1000,
+        "currentRequest": "0->1",
+        "a": {
+          "CandidateId": "candidate-v1-3dddd99e2a1e0bc8f6693a1315df132ae9b315c0e564c41d6412d96c3ffbf5c7",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 5000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-cfb29b73e037b5cd17c11e2c5c8dbda2f0616176204ef5531572a11527354b74",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 3000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        }
+      },
+      {
+        "budget": 1000,
+        "currentRequest": "0->2",
+        "a": {
+          "CandidateId": "candidate-v1-033afa7ffced7bc59549306bfdb9c386738ed51e596019551c13d5e160cbd920",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 3000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-1a23d8d3a47065cb597a642bc3670d3739f9afd6c9b4381257bcd01fb989de4f",
+          "route": [
+            {
+              "node": "node-0",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 4000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 1
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        }
+      },
+      {
+        "budget": 1000,
+        "currentRequest": "1->2",
+        "a": {
+          "CandidateId": "candidate-v1-a3f70ccacaf5eacddf51399fe9c62bd729e803117817a9a19827a5f446addf3f",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 6000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 16,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4"
+          ]
+        },
+        "b": {
+          "CandidateId": "candidate-v1-d13e1bfe66cc27754d36d1c40fd3d0ea9371dead46223505af2858e906664541",
+          "route": [
+            {
+              "node": "node-1",
+              "request": "incumbent",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-1",
+              "request": "current",
+              "kind": "Pickup"
+            },
+            {
+              "node": "node-2",
+              "request": "current",
+              "kind": "DropOff"
+            },
+            {
+              "node": "node-3",
+              "request": "incumbent",
+              "kind": "DropOff"
+            }
+          ],
+          "cost": 3000,
+          "etaUsageTotal": 0,
+          "usage": [
+            {
+              "rider": "incumbent",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            },
+            {
+              "rider": "current",
+              "usage": {
+                "PickupEtaTotalMs": 0,
+                "DropEtaTotalMs": 0,
+                "MaterialEtaRevisionCount": 0,
+                "VehicleSwitchCount": 0,
+                "PickupStopRelocationMm": 0,
+                "PickupStopSwitchCount": 0,
+                "DropStopRelocationMm": 0,
+                "DropStopSwitchCount": 0,
+                "IncumbentOrderInversionCount": 0,
+                "PrePickupInsertedStopCount": 0
+              }
+            }
+          ],
+          "futureFeasibleCount": 20,
+          "futureFeasible": [
+            "0->1",
+            "0->2",
+            "0->3",
+            "0->4",
+            "1->0",
+            "1->2",
+            "1->3",
+            "1->4",
+            "2->0",
+            "2->1",
+            "2->3",
+            "2->4",
+            "3->0",
+            "3->1",
+            "3->2",
+            "3->4",
+            "4->0",
+            "4->1",
+            "4->2",
+            "4->3"
+          ]
+        }
+      }
+    ]
+  }
+}

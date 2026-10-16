@@ -1,0 +1,23 @@
+\begingroup
+\setstretch{1.2}
+\tableofcontents
+\endgroup
+\clearpage
+
+% Ghép 14/10/2026: đặt mốc và dòng mục lục TRƯỚC danh sách, để số trang trong Mục lục là trang đầu của danh sách
+% (bản cũ gọi \addcontentsline sau \listoffigures nên Mục lục ghi trang cuối của danh sách).
+\phantomsection
+\addcontentsline{toc}{chapter}{Danh sách hình vẽ}
+\begingroup
+\setstretch{1.2}
+\listoffigures
+\endgroup
+\clearpage
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Danh sách bảng}
+\begingroup
+\setstretch{1.1}
+\listoftables
+\endgroup
+\clearpage

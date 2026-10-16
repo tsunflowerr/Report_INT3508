@@ -1,0 +1,1880 @@
+{
+  "alonsomora2017": {
+    "doi": "10.1073/pnas.1611675114",
+    "status": "verified-metadata",
+    "title": [
+      "On-demand high-capacity ride-sharing via dynamic trip-vehicle assignment"
+    ],
+    "authors": [
+      {
+        "given": "Javier",
+        "family": "Alonso-Mora",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Computer Science and Artificial Intelligence Laboratory, Massachusetts Institute of Technology, Cambridge, MA 02139;"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Samitha",
+        "family": "Samaranayake",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Civil and Environmental Engineering, Cornell University, Ithaca, NY 14853;"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alex",
+        "family": "Wallar",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Computer Science and Artificial Intelligence Laboratory, Massachusetts Institute of Technology, Cambridge, MA 02139;"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Emilio",
+        "family": "Frazzoli",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Laboratory for Information and Decision Systems, Massachusetts Institute of Technology, Cambridge, MA 02139"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Daniela",
+        "family": "Rus",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Computer Science and Artificial Intelligence Laboratory, Massachusetts Institute of Technology, Cambridge, MA 02139;"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2017,
+          1,
+          3
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2017,
+          1,
+          3
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2017,
+          1,
+          17
+        ]
+      ]
+    },
+    "journal": [
+      "Proceedings of the National Academy of Sciences"
+    ],
+    "volume": "114",
+    "issue": "3",
+    "page": "462-467",
+    "article_number": null,
+    "url": "https://doi.org/10.1073/pnas.1611675114",
+    "abstract": "<jats:title>Significance</jats:title>\n                  <jats:p>Ride-sharing services can provide not only a very personalized mobility experience but also ensure efficiency and sustainability via large-scale ride pooling. Large-scale ride-sharing requires mathematical models and algorithms that can match large groups of riders to a fleet of shared vehicles in real time, a task not fully addressed by current solutions. We present a highly scalable anytime optimal algorithm and experimentally validate its performance using New York City taxi data and a shared vehicle fleet with passenger capacities of up to ten. Our results show that 2,000 vehicles (15% of the taxi fleet) of capacity 10 or 3,000 of capacity 4 can serve 98% of the demand within a mean waiting time of 2.8 min and mean trip delay of 3.5 min.</jats:p>"
+  },
+  "fielbaum2020": {
+    "doi": "10.1016/j.trc.2020.102831",
+    "status": "verified-metadata",
+    "title": [
+      "Unreliability in ridesharing systems: Measuring changes in users’ times due to new requests"
+    ],
+    "authors": [
+      {
+        "given": "Andrés",
+        "family": "Fielbaum",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Javier",
+        "family": "Alonso-Mora",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2020,
+          12
+        ]
+      ]
+    },
+    "online": null,
+    "print": {
+      "date-parts": [
+        [
+          2020,
+          12
+        ]
+      ]
+    },
+    "journal": [
+      "Transportation Research Part C: Emerging Technologies"
+    ],
+    "volume": "121",
+    "issue": null,
+    "page": "102831",
+    "article_number": "102831",
+    "url": "https://doi.org/10.1016/j.trc.2020.102831",
+    "abstract": null
+  },
+  "alonsogonzalez2020": {
+    "doi": "10.1016/j.trc.2020.102621",
+    "status": "verified-metadata",
+    "title": [
+      "Value of time and reliability for urban pooled on-demand services"
+    ],
+    "authors": [
+      {
+        "given": "María J.",
+        "family": "Alonso-González",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Niels",
+        "family": "van Oort",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Oded",
+        "family": "Cats",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sascha",
+        "family": "Hoogendoorn-Lanser",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Serge",
+        "family": "Hoogendoorn",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2020,
+          6
+        ]
+      ]
+    },
+    "online": null,
+    "print": {
+      "date-parts": [
+        [
+          2020,
+          6
+        ]
+      ]
+    },
+    "journal": [
+      "Transportation Research Part C: Emerging Technologies"
+    ],
+    "volume": "115",
+    "issue": null,
+    "page": "102621",
+    "article_number": "102621",
+    "url": "https://doi.org/10.1016/j.trc.2020.102621",
+    "abstract": null
+  },
+  "gerzinic2023": {
+    "doi": "10.1016/j.tbs.2023.100616",
+    "status": "verified-metadata",
+    "title": [
+      "An instance-based learning approach for evaluating the perception of ride-hailing waiting time variability"
+    ],
+    "authors": [
+      {
+        "given": "Nejc",
+        "family": "Geržinič",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Oded",
+        "family": "Cats",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Niels",
+        "family": "van Oort",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sascha",
+        "family": "Hoogendoorn-Lanser",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Michel",
+        "family": "Bierlaire",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Serge",
+        "family": "Hoogendoorn",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2023,
+          10
+        ]
+      ]
+    },
+    "online": null,
+    "print": {
+      "date-parts": [
+        [
+          2023,
+          10
+        ]
+      ]
+    },
+    "journal": [
+      "Travel Behaviour and Society"
+    ],
+    "volume": "33",
+    "issue": null,
+    "page": "100616",
+    "article_number": "100616",
+    "url": "https://doi.org/10.1016/j.tbs.2023.100616",
+    "abstract": null
+  },
+  "sridharan1987": {
+    "doi": "10.1287/mnsc.33.9.1137",
+    "status": "verified-metadata",
+    "title": [
+      "Freezing the Master Production Schedule Under Rolling Planning Horizons"
+    ],
+    "authors": [
+      {
+        "given": "V.",
+        "family": "Sridharan",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Management, Clemson University, Clemson, South Carolina 29634"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "William L.",
+        "family": "Berry",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Business Administration, University of Iowa, Iowa City, Iowa 52242"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "V.",
+        "family": "Udayabhanu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Business, San Francisco State University, San Francisco, California 94132"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1987,
+          9
+        ]
+      ]
+    },
+    "online": null,
+    "print": {
+      "date-parts": [
+        [
+          1987,
+          9
+        ]
+      ]
+    },
+    "journal": [
+      "Management Science"
+    ],
+    "volume": "33",
+    "issue": "9",
+    "page": "1137-1149",
+    "article_number": null,
+    "url": "https://doi.org/10.1287/mnsc.33.9.1137",
+    "abstract": "<jats:p> The stability of the Master Production Schedule (MPS) is a critical issue in managing production operations with a Material Requirements Planning System. One method of achieving stability is to freeze some portion or all of the MPS. While freezing the MPS can limit the number of schedule changes, it can also produce an increase in production and inventory costs. This paper examines three decision variables in freezing the MPS: the freezing method, the freeze interval length, and the planning horizon length. Simulation experiment results are reported which suggest that freezing up to 50% of the planning horizon has a marginal effect on production and inventory cost under a wide range of operating conditions. These results also suggest that an order based freezing method produces superior results in comparison with a period based method. </jats:p>"
+  },
+  "kovacs2014": {
+    "doi": "10.1002/net.21565",
+    "status": "verified-metadata",
+    "title": [
+      "Vehicle routing problems in which consistency considerations are important: A survey"
+    ],
+    "authors": [
+      {
+        "given": "Attila A.",
+        "family": "Kovacs",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Business Administration University of Vienna  Oskar‐Morgenstern‐Platz 1 1090 Vienna Austria"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bruce L.",
+        "family": "Golden",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Robert H. Smith School of Business, University of Maryland  College Park Maryland 20742"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Richard F.",
+        "family": "Hartl",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Business Administration University of Vienna  Oskar‐Morgenstern‐Platz 1 1090 Vienna Austria"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sophie N.",
+        "family": "Parragh",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Business Administration University of Vienna  Oskar‐Morgenstern‐Platz 1 1090 Vienna Austria"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2014,
+          10
+        ]
+      ]
+    },
+    "journal": [
+      "Networks"
+    ],
+    "volume": "64",
+    "issue": "3",
+    "page": "192-213",
+    "article_number": null,
+    "url": "https://doi.org/10.1002/net.21565",
+    "abstract": null
+  },
+  "cordeau2007": {
+    "doi": "10.1007/s10479-007-0170-8",
+    "status": "verified-metadata",
+    "title": [
+      "The dial-a-ride problem: models and algorithms"
+    ],
+    "authors": [
+      {
+        "given": "Jean-François",
+        "family": "Cordeau",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Gilbert",
+        "family": "Laporte",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2007,
+          5,
+          5
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2007,
+          5,
+          5
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2007,
+          6,
+          6
+        ]
+      ]
+    },
+    "journal": [
+      "Annals of Operations Research"
+    ],
+    "volume": "153",
+    "issue": "1",
+    "page": "29-46",
+    "article_number": null,
+    "url": "https://doi.org/10.1007/s10479-007-0170-8",
+    "abstract": null
+  },
+  "toth2014": {
+    "doi": "10.1137/1.9781611973594",
+    "status": "verified-metadata",
+    "title": [
+      "Vehicle Routing"
+    ],
+    "authors": null,
+    "year": {
+      "date-parts": [
+        [
+          2014,
+          11,
+          24
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2014,
+          12,
+          5
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2014,
+          11,
+          24
+        ]
+      ]
+    },
+    "journal": [],
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article_number": null,
+    "url": "https://doi.org/10.1137/1.9781611973594",
+    "abstract": null
+  },
+  "groer2009": {
+    "doi": "10.1287/msom.1080.0243",
+    "status": "verified-metadata",
+    "title": [
+      "The Consistent Vehicle Routing Problem"
+    ],
+    "authors": [
+      {
+        "given": "Chris",
+        "family": "Groër",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Applied Mathematics and Scientific Computation Program, University of Maryland, College Park, Maryland 20742"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bruce",
+        "family": "Golden",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "R. H. Smith School of Business, University of Maryland, College Park, Maryland 20742"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Edward",
+        "family": "Wasil",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Kogod School of Business, American University, Washington, DC 20016"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2009,
+          10
+        ]
+      ]
+    },
+    "online": null,
+    "print": {
+      "date-parts": [
+        [
+          2009,
+          10
+        ]
+      ]
+    },
+    "journal": [
+      "Manufacturing &amp; Service Operations Management"
+    ],
+    "volume": "11",
+    "issue": "4",
+    "page": "630-643",
+    "article_number": null,
+    "url": "https://doi.org/10.1287/msom.1080.0243",
+    "abstract": "<jats:p> In the small package shipping industry (as in other industries), companies try to differentiate themselves by providing high levels of customer service. This can be accomplished in several ways, including online tracking of packages, ensuring on-time delivery, and offering residential pickups. Some companies want their drivers to develop relationships with customers on a route and have the same drivers visit the same customers at roughly the same time on each day that the customers need service. These service requirements, together with traditional constraints on vehicle capacity and route length, define a variant of the classical capacitated vehicle routing problem, which we call the consistent VRP (ConVRP). In this paper, we formulate the problem as a mixed-integer program and develop an algorithm to solve the ConVRP that is based on the record-to-record travel algorithm. We compare the performance of our algorithm to the optimal mixed-integer program solutions for a set of small problems and then apply our algorithm to five simulated data sets with 1,000 customers and a real-world data set with more than 3,700 customers. We provide a technique for generating ConVRP benchmark problems from vehicle routing problem instances given in the literature and provide our solutions to these instances. The solutions produced by our algorithm on all problems do a very good job of meeting customer service objectives with routes that have a low total travel time. </jats:p><jats:p> In the paper “The Consistent Vehicle Routing Problem,” published in Manufacturing &amp; Service Operations Management, ePub ahead of print December 4, 2008, http://dx.doi.org/10.1287/msom.1080.0243, the authors have amended the original text published online to correct an oversight in conveying the real-world problem studied in this article. </jats:p>"
+  },
+  "blackburn1986": {
+    "doi": "10.1287/mnsc.32.4.413",
+    "status": "verified-metadata",
+    "title": [
+      "A Comparison of Strategies to Dampen Nervousness in MRP Systems"
+    ],
+    "authors": [
+      {
+        "given": "Joseph D.",
+        "family": "Blackburn",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Owen Graduate School of Management, Vanderbilt University, Nashville, Tennessee 37203"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Dean H.",
+        "family": "Kropp",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Amos Tuck School, Dartmouth College, Hanover, New Hampshire 03755"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Robert A.",
+        "family": "Millen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of Business Administration, Northeastern University, Boston, Massachusetts 02115"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1986,
+          4
+        ]
+      ]
+    },
+    "journal": [
+      "Management Science"
+    ],
+    "volume": "32",
+    "issue": "4",
+    "page": "413-429",
+    "article_number": null,
+    "url": "https://doi.org/10.1287/mnsc.32.4.413",
+    "abstract": "<jats:p> This research examines the effectiveness of alternative strategies for dealing with the problem of order instability, or nervousness, which occurs in Material Requirements Planning systems. Nervousness can be particularly disruptive in multi-level production processes where a change in order size or timing at one level can result in changes at other levels. </jats:p><jats:p> This study proposes and evaluates five different strategies for treating nervousness caused by the interaction of lot-sizing decisions and the planning horizon. Not evaluated here are the effects on order instability caused by demand uncertainty or supply and lead-time uncertainty. The five strategies examined are: (1) Freezing the schedule within the planning horizon, (2) Lot-for-Lot after stage 1, (3) Safety stocks, (4) Forecast beyond the planning horizon, and (5) Change cost procedure. </jats:p><jats:p> A series of simulation experiments was conducted to test the effectiveness of the five strategies on schedule stability and system costs. The experiments were constructed to evaluate the impacts of various lot-sizing methods, the length of the planning horizon, setup and holding cost parameters and product assembly structure. </jats:p><jats:p> The results indicate that when the source of nervousness is due to changes in decisions caused by a rolling planning horizon, safety stock and lot-for-lot approaches are not cost effective. Under most conditions, the strategies of incorporating a change cost to discourage schedule changes or freezing the schedule within the planning horizon appear to be dominant. </jats:p>"
+  },
+  "agatz2012": {
+    "doi": "10.1016/j.ejor.2012.05.028",
+    "status": "verified-metadata",
+    "title": [
+      "Optimization for dynamic ride-sharing: A review"
+    ],
+    "authors": [
+      {
+        "given": "Niels",
+        "family": "Agatz",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alan",
+        "family": "Erera",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Martin",
+        "family": "Savelsbergh",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xing",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2012,
+          12
+        ]
+      ]
+    },
+    "online": null,
+    "print": {
+      "date-parts": [
+        [
+          2012,
+          12
+        ]
+      ]
+    },
+    "journal": [
+      "European Journal of Operational Research"
+    ],
+    "volume": "223",
+    "issue": "2",
+    "page": "295-303",
+    "article_number": null,
+    "url": "https://doi.org/10.1016/j.ejor.2012.05.028",
+    "abstract": null
+  },
+  "elmi2026": {
+    "doi": "10.1016/j.trc.2026.105897",
+    "status": "verified-metadata",
+    "title": [
+      "Improving ridepooling reliability using shareability shadows"
+    ],
+    "authors": [
+      {
+        "given": "Amir",
+        "family": "Elmi",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1680-6407",
+        "authenticated-orcid": false,
+        "given": "Emily",
+        "family": "Moylan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Javier",
+        "family": "Alonso-Mora",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0411-3064",
+        "authenticated-orcid": false,
+        "given": "Andres",
+        "family": "Fielbaum",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2026,
+          11
+        ]
+      ]
+    },
+    "online": null,
+    "print": {
+      "date-parts": [
+        [
+          2026,
+          11
+        ]
+      ]
+    },
+    "journal": [
+      "Transportation Research Part C: Emerging Technologies"
+    ],
+    "volume": "192",
+    "issue": null,
+    "page": "105897",
+    "article_number": "105897",
+    "url": "https://doi.org/10.1016/j.trc.2026.105897",
+    "abstract": null
+  },
+  "schulz2026": {
+    "doi": "10.1007/s00291-026-00847-0",
+    "status": "verified-metadata",
+    "title": [
+      "Efficient insertion and reoptimization algorithms for a customer-oriented dynamic dial-a-ride problem"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-3088-2820",
+        "authenticated-orcid": false,
+        "given": "Arne",
+        "family": "Schulz",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Christian",
+        "family": "Pfeiffer",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          2026,
+          6
+        ]
+      ]
+    },
+    "journal": [
+      "OR Spectrum"
+    ],
+    "volume": "48",
+    "issue": "2",
+    "page": "541-586",
+    "article_number": null,
+    "url": "https://doi.org/10.1007/s00291-026-00847-0",
+    "abstract": null
+  },
+  "sharifazadeh2022": {
+    "doi": "10.1016/j.trb.2022.04.008",
+    "status": "verified-metadata",
+    "title": [
+      "Choice-driven dial-a-ride problem for demand responsive mobility service"
+    ],
+    "authors": [
+      {
+        "given": "Sh.",
+        "family": "Sharif Azadeh",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bilge",
+        "family": "Atasoy",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-9635-9987",
+        "authenticated-orcid": false,
+        "given": "Moshe E.",
+        "family": "Ben-Akiva",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "M.",
+        "family": "Bierlaire",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0038-6113",
+        "authenticated-orcid": false,
+        "given": "M.Y.",
+        "family": "Maknoon",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2022,
+          7
+        ]
+      ]
+    },
+    "online": null,
+    "print": {
+      "date-parts": [
+        [
+          2022,
+          7
+        ]
+      ]
+    },
+    "journal": [
+      "Transportation Research Part B: Methodological"
+    ],
+    "volume": "161",
+    "issue": null,
+    "page": "128-149",
+    "article_number": null,
+    "url": "https://doi.org/10.1016/j.trb.2022.04.008",
+    "abstract": null
+  },
+  "borodin1992": {
+    "doi": "10.1145/146585.146588",
+    "status": "verified-metadata",
+    "title": [
+      "An optimal on-line algorithm for metrical task system"
+    ],
+    "authors": [
+      {
+        "given": "Allan",
+        "family": "Borodin",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Nathan",
+        "family": "Linial",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Michael E.",
+        "family": "Saks",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1992,
+          10
+        ]
+      ]
+    },
+    "online": {
+      "date-parts": [
+        [
+          1992,
+          10
+        ]
+      ]
+    },
+    "print": {
+      "date-parts": [
+        [
+          1992,
+          10
+        ]
+      ]
+    },
+    "journal": [
+      "Journal of the ACM"
+    ],
+    "volume": "39",
+    "issue": "4",
+    "page": "745-763",
+    "article_number": null,
+    "url": "https://doi.org/10.1145/146585.146588",
+    "abstract": "<jats:p>In practice, almost all dynamic systems require decisions to be made on-line, without full knowledge of their future impact on the system. A general model for the processing of sequences of tasks is introduced, and a general on-line decision algorithm is developed. It is shown that, for an important class of special cases, this algorithm is optimal among all on-line algorithms.</jats:p>\n          <jats:p>\n            Specifically, a task system (\n            <jats:italic>S,d</jats:italic>\n            ) for processing sequences of tasks consists of a set\n            <jats:italic>S</jats:italic>\n            of states and a cost matrix\n            <jats:italic>d</jats:italic>\n            where\n            <jats:italic>d</jats:italic>\n            (\n            <jats:italic>i, j</jats:italic>\n            is the cost of changing from state\n            <jats:italic>i</jats:italic>\n            to state\n            <jats:italic>j</jats:italic>\n            (we assume that\n            <jats:italic>d</jats:italic>\n            satisfies the triangle inequality and all diagonal entries are 0).     The cost of processing a given task depends on the state of the system. A schedule for a sequence\n            <jats:italic>\n              T\n              <jats:sup>1</jats:sup>\n            </jats:italic>\n            ,\n            <jats:italic>\n              T\n              <jats:sup>2</jats:sup>\n            </jats:italic>\n            ,…,\n            <jats:italic>\n              T\n              <jats:sup>k</jats:sup>\n            </jats:italic>\n            of tasks is a sequence\n            <jats:italic>s</jats:italic>\n            <jats:sub>1</jats:sub>\n            ,\n            <jats:italic>s</jats:italic>\n            <jats:sub>2</jats:sub>\n            ,…,\n            <jats:italic>\n              s\n              <jats:sub>k</jats:sub>\n            </jats:italic>\n            of states where\n            <jats:italic>\n              s\n              <jats:sub>i</jats:sub>\n            </jats:italic>\n            is the state in which\n            <jats:italic>\n              T\n              <jats:sup>i</jats:sup>\n            </jats:italic>\n            is processed; the cost of a schedule is the sum of all task processing costs and the state transition costs incurred.\n          </jats:p>\n          <jats:p>\n            An on-line scheduling algorithm is one that chooses\n            <jats:italic>\n              s\n              <jats:sub>i</jats:sub>\n            </jats:italic>\n            only knowing\n            <jats:italic>T</jats:italic>\n            <jats:sup>1</jats:sup>\n            <jats:italic>T</jats:italic>\n            <jats:sup>2</jats:sup>\n            …\n            <jats:italic>\n              T\n              <jats:sup>i</jats:sup>\n            </jats:italic>\n            . Such an algorithm is\n            <jats:italic>w</jats:italic>\n            -competitive if, on any input task sequence, its cost is within an additive constant of\n            <jats:italic>w</jats:italic>\n            times the optimal offline schedule cost. The competitive ratio\n            <jats:italic>w</jats:italic>\n            (\n            <jats:italic>S</jats:italic>\n            ,\n            <jats:italic>d</jats:italic>\n            ) is the infimum\n            <jats:italic>w</jats:italic>\n            for which there is a\n            <jats:italic>w</jats:italic>\n            -competitive on-line scheduling algorithm for (\n            <jats:italic>S</jats:italic>\n            ,\n            <jats:italic>d</jats:italic>\n            ). It is shown that\n            <jats:italic>w</jats:italic>\n            (\n            <jats:italic>S</jats:italic>\n            ,\n            <jats:italic>d</jats:italic>\n            ) = 2|S|–1\n            <jats:italic>for every task system</jats:italic>\n            in which\n            <jats:italic>d</jats:italic>\n            is symmetric, and\n            <jats:italic>w</jats:italic>\n            (\n            <jats:italic>S, d</jats:italic>\n            ) =\n            <jats:italic>O</jats:italic>\n            (|\n            <jats:italic>S</jats:italic>\n            |\n            <jats:sup>2</jats:sup>\n            ) for every task system. Finally, randomized on-line scheduling algorithms are introduced. It is shown that for the uniform task system (in which\n            <jats:italic>d</jats:italic>\n            (\n            <jats:italic>i,j</jats:italic>\n            ) = 1 for all\n            <jats:italic>i,j</jats:italic>\n            ), the expected competitive ratio\n            <jats:italic>w¯</jats:italic>\n            (\n            <jats:italic>S,d</jats:italic>\n            ) =\n            <jats:italic>O</jats:italic>\n            (log|S|).\n          </jats:p>"
+  },
+  "fielbaum2022scale": {
+    "doi": "10.1016/j.ecotra.2023.100313",
+    "status": "verified-metadata",
+    "title": [
+      "Economies and diseconomies of scale in on-demand ridepooling systems"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-0411-3064",
+        "authenticated-orcid": false,
+        "given": "Andrés",
+        "family": "Fielbaum",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alejandro",
+        "family": "Tirachini",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0058-570X",
+        "authenticated-orcid": false,
+        "given": "Javier",
+        "family": "Alonso-Mora",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2023,
+          6
+        ]
+      ]
+    },
+    "journal": [
+      "Economics of Transportation"
+    ],
+    "volume": "34",
+    "issue": null,
+    "page": "100313",
+    "article_number": "100313",
+    "url": "https://doi.org/10.1016/j.ecotra.2023.100313",
+    "abstract": null
+  },
+  "haferkamp2024": {
+    "doi": "10.1016/j.ejtl.2024.100134",
+    "status": "verified-metadata",
+    "title": [
+      "Design of multi-optional pickup time offers in ride-sharing systems"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-5914-7539",
+        "authenticated-orcid": false,
+        "given": "Jarmo",
+        "family": "Haferkamp",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "journal": [
+      "EURO Journal on Transportation and Logistics"
+    ],
+    "volume": "13",
+    "issue": null,
+    "page": "100134",
+    "article_number": "100134",
+    "url": "https://doi.org/10.1016/j.ejtl.2024.100134",
+    "abstract": null
+  },
+  "sivagnanam2026": {
+    "doi": "10.1109/ICCPS68698.2026.00012",
+    "status": "verified-metadata",
+    "title": [
+      "Dynamic Vehicle Routing Problem with Prompt Confirmation of Advance Requests"
+    ],
+    "authors": [
+      {
+        "given": "Amutheezan",
+        "family": "Sivagnanam",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Pennsylvania State University,Department of Informatics and Intelligent Systems,University Park,Pennsylvania"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ayan",
+        "family": "Mukhopadhyay",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of William &#x0026; Mary,Department of Computer Science,Williamsburg,Virginia"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Samitha",
+        "family": "Samaranayake",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Cornell University, Ithaca,School of Civil and Environmental Engineering,New York"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Abhishek",
+        "family": "Dubey",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Vanderbilt University,College of Connected Computing,Nashville,Tennessee"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Aron",
+        "family": "Laszka",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Pennsylvania State University,Department of Informatics and Intelligent Systems,University Park,Pennsylvania"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          11
+        ]
+      ]
+    },
+    "journal": [
+      "2026 ACM/IEEE 17th International Conference on Cyber-Physical Systems (ICCPS)"
+    ],
+    "volume": null,
+    "issue": null,
+    "page": "48-57",
+    "article_number": null,
+    "url": "https://doi.org/10.1109/iccps68698.2026.00012",
+    "abstract": null
+  },
+  "sridharan1988": {
+    "doi": "10.1111/j.1540-5915.1988.tb00259.x",
+    "status": "verified-metadata",
+    "title": [
+      "MEASURING MASTER PRODUCTION SCHEDULE STABILITY UNDER ROLLING PLANNING HORIZONS"
+    ],
+    "authors": [
+      {
+        "given": "Sri V.",
+        "family": "Sridharan",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "William L.",
+        "family": "Berry",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "V.",
+        "family": "Udayabhanu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          1988,
+          3
+        ]
+      ]
+    },
+    "journal": [
+      "Decision Sciences"
+    ],
+    "volume": "19",
+    "issue": "1",
+    "page": "147-166",
+    "article_number": null,
+    "url": "https://doi.org/10.1111/j.1540-5915.1988.tb00259.x",
+    "abstract": "<jats:title>ABSTRACT</jats:title><jats:p>Maintaining a stable master production schedule (MPS) is difficult for many firms, especially when material requirements planning is used to manage production operations. This paper is concerned with the problem of measuring MPS stability, and the impact on stability of three important decision variables in managing the MPS within a rolling‐horizon framework in a make‐to‐stock environment: the method used to freeze the MPS, the proportion of the MPS frozen, and the length of the planning horizon for the MPS. Simulation experiments conducted to determine the impact of these decision variables, as well as other important product demand and cost characteristics, on MPS stability are reported. The results indicate MPS stability can be influenced by managerial action directed toward management of the MPS as well as changes in important product cost and requirements characteristics.</jats:p>"
+  },
+  "fleetpy2026": {
+    "doi": "10.1186/s12544-026-00823-3",
+    "status": "verified-metadata",
+    "title": [
+      "FleetPy: an open source simulator for reproducible research on mobility-on-demand services"
+    ],
+    "authors": [
+      {
+        "given": "Roman",
+        "family": "Engelhardt",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-3706-9725",
+        "authenticated-orcid": false,
+        "given": "Florian",
+        "family": "Dandl",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Arslan Ali",
+        "family": "Syed",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chenhao",
+        "family": "Ding",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Santiago",
+        "family": "Alvarez-Ossorio Martinez",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yunfei",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hoda",
+        "family": "Hamdy",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Joel",
+        "family": "Brodersen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhipu",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Klaus",
+        "family": "Bogenberger",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          15
+        ]
+      ]
+    },
+    "journal": [
+      "European Transport Research Review"
+    ],
+    "volume": "18",
+    "issue": "1",
+    "page": null,
+    "article_number": "52",
+    "url": "https://doi.org/10.1186/s12544-026-00823-3",
+    "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Mobility-on-demand (MoD) services have been extensively investigated across multiple research disciplines. For example, transport planners are interested in the impact on mode choice and traffic, while researchers in operations research focus on operational sub-problems such as assignment, pooling, and routing. These differing perspectives lead to varying setups for simulations and dynamic vehicle routing problems. Many developed approaches and algorithms are not open-source, and results are tied to specific problem settings, making fair comparisons difficult. To address this, we developed FleetPy, an agent-based simulator that provides a consistent and modular platform for studying and comparing MoD services. Its modular structure enables exploration of diverse aspects at varying levels of detail. These modules cover a wide range of fleet control tasks—including implementations of vehicle assignment, repositioning, pricing, and charging methods—alongside customer behavior models, network and routing components, and agent interactions. Well-designed interfaces facilitate coupling with established transport simulation frameworks and have been successfully tested in real-world experiments. FleetPy advances reproducible research in three ways: (1) enabling comparison of new algorithms with existing methods under consistent scenarios, (2) providing benchmark input data for Manhattan, Munich, and Chicago, and (3) supporting transport planners in developing MoD case studies with reduced technical effort.</jats:p>"
+  },
+  "ackermann2025": {
+    "doi": "10.1007/s00291-025-00809-y",
+    "title": [
+      "Multiple plan approach for a dynamic dial-a-ride problem"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-9869-2057",
+        "authenticated-orcid": false,
+        "given": "Christian",
+        "family": "Ackermann",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Julia",
+        "family": "Rieck",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2025,
+          9
+        ]
+      ]
+    },
+    "journal": [
+      "OR Spectrum"
+    ],
+    "volume": "47",
+    "issue": "3",
+    "page": "781-815",
+    "abstract": "<jats:title>Abstract</jats:title>\n          <jats:p>In densely populated areas, ridepooling services are becoming more and more popular and can contribute to promote sustainable mobility concepts. In this paper, we study a dynamic dial-a-ride problem and propose a novel two-phase multiple plan approach. By maintaining multiple plans simultaneously over the course of the optimization procedure, we increase the likelihood and speed of a successful insertion for dynamically arising customer requests. Additionally, we present a new metric to replace the commonly used distance minimization as guidance within the optimization procedure. In order to examine the impact of certain instance characteristics on the quality of the solutions, we evaluate our design decisions on various instance sets. The results show that the proposed method consistently outperforms commonly used single plan approaches.</jats:p>"
+  },
+  "tellez2022": {
+    "doi": "10.1002/net.22063",
+    "title": [
+      "The time‐consistent dial‐a‐ride problem"
+    ],
+    "authors": [
+      {
+        "given": "Oscar",
+        "family": "Tellez",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Univ Lyon, INSA lyon, Université Claude Bernard Lyon 1, Univ Lumière Lyon 2 DISP Laboratory EA 4570  Villeurbanne 69621 France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7501-1837",
+        "authenticated-orcid": false,
+        "given": "Samuel",
+        "family": "Vercraene",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Univ Lyon, INSA lyon, Université Claude Bernard Lyon 1, Univ Lumière Lyon 2 DISP Laboratory EA 4570  Villeurbanne 69621 France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6298-0986",
+        "authenticated-orcid": false,
+        "given": "Fabien",
+        "family": "Lehuédé",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "IMT Atlantique, LS2N, UMR CNRS 6004  Nantes France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-3652-0740",
+        "authenticated-orcid": false,
+        "given": "Olivier",
+        "family": "Péton",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "IMT Atlantique, LS2N, UMR CNRS 6004  Nantes France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6301-7403",
+        "authenticated-orcid": false,
+        "given": "Thibaud",
+        "family": "Monteiro",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Univ Lyon, INSA lyon, Université Claude Bernard Lyon 1, Univ Lumière Lyon 2 DISP Laboratory EA 4570  Villeurbanne 69621 France"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2022,
+          6
+        ]
+      ]
+    },
+    "journal": [
+      "Networks"
+    ],
+    "volume": "79",
+    "issue": "4",
+    "page": "452-478",
+    "abstract": "<jats:title>Abstract</jats:title><jats:p>In the context of door‐to‐door transportation of people with disabilities, service quality considerations such as maximum ride time and service time consistency are critical requirements. To identify a good trade‐off between these considerations and economic objectives, we define a new variant of the multiperiod dial‐a‐ride problem called the time‐consistent dial‐a‐ride problem. A transportation planning is supposed to be time consistent if for each passenger, the same service time is used all along the planning horizon. However, considering the numerous variations in transportation demands over a week, designing consistent plans for all passengers can be too expensive. It is therefore necessary to find a compromise solution between costs and time‐consistency objectives. The time‐consistent dial‐a‐ride problem is solved using an epsilon‐constraint approach to illustrate the trade‐off between these two objectives. It computes an approximation of the Pareto front, using a matheuristic framework that combines a large neighbourhood search with the solution of set partitioning problems. This approach is benchmarked on time‐consistent vehicle routing problem literature instances. Experiments are also conducted in the context of door‐to‐door transportation for people with disabilities, using real data. These experiments support managerial insights regarding the inter‐relatedness of costs and quality of service.</jats:p>"
+  },
+  "wang2026walking": {
+    "doi": "10.1016/j.trc.2026.105645",
+    "title": [
+      "Where should the last passenger be dropped off? Anticipatory walking in ridepooling"
+    ],
+    "authors": [
+      {
+        "ORCID": "https://orcid.org/0009-0003-8332-9425",
+        "authenticated-orcid": false,
+        "given": "Xinyu",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0411-3064",
+        "authenticated-orcid": false,
+        "given": "Andres",
+        "family": "Fielbaum",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "year": {
+      "date-parts": [
+        [
+          2026,
+          6
+        ]
+      ]
+    },
+    "journal": [
+      "Transportation Research Part C: Emerging Technologies"
+    ],
+    "volume": "187",
+    "issue": null,
+    "page": "105645",
+    "abstract": null
+  }
+}

@@ -1,0 +1,473 @@
+\chapter{Lời hứa có biên được chứng nhận}
+
+Chương này trình bày cơ chế trung tâm của khóa luận. Cấu trúc chương đi từ mô hình bài toán mở
+rộng, qua phép phân rã ba mốc và sổ cái cam kết, tới phần lý thuyết về hai cơ sở tính sổ cái,
+rồi kết thúc bằng kiến trúc cài đặt và cơ chế bảo đảm tính tái lập.
+
+\section{Tổng quan cơ chế}
+
+Ý tưởng có thể phát biểu trong một đoạn. Hệ thống điều phối, ngoài việc gán khách cho xe như
+thông thường, còn \emph{công bố} cho mỗi hành khách một giờ đón và một giờ trả. Mỗi khi hệ
+thống quyết định lại và công bố một giờ mới, độ dời giữa giờ mới và giờ cũ được ghi vào một sổ
+cái riêng của hành khách đó. Sổ cái cộng dồn theo thời gian và chỉ tăng. Trước khi chấp nhận
+một phương án, hệ thống kiểm tra xem phương án ấy có làm sổ cái của bất kỳ hành khách nào vượt
+trần $\beta$ hay không; nếu có, phương án bị loại khỏi tập lựa chọn ngay tại đó.
+
+Điểm tinh tế nằm ở chỗ \emph{độ dời nào bị tính vào sổ cái}. Nếu tính toàn bộ độ dời mà hành
+khách nhìn thấy, hệ thống sẽ bị tính phí cho cả những thay đổi do xe chạy chậm hoặc do đường
+tắc --- những thứ nó không gây ra. Để tránh điều đó, hệ thống dựng thêm một mốc tham chiếu phản
+thực: \emph{chính kế hoạch cũ đó, nhưng chiếu lại từ vị trí thật hiện tại của xe}. Hiệu giữa
+phương án mới và mốc phản thực này là phần do quyết định gây ra; hiệu giữa mốc phản thực và giờ
+đã công bố là phần do thế giới gây ra. Chỉ phần thứ nhất bị tính.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  node distance=8mm,
+  hop/.style={draw,rounded corners=3pt,align=center,inner sep=5pt,
+              font=\small,minimum height=10mm,fill=xamnhat,draw=xamvien},
+  mui/.style={-{Latex[length=2.2mm]},thick}
+]
+\node[hop] (a) {Sự kiện mới\\(yêu cầu, vị trí xe)};
+\node[hop,right=of a] (b) {Sinh phương án\\cho từng xe};
+\node[hop,right=of b] (c) {Dựng ba mốc\\$v$, $e$, $p$};
+\node[hop,right=of c] (d) {Đối chiếu\\sổ cái với $\beta$};
+\node[hop,below=10mm of d] (e) {Chọn phương án\\bằng ILP};
+\node[hop,left=of e] (f) {Cập nhật sổ cái\\và công bố lại};
+\node[hop,left=of f] (g) {Ghi chứng cứ\\niêm phong};
+\draw[mui] (a)--(b); \draw[mui] (b)--(c); \draw[mui] (c)--(d);
+\draw[mui] (d)--(e); \draw[mui] (e)--(f); \draw[mui] (f)--(g);
+\end{tikzpicture}
+\caption{Vòng quyết định của hệ thống. Ba bước ở giữa là phần bổ sung so với kiến trúc điều
+phối thông thường.}
+\label{hinh:vongquyetdinh}
+\end{figure}
+
+\section{Mô hình bài toán mở rộng}
+
+\subsection{Lời hứa công bố}
+
+Mở rộng mô hình ở mục 2.1, ta bổ sung khái niệm lời hứa. Với mỗi hành khách $r$ đã được nhận,
+hệ thống duy trì một \emph{lời hứa đang mở}, gồm định danh xe được phân công, điểm đón, điểm
+trả, giờ đón dự kiến và giờ trả dự kiến. Lời hứa này được công bố cho hành khách và được ghi
+vào biên bản. Mỗi khi hệ thống ra quyết định, lời hứa có thể được công bố lại với giá trị mới.
+
+Trạng thái cam kết của một hành khách đi qua ba giai đoạn: \emph{đã nhận} (đã được xác nhận
+nhưng xe chưa tới), \emph{đang chờ đón}, và \emph{đang trên xe}. Việc phân biệt ba giai đoạn
+là cần thiết vì các chiều cam kết có ý nghĩa khác nhau ở từng giai đoạn --- chẳng hạn giờ đón
+không còn ý nghĩa sau khi khách đã lên xe.
+
+\subsection{Các chiều cam kết}
+
+Hệ thống theo dõi mười chiều cam kết, chia thành ba nhóm. Nhóm thời gian gồm tổng độ dời giờ
+đón và tổng độ dời giờ trả, tính bằng mili giây. Nhóm định danh gồm số lần đổi xe, số lần đổi
+điểm đón, số lần đổi điểm trả. Nhóm cấu trúc gồm khoảng cách dời điểm đón và điểm trả tính bằng
+mili-mét, số lần đảo thứ tự hành khách cũ, số điểm dừng chèn thêm trước khi đón, và số lần sửa
+đổi mang tính vật chất.
+
+Mỗi chiều có thể được đặt một trần cứng, hoặc để không giới hạn. Trong thực nghiệm, cấu hình
+được dùng nhiều nhất đặt trần cho chiều \emph{tổng độ dời giờ trả} và khóa cứng ba chiều định
+danh về không, tức cấm hoàn toàn việc đổi xe hay đổi điểm dừng sau khi đã hứa.
+
+\section{Phép phân rã ba mốc}
+
+\subsection{Định nghĩa}
+
+Tại một thời điểm quyết định, với hành khách $r$ đang có lời hứa mở trên xe $v$, hệ thống dựng
+ba mốc:
+
+\begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+\item $v$ --- \textbf{previous}: lời hứa đã công bố lần gần nhất cho hành khách;
+\item $e$ --- \textbf{exogenous}: chính kế hoạch đó, chiếu lại từ vị trí thật hiện tại của xe.
+Cùng lộ trình, cùng phân công, chỉ khác điểm xuất phát và thời điểm chiếu;
+\item $p$ --- \textbf{proposed}: lời hứa mà phương án đang xét sẽ tạo ra.
+\end{itemize}
+
+Từ ba mốc này định nghĩa ba đại lượng:
+
+\begin{align}
+\text{độ dời do quyết định} \quad & A = |p - e|\\
+\text{trôi dạt ngoại sinh} \quad & d = |e - v|\\
+\text{độ dời khách nhìn thấy} \quad & B = |p - v|
+\end{align}
+
+Mốc $e$ là mấu chốt. Nó trả lời câu hỏi phản thực ``nếu nhà điều hành \emph{không làm gì}, giờ
+hẹn của hành khách này bây giờ sẽ là mấy?''. Chênh lệch giữa câu trả lời đó và giờ đã hứa chính
+là phần thế giới gây ra; chênh lệch giữa phương án đang xét và câu trả lời đó chính là phần nhà
+điều hành gây ra.
+
+\paragraph{$A$ là đại lượng đối xứng.} Cài đặt tính $A = |p - e|$ theo đúng trị tuyệt đối
+(\texttt{PromiseDeltaCalculator}, hàm \texttt{AbsoluteDifference}): một quyết định kéo lời hứa
+\emph{sớm} hơn mốc không-làm-gì cũng bị tính phí bằng đúng độ lệch đó, giống hệt một quyết định
+đẩy muộn. Không có quy ước một chiều nào trong mã.
+
+Hệ quả cần nói thẳng là cơ sở hành vi \emph{có thể} phạt một sửa chữa có lợi cho khách. Xét
+$v = 600$, $e = 720$, $p = 600$ (giây): giao thông đẩy lời hứa muộn đi 120 giây, và phương án
+đang xét kéo nó về đúng giờ đã hứa. Khi đó $A = 120$ trong khi $B = 0$ --- khách không thấy gì
+thay đổi, nhưng sổ cái hành vi vẫn bị trừ 120 giây. Một trần hành vi chặt có thể loại đúng phương
+án mà khách muốn nhất.
+
+Trên panel thực nghiệm, trường hợp này \emph{chưa từng xảy ra}: trong cả $479$ lần công bố có
+$A > 0$ ở nhánh B1 và $11$ lần ở nhánh C1, dấu của $p - e$ xác định được hoàn toàn và
+\emph{luôn dương}. Nguyên nhân mang tính cơ học --- bộ sinh phương án chỉ chèn thêm điểm dừng,
+nên chỉ có thể đẩy lùi giờ của khách cũ chứ không kéo sớm lên được. Vì vậy trên hệ hiện tại
+$A = p - e$ trong mọi quan sát. Nhưng đó là tính chất \emph{của bộ sinh}, không phải của cơ sở
+hành vi; với một bộ sinh biết sắp xếp lại lộ trình, giới hạn nêu trên sẽ trở nên thực tế.
+
+\subsection{Ví dụ minh họa}
+
+Một hành khách đặt xe lúc 9:00 và được báo sẽ được đón lúc 9:10. Đến 9:05, hệ thống cân nhắc
+thay đổi kế hoạch vì có khách mới. Giả sử tại thời điểm đó xe đang chậm hơn dự kiến 40 giây.
+
+\begin{table}[htbp]
+\centering
+\caption{Ba mốc trong một tình huống cụ thể}
+\label{bang:bamoc}
+\small
+\begin{tabular}{@{}llr@{}}
+\toprule
+\textbf{Mốc} & \textbf{Ý nghĩa} & \textbf{Giá trị}\\
+\midrule
+$v$ & Giờ đã hứa với khách & 9:10:00\\
+$e$ & Giờ sẽ đến nếu không làm gì (xe đang chậm 40 s) & 9:10:40\\
+$p$ & Giờ sẽ đến nếu đổi kế hoạch & 9:11:10\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Với phương án đổi kế hoạch, cơ sở hành vi tính $9{:}11{:}10 - 9{:}10{:}40 = 30$ giây, còn cơ sở
+kết quả tính $9{:}11{:}10 - 9{:}10{:}00 = 70$ giây. Khác biệt 40 giây chính là phần xe chạy chậm.
+
+Bây giờ xét phương án \emph{không làm gì}, tức $p = e = 9{:}10{:}40$. Cơ sở hành vi tính 0 giây,
+nên phương án này luôn hợp lệ. Cơ sở kết quả tính 40 giây --- đã vượt trần 30 giây. Theo cách
+tính thứ hai, \emph{ngay cả việc không làm gì cũng là vi phạm}. Nếu mọi phương án khác cũng vượt,
+chiếc xe không còn kế hoạch hợp lệ nào và hệ thống dừng. Đây là hạt nhân của toàn bộ phần lý
+thuyết ở mục 3.5.
+
+\section{Sổ cái cam kết}
+
+Với mỗi cặp (hành khách, chiều cam kết), hệ thống duy trì một bộ đếm cộng dồn. Mỗi lần công bố
+lại lời hứa, bộ đếm được cập nhật
+
+\begin{equation}
+L_{r,\text{sau}} = L_{r,\text{trước}} + \delta_r
+\end{equation}
+
+trong đó $\delta_r$ là độ dời của lần công bố ấy theo cơ sở đang dùng. Vì $\delta_r \ge 0$, bộ
+đếm đơn điệu tăng.
+
+Một phương án được coi là hợp lệ về mặt cam kết nếu với mọi hành khách $r$ bị ảnh hưởng và mọi
+chiều $k$ có đặt trần, ta có $L_{r,k,\text{sau}} \le \beta_k$. Phương án vi phạm bị loại khỏi
+tập lựa chọn trước khi bài toán quy hoạch nguyên được giải, chứ không bị phạt trong hàm mục
+tiêu.
+
+Ba đặc điểm của sổ cái này cần được nhấn mạnh vì chúng là chỗ khác biệt so với văn liệu. Thứ
+nhất, nó \emph{theo từng hành khách}: không có phép cộng gộp nào làm loãng người chịu thiệt
+nặng nhất. Thứ hai, nó \emph{cộng dồn theo thời gian}: một hành khách bị dời năm lần, mỗi lần
+mười giây, tiêu tốn đúng bằng một hành khách bị dời một lần năm mươi giây. Thứ ba, nó là
+\emph{ràng buộc cứng} chứ không phải số hạng mục tiêu, nên lời hứa cưỡng chế được chứ không
+chỉ là chỉ tiêu.
+
+\section{Hai cơ sở tính và ba định lý}
+
+\subsection{Phát biểu hai cơ sở}
+
+Từ mục 3.3, có đúng hai cách tự nhiên để tính sổ cái, và chúng không tương đương.
+
+\begin{dinhnghia}[Cơ sở hành vi]
+Sổ cái cộng dồn đại lượng $A = |p-e|$: ``tôi làm bạn trễ thêm bao nhiêu so với lẽ ra bạn đã bị''.
+Trong cài đặt, đây là \texttt{CommitmentBudgetBasis.DecisionInduced}. Tương ứng với nghĩa vụ
+phương tiện trong mục 2.4.
+\end{dinhnghia}
+
+\begin{dinhnghia}[Cơ sở kết quả]
+Sổ cái cộng dồn đại lượng $B = |p-v|$: ``bạn trễ bao nhiêu so với điều tôi đã nói''. Trong cài
+đặt, đây là \texttt{CommitmentBudgetBasis.CustomerVisible}. Tương ứng với nghĩa vụ kết quả.
+\end{dinhnghia}
+
+\subsection{Bất biến nền: phương án không làm gì luôn tồn tại}
+
+Toàn bộ phần lý thuyết dựa trên một bất biến của bộ sinh phương án: tập phương án của mỗi xe
+\emph{luôn chứa} phương án giữ nguyên kế hoạch hiện tại. Bất biến này được khẳng định độc lập ở
+ba vị trí trong mã nguồn --- bộ chọn đội xe ứng viên, bộ giữ lại danh mục phương án, và bộ đánh
+giá phương án --- và nó cũng bắt buộc về mặt mô hình, vì ràng buộc (2.3) ở dạng đẳng thức buộc
+mỗi xe phải chọn đúng một phương án.
+
+Với phương án không làm gì, kế hoạch không đổi, nên phép chiếu của nó từ vị trí hiện tại
+\emph{chính là} mốc $e$. Tức là $p(\text{no-op}) = e$.
+
+\subsection{Phân rã cộng tính và độ khít của nó}
+\label{muc:phanra}
+
+Ba đại lượng liên hệ với nhau qua bất đẳng thức tam giác:
+
+\begin{equation}
+\boxed{\,B \le A + d\,}
+\label{eq:phanra}
+\end{equation}
+
+Dấu bằng xảy ra khi và chỉ khi hai hiệu $(p-e)$ và $(e-v)$ không trái dấu, tức khi ba mốc xếp
+cùng một chiều. Khóa luận này \emph{không} khẳng định điều kiện đó luôn đúng. Nó đo xem điều kiện
+đó đúng đến mức nào, và chỉ ra rằng phần sai lệch nhỏ hơn mọi ngưỡng diễn giải được dùng về sau.
+
+\paragraph{Vì sao dấu bằng có thể hỏng.} Cả ba đại lượng đều là trị tuyệt đối. Nếu giao thông
+kéo $e$ \emph{sớm} hơn $v$ trong khi quyết định đẩy $p$ \emph{muộn} hơn $e$, hai hiệu ngược dấu
+triệt tiêu một phần và $|p-v| < |p-e| + |e-v|$. Đây không phải trường hợp hiếm: trôi dạt ngoại
+sinh trên panel này gần như đối xứng --- đo được 214.924 lần sớm hơn so với 206.224 lần muộn
+hơn trên 421.752 lần sửa --- trong khi phần bị tính phí cho quyết định là một chiều. Hai đại
+lượng một chiều và hai chiều gặp nhau thì triệt tiêu từng phần là điều phải xảy ra.
+
+\paragraph{Độ khít đo được ở mức từng lần công bố.} Bảng \ref{bang:khit-tung-lan} kiểm tra
+\eqref{eq:phanra} trên từng bản ghi \texttt{promisePublished} của chiều
+\texttt{drop\_eta\_total\_ms}, thay vì chỉ trên tổng.
+
+\begin{table}[htbp]
+\centering
+\caption{Độ khít của phân rã cộng tính, tính trên từng lần công bố (panel 20 ô)}
+\label{bang:khit-tung-lan}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+& \textbf{B1} & \textbf{C1}\\
+\midrule
+Số lần công bố & 54.311 & 45.542\\
+$A + d = B$ đúng chính xác & 54.083 \;($99{,}58\%$) & 45.539 \;($99{,}99\%$)\\
+$A + d > B$ (bất đẳng thức chặt) & 228 \;($0{,}42\%$) & 3\\
+\midrule
+Số lần \emph{cả hai} $A>0$ và $d>0$ & 476 \;($0{,}88\%$) & 11\\
+\quad trong đó dấu bằng hỏng & \textbf{228} \;(\textbf{$47{,}9\%$}) & 3 \;($27{,}3\%$)\\
+\midrule
+Độ hụt khi hỏng: trung vị & 168 ms & ---\\
+Độ hụt khi hỏng: cực đại & 1.380 ms & 208 ms\\
+\textbf{Độ hụt trên tổng $A+d$} & \textbf{$0{,}0748\%$} & \textbf{$0{,}0059\%$}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Cách đọc bảng này cho đúng.} Con số $99{,}58\%$ không phải một phép kiểm định mạnh.
+Trong $99{,}12\%$ số lần công bố, \emph{ít nhất một} trong hai đại lượng $A$, $d$ bằng không;
+khi $e = v$ thì $B = A$ hiển nhiên, khi $p = e$ thì $B = d$ hiển nhiên. Phép kiểm định thật chỉ
+tồn tại ở 476 lần công bố mà cả hai đều khác không --- và ở đó dấu bằng \emph{hỏng gần một nửa
+số lần}. Vì vậy phát biểu đúng là bất đẳng thức \eqref{eq:phanra} kèm độ khít đã đo, chứ không
+phải một đẳng thức.
+
+\paragraph{Vì sao kết luận quy trách vẫn vững.} Phần hụt cộng dồn là 53.530 ms trên tổng
+$71{,}58$ triệu ms, tức $0{,}0748\%$; ở nhánh C1 là $0{,}0059\%$. Sàn nhiễu quỹ đạo của toàn bộ
+thực nghiệm là $\pm 0{,}3$ điểm phần trăm. Phần hụt nhỏ hơn ngưỡng đó khoảng hai bậc độ lớn. Do
+đó mọi kết luận quy trách ở mục \ref{muc:quytrach} --- kể cả con số $89{,}06\%$ --- không thay
+đổi dù ta gán toàn bộ phần hụt về phía bất lợi nhất.
+
+\paragraph{Bằng chứng chính cho phép phân rã không phải là dấu bằng.} Trước hết cần nói rõ $d$
+đo cái gì. Mốc $e$ được chiếu trên trạng thái \emph{sau khi đã áp dụng toàn bộ lô sự kiện} của
+kỷ nguyên đó (\texttt{CommitmentDecisionValidator} đọc tuyến cũ từ \texttt{ReducedState}), nên
+$d$ gồm mọi thứ đã đổi trong lô khi giữ nguyên tuyến: tiến độ thực của xe, độ trễ thực thi, cập
+nhật thời gian di chuyển, và các sự kiện vòng đời khác. Vì vậy \emph{không} được gọi $d$ là
+``tác động thuần của giao thông''; tên chính xác là \emph{phần thay đổi khi chiếu lại tuyến giữ
+nguyên trên trạng thái mới}. Và vì tiến độ thực của xe phụ thuộc tuyến đã chọn, $d$ về nguyên
+tắc \emph{có thể} phụ thuộc yếu vào chính sách.
+
+Do đó tính bất biến của $d$ là một \emph{tính chất phải kiểm bằng thực nghiệm}, không phải một
+định lý --- và nó là phép kiểm mạnh nhất cho phép phân rã. Nếu phép tách hai thành phần bị sai,
+$d$ sẽ trôi theo chính sách. Trên hai nhánh B1 và C1, đại lượng $A$ thay đổi \textbf{507 lần}
+(từ 64.863.133 ms xuống 128.020 ms) trong khi $d$ chỉ lệch \textbf{$0{,}37\%$} (6.719.286 ms so
+với 6.694.740 ms). Thành phần lẽ ra phải phản ứng với chính sách thì phản ứng; thành phần lẽ ra
+gần như bất biến thì gần như bất biến.
+
+\subsection{Ba định lý}
+
+\begin{dinhly}[Cơ sở hành vi luôn thỏa được]
+Dưới cơ sở hành vi, tập phương án của một xe không bao giờ bị làm rỗng bởi ràng buộc cam kết.
+\end{dinhly}
+
+\begin{proof}
+Với phương án không làm gì, $A = |p - e| = |e - e| = 0$. Do đó sổ cái sau bằng sổ cái trước,
+mà sổ cái trước không vượt $\beta$ vì mọi lần công bố trước đó đều đã qua kiểm tra. Vậy phương
+án không làm gì luôn hợp lệ, và tập phương án luôn có ít nhất một phần tử.
+\end{proof}
+
+Ý nghĩa của định lý này cần được diễn giải đúng. Cơ sở hành vi khả thi \emph{không phải vì nó
+dễ dãi}, mà vì nó đo so với một mốc mà nhà điều hành kiểm soát được. ``Không làm gì'' theo định
+nghĩa là ``không gây ra gì''.
+
+\begin{dinhly}[Cơ sở kết quả có thể vô nghiệm]
+Dưới cơ sở kết quả, tồn tại trạng thái mà tập phương án của một xe bị làm rỗng.
+\end{dinhly}
+
+\begin{proof}
+Với phương án không làm gì, $B = |p - v| = |e - v| = d$. Nếu sổ cái tích lũy cộng với $d$ vượt
+$\beta$ thì ngay cả phương án không làm gì cũng bị loại. Khi mọi phương án khác cũng bị loại,
+tập trở thành rỗng và hệ thống báo lỗi không còn phương án khả thi.
+\end{proof}
+
+\begin{dinhly}[Cơ sở kết quả không mở rộng tập quỹ đạo khả thi]
+\label{dl:tapcon}
+Giả sử điều kiện \emph{(H)}: tại mọi lần công bố, mốc ngoại sinh nằm gần phương án đang xét ít
+nhất bằng mốc đã hứa, tức $|p - e| \le |p - v|$. Khi đó, với mọi trần $\beta$, mọi quỹ đạo thực
+thi được dưới cơ sở kết quả đều thực thi được dưới cơ sở hành vi. Do đó số hành khách được phục
+vụ bởi \emph{chính sách tối ưu} dưới cơ sở kết quả không lớn hơn số hành khách được phục vụ bởi
+chính sách tối ưu dưới cơ sở hành vi.
+\end{dinhly}
+
+\begin{proof}
+Điều kiện cần dùng là $A \le B$ tại mọi lần công bố. Vì $A = |p-e|$ và $B = |p-v|$, ta có
+
+\begin{equation}
+A \le B \iff |p - e| \le |p - v|,
+\label{eq:dieukien}
+\end{equation}
+
+tức \emph{mốc ngoại sinh $e$ nằm gần phương án $p$ ít nhất bằng mốc đã hứa $v$}. Đây chính là
+điều kiện (H) phát biểu ở dưới; giả thiết nó đúng trong phần chứng minh này.
+
+Chứng minh bằng quy nạp theo số lần công bố. Ký hiệu $L^{A}_k$, $L^{B}_k$ là sổ cái tích lũy
+của hai cơ sở sau $k$ lần công bố; ban đầu $L^{A}_0 = L^{B}_0 = 0$. Giả sử $L^{A}_k \le L^{B}_k$.
+Nếu một phương án được cơ sở kết quả chấp nhận, tức $L^{B}_k + B \le \beta$, thì theo (H)
+$$L^{A}_k + A \;\le\; L^{B}_k + B \;\le\; \beta,$$
+nên phương án đó cũng được cơ sở hành vi chấp nhận, và bất đẳng thức giữa hai sổ cái được bảo
+toàn sang bước $k+1$. Vậy mọi chuỗi quyết định hợp lệ dưới cơ sở kết quả cũng hợp lệ dưới cơ sở
+hành vi, tức tập quỹ đạo khả thi của cơ sở kết quả là \emph{tập con} của tập quỹ đạo khả thi của
+cơ sở hành vi. Lấy cận trên trên hai tập lồng nhau cho ngay kết luận.
+\end{proof}
+
+\paragraph{Điều kiện (H) và mức độ nó đúng.} Điều kiện \eqref{eq:dieukien} hỏng đúng khi trôi dạt
+\emph{thuận chiều} đã đẩy mốc ngoại sinh ra xa phương án hơn so với mốc đã hứa --- nói cách khác,
+khi giao thông tình cờ hấp thụ một phần cú đẩy của nhà điều hành, làm hành khách nhìn thấy ít hơn
+lượng mà nhà điều hành thực sự gây ra. Đo trên panel:
+
+\begin{table}[htbp]
+\centering
+\caption{Mức độ đúng của điều kiện (H), tính trên từng lần công bố}
+\label{bang:dieukien-h}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+& \textbf{B1} & \textbf{C1}\\
+\midrule
+$A < B$ & 52.345 \;($96{,}38\%$) & 43.958 \;($96{,}52\%$)\\
+$A = B$ & 1.738 \;($3{,}20\%$) & 1.581 \;($3{,}47\%$)\\
+\midrule
+\textbf{(H) thỏa} $A \le B$ & \textbf{54.083 \;($99{,}58\%$)} & \textbf{45.539 \;($99{,}99\%$)}\\
+\textbf{(H) hỏng} $A > B$ & \textbf{228 \;($0{,}42\%$)} & \textbf{3 \;($0{,}007\%$)}\\
+\quad vượt nhiều nhất & 690 ms & 104 ms\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Tập các lần công bố làm hỏng (H) \emph{trùng khít} với tập làm hỏng dấu bằng trong
+\eqref{eq:phanra} --- cùng 228 bản ghi ở B1, cùng 3 bản ghi ở C1. Điều này là tất yếu: cả hai
+đều là hệ quả của việc $e$ vượt qua $v$ theo chiều ngược với $p$.
+
+Phần vi phạm cộng dồn bị chặn bởi tổng độ hụt ở bảng \ref{bang:khit-tung-lan}, tức 53.530 ms
+trên toàn panel B1 --- $0{,}0748\%$ của $A+d$, và nhỏ hơn hai bậc độ lớn so với sàn nhiễu diễn
+giải. Do đó Định lý \ref{dl:tapcon} được phát biểu như một kết quả \emph{có điều kiện}, với điều
+kiện được đo chứ không được giả định.
+
+\paragraph{Phạm vi của Định lý \ref{dl:tapcon}, và điều nó \emph{không} nói.} Định lý phát biểu
+về \emph{tập quỹ đạo khả thi} và về \emph{chính sách tối ưu}. Nó \emph{không} kéo theo rằng bộ
+giải tham lam đang được cài đặt --- một hàm mục tiêu từ điển giải tuần tự theo từng kỷ nguyên ---
+sẽ phục vụ nhiều khách hơn dưới cơ sở hành vi trên \emph{một} quỹ đạo cụ thể. Lý do là mỗi lựa
+chọn làm thay đổi trạng thái của các bước sau, nên một tập lựa chọn hẹp hơn tại mỗi trạng thái
+vẫn có thể dẫn tới một quỹ đạo tình cờ tốt hơn. Bản thân thực nghiệm của khóa luận đã ghi nhận
+hiện tượng này ở chiều khác: tỉ lệ phục vụ vi phạm tính đơn điệu ở 8 trên 20 ô khi siết trần
+(mục \ref{muc:dovung}). Vì vậy phần thực nghiệm ở mục \ref{muc:haicoso} được trình bày như một
+phép kiểm chứng độc lập, không phải như một hệ quả hiển nhiên của định lý.
+
+Định lý \ref{dl:tapcon} vẫn là kết quả quan trọng nhất của chương, vì nó loại bỏ khả năng cơ sở
+kết quả \emph{về nguyên tắc} vượt trội: không có chính sách nào dưới cơ sở kết quả làm được điều
+mà một chính sách dưới cơ sở hành vi không làm được.
+
+\begin{hequa}[Dải khác biệt rộng tối đa $d$]
+Một phương án bị cơ sở kết quả loại mà cơ sở hành vi không loại khi và chỉ khi sổ cái của nó
+rơi vào dải $\beta - d \le L^{A} + A < \beta$. Bề rộng dải \emph{tối đa} bằng $d$, đạt đúng
+bằng $d$ khi dấu bằng trong \eqref{eq:phanra} xảy ra, và $d$ do giao thông quyết định chứ không
+phụ thuộc $\beta$.
+\end{hequa}
+
+Hệ quả này trả lời một câu hỏi tự nhiên: nếu nới trần lên năm hay mười phút thì hai cơ sở có
+tách nhau ra không? Câu trả lời là không. Nới trần không làm dải rộng ra, vì bề rộng dải do trôi
+dạt quyết định. Điều thay đổi khi nới trần là tính vô nghiệm biến mất --- và khi đó hai cơ sở
+trở nên tương đương. Nói gọn: \emph{không tồn tại $\beta$ nào mà cơ sở kết quả tốt hơn; ở
+$\beta$ nhỏ nó vô nghiệm, ở $\beta$ lớn nó trùng với cơ sở hành vi.}
+
+\section{Các cơ chế bảo vệ bổ sung}
+
+Ngoài trần ngân sách, hệ thống cài đặt ba họ cơ chế bảo vệ khác, chủ yếu nhắm vào giờ đón. Việc
+đưa cả ba vào là để so sánh được với các cơ chế đã có trong văn liệu.
+
+\textbf{Khóa cứng} cấm hoàn toàn việc thay đổi một chiều nào đó sau khi lời hứa được xác nhận.
+Cấu hình chính khóa cứng ba chiều định danh --- xe, điểm đón, điểm trả.
+
+\textbf{Hàng rào đóng băng} (freeze horizon) cấm thay đổi khi thời điểm đón còn cách hiện tại
+dưới một ngưỡng cho trước. Đây là phiên bản điều phối xe của cơ chế đóng băng lịch sản xuất
+trong mục 2.3. Thực nghiệm dùng hai ngưỡng: 300 và 600 giây.
+
+\textbf{Bảo đảm một chiều} (ratchet) cho phép giờ đón \emph{tốt lên} nhưng cấm \emph{xấu đi}.
+Đây chính là cơ chế mà Alonso-Mora và cộng sự \cite{alonsomora2017} sử dụng, được mô tả trong
+bài của họ là cấm tăng thời gian chờ đã đạt được so với phân công trước. Việc cài đặt nó cho
+phép khóa luận so sánh trực tiếp ``cách của văn liệu'' với ``cách của chúng tôi'' trên cùng dữ
+liệu, và kết quả ở mục \ref{muc:ratchet} khá bất ngờ.
+
+\section{Kiến trúc cài đặt}
+
+\subsection{Phân tầng}
+
+Hệ thống được cài đặt bằng C\# trên nền .NET, tổ chức thành chín dự án theo kiến trúc phân tầng
+với chiều phụ thuộc một chiều từ ngoài vào trong. Bảng \ref{bang:kientruc} tóm tắt.
+
+\begin{table}[htbp]
+\centering
+\caption{Các thành phần chính của hệ thống}
+\label{bang:kientruc}
+\small
+\begin{tabular}{@{}p{4.4cm}rp{7.4cm}@{}}
+\toprule
+\textbf{Thành phần} & \textbf{Dòng} & \textbf{Vai trò}\\
+\midrule
+\texttt{Domain} & 4.866 & Bất biến nghiệp vụ: chính sách cam kết, sổ cái, lời hứa, kiểm tra ràng buộc vật lý.\\
+\texttt{Application} & 4.023 & Vòng quyết định, bộ tính độ dời ba mốc, bộ kiểm tra cam kết.\\
+\texttt{Algorithms} & 7.889 & Sinh phương án theo lối chèn, chứng chỉ độ trễ an toàn, các hồ sơ hàm mục tiêu.\\
+\texttt{Solvers.OrTools} & 687 & Cầu nối tới bộ giải quy hoạch nguyên của OR-Tools.\\
+\texttt{Contracts} & 9.332 & Giao thức trao đổi với bộ mô phỏng, mã hóa chuẩn tắc.\\
+\texttt{Runner} & 6.295 & Tiến trình chạy, chuẩn tắc hóa trạng thái, ghi biên bản.\\
+\texttt{Benchmarking} & 17.150 & Chuẩn hóa dữ liệu, dựng bộ dữ liệu thử, sinh chứng cứ.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Bộ mô phỏng sử dụng là FleetPy phiên bản 1.0.2 \cite{fleetpy2022}, một nền mô phỏng mở cho các
+dịch vụ vận tải theo yêu cầu. Hệ thống điều phối của khóa luận đóng vai trò bộ điều khiển đội
+xe ngoài, trao đổi với FleetPy qua một giao thức nhị phân có kiểm tra băm ở từng khung tin.
+
+\subsection{Sinh phương án theo lối chèn}
+
+Bộ sinh phương án hoạt động theo nguyên tắc chèn: với mỗi xe và mỗi yêu cầu mới, nó thử chèn
+cặp điểm đón--trả vào mọi vị trí hợp lệ của lộ trình hiện tại, giữ nguyên thứ tự các điểm đã có.
+Đặc điểm này có hai hệ quả quan trọng đối với phần lý thuyết. Thứ nhất, nó là lý do
+$\mathtt{decisionMovedEarlier} = 0$: chèn thêm chỉ đẩy lùi được giờ của khách cũ. Thứ hai, nó
+giới hạn không gian tìm kiếm một cách có kiểm soát, cho phép khóa luận chứng minh rằng kết quả
+không phải do tìm kiếm bị cắt ngắn --- điểm sẽ được kiểm chứng ở mục \ref{muc:bosinh}.
+
+Hệ thống cũng cài đặt một cơ chế \emph{chứng chỉ độ trễ}: một phép tính bảo thủ chứng minh rằng
+một độ trễ thuần túy là an toàn, dùng để dời phần chờ đã có sẵn tới một điểm chờ thực thi được
+mà không phát sinh thêm độ trễ mới.
+
+\subsection{Chứng cứ niêm phong}
+
+Vì toàn bộ kết luận của khóa luận dựa trên so sánh giữa các cấu hình, tính toàn vẹn của dữ liệu
+thực nghiệm là điều kiện tiên quyết. Hệ thống ghi ba loại chứng cứ cho mỗi lần chạy.
+
+Thứ nhất là \emph{biên bản đầy đủ}: mọi khung tin trao đổi giữa bộ mô phỏng và bộ điều phối
+được ghi ra dưới dạng NDJSON, mã hóa base64, kèm băm SHA-256 từng khung. Từ biên bản này có thể
+dựng lại toàn bộ diễn biến, kể cả những đại lượng không nằm trong bản tóm tắt.
+
+Thứ hai là \emph{băm ngữ nghĩa} (\texttt{semanticHash}) và \emph{tóm lược công bố}
+(\texttt{publicationDigest}): hai giá trị băm tổng hợp trạng thái cuối và toàn bộ chuỗi lời hứa
+đã công bố. Hai lần chạy khác nhau về hành vi chắc chắn khác nhau ở hai giá trị này. Cơ chế
+này đã tỏ ra thiết yếu trong mục \ref{muc:ratchet}, nơi sáu cấu hình khác nhau cho ra đúng hai bộ kết quả ---
+nếu không có băm phân biệt thì không thể loại trừ khả năng đó là lỗi sao chép cấu hình.
+
+Thứ ba là \emph{băm nhị phân bộ chạy} (\texttt{runnerSha256}) và băm kho mã nguồn, ghim kết quả
+vào đúng phiên bản đã sinh ra nó. Cơ chế này cũng chính là thứ đã chặn hai cấu hình trong mục
+4.6 --- bộ chạy đã niêm phong ra đời trước khi tính năng ratchet vào mã nguồn nên từ chối nạp
+cấu hình đó --- và buộc khóa luận phải tách thành một thí nghiệm phụ riêng thay vì trộn lẫn kết
+quả từ hai phiên bản khác nhau.

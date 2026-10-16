@@ -1,0 +1,99 @@
+[
+  {
+    "key": "AM17",
+    "source": "E:\\RideBoundData\\literature-survey-2026-10-06\\pdf\\alonso-mora-pnas2017.pdf",
+    "exists": true,
+    "pages": [
+      3,
+      4,
+      5
+    ],
+    "output": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r35-ch2-check\\r35-source-AM17.txt"
+  },
+  {
+    "key": "FAM",
+    "source": "C:\\PDF\\Paper\\Unreliability_in_ridesharing_systems_Measuring_cha.pdf",
+    "exists": true,
+    "pages": [
+      1,
+      4,
+      5,
+      7,
+      9,
+      17,
+      18
+    ],
+    "output": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r35-ch2-check\\r35-source-FAM.txt"
+  },
+  {
+    "key": "FLEET",
+    "source": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\claude-work\\pdf\\fleetpy-etrr-2026.pdf",
+    "exists": true,
+    "pages": [
+      10,
+      11
+    ],
+    "output": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r35-ch2-check\\r35-source-FLEET.txt"
+  },
+  {
+    "key": "MOL",
+    "source": "C:\\PDF\\Paper\\OperationalEffectsofServiceLevelVariations-publication151005.pdf",
+    "exists": true,
+    "pages": [
+      3,
+      5
+    ],
+    "output": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r35-ch2-check\\r35-source-MOL.txt"
+  },
+  {
+    "key": "LEO",
+    "source": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\claude-work\\pdf\\leonardi-2024.pdf",
+    "exists": true,
+    "pages": [
+      2,
+      4
+    ],
+    "output": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r35-ch2-check\\r35-source-LEO.txt"
+  },
+  {
+    "key": "LUK",
+    "source": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\claude-work\\pdf\\lu-kuehnel-2024.pdf",
+    "exists": true,
+    "pages": [
+      4
+    ],
+    "output": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r35-ch2-check\\r35-source-LUK.txt"
+  },
+  {
+    "key": "DRE",
+    "source": "C:\\Users\\quang\\AppData\\Local\\Temp\\claude\\e--Code-RideBound\\4f238113-dd3b-4bd1-b13f-53613b57f0e6\\scratchpad\\ch2\\dl-deepreta\\2206.02127.pdf",
+    "exists": true,
+    "pages": [
+      1,
+      3
+    ],
+    "output": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r35-ch2-check\\r35-source-DRE.txt"
+  },
+  {
+    "key": "WAR",
+    "source": "C:\\PDF\\Paper\\1-s2.0-S0965856426000662-main.pdf",
+    "exists": true,
+    "pages": [
+      2,
+      3,
+      10
+    ],
+    "output": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r35-ch2-check\\r35-source-WAR.txt"
+  },
+  {
+    "key": "AGZ",
+    "source": "C:\\PDF\\Paper\\Value_of_time_and_reliability_for_urban_pooled_on-.pdf",
+    "exists": true,
+    "pages": [
+      1,
+      11,
+      13
+    ],
+    "output": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\r35-ch2-check\\r35-source-AGZ.txt"
+  }
+]

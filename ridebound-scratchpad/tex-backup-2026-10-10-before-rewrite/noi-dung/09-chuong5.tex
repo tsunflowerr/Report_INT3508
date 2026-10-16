@@ -1,0 +1,231 @@
+\chapter{Kết luận}
+
+\section{Tổng kết}
+
+Khóa luận này xuất phát từ một quan sát đơn giản về cách các hệ thống điều phối xe đi chung
+đang vận hành: chúng báo cho hành khách một giờ hẹn, rồi tiếp tục tối ưu lại và dời giờ ấy nhiều
+lần, trong khi không một thước đo chuẩn nào của ngành ghi nhận điều đó. Câu hỏi đặt ra là liệu
+một hệ thống có thể đưa ra lời hứa mà nó thực sự giữ được hay không, và cái đó đắt bao nhiêu.
+
+Để trả lời, chúng tôi xây dựng cơ chế lời hứa có biên được chứng nhận, với ba thành phần. Thành
+phần thứ nhất là phép phân rã ba mốc, dựng một mốc phản thực bằng cách chiếu lại chính kế hoạch
+cũ từ vị trí thật hiện tại của xe, nhờ đó tách được phần dịch chuyển do nhà điều hành gây ra
+khỏi phần thay đổi khi giữ nguyên kế hoạch. Thành phần thứ hai là sổ cái cam kết riêng cho từng hành
+khách, cộng dồn theo thời gian và đối chiếu với một trần, được kiểm tra ngay tại thời điểm ra
+quyết định. Thành phần thứ ba là hệ thống chứng cứ niêm phong, bảo đảm rằng mọi so sánh giữa
+các cấu hình đều kiểm chứng được tới từng lần chạy.
+
+Về mặt lý thuyết, đóng góp trung tâm là khung so sánh bốn họ ràng buộc lời hứa và Định lý
+\ref{dl:hocong}: xét riêng phần cam kết, chỉ ràng buộc theo hành vi không bao giờ là nguyên nhân
+làm rỗng tập phương án khi thế giới trôi dạt, còn họ nào trong các họ khác --- hạn chót một chiều
+kiểu Schulz và Pfeiffer, hạn chót hai chiều, ràng buộc theo kết quả khách nhìn thấy --- hỏng thì
+phụ thuộc chiều trôi. Nền của khung này là ba định lý về hai cơ sở tính sổ cái. Tính theo hành vi
+của nhà điều hành thì không bao giờ bị ràng buộc cam kết làm rỗng, vì phương án không làm gì theo
+định nghĩa không gây ra gì. Tính theo kết quả mà hành khách nhìn thấy thì có thể khiến hệ thống
+không còn bất kỳ quyết định hợp lệ nào, vì ngay cả việc không làm gì cũng bị tính phí trôi dạt.
+Và khi một điều kiện (H) đúng ở mọi lần công bố, chính sách tối ưu theo cơ sở kết quả không phục
+vụ nhiều hơn chính sách tối ưu theo cơ sở hành vi; trên panel, (H) hỏng ở 228 lần công bố đã chọn
+của B1, nên đây là một mệnh đề có điều kiện chứ không phải kết luận về panel. Các chứng minh đều
+sơ cấp.
+Phân biệt hai cơ sở trùng với phân biệt cổ điển giữa nghĩa vụ phương tiện và nghĩa vụ kết quả trong
+luật hợp đồng, và điểm mới nằm ở chỗ mốc tham chiếu ngoại sinh \emph{tính được} ranh giới ``ngoài
+tầm kiểm soát'' mà luật xử lý bằng văn xuôi.
+
+Về mặt thực nghiệm, 558 lần chạy trên một panel 20 ô đã niêm phong, cùng 546 lần chạy thăm dò sau đó
+(bảng \ref{bang:quymo}), cho bốn nhóm kết quả. Nhóm
+thứ nhất là quy trách: trong chế độ không cam kết, phần do bộ điều phối tự gây ra bằng
+$89{,}06\%$ lượng dịch chuyển mà hành khách nhìn thấy, và thiệt hại dồn vào một cái đuôi mỏng --- $23{,}2\%$ số
+hành khách hứng toàn bộ, người chịu thiệt nặng nhất bị dời gần mười bốn phút mà hệ thống vẫn
+tính là phục vụ thành công. Nhóm thứ hai là đường cong giá của cam kết trên chín cấu hình, với
+phát hiện rằng phần đắt nhất là quyết định cam kết chút nào đó chứ không phải độ chặt của lời
+hứa về thời gian. Nhóm thứ ba nhất quán với các định lý, kể cả dưới dữ liệu tắc đường đo thật của
+Manhattan (thăm dò), nơi cơ sở kết quả vô nghiệm do cam kết ở 19 trên 20 ô còn cơ sở hành vi không
+vô nghiệm do cam kết ở ô nào --- dù 11 ô vẫn dừng vì bất biến cửa sổ đón của tầng miền. Một thí
+nghiệm thăm dò có tiền đăng ký sau đó đặt hai họ hạn chót vào cùng phép thử: dự đoán theo từng ô,
+niêm phong trước khi chạy các nhánh được dự đoán, đúng ở $98/102$ cặp trên panel chính và ở $31/32$, $40/40$ cặp trên khung
+sáng và khung tối của một tập giữ lại. Buổi sáng, hạn chót 30 giây tính từ lời hứa đầu vô nghiệm do
+cam kết ở 19/20 ô; buổi tối, khi tắc đường giảm, hạn chót một chiều vô nghiệm ở 0/8 ô trong khi hạn
+chót hai chiều và cổng kết quả vô nghiệm ở 7/8 và 8/8 ô; cổng hành vi không vô nghiệm do cam kết ở
+lần chạy nào trong 56 lần. Mức 30 giây chặt hơn nhiều so với 15 phút của Schulz và Pfeiffer. Khi không
+có trôi dạt, hai luật cùng 30 giây nhận đúng cùng một tập khách ở 20/20 ô. Vì vậy đây là kết quả về
+vùng lời hứa chặt dưới tắc đường. Một phép quét thăm dò từ 30 giây tới 15 phút (mục \ref{muc:quet})
+cho thấy hai luật phục vụ gần như cùng số khách ở mọi mức. Khác biệt là lời hứa có giữ được hay
+không. Dưới tắc đường tự tạo có cú sốc, ở mức chặt, lời hứa của hạn chót bị phá với $10$--$19\%$ khách,
+còn trần hành vi giữ mọi lời hứa. Trên ngày tắc đường đo thật, hạn chót chỉ phá lời hứa ở mức 30 giây
+buổi sáng, với $2{,}2\%$ khách. Cơ sở kết quả 30 giây, khi được phục hồi cùng cách, cũng phục vụ đúng như trần
+hành vi ở cả tám ô có tắc, nhưng tự phá lời hứa của nó với $12{,}2\%$ khách ở ô đo thật buổi sáng; khoảng cách số khách
+thấy ở lần chạy thử trước đó là do luật phục hồi. Trên tám ô mới của khung 7:00--9:00, khi tắc đường đo thật tăng nhanh
+nhất, hai luật vẫn chở đúng như nhau, nhưng hạn chót phá lời hứa với $24\%$ khách ở 30 giây và $7{,}3\%$ ở 1 phút; vậy
+kết luận ``từ 1 phút không luật nào phá hứa'' chỉ đúng sau cao điểm. Nhóm thứ tư kiểm tra độ vững: chín thước đo cho cùng một thứ hạng, không
+một ngoại lệ.
+
+Ngoài ra, khóa luận ghi nhận bốn kết quả phụ mà chúng tôi cho là đáng chú ý. Thứ nhất, sáu cơ
+chế bảo vệ giờ đón khác nhau --- kể cả cơ chế bảo đảm một chiều mà văn liệu sử dụng --- rơi vào
+đúng hai hành vi, vì hình thức của một lời bảo đảm chỉ có ý nghĩa trong chừng mực bộ sinh
+phương án có thể thực thi nó. Thứ hai, giá của một lời hứa không phải hằng số mà tăng theo mức
+tự do của nhà điều hành, và mặt cong hai chiều ở mục \ref{muc:matcong} cho thấy hai yếu tố này
+\emph{tương tác}: trần càng chặt thì việc cho thêm tự do càng đắt, từ $0{,}42$ lên $1{,}44$
+điểm phần trăm khi trần siết từ 300 xuống 30 giây. Thứ ba, hệ quả của định lý về hai cơ sở
+biểu hiện theo kiểu phân loại chứ không theo kiểu biên --- cơ sở kết quả mất nguyên cả ô chứ
+không phục vụ ít hơn vài hành khách --- và lý do là số học: khả thi cấp ô sụp theo $(1-p)^{n}$
+với $n$ là số hành khách mỗi ô.
+
+Thứ tư, ba mức cải tiến bộ sinh phương án mà chúng tôi dự định thực hiện, cùng bộ sinh biết sắp
+xếp lại, đều được đánh giá bằng chính dữ liệu của hệ thống trước khi viết mã. Cắt tỉa sớm là phép
+toán rỗng vì chưa từng có ứng viên khả thi nào bị bỏ hay nhánh nào chưa khai triển. Xếp hạng vị trí
+chèn cũng thực chất rỗng: trần số ứng viên chưa bao giờ chạm nên xếp hạng không đổi được đầu vào
+của bộ giải, và trên các kỷ nguyên có nhận hoặc từ chối khách chỉ $2{,}48\%$ tập của một xe có từ
+hai vị trí chèn trở lên. Đặt trước ngân sách chạy được nhưng trùng khớp tới từng quyết định với đối
+chứng; tầng ngay trên nó là một hằng số nên không che nó, còn tầng số khách nhận ở trên cùng thì có
+thể đã phân định mọi so sánh --- nguyên nhân chưa xác định được từ bằng chứng hiện có. Và bộ sinh
+biết sắp xếp lại, vốn đã có sẵn, va vào một bất biến thứ hai của mô hình về thời điểm một chặng hết
+sửa được. Điểm chung của cả bốn là chúng được đánh giá
+bằng phép đo rẻ tiền trên bằng chứng đã có, chứ không bằng nhiều ngày chạy mô phỏng --- và bằng
+chứng ấy do chính cơ chế lời hứa sinh ra.
+
+\section{Hạn chế}
+
+Chúng tôi muốn nêu các hạn chế một cách rõ ràng, vì một số trong đó ảnh hưởng trực tiếp tới
+cách đọc kết quả.
+
+Hạn chế lớn nhất là \textbf{quy mô}. Panel 108 yêu cầu và 8 xe mỗi ô nhỏ hơn nhiều so với các
+thực nghiệm quy mô Manhattan trong văn liệu. Lựa chọn này có chủ ý --- mục tiêu là so sánh có
+kiểm soát giữa các cấu hình trên cùng đầu vào --- nhưng hệ quả là các con số tuyệt đối không so
+trực tiếp được với văn liệu.
+
+Hạn chế thứ hai là \textbf{phần trùng lặp với công trình gần nhất}. Như mục \ref{muc:doichieu} đã trình bày chi
+tiết, sáu trong số các hạng mục của khóa luận đã có trong Fielbaum và Alonso-Mora (2020): khái
+niệm, đo độ lớn, đếm số lần, phân loại nguyên nhân định tính, đường cong đánh đổi, và cơ chế
+ratchet. Chúng tôi coi phần đó là nền chứ không phải đóng góp, và đã cố gắng ghi rõ ranh giới ở
+bảng \ref{bang:trung}. Hai công trình mới hơn còn làm hẹp thêm phạm vi: Elmi và cộng sự đã có bảo
+đảm lời hứa theo từng khách, và Schulz và Pfeiffer đã có một hạn chót cưỡng chế được tính từ lời
+hứa đầu (mục \ref{muc:chodung}).
+
+Hạn chế thứ ba là \textbf{trôi dạt ở panel chính chỉ là cận dưới}. Bộ dữ liệu thử gốc có đồ thị
+thời gian di chuyển tĩnh, nên trôi dạt đo được đến từ độ trễ thực thi chứ không từ tắc đường.
+Thí nghiệm bơm trôi dạt đã bù một phần nhưng chưa trọn vẹn: nó cho kết quả về tính khả thi nhưng
+không cho kết quả về tỉ lệ phục vụ, vì một bất biến miền của hệ thống chặn lại. Hệ số trôi dạt
+được áp vô hướng cho toàn mạng, và các lần chạy có trôi dạt chưa qua bộ kiểm chứng độc lập của
+dự án, nên kết quả trôi dạt chỉ là thăm dò. ``Mạng'' của bộ dữ liệu thử cũng không phải mạng đường
+phố mà là bao đóng thời gian đi giữa 96 điểm đã chọn.
+
+Hạn chế thứ tư là \textbf{mức bằng chứng cho khung bốn họ cổng}. Định lý \ref{dl:hocong} được
+chứng minh, và phần đối chiếu với hệ thật là một thí nghiệm có tiền đăng ký, nhưng vẫn là
+\emph{thăm dò}: các lần chạy có trôi dạt không qua bộ kiểm chứng của dự án, trôi dạt là một hệ số vô
+hướng, mỗi khung của tập giữ lại chỉ có 8 ô của hai ngày và một hạt giống, và quy tắc dự đoán là
+heuristic --- năm ca sai đều là ca nhánh được thử rời xa quỹ đạo tham chiếu. Chiều trôi thuận lợi
+mới được thấy trên một loại khung (buổi tối của hai ngày). Ngoài ra định lý chỉ nói về phần cam kết: dưới trôi dạt thật,
+hệ thống dùng trần hành vi vẫn dừng ở 11 trên 20 ô vì bất biến cửa sổ đón, và định lý không che
+được giới hạn ấy.
+
+Hạn chế thứ năm là \textbf{lập luận phúc lợi kém chắc chắn hơn phần kỹ thuật}. Nó dựa trên hệ số
+định giá từ một bối cảnh địa lý khác và trên giả định rằng mọi chuyến bị mất có cùng thặng dư.
+Chúng tôi trình bày nó như một ngưỡng chứ không phải một kết luận.
+
+Cuối cùng, khóa luận \textbf{không tuyên bố vượt trội về tỉ lệ phục vụ}. Mọi cấu hình có cam
+kết đều phục vụ ít hành khách hơn cấu hình không cam kết. Đóng góp nằm ở việc biến một đại
+lượng trước nay chỉ đo được sau sự việc thành một ràng buộc cưỡng chế được trước khi quyết
+định, và ở việc chỉ ra loại ràng buộc lời hứa nào có thể tự nó làm hệ thống kẹt.
+
+\section{Hướng phát triển}
+
+Từ những hạn chế trên, chúng tôi đề xuất mười hướng tiếp theo, xếp theo thứ tự ưu tiên mà chúng
+tôi cho là hợp lý.
+
+\textbf{Đưa thí nghiệm bốn họ cổng lên mức chính thức và mở rộng thế giới trôi dạt.} Thí nghiệm ở
+mục \ref{muc:tang2} là thăm dò. Bước tiếp theo là cho bộ kiểm chứng của dự án chấp nhận các lần chạy
+có trôi dạt, để kết quả thành chính thức; rồi thay hệ số vô hướng bằng trôi dạt theo từng cạnh, gồm
+cả trôi hai chiều và hồi phục sau cú sốc, trên nhiều ngày và nhiều hạt giống hơn. Khi đó mới đo được
+dự đoán phụ chưa quan sát được --- hạn chót một chiều phục vụ nhiều khách hơn trần hành vi khi tắc
+đường giảm; trong phép quét ở mục \ref{muc:quet}, hai luật phục vụ bằng nhau ở thế giới tắc đường
+giảm, nhưng ở đó gần như mọi khách đều được phục vụ nên phép thử chưa đủ nhạy --- và mới biết quy tắc dự đoán theo ô còn đúng không khi nhánh được thử rời xa quỹ đạo
+tham chiếu.
+
+\textbf{Mở rộng khung tắc tăng nhanh sang nhiều ngày hơn.} Khung 7:00--9:00 mới được chạy trên hai ngày
+của panel phát triển, và các ô của nó trùng một phần khách với các ô đã xem (mục \ref{muc:quet}). Chạy cùng
+khung trên các ngày của panel chính, vốn chưa dùng cho phép so này, sẽ cho biết tỉ lệ phá hứa của hạn chót ở
+mức một đến hai phút có lặp lại không, và cho đủ số ô để tính một khoảng tin cậy.
+
+\textbf{Các cách phục hồi khác.} Khóa luận mới thử hai luật phục hồi: giữ nguyên tuyến, và đổi tuyến
+trên cùng xe khi không làm tệ hơn. Các cách mạnh hơn, như chuyển khách sang xe khác hay tái tối ưu cả
+đội như hệ của Schulz và Pfeiffer, chưa được thử. Luật phục hồi ảnh hưởng trực tiếp tới số khách của
+các họ bị ép (mục \ref{muc:quet}), nên cần thử thêm trước khi so số khách giữa các họ ở mức chặt.
+
+\textbf{Chạy trên dữ liệu Hamburg của bài gốc.} Bộ dữ liệu của Schulz và Pfeiffer là công khai
+nhưng chưa được chạy. Việc này cần một bộ chuyển đổi dữ liệu, cần cho phép đổi thời gian chờ tối đa
+đang ghi cố định 600 giây trong công cụ chạy mô phỏng, và cần mô hình khách từ chối lời mời của họ. Bộ dữ
+liệu ấy có một ma trận thời gian đi cố định, nên theo Hệ quả \ref{hq:tatdinh} hai luật được dự kiến
+gần như trùng nhau. Giá trị của phép chạy là so trên đúng dữ liệu của bài gốc, không phải tìm khác
+biệt dưới tắc đường.
+
+\textbf{Sổ cái chỉ tính phần gây hại.} Cơ sở hành vi phạt cả một sửa chữa có lợi (phản ví dụ CE-3
+ở bảng \ref{bang:phanvidu}). Một biến thể tự nhiên chỉ tính phần quyết định làm lời hứa \emph{xa
+lời hứa đầu hơn} so với giữ nguyên tuyến,
+\[
+h_t = \max\big(0,\; |p_t - p_0| - |e_t - p_0|\big).
+\]
+Theo bất đẳng thức tam giác $0 \le h_t \le A_t$, và phương án không làm gì có $h_t = 0$, nên phần
+(a) của Định lý \ref{dl:hocong} vẫn giữ nguyên; CE-3, nếu đó là lần công bố đầu sau lời hứa đầu
+($p_0 = v = 600$), cho $h = \max(0, 0 - 120) = 0$ và được miễn. Nhưng trên hệ hiện tại khác biệt
+gần như bằng không: trên B1, tổng $h$ là $64.821{,}2$ giây so với tổng $A$ là $64.863{,}1$ giây ---
+chênh $41{,}9$ giây ($0{,}06\%$), cùng 403 khách bị tính --- dù $h \ne A$ ở 158 trên 479 lần công
+bố. Vì bộ sinh chèn thuần luôn cho $p \ge e$, $h \ne A$ đúng khi tuyến giữ nguyên đã sớm hơn lời
+hứa đầu ($e < p_0$): khi ấy phần quyết định dời lời hứa về phía $p_0$ không bị tính. Không
+có sửa chữa kiểu CE-3, tức kéo lời hứa sớm hơn $e$, nào để miễn; biến thể này chỉ có giá trị rõ khi
+có bộ sinh biết sắp xếp lại. Chúng tôi chưa rà văn liệu cho riêng biến thể này, nên không tuyên bố
+gì về tính mới của nó.
+
+\textbf{So tỉ lệ phục vụ giữa hai cơ sở trên một panel có ít hành khách hơn mỗi ô.} Định lý
+\ref{dl:tapcon} là một mệnh đề về chính sách tối ưu, không đo trực tiếp được; điều đo được là tỉ lệ
+phục vụ của bộ điều phối đang cài. Mục \ref{muc:troidat} cho thấy phép so
+sánh tỉ lệ phục vụ giữa hai cơ sở không lấy được trên panel hiện tại, vì khả thi cấp ô sụp theo
+$(1-p)^{n}$ với $n \approx 80$. Lối thoát tự nhiên là giảm $n$: một panel nhiều ô nhỏ hơn, mỗi
+ô vài chục hành khách, sẽ giữ được nhiều ô khả thi ở cùng mức trôi dạt, nhờ đó có tập ô chung
+để so. Đây là thay đổi về thiết kế panel chứ không phải về hệ thống, nên chi phí thấp.
+
+\textbf{Mở rộng mặt cong sang chiều tự do thứ ba.} Mục \ref{muc:matcong} đã dựng mặt cong trên hai mức tự
+do và cho thấy tự do với độ chặt \emph{tương tác} chứ không cộng độc lập. Chiều tự do ở đây là
+cửa sổ đón; hai chiều tự nhiên tiếp theo là cỡ đội xe và mật độ nhu cầu. Nếu quy luật giữ nguyên
+trên cả ba chiều thì có thể rút ra một quy tắc chọn trần theo mức tự do, thay vì phải đo lại cho
+từng cấu hình vận hành.
+
+\textbf{Cửa sổ đón thương lượng có chọn lọc.} Như mục \ref{muc:dathu} đã nêu, hướng này chưa bị bác bỏ. Bài
+toán đã được đặt đúng với cả trần lẫn kiểu hỏng đều đã đo: lấy được bao nhiêu trong 172 hành
+khách mà vẫn giữ chờ trung vị quanh 407 giây. Tuy nhiên nó đòi hỏi sửa mã nguồn và mở rộng phát
+biểu vấn đề sang kiểm soát tiếp nhận, nên cần cân nhắc kỹ về phạm vi.
+
+\textbf{Nới lỏng bất biến miền về cửa sổ đón.} Phát hiện ở mục \ref{muc:batbien} --- rằng hệ thống chưa biểu
+diễn được trạng thái mà riêng giao thông phá vỡ một cửa sổ đã cam kết --- là một giới hạn thật
+của mô hình. Cơ chế nới lỏng theo mốc ngoại sinh đã tồn tại trong hệ thống cho bộ sinh phương án;
+mở rộng nó sang tầng kiểm tra trạng thái sẽ cho phép nghiên cứu chế độ cao điểm một cách đầy đủ.
+
+\textbf{Đóng băng chặng đang chạy, rồi mới mở khóa bộ sinh biết sắp xếp lại.} Mục
+\ref{muc:bosinh} cho thấy hệ thống đã có sẵn cơ chế sắp xếp lại nhưng nó hỏng trên 18 trên 20
+ô, vì mô hình miền chỉ đóng băng một điểm dừng khi xe \emph{tới nơi}, còn bộ mô phỏng khóa chặng
+ngay khi xe \emph{lăn bánh}. Việc cần làm có phạm vi rõ ràng và phải theo đúng thứ tự: thêm
+chuyển trạng thái đóng băng chặng đang bay ở tầng miền --- kiểu dữ liệu lộ trình đã cho phép
+trạng thái ``đã đóng băng nhưng chưa thực hiện'', chỉ thiếu điểm gọi; cho chính sách vector cứng
+nhận hạn mức sửa chữa; và nới điều kiện kiểm tra cấu hình để hai thứ đi được cùng nhau. Chỉ sau
+ba bước đó mới đặt được câu hỏi mà hướng này thật sự muốn hỏi: liệu quyền sắp xếp lại có thu hồi
+được những hành khách mà cổng cam kết đang từ chối hay không. Chúng tôi lưu ý rằng ô duy nhất
+chạy trọn vẹn cho kết quả bằng đúng nhánh không cam kết, nên kỳ vọng nên đặt thấp.
+
+\section{Kết luận cuối}
+
+Đóng góp mà chúng tôi tin là bền nhất của khóa luận không phải một con số cụ thể, mà là một cách
+đặt vấn đề. Thước đo kinh điển của văn liệu tham chiếu tới giá trị thực tế, chỉ biết được sau khi
+hành khách đã được đón, nên về mặt toán học không thể trở thành ràng buộc; các công trình gần đây
+đã kiểm soát hiện tượng bằng những ràng buộc trên chính lời hứa --- cấm tăng cho một nhóm khách và
+giới hạn trong độ chùng cho những khách còn lại, hoặc một hạn chót tính từ lời hứa đầu. Khóa luận
+này chặn một đối tượng khác: một trần có mức chỉ trên phần do nhà điều hành gây ra, tách khỏi phần
+thay đổi khi giữ nguyên kế hoạch, định nghĩa trên các đại lượng đều biết được tại thời điểm quyết
+định.
+
+Và khi biến một thước đo thành một ràng buộc, một câu hỏi mới xuất hiện: \emph{tính sổ cái theo
+cái gì}. Câu trả lời quyết định cổng cam kết có thể tự nó làm hệ thống kẹt hay không. Định lý
+\ref{dl:hocong} phát biểu điều đó cho bốn họ ràng buộc, và một thí nghiệm có tiền đăng ký trên dữ
+liệu tắc đường thật xác nhận nó ở mức thăm dò, theo từng ô và ở cả hai chiều trôi: ràng buộc theo kết
+quả khách nhìn thấy --- cách tự nhiên nhất để biến thước đo của văn liệu thành ràng buộc --- kẹt ở
+cả hai chiều; một hạn chót một chiều tính từ lời hứa đầu kẹt khi tắc đường tăng và an toàn khi tắc
+đường giảm; hạn chót hai chiều kẹt ở cả hai, ở cận trên buổi sáng và ở cận dưới buổi tối; chỉ trần
+hành vi thì không bao giờ là nguyên nhân.

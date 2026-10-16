@@ -1,0 +1,792 @@
+{
+ "acceptedCount": 83,
+ "acceptedCountAgreesWithRun": true,
+ "label": "p-d20181116-s10-r4-b1-tight-s7",
+ "peakBudgetConsumed": {
+  "budget.dropEtaTotalMs": 484042,
+  "budget.dropStopRelocationMm": 0,
+  "budget.dropStopSwitchCount": 0,
+  "budget.incumbentOrderInversionCount": 0,
+  "budget.materialEtaRevisionCount": 3,
+  "budget.pickupEtaTotalMs": 356136,
+  "budget.pickupStopRelocationMm": 0,
+  "budget.pickupStopSwitchCount": 0,
+  "budget.prePickupInsertedStopCount": 3,
+  "budget.vehicleSwitchCount": 0
+ },
+ "perRequest": {
+  "rq-02097a5cb5ec992a0eddeaa3ebd4111b337603a4eab647b2dd71f988683948fa": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1397,
+   "exogenousDelta.pickupEtaTotalMs": 865,
+   "publications": 25,
+   "visibleDelta.dropEtaTotalMs": 1397,
+   "visibleDelta.pickupEtaTotalMs": 865
+  },
+  "rq-03381794dc81f154b5734b7c7e83e37e5640b5e7eb4214a79b23b4eeb689c99b": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3215,
+   "exogenousDelta.pickupEtaTotalMs": 3202,
+   "publications": 15,
+   "visibleDelta.dropEtaTotalMs": 3215,
+   "visibleDelta.pickupEtaTotalMs": 3202
+  },
+  "rq-04b6688c39833112f8cc74f78f690ff70e943abdfdd1dfedece5cab7ca6d7efc": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3773,
+   "exogenousDelta.pickupEtaTotalMs": 577,
+   "publications": 39,
+   "visibleDelta.dropEtaTotalMs": 3773,
+   "visibleDelta.pickupEtaTotalMs": 577
+  },
+  "rq-0873384361eebd7858ecc633b11c7f305fd171a2903ade613f85f2b0c42b6bd9": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3572,
+   "exogenousDelta.pickupEtaTotalMs": 2476,
+   "publications": 28,
+   "visibleDelta.dropEtaTotalMs": 3572,
+   "visibleDelta.pickupEtaTotalMs": 2476
+  },
+  "rq-087b7a86bb4db802124f8b4036d4efb1084629cd6be64729c45eb7aad4600bf7": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 20997,
+   "exogenousDelta.pickupEtaTotalMs": 743,
+   "publications": 60,
+   "visibleDelta.dropEtaTotalMs": 20997,
+   "visibleDelta.pickupEtaTotalMs": 743
+  },
+  "rq-0bbdc61722d6b58ccd57984d54be5e4e670b702cd80b818fb1f043e7c6e2eb29": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1964,
+   "exogenousDelta.pickupEtaTotalMs": 1471,
+   "publications": 35,
+   "visibleDelta.dropEtaTotalMs": 1964,
+   "visibleDelta.pickupEtaTotalMs": 1471
+  },
+  "rq-0bc2fa563da80b69408d65bce144decd5b9dab68985f6ae32eb6dbef5f89c221": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2580,
+   "exogenousDelta.pickupEtaTotalMs": 2336,
+   "publications": 19,
+   "visibleDelta.dropEtaTotalMs": 2580,
+   "visibleDelta.pickupEtaTotalMs": 2336
+  },
+  "rq-0dce9f8f2d44d638a0955b4ab705ec83162892598e94caeabef3fdc307ece824": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2857,
+   "exogenousDelta.pickupEtaTotalMs": 2547,
+   "publications": 24,
+   "visibleDelta.dropEtaTotalMs": 2857,
+   "visibleDelta.pickupEtaTotalMs": 2547
+  },
+  "rq-16327962367823d038886fb2ccaf3c6c0e1a17ef57aeac66242c8fa2559a2b8c": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4184,
+   "exogenousDelta.pickupEtaTotalMs": 2057,
+   "publications": 29,
+   "visibleDelta.dropEtaTotalMs": 4184,
+   "visibleDelta.pickupEtaTotalMs": 2057
+  },
+  "rq-176da4a600d6ef30724ffee31562320e0f42ede3218b5a49c4a96b2073d6cbff": {
+   "decisionDelta.dropEtaTotalMs": 132932,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 17583,
+   "exogenousDelta.pickupEtaTotalMs": 1911,
+   "publications": 73,
+   "visibleDelta.dropEtaTotalMs": 150515,
+   "visibleDelta.pickupEtaTotalMs": 1911
+  },
+  "rq-210a0bb020765d90244ba659ed45238cc97a31d200c2e7a21cde25fd6f6a6195": {
+   "decisionDelta.dropEtaTotalMs": 484042,
+   "decisionDelta.pickupEtaTotalMs": 356136,
+   "exogenousDelta.dropEtaTotalMs": 4208,
+   "exogenousDelta.pickupEtaTotalMs": 1250,
+   "publications": 40,
+   "visibleDelta.dropEtaTotalMs": 488180,
+   "visibleDelta.pickupEtaTotalMs": 357316
+  },
+  "rq-24340682823b122871c83e2b46f5759a89591c488e13f7f7dffc8028f648d9f9": {
+   "decisionDelta.dropEtaTotalMs": 145462,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 6678,
+   "exogenousDelta.pickupEtaTotalMs": 2311,
+   "publications": 44,
+   "visibleDelta.dropEtaTotalMs": 151608,
+   "visibleDelta.pickupEtaTotalMs": 2311
+  },
+  "rq-261617823f4db08c4c06a775c2834a43720037c36bd1a12b9b4a03893ebb959b": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1666,
+   "exogenousDelta.pickupEtaTotalMs": 1585,
+   "publications": 19,
+   "visibleDelta.dropEtaTotalMs": 1666,
+   "visibleDelta.pickupEtaTotalMs": 1585
+  },
+  "rq-2a7183e7fd9d0af319e04a72ea571692ded0108083199b29319c330b2203d295": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3113,
+   "exogenousDelta.pickupEtaTotalMs": 1202,
+   "publications": 37,
+   "visibleDelta.dropEtaTotalMs": 3113,
+   "visibleDelta.pickupEtaTotalMs": 1202
+  },
+  "rq-2e35cda9b102745e140b559dc1a0ba7962395125a5ab14f24796b39ef41aac59": {
+   "decisionDelta.dropEtaTotalMs": 120384,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2146,
+   "exogenousDelta.pickupEtaTotalMs": 345,
+   "publications": 32,
+   "visibleDelta.dropEtaTotalMs": 122530,
+   "visibleDelta.pickupEtaTotalMs": 345
+  },
+  "rq-307084f070533617b86fa85b7ae25157074ebb34b8c2962172c68e160acbca3d": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3964,
+   "exogenousDelta.pickupEtaTotalMs": 2978,
+   "publications": 34,
+   "visibleDelta.dropEtaTotalMs": 3964,
+   "visibleDelta.pickupEtaTotalMs": 2978
+  },
+  "rq-31899022e1dd10094495cbef56d67aa95bbfef39541c078091c9cd6ef869c4bd": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1176,
+   "exogenousDelta.pickupEtaTotalMs": 653,
+   "publications": 15,
+   "visibleDelta.dropEtaTotalMs": 1176,
+   "visibleDelta.pickupEtaTotalMs": 653
+  },
+  "rq-33396e31da9393cccaf80d00f05fa3595742ff3184ef79dd722b3c9598574769": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2561,
+   "exogenousDelta.pickupEtaTotalMs": 902,
+   "publications": 28,
+   "visibleDelta.dropEtaTotalMs": 2561,
+   "visibleDelta.pickupEtaTotalMs": 902
+  },
+  "rq-341147700abced6be4cfde9604f500317a78a4d42b5e3106e5a172271b133e63": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 13610,
+   "exogenousDelta.pickupEtaTotalMs": 2797,
+   "publications": 51,
+   "visibleDelta.dropEtaTotalMs": 13610,
+   "visibleDelta.pickupEtaTotalMs": 2797
+  },
+  "rq-37a3a5a307f6d4df7e7d5a8cdb46adaa26c1380665067fc520c67f991c2299ab": {
+   "decisionDelta.dropEtaTotalMs": 117876,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3706,
+   "exogenousDelta.pickupEtaTotalMs": 2926,
+   "publications": 28,
+   "visibleDelta.dropEtaTotalMs": 121582,
+   "visibleDelta.pickupEtaTotalMs": 2926
+  },
+  "rq-3bc39b4cad0749bf8c12c0f3a006b62340135135bd2fda877092ec885ec33e3e": {
+   "decisionDelta.dropEtaTotalMs": 268355,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 5348,
+   "exogenousDelta.pickupEtaTotalMs": 1826,
+   "publications": 46,
+   "visibleDelta.dropEtaTotalMs": 273703,
+   "visibleDelta.pickupEtaTotalMs": 1826
+  },
+  "rq-3ea16e2da2463e2b847828bbe6c673f8d167a144d56fd7147b7c81a0f22fcfcc": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4862,
+   "exogenousDelta.pickupEtaTotalMs": 3310,
+   "publications": 36,
+   "visibleDelta.dropEtaTotalMs": 4862,
+   "visibleDelta.pickupEtaTotalMs": 3310
+  },
+  "rq-3f526c233da6b71197666895247f8d60642fe2d7e67008cd0465051019f0f879": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2947,
+   "exogenousDelta.pickupEtaTotalMs": 1571,
+   "publications": 28,
+   "visibleDelta.dropEtaTotalMs": 2947,
+   "visibleDelta.pickupEtaTotalMs": 1571
+  },
+  "rq-405e94093ad7ed3e47871140f4d3d5d02223a575c44df21d2c5002ed5d87e649": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4968,
+   "exogenousDelta.pickupEtaTotalMs": 0,
+   "publications": 24,
+   "visibleDelta.dropEtaTotalMs": 4968,
+   "visibleDelta.pickupEtaTotalMs": 0
+  },
+  "rq-4154785264fc7feee29875c8c8eed893120a08e86197fc30569c7793e97f0f5a": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2992,
+   "exogenousDelta.pickupEtaTotalMs": 150,
+   "publications": 19,
+   "visibleDelta.dropEtaTotalMs": 2992,
+   "visibleDelta.pickupEtaTotalMs": 150
+  },
+  "rq-42e6f5ea944aa68e4a0fb74a3ce2eb333ebb600da5711a52e4d1ef240065c589": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3277,
+   "exogenousDelta.pickupEtaTotalMs": 1196,
+   "publications": 28,
+   "visibleDelta.dropEtaTotalMs": 3277,
+   "visibleDelta.pickupEtaTotalMs": 1196
+  },
+  "rq-46a69edd8da7bae25653314eeb03e66d189b74880db2ede620d07495258195c3": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1578,
+   "exogenousDelta.pickupEtaTotalMs": 609,
+   "publications": 16,
+   "visibleDelta.dropEtaTotalMs": 1578,
+   "visibleDelta.pickupEtaTotalMs": 609
+  },
+  "rq-47975ac4cf57885230298d4bc664942fa3f2eda182d3b30b4fb08d13aaf32020": {
+   "decisionDelta.dropEtaTotalMs": 341084,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 5362,
+   "exogenousDelta.pickupEtaTotalMs": 619,
+   "publications": 59,
+   "visibleDelta.dropEtaTotalMs": 346054,
+   "visibleDelta.pickupEtaTotalMs": 619
+  },
+  "rq-4a5e03e663267361a975fe0b4df2859980b880cc5a02f521e605ae1d57f9bf1d": {
+   "decisionDelta.dropEtaTotalMs": 15048,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4256,
+   "exogenousDelta.pickupEtaTotalMs": 1203,
+   "publications": 36,
+   "visibleDelta.dropEtaTotalMs": 19304,
+   "visibleDelta.pickupEtaTotalMs": 1203
+  },
+  "rq-4c94e9092c3fa9a8f991837a750856e1b04e305528a64a2d220b126f2f0f3776": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2357,
+   "exogenousDelta.pickupEtaTotalMs": 1248,
+   "publications": 34,
+   "visibleDelta.dropEtaTotalMs": 2357,
+   "visibleDelta.pickupEtaTotalMs": 1248
+  },
+  "rq-4cf640129c2987e8855fc4eb848ca51a69aed91ee2a9ec574ac48e0c1698acb7": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3990,
+   "exogenousDelta.pickupEtaTotalMs": 828,
+   "publications": 30,
+   "visibleDelta.dropEtaTotalMs": 3990,
+   "visibleDelta.pickupEtaTotalMs": 828
+  },
+  "rq-4f6b2847b5ff397de483da204720c08e030e3b09573d95634fdaa8dab84b8e07": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 5450,
+   "exogenousDelta.pickupEtaTotalMs": 2822,
+   "publications": 38,
+   "visibleDelta.dropEtaTotalMs": 5450,
+   "visibleDelta.pickupEtaTotalMs": 2822
+  },
+  "rq-551a3136a2ccaebc8f3c642dc126aa374535b55b511ef16da6a6f65c7ffbe3ae": {
+   "decisionDelta.dropEtaTotalMs": 70224,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3346,
+   "exogenousDelta.pickupEtaTotalMs": 1439,
+   "publications": 39,
+   "visibleDelta.dropEtaTotalMs": 73570,
+   "visibleDelta.pickupEtaTotalMs": 1439
+  },
+  "rq-581b184355ff9912373cc9f53a7bb09df1c42695f9ed1dcce348a5f71f7376c9": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 690,
+   "exogenousDelta.pickupEtaTotalMs": 0,
+   "publications": 7,
+   "visibleDelta.dropEtaTotalMs": 690,
+   "visibleDelta.pickupEtaTotalMs": 0
+  },
+  "rq-58ca3ed6a0d8fcb48c41a680e02157d1b8bf28cb22e1e0d79a032a497c409280": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3301,
+   "exogenousDelta.pickupEtaTotalMs": 479,
+   "publications": 24,
+   "visibleDelta.dropEtaTotalMs": 3301,
+   "visibleDelta.pickupEtaTotalMs": 479
+  },
+  "rq-5a161330a2ff506fccff795f35eaed1089de98cc89a79a3d810212eb5e0eb3db": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1954,
+   "exogenousDelta.pickupEtaTotalMs": 1837,
+   "publications": 19,
+   "visibleDelta.dropEtaTotalMs": 1954,
+   "visibleDelta.pickupEtaTotalMs": 1837
+  },
+  "rq-5e1dde6e84d09946b65bc05e2842ad1f18a76dabeb604cd8c87414f824e01a08": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 11698,
+   "exogenousDelta.pickupEtaTotalMs": 2481,
+   "publications": 46,
+   "visibleDelta.dropEtaTotalMs": 11698,
+   "visibleDelta.pickupEtaTotalMs": 2481
+  },
+  "rq-604743822332181746891a1f895e784b08de4e9c910096041f4b7a0c37a92dea": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 26220,
+   "exogenousDelta.pickupEtaTotalMs": 744,
+   "publications": 66,
+   "visibleDelta.dropEtaTotalMs": 26220,
+   "visibleDelta.pickupEtaTotalMs": 744
+  },
+  "rq-69a5fdcc6738c5f1f6f543be3bf108df2ff7cdc10509e17aced3acecca218722": {
+   "decisionDelta.dropEtaTotalMs": 323526,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 7180,
+   "exogenousDelta.pickupEtaTotalMs": 874,
+   "publications": 53,
+   "visibleDelta.dropEtaTotalMs": 330706,
+   "visibleDelta.pickupEtaTotalMs": 874
+  },
+  "rq-6bc7a44b1cf2af2a7d3f90c94cf60aa2d0b3168d1618dd6311ee28607050362e": {
+   "decisionDelta.dropEtaTotalMs": 125400,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 5076,
+   "exogenousDelta.pickupEtaTotalMs": 1463,
+   "publications": 40,
+   "visibleDelta.dropEtaTotalMs": 130476,
+   "visibleDelta.pickupEtaTotalMs": 1463
+  },
+  "rq-6e07e47393637f5144018961dd21ba256f0b37d0b4bbc6c62b7a20db4edc6efe": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 5533,
+   "exogenousDelta.pickupEtaTotalMs": 2761,
+   "publications": 37,
+   "visibleDelta.dropEtaTotalMs": 5533,
+   "visibleDelta.pickupEtaTotalMs": 2761
+  },
+  "rq-70216fe7a277bb139eaded08f68d09d7aeb054aec12aefaa1920429d49dde410": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 7632,
+   "exogenousDelta.pickupEtaTotalMs": 3942,
+   "publications": 28,
+   "visibleDelta.dropEtaTotalMs": 7632,
+   "visibleDelta.pickupEtaTotalMs": 3942
+  },
+  "rq-7ad7e6bdfbb2fea28f22bf9ac842421c3e8046f0b7fcf219fd4703b281a6c0de": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4113,
+   "exogenousDelta.pickupEtaTotalMs": 2451,
+   "publications": 38,
+   "visibleDelta.dropEtaTotalMs": 4113,
+   "visibleDelta.pickupEtaTotalMs": 2451
+  },
+  "rq-7e8e3502ac3a050c1ad36458b4670567705e1899e2636a3a50e488468daa7457": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 7598,
+   "exogenousDelta.pickupEtaTotalMs": 1435,
+   "publications": 45,
+   "visibleDelta.dropEtaTotalMs": 7598,
+   "visibleDelta.pickupEtaTotalMs": 1435
+  },
+  "rq-806d6a600678db619f8b5ed5266dfc76f50c464617570c987a56885ecc4eb5a3": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 922,
+   "exogenousDelta.pickupEtaTotalMs": 490,
+   "publications": 17,
+   "visibleDelta.dropEtaTotalMs": 922,
+   "visibleDelta.pickupEtaTotalMs": 490
+  },
+  "rq-82d113965d1262e25c436c588fba353e03a05ab33558dd9c198600a4ca31be97": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3024,
+   "exogenousDelta.pickupEtaTotalMs": 109,
+   "publications": 24,
+   "visibleDelta.dropEtaTotalMs": 3024,
+   "visibleDelta.pickupEtaTotalMs": 109
+  },
+  "rq-83015dd732643b84a9e1a6434c08969b3d96b4776b617ec4ece3dff1652ac7ee": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 5553,
+   "exogenousDelta.pickupEtaTotalMs": 2319,
+   "publications": 34,
+   "visibleDelta.dropEtaTotalMs": 5553,
+   "visibleDelta.pickupEtaTotalMs": 2319
+  },
+  "rq-863189bc10b863cdb2171d2e6a1bfabf153558267917cecc45eb09151be71fe9": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1804,
+   "exogenousDelta.pickupEtaTotalMs": 0,
+   "publications": 14,
+   "visibleDelta.dropEtaTotalMs": 1804,
+   "visibleDelta.pickupEtaTotalMs": 0
+  },
+  "rq-880b45682a07e305af3f3dd1aea664125bd62c4777857efefe4142c706d00c52": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2133,
+   "exogenousDelta.pickupEtaTotalMs": 1422,
+   "publications": 17,
+   "visibleDelta.dropEtaTotalMs": 2133,
+   "visibleDelta.pickupEtaTotalMs": 1422
+  },
+  "rq-896e57099f055ef2b3153ee0502425e83e5378f429323ea76e88e15a432f679c": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1906,
+   "exogenousDelta.pickupEtaTotalMs": 4,
+   "publications": 15,
+   "visibleDelta.dropEtaTotalMs": 1906,
+   "visibleDelta.pickupEtaTotalMs": 4
+  },
+  "rq-898dd99d42f43b20a2146e58f4a256b11199d6dbe703851bae152f7b2d616c51": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2819,
+   "exogenousDelta.pickupEtaTotalMs": 1608,
+   "publications": 24,
+   "visibleDelta.dropEtaTotalMs": 2819,
+   "visibleDelta.pickupEtaTotalMs": 1608
+  },
+  "rq-8a7812f36e7027ba0af8cf5af786a08cb74cd87459dfe45a7b685466cf28c838": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3917,
+   "exogenousDelta.pickupEtaTotalMs": 1085,
+   "publications": 30,
+   "visibleDelta.dropEtaTotalMs": 3917,
+   "visibleDelta.pickupEtaTotalMs": 1085
+  },
+  "rq-8c88bab96bf57c3c8c1f8f0d6eff71466d60a1a9166b26089f1ff7a8116fe433": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2703,
+   "exogenousDelta.pickupEtaTotalMs": 824,
+   "publications": 20,
+   "visibleDelta.dropEtaTotalMs": 2703,
+   "visibleDelta.pickupEtaTotalMs": 824
+  },
+  "rq-8d5a8022c29b4c3fbc40ae9ab10ce5f1a98f927dbe167d77d35537b01affbeb2": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4784,
+   "exogenousDelta.pickupEtaTotalMs": 1029,
+   "publications": 27,
+   "visibleDelta.dropEtaTotalMs": 4784,
+   "visibleDelta.pickupEtaTotalMs": 1029
+  },
+  "rq-905faa85e3c5047f57eeaaf2af28b53ac183b5b3794bec5fba9a9f198c1b7f38": {
+   "decisionDelta.dropEtaTotalMs": 205653,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4808,
+   "exogenousDelta.pickupEtaTotalMs": 746,
+   "publications": 40,
+   "visibleDelta.dropEtaTotalMs": 210263,
+   "visibleDelta.pickupEtaTotalMs": 746
+  },
+  "rq-90a2e2f46c9ff04246795fc6d0a88a41c504dfa8b49c6cc934312411b8df981c": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4138,
+   "exogenousDelta.pickupEtaTotalMs": 1127,
+   "publications": 27,
+   "visibleDelta.dropEtaTotalMs": 4138,
+   "visibleDelta.pickupEtaTotalMs": 1127
+  },
+  "rq-94b563f72b4ff260e1df9a5f9217f30ce1adfb3ccf744b1a7a2aac64c47f2bca": {
+   "decisionDelta.dropEtaTotalMs": 60192,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4160,
+   "exogenousDelta.pickupEtaTotalMs": 766,
+   "publications": 26,
+   "visibleDelta.dropEtaTotalMs": 64182,
+   "visibleDelta.pickupEtaTotalMs": 766
+  },
+  "rq-9545e10921496e384597e47d15ff70b222fce290bcbfb0e37408fe73ac58da53": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1960,
+   "exogenousDelta.pickupEtaTotalMs": 1549,
+   "publications": 20,
+   "visibleDelta.dropEtaTotalMs": 1960,
+   "visibleDelta.pickupEtaTotalMs": 1549
+  },
+  "rq-9b5a502bf6cc19c5ce4060870c31e8e19cbc169563c25ece5af152d5ce72899d": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3116,
+   "exogenousDelta.pickupEtaTotalMs": 479,
+   "publications": 22,
+   "visibleDelta.dropEtaTotalMs": 3116,
+   "visibleDelta.pickupEtaTotalMs": 479
+  },
+  "rq-9d6dd60e0b85cdfe9fc82a23d1562f8fba70a42026f805c3b820aa7bb5f77243": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2622,
+   "exogenousDelta.pickupEtaTotalMs": 1312,
+   "publications": 26,
+   "visibleDelta.dropEtaTotalMs": 2622,
+   "visibleDelta.pickupEtaTotalMs": 1312
+  },
+  "rq-9e6cd7a4f2c3b5e3738f6c226544c57b9782a3823d63fb9342ed3335527a490c": {
+   "decisionDelta.dropEtaTotalMs": 82764,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3642,
+   "exogenousDelta.pickupEtaTotalMs": 2200,
+   "publications": 31,
+   "visibleDelta.dropEtaTotalMs": 86406,
+   "visibleDelta.pickupEtaTotalMs": 2200
+  },
+  "rq-a20cbf1338b0ec77414f3c5ae8e131582a4f7c85c48cbb2d4b38388f06afd008": {
+   "decisionDelta.dropEtaTotalMs": 308482,
+   "decisionDelta.pickupEtaTotalMs": 308482,
+   "exogenousDelta.dropEtaTotalMs": 1664,
+   "exogenousDelta.pickupEtaTotalMs": 972,
+   "publications": 29,
+   "visibleDelta.dropEtaTotalMs": 309912,
+   "visibleDelta.pickupEtaTotalMs": 309220
+  },
+  "rq-a3aa16d4b88bb23399d160f8813d700684aa1a075495a7f74dd3346187afbd14": {
+   "decisionDelta.dropEtaTotalMs": 168034,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3884,
+   "exogenousDelta.pickupEtaTotalMs": 2298,
+   "publications": 32,
+   "visibleDelta.dropEtaTotalMs": 171368,
+   "visibleDelta.pickupEtaTotalMs": 2298
+  },
+  "rq-a428113565003c264ee150cb4c0e59d59a54187f0102b3da1b73edaf92b7a4dc": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3919,
+   "exogenousDelta.pickupEtaTotalMs": 983,
+   "publications": 30,
+   "visibleDelta.dropEtaTotalMs": 3919,
+   "visibleDelta.pickupEtaTotalMs": 983
+  },
+  "rq-a48869f6bceaa6804f58642b92c837a52e8db1a5bcf4edc03cd11ba50e57482f": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3056,
+   "exogenousDelta.pickupEtaTotalMs": 1157,
+   "publications": 32,
+   "visibleDelta.dropEtaTotalMs": 3056,
+   "visibleDelta.pickupEtaTotalMs": 1157
+  },
+  "rq-ab08c10d77a09e37d41386317fb1c80796db194a0e57cd20f3982e586d170443": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1443,
+   "exogenousDelta.pickupEtaTotalMs": 405,
+   "publications": 19,
+   "visibleDelta.dropEtaTotalMs": 1443,
+   "visibleDelta.pickupEtaTotalMs": 405
+  },
+  "rq-ad4e9f6b13e731d9a82b4ac048c14880f4356bd0d4f4501eeab909938463c023": {
+   "decisionDelta.dropEtaTotalMs": 195623,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4357,
+   "exogenousDelta.pickupEtaTotalMs": 2197,
+   "publications": 53,
+   "visibleDelta.dropEtaTotalMs": 199980,
+   "visibleDelta.pickupEtaTotalMs": 2197
+  },
+  "rq-b7c0ca8eee2e052da479dc8e06e2ff383af8366946514eefc648b4145e613c56": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1490,
+   "exogenousDelta.pickupEtaTotalMs": 824,
+   "publications": 19,
+   "visibleDelta.dropEtaTotalMs": 1490,
+   "visibleDelta.pickupEtaTotalMs": 824
+  },
+  "rq-bb8b82e6c1142690ba998d68f5e1a4f6ebc815326a495cbe9a7d49dfd1bc7b98": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4291,
+   "exogenousDelta.pickupEtaTotalMs": 3780,
+   "publications": 32,
+   "visibleDelta.dropEtaTotalMs": 4291,
+   "visibleDelta.pickupEtaTotalMs": 3780
+  },
+  "rq-bc3e20eb95b0cba0fdfa51eae9eeee3531aaa6211594c8e2ecbb211865a2393b": {
+   "decisionDelta.dropEtaTotalMs": 140446,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4433,
+   "exogenousDelta.pickupEtaTotalMs": 2015,
+   "publications": 45,
+   "visibleDelta.dropEtaTotalMs": 144487,
+   "visibleDelta.pickupEtaTotalMs": 2015
+  },
+  "rq-bf574d8ba002a1d97c81f68ed4679d5ac4f953eb751d4fb9055e8f875cbb7dcd": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3218,
+   "exogenousDelta.pickupEtaTotalMs": 2104,
+   "publications": 17,
+   "visibleDelta.dropEtaTotalMs": 3218,
+   "visibleDelta.pickupEtaTotalMs": 2104
+  },
+  "rq-c3396f91cdfe47d71af1d29897e2b3660ed040206b4df841f29f0f0215c5f36b": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 6334,
+   "exogenousDelta.pickupEtaTotalMs": 3046,
+   "publications": 40,
+   "visibleDelta.dropEtaTotalMs": 6334,
+   "visibleDelta.pickupEtaTotalMs": 3046
+  },
+  "rq-cc276435accf2e5cbae7923fbed4a751b98ebe4cb259cf08ce0583f2bfe4ee8d": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 6574,
+   "exogenousDelta.pickupEtaTotalMs": 1182,
+   "publications": 38,
+   "visibleDelta.dropEtaTotalMs": 6574,
+   "visibleDelta.pickupEtaTotalMs": 1182
+  },
+  "rq-cd29c8c2c17bdc53958a73eff33f8a827aeb7b187472cd589fa721037ea0b446": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 598,
+   "exogenousDelta.pickupEtaTotalMs": 41,
+   "publications": 9,
+   "visibleDelta.dropEtaTotalMs": 598,
+   "visibleDelta.pickupEtaTotalMs": 41
+  },
+  "rq-d6824b6624817ed1ad2448f5a2a40162bf8d8fd76183da873b7ad5e0c195a304": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1929,
+   "exogenousDelta.pickupEtaTotalMs": 1272,
+   "publications": 21,
+   "visibleDelta.dropEtaTotalMs": 1929,
+   "visibleDelta.pickupEtaTotalMs": 1272
+  },
+  "rq-de25c3e042ba80bc6f80f87c30016669a95c6656bd795689b34411b99065b879": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 651,
+   "exogenousDelta.pickupEtaTotalMs": 183,
+   "publications": 11,
+   "visibleDelta.dropEtaTotalMs": 651,
+   "visibleDelta.pickupEtaTotalMs": 183
+  },
+  "rq-e560e9e2dfeff15b2dafe3d6dc4fc39b8d145b56abc2d2955535491c4829a9fc": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2139,
+   "exogenousDelta.pickupEtaTotalMs": 121,
+   "publications": 21,
+   "visibleDelta.dropEtaTotalMs": 2139,
+   "visibleDelta.pickupEtaTotalMs": 121
+  },
+  "rq-e84fa8b510fafea0a9c02773d59c22b88151c8fc36861c1e77009fc797cbcf53": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2364,
+   "exogenousDelta.pickupEtaTotalMs": 1780,
+   "publications": 23,
+   "visibleDelta.dropEtaTotalMs": 2364,
+   "visibleDelta.pickupEtaTotalMs": 1780
+  },
+  "rq-eabd8ae08d8b254a0c66b585ec1fe0c3fa777cd56f73f7d7a8abee278534d02b": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1539,
+   "exogenousDelta.pickupEtaTotalMs": 937,
+   "publications": 21,
+   "visibleDelta.dropEtaTotalMs": 1539,
+   "visibleDelta.pickupEtaTotalMs": 937
+  },
+  "rq-ef0816c68d3a30b3873226132efa8b53e8611b6295bee9cafe69085906b9eb78": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 3827,
+   "exogenousDelta.pickupEtaTotalMs": 1793,
+   "publications": 32,
+   "visibleDelta.dropEtaTotalMs": 3827,
+   "visibleDelta.pickupEtaTotalMs": 1793
+  },
+  "rq-f3ccedc9b79362d3e5776500e39463149b3394dfb972538b741bc56a63aa0c22": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 2260,
+   "exogenousDelta.pickupEtaTotalMs": 1738,
+   "publications": 24,
+   "visibleDelta.dropEtaTotalMs": 2260,
+   "visibleDelta.pickupEtaTotalMs": 1738
+  },
+  "rq-f87735d76da92c26bbd66c23f87ffa3f0d486890f5c30bf23e558286af9c47ac": {
+   "decisionDelta.dropEtaTotalMs": 0,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 1748,
+   "exogenousDelta.pickupEtaTotalMs": 1263,
+   "publications": 17,
+   "visibleDelta.dropEtaTotalMs": 1748,
+   "visibleDelta.pickupEtaTotalMs": 1263
+  },
+  "rq-fe5cae2386873ffc4a68aba35ec402b53e5d4f7b8513b6db5f2d93c54fbc00bf": {
+   "decisionDelta.dropEtaTotalMs": 195624,
+   "decisionDelta.pickupEtaTotalMs": 0,
+   "exogenousDelta.dropEtaTotalMs": 4999,
+   "exogenousDelta.pickupEtaTotalMs": 2485,
+   "publications": 44,
+   "visibleDelta.dropEtaTotalMs": 200345,
+   "visibleDelta.pickupEtaTotalMs": 2485
+  }
+ },
+ "publicationCountFromRun": 2534,
+ "publications": 2534,
+ "reasonCodes": {
+  "INITIAL_BOOKING_CONFIRMATION": 83,
+  "ONLINE_REPLAN": 2451
+ },
+ "rejectedCount": 25,
+ "rejectedCountAgreesWithRun": true,
+ "requestCount": 108,
+ "requestsWithPromise": 83,
+ "totalsAcceptedOnly": {
+  "decisionDelta.dropEtaTotalMs": 3501151,
+  "decisionDelta.pickupEtaTotalMs": 664618,
+  "exogenousDelta.dropEtaTotalMs": 357406,
+  "exogenousDelta.pickupEtaTotalMs": 120067,
+  "visibleDelta.dropEtaTotalMs": 3855741,
+  "visibleDelta.pickupEtaTotalMs": 784381
+ },
+ "totalsAllRequests": {
+  "decisionDelta.dropEtaTotalMs": 3501151,
+  "decisionDelta.pickupEtaTotalMs": 664618,
+  "exogenousDelta.dropEtaTotalMs": 357406,
+  "exogenousDelta.pickupEtaTotalMs": 120067,
+  "visibleDelta.dropEtaTotalMs": 3855741,
+  "visibleDelta.pickupEtaTotalMs": 784381
+ }
+}

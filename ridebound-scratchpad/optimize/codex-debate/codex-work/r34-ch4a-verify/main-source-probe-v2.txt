@@ -1,0 +1,512 @@
+IVC 185
+filenames ['C-30-d20181114-s10-r1-w07.json', 'C-30-d20181114-s10-r1-w08.json', 'C-30-d20181114-s10-r1-w17.json', 'C-30-d20181114-s10-r2-w07.json', 'C-30-d20181114-s10-r2-w08.json', 'C-30-d20181114-s10-r2-w17.json', 'C-30-d20181114-s10-r3-w07.json', 'C-30-d20181114-s10-r3-w08.json', 'C-30-d20181114-s10-r3-w17-rerun1.json', 'C-30-d20181114-s10-r4-w07.json', 'C-30-d20181114-s10-r4-w08.json', 'C-30-d20181114-s10-r4-w17.json', 'C-30-d20181115-s10-r1-w07.json', 'C-30-d20181115-s10-r1-w08.json', 'C-30-d20181115-s10-r2-w07.json', 'C-30-d20181115-s10-r2-w08.json']
+
+PREFIX U- MATCH E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\independent\cache\U-d20181114-s10-r3-w07.json
+KEYS ['job', 'arm', 'cell', 'status', 'requests', 'lifecycle', 'served', 'acked', 'nonNormalAcked', 'nonNormalAll', 'decisionsAll', 'alight', 'riders']
+FIELD job TYPE str LEN 22
+U-d20181114-s10-r3-w07
+FIELD arm TYPE str LEN 1
+U
+FIELD cell TYPE str LEN 20
+d20181114-s10-r3-w07
+FIELD status TYPE str LEN 4
+pass
+FIELD requests TYPE int LEN 
+108
+FIELD lifecycle TYPE dict LEN 2
+keys ['rejected', 'completed']
+first rejected 61
+FIELD served TYPE int LEN 
+47
+FIELD acked TYPE int LEN 
+442
+FIELD nonNormalAcked TYPE int LEN 
+0
+FIELD nonNormalAll TYPE int LEN 
+0
+FIELD decisionsAll TYPE int LEN 
+442
+FIELD alight TYPE dict LEN 47
+keys ['rq-ddbe925d74532b8068d78d2fe400c25a7696b828e92fd20f002d272c2b1d95ad', 'rq-2558977c38c8cd1a153e05b3c63589519995e371bd71bb7feff0cdf76770a81a', 'rq-0f919adb33b9d86302767c9f2d6ab7af988471da9c4d7a5740d2ec1383ce3c37', 'rq-b678f1bf56ef2db08e982c265887cadf789302a6682b41798b0f326d11df1aa4', 'rq-fdca8aa4d5b28b44d0b7869c687b8750d40423db11499c045eca4665cff77f7f', 'rq-2d4fa4790c7dcffe5d1b6f6f89577d0fe427eae406e62c9c0c3147bcd53e67dd', 'rq-f5e5ee35b96605f3135967128eef85fa603752abda56f21233a6045362a8cc60', 'rq-dc70d6158bc1968b91686970d66df4537a079ecbbfa933e5fdd90e6aa1f94279', 'rq-64295c9383a1945f6789822ee18c7cee10ac73a3472c012e248d6d9fd7bfe6cb', 'rq-142cbb5702fc4c4513a4eaa70b86739a7ff8104fc4ddf1188264fa5bdf7af632']
+first rq-ddbe925d74532b8068d78d2fe400c25a7696b828e92fd20f002d272c2b1d95ad 581076
+FIELD riders TYPE dict LEN 47
+keys ['rq-04fca5e038a7b53004d7e3e25cbb95b40b7fc951ec3b59399343644227deb9e5', 'rq-04fcba0ccdeddbfecd17e928c7f0a17e33b8371eb03f13c6e0deee558c8f73d7', 'rq-0888486285ff67e7db7d7fbcb4292f03cc29c3aad78159d85990795a060b413c', 'rq-0be82d35edb061bc1d8d05441cb37e0ee4e11e8d561a3fe260e7e983de9336d8', 'rq-0d01dd660684321220f4a9a3c69e42208b92fd324e166abf1efc3b84e26989fd', 'rq-0f919adb33b9d86302767c9f2d6ab7af988471da9c4d7a5740d2ec1383ce3c37', 'rq-105ec865992426b5e1b7561fb508216de6ca5c37dcddf77e443ee737fab40349', 'rq-1354bd28e8c729b8c0de65fe3f7f9b5f286cde5aee92519292666380ac388eba', 'rq-142cbb5702fc4c4513a4eaa70b86739a7ff8104fc4ddf1188264fa5bdf7af632', 'rq-1ee93a590f9ca2a9be6279708db45216c4fc413ec47f106d8219abae6feb721e']
+first rq-04fca5e038a7b53004d7e3e25cbb95b40b7fc951ec3b59399343644227deb9e5 {'p0_drop': 1690366, 'p0_pick': 1130461, 'rev': [{'v_d': 1690366, 'e_d': 1690430, 'p_d': 1690430, 'dl_x': 64, 'dl_c': 0, 'dl_z': 64}, {'v_d': 1690430, 'e_d': 1690378, 'p_d': 1690378, 'dl_x': 52, 'dl_c': 0, 'dl_z': 52}, {'v_d': 1690378, 'e_d': 1690385, 'p_d': 1690385, 'dl_x': 7, 'dl_c': 0, 'dl_z': 7}, {'v_d': 1690385, 'e_d': 1690377, 'p_d': 1690377, 'dl_x': 8, 'dl_c': 0, 'dl_z': 8}, {'v_d': 1690377, 'e_d': 1690465, 'p_d': 1690465, 'dl_x': 88, 'dl_c': 0, 'dl_z': 88}, {'v_d': 1690465, 'e_d': 1690436, 'p_d': 1690436, 'dl_x': 29, 'dl_c': 0, 'dl_z': 29}, {'v_d': 1690436, 'e_d': 1690380, 'p_d': 1690380, 'dl_x': 56, 'dl_c': 0, 'dl_z': 56}, {'v_d': 1690380, 'e_d': 1690366, 'p_d': 1690366, 'dl_x': 14, 'dl_c': 0, 'dl_z': 14}, {'v_d': 1690366, 'e_d': 1690583, 'p_d': 1690583, 'dl_x': 217, 'dl_c': 0, 'dl_z': 217}, {'v_d': 1690583, 'e_d': 1690673, 'p_d': 1690673, 'dl_x': 90, 'dl_c': 0, 'dl_z': 90}, {'v_d': 1690673, 'e_d': 1690402, 'p_d': 1690402, 'dl_x': 271, 'dl_c': 0, 'dl_z': 271}, {'v_d': 1690402, 'e_d': 1690722, 'p_d': 1690722, 'dl_x': 320, 'dl_c': 0, 'dl_z': 320}, {'v_d': 1690722, 'e_d': 1690793, 'p_d': 1690793, 'dl_x': 71, 'dl_c': 0, 'dl_z': 71}, {'v_d': 1690793, 'e_d': 1690524, 'p_d': 1690524, 'dl_x': 269, 'dl_c': 0, 'dl_z': 269}, {'v_d': 1690524, 'e_d': 1690805, 'p_d': 1690805, 'dl_x': 281, 'dl_c': 0, 'dl_z': 281}, {'v_d': 1690805, 'e_d': 1690618, 'p_d': 1690618, 'dl_x': 187, 'dl_c': 0, 'dl_z': 187}, {'v_d': 1690618, 'e_d': 1690714, 'p_d': 1690714, 'dl_x': 96, 'dl_c': 0, 'dl_z': 96}
+
+PREFIX C-30- MATCH E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\independent\cache\C-30-d20181114-s10-r1-w07.json
+KEYS ['job', 'arm', 'cell', 'status', 'requests', 'lifecycle', 'served', 'acked', 'nonNormalAcked', 'nonNormalAll', 'decisionsAll', 'alight', 'riders']
+FIELD job TYPE str LEN 25
+C-30-d20181114-s10-r1-w07
+FIELD arm TYPE str LEN 4
+C-30
+FIELD cell TYPE str LEN 20
+d20181114-s10-r1-w07
+FIELD status TYPE str LEN 4
+pass
+FIELD requests TYPE int LEN 
+108
+FIELD lifecycle TYPE dict LEN 2
+keys ['rejected', 'completed']
+first rejected 59
+FIELD served TYPE int LEN 
+49
+FIELD acked TYPE int LEN 
+455
+FIELD nonNormalAcked TYPE int LEN 
+0
+FIELD nonNormalAll TYPE int LEN 
+0
+FIELD decisionsAll TYPE int LEN 
+455
+FIELD alight TYPE dict LEN 49
+keys ['rq-7f427fdba9f4d7a9ad6c2ac347521918914a387a469dc06f2900f0df52a75458', 'rq-a7197526b0d3e6d238a99dea76be2d9b102ba1b40eed9b4c1333b44ff89b4ad9', 'rq-09083c966c8582910527b998390b67e306391914660e7bc2cf01f52485eaf108', 'rq-0b5c9e689d706854a250175f5d943362d06526a48aabce4b1d09a0bac97ca52c', 'rq-67285ee077fd583921ac25780ba06b6ca081cc960314b1793c37ee64f2671c48', 'rq-ddb5c68f653ef7e950da4f58ac0a597b39b3a16102a4367c281134f4385cf113', 'rq-fcb21f3861aca0e09d83534789b8006e5a91c1ce1c42c6d3a9572b436092dc2e', 'rq-e42c5ccad6f496b57d8f1dd868ce9e15c1716829600107af7fcba6a0345d1685', 'rq-6ea62fc828f166781390b6b0412a32f673d87cf514f42891a9b47a1118991045', 'rq-feba9188e4247b0cf324823b2534495b27d569898f61b00bf5a04e938c5ab076']
+first rq-7f427fdba9f4d7a9ad6c2ac347521918914a387a469dc06f2900f0df52a75458 246703
+FIELD riders TYPE dict LEN 49
+keys ['rq-07c356695cbb1427fe42cfdd618ffd2a88e205095ca6ad35571f9c3446ae1d03', 'rq-09083c966c8582910527b998390b67e306391914660e7bc2cf01f52485eaf108', 'rq-0b5c9e689d706854a250175f5d943362d06526a48aabce4b1d09a0bac97ca52c', 'rq-20e349f1fb389611c3b2a33f64c1b0cdab688be1b7fc45126a09fb2c1ce06292', 'rq-21b0651547324320fd9890eb26219c427a75a0fba0acd1041bb638bc7fc641da', 'rq-38ab6c11ea3da7fe481d30f989fd054d4c205ae96937dfc9e9fdf3b67b9a0e64', 'rq-3ba25a210643f3a85cfc49aabf19fba3a2e283bf423dc1d5e4a51e52c70e0117', 'rq-40399eba5d3e081affcaf0d65695954eeb98b61330f39cb3eb2a41f59c785c92', 'rq-44a96ad730a97b970f12970deee50000b564b748272314df4bbc8bf0f0b36d30', 'rq-49ad45aad0f953ac08213d5d014ae1a9ee3033774c79950a64c26778453f3b93']
+first rq-07c356695cbb1427fe42cfdd618ffd2a88e205095ca6ad35571f9c3446ae1d03 {'p0_drop': 1704888, 'p0_pick': 1185985, 'rev': [{'v_d': 1704888, 'e_d': 1704925, 'p_d': 1704925, 'dl_x': 37, 'dl_c': 0, 'dl_z': 37}, {'v_d': 1704925, 'e_d': 1705276, 'p_d': 1705276, 'dl_x': 351, 'dl_c': 0, 'dl_z': 351}, {'v_d': 1705276, 'e_d': 1705071, 'p_d': 1705071, 'dl_x': 205, 'dl_c': 0, 'dl_z': 205}, {'v_d': 1705071, 'e_d': 1705240, 'p_d': 1705240, 'dl_x': 169, 'dl_c': 0, 'dl_z': 169}, {'v_d': 1705240, 'e_d': 1705041, 'p_d': 1705041, 'dl_x': 199, 'dl_c': 0, 'dl_z': 199}, {'v_d': 1705041, 'e_d': 1704954, 'p_d': 1704954, 'dl_x': 87, 'dl_c': 0, 'dl_z': 87}, {'v_d': 1704954, 'e_d': 1786344, 'p_d': 1786344, 'dl_x': 81390, 'dl_c': 0, 'dl_z': 81390}, {'v_d': 1786344, 'e_d': 1786471, 'p_d': 1786471, 'dl_x': 127, 'dl_c': 0, 'dl_z': 127}, {'v_d': 1786471, 'e_d': 1786239, 'p_d': 1786239, 'dl_x': 232, 'dl_c': 0, 'dl_z': 232}, {'v_d': 1786239, 'e_d': 1786478, 'p_d': 1786478, 'dl_x': 239, 'dl_c': 0, 'dl_z': 239}, {'v_d': 1786478, 'e_d': 1786324, 'p_d': 1786324, 'dl_x': 154, 'dl_c': 0, 'dl_z': 154}, {'v_d': 1786324, 'e_d': 1786522, 'p_d': 1786522, 'dl_x': 198, 'dl_c': 0, 'dl_z': 198}, {'v_d': 1786522, 'e_d': 1786136, 'p_d': 1786136, 'dl_x': 386, 'dl_c': 0, 'dl_z': 386}, {'v_d': 1786136, 'e_d': 1786403, 'p_d': 1786403, 'dl_x': 267, 'dl_c': 0, 'dl_z': 267}, {'v_d': 1786403, 'e_d': 1786379, 'p_d': 1786379, 'dl_x': 24, 'dl_c': 0, 'dl_z': 24}, {'v_d': 1786379, 'e_d': 1786408, 'p_d': 1786408, 'dl_x': 29, 'dl_c': 0, 'dl_z': 29}, {'v_d': 1786408, 'e_d': 1786177, 'p_d': 1786177, 'dl_x': 231, '
+
+PREFIX Mplus-30- MATCH E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\independent\cache\Mplus-30-d20181114-s10-r3-w07.json
+KEYS ['job', 'arm', 'cell', 'status', 'requests', 'lifecycle', 'served', 'acked', 'nonNormalAcked', 'nonNormalAll', 'decisionsAll', 'alight', 'riders']
+FIELD job TYPE str LEN 29
+Mplus-30-d20181114-s10-r3-w07
+FIELD arm TYPE str LEN 8
+Mplus-30
+FIELD cell TYPE str LEN 20
+d20181114-s10-r3-w07
+FIELD status TYPE str LEN 4
+pass
+FIELD requests TYPE int LEN 
+108
+FIELD lifecycle TYPE dict LEN 2
+keys ['rejected', 'completed']
+first rejected 61
+FIELD served TYPE int LEN 
+47
+FIELD acked TYPE int LEN 
+442
+FIELD nonNormalAcked TYPE int LEN 
+321
+FIELD nonNormalAll TYPE int LEN 
+321
+FIELD decisionsAll TYPE int LEN 
+442
+FIELD alight TYPE dict LEN 47
+keys ['rq-ddbe925d74532b8068d78d2fe400c25a7696b828e92fd20f002d272c2b1d95ad', 'rq-2558977c38c8cd1a153e05b3c63589519995e371bd71bb7feff0cdf76770a81a', 'rq-0f919adb33b9d86302767c9f2d6ab7af988471da9c4d7a5740d2ec1383ce3c37', 'rq-b678f1bf56ef2db08e982c265887cadf789302a6682b41798b0f326d11df1aa4', 'rq-fdca8aa4d5b28b44d0b7869c687b8750d40423db11499c045eca4665cff77f7f', 'rq-2d4fa4790c7dcffe5d1b6f6f89577d0fe427eae406e62c9c0c3147bcd53e67dd', 'rq-f5e5ee35b96605f3135967128eef85fa603752abda56f21233a6045362a8cc60', 'rq-dc70d6158bc1968b91686970d66df4537a079ecbbfa933e5fdd90e6aa1f94279', 'rq-64295c9383a1945f6789822ee18c7cee10ac73a3472c012e248d6d9fd7bfe6cb', 'rq-142cbb5702fc4c4513a4eaa70b86739a7ff8104fc4ddf1188264fa5bdf7af632']
+first rq-ddbe925d74532b8068d78d2fe400c25a7696b828e92fd20f002d272c2b1d95ad 581076
+FIELD riders TYPE dict LEN 47
+keys ['rq-04fca5e038a7b53004d7e3e25cbb95b40b7fc951ec3b59399343644227deb9e5', 'rq-04fcba0ccdeddbfecd17e928c7f0a17e33b8371eb03f13c6e0deee558c8f73d7', 'rq-0888486285ff67e7db7d7fbcb4292f03cc29c3aad78159d85990795a060b413c', 'rq-0be82d35edb061bc1d8d05441cb37e0ee4e11e8d561a3fe260e7e983de9336d8', 'rq-0d01dd660684321220f4a9a3c69e42208b92fd324e166abf1efc3b84e26989fd', 'rq-0f919adb33b9d86302767c9f2d6ab7af988471da9c4d7a5740d2ec1383ce3c37', 'rq-105ec865992426b5e1b7561fb508216de6ca5c37dcddf77e443ee737fab40349', 'rq-1354bd28e8c729b8c0de65fe3f7f9b5f286cde5aee92519292666380ac388eba', 'rq-142cbb5702fc4c4513a4eaa70b86739a7ff8104fc4ddf1188264fa5bdf7af632', 'rq-1ee93a590f9ca2a9be6279708db45216c4fc413ec47f106d8219abae6feb721e']
+first rq-04fca5e038a7b53004d7e3e25cbb95b40b7fc951ec3b59399343644227deb9e5 {'p0_drop': 1690366, 'p0_pick': 1130461, 'rev': [{'v_d': 1690366, 'e_d': 1690430, 'p_d': 1690430, 'dl_x': 64, 'dl_c': 0, 'dl_z': 64}, {'v_d': 1690430, 'e_d': 1690378, 'p_d': 1690378, 'dl_x': 52, 'dl_c': 0, 'dl_z': 52}, {'v_d': 1690378, 'e_d': 1690385, 'p_d': 1690385, 'dl_x': 7, 'dl_c': 0, 'dl_z': 7}, {'v_d': 1690385, 'e_d': 1690377, 'p_d': 1690377, 'dl_x': 8, 'dl_c': 0, 'dl_z': 8}, {'v_d': 1690377, 'e_d': 1690465, 'p_d': 1690465, 'dl_x': 88, 'dl_c': 0, 'dl_z': 88}, {'v_d': 1690465, 'e_d': 1690436, 'p_d': 1690436, 'dl_x': 29, 'dl_c': 0, 'dl_z': 29}, {'v_d': 1690436, 'e_d': 1690380, 'p_d': 1690380, 'dl_x': 56, 'dl_c': 0, 'dl_z': 56}, {'v_d': 1690380, 'e_d': 1690366, 'p_d': 1690366, 'dl_x': 14, 'dl_c': 0, 'dl_z': 14}, {'v_d': 1690366, 'e_d': 1690583, 'p_d': 1690583, 'dl_x': 217, 'dl_c': 0, 'dl_z': 217}, {'v_d': 1690583, 'e_d': 1690673, 'p_d': 1690673, 'dl_x': 90, 'dl_c': 0, 'dl_z': 90}, {'v_d': 1690673, 'e_d': 1690402, 'p_d': 1690402, 'dl_x': 271, 'dl_c': 0, 'dl_z': 271}, {'v_d': 1690402, 'e_d': 1690722, 'p_d': 1690722, 'dl_x': 320, 'dl_c': 0, 'dl_z': 320}, {'v_d': 1690722, 'e_d': 1690793, 'p_d': 1690793, 'dl_x': 71, 'dl_c': 0, 'dl_z': 71}, {'v_d': 1690793, 'e_d': 1690524, 'p_d': 1690524, 'dl_x': 269, 'dl_c': 0, 'dl_z': 269}, {'v_d': 1690524, 'e_d': 1690805, 'p_d': 1690805, 'dl_x': 281, 'dl_c': 0, 'dl_z': 281}, {'v_d': 1690805, 'e_d': 1690618, 'p_d': 1690618, 'dl_x': 187, 'dl_c': 0, 'dl_z': 187}, {'v_d': 1690618, 'e_d': 1690714, 'p_d': 1690714, 'dl_x': 96, 'dl_c': 0, 'dl_z': 96}
+
+PREFIX Mplus-60- MATCH E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\independent\cache\Mplus-60-d20181114-s10-r3-w07.json
+KEYS ['job', 'arm', 'cell', 'status', 'requests', 'lifecycle', 'served', 'acked', 'nonNormalAcked', 'nonNormalAll', 'decisionsAll', 'alight', 'riders']
+FIELD job TYPE str LEN 29
+Mplus-60-d20181114-s10-r3-w07
+FIELD arm TYPE str LEN 8
+Mplus-60
+FIELD cell TYPE str LEN 20
+d20181114-s10-r3-w07
+FIELD status TYPE str LEN 4
+pass
+FIELD requests TYPE int LEN 
+108
+FIELD lifecycle TYPE dict LEN 2
+keys ['rejected', 'completed']
+first rejected 61
+FIELD served TYPE int LEN 
+47
+FIELD acked TYPE int LEN 
+442
+FIELD nonNormalAcked TYPE int LEN 
+192
+FIELD nonNormalAll TYPE int LEN 
+192
+FIELD decisionsAll TYPE int LEN 
+442
+FIELD alight TYPE dict LEN 47
+keys ['rq-ddbe925d74532b8068d78d2fe400c25a7696b828e92fd20f002d272c2b1d95ad', 'rq-2558977c38c8cd1a153e05b3c63589519995e371bd71bb7feff0cdf76770a81a', 'rq-0f919adb33b9d86302767c9f2d6ab7af988471da9c4d7a5740d2ec1383ce3c37', 'rq-b678f1bf56ef2db08e982c265887cadf789302a6682b41798b0f326d11df1aa4', 'rq-fdca8aa4d5b28b44d0b7869c687b8750d40423db11499c045eca4665cff77f7f', 'rq-2d4fa4790c7dcffe5d1b6f6f89577d0fe427eae406e62c9c0c3147bcd53e67dd', 'rq-f5e5ee35b96605f3135967128eef85fa603752abda56f21233a6045362a8cc60', 'rq-dc70d6158bc1968b91686970d66df4537a079ecbbfa933e5fdd90e6aa1f94279', 'rq-64295c9383a1945f6789822ee18c7cee10ac73a3472c012e248d6d9fd7bfe6cb', 'rq-142cbb5702fc4c4513a4eaa70b86739a7ff8104fc4ddf1188264fa5bdf7af632']
+first rq-ddbe925d74532b8068d78d2fe400c25a7696b828e92fd20f002d272c2b1d95ad 581076
+FIELD riders TYPE dict LEN 47
+keys ['rq-04fca5e038a7b53004d7e3e25cbb95b40b7fc951ec3b59399343644227deb9e5', 'rq-04fcba0ccdeddbfecd17e928c7f0a17e33b8371eb03f13c6e0deee558c8f73d7', 'rq-0888486285ff67e7db7d7fbcb4292f03cc29c3aad78159d85990795a060b413c', 'rq-0be82d35edb061bc1d8d05441cb37e0ee4e11e8d561a3fe260e7e983de9336d8', 'rq-0d01dd660684321220f4a9a3c69e42208b92fd324e166abf1efc3b84e26989fd', 'rq-0f919adb33b9d86302767c9f2d6ab7af988471da9c4d7a5740d2ec1383ce3c37', 'rq-105ec865992426b5e1b7561fb508216de6ca5c37dcddf77e443ee737fab40349', 'rq-1354bd28e8c729b8c0de65fe3f7f9b5f286cde5aee92519292666380ac388eba', 'rq-142cbb5702fc4c4513a4eaa70b86739a7ff8104fc4ddf1188264fa5bdf7af632', 'rq-1ee93a590f9ca2a9be6279708db45216c4fc413ec47f106d8219abae6feb721e']
+first rq-04fca5e038a7b53004d7e3e25cbb95b40b7fc951ec3b59399343644227deb9e5 {'p0_drop': 1690366, 'p0_pick': 1130461, 'rev': [{'v_d': 1690366, 'e_d': 1690430, 'p_d': 1690430, 'dl_x': 64, 'dl_c': 0, 'dl_z': 64}, {'v_d': 1690430, 'e_d': 1690378, 'p_d': 1690378, 'dl_x': 52, 'dl_c': 0, 'dl_z': 52}, {'v_d': 1690378, 'e_d': 1690385, 'p_d': 1690385, 'dl_x': 7, 'dl_c': 0, 'dl_z': 7}, {'v_d': 1690385, 'e_d': 1690377, 'p_d': 1690377, 'dl_x': 8, 'dl_c': 0, 'dl_z': 8}, {'v_d': 1690377, 'e_d': 1690465, 'p_d': 1690465, 'dl_x': 88, 'dl_c': 0, 'dl_z': 88}, {'v_d': 1690465, 'e_d': 1690436, 'p_d': 1690436, 'dl_x': 29, 'dl_c': 0, 'dl_z': 29}, {'v_d': 1690436, 'e_d': 1690380, 'p_d': 1690380, 'dl_x': 56, 'dl_c': 0, 'dl_z': 56}, {'v_d': 1690380, 'e_d': 1690366, 'p_d': 1690366, 'dl_x': 14, 'dl_c': 0, 'dl_z': 14}, {'v_d': 1690366, 'e_d': 1690583, 'p_d': 1690583, 'dl_x': 217, 'dl_c': 0, 'dl_z': 217}, {'v_d': 1690583, 'e_d': 1690673, 'p_d': 1690673, 'dl_x': 90, 'dl_c': 0, 'dl_z': 90}, {'v_d': 1690673, 'e_d': 1690402, 'p_d': 1690402, 'dl_x': 271, 'dl_c': 0, 'dl_z': 271}, {'v_d': 1690402, 'e_d': 1690722, 'p_d': 1690722, 'dl_x': 320, 'dl_c': 0, 'dl_z': 320}, {'v_d': 1690722, 'e_d': 1690793, 'p_d': 1690793, 'dl_x': 71, 'dl_c': 0, 'dl_z': 71}, {'v_d': 1690793, 'e_d': 1690524, 'p_d': 1690524, 'dl_x': 269, 'dl_c': 0, 'dl_z': 269}, {'v_d': 1690524, 'e_d': 1690805, 'p_d': 1690805, 'dl_x': 281, 'dl_c': 0, 'dl_z': 281}, {'v_d': 1690805, 'e_d': 1690618, 'p_d': 1690618, 'dl_x': 187, 'dl_c': 0, 'dl_z': 187}, {'v_d': 1690618, 'e_d': 1690714, 'p_d': 1690714, 'dl_x': 96, 'dl_c': 0, 'dl_z': 96}
+
+PREFIX V-30- MATCH E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\independent\cache\V-30-d20181114-s10-r3-w07.json
+KEYS ['job', 'arm', 'cell', 'status', 'requests', 'lifecycle', 'served', 'acked', 'nonNormalAcked', 'nonNormalAll', 'decisionsAll', 'alight', 'riders']
+FIELD job TYPE str LEN 25
+V-30-d20181114-s10-r3-w07
+FIELD arm TYPE str LEN 4
+V-30
+FIELD cell TYPE str LEN 20
+d20181114-s10-r3-w07
+FIELD status TYPE str LEN 4
+pass
+FIELD requests TYPE int LEN 
+108
+FIELD lifecycle TYPE dict LEN 2
+keys ['rejected', 'completed']
+first rejected 61
+FIELD served TYPE int LEN 
+47
+FIELD acked TYPE int LEN 
+442
+FIELD nonNormalAcked TYPE int LEN 
+321
+FIELD nonNormalAll TYPE int LEN 
+321
+FIELD decisionsAll TYPE int LEN 
+442
+FIELD alight TYPE dict LEN 47
+keys ['rq-ddbe925d74532b8068d78d2fe400c25a7696b828e92fd20f002d272c2b1d95ad', 'rq-2558977c38c8cd1a153e05b3c63589519995e371bd71bb7feff0cdf76770a81a', 'rq-0f919adb33b9d86302767c9f2d6ab7af988471da9c4d7a5740d2ec1383ce3c37', 'rq-b678f1bf56ef2db08e982c265887cadf789302a6682b41798b0f326d11df1aa4', 'rq-fdca8aa4d5b28b44d0b7869c687b8750d40423db11499c045eca4665cff77f7f', 'rq-2d4fa4790c7dcffe5d1b6f6f89577d0fe427eae406e62c9c0c3147bcd53e67dd', 'rq-f5e5ee35b96605f3135967128eef85fa603752abda56f21233a6045362a8cc60', 'rq-dc70d6158bc1968b91686970d66df4537a079ecbbfa933e5fdd90e6aa1f94279', 'rq-64295c9383a1945f6789822ee18c7cee10ac73a3472c012e248d6d9fd7bfe6cb', 'rq-142cbb5702fc4c4513a4eaa70b86739a7ff8104fc4ddf1188264fa5bdf7af632']
+first rq-ddbe925d74532b8068d78d2fe400c25a7696b828e92fd20f002d272c2b1d95ad 581076
+FIELD riders TYPE dict LEN 47
+keys ['rq-04fca5e038a7b53004d7e3e25cbb95b40b7fc951ec3b59399343644227deb9e5', 'rq-04fcba0ccdeddbfecd17e928c7f0a17e33b8371eb03f13c6e0deee558c8f73d7', 'rq-0888486285ff67e7db7d7fbcb4292f03cc29c3aad78159d85990795a060b413c', 'rq-0be82d35edb061bc1d8d05441cb37e0ee4e11e8d561a3fe260e7e983de9336d8', 'rq-0d01dd660684321220f4a9a3c69e42208b92fd324e166abf1efc3b84e26989fd', 'rq-0f919adb33b9d86302767c9f2d6ab7af988471da9c4d7a5740d2ec1383ce3c37', 'rq-105ec865992426b5e1b7561fb508216de6ca5c37dcddf77e443ee737fab40349', 'rq-1354bd28e8c729b8c0de65fe3f7f9b5f286cde5aee92519292666380ac388eba', 'rq-142cbb5702fc4c4513a4eaa70b86739a7ff8104fc4ddf1188264fa5bdf7af632', 'rq-1ee93a590f9ca2a9be6279708db45216c4fc413ec47f106d8219abae6feb721e']
+first rq-04fca5e038a7b53004d7e3e25cbb95b40b7fc951ec3b59399343644227deb9e5 {'p0_drop': 1690366, 'p0_pick': 1130461, 'rev': [{'v_d': 1690366, 'e_d': 1690430, 'p_d': 1690430, 'dl_x': 64, 'dl_c': 0, 'dl_z': 64}, {'v_d': 1690430, 'e_d': 1690378, 'p_d': 1690378, 'dl_x': 52, 'dl_c': 0, 'dl_z': 52}, {'v_d': 1690378, 'e_d': 1690385, 'p_d': 1690385, 'dl_x': 7, 'dl_c': 0, 'dl_z': 7}, {'v_d': 1690385, 'e_d': 1690377, 'p_d': 1690377, 'dl_x': 8, 'dl_c': 0, 'dl_z': 8}, {'v_d': 1690377, 'e_d': 1690465, 'p_d': 1690465, 'dl_x': 88, 'dl_c': 0, 'dl_z': 88}, {'v_d': 1690465, 'e_d': 1690436, 'p_d': 1690436, 'dl_x': 29, 'dl_c': 0, 'dl_z': 29}, {'v_d': 1690436, 'e_d': 1690380, 'p_d': 1690380, 'dl_x': 56, 'dl_c': 0, 'dl_z': 56}, {'v_d': 1690380, 'e_d': 1690366, 'p_d': 1690366, 'dl_x': 14, 'dl_c': 0, 'dl_z': 14}, {'v_d': 1690366, 'e_d': 1690583, 'p_d': 1690583, 'dl_x': 217, 'dl_c': 0, 'dl_z': 217}, {'v_d': 1690583, 'e_d': 1690673, 'p_d': 1690673, 'dl_x': 90, 'dl_c': 0, 'dl_z': 90}, {'v_d': 1690673, 'e_d': 1690402, 'p_d': 1690402, 'dl_x': 271, 'dl_c': 0, 'dl_z': 271}, {'v_d': 1690402, 'e_d': 1690722, 'p_d': 1690722, 'dl_x': 320, 'dl_c': 0, 'dl_z': 320}, {'v_d': 1690722, 'e_d': 1690793, 'p_d': 1690793, 'dl_x': 71, 'dl_c': 0, 'dl_z': 71}, {'v_d': 1690793, 'e_d': 1690524, 'p_d': 1690524, 'dl_x': 269, 'dl_c': 0, 'dl_z': 269}, {'v_d': 1690524, 'e_d': 1690805, 'p_d': 1690805, 'dl_x': 281, 'dl_c': 0, 'dl_z': 281}, {'v_d': 1690805, 'e_d': 1690618, 'p_d': 1690618, 'dl_x': 187, 'dl_c': 0, 'dl_z': 187}, {'v_d': 1690618, 'e_d': 1690714, 'p_d': 1690714, 'dl_x': 96, 'dl_c': 0, 'dl_z': 96}
+
+STAGE INPUTS {'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\tang3\\t38\\split-t38-v1.json': {'sha256': 'b72ac0f731fa7425891f364f0976054ae172a3117a507155ebe7e5c122ea03f1', 'bytes': 1723}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w07\\summary.json': {'sha256': '9ce5dca31d85a2a84ef08313baa6c38315c972def8e7e7eed2c5655e15b09d6e', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w08\\summary.json': {'sha256': '5a39793a7991110868deef0d85d07af412133e9a88d11c7b522bdb247fe065c8', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w17\\summary.json': {'sha256': '38521f6f79584d448bc916ca1e41aede1c4b2dd2c0fd21073f9edf0fbe35b963', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w07\\summary.json': {'sha256': '0bc698a2b8351606ced4ec5c96d7ba36eb8ebb7ac5cae18a1cee74434d9dff08', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w08\\summary.json': {'sha256': 'c8605bea9d12fff566fcaa2da360e6df1ac3a2e1ae943cf507808234daff4308', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w17\\summary.json': {'sha256': 'b2ad6551dced63b8e89f3ef2d62b724f8589fad34029f5bba8130b95a5f271c5', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r1-w07\\summary.json': {'sha256': 'f0e3e4bed5e4173efa45872bc9d02edf33308e9966165b715a5185d26eae72e6', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r1-w08\\summary.json': {'sha256': '23852d4a9ba9e8181bbf1937991745ca5a15176e34f44a5f765a839f53d3bdf4', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r2-w07\\summary.json': {'sha256': 'e1032d26f64783df271bb450a82b05e254ab0d117d52a6bc0987be50cb6ca4b6', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r2-w08\\summary.json': {'sha256': '61c0bfe14bbf31563edb18404560d5cb92c14c66f44332319b911ecd1b923578', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r4-w07\\summary.json': {'sha256': '25c98e84de0845dab30b469b40e8ee36915e44d750ee1cbbcbf973ef7cc4ac9e', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r4-w08\\summary.json': {'sha256': '8907774dfce16d885597c02494fd394dda0c03163c93754dc4eadb62a1a64cac', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w07\\summary.json': {'sha256': '9641e6c43acfcdaed4408545dbc56cb90647bd57c02330126c2def2034f35b70', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w08\\summary.json': {'sha256': 'b7213019316fd12bd2fd502432caff62b2f600ccd8e2a74635b95edc7fc81afb', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w17\\summary.json': {'sha256': '0aa5833d5eae3147c299b5703299572b1928e6a32c7e3bee2176011f184560fd', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w07\\summary.json': {'sha256': 'c69b972516c5827ecca23e68ee902dc1f933b1eee95feb2a364e5afe6f25c4d2', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w08\\summary.json': {'sha256': '9824b5429d5ebf2e8357264db383938723e9c37219b0df31bb4a405bcb9d8dff', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w17\\summary.json': {'sha256': '5f8c154fee52994985148bca3900ae564fd964e6ccc236dcb8363b09a9b25ea4', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w07\\summary.json': {'sha256': '7e26de0ecbcc347519d7048ec5b96f6b2de2a1d2a0a5651dd525886147ca1ba7', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w08\\summary.json': {'sha256': 'd080455ca1f6ff9f1d762898501c618caf8be0b5d7950693b55455af3a62ebf0', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w17\\summary.json': {'sha256': '44d2bea539ece2f141db484048c0f41f8ceabcac8b8ecb0672ca81246c72de13', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r1-w08\\summary.json': {'sha256': 'bd5e1cac9353e4a782a2da1bed026c4515f263af403c8db0f48c02405206ac16', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r1-w17\\summary.json': {'sha256': 'ef53d4d056be8c6c822b90cd13fd8df0898de58ea6be6a6efa9eb028c639b9ab', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r2-w08\\summary.json': {'sha256': '61a8e7a34333a08e540dc3369b2929d2a32c0cc938f8ffd4cc96b495e57f0eba', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r2-w17\\summary.json': {'sha256': 'e4ee226e7a9842eeca4f14f2c69f4b25b0ebf402d2ee59deb42c2ec490ca05db', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w07\\summary.json': {'sha256': '1364600095e91a06f028573d23fffd216f9ed6259bffbb03b556fcb33dfdcba6', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w08\\summary.json': {'sha256': 'ffbde41ee3df139c2ec07acd4cc4da7ec10120005727084d3031386642441250', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w17\\summary.json': {'sha256': 'd9e16a73e04ae73cddd95f127596b497ce91aa4396dfb8000040466cb28023dc', 'bytes': 629}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r2-w08\\summary.json': {'sha256': '1aa5a0c17a3cbbc691c6d5f0eb5ed607538527db0cd0c1ee220216a1fd191615', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r2-w17\\summary.json': {'sha256': 'dc16d32f9ac1414969c6ac18f131c4512d93ea23f0d3b825c2f086b902d00b89', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r3-w08\\summary.json': {'sha256': '403a88c223a08ea4b092c489a5fe611a95f92a6472ae2acb6bb0b1ad0e84eaf2', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r3-w17\\summary.json': {'sha256': 'ba7f64c5fd2288d4ee5e2fe9e5c38e7fef768b38cfa00bf13af6c6a68ed9ff10', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r4-w08\\summary.json': {'sha256': 'f75d8d4e2c045a0210f19d45073dcf39339480f291b8030d7fa2efe21b9016bb', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r4-w17\\summary.json': {'sha256': 'bd4959a77a485d1b0542ae2ccac377a255258a824cb475bbb7126a1319e08b21', 'bytes': 628}, 'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R19-verification.json': {'sha256': 'd65fc06fa3a7f799516a35b1ebfeda3b8179500d8365b063800f0ebf943e8772', 'bytes': 224065}, 'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R13-raw-verification.json': {'sha256': 'd8f2adb5d43394079af9616f21123d5febe6d635a9bbf848d6190d20fee361e3', 'bytes': 155901}, 'E:\\Code\\Report_INT3508\\ridebound-scratchpad\\optimize\\codex-debate\\codex-work\\R15-audit.json': {'sha256': 'cd243d063bf3df9ac63223556cdd28a281e70aebde121ca644d15302240962fa', 'bytes': 370329}, 'E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-12_tt_factors.csv': {'sha256': '89f64a74ff7262b93cea7270cd62639cef3fa1dbc8a091f8e3b927d1100c7317', 'bytes': 12476}, 'E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-13_tt_factors.csv': {'sha256': '442290763bd4f46faa02a8854cacf4b75f7a3b6df97af16b4b9490078c342b0c', 'bytes': 12428}, 'E:\\RideBoundData\\wp6\\extracted\\sha256\\d9\\d9e86f33645e5eec287d387f8d63ad41ddf41d4ef648138b65d636482e2c599e\\FleetPy_Manhattan\\networks\\Manhattan_2019_corrected\\2018-11-14_tt_factors.csv': {'sha256': '0f09e2651a1257680d1209518a6f91fba98d2ae57a0b8278458daecfecf2f85f', 'bytes': 12453}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w07\\run-00.json': {'sha256': '30890b95360fb13a60fc968717430166d261a46fa59218ccabc9976925adbb50', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w07\\transcript-00.ndjson': {'bytes': 56178267, 'sha256': '8a0d6ba6bc2bb2c602ac228eeb69c8d73d499afcef87c207a0a635bef1691afc', 'frames': 1333}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w08\\run-00.json': {'sha256': '166abc226cb20e691aa51822ff5c4d2ecf85cfcafd3d5416138bce05808df06a', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w08\\transcript-00.ndjson': {'bytes': 74164916, 'sha256': '45f6ace7abe4b9c240284aef88a1e9f70a51135b89edfd867dc5e3899e62e27f', 'frames': 1846}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w17\\run-00.json': {'sha256': 'a9ca590f2c4b000af1e616e2f9af6bd7ca58cb42a86a7c193f2a3e3460cdf6ce', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r3-w17\\transcript-00.ndjson': {'bytes': 88518866, 'sha256': '6363286b0075bf8b7f656d8577b2840cc180347ef59366ea073467ca771c6d33', 'frames': 2287}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w07\\run-00.json': {'sha256': '2d506453cab73ae31116729d58f80517a633cbda253f8707f2e58d7f8aae855e', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w07\\transcript-00.ndjson': {'bytes': 58908072, 'sha256': '416c722eac7fe0a1e424cf083c721b1fa315d928ab295cdb265c74f00d09ba2f', 'frames': 1444}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w08\\run-00.json': {'sha256': '1a4f0ec618b93cfe750cff97023bf106f658c9ed7f82fc19c1e24c19af62985d', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w08\\transcript-00.ndjson': {'bytes': 86881041, 'sha256': '93b3025f5daee1d1452711ff1609083089c2da7c7cafb37eac1080910ac7c9ac', 'frames': 2200}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w17\\run-00.json': {'sha256': 'c5bda91ea6e96eaf305acff7e512d5aa752df2650fff7a959448396b2ffab558', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181114-s10-r4-w17\\transcript-00.ndjson': {'bytes': 86657626, 'sha256': 'bea95dc096956a13ac9cd88b7a726f23f7ac34ddc8f1420bc9ac470a57a2f514', 'frames': 2215}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r1-w07\\run-00.json': {'sha256': 'd2b7a8e2a582a837a49ebd2e0bc1cd9e5c8fd898d4665739c8d4f3ec78e41794', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r1-w07\\transcript-00.ndjson': {'bytes': 51696010, 'sha256': '4c2be4053f9c5cba6b1431188b9c4f18cdee7bbea3289f2bafef56a194990434', 'frames': 1270}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r1-w08\\run-00.json': {'sha256': '6a02c4ce1f2f6a882898cc716561f9cd721d186160eecad167959c7c468d11df', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r1-w08\\transcript-00.ndjson': {'bytes': 80510776, 'sha256': '1aadb71e8d0826b7bc4852f2e2c0c68231dce3722f46e1398adf179971476ed6', 'frames': 1963}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r2-w07\\run-00.json': {'sha256': 'b50bfd2668fb59afe3f0f8fb11dbefa2acf294c3d725619da204b39c7438aaa2', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r2-w07\\transcript-00.ndjson': {'bytes': 67248056, 'sha256': '6af2a948e284f0a22d6881f90902306598ac770452bc84ee164d7f66359f48bb', 'frames': 1549}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r2-w08\\run-00.json': {'sha256': 'a6773b1ebcb93ec825204e907b382921aaac5d73fda48d4c9183f773bc3e83f1', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r2-w08\\transcript-00.ndjson': {'bytes': 78369782, 'sha256': '59a8ea51f65952f1184da7d49e63e79acb0f0dcd29bcaf79444b96b85c2e7ea1', 'frames': 2089}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r4-w07\\run-00.json': {'sha256': '727ffd168715ca5c4064ea296e02c1f0ba3e4d50036e7bbb556b9ec02e30d8cb', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r4-w07\\transcript-00.ndjson': {'bytes': 54517025, 'sha256': '44ea7ca51deb41c11ad9387cea662141a204060f86b237f98e754d79eb62cca7', 'frames': 1291}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r4-w08\\run-00.json': {'sha256': '198d79476a051fa7d4d1a1d4e0ae3bd070e90f797fbd0067f77e6be219ee59ba', 'bytes': 5378}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181115-s10-r4-w08\\transcript-00.ndjson': {'bytes': 84392363, 'sha256': '0b6f051a77f3075a3e37767fb077f9af0de9f00ec29fcd0cc994dd357d81c9f9', 'frames': 2038}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w07\\run-00.json': {'sha256': 'fd4e1d6cb9110ee78cb96c9bcb3e3e187d94297cbbf3172968992f033f39df85', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w07\\transcript-00.ndjson': {'bytes': 72800120, 'sha256': '59dc81baaa75267060d970777c4cbfce1a957f07c034ed9583e1b11ea1114926', 'frames': 1756}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w08\\run-00.json': {'sha256': 'dd2ed43f00f9aa49d108f84de83fda5357e0ebd5dd9f1ae64b01e8b80585cbb6', 'bytes': 5378}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w08\\transcript-00.ndjson': {'bytes': 82782502, 'sha256': 'b98dde9de9edceed08787718215306b49602cfaa8790bfe6d9acd669640a419e', 'frames': 2035}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w17\\run-00.json': {'sha256': 'd276e632b47ba47363b3b3c06b5542d7e14403a6f0753ea330f4e27d0805938b', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r1-w17\\transcript-00.ndjson': {'bytes': 83454316, 'sha256': '6a23fbad217787f2a09d44e10fc8e8351348c948e66e83a41f1433467a4fbbcc', 'frames': 2098}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w07\\run-00.json': {'sha256': '5d8bb443610bbb4ff36b31039f6d8a6d21d503dd73b3ffb00d40596fe93ced82', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w07\\transcript-00.ndjson': {'bytes': 70966203, 'sha256': 'a0fa67279b47bdacbd85a3cd66a57ab8a58ed22254df1539affa0c8182639496', 'frames': 1684}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w08\\run-00.json': {'sha256': '4665a8daee60ebcd34f857b22cc4c9e4e669b78fd6fe5367edf6ee53022c1288', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w08\\transcript-00.ndjson': {'bytes': 72991400, 'sha256': 'dab7025e098dd28770961841a7b2c7f96e2ae2b7abec33ca4d4ac7e69c150d2e', 'frames': 1846}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w17\\run-00.json': {'sha256': '3f1850775971a229ce81b2bbcc59f2911c27e9538a336ff6b4c1c5b760bd3f6b', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r2-w17\\transcript-00.ndjson': {'bytes': 81493858, 'sha256': '19be4001829f109ece46e9f0d234459ef1f36bf9a3cbda54394f3a50d40612c3', 'frames': 2071}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w07\\run-00.json': {'sha256': 'ca23727d6d160ee54e27097866f0b457539ac533378bd2a5e5e804a1366c6b43', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w07\\transcript-00.ndjson': {'bytes': 73464213, 'sha256': 'ff752fdc86325a36f25f5f388cc6b8b0bd7ecacc5764aa6631296cdd0c82fde7', 'frames': 1777}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w08\\run-00.json': {'sha256': '120d7bd4d722c27cc34ab4385528e622a2528696c7a20a9ea9d7884a2138a659', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w08\\transcript-00.ndjson': {'bytes': 76139935, 'sha256': '8803931bd0e331e56d9266151f34f64053e48c612ee9f884bc90dd780538ca53', 'frames': 1843}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w17\\run-00.json': {'sha256': '467cc020166cb2ec960e298f734e6c459c72d3bb6116a07c87ba0acfc13d1121', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181116-s10-r4-w17\\transcript-00.ndjson': {'bytes': 76532603, 'sha256': 'c5839fcb139539e2ff284aea9effc4e7d2a668f7317537f54bdd76a00143331c', 'frames': 1822}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r1-w08\\run-00.json': {'sha256': '90b658fd8a26ce6a56565e181a68096d8d1add28d94d0e660089f99e72d66854', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r1-w08\\transcript-00.ndjson': {'bytes': 66959084, 'sha256': '522f9d390c0b09d8f8dbc5c04c3731d65ad85d05ff7cd478bf7668668da2e349', 'frames': 1612}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r1-w17\\run-00.json': {'sha256': '25990f42a0468c8d56a1854dc1c9eec9bdffbc2e5fb7c218b45e76f9031e9c18', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r1-w17\\transcript-00.ndjson': {'bytes': 70171128, 'sha256': 'fa317823fd5ba849056ec1c127b1d6eba3bcf4dc81b49eaee494964a318d9919', 'frames': 1717}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r2-w08\\run-00.json': {'sha256': '64db20fb0fb65e9859c5e4b7ca79f408fc11ab4826135f12e83e14668a305a38', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r2-w08\\transcript-00.ndjson': {'bytes': 80596784, 'sha256': 'a1dd4bddeeca795ad135f9a8a9d15dc45c281a0cacb00cc86b642b04a3a4d92b', 'frames': 1909}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r2-w17\\run-00.json': {'sha256': '0e1856f7ee26b63e332054fb3bf5b0f8a7ef7ec4bc139a23a3c0913c50c7b46d', 'bytes': 5378}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r2-w17\\transcript-00.ndjson': {'bytes': 77814058, 'sha256': '8a60cdac8154537b2b767b295133891ae24692839082f564304d92f14d3c91ec', 'frames': 1828}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w07\\run-00.json': {'sha256': '39ac9ea3fe80a4dfb748f70ee9b23b52e799da75cbeddc7b16de881b8ec69995', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w07\\transcript-00.ndjson': {'bytes': 76328720, 'sha256': '2fc161826cc8a51a561a9fef1840fde9c2cb0b840b3385e97f4abb6705f2d2c7', 'frames': 1771}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w08\\run-00.json': {'sha256': '5053e56cf2dedf8a7289d13b6e6e0cdcc491f0aef360e6305401f0a12f09c60f', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w08\\transcript-00.ndjson': {'bytes': 62969295, 'sha256': 'd4d564096abf54e774024d435dd4595a2d0488433cac175637f419fd7bef1042', 'frames': 1483}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w17\\run-00.json': {'sha256': '38cfaf3575b977d8b293d9c68709296e668176a683b9ec2496fc8f2dedd76acb', 'bytes': 5378}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181117-s10-r3-w17\\transcript-00.ndjson': {'bytes': 84710586, 'sha256': '64dab901c28a96065ca76438d7228d6209ecc9541bde275e54ec05aa4069a807', 'frames': 2047}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r2-w08\\run-00.json': {'sha256': '8e9b7c9b30abe946e7cf1f821c0e2116260d3d3bb79d0c4ff269308b88e89d1a', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r2-w08\\transcript-00.ndjson': {'bytes': 69966387, 'sha256': '0f4296e3a7d989d3895132992c0bbaaa20538cfdb6f4ff9c46f0703c9b6cc246', 'frames': 1669}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r2-w17\\run-00.json': {'sha256': 'f65f57c77540e6f1496be724b382c04b1859721fbacb5e5eaf7357f6c34eddbb', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r2-w17\\transcript-00.ndjson': {'bytes': 80244935, 'sha256': 'b58aa7ed40be8049a32e9f02b15465bac89ea2a89d761dfee9c2566ff49ae3fb', 'frames': 1996}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r3-w08\\run-00.json': {'sha256': '0759660100018d614733fa43af1df3e78df9cc60a9a7e03e1b5fbaaa85c0871f', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r3-w08\\transcript-00.ndjson': {'bytes': 62652478, 'sha256': '3e8bfccf1ac61f8582d083251aef0586a45da72bdccdf2905ad628c24f3366e4', 'frames': 1453}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r3-w17\\run-00.json': {'sha256': '84beeaa923493761df49fce6356cdfcff4d08d940fcfb5ac4f963b257cf19b03', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r3-w17\\transcript-00.ndjson': {'bytes': 73543299, 'sha256': 'ff89c5219a8573d627512efaab6863e7a5d04ff6d6a89b09b00b9a88b116487d', 'frames': 1831}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r4-w08\\run-00.json': {'sha256': '63c856e7db7ddbb0cec0e7c0cf567cbc545acb444fd1ea5931218146b264c714', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r4-w08\\transcript-00.ndjson': {'bytes': 74077991, 'sha256': 'b6fee20445109358a243ac15c034b40f47171f8e327ec53ccf854d5983dcfebf', 'frames': 1738}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r4-w17\\run-00.json': {'sha256': '4e238fd2fd053c5455d8f8d73d18afbae750cb6deb7c7629662c09c1746754a2', 'bytes': 5377}, 'C:\\RideBoundData\\research\\tier3-t38c120-v1\\C-120-d20181118-s10-r4-w17\\transcript-00.ndjson': {'bytes': 82141214, 'sha256': '10d0b9523f6233211b260031cfe7e9b733cdfad631a60313f62f5faef419bf72', 'frames': 2032}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w07\\summary.json': {'sha256': '7daf4efe10b1d675d70b5dbc9d60a005a2a2bdfe876a235b72353d6b1c305c3d', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w07\\run-00.json': {'sha256': '6f4145703447366f3c1cf2834c058ebb0c6ae15415140e44e26c588576c44b56', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w07\\transcript-00.ndjson': {'bytes': 56177307, 'sha256': '870f451a90ed7c4c41f229fee20ee37a122cf762cef16bc8e704b96ef5f63172', 'frames': 1333}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w08\\summary.json': {'sha256': '4e9e2e454419ad994328e84042f6be01da2e61d7a81e898e179a4c3ed43e9628', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w08\\run-00.json': {'sha256': 'c2ca3be87c272f6b98979b870d645937ba9a5e22a16e089d0fc7c111b2771385', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w08\\transcript-00.ndjson': {'bytes': 71964882, 'sha256': '1897219be0b0fa5f64e0deb713a868109750980e14354f51e8e02bec4aaaf450', 'frames': 1870}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w17-rerun1\\summary.json': {'sha256': 'd0dda8e3bfd88d09a0820e765258c3f99aca2db1a08e4305447e44a8baa4c342', 'bytes': 633}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w17-rerun1\\run-00.json': {'sha256': '852ca619f3d0ba34e451252960419121e948f6f38ed3310de7351a84cc51e3fb', 'bytes': 5381}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w17-rerun1\\transcript-00.ndjson': {'bytes': 86340620, 'sha256': 'b9e962695169e1e48440e4796b50ad3ac96b74f8c3a2e335819f1ad70597431b', 'frames': 2227}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w07\\summary.json': {'sha256': '3aab4104eefec7ad9b436cabfeb7d6113435ec442144caf5c7bd92de65afeaf6', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w07\\run-00.json': {'sha256': '69a0cf54d56504bf5972b8bee9d6c3cd596c26349766050a75d26e5119d4efb3', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w07\\transcript-00.ndjson': {'bytes': 58907628, 'sha256': '6eb3bb6c918321c78089a9fd4b71cc562d0a359a5d17d88755a5ffbb29ffde85', 'frames': 1444}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w08\\summary.json': {'sha256': 'ef06106ac11188710cfadd58eb35af7bd4cc89d64797b601b3022c1ba7ece921', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w08\\run-00.json': {'sha256': '3d9b245fa9faea940dfe03cc2adf07fafec9190acad589e0e49b507f8c0d2768', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w08\\transcript-00.ndjson': {'bytes': 84887505, 'sha256': 'f0bb1344233d9204001966ca888378a632c6aee47e9d1409a398812a81a6bd75', 'frames': 2161}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w17\\summary.json': {'sha256': '595aa3186eeacef2fbd586179d4b8a4b4cb2592e7726e4ef928fdd093dcfe985', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w17\\run-00.json': {'sha256': '2049b016d840950229ab0863532ae2000afc2550727f91ea51ae0535cc3f3334', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r4-w17\\transcript-00.ndjson': {'bytes': 85785227, 'sha256': 'edcea76100c424cb1effa3e89404fa1d27fa6ae8c53c81eda17eac165684b950', 'frames': 2197}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r1-w07\\summary.json': {'sha256': 'e6d06e4748e155e08498296f48f5c494f6108d2c45c67b327149284802f605eb', 'bytes': 626}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r1-w07\\run-00.json': {'sha256': '648ff9776939e071562db1211fa723f564a0249ce38dbf50d5c173551a88db99', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r1-w07\\transcript-00.ndjson': {'bytes': 51696834, 'sha256': '1dcc03d08efacae8beccba4ba1263e7663df69026b052bf8c11d798a9ccc886f', 'frames': 1270}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r1-w08\\summary.json': {'sha256': '6ef7b117bad97419cf7173df79588376d8fa3e7949f5131c765b86e591b4bc43', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r1-w08\\run-00.json': {'sha256': '28c67f975c6b5ce5ad81ba98e92efc51781090a2115901e229f50d8f252cf5e5', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r1-w08\\transcript-00.ndjson': {'bytes': 74051052, 'sha256': '809d726c773f3f8799d5f4416e83619b21dabcc74ba204350afb5274b5be7fb3', 'frames': 1801}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r2-w07\\summary.json': {'sha256': '7b51503d1f275ecbe9fbdf25b3cddfeb34da84c711886dd2d3cc93d6ccb966a9', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r2-w07\\run-00.json': {'sha256': '4f4965eff9b7f6c44ee5bdfaa50e3521217679a72026473e036d3a1cae12b6b7', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r2-w07\\transcript-00.ndjson': {'bytes': 67247252, 'sha256': '15732e0f1c1243af698531ec158e94c8c4ab9b6c40c9f24c31511c5345df539b', 'frames': 1549}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r2-w08\\summary.json': {'sha256': '4e9b9f553b66c1311fece00b6a94582862e79e7950d77fcbe6ad82b0c369e18d', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r2-w08\\run-00.json': {'sha256': 'c53332bf842451e916aec5f7d91d91127b6b418a4432882d40ff7aeadf3634f3', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r2-w08\\transcript-00.ndjson': {'bytes': 75977216, 'sha256': 'b8ef7a818b940837edf5cd8bb2a78d8c2c21f76516d0e67183b750b583ea0bb8', 'frames': 2029}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r4-w07\\summary.json': {'sha256': '944f777fb7565cbf196acd69776218ada3db48ddbc5072a4b4b040abcada549c', 'bytes': 626}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r4-w07\\run-00.json': {'sha256': '2ee7a504107f8cd85ee77e1ab85c832b95393acc74f21a501e77ee05f7b71094', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r4-w07\\transcript-00.ndjson': {'bytes': 54672117, 'sha256': 'e3eb7a194e987c3b0e6780668f33c304936ca1a46a90447e122858aadbeb9cb4', 'frames': 1291}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r4-w08\\summary.json': {'sha256': 'cd34ff63e332aeefdd272f71eb832eb5938e2703fbb517b5a6edce36bd83dd50', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r4-w08\\run-00.json': {'sha256': '4ec7d718813681f98a31bcbc7c5af48952a2a8ad29392dc88514905b13d1c44f', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181115-s10-r4-w08\\transcript-00.ndjson': {'bytes': 80912913, 'sha256': '464025c5a78d54ec2c3ca38f86981ac07938ba4288589d5c827d75bea0dfdc09', 'frames': 1990}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w07\\summary.json': {'sha256': '3992f0239f0a4d8020b5f10ae9cae261f79cd2cd4681fa5f7d6268341f1e2ee6', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w07\\run-00.json': {'sha256': '6835a2e344e7045a75beeadbc2a999a516bf39f420daad3f06253ece9a647ddd', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w07\\transcript-00.ndjson': {'bytes': 72799968, 'sha256': '28bfe196e9ec790e07057e097ac12cc09cfcd06dd67553998af40c1a56ce85ef', 'frames': 1756}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w08\\summary.json': {'sha256': 'ffc6dd7f624d922426e653ba196474495e98584578fbcff140f032b2969215c6', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w08\\run-00.json': {'sha256': '576c4b7f134d0275f46b2eb8bfb41c82d35c523e4ab98329e7d9a14d32579234', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w08\\transcript-00.ndjson': {'bytes': 82782390, 'sha256': '42ba5f1aab73d363d1c8a355d1646e8bb71bae7a6b5a0cda50be8448fc45272b', 'frames': 2035}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w17\\summary.json': {'sha256': 'ab912464242ba9b534886b73c8a6ed40e5932196789724757b426a8e0d17ac1c', 'bytes': 628}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w17\\run-00.json': {'sha256': '3deae02831ce1e4831f9e39156795ff7b56b04624e5592dbeba6427f8733e36d', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r1-w17\\transcript-00.ndjson': {'bytes': 87717242, 'sha256': '371565dd40299e7755aaafefeebb4481bfdcdcb379b7d8d892099bbb4607ebbc', 'frames': 2146}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w07\\summary.json': {'sha256': 'bfc44641c01aa37ce715d33cdfb9ed640c34e8fe044b233078cec0da679f5f71', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w07\\run-00.json': {'sha256': 'd699f52407e066dc2b6c6db0044880a5a5e0c270b967e42f17c84d80f139f155', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w07\\transcript-00.ndjson': {'bytes': 68643866, 'sha256': 'd4a0e9f78eb55795044365a055a4313f8253cea3da687ad122a45172644247aa', 'frames': 1621}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w08\\summary.json': {'sha256': 'be02652f670deb02817d8306d90f4297cafb403c121500df9717d9d1e4ae0e14', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w08\\run-00.json': {'sha256': '8ce778d6ffebb44d85dc9a81378252fcde219d63cfdf097ba6d0e91526ef9f9a', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w08\\transcript-00.ndjson': {'bytes': 71084411, 'sha256': '69740b0e3b4f843aee29afc4378886f76dc571e4ae0a5997c422861033e13313', 'frames': 1807}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w17\\summary.json': {'sha256': '60858c854722ce91239509bb07a73a91bb83b65f4deb60b5e3c5a8c9b620a78a', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w17\\run-00.json': {'sha256': 'c9a821af8c192be0d18a6f4564e81c13d5254ff88902f97e0d7eb49334259dbe', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r2-w17\\transcript-00.ndjson': {'bytes': 80364060, 'sha256': '8875eb938fb55749af8c863fba30555216360fe65208f1f5028aefd40d39889f', 'frames': 2050}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w07\\summary.json': {'sha256': 'c72b2340b0ff06e1555a467eaa767bead58d5a88c310c40fa59604c88a1fee4d', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w07\\run-00.json': {'sha256': '7239b3ca94a3282f78b76fa8eab8954091390c53aee3724d7979c11b99b01a74', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w07\\transcript-00.ndjson': {'bytes': 73462949, 'sha256': '3463f78617acd36c816719754961b1cd14b3ca7d342e8d7e9dd672f6b10565c2', 'frames': 1777}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w08\\summary.json': {'sha256': '140ad7d86e3060c59b006c0676a1fe4e811708818df298a9eb88c7822862cf5a', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w08\\run-00.json': {'sha256': '8eb859994f54508c88190f94106061a7ee5c3d66b5267b22cd9071ab02d6940b', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w08\\transcript-00.ndjson': {'bytes': 74389419, 'sha256': '49e3ed73020088badcd2b853533dae4b94d0e9ba1487c07de6ef197621e1d85e', 'frames': 1804}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w17\\summary.json': {'sha256': '4b6f79b967e6d930633511f36c788860290defbd2389ef3b93271ecbbfbd9d9d', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w17\\run-00.json': {'sha256': '3f6aeac3027d08f803ea97146408211db027e5185f3569e8aa25614a0e4fdb9a', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181116-s10-r4-w17\\transcript-00.ndjson': {'bytes': 74111580, 'sha256': '8c1c8300835ec945c0dc5bc15fe1edeaac1b0f2f56d1357c41db37ff4aac5f83', 'frames': 1801}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r1-w08\\summary.json': {'sha256': '31a637264d563c570ae85a8da9bbf0e62eb734d0aa9dbde405fc9f121b57621b', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r1-w08\\run-00.json': {'sha256': '8bd2c7052d44d7941e33f3ae9f0c9cb967c62b9a503c79b8ce3cde3a62471fc9', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r1-w08\\transcript-00.ndjson': {'bytes': 65079403, 'sha256': '2171ee74d4827ade567fc9552ff053f71c5c6a9848a4f4854798c59e3c87093d', 'frames': 1630}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r1-w17\\summary.json': {'sha256': '38690c05a8f894ff85648d004edfee60fa0c1df1f931cfc6c2f0695fd3301218', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r1-w17\\run-00.json': {'sha256': 'd7e8c119edb62b49dfe283aa14ac6fbc91520f2f7702c21ddff3ce71534272ff', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r1-w17\\transcript-00.ndjson': {'bytes': 67621353, 'sha256': '070def1f05f35a4570e7529af92ba84fda51b6f4050577d9da8134c55cb20630', 'frames': 1651}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r2-w08\\summary.json': {'sha256': '7c7739a1733f37b6e4a42dfa30f1a0d2c321458bae64df77ceb957be4c2f1aa6', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r2-w08\\run-00.json': {'sha256': '93e637f27a82f7429ea77deff040ed6456c6ffc28611fe7d9e0489f750164419', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r2-w08\\transcript-00.ndjson': {'bytes': 79079191, 'sha256': '196763b6299f328c46b818e28382e59ad23b0a1bed5eb6e25b2df80d256eb3a3', 'frames': 1888}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r2-w17\\summary.json': {'sha256': '81ed64e89860c5230bde4bedb60124007d3266c85a7f77b0e2ac2c2f6e5b3fb8', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r2-w17\\run-00.json': {'sha256': '146a40c403ff4b0fda40f311b2ba54cbd0335dbaf1a15f6fe0bbb408236017c8', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r2-w17\\transcript-00.ndjson': {'bytes': 73677174, 'sha256': '821e1e3a6a5faf48c714ebf8afcb56e0d0e9cde1928af49bdc9b75bd1dd8bd33', 'frames': 1771}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w07\\summary.json': {'sha256': 'be1cf6912a6d1b0b37a1f14c650d214be06de5dbfb431425710a527b022dc335', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w07\\run-00.json': {'sha256': 'ccb2ed77f908af4cb83617eb02305159e41dd3ddd521433c148d618ac173e2b7', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w07\\transcript-00.ndjson': {'bytes': 75744915, 'sha256': 'ed43657046f62285f154f1dcf17e396f829df17b5215ec17280ee8a5ede0695d', 'frames': 1750}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w08\\summary.json': {'sha256': 'adcc5c1bfecee70f642dcab7dae0bf18741711e247ea492f3dc95cdb86fb2806', 'bytes': 626}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w08\\run-00.json': {'sha256': 'd604e97d6bc7455ba766ce96e3a05a156be385a783a09a187ec0194cc50cf2c6', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w08\\transcript-00.ndjson': {'bytes': 60435645, 'sha256': 'c61640b4b2d5bf36a34ab9310debb08c1c0ef1ada433d8220d77eed45994406a', 'frames': 1441}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w17\\summary.json': {'sha256': '821cca5099945c6ba3ec9c04e00733e8f2210aecc227b59625c558c4ec248f75', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w17\\run-00.json': {'sha256': '426203094c63c9f1e4802564bffc81deafef427f84194be2b5f584225724f5cb', 'bytes': 5375}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181117-s10-r3-w17\\transcript-00.ndjson': {'bytes': 80951816, 'sha256': 'e81f7c736b412b822bb91725123b5be3c871757fbe9c485c59eaaa88dd5c8195', 'frames': 1966}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r2-w08\\summary.json': {'sha256': '8743a0b30104be424344191b6c6af5d51563b6d90d6281ae01c156af5656637b', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r2-w08\\run-00.json': {'sha256': 'cd128329b2ad730e69b55b81d87492a4ed6dcd53253c1018a2dbf20a4984d830', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r2-w08\\transcript-00.ndjson': {'bytes': 68389448, 'sha256': '97484dd511aaa4c78d467ace01e90c191bc21bb6bd344c4c0d9e6341dcdfa620', 'frames': 1636}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r2-w17\\summary.json': {'sha256': '1fbe081d6c21f33f8b88a42dc28f7286636f1c0a80f89d1862cd2066107b47ba', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r2-w17\\run-00.json': {'sha256': 'f9cdb7c2c514f4ac4aafef18154ffe7097c502ace5247029415aba9113bbb0d0', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r2-w17\\transcript-00.ndjson': {'bytes': 79233103, 'sha256': 'bf32520f9cf50691f3139fa5ef298b28ac711a7acf21c79315300b002c83642a', 'frames': 1975}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r3-w08\\summary.json': {'sha256': 'd63dbc61aafa111873c4228c45dd33fcdfefa6d9674ab0b45877d6120aedb631', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r3-w08\\run-00.json': {'sha256': '9f7cb47c98b5f2c7afa0653fb85696540c110b318d46ad984f707f792aa1e091', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r3-w08\\transcript-00.ndjson': {'bytes': 61976817, 'sha256': '95fc2ce6bdf24ff99239b45e59113fb2c850100fbf4aee6b2a6346441cd767a9', 'frames': 1438}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r3-w17\\summary.json': {'sha256': '854791895b53b37d92da379f0561292d4fcdc2242387ba18a28315db237fe761', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r3-w17\\run-00.json': {'sha256': '89be696e91c571472a7bf786b7f8360bfff77914ea3f3e3cf64a7bb46afa7445', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r3-w17\\transcript-00.ndjson': {'bytes': 72733075, 'sha256': '3489d598b4ea44b0a89edbcec634972dfa52da899b8040dfdf3b8ddd8a2bdd9a', 'frames': 1807}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r4-w08\\summary.json': {'sha256': '577fa8770893d7044c2289ea102e2f39ffb767033607422ef0a1c61c8a3c7ed7', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r4-w08\\run-00.json': {'sha256': 'a8e25ce2284feec1c22b0ff19936ece8767583d5d2b982ecf2936eea9d8991d1', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r4-w08\\transcript-00.ndjson': {'bytes': 70164704, 'sha256': 'd17f086b7edef88fb82c2c5145bf3c14016ec5c9a6ffb0dc0da8ff19d1b4b9f0', 'frames': 1654}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r4-w17\\summary.json': {'sha256': 'baa5e524931f8984e9804e1632084444898e6079957e07c2dfeb9746d5bc794a', 'bytes': 627}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r4-w17\\run-00.json': {'sha256': 'f292b618c05e69e9a43dabd66c48517c18fe4421b9863353875bd6c35596fcd3', 'bytes': 5376}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181118-s10-r4-w17\\transcript-00.ndjson': {'bytes': 80029265, 'sha256': '5582b726c4ab579d80ba930e38581d5b928c958720a5e82843eb3cd24412a978', 'frames': 1975}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w07\\summary.json': {'sha256': '23c5a59e4748f808398ffcf1a9e7723857d95210b78eb16dc1419f60e1e23230', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w07\\run-00.json': {'sha256': 'e5795268f7023f0d750d92811e47b876979bda8404d1c5eb231adbcf72773631', 'bytes': 5372}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w07\\transcript-00.ndjson': {'bytes': 56164383, 'sha256': '9d50fe9cd3f7628a77faf67f75a7d05a8293dbd07314907e5637543321873924', 'frames': 1333}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w08\\summary.json': {'sha256': '5d43f23109b76daeb7d848de3c4b8ab37c7324db3c4b99468ffeabef5d02f7cd', 'bytes': 625}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w08\\run-00.json': {'sha256': 'a9ac63433558d4f6249313bb31fb3acb8c3117b0fdd79e88e1e162ef2365e0a7', 'bytes': 5372}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w08\\transcript-00.ndjson': {'bytes': 76001322, 'sha256': 'b5f383eb08e8a1f7485d0ce64879490c76c2d7b7521688f021cd14b829af4cc5', 'frames': 1921}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w17\\summary.json': {'sha256': '5dbf6563f75f1862505926097ed8f5a81dad98a93a7a3f7851ac41771d4a533b', 'bytes': 625}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w17\\run-00.json': {'sha256': '74d90fd6b19f5c9264f15a8441471157caae588cdd3eda71a50fdc4c7bbe1180', 'bytes': 5372}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w17\\transcript-00.ndjson': {'bytes': 89575413, 'sha256': 'dbdf992d7ab29923e0aca94dc6df4fae071dc10bceaf8f88f2df686b1b77dab0', 'frames': 2305}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w07\\summary.json': {'sha256': 'ebf6345179edfa68198985317f5bc7864c25d7e074b9522b625d004189bf4022', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w07\\run-00.json': {'sha256': 'd3cb3c1aead97dc0986e93341c2e5d36a14bf3dac6c4ff87eae1e627ce490973', 'bytes': 5372}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w07\\transcript-00.ndjson': {'bytes': 58895948, 'sha256': 'f40169e84e257270217ce480512095d98ff4baf0a4fbba02253964a00105de24', 'frames': 1444}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w08\\summary.json': {'sha256': '86cd4506b2e352ccda5bde254b3d743eadb76e8797ff8a978ec878ed7235b72a', 'bytes': 625}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w08\\run-00.json': {'sha256': 'dc7b3d9067560c3c6dab4417f9ff10b67c5a1f12db226aef79ad304a390e6ba5', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w08\\transcript-00.ndjson': {'bytes': 86857309, 'sha256': '7834e9399b22e4443fbbc960b105d030710e73824aa31971167e0d9295c46abc', 'frames': 2200}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w17\\summary.json': {'sha256': 'efe6666848100ce25291aa9b6821e43b95b6e48c2ae28c20e5e9693a8f8fa527', 'bytes': 625}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w17\\run-00.json': {'sha256': 'af6223aad8e4024f4d4226c49c9b73f1d20ac80b83407a7f92cf48e5495b870e', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r4-w17\\transcript-00.ndjson': {'bytes': 89049305, 'sha256': '9fff1b16132d7f7ed98cc5c73a05067ce012ef993bc95de1c6ab51e426b89b37', 'frames': 2275}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r1-w07\\summary.json': {'sha256': '7f88aba8181961461533fc330699c671692dd786f6a34ee7089fa07cb7ab171b', 'bytes': 623}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r1-w07\\run-00.json': {'sha256': '586ba998130cea7ef365bc2d17a7f46df92287b00c3b241c3eb8548cf5dcde6f', 'bytes': 5370}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r1-w07\\transcript-00.ndjson': {'bytes': 51685850, 'sha256': '3b478654d9fab990be0762fed4a486dd0cea33df6980426c5e8aaa606a491d1a', 'frames': 1270}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r1-w08\\summary.json': {'sha256': '579f0cec833344f4bf4864adbdcb41af85ec7f84c9445ea8fef625173e39b604', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r1-w08\\run-00.json': {'sha256': '65c96730416948ba785d6f538d89a1eaf677f6d03e3d15e3dc2f2c005d3dced4', 'bytes': 5370}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r1-w08\\transcript-00.ndjson': {'bytes': 77155098, 'sha256': 'e226af22c7082c218ebd8dfe536b0847b35f496f52e298fa9886388b39b2e9cb', 'frames': 1870}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r2-w07\\summary.json': {'sha256': 'bcc59a9ce3f8a70ccf6d49aefc28846b36081a5ce26e35f4be529b0b51a83f2f', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r2-w07\\run-00.json': {'sha256': '0b7c3ccd6d801babe914934e7b3d2f297ff65f261719c918d2cb3f5ca4bcba53', 'bytes': 5371}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r2-w07\\transcript-00.ndjson': {'bytes': 66586883, 'sha256': 'b04838e43776eb29851cadfcc52298537f760bae961231b7664b0d3577c6672d', 'frames': 1504}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r2-w08\\summary.json': {'sha256': '555c0f782589973db5e7d356f592c15eb7ddb8f65ee518318342aabaa813285a', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r2-w08\\run-00.json': {'sha256': '2a66bb3de99d4e15933074cbd0db231f771951c9e1b44667b3152cbb44c2892c', 'bytes': 5372}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r2-w08\\transcript-00.ndjson': {'bytes': 78349514, 'sha256': 'ee0c2d3d0615bea908c975ab37d6086d889601bac5c437a862b2c5d1a2dc8f19', 'frames': 2089}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r4-w07\\summary.json': {'sha256': '12e81e2fabf4ff22e0b49a7acadf6d32f8e7232b208e7983114ed13760da0d5e', 'bytes': 623}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r4-w07\\run-00.json': {'sha256': '7881f6926467f4172a731936dd8ed3b37003cd166a75ae2d806014c8a7d9f49c', 'bytes': 5370}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r4-w07\\transcript-00.ndjson': {'bytes': 54508369, 'sha256': 'c9adb0e9e070b29f74ce3763d9540c838ec5c181b4d8315d6b341570820525fe', 'frames': 1291}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r4-w08\\summary.json': {'sha256': '89e0ef9d25a4fcc286bcfd798d00671e11672859e3ed969628adf5f9cb8c08a7', 'bytes': 625}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r4-w08\\run-00.json': {'sha256': '9642c4be3981fcb9000c194c36790ad3e967c4a1ff06f821fab7c4aa8c310572', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181115-s10-r4-w08\\transcript-00.ndjson': {'bytes': 85301780, 'sha256': 'a3e3125db818b4063b5f827395cd7d3cae56ff90ab2b3961f730f4e998c74c1a', 'frames': 2041}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w07\\summary.json': {'sha256': '760e128b3dbbf4ed389ca938afb350be044515348d0170aa063a3f83cf9c7392', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w07\\run-00.json': {'sha256': 'c8080739ed72d14b6937980d7876d141c058c368695f24d90e105306d8177b37', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w07\\transcript-00.ndjson': {'bytes': 72787044, 'sha256': 'ac29a6f9ccbeb874c398c4ed5592e65e1b50d23a6f3c876afdbd230b61fc96c1', 'frames': 1756}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w08\\summary.json': {'sha256': 'd7562d608095a1cdd7b14ecb078d83385a5a1472c84bec76844bc4a4a4927f38', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w08\\run-00.json': {'sha256': '6789e39781535f749d711c2e6b89843e6c5283d6b59f60460b612c7d31232ee7', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w08\\transcript-00.ndjson': {'bytes': 81630689, 'sha256': 'c82d27969f6e8b8be34606a4496f2599772a0016e9eddf0f1f0bc6a261921740', 'frames': 2020}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w17\\summary.json': {'sha256': '07c252df78e4d77511242e28c067c0e66128f0af95c5970199bcf27b84bca175', 'bytes': 625}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w17\\run-00.json': {'sha256': '381c4ab769d3dc01ac2b364c3290aa9acd84f8f56c9993f094d52d22c205a7eb', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r1-w17\\transcript-00.ndjson': {'bytes': 95767525, 'sha256': '6ec5242cb60356759d1da6c38d295cebc138397fe3c254e6126a56f56780f2e1', 'frames': 2284}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w07\\summary.json': {'sha256': 'e8f3d18912e7b02fe9b082457e6afb89d6566c195ee03764b3e31cdeda6c51f0', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w07\\run-00.json': {'sha256': '621d313926899b3522ac772b3a25fff1d1cdff32068275951e6f9243bcfdc50b', 'bytes': 5371}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w07\\transcript-00.ndjson': {'bytes': 70951891, 'sha256': '9f3eebc373ffbe6979b016cfd4c5152c61d5ccd822a95812ed70738b9fa6e73c', 'frames': 1684}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w08\\summary.json': {'sha256': 'a8dfcadcb8faef3add440203c1d2363829f72c739e2b219090b2da6f8ab19fc5', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w08\\run-00.json': {'sha256': '096867affda392a02a1f901ddd5027310a89eaeabb1c8d0c58c1c29d9260f15f', 'bytes': 5371}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w08\\transcript-00.ndjson': {'bytes': 76632661, 'sha256': '434c5598f6b7b368060d0545a408bccb8c31b19fe5972110e5f38c7dc0285439', 'frames': 1903}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w17\\summary.json': {'sha256': 'eaf770375027b91d5d2fb354d4a8225580445f13940a7f5ff2895b0c6e578bbe', 'bytes': 625}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w17\\run-00.json': {'sha256': '5c2a1e68e24552e236419ca577f1c01360488fbda16040c02e1fe133e62ebd7a', 'bytes': 5374}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r2-w17\\transcript-00.ndjson': {'bytes': 90400472, 'sha256': '21fa2e009ac824f6eaec865a526cd77695b3a5a1c22f8f06681951e596be317c', 'frames': 2215}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w07\\summary.json': {'sha256': '1f72220d73b144acb56de2a6af20c34a0f83cd3fe698a929f8236033504a84c9', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w07\\run-00.json': {'sha256': 'd04c7cc1d0bae1f4e9e7081a71fb63b8424c6cdfe840880c0bb7be3811888b67', 'bytes': 5372}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w07\\transcript-00.ndjson': {'bytes': 73451629, 'sha256': 'bb8d914fd6c7d11591cdb341ea94918b5eb788ca151f4c8d8390a2b69d26b6fc', 'frames': 1777}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w08\\summary.json': {'sha256': 'bb2baa6d8b03cf861df3181ad5fc72fe1e88463e11b05a5568993d11b4969b8e', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w08\\run-00.json': {'sha256': '38a01121b96d21ab729d51adb7128b4164e789e81d978b7d19a81140b489ec14', 'bytes': 5372}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w08\\transcript-00.ndjson': {'bytes': 79065532, 'sha256': 'fa282587c3592f074ab3586de280d95b51153fa98ef7fb558972964a15783596', 'frames': 1900}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w17\\summary.json': {'sha256': 'b81f139e18ae28fa423123934ac8f8229b6a072e69cbddbc54e7a27af676de63', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w17\\run-00.json': {'sha256': '41fca432046e492f61874a41779d5b49748608359c67cf8d11a63ecb985d0765', 'bytes': 5371}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181116-s10-r4-w17\\transcript-00.ndjson': {'bytes': 76761375, 'sha256': '9ea21b938e4bf2883222e38b63ce9c88c39c14cdc66289f7c4d742a6d74f5a33', 'frames': 1726}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r1-w08\\summary.json': {'sha256': '6bc85149af97b8f88770311d9f61e92203777e424f7ad140996682995f851204', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r1-w08\\run-00.json': {'sha256': 'a7c4499d1bf67b75dc770541e2c8e37f687f77ae0ca67e15c4b2039c1b9c0a14', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r1-w08\\transcript-00.ndjson': {'bytes': 68769871, 'sha256': '53d414bdc20810e5da9630fc271c6fb3c194c9e6be4e0fa248166bf0df477035', 'frames': 1654}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r1-w17\\summary.json': {'sha256': 'e6b3b61c6de216ca7c2b9c23899e6bb10145b54e61e22a63d6dbebfd51673f45', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r1-w17\\run-00.json': {'sha256': 'f4777fa261297df2a6a3c7a8404466bb43be61da9bdbff50ec3ac016d3ce77ed', 'bytes': 5372}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r1-w17\\transcript-00.ndjson': {'bytes': 73112216, 'sha256': '0ad922af4c415c365a87da67da43d65fda48791e08ac0ee6260fff1f48118895', 'frames': 1780}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r2-w08\\summary.json': {'sha256': '317a1a9f153e7c71a38bcd9df0f37f9b62af4a178dc1600ce7bd76b4ba41353b', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r2-w08\\run-00.json': {'sha256': 'c5456fb285d29a9289d8ce675d19b1a3cf9967f4246fe532a1746e95c606dbd5', 'bytes': 5371}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r2-w08\\transcript-00.ndjson': {'bytes': 78312233, 'sha256': 'd46f15c9d1cdf503a352454e212489366ffc632219700038d2ce04bd547b8342', 'frames': 1858}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r2-w17\\summary.json': {'sha256': 'cdef1086f297a2ce9b0d33880d20534942d7f2ed0c544d0540e30ff5ca3000ec', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r2-w17\\run-00.json': {'sha256': 'ad155e0e7205bae809bd9f9b7715338b923982e79e4fdf23897ae3c8cdf88e1e', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r2-w17\\transcript-00.ndjson': {'bytes': 82576822, 'sha256': '479e02590ac19b850e8617f4dc29e5a3bfe313758ad7fa9cfce7720d43a4ab03', 'frames': 1960}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w07\\summary.json': {'sha256': 'b5a36fd485cf9757e6fc48eddaeff76f5e6c57f675872d51116caeafb5f7c9bd', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w07\\run-00.json': {'sha256': 'f9292848a2910118ce32a43c802817302cf2f0201d35e51021547ac78b3e3b9b', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w07\\transcript-00.ndjson': {'bytes': 84390451, 'sha256': '85997f8c83dc25d6c0db7e7cb08216b4cd6f73b486206dd05a48281283936bdd', 'frames': 1837}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w08\\summary.json': {'sha256': 'e2dc867bb47b3ab94a7904c988b0a657139c3266973b10d0b90e6ba260590303', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w08\\run-00.json': {'sha256': '56b617b7d4c985ece41176b1aab1634754cc08b9524058cb070152d25038bdc1', 'bytes': 5372}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w08\\transcript-00.ndjson': {'bytes': 63894788, 'sha256': 'c89cc1b9eed8789882297d5ae94fa46b2eb6b526fd403f4dd653bd0707667bac', 'frames': 1504}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w17\\summary.json': {'sha256': 'e2f772be089ef6768dae3557710d5c552af59c9796ba54271852a8cf4b9ab615', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w17\\run-00.json': {'sha256': 'f4f7250cb08c36a824f92fe0da6e4a8634963ccd3fb0e4caae51909993ac7493', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181117-s10-r3-w17\\transcript-00.ndjson': {'bytes': 84654906, 'sha256': '5d7fcf3cb93dc1689a4b33fb64e69ef271f5b35a4b611e922ef558ad7ff3cce9', 'frames': 2041}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r2-w08\\summary.json': {'sha256': '50f9e5b435a0673fb5c43bf7a656aae4a4dedd999039d3d19bf3243aaf691f00', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r2-w08\\run-00.json': {'sha256': 'a082ad5d38762fa1513595a7b028fd3bdd4979b5d9753b88f1ea9c66bccba051', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r2-w08\\transcript-00.ndjson': {'bytes': 75537813, 'sha256': '83d3429883802b2bb745d90f2bfb1f28b65026d60b801fdbf3719fd8aeac181e', 'frames': 1732}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r2-w17\\summary.json': {'sha256': '70464315ea918751867b2e9ad31eb6e4cf36cbf92b8bfff2f3df7e1af5e14f4d', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r2-w17\\run-00.json': {'sha256': '7aed27e0f648eb45315717e3752a1f1116dc86c14507596e32bf521209d6f6ff', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r2-w17\\transcript-00.ndjson': {'bytes': 83848271, 'sha256': '1f3f3c7088e9dc69930d97904e254c3977636a74ea8010d9c145a9049bbd949c', 'frames': 2071}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r3-w08\\summary.json': {'sha256': '141db6e1ddc545a79be017e65ac528d0bc1e48a7a91916b4dcdd3f68b069447b', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r3-w08\\run-00.json': {'sha256': '76d25d746c23e5a53534024f508a7d34a02c67298ad00812ec6962c166b2c98f', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r3-w08\\transcript-00.ndjson': {'bytes': 64816357, 'sha256': '417281ebb64081114dba10186bc7577b50d481cd641456331d720a0e10ed6f09', 'frames': 1510}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r3-w17\\summary.json': {'sha256': '9fd9c4f3825f776fd3bf6377a4abfaf50e4948d18620d8e9a6e855873c5e2c33', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r3-w17\\run-00.json': {'sha256': '736326722bf45553804fc71a3fa82e04f838587bb421660f534dcf56c9fa0ea6', 'bytes': 5372}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r3-w17\\transcript-00.ndjson': {'bytes': 78932458, 'sha256': '28e21f9cc62652f3f45bce563caa7c62b7e1ad1f6685f118df4d1da8f6a652cb', 'frames': 1876}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r4-w08\\summary.json': {'sha256': '5bc6e7fc975c9962bcfc27f7d563064ce682e94d7490ed6492df7cac49986dd7', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r4-w08\\run-00.json': {'sha256': '1fb46b742d43ec91fec496a4bb617d7ae9aa7e05f62db94d9002bb97b2f87dad', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r4-w08\\transcript-00.ndjson': {'bytes': 77916991, 'sha256': 'aa3e2e820b494f5c33623b9b61d772146df3fa0a4bd9b22308ec81e086c86c2d', 'frames': 1795}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r4-w17\\summary.json': {'sha256': '2984bfccea7fe160496253d2ca1ae58e5e9cee0eb58a0f94b5983ed8e793e26a', 'bytes': 624}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r4-w17\\run-00.json': {'sha256': '33c04bdaabc93ebf15bae39d060851d229856dc3e2769e4ef6dd34943f07a6bc', 'bytes': 5373}, 'C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181118-s10-r4-w17\\transcript-00.ndjson': {'bytes': 85573890, 'sha256': '5785baad86b4ae0d768f30a47afd75ca5f473cd9c294915f5945e4ddfa9db8fc', 'frames': 2092}}
+RUN SCHEMA ['arm', 'cell', 'requests', 'served', 'served_ids', 'frames', 'transcript_sha256', 'checkpoint_frame_sha256', 'manifest', 'acknowledged_decisions', 'non_normal_decisions', 'decision_statuses', 'incident_breach_entries', 'ledger', 'max_absolute_dispatch_ms', 'overshoots', 'frontier', 'prune_classes', 'cumulative_only_records', 'cumulative_only_decisions', 'riders']
+RIDERS SCHEMA {'request': 'rq-04fca5e038a7b53004d7e3e25cbb95b40b7fc951ec3b59399343644227deb9e5', 't0': 995000, 'P0': 1690366, 'arrival': 1690366, 'forecast_quote': 1690366.0, 'absolute_dispatch_ms': 0, 'nonzero_changes': 0}
+
+SOURCE E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\independent\iv_analyze.py
+1: """Independent verifier: analysis of cached per-run raw metrics (own code)."""
+2: import json, os, math, random, collections, statistics
+3: CACHE = r'E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\independent\cache'
+4: MAN = r'E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\split-t38-v1.json'
+5: OUTF = r'E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\independent\iv_analyze.out.txt'
+6: GAMMAF = r'E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\GAMMA-t38-v1.json'
+7: ARMS = ['U', 'C-30', 'Mplus-30', 'Mplus-60', 'V-30']
+8: INF = float('inf')
+9: m = json.load(open(MAN, encoding='utf-8'))
+10: calib, test = m['calibration'], m['test']
+11: out = []
+12: 
+13: 
+14: def P(*a):
+15:     s = ' '.join(str(x) for x in a)
+16:     print(s)
+17:     out.append(s)
+18: 
+19: 
+20: def load(arm, cell):
+21:     for cand in (f'{arm}-{cell}', f'{arm}-{cell}-rerun1'):
+22:         p = os.path.join(CACHE, cand + '.json')
+23:         if os.path.exists(p):
+24:             return json.load(open(p))
+25:     raise SystemExit('missing ' + arm + cell)
+26: 
+27: 
+28: R = {}
+29: for c in calib:
+30:     R[('C-30', c)] = load('C-30', c)
+31: for c in test:
+32:     for a in ARMS:
+33:         R[(a, c)] = load(a, c)
+34: P('status of all runs:', dict(collections.Counter(r['status'] for r in R.values())))
+35: P('folders used for reruns:', [r['job'] for r in R.values() if r['job'].endswith('rerun1')])
+36: 
+37: # cross-check 1 (delta fields vs |x|,|c|,|z|), sanity for sign convention and reconstruction
+38: bad = 0
+39: nrev = 0
+40: for r in R.values():
+41:     for q in r['riders'].values():
+42:         for v in q['rev']:
+43:             nrev += 1
+44:             if (abs(v['e_d'] - v['v_d']) != v['dl_x'] or abs(v['p_d'] - v['e_d']) != v['dl_c']
+45:                     or abs(v['p_d'] - v['v_d']) != v['dl_z']):
+46:                 bad += 1
+47: P('cross-check1 (drop deltas): revisions', nrev, 'mismatches', bad)
+48: 
+49: 
+50: def XCV(rider):
+51:     X = sum(abs(v['e_d'] - v['v_d']) for v in rider['rev'])
+52:     C = sum(abs(v['p_d'] - v['e_d']) for v in rider['rev'])
+53:     V = sum(abs(v['p_d'] - v['v_d']) for v in rider['rev'])
+54:     return X, C, V
+55: 
+56: 
+57: def score(r):
+58:     if not r['riders']:
+59:         return 0
+60:     s = 0
+61:     for rid, q in r['riders'].items():
+62:         if rid not in r['alight']:
+63:             return INF
+64:         s = max(s, XCV(q)[0])
+65:     return s
+66: 
+67: 
+68: # 1 calibration
+69: P('\n== 1. calibration ==')
+70: cs = {c: score(R[('C-30', c)]) for c in calib}
+71: for c in calib:
+72:     r = R[('C-30', c)]
+73:     P(f'  {c}: S={cs[c]} ms  promised={len(r["riders"])} alighted-of-promised={sum(1 for x in r["riders"] if x in r["alight"])} served={r["served"]}')
+74: n = len(calib)
+75: k = -(-((n + 1) * 9) // 10)   # ceil((n+1)(1-alpha)), alpha = 1/10, integer arithmetic
+76: srt = sorted(cs.values())
+77: gamma = srt[k - 1] if k <= n else INF
+78: P('n =', n, 'k =', k, 'gamma(ms) =', gamma)
+79: g = json.load(open(GAMMAF, encoding='utf-8'))
+80: P('GAMMA file (read after computing):', json.dumps(g)[:700])
+81: 
+82: # 2 test scores
+83: P('\n== 2. test scores ==')
+84: ts = {c: score(R[('C-30', c)]) for c in test}
+85: viol = []
+86: for c in test:
+87:     cov = ts[c] <= gamma
+88:     if not cov:
+89:         viol.append(c)
+90:     P(f'  {c}: S={ts[c]} ms covered={cov}')
+91: P('covered', len(test) - len(viol), 'violating', len(viol), [(c, ts[c]) for c in viol])
+92: 
+93: # 7
+94: P('\n== 7. covered C-30 episodes: max_r V_r <= 30000+gamma ==')
+95: worst = 0
+96: fails = []
+97: worstC = 0
+98: for c in test:
+99:     if ts[c] <= gamma:
+100:         r = R[('C-30', c)]
+101:         mv = max((XCV(q)[2] for q in r['riders'].values()), default=0)
+102:         mc = max((XCV(q)[1] for q in r['riders'].values()), default=0)
+103:         worst = max(worst, mv)
+104:         worstC = max(worstC, mc)
+105:         if mv > 30000 + gamma:
+106:             fails.append((c, mv))
+107: P('worst max V among covered =', worst, 'bound =', 30000 + gamma, 'failures:', fails, '| worst max C among covered =', worstC)
+108: allV = max(max((XCV(q)[2] for q in R[('C-30', c)]['riders'].values()), default=0) for c in test)
+109: P('max V over ALL 34 C-30 test episodes =', allV)
+110: 
+111: # 3 served
+112: P('\n== 3. served ==')
+113: served = {a: [R[(a, c)]['served'] for c in test] for a in ARMS}
+114: P('cell | ' + ' | '.join(ARMS))
+115: for i, c in enumerate(test):
+116:     P(f'  {c} | ' + ' | '.join(str(served[a][i]) for a in ARMS))
+117: P('totals:', {a: sum(served[a]) for a in ARMS})
+118: D_M = [served['C-30'][i] - served['Mplus-30'][i] for i in range(34)]
+119: D_V = [served['C-30'][i] - served['V-30'][i] for i in range(34)]
+120: F = [served['U'][i] - served['C-30'][i] for i in range(34)]
+121: P('D_M per cell', D_M)
+122: P('D_V per cell', D_V)
+123: P('F per cell', F)
+124: for nm, v in (('D_M', D_M), ('D_V', D_V), ('F', F)):
+125:     P(f'{nm}: mean {sum(v) / 34:+.4f}  #|diff|>2: {sum(1 for x in v if abs(x) > 2)}  min {min(v)} max {max(v)}')
+126: 
+127: 
+128: def e2(r):
+129:     ps = r['riders']
+130:     if not ps:
+131:         return 0.0
+132:     return sum(1 for q in ps.values() if XCV(q)[2] > 60000) / len(ps)
+133: 
+134: 
+135: dE2_V = [e2(R[('C-30', c)]) - e2(R[('V-30', c)]) for c in test]
+136: dE2_M = [e2(R[('C-30', c)]) - e2(R[('Mplus-30', c)]) for c in test]
+137: P('runs with no promised riders:', [(a, c) for (a, c), r in R.items() if not r['riders']])
+138: 
+139: # 4 bootstrap
+140: P('\n== 4. bootstrap ==')
+141: stats = {'D_M': D_M, 'D_V': D_V, 'F': F, 'dE2_V': dE2_V, 'dE2_M': dE2_M}
+142: rng = random.Random(20261002)
+143: B = 10000
+144: means = {k_: [] for k_ in stats}
+145: for _ in range(B):
+146:     idxs = []
+147:     for _j in range(34):
+148:         idxs.append(rng.randrange(34))
+149:     for k_, v in stats.items():
+150:         means[k_].append(math.fsum(v[i] for i in idxs) / 34)
+151: for k_, v in stats.items():
+152:     s = sorted(means[k_])
+153:     P(f'{k_}: mean {sum(v) / 34:+.6f}  95% interval [{s[249]:+.6f}, {s[9750]:+.6f}]')
+154: 
+155: # 5 non-normal
+156: P('\n== 5. non-normal decisions ==')
+157: nn_c = {c: R[('C-30', c)]['nonNormalAcked'] for c in calib + test}
+158: P('C-30 runs counted:', len(nn_c), 'total non-normal (acked)', sum(nn_c.values()), 'nonzero:', {c: v for c, v in nn_c.items() if v})
+159: P('C-30 non-normal over ALL decisions (not only acked):', sum(R[('C-30', c)]['nonNormalAll'] for c in calib + test))
+160: for a in ('Mplus-30', 'V-30', 'Mplus-60', 'U', 'C-30'):
+
+SOURCE E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\evidence\checks-ch4a-v2\check_ch4a_v2.py
+1: """Read-only checks for Chapter 4 part A, version 2 (2026-10-12).
+2: 
+3: Inputs (read only, nothing is modified):
+4:   IVC   tang3/t38/independent/cache/<arm>-<cell>[-rerun1].json  (per-run extraction of the independent verifier,
+5:         iv_extract.py; fields served, alight{requestId: ms}, riders{requestId: {p0_drop, rev[...]}})
+6:   SPLIT tang3/t38/split-t38-v1.json  (the 34 test cells)
+7:   TSV   optimize/codex-debate/claude-work/r21-stage1a/stage1a-2026-10-10-riders.tsv  (second reader; U, C-30, C-120)
+8: Definitions (same as iv_analyze.py section 6 and sweep_analyze): late > T = alighted rider with
+9:   alight - p0_drop > T * 1000 ms (strict); p0 = first drop promise without forecast. Cell mean = unweighted mean over the
+10:   34 test cells of (late riders / alighted riders of the cell). timely T = served - late T, counted on 3.672 requests.
+11: Every registered value is printed next to the recomputed one with OK / FAIL.
+12: Usage: python -B -I check_ch4a_v2.py <out.txt>   (the output file is opened in mode "x")
+13: """
+14: import csv
+15: import json
+16: import os
+17: import sys
+18: 
+19: SCR = r"E:\Code\Report_INT3508\ridebound-scratchpad"
+20: CACHE = os.path.join(SCR, r"tang3\t38\independent\cache")
+21: SPLIT = os.path.join(SCR, r"tang3\t38\split-t38-v1.json")
+22: TSV = os.path.join(SCR, r"optimize\codex-debate\claude-work\r21-stage1a\stage1a-2026-10-10-riders.tsv")
+23: ARMS = ("U", "C-30", "Mplus-30", "Mplus-60", "V-30")
+24: THRESH = (30, 60, 120, 300)
+25: out = []
+26: fails = 0
+27: 
+28: 
+29: def P(*a):
+30:     out.append(" ".join(str(x) for x in a))
+31: 
+32: 
+33: def check(label, got, want):
+34:     global fails
+35:     ok = got == want
+36:     fails += (not ok)
+37:     P(f"  check {label}: got {got} want {want} -> {'OK' if ok else 'FAIL'}")
+38: 
+39: 
+40: def load(arm, cell):
+41:     for cand in (f"{arm}-{cell}", f"{arm}-{cell}-rerun1"):
+42:         p = os.path.join(CACHE, cand + ".json")
+43:         if os.path.exists(p):
+44:             with open(p, encoding="utf-8") as fh:
+45:                 return cand, json.load(fh)
+46:     raise SystemExit("missing " + arm + " " + cell)
+47: 
+48: 
+49: test = json.load(open(SPLIT, encoding="utf-8"))["test"]
+50: P("# check_ch4a_v2.py: lateness vs first promise p0 (no forecast) on the 34 test cells")
+51: P("test cells:", len(test), "| windows:", {w: sum(1 for c in test if c.endswith(w)) for w in ("w07", "w08", "w17")})
+52: 
+53: res = {}
+54: for arm in ARMS:
+55:     served = alighted = 0
+56:     late = {t: 0 for t in THRESH}
+57:     shares = {t: [] for t in THRESH}
+58:     win_shares = {t: {"w07": [], "w08": [], "w17": []} for t in THRESH}
+59:     pos = {t: 0 for t in THRESH}
+60:     folders = []
+61:     for cell in test:
+62:         name, r = load(arm, cell)
+63:         folders.append(name)
+64:         served += r["served"]
+65:         al = {rid: q for rid, q in r["riders"].items() if rid in r["alight"]}
+66:         alighted += len(al)
+67:         for t in THRESH:
+68:             n = sum(1 for rid, q in al.items() if r["alight"][rid] - q["p0_drop"] > t * 1000)
+69:             late[t] += n
+70:             sh = n / len(al) if al else 0.0
+71:             shares[t].append(sh)
+72:             win_shares[t][cell[-3:]].append(sh)
+73:             pos[t] += (n > 0)
+74:     res[arm] = dict(served=served, alighted=alighted, late=late,
+75:                     mean={t: sum(shares[t]) / len(shares[t]) for t in THRESH}, pos=pos,
+76:                     win={t: {w: (sum(v) / len(v) if v else 0.0) for w, v in win_shares[t].items()} for t in THRESH})
+77:     P(f"\n## {arm}: served {served}; alighted riders with a promise {alighted}; rerun folders "
+78:       f"{[f for f in folders if f.endswith('rerun1')]}")
+79:     for t in THRESH:
+80:         P(f"  late > {t:>3} s: pooled {late[t]}/{alighted} = {100 * late[t] / alighted:.2f}% | cell mean "
+81:           f"{100 * res[arm]['mean'][t]:.2f}% | cells >= 1: {pos[t]}/34 | cell mean by window w07/w08/w17: "
+82:           + " / ".join(f"{100 * res[arm]['win'][t][w]:.2f}%" for w in ('w07', 'w08', 'w17'))
+83:           + f" | timely = served - late = {served - late[t]} of 3672")
+84: 
+85: P("\n## cross-checks against registered values (IVC reader)")
+86: check("served U", res["U"]["served"], 2434)
+87: check("served C-30", res["C-30"]["served"], 2338)
+88: check("served Mplus-30", res["Mplus-30"]["served"], 2338)
+89: check("served Mplus-60", res["Mplus-60"]["served"], 2347)
+90: check("served V-30", res["V-30"]["served"], 2336)
+91: for arm in ARMS:
+92:     check(f"alighted == served {arm}", res[arm]["alighted"], res[arm]["served"])
+93: check("late60 U (C06)", res["U"]["late"][60], 203)
+94: check("late60 C-30 (C06)", res["C-30"]["late"][60], 76)
+95: check("late60 Mplus-30 (C06)", res["Mplus-30"]["late"][60], 74)
+96: check("late120 U (C07)", res["U"]["late"][120], 102)
+97: check("late120 C-30 (C07)", res["C-30"]["late"][120], 11)
+98: check("late120 Mplus-30 (C07)", res["Mplus-30"]["late"][120], 11)
+99: check("late300 U (C07)", res["U"]["late"][300], 18)
+100: check("late300 C-30 (C07)", res["C-30"]["late"][300], 0)
+101: check("Mplus-30 own break pooled late30 (N-21)", res["Mplus-30"]["late"][30], 289)
+102: check("Mplus-30 own break cell mean, 4 dp (N-21: 14,48%)", round(res["Mplus-30"]["mean"][30], 4), 0.1448)
+103: check("Mplus-30 own break cells >= 1 (C13)", res["Mplus-30"]["pos"][30], 28)
+104: check("Mplus-30 own break w07 cell mean, 4 dp (N-21: 36,53%)", round(res["Mplus-30"]["win"][30]["w07"], 4), 0.3653)
+105: check("Mplus-60 own break pooled late60 (IV: 79/2347)", res["Mplus-60"]["late"][60], 79)
+106: check("Mplus-60 own break cell mean, 4 dp (C13: 4,2%)", round(res["Mplus-60"]["mean"][60], 4), 0.0423)
+107: check("Mplus-60 own break cells >= 1 (C13)", res["Mplus-60"]["pos"][60], 22)
+108: 
+109: P("\n## second reader: Claude stage-1a rider TSV (completed riders, A - p0 > T ms)")
+110: tsv = {}
+111: with open(TSV, encoding="utf-8", newline="") as fh:
+112:     for row in csv.DictReader(fh, delimiter="\t"):
+113:         if row["lifecycle"] != "completed":
+114:             continue
+115:         d = tsv.setdefault(row["arm"], {"served": 0, **{t: 0 for t in THRESH}, "cells": {}})
+116:         d["served"] += 1
+117:         lat = float(row["A"]) - float(row["p0"])
+118:         cs = d["cells"].setdefault(row["cell"], [0, 0])
+119:         cs[0] += 1
+120:         if lat > 30000:
+121:             cs[1] += 1
+122:         for t in THRESH:
+123:             d[t] += lat > t * 1000
+124: for arm, d in sorted(tsv.items()):
+125:     cm = sum(n / s for s, n in d["cells"].values()) / len(d["cells"])
+126:     P(f"  {arm}: served {d['served']} cells {len(d['cells'])} | late30 {d[30]} late60 {d[60]} late120 {d[120]} "
+127:       f"late300 {d[300]} | late30 cell mean {100 * cm:.2f}% | cells with late30 >= 1 "
+128:       f"{sum(1 for s, n in d['cells'].values() if n > 0)}")
+129: check("TSV served U", tsv["U"]["served"], 2434)
+130: check("TSV served C-30", tsv["C-30"]["served"], 2338)
+131: check("TSV served C-120 (N-06)", tsv["C-120"]["served"], 2387)
+132: check("TSV late60 C-120 (N-06)", tsv["C-120"][60], 132)
+133: check("TSV late60 C-30 == IVC", tsv["C-30"][60], res["C-30"]["late"][60])
+134: check("TSV late30 C-30 == IVC", tsv["C-30"][30], res["C-30"]["late"][30])
+135: check("TSV late30 U == IVC", tsv["U"][30], res["U"]["late"][30])
+136: 
+137: P(f"\nFAIL count: {fails}")
+138: text = "\n".join(out) + "\n"
+139: with open(sys.argv[1], "x", encoding="utf-8", newline="\n") as fh:
+140:     fh.write(text)
+141: print(text)
+
+SOURCE E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\evidence\checks-ch4a-v2\ledger_share_sums.py
+1: """Read-only: numerator and denominator of the ledger dispatch share (Bang 4.9 last row), 2026-10-12.
+2: 
+3: Rule (recompute_addendum_1.py `ledger_dispatch_share_late60`; eq:so of chapter 3): among completed riders with
+4: A - p0 > 60 s (p0 = first drop promise without forecast), share = sum of the signed dispatch part q = sum c (TSV column
+5: netC, ms) divided by sum of (A - p0) (ms). Printed per arm with the registered share for comparison.
+6: Input (read only): optimize/codex-debate/claude-work/r21-stage1a/stage1a-2026-10-10-riders.tsv (U, C-30, C-120).
+7: Usage: python -B -I ledger_share_sums.py <out.txt>   (output opened in mode "x")
+8: """
+9: import csv
+10: import sys
+11: 
+12: TSV = (r"E:\Code\Report_INT3508\ridebound-scratchpad\optimize\codex-debate\claude-work\r21-stage1a"
+13:        r"\stage1a-2026-10-10-riders.tsv")
+14: REG = {"U": "73.4", "C-30": "1.2", "C-120": "38.8"}  # REG C24, N-23 (ADD1 ledger_dispatch_share_late60)
+15: acc = {}
+16: with open(TSV, encoding="utf-8", newline="") as fh:
+17:     for row in csv.DictReader(fh, delimiter="\t"):
+18:         if row["lifecycle"] != "completed":
+19:             continue
+20:         lat = float(row["A"]) - float(row["p0"])
+21:         if lat > 60000:
+22:             d = acc.setdefault(row["arm"], [0, 0.0, 0.0])
+23:             d[0] += 1
+24:             d[1] += float(row["netC"])
+25:             d[2] += lat
+26: out = ["# ledger_share_sums.py: riders late > 60 s vs p0; signed dispatch seconds / lateness seconds"]
+27: fails = 0
+28: for arm in ("U", "C-30", "C-120"):
+29:     n, q, s = acc[arm]
+30:     share = f"{100 * q / s:.1f}"
+31:     ok = share == REG[arm]
+32:     fails += (not ok)
+33:     out.append(f"{arm}: riders {n}; sum q = {q / 1000:.3f} s; sum (A - p0) = {s / 1000:.3f} s; share {share}% "
+34:                f"(registered {REG[arm]}%) -> {'OK' if ok else 'FAIL'}")
+35: out.append(f"FAIL count: {fails}")
+36: text = "\n".join(out) + "\n"
+37: with open(sys.argv[1], "x", encoding="utf-8", newline="\n") as fh:
+38:     fh.write(text)
+39: print(text)

@@ -1,0 +1,146 @@
+T38:99 Một agent viết mã riêng (`independent/iv_extract.py`, `iv_analyze.py`; không đọc script phân tích của scratchpad), tính lại từ bản ghi
+T38:100 thô của 185 lần chạy. **Mọi mục đều khớp, không mục nào lệch** (`independent/RESULT.md`, `iv_analyze.out.txt`):
+T38:101 - γ = 222.259 ms (n = 15, k = 15, từ ô 14/11 mẫu 2 khung 7h), cả 15 điểm số hiệu chỉnh bằng điểm số trong tệp γ;
+T38:102 - 2 vi phạm ở đúng hai ô đã nêu (252.492 và 226.400 ms), 32/34 ô được phủ, không có điểm số vô hạn;
+T38:103 - tổng số khách phục vụ của 5 nhánh giống hệt; trung bình và khoảng tin cậy bootstrap của D_M, D_V, F, ΔE2 giống hệt (ΔE2: +0,000857, [−0,000082; +0,002218]);
+T38:104 - 0 quyết định non-normal ở cả 49 job `C-30`; tỉ lệ phá lời hứa của chính luật, kể cả theo khung giờ, giống hệt;
+T38:105 - ở cả 32 ô được phủ, khách bị dời nhiều nhất ≤ 252.259 ms (lớn nhất 216.005 ms);
+T38:106 - chéo với đặc tả: |x|, |c|, |z| của giờ trả bằng các trường chênh lệch trong sổ cái ở cả 382.006 lần sửa giờ.
+R26:253 ## Q8. Snow-run build and recovery rule
+R26:254 
+R26:255 **Answer:** all eight snow runs used archived **runner-tier3-v2** and **no-worse-than-reference-v1** recovery. The manifest identifies the binary and binds the configuration; it does not contain a separately named recovery field.
+R26:256 
+R26:257 For each SNOW/C-30-d20181115-s10-r{1,2,3,4}-w{14,15}/transcript-00.ndjson, initializeRun at line/ordinal 3 records the same:
+R26:258 
+R26:259 | Manifest field | Value |
+R26:260 | --- | --- |
+R26:261 | binarySha256 | a631038b6ea4850ffa29be2d5e4058fba2e57b725ee568075686d7a43c6f5fac |
+R26:262 | coreCommitSha | 1ce15e92d2c1459d4254bbbcd581529197257fb2 |
+R26:263 | policyId | ridebound-hard-vector |
+R26:264 | policyVersion | tier3-exploratory-v1 |
+R26:265 | policyConfigurationHash | a2f11a3ada0773f9b30b85c56c935058e2e931f13c907f46b2ddfff8c1285f1c |
+R26:266 | Simulator /seed | FleetPy 1.0.2 /7 |
+R26:267 
+R26:268 The SHA-256 of C:/RideBoundData/research/runner-tier3-v2/RideBound.Runner.dll was recomputed and matches the binary hash above. S/tang3/w07/run_w07.py:40–43 names that directory and WP4 v2; S/optimize/run_forecast.py:73–74,94–102 passes them for the snow jobs. The eight corresponding forecast logs at S/optimize/forecast-logs, line 4, report **forecast off**.
+R26:269 
+R26:270 Recovery is established by the canonical input binding:
+R26:271 
+R26:272 | Input | Canonical SHA-256 |
+R26:273 | --- | --- |
+R26:274 | S/tang3/configs/C-30.json | f07395f5f2c967e0d89cceb4a55b23c4f896971db071d8c7876f05e20ef09884 |
+R26:275 | S/tang3/configs/wp4-tier3-v2.json | fb2813c4036d309490e12df77e37de1683b92b92a9ebdd71e16cad35d50ecd42 |
+R26:276 
+R26:277 WP4 v2 **line 7** specifies commitmentRecovery=no-worse-than-reference-v1. Independently calculating SHA256(domain + raw commitment digest + raw WP4 digest), using domain RideBound.Wp4RunnerConfigurationBinding.v1 followed by a NUL byte, reproduces **each of the eight** policyConfigurationHash values.
+R26:278 
+R26:279 Primary binding anchors: AD/ridebound_fleetpy/mapping.py:150–158; AD/ridebound_fleetpy/session.py:339,355–363,443; SRC/RideBound.Contracts/Protocol/Wp4PolicyConfigurationBinding.cs:19–44; SRC/RideBound.Runner/Program.cs:111–116; SRC/RideBound.Runner/Protocol/RunnerSession.cs:301–309 rejects mismatch.
+R26:280 
+R26:281 Recovery semantics: SRC/RideBound.Runner/Configuration/Wp4RunnerConfiguration.cs:54–58 allows a forced vehicle to select a changed route that worsens none of the reference route's gate overruns. This differs from the old no-recovery fixed-factor runner.
+R26:282 
+R26:283 **Confidence:** high: all eight manifests checked, DLL hash checked, canonical policy binding recomputed.
+B:181 \textbf{Đưa dự báo vào bộ điều phối.} Phép thử chạy luật C và luật hạn chót 30 giây trên 16 kịch bản khung 7 và 8 giờ.
+B:182 Thời gian đi của bộ điều phối được nhân thêm mức tăng dự báo trung bình của khung 15 phút hiện tại và khung kế tiếp. Có
+B:183 3 trong 32 lần chạy dừng vì FleetPy tính rằng xe sẽ tới điểm đón muộn hơn giờ đón muộn nhất chưa tới 3 giây. Luật C
+B:184 không có quyết định bị ép ở 14 lần chạy hoàn tất. Luật hạn chót bị ép ở 47,6\% lượt quyết định ở 15 lần chạy hoàn tất,
+B:185 so với 62,8\% ở các lần chạy không đưa dự báo vào trên cùng 15 kịch bản. Tỉ lệ khách bị nó phá lời hứa ở khung 7 giờ giảm từ 39,0\% xuống 11,0\% (các
+B:186 tỉ lệ đều trung bình theo kịch bản), nên các số của Bảng~\ref{bang:c4-nghiavu} phụ thuộc cách hứa. Khóa luận chỉ dùng
+B:187 dự báo ở lời hứa báo cho khách; kết luận này chỉ áp cho cách đã thử.
+ServiceQualityAllowance:66 /// <para>ADR-045 splits the physical constraints into two classes. Structural
+ServiceQualityAllowance:67 /// constraints (connectivity, precedence, capacity, frozen prefix, onboard and
+ServiceQualityAllowance:68 /// accepted preservation, plan version, overflow) are invariants of a
+ServiceQualityAllowance:69 /// well-formed plan: violating one is a defect, never a consequence of traffic,
+ServiceQualityAllowance:70 /// so they stay strict everywhere. Service-quality constraints are promises
+ServiceQualityAllowance:71 /// about time; worsening travel can breach them without anyone deciding
+ServiceQualityAllowance:72 /// anything. Enforcing those continuously deletes the safety no-op and kills the
+ServiceQualityAllowance:73 /// run, which is what blocked WP9.</para>
+ServiceQualityAllowance:74 ///
+ServiceQualityAllowance:75 /// <para>The relaxed bound is <c>max(contractual, exogenous)</c>. Because the
+ServiceQualityAllowance:76 /// exogenous value is what the unchanged active route already realizes, the
+ServiceQualityAllowance:77 /// relaxation can never admit a candidate that is worse on that dimension than
+Retainer:102         if (ranked.Length <= maximumCandidates)
+Retainer:103         {
+Retainer:104             return new CandidateRetentionResult(ranked, []);
+Retainer:105         }
+Retainer:106 
+Retainer:107         var slotCount = maximumCandidates - 1;
+Retainer:108         var retained = RetainStabilityPortfolio(
+Retainer:109             ranked,
+Retainer:110             declaredNoOp,
+Retainer:111             slotCount);
+Retainer:112 
+Retainer:113         retained.Add(declaredNoOp);
+VALID:355             var oldSchedule = _scheduleProjector.Project(
+VALID:356                 context.ReducedState.Run,
+VALID:357                 oldVehicle,
+VALID:358                 oldVehicle.Route,
+VALID:359                 context.ReducedState.TravelTimes!,
+VALID:360                 context.ReducedState.Run.SimulationTime);
+VALID:1048     private ScheduleProjectionSet ProjectCandidateSchedules(
+VALID:1049         CommitmentValidationContext context)
+VALID:1050     {
+VALID:1051         var values = new Dictionary<VehicleId, ProjectedRouteSchedule>();
+VALID:1052 
+VALID:1053         foreach (var vehicle in context.CandidateState.Run.Vehicles.Values
+VALID:1054                      .Where(
+VALID:1055                          value => context.ScopedVehicleId is null
+VALID:1056                              || value.Id == context.ScopedVehicleId)
+VALID:1057                      .OrderBy(value => value.Id.Value, StringComparer.Ordinal))
+VALID:1058         {
+VALID:1059             var projected = _scheduleProjector.Project(
+VALID:1060                 context.CandidateState.Run,
+VALID:1061                 vehicle,
+VALID:1062                 vehicle.Route,
+VALID:1063                 context.CandidateState.TravelTimes!,
+VALID:1064                 context.CandidateState.Run.SimulationTime);
+GEN:171         if (!probe.IsSuccess)
+GEN:172         {
+GEN:173             return VehicleGenerationResult.Failure(
+GEN:174                 new CandidateGenerationWitness(
+GEN:175                     CandidateGenerationFailureCodes.ActiveRouteInfeasible,
+GEN:176                     "The active route violates a structural physical constraint: " +
+GEN:177                     $"{probe.Witness!.Code}: {probe.Witness.Message}" +
+GEN:178                     FormatPhysicalDetails(probe.Witness),
+GEN:179                     vehicle.Id,
+GEN:180                     probe.Witness.RequestId,
+GEN:181                     probe.Witness.Dimension ?? probe.Witness.Code));
+GEN:182         }
+GEN:213         if (!feasibleById.TryGetValue(noOpCandidateId, out var noOp)
+GEN:214             || !noOp.IsNoOp)
+GEN:215         {
+GEN:216             prunedById.TryGetValue(noOpCandidateId, out var prune);
+GEN:217             return VehicleGenerationResult.Failure(
+GEN:218                 new CandidateGenerationWitness(
+GEN:219                     CandidateGenerationFailureCodes.ActiveRouteInfeasible,
+GEN:220                     prune is null
+GEN:221                         ? "The active route could not be retained as the safety " +
+GEN:222                           "no-op candidate."
+GEN:223                         : "The active route could not be retained as the safety " +
+GEN:224                           $"no-op candidate: {prune.Code}: {prune.Message}" +
+GEN:225                           FormatPhysicalDetails(prune.PhysicalWitness),
+GEN:226                     vehicle.Id,
+GEN:227                     prune?.PhysicalWitness?.RequestId,
+GEN:228                     prune?.PhysicalWitness?.Dimension ?? prune?.Code));
+GEN:229         }
+HVA:144                 var updated = CandidateStateApplicator.Apply(
+HVA:145                     context.ReducedState.Run,
+HVA:146                     candidate);
+HVA:147 
+HVA:148                 if (!updated.IsSuccess)
+HVA:149                 {
+HVA:150                     var prune = new CandidatePruneWitness(
+HVA:151                         candidate.CandidateId,
+HVA:152                         set.VehicleId,
+HVA:153                         candidate.NewRequestIds,
+HVA:154                         updated.Failure!.Code,
+HVA:155                         updated.Failure.Message);
+HVA:156                     pruned.Add(prune);
+HVA:157                     hardPruned.Add(prune);
+HVA:158                     continue;
+HVA:159                 }
+HVA:160 
+HVA:161                 var validation = _validator.Validate(
+HVA:162                     new CommitmentValidationContext(
+HVA:163                         context.BeforeEventState,
+HVA:164                         context.ReducedState,
+HVA:165                         context.ReducedState with { Run = updated.Value! },
+TEST ATTEMPT4 REAGGREGATION: project summaries=9; passed=1025; failed=0; skipped=0; total=1025; exit0=True
+DLL SHA256=A631038B6EA4850FFA29BE2D5E4058FBA2E57B725EE568075686D7A43C6F5FAC

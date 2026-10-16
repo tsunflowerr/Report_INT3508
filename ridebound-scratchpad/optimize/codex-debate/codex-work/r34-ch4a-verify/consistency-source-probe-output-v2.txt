@@ -1,0 +1,479 @@
+=== A: E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\drafts\08-chuong4-phanA-v4.tex ===
+A:106 Chương này dùng bốn tập kịch bản (Bảng~\ref{bang:c4-taptu}). Từ các ngày 14--18/11/2018 dựng được 49 kịch bản, chia
+A:107 theo cặp ngày và mẫu để ba khung giờ của một cặp nằm cùng một phía. 34 kịch bản làm tập kiểm tra chính; 15 kịch bản
+A:108 dành cho một phép hiệu chỉnh không dùng trong khóa luận. Ngày 14--16/11 là ngày thường, 17 và 18/11 là cuối tuần.
+A:109 % EV: B08 (SPLIT: chia theo nhóm ngày, mẫu); C17 (15 kịch bản hiệu chỉnh khoảng dự phòng γ); B09; B21 (11/11/2018 là Chủ nhật)
+A:110 
+A:229 Các kết quả là thăm dò và dùng lại dữ liệu đã xem. Ngưỡng phân tích và cách chia tập được chọn sau khi đã xem tập buổi
+A:230 sáng và các đợt chạy thử trước đó. Mức thử 120 giây được chọn sau khi đã xem kết quả của điều phối không trần và luật
+A:231 C trần 30 giây trên chính tập kiểm tra chính, kể cả các phép sàng lọc ở 120 giây (mục~\ref{muc:c4-dieuphoi},
+A:232 \ref{muc:c4-congdon}). Các con số vì vậy mô tả điều đã đo, không phải phép kiểm trên dữ liệu chưa từng xem.
+A:233 % EV: I06; T38:8 (chọn sau khi xem Việc A, B, w07x); C4A-11 (BUD 07/10 = D14; CVP 10/10 = E06; C120R:10 chạy 10/10; T38:5 tập chính chạy 1–2/10); K42
+A:234 
+A:299 
+A:300 \begin{table}[htbp]
+A:301 \centering
+A:302 \caption{Nghĩa vụ của chính từng luật trên tập kiểm tra chính. Hai cột tỉ lệ là trung bình theo kịch bản (34
+A:303 kịch bản); trong mỗi kịch bản, mẫu số lần lượt là số lượt quyết định được xác nhận và số khách được phục vụ. Số gộp
+A:304 ghi riêng trong lời văn. Định nghĩa ``bị ép'' và ``bị phá lời hứa'' của từng luật ở Bảng~\ref{bang:c4-chiso}. Ở
+A:305 hàng luật C, các số 0 là điều Nhận xét~\ref{nx:giunguyen} cho trước dưới giả thiết (N).}
+A:306 \label{bang:c4-nghiavu}
+A:307 \small
+A:308 \begin{tabular}{@{}lrrr@{}}
+A:309 \toprule
+A:310 \textbf{Cấu hình} & \textbf{\begin{tabular}[b]{@{}r@{}}Quyết định\\ bị ép (\%)\end{tabular}} &
+A:311 \textbf{\begin{tabular}[b]{@{}r@{}}Khách bị phá\\ lời hứa (\%)\end{tabular}} &
+A:312 \textbf{\begin{tabular}[b]{@{}r@{}}Kịch bản có ít nhất\\ một khách bị phá\end{tabular}}\\
+A:313 \midrule
+A:314 C-30 & 0 & 0 & 0\\
+A:315 M$^{+}$-30 & 41,3 & 14,5 & 28\\
+A:316 M$^{+}$-60 & 22,5 & 4,2 & 22\\
+A:317 V-30 & 53,8 & 21,6 & 34\\
+A:318 \bottomrule
+A:319 \end{tabular}
+A:320 \end{table}
+A:321 % EV: C13 (trung bình theo kịch bản; kịch bản có ≥ 1 phá hứa 0/28/22/34); N-21 (C-30 0/34 kịch bản, 0 quyết định bị ép); X3-30; A22
+A:322 
+A:323 Cách đọc bảng: với luật hạn chót 30 giây, trung bình mỗi kịch bản có 41,3\% lượt quyết định bị ép và 14,5\% khách được
+A:324 phục vụ tới muộn hơn lời hứa đầu quá 30 giây. Có 28 trong 34 kịch bản có ít nhất một khách như vậy.
+A:325 % EV: C13; N-21
+A:326 
+A:327 Luật C không có quyết định nào bị ép và không vượt trần của khách nào ở cả 34 kịch bản. Đây là điều Nhận
+A:328 xét~\ref{nx:giunguyen} cho trước dưới giả thiết (N), không phải phát hiện thực nghiệm: phương án giữ nguyên kế hoạch
+A:329 có phần dời do điều phối bằng 0 nên không bị luật C loại. Điều phối không trần cũng có 0 trong 20.760 quyết định bị
+A:330 ép, và nhận xét không bảo đảm giờ trả thực tế. Luật hạn chót so giờ trả mới với lời hứa đầu, nên riêng phần thay đổi
+A:331 khi giữ nguyên kế hoạch cũng có thể làm nó bị ép (ví dụ 40 giây ở mục~\ref{muc:doichung}).
+A:332 % EV: A21; A22; N-21; X3-16 (U 0 / 20.760); X3-30; A10; K05
+A:333 
+A:334 Tính gộp, luật hạn chót 30 giây bị ép ở 7.710 trong 20.103 lượt quyết định (38,4\%) và phá lời hứa với 289 trong 2.338
+A:335 khách (12,4\%). Gánh nặng dồn vào khung 7 giờ: cả 9 kịch bản có khách bị phá, với trung bình theo kịch bản 36,5\%
+A:336 khách bị phá và 75,6\% lượt quyết định bị ép. Ở khung 17 giờ chỉ 5 trong 11 kịch bản có khách bị phá, với 1,0\% và
+A:337 5,0\% (cũng trung bình theo kịch bản). Ở mức 60 giây, các tỉ lệ toàn tập giảm nhưng không về 0. Luật trần độ dời khách
+A:338 thấy bị ép nhiều nhất, phù hợp với định nghĩa: tổng độ lớn các lần cập nhật mà nó kiểm không nhỏ hơn độ lùi so với lời
+A:339 hứa đầu (công thức~\eqref{eq:dongnhat}).
+A:340 % EV: N-21 (gộp 7.710/20.103 = 38,35%; 289/2.338 = 12,36%; khung 7 giờ 9/9, 36,53%, 75,62%; 17 giờ 5/11, 1,04%, 4,99% — đều trung bình theo kịch bản); C14; C13 (M⁺-60 22,5% / 4,2%; V-30 53,8%, 34/34); A11; A12; X3-33 (eq:dongnhat: Σ|z| ≥ |Σz| = |p_n − p_0|)
+A:341 
+A:342 Bảng~\ref{bang:c4-nghiavu} không so hai chuẩn đúng giờ: luật C hứa về phần dời do điều phối, còn luật hạn chót hứa về
+A:343 toàn bộ độ trễ so với lời hứa đầu, một lời hứa lớn hơn. Đo bằng chính thước của luật hạn chót, tức tới muộn hơn lời
+A:344 hứa đầu quá 30 giây, luật C có 292 trong 2.338 khách (12,5\%), so với 289 khách (12,4\%) của luật hạn chót. Trung bình
+A:345 theo kịch bản là 14,6\% so với 14,5\%, và cả hai đều có khách như vậy ở 28 kịch bản. Vậy về độ đúng giờ, hai luật gần
+A:346 như ngang nhau; luật C khác ở chỗ chỉ hứa phần mà bộ điều phối kiểm soát được, nên giữ được lời hứa đó.
+A:347 % EV: C13; K05; C4A-01 (CK4A check: C-30 292/2.338 = 12,49%, TB theo kịch bản 14,59%, 28/34; khớp ADD1:17 late30 292 và TSV); N-21
+A:543 
+A:544 Trần 120 giây phục vụ nhiều hơn điều phối không trần một lượt, nên điều phối không trần không phải mức phục vụ cao
+A:545 nhất có thể đạt, chỉ là một điểm đo. Từ 30 lên 120 giây, trần thêm 6 lượt phục vụ, 4 lượt trễ quá 60 giây và 2 lượt
+A:546 không trễ quá 60 giây. Tỉ lệ lượt quyết định luật hạn chót bị ép (trung bình theo kịch bản) giảm từ 58,6\% ở mức 30
+A:547 giây xuống 6,6\% ở 120 giây và 1,7\% ở 240--300 giây; luật C luôn 0\%. Ở cả tám mức, hai luật phục vụ chênh nhau không
+A:548 quá 2 lượt.
+A:549 % EV: D01; K12; D03 (+6 / +4 / +2); D04 (trung bình theo kịch bản; W07X:20-29); X3-28 (luật hạn chót chạy 30–300 s ở tập này)
+A:734 % EV: N-08; N-07
+A:735 
+A:736 Phạm vi kiểm là 132 lần chạy và 1.780 bản ghi (98 lần chạy với 64.371 lượt quyết định được xác nhận, cộng 34 lần chạy
+A:737 trần 120 giây), hay 140 lần chạy và 1.943 bản ghi kể cả chiều tuyết. Chưa được kiểm: 15 lần chạy hiệu chỉnh, 16 lần
+A:738 chạy trong đó bộ điều phối dùng dự báo khi quyết định (khác phép phát lại) và 12 lần chạy luật C dùng hệ số đo được
+A:739 của một phép quét trước đó. Kết quả vì vậy không áp cho mọi lần chạy.
+A:740 % EV: N-15 (SCOPE); ADDENDUM-1 mục 0.3 (15 lần chạy hiệu chỉnh, 16 thư mục C-30F); E01 (64.371); K09; F12; C4A-08 (SWEEP:13,70: C-x, x = 30…900 s, trên thế giới đo thật W5, 2 kịch bản mỗi mức; NEW:1 by_arm chỉ có t38 và w07)
+
+=== B: E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\drafts\09-chuong4-phanB-v7.tex ===
+B:79 Trên 21 kịch bản ngày thường có dự báo, số khách của luật C trần 30 giây tới muộn hơn lời hứa đầu quá một phút
+B:80 giảm từ 68 xuống 2, trong 1.471 khách được phục vụ (gộp theo khách). Tính trung bình theo kịch bản, tỉ lệ này giảm
+B:81 từ 6,01\% xuống 0,17\%.
+B:82 % EV: F04 (6,01% → 0,17% trung bình theo ô; gộp 2/1.471); F17 (2 so với 68); RP1:39-40; K24
+B:129 Giá của dự báo là lời hứa dài hơn. Trên 21 kịch bản, lời hứa trả dài thêm trung bình 13,7 giây (khung 7 giờ 27,8
+B:130 giây) và lời hứa đón 3,2 giây, trung bình theo kịch bản. Con số 7,37 giây ở Bảng~\ref{bang:c4-tran120} khác: đó là
+B:131 trung bình gộp trên cả 2.338 khách của 34 kịch bản, kể cả khách cuối tuần có phần dài thêm bằng 0.
+B:132 % EV: F06 (FR:67-69; FA:8-9); C09; N-16; N4B-10 (trung bình gộp gồm khách cuối tuần, phần dài thêm 0); F02; N-28
+B:133 
+B:185 
+B:186 \textbf{Đưa dự báo vào bộ điều phối.} Cách này được thử với luật C và luật hạn chót 30 giây trên 16 kịch bản khung 7
+B:187 và 8 giờ. Có 3 trong 32 lần chạy dừng, vì xe trong FleetPy tới một điểm đón muộn hơn giờ đón muộn nhất 1,67 hoặc
+B:188 2,69 giây. Ở các lần chạy xong, luật C không phải phục hồi lần nào. Luật hạn chót vẫn phải phục hồi ở 47,6\% lượt
+B:189 quyết định, so với 62,8\% khi không đưa dự báo vào (trung bình trên 15 kịch bản). Tỉ lệ khách bị luật hạn chót phá
+B:190 lời hứa ở khung 7 giờ giảm từ 39,0\% xuống 11,0\% (trung bình trên 8 kịch bản), nên con số ở
+B:191 Bảng~\ref{bang:c4-nghiavu} phụ thuộc cách hứa. Cách triển khai được chọn là lớp lời hứa; kết luận này chỉ áp cho cách
+B:192 đưa dự báo vào đã thử.
+B:318 So với luật hạn chót 30 giây có dự báo, luật C có cùng 2.338 lượt phục vụ và cùng 2.328 lượt không trễ quá một phút.
+B:319 Khác biệt là luật hạn chót phải phục hồi ở 41,3\% lượt quyết định (trung bình theo kịch bản) và phá lời hứa của chính
+B:320 nó ở 28 trong 34 kịch bản, còn luật C không lần nào (Bảng~\ref{bang:c4-nghiavu}).
+B:321 % EV: N-16 (lưu ý: M⁺-30 + dự báo 2.338 / 10 / 2.328 / 2.338, ADD1:29); C13; N-21; X3-16
+B:392 Trên 34 kịch bản của tập kiểm tra chính, không khách nào vượt trần: tổng dời do điều phối lớn nhất của một khách là
+B:393 29,2 giây với trần 30 giây và 118,9 giây với trần 120 giây. Không có lượt quyết định nào phải phục hồi, 0 trong 20.101
+B:394 và 0 trong 20.435 lượt.
+B:395 % EV: C20; N-07; X3-16; N-21
+B:396 
+B:397 Giới hạn tính toán không cắt kết quả trên tập này. Bốn cấu hình được kiểm là điều phối không trần, luật C trần 30 và
+B:398 120 giây, và luật hạn chót 30 giây. Ở cả bốn, giới hạn 100 phương án mỗi xe và giới hạn khối lượng khám phá chưa lần
+B:399 nào bỏ sót phương án. Giới hạn 2 yêu cầu mới mỗi lượt chỉ một lần để một yêu cầu sang lượt sau, trong 34 lần chạy của
+B:400 mỗi cấu hình. Chênh lệch giữa các cấu hình vì vậy phản ánh tác động của cả gói cam kết, không phải của giới hạn tính
+B:401 toán. Bộ sinh vẫn không vét cạn: nó chỉ chèn yêu cầu mới vào kế hoạch đang có (mục~\ref{muc:gioihan}).
+B:402 % EV: N-25 (ADD1:119-122; A:7-9); N4B-11 (GEN:54-95, 298-345; CandidateModels.cs:100-118; R15-audit.py:76-79); K34; X3-03; X3-32; A24
+B:403 
+B:404 Phần đầu của tiêu chí 3 không phân biệt phương án: ở mọi lượt có ghi tiêu chí này (3.503 lượt khi không trần, 3.506
+B:405 với trần 30 giây, 3.504 với trần 120 giây), mức dùng trần lớn nhất đều bằng 100\%. Lý do là đổi xe, đổi điểm đón và
+B:406 đổi điểm trả có trần 0, nên tiêu chí 3 chỉ tác dụng qua tổng phần dời theo từng chiều.
+B:407 % EV: A15; N-25; A07; X3-07
+B:408 
+B:409 Tệp chính sách cam kết của điều phối không trần và của luật C trần 30, 120 giây giống từng byte giữa hai tập kiểm tra
+B:410 chính và tắc đường cố định. Hai tập khác nhau ở thiết lập bộ chạy, như luật phục hồi và phiên bản chính sách.
+B:411 % EV: A08; NEW:11-13; N4B-12
+B:412 
+B:413 Các số của tập kiểm tra chính được ít nhất hai bộ đọc viết độc lập tính lại từ bản ghi thô và khớp trong phạm vi đã
+B:414 kiểm. Phép so khớp gồm cả từng khách ở 7.159 khách được phục vụ của điều phối không trần và luật C trần 30, 120 giây;
+B:415 mục~\ref{muc:kiemtra} nêu thêm phép kiểm 382.006 bản ghi sửa. Khi chạy lại ngày 12/10/2026 trên đúng mã nguồn đã dựng
+B:416 bộ chạy, với kiểu xuống dòng LF, 1.024 trong 1.025 kiểm thử tự động đạt. Kiểm thử còn lại đòi cây làm việc có tệp chưa
+B:417 được ghi nhận, và đạt khi chạy riêng với một tệp như vậy.
+B:418 % EV: N4B-14 (ADD1:66-78); K41; A26; N4B-13 (TESTRUN-45f8026-2026-10-12.md; log dòng 43-105; log dirtycheck)
+B:459 kịch bản là mô tả, không phải kiểm định, và không bảo đảm cho ngày khác.
+B:460 \item Ngưỡng phân tích, cách chia tập và mức 120 giây được chọn sau khi xem dữ liệu phát triển; chiều tuyết là sự
+B:461 kiện đã xem. Mọi kết quả là thăm dò.
+B:462 \item Tải thấp: trung bình 0,535 khách trên xe kể cả lúc xe rỗi với điều phối không trần, so với khoảng 1,33 trong
+
+=== Ch3: E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\drafts\07-chuong3-v3.tex ===
+Ch3:686 
+Ch3:687 Ngoài giới hạn 2 yêu cầu mỗi lượt và 100 phương án mỗi xe, các bước sinh, kiểm và giải đều có giới hạn số bước
+Ch3:688 tính, và bộ giải dùng hạt giống ngẫu nhiên (số khởi tạo phần ngẫu nhiên) cố định bằng 7 để chạy lại cho cùng kết
+Ch3:689 quả. Vì vậy bộ sinh không xét hết mọi phương án; mục~\ref{muc:c4-hople} báo các bộ đếm cho biết giới hạn có cắt bớt
+Ch3:690 phương án hay không. Phép kiểm ở mỗi phương án duyệt mười chiều cho mỗi khách có lời hứa của xe và đếm đảo thứ tự
+Ch3:691 trên từng cặp điểm dừng, nên không thể coi khối lượng kiểm là tuyến tính theo độ dài kế hoạch; nó chưa được đo
+Ch3:692 riêng.
+Ch3:693 % EV: A24 (WP4:9-23); X3-17; X3-32 (GEN:54-79); N-25; X3-05 (BUDGET:76-99); X3-04 (VALID:233-239); X3-26 (DELTA:190-215)
+Ch3:704 \begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+Ch3:705 \item \textbf{Kiểm thử phần mềm:} khi luật phục hồi không tệ hơn được thêm vào mã, bộ kiểm thử qua 1.025 trên
+Ch3:706 1.025 trường hợp; số này ghi lại lúc đó, chưa chạy lại khi viết khóa luận.
+Ch3:707 \item \textbf{Kiểm tính nhất quán của sổ:} ở cả 382.006 bản ghi sửa của 185 lần chạy (170 lần chạy của năm cấu hình
+Ch3:708 trên tập kiểm tra chính và 15 lần chạy luật C trần 30 giây trên 15 kịch bản hiệu chỉnh), $|x|$, $|c|$, $|z|$ tính
+Ch3:709 lại từ $v$, $e$, $p$ trong sổ khớp đúng các trường độ lớn. Phép kiểm này không kiểm $e$ có được tính đúng hay không.
+Ch3:710 \item \textbf{Tính lại độc lập:} một chương trình viết riêng, độc lập về mã nhưng dùng cùng đặc tả chỉ số, tính lại
+Ch3:711 13 hạng mục số liệu từ bản ghi thô và một bất biến, không lệch hạng mục nào; các số đếm chính được ít nhất hai bộ đọc
+Ch3:712 viết độc lập tính lại và khớp trong phạm vi đã kiểm. Các chương trình kiểm ở hai mức này do các mô hình ngôn ngữ lớn
+Ch3:713 Claude và Codex viết và chạy, không phải kiểm thủ công; chúng cho biết con số khớp bản ghi, không cho biết mô phỏng
+Ch3:714 giống thực tế đến đâu.
+Ch3:715 \item \textbf{Tái lập:} tập kiểm tra chính, tập chỉnh trần buổi sáng và các lần chạy trần 120 giây dùng cùng một bản
+Ch3:716 bộ chạy đã biên dịch và lưu lại; tập tắc đường cố định dùng một bản cũ hơn. Bản dựng lại, nếu có, phải cho đúng kết
+Ch3:717 quả cũ trên một số kịch bản trước khi dùng (Phụ lục~\ref{phuluc:C}).
+Ch3:718 \end{itemize}
+Ch3:719 % EV (kiểm thử): A27 (ADR:5100, số lịch sử)
+Ch3:720 % EV (sổ): A26 (T38:106; T38I:68); B10 (170 + 15); RUN38:1-8 (15 lần chạy C-30 trên 15 kịch bản hiệu chỉnh)
+Ch3:721 % EV (tính lại): C19 (T38I:79-97: 13 hạng mục + 1 bất biến); ADDENDUM-1:15-19; C04; E01; K41; A26 lưu ý; I01
+Ch3:722 % EV (tái lập): A28 (RUNW07:40-41); X3-10 (run_w07.py:8; run_w07x.py:7; run_t38c120.py:3-8); B17; NEW:13; I13
+
+=== T38: E:\Code\Report_INT3508\ridebound-scratchpad\tang3\t38\T38-REPORT.md ===
+T38:87   - H3a đạt bằng quy tắc "≤ 3/34" của kế hoạch. Cận trên CP 95% là 17,4%, không dưới 10%.
+T38:88 - **Chỗ yếu của thiết kế:**
+T38:89   - Thăm dò. Ngưỡng, biên, cách chia do Claude chọn sau khi đã xem kết quả trước.
+T38:90   - Thế giới chỉ thật, nên mỗi (ngày, mẫu, khung) chỉ cho một episode; không có ngẫu nhiên.
+T38:91   - Panel 49 ô, mỗi ngày chỉ một đến hai nhóm hiệu chỉnh. γ do một ô quyết định.
+T38:92   - 11 ô 7–9h và 17–19h không dựng được, nên khung 7–9h chỉ có 13 ô trên tổng 49 (4 hiệu chỉnh, 9 kiểm tra).
+T38:93   - Ba khung của cùng một (ngày, mẫu) cùng nguồn nhu cầu, chồng 3–20/108 dòng. Cách chia theo nhóm đã tránh đặt chúng ở hai bên.
+T38:94   - Chạy lại hai job do lỗi hạ tầng. Phân tích dùng các job chạy lại, không dùng thư mục lỗi.
+T38:95   - Ô `d20181114-s10-r1` ở tập hiệu chỉnh (đã bị xem ở smoke).
+T38:96 
+T38:97 ## 6. Kiểm độc lập
+T38:98 
+T38:99 Một agent viết mã riêng (`independent/iv_extract.py`, `iv_analyze.py`; không đọc script phân tích của scratchpad), tính lại từ bản ghi
+T38:100 thô của 185 lần chạy. **Mọi mục đều khớp, không mục nào lệch** (`independent/RESULT.md`, `iv_analyze.out.txt`):
+T38:101 - γ = 222.259 ms (n = 15, k = 15, từ ô 14/11 mẫu 2 khung 7h), cả 15 điểm số hiệu chỉnh bằng điểm số trong tệp γ;
+T38:102 - 2 vi phạm ở đúng hai ô đã nêu (252.492 và 226.400 ms), 32/34 ô được phủ, không có điểm số vô hạn;
+T38:103 - tổng số khách phục vụ của 5 nhánh giống hệt; trung bình và khoảng tin cậy bootstrap của D_M, D_V, F, ΔE2 giống hệt (ΔE2: +0,000857, [−0,000082; +0,002218]);
+T38:104 - 0 quyết định non-normal ở cả 49 job `C-30`; tỉ lệ phá lời hứa của chính luật, kể cả theo khung giờ, giống hệt;
+T38:105 - ở cả 32 ô được phủ, khách bị dời nhiều nhất ≤ 252.259 ms (lớn nhất 216.005 ms);
+T38:106 - chéo với đặc tả: |x|, |c|, |z| của giờ trả bằng các trường chênh lệch trong sổ cái ở cả 382.006 lần sửa giờ.
+T38:107 
+
+=== W07X: E:\Code\Report_INT3508\ridebound-scratchpad\tang3\w07x\W07X-REPORT.md ===
+W07X:20 | x (s) | Phục vụ C / M⁺ / V | C, M⁺ cùng quyết định | Cách ghép bị chặn C / M⁺ / V | Phần do hệ thống lớn nhất (C) | Phá hứa theo thước của chính mình: C / M⁺ / V | Theo thước hạn chót (A > x): C / M⁺ / V | Bị ép: C / M⁺ / V | E2 |
+W07X:21 |---|---|---|---|---|---|---|---|---|
+W07X:22 | 30 | 660 / 660 / 660 | 8/8 | 221 / 227 / 227 | 10,0 s | 0 / 24,0 / 29,2% | 24,0 / 24,0 / 24,0% | 0 / 58,6 / 63,2% | 8,8% |
+W07X:23 | 60 | 661 / 661 / – | 8/8 | 186 / 192 / – | 41,9 s | 0 / 7,3 / –% | 7,3 / 7,3 / –% | 0 / 35,5 / –% | 8,8% |
+W07X:24 | **90** | 664 / 663 / 663 | **7/8** | 153 / 159 / 160 | 86,9 s | 0 / 2,1 / 2,9% | 2,1 / 2,1 / 2,1% | 0 / 13,0 / 17,4% | 9,2% |
+W07X:25 | **120** | 666 / 664 / 664 | **6/8** | 119 / 129 / 129 | 96,7 s | 0 / 0,9 / 1,0% | 1,2 / 0,9 / 0,9% | 0 / 6,6 / 7,4% | 9,2% |
+W07X:26 | 150 | 666 / 666 / 666 | 8/8 | 108 / 115 / 115 | 96,7 s | 0 / 0,5 / 0,8% | 0,5 / 0,5 / 0,5% | 0 / 6,8 / 8,6% | 9,2% |
+W07X:27 | 180 | 666 / 666 / 666 | 8/8 | 100 / 105 / 105 | 96,7 s | 0 / 0,5 / 0,5% | 0,5 / 0,5 / 0,5% | 0 / 2,8 / 2,8% | 9,2% |
+W07X:28 | 240 | 665 / 665 / 665 | 8/8 | 87 / 91 / 91 | 208,2 s | 0 / 0,2 / 0,4% | 0,2 / 0,2 / 0,2% | 0 / 1,7 / 1,7% | 9,0% |
+W07X:29 | 300 | 665 / 665 / – | 8/8 | 85 / 85 / – | 208,2 s | 0 / 0,2 / –% | 0,2 / 0,2 / –% | 0 / 1,7 / –% | 9,0% |
+W07X:48 ## 4. Cơ chế ở các ô lệch (`analysis/mechanism-2026-10-01.txt`; mô tả)
+W07X:49 
+W07X:50 Cả 3 chỗ lệch có cùng một cơ chế:
+W07X:51 
+W07X:52 | Mức, ô | Quyết định lệch đầu tiên | Chuyện gì xảy ra |
+W07X:53 |---|---|---|
+W07X:54 | 90 s, 12/11 mẫu 1 | thứ 294, t = 3.073 s (≈ 07:51) | C nhận khách mới `rq-150ba8d…` lên xe `veh-176f91…`; M⁺ chặn đúng cách ghép đó (`COMMITMENT_DEADLINE_EXCEEDED`, `deadline_cap`) vì khách đang có `rq-c768366…` đã trễ **79,0 s do tắc đường** (phần do hệ thống 0 s), và cách ghép thêm **68,3 s do hệ thống** → 147 s > 90 s. C chỉ tính 68,3 s ≤ 90 s |
+W07X:55 | 120 s, 12/11 mẫu 1 | thứ 294, t = 3.073 s | giống hệt dòng trên (79,0 + 68,3 = 147 s > 120 s) |
+W07X:56 | 120 s, 13/11 mẫu 1 | thứ 285, t = 2.903 s (≈ 07:48) | C nhận khách mới `rq-a341968…`; M⁺ chặn vì khách đang có `rq-f6c8ce7…` đã trễ **60,9 s do tắc đường**, cách ghép thêm **61,2 s do hệ thống** → 122 s > 120 s |
+W07X:57 
+W07X:58 - Tức hai luật chỉ khác nhau khi tắc đường **cộng** một lần dời do hệ thống vượt mức hứa, trong khi riêng phần do hệ thống chưa
+W07X:59   vượt. Ở ba chỗ lệch, phần tắc đường trước quyết định là 61–79 s và lần dời do hệ thống là 61–68 s. Ở 150 s trở lên không có chỗ
+W07X:60   lệch nào, tức trên 8 ô này không có quyết định nào mà tổng ấy vượt mức trong khi riêng phần do hệ thống chưa vượt. Chưa kiểm
+W07X:61   phân bố đầy đủ của hai phần này trên mọi quyết định.
+W07X:62 - Mỗi lần lệch làm C nhận thêm **đúng 1 khách** ở ô đó.
+
+=== W07XM: E:\Code\Report_INT3508\ridebound-scratchpad\tang3\w07x\analysis\mechanism-2026-10-01.txt ===
+W07XM:1 # w07x_mechanism.py (descriptive): first divergence of C-x and Mplus-x per level and cell
+W07XM:2 x=90 d20181112-s10-r1-w07: first divergence at acknowledged decision 294 (t = 3073 s)
+W07XM:3     accepted only by C ['rq-150ba8d'], only by Mplus []; rejected only by C [], only by Mplus ['rq-150ba8d']
+W07XM:4     certificate witnesses: C none; Mplus none
+W07XM:5     vehicle veh-176f91: C selected candidate-v1-45ce2, which Mplus PRUNED with COMMITMENT_DEADLINE_EXCEEDED; new riders ['rq-150ba8d']
+W07XM:6         witness deadline_cap on rider rq-c768366: before this decision sum x = 79.0 s, sum c = 0.0 s, p_last - p_first = 79.0 s; in the C run this decision changed the rider by x = 0.1 s, c = 68.3 s
+W07XM:7 x=120 d20181112-s10-r1-w07: first divergence at acknowledged decision 294 (t = 3073 s)
+W07XM:8     accepted only by C ['rq-150ba8d'], only by Mplus []; rejected only by C [], only by Mplus ['rq-150ba8d']
+W07XM:9     certificate witnesses: C none; Mplus none
+W07XM:10     vehicle veh-176f91: C selected candidate-v1-45ce2, which Mplus PRUNED with COMMITMENT_DEADLINE_EXCEEDED; new riders ['rq-150ba8d']
+W07XM:11         witness deadline_cap on rider rq-c768366: before this decision sum x = 79.0 s, sum c = 0.0 s, p_last - p_first = 79.0 s; in the C run this decision changed the rider by x = 0.1 s, c = 68.3 s
+W07XM:12 x=120 d20181113-s10-r1-w07: first divergence at acknowledged decision 285 (t = 2903 s)
+W07XM:13     accepted only by C ['rq-a341968'], only by Mplus []; rejected only by C [], only by Mplus ['rq-a341968']
+W07XM:14     certificate witnesses: C none; Mplus none
+W07XM:15     vehicle veh-68dae7: C selected candidate-v1-9ea02, which Mplus PRUNED with COMMITMENT_DEADLINE_EXCEEDED; new riders ['rq-a341968']
+W07XM:16         witness deadline_cap on rider rq-f6c8ce7: before this decision sum x = 60.9 s, sum c = 0.0 s, p_last - p_first = 60.9 s; in the C run this decision changed the rider by x = 0.2 s, c = 61.2 s
+
+=== BUDPY: E:\Code\Report_INT3508\ridebound-scratchpad\optimize\codex-debate\claude-work\budget_block_diagnosis.py ===
+BUDPY:1 """Why does C-30 reject riders that U serves? Zero-run diagnosis on the 34 T3.8 test cells.
+BUDPY:2 For every request REJECTED under C-30, scan C-30 decision frames: a pruned candidate carrying the request in
+BUDPY:3 newRequestIds with code COMMITMENT_BUDGET_EXCEEDED passed the structural checks (pickup window, max ride time) and
+BUDPY:4 was stopped only by some co-rider's dispatch budget. For such 'budget-blocked' requests record the smallest overshoot
+BUDPY:5 over their budget-pruned candidates (max over witnesses of after - limit), and whether the blocking co-rider had
+BUDPY:6 already spent part of its budget before (witness 'before' > 0). Cross with U: was the request served under U?
+BUDPY:7 Usage: python -B budget_block_diagnosis.py <out> (mode x)."""
+BUDPY:8 import base64, collections, json, pathlib, statistics as st, sys
+BUDPY:9 OPT = pathlib.Path(__file__).resolve().parents[2]
+BUDPY:10 sys.path.insert(0, str(OPT))
+BUDPY:11 import forecast_family_a as fa
+BUDPY:12 CELLS = fa.run_t38.PHASES["test"][1]
+BUDPY:13 def final_state(arm, cell):
+BUDPY:14     t = fa.run_dir("test", arm, cell) / "transcript-00.ndjson"
+BUDPY:15     _, _, state = fa.audit_vep.load(t)
+BUDPY:16     return t, {r["requestId"]: r["lifecycle"] for r in state["requests"]}
+BUDPY:17 tot = collections.Counter(); over = []; spent_before = collections.Counter()
+BUDPY:18 for cell in CELLS:
+BUDPY:19     tc, life_c = final_state("C-30", cell)
+BUDPY:20     _, life_u = final_state("U", cell)
+BUDPY:21     rejected = {r for r, l in life_c.items() if l == "rejected"}
+BUDPY:22     best = {}  # request -> (min overshoot ms, before>0 flag of that candidate)
+BUDPY:23     with open(tc, encoding="utf-8") as fh:
+BUDPY:24         for line in fh:
+BUDPY:25             env = json.loads(base64.b64decode(json.loads(line)["frameBase64"]))
+BUDPY:26             if env.get("messageType") != "decision":
+BUDPY:27                 continue
+BUDPY:28             ev = ((env.get("payload") or {}).get("solver") or {}).get("executionEvidence") or {}
+BUDPY:29             for pc in ev.get("prunedCandidates", []):
+BUDPY:30                 if pc["code"] != "COMMITMENT_BUDGET_EXCEEDED":
+BUDPY:31                     continue
+BUDPY:32                 ws = [w for w in pc.get("commitmentWitnesses", []) if w["code"] == "COMMITMENT_BUDGET_EXCEEDED"]
+BUDPY:33                 if not ws:
+BUDPY:34                     continue
+BUDPY:35                 o = max(w["after"] - w["limit"] for w in ws); before = any(w["before"] > 0 for w in ws)
+BUDPY:36                 for r in pc.get("newRequestIds", []):
+BUDPY:37                     if r in rejected and (r not in best or o < best[r][0]):
+BUDPY:38                         best[r] = (o, before)
+BUDPY:39     for r in rejected:
+BUDPY:40         u = "served by U" if life_u.get(r) == "completed" else "rejected by U too"
+BUDPY:41         if r in best:
+BUDPY:42             tot[("budget-blocked", u)] += 1; over.append(best[r][0] / 1000); spent_before[best[r][1]] += 1
+BUDPY:43         else:
+BUDPY:44             tot[("structural only", u)] += 1
+BUDPY:45 lines = ["# budget_block_diagnosis.py (34 T3.8 test cells, arm C-30)"]
+BUDPY:46 for k in sorted(tot): lines.append(f"  {k[0]:<16} | {k[1]:<18}: {tot[k]}")
+BUDPY:47 if over:
+BUDPY:48     s = sorted(over)
+BUDPY:49     lines.append(f"  budget-blocked smallest overshoot (s): median {st.median(s):.1f}, p25 {s[len(s)//4]:.1f}, p75 {s[3*len(s)//4]:.1f}, max {s[-1]:.1f}")
+BUDPY:50     for t in (30, 90, 270):
+BUDPY:51         lines.append(f"    overshoot <= {t:>3d} s (would pass a cap of {30 + t} s): {sum(1 for x in s if x <= t)} of {len(s)}")
+BUDPY:52     lines.append(f"  blocking co-rider had already spent budget before this candidate: {spent_before[True]} of {len(s)}")
+
+=== BUD: E:\Code\Report_INT3508\ridebound-scratchpad\optimize\codex-debate\claude-work\budget-block-diagnosis-2026-10-07.txt ===
+BUD:1 # budget_block_diagnosis.py (34 T3.8 test cells, arm C-30)
+BUD:2   budget-blocked   | rejected by U too : 32
+BUD:3   budget-blocked   | served by U       : 116
+BUD:4   structural only  | rejected by U too : 1075
+BUD:5   structural only  | served by U       : 111
+BUD:6   budget-blocked smallest overshoot (s): median 109.6, p25 63.7, p75 183.6, max 524.8
+BUD:7     overshoot <=  30 s (would pass a cap of 60 s): 11 of 148
+BUD:8     overshoot <=  90 s (would pass a cap of 120 s): 59 of 148
+BUD:9     overshoot <= 270 s (would pass a cap of 300 s): 135 of 148
+BUD:10   blocking co-rider had already spent budget before this candidate: 2 of 148
+
+=== NOTES: E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\drafts\08-chuong4-phanA-v2-NOTES.md ===
+NOTES:1 # 08-chuong4-phanA — NOTES của vòng sửa R25 (2026-10-12)
+NOTES:2 
+NOTES:3 ## 0. Tệp nào là bản dùng để ghép
+NOTES:4 
+NOTES:5 | Tệp | Vai trò |
+NOTES:6 |---|---|
+NOTES:7 | `drafts/08-chuong4-phanA.tex` | Bản 1 (2026-10-11), giữ nguyên. |
+NOTES:8 | `drafts/08-chuong4-phanA-v2.tex` | Lượt sửa đầu: áp mọi quyết định của `reviews/CH4A-REVISION-LOG.md`. Dài 5.582 tiếng văn xuôi, vượt ngân sách khoảng 2,5 trang. **Không dùng để ghép.** Trong lượt này có ba chỉnh nhỏ ngay trên chính tệp v2 trước khi đếm độ dài (phạm vi "bốn mẫu", phạm vi bộ chạy đã lưu, cách nói "2 trong 148"); sau đó không sửa v2 nữa. |
+NOTES:9 | `drafts/08-chuong4-phanA-v3.tex` | Lượt rút gọn thứ nhất (5.189 tiếng), vẫn vượt ngân sách. **Không dùng để ghép.** |
+NOTES:10 | **`drafts/08-chuong4-phanA-v4.tex`** | **Bản dùng để ghép.** Cùng mọi quyết định và con số của v2; chỉ rút gọn câu chữ, tách câu dài và cắt ba chỗ ghi ở §6. Bản nháp trung gian của v4 được làm trong thư mục scratchpad của phiên, rồi chép một lần vào dự án (không ghi đè). |
+NOTES:11 
+NOTES:12 Tên tệp NOTES giữ `-v2-NOTES` theo yêu cầu đầu ra; nội dung dưới đây mô tả **v4**.
+NOTES:13 
+NOTES:14 Các tệp khác tạo trong vòng này: `reviews/CH4A-REVISION-LOG.md`; `evidence/EVIDENCE-REGISTER-ADDENDUM-4-CH4A.md` (C4A-01…20);
+NOTES:15 `evidence/checks-ch4a-v2/` (ba script chỉ đọc, ba output, log stdout/stderr); `style/GLOSSARY-VI-v2.md` (bản sao bảng thuật
+NOTES:16 ngữ, sửa hai dòng 92–93). Không ghi vào thư mục luận văn, `E:/Code/RideBound*` hay `C:/Code/*`; không mô phỏng, build, cài.
+NOTES:17 
+NOTES:18 Kiểm cú pháp v4 (script đọc, không biên dịch): ngoặc `{}` 395/395; mọi `\begin`/`\end` khớp (12 table, 16 tabular,
+NOTES:19 1 figure, 1 tikzpicture, 3 scope); số `$` chẵn (74); không có từ cấm ("niêm phong", "dự đoán trước", "duy nhất", "tối ưu",
+NOTES:20 "phải phục hồi", "chúng tôi"…). **Chưa biên dịch thử** (build bị cấm); người ghép cần chạy tectonic với `--keep-logs`.
+NOTES:21 
+NOTES:22 ## 1. Độ dài theo mục (v4) so với ngân sách
+NOTES:23 
+NOTES:24 Cách đếm như NOTES bản 1: "tiếng" = token cách nhau bởi khoảng trắng sau khi bỏ dòng `%`, lệnh LaTeX và `$…$`; chữ trong
+NOTES:25 bảng, hình đếm riêng; văn xuôi 480–560 tiếng/trang; bảng ước theo số dòng in. Đây là ước lượng, không phải bố cục đo.
+NOTES:26 
+NOTES:27 | Mục | Ngân sách (tr.) | Văn xuôi v1 | Văn xuôi v4 | Bảng, hình v4 | Ước lượng v4 (tr.) |
+NOTES:28 |---|---:|---:|---:|---|---:|
+NOTES:29 | Mở chương + Bảng lộ trình | 0,5 | 118 | 131 | lộ trình 10 dòng | 0,7–0,75 |
+NOTES:30 | 4.1 Thiết lập | 3 | 702 | 923 | tham số, tập thử, chỉ số | 3,25–3,55 |
+NOTES:31 | 4.2 Kết quả chính | 3,75 | 1.065 | 1.164 | chính, nghĩa vụ, phân bố trễ (bỏ bảng ngày × khung) | 2,9–3,25 |
+NOTES:32 | 4.3 Phần do điều phối | 2,25 | 802 | 733 | dời do điều phối | 1,7–1,9 |
+NOTES:33 | 4.4 Chọn mức trần | 3 | 924 | 879 | cố định, buổi sáng (6 dòng), trần 120 (16 dòng), hình | 2,95–3,2 |
+NOTES:34 | 4.5 Vế cộng dồn | 1,25 | 647 | 692 | kiểm bản ghi | 1,6–1,8 |
+NOTES:35 | **Tổng** | **13,75** | **4.258** | **4.522** | 12 bảng + 1 hình (v1: 13 + 1) | **≈ 13,0–14,4** |
+NOTES:36 
+NOTES:37 Bản 1 theo cùng cách tính: 12,9–14,2 trang. v4 dài hơn v1 khoảng 0,1–0,2 trang ở giữa khoảng, chủ yếu do mục 4.1 (định
+NOTES:38 nghĩa cho người đọc ngoài ngành, câu về độ dài lời hứa đầu, câu thăm dò 120 giây); bỏ bảng ngày × khung bù lại khoảng 0,45
+NOTES:39 trang. Câu: 171 câu, trung vị 26 tiếng, 18 câu trên 40 tiếng, 0 câu trên 50 (v1: 162 / 27 / 19 / 1).
+NOTES:40 
+NOTES:41 Nếu bản dựng thật vượt, cắt theo thứ tự (≈ 230 tiếng): ví dụ dựng tay về hai cách gộp ở 4.1.3 (≈ 35); câu độ dài lời hứa
+NOTES:42 đầu ở 4.1.3 (≈ 40); câu "Luật trần độ dời khách thấy bị ép nhiều nhất…" ở 4.2 (≈ 35); đoạn dấu vết ở tắc đường cố định và
+NOTES:43 tự tạo ở 4.5 (≈ 70); câu "Theo khung giờ…" ở 4.4 (≈ 15); cột "Đại lượng được đo" của Bảng lộ trình (≈ 0,1 tr.).
+NOTES:44 
+NOTES:45 ## 2. Dòng `% EV:` và sổ
+NOTES:46 
+NOTES:47 86 dòng `% EV:`. Ngoài các dòng của sổ chính và hai phụ lục, v4 trỏ tới **C4A-01…C4A-20** (phụ lục 4, tệp mới). Đã thay
+NOTES:48 các anchor cũ mà kiểm chứng sự kiện R25 §3 chỉ ra: X3-18 (đã bỏ) → C4A-15 (TEX08:136-137); "R23 #105" → X3-32; "R23 #51"
+NOTES:49 → X3-38; "R23 #57" → X3-28, X3-41; bỏ các mã RD (LR-xx, CX-xx) vì không phải dòng sổ; thêm T38:12 (C4A-17) cho câu chạy lại.
+NOTES:50 Chú thích đầu tệp nay nói X3 nằm ở phụ lục 2.
+NOTES:51 
+NOTES:52 ## 3. Nhãn
+NOTES:53 
+NOTES:54 **Phần A định nghĩa:** `chuong:thucnghiem`, `muc:c4-thietlap`, `muc:c4-kichban`, `muc:c4-taptu`, `muc:c4-chiso`,
+NOTES:55 `muc:c4-thamdo`, `muc:c4-ketqua`, `muc:c4-dieuphoi`, `muc:c4-chontran`, `muc:c4-congdon`; bảng `bang:c4-lotrinh`,
+NOTES:56 `bang:c4-thamso`, `bang:c4-taptu`, `bang:c4-chiso`, `bang:c4-chinh`, `bang:c4-nghiavu`, `bang:c4-phanbotre`,
+NOTES:57 `bang:c4-doidieuphoi`, `bang:c4-codinh`, `bang:c4-sang`, `bang:c4-tran120`, `bang:c4-congdon`; hình `hinh:c4-tran`.
+NOTES:58 **Đã bỏ:** `bang:c4-ngaykhung` (bảng ngày × khung; không chương nào khác trỏ tới nó; Chương 3 v3 không dùng).
+NOTES:59 
+NOTES:60 **Nhãn từ Chương 3 v3 (đều có):** `muc:kientruc`, `muc:bamoc`, `muc:luatc`, `muc:doichung`, `muc:dubao`, `muc:so`,
+NOTES:61 `muc:kiemtra`, `bang:rangbuoc`, `bang:luat`, `bang:kiemtran`, `eq:so`, `eq:dongnhat`, `nx:giunguyen`. Mới so với v1:
+NOTES:62 `muc:so`, `muc:kiemtra`, `bang:kiemtran`, `eq:dongnhat` (đều đã định nghĩa trong v3, đã kiểm bằng script).
+NOTES:63 
+NOTES:64 **Phần B phải định nghĩa:** `muc:c4-vaitro`, `muc:c4-dubao`, `muc:c4-dem`, `muc:c4-tuyet`, `muc:c4-hople` (và
+NOTES:65 `muc:c4-thaoluan` nếu dùng). Chương 3 v3 cũng trỏ tới `muc:c4-dubao`, `muc:c4-hople`, `muc:c4-vaitro`.
+NOTES:66 **Chương khác phải định nghĩa:** `muc:c1-cauhoi` (Chương 1), `phuluc:A`, `phuluc:C`. Khóa trích dẫn: `engelhardt2026`
+NOTES:67 (mới, metadata X3-40) và `schulz2026` (có sẵn).
+NOTES:68 
+NOTES:69 ## 4. Bằng chứng mới và cách tính
+NOTES:70 
+NOTES:71 | Con số mới in trong v4 | Giá trị | Nguồn |
+NOTES:72 |---|---|---|
+NOTES:73 | Khách trễ quá 30 giây so với lời hứa đầu, luật C trần 30 giây (cùng thước với luật hạn chót) | 292 / 2.338 = 12,5% gộp; 14,6% TB theo kịch bản; 28/34 kịch bản | C4A-01: `checks-ch4a-v2/check-ch4a-v2-2026-10-12.txt` (bộ đọc IVC), TSV Giai đoạn 1a, cột late30 ở ADD1:17 |
+NOTES:74 | M⁺-60 và V-30: trễ quá 60 s, không trễ quá 60 / 120 s | 79, 2.268, 2.336; 74, 2.262, 2.325 | C4A-02 (cùng output; EXP:5-6) |
+NOTES:75 | Tử số, mẫu số của "phần tính cho điều phối" | 23.027 / 31.353 s; 82 / 6.892 s; 4.836 / 12.450 s | C4A-03: `ledger-share-sums-2026-10-12.txt` |
+NOTES:76 | Tập tắc đường cố định: số khách đi chung, bị dời | 865 / 346 / 303 / 266 / 241; 388 / 62 / 41 / 20 / 6 | C4A-04: `fixed-shared-counts-2026-10-12.txt`; WBU:4-16 |
+NOTES:77 | Tập buổi sáng: C-60, C-150, C-180, C-240, C-300 | 661/47/614/659; 666/51/615/659; 665/50/615/656 | C4A-05: CAP:5,8-11; DIAL17:5,8-11 |
+NOTES:78 | Chiều tuyết: số yêu cầu | 864 (8 × 108) | C4A-06: INV:14-22 |
+NOTES:79 | Tập buổi sáng: lần chạy của các cấu hình được so | 136 trong 192 | C4A-07 |
+NOTES:80 | Tới sớm quá 60 s, lời hứa không dự báo | 7 / 3 / 1 (U / C-30 / C-120) | C4A-13 |
+NOTES:81 | Trễ lớn nhất | 660,1 s / 232,3 s | C4A-14 (CON:4,11) |
+NOTES:82 | Dùng lần đầu từ sổ có sẵn | độ dài lời hứa đầu 14,15 / 14,12 phút (B14); 1.238 yêu cầu bị từ chối khi không trần (3.672 − 2.434; CON:3); 1.075 trong 1.186 cũng bị từ chối khi không trần (D13); 61 trong 76 khách trễ ở khung 7 giờ (N-11); U 0 / 20.760 quyết định bị ép (X3-16); tới sớm có dự báo 8 / 4 / 2 (N-03, N-16, N-06) | sổ chính, phụ lục 1, 2 |
+NOTES:83 
+NOTES:84 Ba script: 32 + 3 + 5 phép đối chiếu với số đã có trong sổ, **0 FAIL**.
+NOTES:85 
+NOTES:86 ## 5. Bằng chứng còn thiếu (không viết, hoặc viết có giới hạn)
+NOTES:87 
+NOTES:88 1. **Cách lấy 108 yêu cầu từ một mẫu 10%** và vì sao khung 17 giờ có chung yêu cầu với khung 7, 8 giờ (người đọc D4, D7):
+NOTES:89    sổ chỉ có B02, B11 ("cùng nguồn nhu cầu"); không viết cơ chế.
+NOTES:90 2. **Bằng chứng chạy lại cho đúng kết quả cũ** (giảng viên G1): không có lần chạy lại mô phỏng nào trong sổ (L1a-04 là đọc
+NOTES:91    lại transcript). v4 chỉ nói thế giới mô phỏng không có nhiễu ngẫu nhiên (B06; RW7:6). **Với 8 lần chạy chiều tuyết, cấu
+NOTES:92    hình thế giới chưa được mở** (chỉ đọc được log kiểm `check-runs-snow`): câu "không có nhiễu ngẫu nhiên" chưa kiểm cho tập
+NOTES:93    này.
+NOTES:94 3. **Nguyên nhân của các lần dời sớm 1 mili giây** (C4A-19, UNVERIFIED): giữ "đúng 1 mili giây", không nêu nguyên nhân.
+NOTES:95 4. **Số khách đi chung chính xác của M⁺-60 và V-30**: chỉ có % làm tròn (EXP) → "chưa đếm" trong Bảng kết quả chính.
+NOTES:96 5. **Số kịch bản của tập kịch bản tĩnh** ("20 kịch bản" chỉ có trong OUTLINE, không có dòng sổ): không viết số.
+NOTES:97 6. **Bộ chạy, luật phục hồi của chiều tuyết**: vẫn "chưa kiểm lại" (X3-10).
+NOTES:98 7. **Giới hạn bộ sinh, bộ giải của bộ chạy cũ** (tập tắc đường cố định): chưa kiểm (C4A-18) → ghi ngoại lệ trong chú thích.
+NOTES:99 8. **Tử số theo từng kịch bản cho các tỉ lệ trung bình theo kịch bản** (Codex §5.7): có trong output gốc (T38A, W07X) nhưng
+NOTES:100    không chép vào chương; bảng chỉ ghi rõ mẫu số và cách gộp.
+NOTES:101 
+NOTES:102 ## 6. Chỗ lệch so với OUTLINE-V2 và so với v2, và lý do
+NOTES:103 
+NOTES:104 1. **Mở mục 4.2** không dùng câu trả lời mẫu của OUTLINE (bắt đầu bằng +31 lượt đúng giờ); theo quyết định về câu hỏi đệm,
+NOTES:105    câu mở nêu trước điều luật C giữ được (giới hạn theo từng khách 29,2 so với 590,1 giây; 0 so với 18 lượt trễ quá 5 phút),
+NOTES:106    rồi cái giá (−96 lượt, −242 khách đi chung), rồi số lượt đúng giờ như chỉ số phụ đổi chiều theo ngưỡng. Thêm **một câu
+NOTES:107    trỏ tới** `muc:c4-dem` với một con số (2.328 bằng 2.328 khi có dự báo và đệm 30 giây). Phân tích đầy đủ vẫn ở 4.8.
+NOTES:108 2. **Bảng 4.7 (ngày × khung) bị bỏ khỏi thân bài** để giữ ngân sách; giữ đoạn tóm tắt (34/34, 29/34, 25/25, 3 + 6). Dữ
+NOTES:109    liệu đầy đủ ở ADDENDUM-1 (N-22) nếu chủ sở hữu muốn đưa sang Phụ lục C.
+NOTES:110 3. **Bảng 4.4**: M⁺-60, V-30 có số trễ và không trễ (C4A-02); cột đi chung "chưa đếm".
+NOTES:111 4. **Bảng 4.9b**: đủ tám mức (C4A-05); các mức trùng mọi số đếm gộp một dòng; Hình (b) vẽ đủ tám mức. Tỉ lệ bị ép của luật
+NOTES:112    hạn chót ở tập buổi sáng (trung bình theo kịch bản) không đưa vào bảng (OUTLINE §2 quy tắc 3: không chung khối với số gộp);
+NOTES:113    v4 chỉ nêu đầu, giữa, cuối dãy (58,6 → 6,6 → 1,7%).
+NOTES:114 5. **Bảng 4.9a**: thêm số đếm cho hai cột tỉ lệ (C4A-04).
+NOTES:115 6. **Bảng 4.9c**: thêm hai dòng "tới sớm quá 60 s" (STYLE quy tắc 31).
+NOTES:116 7. **Cắt so với v2 vì ngân sách** (có thể khôi phục nếu bản dựng còn chỗ): câu chờ, ngồi xe của 2.207 khách chung (C05;
+NOTES:117    ≈ 45 tiếng); ví dụ trần 300 giây, 307,3 = 99,1 + 208,2 giây (N-30; ≈ 35 tiếng); dãy đủ bảy tỉ lệ bị ép của luật hạn
+NOTES:118    chót; số theo khung giờ của trần 120 giây (+26/+34 ở khung 8 giờ, +19/+20 ở khung 17 giờ; còn câu "dồn vào khung 8 và 17
+NOTES:119    giờ"); khoảng 61–79 / 61–68 giây của ba chỗ tách luật ở ví dụ cơ chế; câu "theo các bản ghi, một trần cho từng lần dời
+NOTES:120    cũng sẽ chặn gần như mọi phương án…" ở 4.5.
+NOTES:121 8. **Thuật ngữ**: "quyết định bị ép" thay "quyết định phải phục hồi" (khớp Chương 3 v3 và bảng thuật ngữ); định nghĩa theo mã
+NOTES:122    (C4A-10). "Hệ số tắc đường đo được" thay "hệ số tắc đường đo". "Khách bị phá lời hứa" thay "khách bị chính luật phá lời
+NOTES:123    hứa". Ký hiệu cấu hình (U, C-$B$, M⁺-$B$, V-30, FREE) được giải nghĩa trong chú thích Bảng tập thử, không thành danh sách
+NOTES:124    trong văn xuôi (OUTLINE: ký hiệu chỉ trong bảng).
+NOTES:125 
+NOTES:126 ## 7. Ghi chú cho người viết phần B
+NOTES:127 
+NOTES:128 - **Tên và định nghĩa:** dùng "quyết định bị ép" (không dùng "phải phục hồi"): lượt quyết định có ít nhất một xe bị ép,
+NOTES:129   tức luật lời hứa đã loại cả phương án giữ nguyên kế hoạch và xe đi theo phương án được giữ nhờ luật phục hồi, có ít nhất
+NOTES:130   một khách được miễn trừ; không đòi mọi phương án khác bị loại (C4A-10; `style/GLOSSARY-VI-v2.md`). Dùng "hệ số tắc đường
+NOTES:131   đo được". "Khách bị phá lời hứa".
+NOTES:132 - **Số đã in ở phần A, phần B chỉ cần trỏ:** Bảng 4.4 (U, C-30, M⁺-30, M⁺-60, V-30, không dự báo); Bảng nghĩa vụ; phân bố
+NOTES:133   trễ (trễ lớn nhất 660,1 / 232,3 s); phần dời do điều phối U / C-30 / C-120 kèm tử số, mẫu số của tỉ lệ sổ; Bảng trần 120
+NOTES:134   (khối có dự báo: trễ quá 60 s 137 / 10 / 65; tới sớm 8 / 4 / 2; không trễ 2.297 / 2.328 / 2.322 và 2.347 / 2.338 / 2.379;
+NOTES:135   dài thêm 7,18 / 7,37 / 7,27 s); cuối tuần 29,2 / 116,5 s; chiều tuyết 8/601, 25,2 s, 0/5.067; C-30 trễ quá 30 giây 292 /
+NOTES:136   2.338 (C4A-01); độ dài lời hứa đầu 14,15 / 14,12 phút (B14).
+NOTES:137 - **Phần A đã nói về đệm đúng một câu** (mục 4.2): khi có dự báo, U + đệm 30 giây cũng cho 2.328 lượt không trễ quá một phút,
+NOTES:138   bằng luật C có dự báo, nên khóa luận không dùng chỉ số này làm lý do chọn luật C. Mục 4.8 phải đưa câu trả lời đầy đủ theo
+NOTES:139   RD §8 và bảng của Codex R25 §6 (cùng độ dài lời hứa, hai phía, phần đuôi 68 / 11 / 1 so với 0 / 0 / 0, giới hạn theo từng
+NOTES:140   khách 590,1 so với 29,2 giây, cái giá 96 lượt và 242 khách đi chung; đệm U là phát lại trên quỹ đạo của U).
+NOTES:141 - **Khối "có dự báo" của Bảng trần 120 trỏ sang `muc:c4-dubao`**: 4.7 cần bàn 76 → 10 lượt trễ của luật C là kết quả phát
+NOTES:142   lại (người đọc hỏi).
+NOTES:143 - **Cho 4.10–4.11:** thời gian dừng 0 giây (B05) và không có bằng chứng chạy lại mô phỏng cho đúng kết quả cũ thuộc phần hạn
+NOTES:144   chế; giới hạn 2 yêu cầu mới áp cho cả lô của lượt, không phải "mỗi xe" (X3-32; sổ A24 sai chữ); 12 lần chạy luật C của
+NOTES:145   phép quét trên hệ số đo được chưa kiểm bản ghi chặn (C4A-08); nguyên nhân −1 ms chưa kiểm (C4A-19).
+NOTES:146 - **Đã bỏ** `bang:c4-ngaykhung`; đừng trỏ tới nó.
+NOTES:147 - Phần A chưa nói về: 0,17% (K24), 13,7 s, 3,2 s, 34/1.471, Họ B, học máy, sổ ba phần ngày thường / chiều tuyết, sàng lọc
+NOTES:148   bộ chọn, bộ đếm hợp lệ (N-25), 382.006 lần sửa.
+NOTES:149 
+NOTES:150 ## 8. Câu hỏi mở cho chủ sở hữu
+NOTES:151 
+NOTES:152 1. **Bản ghép là `-v4.tex`** (v2, v3 là lượt trung gian). Xác nhận dùng v4.
+NOTES:153 2. **Bảng ngày × khung**: bỏ hẳn, hay đưa sang Phụ lục C (dữ liệu có sẵn ở N-22)?
+NOTES:154 3. **Ba chỗ cắt vì ngân sách** (§6 ý 7: khách chung chờ +0,5 s / ngồi −10,5 s; ví dụ trần 300 giây; dãy đủ bảy tỉ lệ bị ép):
+NOTES:155    khôi phục nếu bản dựng thật còn chỗ?
+NOTES:156 4. **Độ dài thật**: ước lượng 13,0–14,4 trang chưa phải bố cục đo; cần một lần build để biết có phải cắt tiếp (§1) không.
+NOTES:157 5. **Một câu về đệm ở 4.2 có kèm một con số (2.328)**: chấp nhận, hay chỉ trỏ sang 4.8 không kèm số?
+NOTES:158 6. **Nguyên nhân −1 ms**: giữ "chưa kiểm", hay cho phép một phép đọc transcript chỉ đọc để kiểm giả thuyết làm tròn mili giây
+NOTES:159    trên từng cung (C4A-19)?
+NOTES:160 7. **Chiều tuyết**: bộ chạy và cấu hình thế giới vẫn chưa kiểm; có cần kiểm trước khi nộp không?
+
+REG:165 | C17 | Khoảng dự phòng γ hiệu chỉnh trên 15 ô là 222,259 s (β + γ = 252,259 s); 2/34 ô kiểm vượt γ (5,9%), cả hai ở khung 7h, cận trên Clopper–Pearson 95% là 17,4%. | γ 222,259 s; 2/34; CP 17,4%; khung 7h phủ 7/9 | T38:19-37; T38A:6-15 | VERIFIED-by-me | γ do một ô quyết định; không cấp bảo đảm cho ngày mới (D03:224-225). |
+REG:189 | D04 | Ở w07, M⁺ bị ép ở 58,6% / 35,5% / 13,0% / 6,6% / 6,8% / 2,8% / 1,7% / 1,7% quyết định tại các mức 30 / 60 / 90 / 120 / 150 / 180 / 240 / 300 s, còn C luôn 0%, và hai luật chở bằng nhau trong phạm vi 2 khách. | `[TB theo ô]` | W07X:20-29; W07:34-39 | VERIFIED-by-me | — |
+REG:190 | D05 | Ba chỗ hai luật C và M⁺ tách nhau ở 90–120 s đều có cùng cơ chế: một khách đang trên xe đã trễ 61–79 s do tắc đường và phép ghép thêm 61–68 s do điều phối vượt hạn chót của M⁺ nhưng không vượt ngân sách của C; mỗi lần như vậy C nhận thêm đúng 1 khách. | 79,0 + 68,3 s; 60,9 + 61,2 s | W07XM:2-16; W07X:48-62 | VERIFIED-by-me | Phân bổ theo phép chiếu mô hình (R15 row 17). |
+REG:198 | D13 | Trên 34 ô T3.8 dưới C-30, 148 yêu cầu cuối cùng bị từ chối và có ít nhất một phương án mang dấu vết bị chặn do ngân sách của khách khác (U chở 116 trong số đó); 1.186 lượt từ chối còn lại chỉ có lý do cấu trúc. | 148 (116 U chở, 32 U cũng từ chối); 1.075 + 111 = 1.186; tổng từ chối 1.334 | BUD:2-5; CON:10; CHK:191 | VERIFIED-by-me | Phân loại theo bản ghi, không chứng minh 148 khách bị từ chối **chỉ** vì trần (R15 row 59; R18 §4 Câu 2). |
+REG:204 | D19 | Chỉ 2/148 khách chặn đã tiêu ngân sách trước đó; cả 148 bản ghi đều có một bước dời đơn lẻ vượt B. | 2/148 | BUD:10; FJC:4-6 | VERIFIED-by-me | — |
+REG:289 | I05 | Chỉ có 5 ngày và các ô phụ thuộc nhau, mỗi ô một episode, nên 34 ô không phải 34 mẫu độc lập và không cấp bảo đảm quần thể. | 5 ngày | T38:88-95; D03:222-226; R18 §3 (line 251) | VERIFIED-by-me | — |
+REG:290 | I06 | Các kết quả T3.8, w07, w07x và dự báo đều là thăm dò: ngưỡng, biên, cách chia được chọn sau khi đã xem dữ liệu phát triển. | — | T38:8,88-89; W07X:5; FR:38,163 | VERIFIED-by-me | — |
+REG:392 | K39 | "72 khách C-30 trễ thuần vì kẹt xe." | "72 người không có thay đổi giờ trả do điều phối được ghi nhận." | R15 corr. 2 | VERIFIED-by-me | C21 |
+rewrite-2026-10/evidence/EVIDENCE-REGISTER-ADDENDUM-1.md:84 | N-07 | Dưới trần 120 giây, 103 trong 2.387 khách (4,32%) có giờ trả bị điều phối dời, không ai bị dời từ hai lần, tổng dời lớn nhất của một khách là 118,9 giây, 9 khách dùng từ 90% trần trở lên, 0 khách vượt trần và 0 trong 20.435 quyết định bị ép. | bị dời 103; ≥ 2 lần 0; lớn nhất 118,938 s; ≥ 0,9 B: 9; ≥ 0,5 B: 54; vượt 0; ép 0 / 20.435; Σ\|c\| của khách bị dời: TB 55,50 s, trung vị 62,54 s, p90 104,87 s (thứ hạng gần nhất) | ADD1:7,108,121; STG:39,44; CXS:89 | VERIFIED-by-me (script; 3 bộ đọc) | Mẫu số: khách được nhận (ở đây = khách được phục vụ, 2.387). |
+rewrite-2026-10/evidence/EVIDENCE-REGISTER-ADDENDUM-1.md:98 | N-21 | Theo nghĩa vụ của chính nó, luật hạn chót 30 giây có ít nhất một khách tới muộn hơn lời hứa đầu quá 30 giây ở 28 trong 34 kịch bản và bị ép ở 7.710 trong 20.103 quyết định; luật C trần 30 giây không phá trần ở kịch bản nào và không bị ép lần nào. | M⁺-30: phá hứa `[TB theo kịch bản]` 14,48%, `[gộp theo khách]` 289 / 2.338 = 12,36%; bị ép `[TB theo kịch bản]` 41,31%, gộp 7.710 / 20.103 = 38,35%; khung 7 giờ 9 / 9 kịch bản, 36,53%, ép 75,62% (gộp 3.447 / 4.564 = 75,53%); khung 8 giờ 14 / 14, 10,87%, 47,79%; khung 17 giờ 5 / 11, 1,04%, 4,99%; C-30: 0 / 34 kịch bản, 0 quyết định bị ép | ADD1:8,189-193; T38A:76-77,83 | VERIFIED-by-me (script; khớp T38A) | Phá hứa của M⁺-30 = khách được phục vụ có A − p₀ > 30 s (định nghĩa của `sweep_analyze` mà T38A dùng); C-30 = khách có Σ\|c\| > 30 s. Số gộp 38,35% là số LR-24 cần, trước đây chưa có. 299 khách có bản ghi forcedReference (ADD1:8) là một đếm khác. Luật hạn chót ở đây chỉ là phần hạn chót, ở 30 s thay vì 900 s (REG J10, J11). |
+rewrite-2026-10/evidence/EVIDENCE-REGISTER-ADDENDUM-1.md:103 | N-26 | Trên 8 kịch bản chiều tuyết 15/11/2018 (601 khách), luật C trần 30 giây có 8 khách bị điều phối dời, tổng dời lớn nhất của một khách là 25,2 giây, 0 khách vượt trần, 0 quyết định bị ép; 163 bản ghi chặn đều do một lần dời vượt trần. | 601 / 601 phục vụ; bị dời 8; ≥ 2 lần 0; lớn nhất 25,187 s; vượt 0; ép 0 / 5.067; bản ghi 163, chỉ do cộng dồn 0 | SNOW1:2-10 | VERIFIED-by-me (script) | Thay anchor F13 cho RD §8 mục 4 (xem 0.4). |
+rewrite-2026-10/evidence/EVIDENCE-REGISTER-ADDENDUM-1.md:143 | L1a-04 | Các số gốc của điều phối không trần và trần 30 giây được tái lập đúng từ các lần chạy đã lưu trước khi so với trần 120 giây. | U 2.434 / 203 / 102 / 18, 2.231 / 2.332, dự báo 137 / 87 / 17, 2.297 / 2.347, 7,18 s; C-30 2.338 / 76 / 11 / 0, 2.262 / 2.327, dự báo 10 / 0 / 0, 2.328 / 2.338, 7,37 s | C120R:16-19; STG:9-23; ADD1:12,14,17,19,34-64 | VERIFIED-by-me (script; khớp A) | Tái lập trên cùng transcript, không phải chạy lại mô phỏng. |
+rewrite-2026-10/evidence/EVIDENCE-REGISTER-ADDENDUM-1.md:144 | L1a-05 | Dưới trần 120 giây, 103 khách (4,32%) bị điều phối dời giờ trả, không ai từ hai lần; tổng dời của khách bị dời trung bình 55,5 giây, trung vị 62,5 giây, p90 104,9 giây, lớn nhất 118,9 giây; 0 khách vượt trần và 0 quyết định bị ép. | 103 / 2.387; 0; 55,50 / 62,54 / 104,87 / 118,938 s; vượt 0; ép 0 / 20.435 | C120R:21-22; STG:39,44; CXS:89; ADD1:108,121 | VERIFIED-by-me (script; 3 bộ đọc) | = N-07. |
+rewrite-2026-10/evidence/EVIDENCE-REGISTER-ADDENDUM-1.md:158 - **A15 / A24** → thêm C-120: bão hòa 3.504 / 3.504, bỏ 1 yêu cầu (N-25). **C13** → thêm số gộp bị ép 7.710 / 20.103 =
+rewrite-2026-10/style/GLOSSARY-VI-v2.md:5 > 1. **"bị ép; quyết định bị ép"** (dòng 93 của bản gốc): bỏ "luật lời hứa loại hết phương án của một xe" và "buộc
+rewrite-2026-10/style/GLOSSARY-VI-v2.md:10 >    không được miễn), vì định nghĩa cũ của "bị ép" dựa vào cách hiểu "loại hết" của dòng này.
+rewrite-2026-10/style/GLOSSARY-VI-v2.md:102 | ưu tiên chi phí | cost-first | Thứ tự tiêu chí bỏ các tiêu chí ổn định: số quyết định bị ép → số khách được nhận → chi phí vận hành. | R17:225. Đây mới là thí nghiệm tùy chọn, **chưa chạy**. Không viết như một kết quả. |
+rewrite-2026-10/style/GLOSSARY-VI-v2.md:105 | bị ép; quyết định bị ép | forced decision | Lượt quyết định có ít nhất một xe bị ép: luật lời hứa đã loại cả phương án giữ nguyên kế hoạch của xe, và xe đi theo phương án được giữ nhờ luật phục hồi (phương án giữ nguyên, hoặc với luật không tệ hơn, một phương án đổi kế hoạch), có ít nhất một khách được miễn trừ. Không đòi mọi phương án khác bị loại. | `08-chuong4.tex:1177-1178`, `:1234`. Giữ "bị ép", định nghĩa một lần. **Sửa ở v2:** định nghĩa cũ ("loại hết phương án của một xe … buộc xe giữ nguyên kế hoạch và ghi một lần vi phạm") lệch mã. Mã (`C:/Code/RideBound-noworse/src/`): `RideBound.Runner/Protocol/RunnerSession.cs:1012-1027` (chứng chỉ "không bình thường" khi có ít nhất một miễn trừ); `RideBound.Algorithms/Commitments/HardVectorCandidateAssessor.cs:252-300` (phục hồi chỉ xét khi phương án giữ nguyên bị bộ kiểm loại; với luật không tệ hơn, giữ thêm phương án đổi kế hoạch); `RideBound.Application/Commitments/CommitmentDecisionValidator.cs:141-145`; `RideBound.Algorithms/Policies/SolverBackedRidePoolingPolicy.cs:443-463`. Vi phạm chỉ được ghi khi lời hứa, giai đoạn hay mã lỗi đổi (sổ X3-09b). Sổ: X3-30, X3-09, C4A-10. |
+rewrite-2026-10/style/GLOSSARY-VI-v2.md:106 | luật phục hồi giữ nguyên kế hoạch; luật phục hồi không tệ hơn | recovery: keep route; no-worse-than-reference | Hai cách xử lý khi xe bị ép. Giữ nguyên kế hoạch: xe đi tiếp kế hoạch cũ. Không tệ hơn: xe được đổi kế hoạch nếu không vi phạm thêm luật nào và trên mỗi luật đã vi phạm không tệ hơn kế hoạch cũ. | `08-chuong4.tex:1177-1178`, `:1319-1320`. Đặt tên bằng lời thay cho "(a)", "(b)". |
+
+BIBLIOGRAPHY CITATION CHECK
+engelhardt2026: []
+schulz2026: ['E:\\Code\\Report_INT3508\\ridebound\\noi-dung\\10-tai-lieu.tex:116']
+horl2022: []

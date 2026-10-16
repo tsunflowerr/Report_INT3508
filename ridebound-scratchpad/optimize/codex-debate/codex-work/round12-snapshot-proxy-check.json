@@ -1,0 +1,99 @@
+{
+  "scope": "One C-30 calibration run, snapshot observability only; no fitting or simulation; no factor CSV read.",
+  "transcript": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w07\\transcript-00.ndjson",
+  "transcript_sha256": "870f451a90ed7c4c41f229fee20ee37a122cf762cef16bc8e704b96ef5f63172",
+  "verified_frames": 1333,
+  "snapshots": [
+    {
+      "ordinal": 5,
+      "sim_time_ms": 0,
+      "bin": 0,
+      "version": 1,
+      "positive_initial_pairs": 9120,
+      "missing_initial_pairs": 0,
+      "median_ratio": 1.0,
+      "min_ratio": 1.0,
+      "max_ratio": 1.0
+    },
+    {
+      "ordinal": 146,
+      "sim_time_ms": 900000,
+      "bin": 1,
+      "version": 2,
+      "positive_initial_pairs": 9120,
+      "missing_initial_pairs": 0,
+      "median_ratio": 1.1007713560614585,
+      "min_ratio": 1.1007313505607021,
+      "max_ratio": 1.1007934045476708
+    },
+    {
+      "ordinal": 422,
+      "sim_time_ms": 1800000,
+      "bin": 2,
+      "version": 3,
+      "positive_initial_pairs": 9120,
+      "missing_initial_pairs": 0,
+      "median_ratio": 1.2789704128872175,
+      "min_ratio": 1.2789492930277913,
+      "max_ratio": 1.2789858605558264
+    },
+    {
+      "ordinal": 677,
+      "sim_time_ms": 2700000,
+      "bin": 3,
+      "version": 4,
+      "positive_initial_pairs": 9120,
+      "missing_initial_pairs": 0,
+      "median_ratio": 1.3563471648905976,
+      "min_ratio": 1.3563139931740615,
+      "max_ratio": 1.3563671823057488
+    },
+    {
+      "ordinal": 926,
+      "sim_time_ms": 3600000,
+      "bin": 4,
+      "version": 5,
+      "positive_initial_pairs": 9120,
+      "missing_initial_pairs": 0,
+      "median_ratio": 1.4455595283240334,
+      "min_ratio": 1.4455387615797173,
+      "max_ratio": 1.4455753291077522
+    },
+    {
+      "ordinal": 1136,
+      "sim_time_ms": 4500000,
+      "bin": 5,
+      "version": 6,
+      "positive_initial_pairs": 9120,
+      "missing_initial_pairs": 0,
+      "median_ratio": 1.5007785344678441,
+      "min_ratio": 1.500731350560702,
+      "max_ratio": 1.5008126117341134
+    },
+    {
+      "ordinal": 1235,
+      "sim_time_ms": 5400000,
+      "bin": 6,
+      "version": 7,
+      "positive_initial_pairs": 9120,
+      "missing_initial_pairs": 0,
+      "median_ratio": 1.579237907924204,
+      "min_ratio": 1.5792296440760605,
+      "max_ratio": 1.5792458963107427
+    },
+    {
+      "ordinal": 1292,
+      "sim_time_ms": 6300000,
+      "bin": 7,
+      "version": 8,
+      "positive_initial_pairs": 9120,
+      "missing_initial_pairs": 0,
+      "median_ratio": 1.6190670024467815,
+      "min_ratio": 1.619047619047619,
+      "max_ratio": 1.6191126279863481
+    }
+  ],
+  "all_initial_pairs_present": true,
+  "initial_snapshot_time_ms": 0,
+  "same_bin_matrices_identical": true
+}

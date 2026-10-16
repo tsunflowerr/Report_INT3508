@@ -1,0 +1,114 @@
+{
+  "csv_sha256": "2604de641e392da49ffb5cecc22eff0c195fa33f8a680c1e94a182bdd06c733e",
+  "rows": 15023,
+  "unique_runs": 179,
+  "source_rows": {
+    "t38": 4772,
+    "t38cal": 1076,
+    "w07": 1325,
+    "wp14r": 7850
+  },
+  "source_arm_groups": 10,
+  "duplicate_prefix_keys": 0,
+  "checked_rows": 30,
+  "checked_runs": 10,
+  "checks_per_row": 14,
+  "derived_field_mismatch_counts": {},
+  "causal_count_mismatch_counts": {},
+  "rows_with_causal_count_mismatch": 0,
+  "rows_with_initial_final_vehicle_change": 0,
+  "sources": [
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r1-w07\\transcript-00.ndjson",
+      "sha256": "a684528c1468b1300a2a3235712abf8b120c0c101d0a4e19286c000d703cb528",
+      "frames": 1372,
+      "applied_decisions": 455,
+      "promised": 49,
+      "completed_promised": 49,
+      "unfinished_promised": 0
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\C-30-d20181114-s10-r3-w07\\transcript-00.ndjson",
+      "sha256": "870f451a90ed7c4c41f229fee20ee37a122cf762cef16bc8e704b96ef5f63172",
+      "frames": 1333,
+      "applied_decisions": 442,
+      "promised": 47,
+      "completed_promised": 47,
+      "unfinished_promised": 0
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-t38-v1\\U-d20181114-s10-r3-w07\\transcript-00.ndjson",
+      "sha256": "9d50fe9cd3f7628a77faf67f75a7d05a8293dbd07314907e5637543321873924",
+      "frames": 1333,
+      "applied_decisions": 442,
+      "promised": 47,
+      "completed_promised": 47,
+      "unfinished_promised": 0
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\C-30-d20181112-s10-r1-w07\\transcript-00.ndjson",
+      "sha256": "e6bedaed839b0b4fca95dffa4e1ac7eec17f8782900fadf6adfe48c2414fd4fc",
+      "frames": 2161,
+      "applied_decisions": 718,
+      "promised": 87,
+      "completed_promised": 87,
+      "unfinished_promised": 0
+    },
+    {
+      "path": "C:\\RideBoundData\\research\\tier3-w07-v1\\U-d20181112-s10-r1-w07\\transcript-00.ndjson",
+      "sha256": "3768862b519787a57df0a528907aa15a013d2e559533e59c418e12907f174863",
+      "frames": 2212,
+      "applied_decisions": 735,
+      "promised": 90,
+      "completed_promised": 90,
+      "unfinished_promised": 0
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-b1-ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "f3bb7a0cbb4c225625bbfd5200e5d3d269dc1cb02199499b953fe69eb2fbf78a",
+      "frames": 2479,
+      "applied_decisions": 824,
+      "promised": 104,
+      "completed_promised": 104,
+      "unfinished_promised": 0
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-c1-budget120-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "51764ebaae32879e1887007c4fd60576a8f7e7b4597ea892807882a47b78421c",
+      "frames": 2461,
+      "applied_decisions": 818,
+      "promised": 102,
+      "completed_promised": 102,
+      "unfinished_promised": 0
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-c1-budget60-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "62b3ec32312db7a1ea41ddafc08fdbe23f7fd0e3e0c7ea9844b1aaff0405ac07",
+      "frames": 2419,
+      "applied_decisions": 804,
+      "promised": 100,
+      "completed_promised": 100,
+      "unfinished_promised": 0
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-c1-h6ref-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "a0155e2d060bbc3ea45ab51bf0c01614bf2b88e0f80f05c9100bb513e178c6d8",
+      "frames": 2377,
+      "applied_decisions": 790,
+      "promised": 98,
+      "completed_promised": 98,
+      "unfinished_promised": 0
+    },
+    {
+      "path": "E:\\RideBoundData\\wp14r\\development-v6-ledger\\w14-d20181112-s10-r1-w08-c1-nobudget-s7\\attempt-01\\output\\transcript-00.ndjson",
+      "sha256": "40e4b53bd7783148e18dcf76b1b2747b0135881ef6473665fb00b58821656bd8",
+      "frames": 2482,
+      "applied_decisions": 825,
+      "promised": 103,
+      "completed_promised": 103,
+      "unfinished_promised": 0
+    }
+  ],
+  "selection_rule": "Three deterministic rows from first cell of every source-arm group: earliest publication, highest CSV load/onboard, median rider; replace duplicates with first remaining rider.",
+  "structural_warning": "CSV loader uses completed cohort, final assignment and later alight; exact agreement with causal counts in a sample does not validate general timing."
+}

@@ -1,0 +1,14 @@
+verdict: PASS
+ten_R25_status_rows: PASS
+all_brief_numeric_topics: PASS
+four_rejections: PASS
+code_and_data_reuse: PASS
+nine_ranked_corrections: PASS
+all_morning_arms: PASS
+successful_main_probe: PASS
+successful_extra_probe: PASS
+source_anchors_early_repaired: PASS
+prior_master_preserved: PASS
+no_passenger_blame_wording: PASS
+report_bytes=39708
+This checks artifact coverage and saved-probe completion, not LaTeX rendering or source equivalence.

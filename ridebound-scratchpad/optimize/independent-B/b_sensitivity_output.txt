@@ -1,0 +1,20 @@
+1. fresh RNG per statistic, fixed stratum weights (primary reading):
+   chainM forced (pp, 97.5%)              [-25.5182, -6.7589]
+   chainM ownBreak (pp, 97.5%)            [-18.6613, -14.9193]
+   chainC served (97.5%)                  [-1.1429, +0.2381]
+   C-30F - Mplus-30F served (95%)         [+0.0000, +0.1905]
+2. fresh RNG per statistic, per-replicate pooled-count weighting:
+   chainM forced (pp, 97.5%)              [-25.4099, -6.2134]
+   chainM ownBreak (pp, 97.5%)            [-20.2887, -13.1682]
+   chainC served (97.5%)                  [-0.9091, +0.2000]
+   C-30F - Mplus-30F served (95%)         [+0.0000, +0.1875]
+3. one RNG shared across statistics in the listed order, fixed weights:
+   chainM forced (pp, 97.5%)              [-25.5182, -6.7589]
+   chainM ownBreak (pp, 97.5%)            [-18.6613, -14.9193]
+   chainC served (97.5%)                  [-1.1429, +0.1769]
+   C-30F - Mplus-30F served (95%)         [+0.0000, +0.1905]
+4. fresh RNG, fixed weights, 0-based index read as 1-based (124th/9875th and 249th/9750th):
+   chainM forced (pp, 97.5%)              [-25.5182, -6.7589]
+   chainM ownBreak (pp, 97.5%)            [-18.6613, -14.9193]
+   chainC served (97.5%)                  [-1.1429, +0.2381]
+   C-30F - Mplus-30F served (95%)         [+0.0000, +0.1905]

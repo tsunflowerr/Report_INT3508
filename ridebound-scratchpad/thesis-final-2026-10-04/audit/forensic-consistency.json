@@ -1,0 +1,1237 @@
+{
+  "pdf": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\thesis-final-2026-10-04\\thesis_final.pdf",
+  "pdf_sha256": "e7a4712663ad2167f2bbbffd7330fa0c64a580964cff558b3d3dc2ecba14454c",
+  "pages": 68,
+  "checks": [
+    {
+      "audit_id": "H6-b1-served",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 1735,
+      "expected": 1735,
+      "unit": "served",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-b1-publications",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 54311,
+      "expected": 54311,
+      "unit": "publications",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-b1-decisionMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 74443002,
+      "expected": 74443002,
+      "unit": "decisionMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-b1-visibleMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 83587440,
+      "expected": 83587440,
+      "unit": "visibleMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-b1-unchangedMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9202610,
+      "expected": 9202610,
+      "unit": "unchangedMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-b1-requests",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 2160,
+      "expected": 2160,
+      "unit": "requests",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-b1-ratio",
+      "status": "passed",
+      "check": "Pooled decision/visible ratio",
+      "result": 89.06003342128913,
+      "expected": 89.06003342128913,
+      "unit": "%",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nobudget-served",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 1655,
+      "expected": 1655,
+      "unit": "served",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nobudget-publications",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 50201,
+      "expected": 50201,
+      "unit": "publications",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nobudget-decisionMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 22485233,
+      "expected": 22485233,
+      "unit": "decisionMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nobudget-visibleMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 32176319,
+      "expected": 32176319,
+      "unit": "visibleMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nobudget-unchangedMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9703084,
+      "expected": 9703084,
+      "unit": "unchangedMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nobudget-requests",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 2160,
+      "expected": 2160,
+      "unit": "requests",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nobudget-ratio",
+      "status": "passed",
+      "check": "Pooled decision/visible ratio",
+      "result": 69.88130929457779,
+      "expected": 69.88130929457779,
+      "unit": "%",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget300-served",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 1641,
+      "expected": 1641,
+      "unit": "served",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget300-publications",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 49349,
+      "expected": 49349,
+      "unit": "publications",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget300-decisionMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 15808804,
+      "expected": 15808804,
+      "unit": "decisionMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget300-visibleMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 25441394,
+      "expected": 25441394,
+      "unit": "visibleMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget300-unchangedMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9641404,
+      "expected": 9641404,
+      "unit": "unchangedMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget300-requests",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 2160,
+      "expected": 2160,
+      "unit": "requests",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget300-ratio",
+      "status": "passed",
+      "check": "Pooled decision/visible ratio",
+      "result": 62.13812026180641,
+      "expected": 62.13812026180641,
+      "unit": "%",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget120-served",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 1608,
+      "expected": 1608,
+      "unit": "served",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget120-publications",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 47118,
+      "expected": 47118,
+      "unit": "publications",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget120-decisionMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 5063257,
+      "expected": 5063257,
+      "unit": "decisionMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget120-visibleMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 14318112,
+      "expected": 14318112,
+      "unit": "visibleMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget120-unchangedMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9260231,
+      "expected": 9260231,
+      "unit": "unchangedMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget120-requests",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 2160,
+      "expected": 2160,
+      "unit": "requests",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget120-ratio",
+      "status": "passed",
+      "check": "Pooled decision/visible ratio",
+      "result": 35.362602276054275,
+      "expected": 35.362602276054275,
+      "unit": "%",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget60-served",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 1579,
+      "expected": 1579,
+      "unit": "served",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget60-publications",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 45713,
+      "expected": 45713,
+      "unit": "publications",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget60-decisionMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 1108780,
+      "expected": 1108780,
+      "unit": "decisionMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget60-visibleMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 10291057,
+      "expected": 10291057,
+      "unit": "visibleMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget60-unchangedMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9183767,
+      "expected": 9183767,
+      "unit": "unchangedMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget60-requests",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 2160,
+      "expected": 2160,
+      "unit": "requests",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-budget60-ratio",
+      "status": "passed",
+      "check": "Pooled decision/visible ratio",
+      "result": 10.774209102135961,
+      "expected": 10.774209102135961,
+      "unit": "%",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-c1-served",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 1581,
+      "expected": 1581,
+      "unit": "served",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-c1-publications",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 45542,
+      "expected": 45542,
+      "unit": "publications",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-c1-decisionMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 128020,
+      "expected": 128020,
+      "unit": "decisionMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-c1-visibleMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9332101,
+      "expected": 9332101,
+      "unit": "visibleMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-c1-unchangedMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9204481,
+      "expected": 9204481,
+      "unit": "unchangedMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-c1-requests",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 2160,
+      "expected": 2160,
+      "unit": "requests",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-c1-ratio",
+      "status": "passed",
+      "check": "Pooled decision/visible ratio",
+      "result": 1.3718239869028421,
+      "expected": 1.3718239869028421,
+      "unit": "%",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nopickuplock-served",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 1583,
+      "expected": 1583,
+      "unit": "served",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nopickuplock-publications",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 45644,
+      "expected": 45644,
+      "unit": "publications",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nopickuplock-decisionMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 187002,
+      "expected": 187002,
+      "unit": "decisionMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nopickuplock-visibleMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9398276,
+      "expected": 9398276,
+      "unit": "visibleMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nopickuplock-unchangedMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9212298,
+      "expected": 9212298,
+      "unit": "unchangedMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nopickuplock-requests",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 2160,
+      "expected": 2160,
+      "unit": "requests",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-nopickuplock-ratio",
+      "status": "passed",
+      "check": "Pooled decision/visible ratio",
+      "result": 1.9897479069565525,
+      "expected": 1.9897479069565525,
+      "unit": "%",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze300-served",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 1583,
+      "expected": 1583,
+      "unit": "served",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze300-publications",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 45644,
+      "expected": 45644,
+      "unit": "publications",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze300-decisionMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 187002,
+      "expected": 187002,
+      "unit": "decisionMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze300-visibleMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9398276,
+      "expected": 9398276,
+      "unit": "visibleMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze300-unchangedMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9212298,
+      "expected": 9212298,
+      "unit": "unchangedMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze300-requests",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 2160,
+      "expected": 2160,
+      "unit": "requests",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze300-ratio",
+      "status": "passed",
+      "check": "Pooled decision/visible ratio",
+      "result": 1.9897479069565525,
+      "expected": 1.9897479069565525,
+      "unit": "%",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze600-served",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 1581,
+      "expected": 1581,
+      "unit": "served",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze600-publications",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 45542,
+      "expected": 45542,
+      "unit": "publications",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze600-decisionMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 128020,
+      "expected": 128020,
+      "unit": "decisionMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze600-visibleMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9332101,
+      "expected": 9332101,
+      "unit": "visibleMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze600-unchangedMs",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 9204481,
+      "expected": 9204481,
+      "unit": "unchangedMs",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze600-requests",
+      "status": "passed",
+      "check": "Sum of recorded per-cell values",
+      "result": 2160,
+      "expected": 2160,
+      "unit": "requests",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-freeze600-ratio",
+      "status": "passed",
+      "check": "Pooled decision/visible ratio",
+      "result": 1.3718239869028421,
+      "expected": 1.3718239869028421,
+      "unit": "%",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-loss",
+      "status": "passed",
+      "check": "Completion loss divided by all arrivals",
+      "result": 7.12962962962963,
+      "expected": 7.12962962962963,
+      "unit": "percentage points",
+      "evidence_pointer": "h6-frontier-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "H6-primary-verdict",
+      "status": "passed",
+      "check": "Loss exceeds the frozen 1 pp maximum",
+      "result": true,
+      "expected": true,
+      "unit": "FAIL preserved",
+      "evidence_pointer": "evidence-audit.md; H6 freeze",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-600-b1",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 0.0,
+      "expected": 0.0,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-600-nobudget",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 3.7037037037037037,
+      "expected": 3.7037037037037037,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-600-budget300",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 4.351851851851852,
+      "expected": 4.351851851851852,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-600-budget120",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 5.87962962962963,
+      "expected": 5.87962962962963,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-600-budget60",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 7.222222222222222,
+      "expected": 7.222222222222222,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-600-c1",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 7.12962962962963,
+      "expected": 7.12962962962963,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-900-b1",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 0.0,
+      "expected": 0.0,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-900-nobudget",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 4.675925925925926,
+      "expected": 4.675925925925926,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-900-budget300",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 4.768518518518518,
+      "expected": 4.768518518518518,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-900-budget120",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 6.666666666666667,
+      "expected": 6.666666666666667,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-900-budget60",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 8.194444444444445,
+      "expected": 8.194444444444445,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "WIN-900-c1",
+      "status": "passed",
+      "check": "Served loss at the stated window and denominator",
+      "result": 8.564814814814815,
+      "expected": 8.564814814814815,
+      "unit": "percentage points",
+      "evidence_pointer": "service-budget-summary.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-runs",
+      "status": "passed",
+      "check": "15 calibration plus 34 paired test cells times five arms",
+      "result": 185,
+      "expected": 185,
+      "unit": "runs",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-revisions",
+      "status": "passed",
+      "check": "All checked drop revisions summed",
+      "result": 382006,
+      "expected": 382006,
+      "unit": "revisions",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-gamma",
+      "status": "passed",
+      "check": "Order statistic ceil((15+1)*0.9)=15",
+      "result": 222259,
+      "expected": 222259,
+      "unit": "ms",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-bound",
+      "status": "passed",
+      "check": "beta+gamma",
+      "result": 252259,
+      "expected": 252259,
+      "unit": "ms",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-score-cover",
+      "status": "passed",
+      "check": "Number of C test cells below gamma",
+      "result": 32,
+      "expected": 32,
+      "unit": "of 34 cells",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-visible-cover",
+      "status": "passed",
+      "check": "Number below actual visible bound",
+      "result": 33,
+      "expected": 33,
+      "unit": "of 34 cells",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-exceedance",
+      "status": "passed",
+      "check": "Actual visible bound exceedance",
+      "result": 233,
+      "expected": 233,
+      "unit": "ms",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-C-max",
+      "status": "passed",
+      "check": "Maximum conduct ledger across all 49 C runs",
+      "result": 29239,
+      "expected": 29239,
+      "unit": "ms",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-U-served",
+      "status": "passed",
+      "check": "Completed lifecycle count",
+      "result": 2434,
+      "expected": 2434,
+      "unit": "riders",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-U-mean-own",
+      "status": "passed",
+      "check": "Unweighted mean of 34 cell fractions",
+      "result": 0.0,
+      "expected": 0.0,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-U-pooled-own",
+      "status": "passed",
+      "check": "Pooled count divided by pooled denominator",
+      "result": 0.0,
+      "expected": 0.0,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-U-mean-forced",
+      "status": "passed",
+      "check": "Unweighted mean of decision fractions",
+      "result": 0.0,
+      "expected": 0.0,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-C-30-served",
+      "status": "passed",
+      "check": "Completed lifecycle count",
+      "result": 2338,
+      "expected": 2338,
+      "unit": "riders",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-C-30-mean-own",
+      "status": "passed",
+      "check": "Unweighted mean of 34 cell fractions",
+      "result": 0.0,
+      "expected": 0.0,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-C-30-pooled-own",
+      "status": "passed",
+      "check": "Pooled count divided by pooled denominator",
+      "result": 0.0,
+      "expected": 0.0,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-C-30-mean-forced",
+      "status": "passed",
+      "check": "Unweighted mean of decision fractions",
+      "result": 0.0,
+      "expected": 0.0,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-Mplus-30-served",
+      "status": "passed",
+      "check": "Completed lifecycle count",
+      "result": 2338,
+      "expected": 2338,
+      "unit": "riders",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-Mplus-30-mean-own",
+      "status": "passed",
+      "check": "Unweighted mean of 34 cell fractions",
+      "result": 0.14479634423080617,
+      "expected": 0.14479634423080612,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-Mplus-30-pooled-own",
+      "status": "passed",
+      "check": "Pooled count divided by pooled denominator",
+      "result": 0.12360992301112061,
+      "expected": 0.12360992301112061,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-Mplus-30-mean-forced",
+      "status": "passed",
+      "check": "Unweighted mean of decision fractions",
+      "result": 0.41311366478314354,
+      "expected": 0.4131136647831436,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-Mplus-60-served",
+      "status": "passed",
+      "check": "Completed lifecycle count",
+      "result": 2347,
+      "expected": 2347,
+      "unit": "riders",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-Mplus-60-mean-own",
+      "status": "passed",
+      "check": "Unweighted mean of 34 cell fractions",
+      "result": 0.04231312476913661,
+      "expected": 0.042313124769136616,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-Mplus-60-pooled-own",
+      "status": "passed",
+      "check": "Pooled count divided by pooled denominator",
+      "result": 0.03365999147848317,
+      "expected": 0.03365999147848317,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-Mplus-60-mean-forced",
+      "status": "passed",
+      "check": "Unweighted mean of decision fractions",
+      "result": 0.22527695460808897,
+      "expected": 0.22527695460808897,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-V-30-served",
+      "status": "passed",
+      "check": "Completed lifecycle count",
+      "result": 2336,
+      "expected": 2336,
+      "unit": "riders",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-V-30-mean-own",
+      "status": "passed",
+      "check": "Unweighted mean of 34 cell fractions",
+      "result": 0.21576716443748592,
+      "expected": 0.21576716443748586,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-V-30-pooled-own",
+      "status": "passed",
+      "check": "Pooled count divided by pooled denominator",
+      "result": 0.1952054794520548,
+      "expected": 0.1952054794520548,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-V-30-mean-forced",
+      "status": "passed",
+      "check": "Unweighted mean of decision fractions",
+      "result": 0.5377577711376696,
+      "expected": 0.5377577711376698,
+      "unit": "fraction",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-service-pp",
+      "status": "passed",
+      "check": "96/all test arrivals",
+      "result": 2.6143790849673203,
+      "expected": 2.6143790849673203,
+      "unit": "percentage points",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-service-relative",
+      "status": "passed",
+      "check": "96/U completions",
+      "result": 3.9441248972884138,
+      "expected": 3.944124897288414,
+      "unit": "% relative",
+      "evidence_pointer": "t38-raw-checkpoint-recheck.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-overlap",
+      "status": "passed",
+      "check": "Sum of unique shared trip IDs by source day",
+      "result": 75,
+      "expected": 75,
+      "unit": "original trips",
+      "evidence_pointer": "t38-actual-trip-id-overlap.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T38-source-days",
+      "status": "passed",
+      "check": "Distinct source days in overlap audit",
+      "result": 5,
+      "expected": 5,
+      "unit": "days",
+      "evidence_pointer": "t38-actual-trip-id-overlap.json",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "W07-Mplus-30-mean",
+      "status": "passed",
+      "check": "Mean of eight cell shares, not pooled share",
+      "result": 24.036980941192166,
+      "expected": 24.036980941247,
+      "unit": "% unweighted cell mean",
+      "evidence_pointer": "w07-per-cell-own-promise.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "W07-Mplus-30-pooled",
+      "status": "passed",
+      "check": "Sum broken riders divided by sum promised riders",
+      "result": 23.636363636363637,
+      "expected": 23.636363636363637,
+      "unit": "% pooled riders",
+      "evidence_pointer": "w07-per-cell-own-promise.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "W07-Mplus-60-mean",
+      "status": "passed",
+      "check": "Mean of eight cell shares, not pooled share",
+      "result": 7.25046645016951,
+      "expected": 7.250466450153,
+      "unit": "% unweighted cell mean",
+      "evidence_pointer": "w07-per-cell-own-promise.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "W07-Mplus-60-pooled",
+      "status": "passed",
+      "check": "Sum broken riders divided by sum promised riders",
+      "result": 7.110438729198185,
+      "expected": 7.110438729198185,
+      "unit": "% pooled riders",
+      "evidence_pointer": "w07-per-cell-own-promise.csv",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T2-main-den",
+      "status": "passed",
+      "check": "Strong prediction rows excluding predeclared weak cases",
+      "result": 102,
+      "expected": 102,
+      "unit": "predictions",
+      "evidence_pointer": "tier2-recomputed-report.txt",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T2-main-num",
+      "status": "passed",
+      "check": "Correct strong prediction rows",
+      "result": 98,
+      "expected": 98,
+      "unit": "predictions",
+      "evidence_pointer": "tier2-recomputed-report.txt",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T2-morning-den",
+      "status": "passed",
+      "check": "Strong prediction rows excluding predeclared weak cases",
+      "result": 32,
+      "expected": 32,
+      "unit": "predictions",
+      "evidence_pointer": "tier2-recomputed-report.txt",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T2-morning-num",
+      "status": "passed",
+      "check": "Correct strong prediction rows",
+      "result": 31,
+      "expected": 31,
+      "unit": "predictions",
+      "evidence_pointer": "tier2-recomputed-report.txt",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T2-evening-den",
+      "status": "passed",
+      "check": "Strong prediction rows excluding predeclared weak cases",
+      "result": 40,
+      "expected": 40,
+      "unit": "predictions",
+      "evidence_pointer": "tier2-recomputed-report.txt",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T2-evening-num",
+      "status": "passed",
+      "check": "Correct strong prediction rows",
+      "result": 40,
+      "expected": 40,
+      "unit": "predictions",
+      "evidence_pointer": "tier2-recomputed-report.txt",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "T2-Mplus-fail",
+      "status": "passed",
+      "check": "Main variable-world Mplus-30 commitment rejection count",
+      "result": 19,
+      "expected": 19,
+      "unit": "of 20 runs",
+      "evidence_pointer": "tier2-recomputed-report.txt",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "REVIEW-A",
+      "status": "passed",
+      "check": "Frozen report preserved before editorial audit",
+      "result": "5b716e6cbcd842c6c2c4b98cc639ca5f82929298afea187751df9398a42471c2",
+      "expected": "5b716e6cbcd842c6c2c4b98cc639ca5f82929298afea187751df9398a42471c2",
+      "unit": "SHA256",
+      "evidence_pointer": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\thesis-final-2026-10-04\\audit\\reviews\\reviewer-A.md",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "REVIEW-B",
+      "status": "passed",
+      "check": "Frozen report preserved before editorial audit",
+      "result": "851a84a7f0a3b992b34fb9ab37d708d309b838317a7799d7958beff6fd463d08",
+      "expected": "851a84a7f0a3b992b34fb9ab37d708d309b838317a7799d7958beff6fd463d08",
+      "unit": "SHA256",
+      "evidence_pointer": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\thesis-final-2026-10-04\\audit\\reviews\\reviewer-B.md",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    },
+    {
+      "audit_id": "REVIEW-C",
+      "status": "passed",
+      "check": "Frozen report preserved before editorial audit",
+      "result": "3cae59193c84d01ecfefe0370dee32b809e887a3f3446b63a62b4a98d7a1521a",
+      "expected": "3cae59193c84d01ecfefe0370dee32b809e887a3f3446b63a62b4a98d7a1521a",
+      "unit": "SHA256",
+      "evidence_pointer": "E:\\Code\\Report_INT3508\\ridebound-scratchpad\\thesis-final-2026-10-04\\audit\\reviews\\reviewer-C.md",
+      "reviewer_overlap": "editorial audit; not reviewer consensus"
+    }
+  ]
+}

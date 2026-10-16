@@ -1,0 +1,86 @@
+# report_stage1a.py prefix=stage1a-2026-10-10; arms ('U', 'C-30', 'C-120'); 34 T3.8 test cells; 3672 requests per arm
+
+## 0. Input validity (per arm)
+- U: runs 34; summary status {'pass': 34}; run-00 status {'succeeded': 34}; inventory ['0da63eaf']; requests 3672; lifecycle {'completed': 2434, 'rejected': 1238}; promised riders 2434 (rider rows 2434); served rows 2434 vs lifecycle completed 2434; alighted without promise 0; forecast-active cells 21; prune classes own == judge in every run: True; drop-witness limit values {}
+- C-30: runs 34; summary status {'pass': 34}; run-00 status {'succeeded': 34}; inventory ['0da63eaf']; requests 3672; lifecycle {'completed': 2338, 'rejected': 1334}; promised riders 2338 (rider rows 2338); served rows 2338 vs lifecycle completed 2338; alighted without promise 0; forecast-active cells 21; prune classes own == judge in every run: True; drop-witness limit values {30000: 845}
+- C-120: runs 34; summary status {'pass': 34}; run-00 status {'succeeded': 34}; inventory ['0da63eaf']; requests 3672; lifecycle {'completed': 2387, 'rejected': 1285}; promised riders 2387 (rider rows 2387); served rows 2387 vs lifecycle completed 2387; alighted without promise 0; forecast-active cells 21; prune classes own == judge in every run: True; drop-witness limit values {120000: 524}
+
+## 1. Baseline reproduction (archived T3.8 U and C-30; task brief values)
+- U     served       expected  2434 got  2434  OK
+- C-30  served       expected  2338 got  2338  OK
+- U     late60       expected   203 got   203  OK
+- C-30  late60       expected    76 got    76  OK
+- U     late120      expected   102 got   102  OK
+- C-30  late120      expected    11 got    11  OK
+- U     timely60     expected  2231 got  2231  OK
+- C-30  timely60     expected  2262 got  2262  OK
+- U     timely120    expected  2332 got  2332  OK
+- C-30  timely120    expected  2327 got  2327  OK
+- U     fc_late60    expected   137 got   137  OK
+- C-30  fc_late60    expected    10 got    10  OK
+- U     fc_timely60  expected  2297 got  2297  OK
+- C-30  fc_timely60  expected  2328 got  2328  OK
+BASELINES ALL REPRODUCED
+
+## 2. Outcomes vs the FIRST drop promise (served riders; per-request shares over 3,672)
+arm   | served (share req) | naive late>60 | late>120 | late>300 | early>60 | timely<=60 (per req) | timely<=120 (per req)
+U     |  2434 (66.29%) |  203 ( 8.34%) |  102 (4.19%) |  18 (0.74%) |   7 (0.29%) |  2231 (60.76%) |  2332 (63.51%)
+C-30  |  2338 (63.67%) |   76 ( 3.25%) |   11 (0.47%) |   0 (0.00%) |   3 (0.13%) |  2262 (61.60%) |  2327 (63.37%)
+C-120 |  2387 (65.01%) |  132 ( 5.53%) |   21 (0.88%) |   0 (0.00%) |   1 (0.04%) |  2255 (61.41%) |  2366 (64.43%)
+forecast quote (causal-no15, D0 = display(t0, p0); naive in inactive cells):
+arm   | fc late>60 | fc late>120 | fc late>300 | fc early>60 | fc timely<=60 (per req) | fc timely<=120 (per req) | mean quote extension
+U     |  137 (5.63%) |  87 (3.57%) |  17 |   8 (0.33%) |  2297 (62.55%) |  2347 (63.92%) |  7.18 s
+C-30  |   10 (0.43%) |   0 (0.00%) |   0 |   4 (0.17%) |  2328 (63.40%) |  2338 (63.67%) |  7.37 s
+C-120 |   65 (2.72%) |   8 (0.34%) |   0 |   2 (0.08%) |  2322 (63.24%) |  2379 (64.79%) |  7.27 s
+
+## 3. Dispatch changes of the drop promise (ACCEPTED riders; S = sum |c| of later drop revisions)
+- U: accepted 2434; drop-exposed 174 (7.15%; served among them 174); riders with >=2 nonzero c 12 (max k 3); S among exposed: mean 137.7 s, p50 117.0, p90 260.7, max 590.1; exposed with net signed c < 0: 2; (no budget) S >= 27 s: 146, S > 30 s: 144, S >= 108 s: 96, S > 120 s: 86
+- C-30: accepted 2338; drop-exposed 33 (1.41%; served among them 33); riders with >=2 nonzero c 0 (max k 1); S among exposed: mean 10.9 s, p50 8.3, p90 28.0, max 29.2; exposed with net signed c < 0: 4; S >= 0.9 B (27 s): 4; S >= 0.5 B: 10; overshoots S > B: 0 (S > B + 1 ms: 0)
+- C-120: accepted 2387; drop-exposed 103 (4.32%; served among them 103); riders with >=2 nonzero c 0 (max k 1); S among exposed: mean 55.5 s, p50 62.5, p90 104.9, max 118.9; exposed with net signed c < 0: 3; S >= 0.9 B (108 s): 9; S >= 0.5 B: 54; overshoots S > B: 0 (S > B + 1 ms: 0)
+
+## 4. Budget prune records (acknowledged decisions; recorded first-failing drop witness only) and forced decisions
+- U: budget-pruned candidates 0 by class {}; single-step (per-step-also) 0; cumulative-only 0 in runs []; decisions with >=1 cumulative-only 0; distinct new requests in them 0, finally rejected 0; acknowledged decisions 20760; non-normal (forced) decisions 0; riders with forced-reference breach 0; forcedReference breaches 0
+- C-30: budget-pruned candidates 845 by class {'per-step-also': 845}; single-step (per-step-also) 845; cumulative-only 0 in runs []; decisions with >=1 cumulative-only 0; distinct new requests in them 0, finally rejected 0; acknowledged decisions 20101; non-normal (forced) decisions 0; riders with forced-reference breach 0; forcedReference breaches 0
+- C-120: budget-pruned candidates 524 by class {'cumulative-only': 3, 'per-step-also': 521}; single-step (per-step-also) 521; cumulative-only 3 in runs ['d20181114-s10-r3-w08', 'd20181115-s10-r1-w08', 'd20181118-s10-r3-w08']; decisions with >=1 cumulative-only 3; distinct new requests in them 3, finally rejected 2; acknowledged decisions 20435; non-normal (forced) decisions 0; riders with forced-reference breach 0; forcedReference breaches 0
+    cumulative-only record: C-120 d20181114-s10-r3-w08 new ['rq-ebccd435e2ebc9c855aadd78099a397098d00b6e8db52dc6b4b715e8ad0b7c79'] witness (rider, before_ms, delta_ms, after_ms, limit_ms) [['rq-7cfd6335300df902a18021e43c851939ee2979b40bb3460c319f59ff30396d0d', 25844, 99027, 124871, 120000]]
+    cumulative-only record: C-120 d20181115-s10-r1-w08 new ['rq-fe75a63d2e6d4fcb2776555e6dd663cba86d0ac9cd24224b028cd5f6cacab896'] witness (rider, before_ms, delta_ms, after_ms, limit_ms) [['rq-31a067b0fbee1f80806cf6c101245f713e0c684ebe538ec98715c87a291a0415', 58874, 91584, 150458, 120000]]
+    cumulative-only record: C-120 d20181118-s10-r3-w08 new ['rq-3e358915954c9c23fe14927283f55aeba6bdd926a27af04325b52ca19267f235'] witness (rider, before_ms, delta_ms, after_ms, limit_ms) [['rq-7f2c511678c6ae19255fdfeb155772c6504c4e65f96215352368d4456d3eb5ee', 105508, 99301, 204809, 120000]]
+
+## 5. Shared rides (served rider with another rider on board at an overlapping time, same vehicle)
+- U: shared completions 555 of 2434 served (22.80%); per request 15.11%
+- C-30: shared completions 313 of 2338 served (13.39%); per request 8.52%
+- C-120: shared completions 428 of 2387 served (17.93%); per request 11.66%
+
+## 6. Served-set overlap ((cell, requestId) of served riders)
+- C-120 vs C-30: common 2266; only C-120 121; only C-30 72
+- C-120 vs U: common 2271; only C-120 116; only U 163
+- U vs C-30: common 2207; only U 227; only C-30 131
+  C-120-only (vs C-30) riders also served by U: 93 of 121
+
+## 7. Per window (served; naive late>60; timely<=60 per window requests; forecast late>60 / timely<=60)
+- w07 U    : requests 972; served 516; late>60 70 (13.57%); timely<=60 446 (45.88%); timely<=120 498; fc late>60 11; fc timely<=60 505
+- w07 C-30 : requests 972; served 511; late>60 61 (11.94%); timely<=60 450 (46.30%); timely<=120 500; fc late>60 2; fc timely<=60 509
+- w07 C-120: requests 972; served 515; late>60 63 (12.23%); timely<=60 452 (46.50%); timely<=120 503; fc late>60 5; fc timely<=60 510
+- w08 U    : requests 1512; served 1014; late>60 67 (6.61%); timely<=60 947 (62.63%); timely<=120 977; fc late>60 60; fc timely<=60 954
+- w08 C-30 : requests 1512; served 975; late>60 15 (1.54%); timely<=60 960 (63.49%); timely<=120 975; fc late>60 8; fc timely<=60 967
+- w08 C-120: requests 1512; served 1001; late>60 49 (4.90%); timely<=60 952 (62.96%); timely<=120 992; fc late>60 40; fc timely<=60 961
+- w17 U    : requests 1188; served 904; late>60 66 (7.30%); timely<=60 838 (70.54%); timely<=120 857; fc late>60 66; fc timely<=60 838
+- w17 C-30 : requests 1188; served 852; late>60 0 (0.00%); timely<=60 852 (71.72%); timely<=120 852; fc late>60 0; fc timely<=60 852
+- w17 C-120: requests 1188; served 871; late>60 20 (2.30%); timely<=60 851 (71.63%); timely<=120 871; fc late>60 20; fc timely<=60 851
+
+## 8. Per cell served, C-120 vs C-30 and vs U (counts of cells)
+- C-120 vs C-30: more served in 23 cells, equal in 8, fewer in 3
+- C-120 vs U: more served in 5 cells, equal in 11, fewer in 18
+
+## 9. Extra validation against earlier Claude outputs (not stop rules)
+- U/C-30 drop-exposed 174/33 (budget-use-check-2026-10-09.txt: 174/33); C-30 S >= 0.9 B 4 (4); U max S 590.1 s (590.1); C-30 max S 29.2 s (29.2)
+- C-30 prune classes {'per-step-also': 845} (cumulative-decisive-check-2026-10-10.txt: per-step-also 845)
+- shared U 22.80% / C-30 13.39% (q2-cap-dial-t38-v2-2026-10-10.txt: 22.80% / 13.39%)
+- forecast mean extension U 7.2 s / C-30 7.4 s (cap-vs-pad-frontier: 7.2 / 7.4)
+
+## 10. Predictions of C120-PLAN.md (sealed), evaluated as written
+P1 PASS: jobs with status pass 34/34; non-normal (forced) decisions 0; riders with sum|c| > 120 s 0
+P2 PASS: served 2387 (needs >= 2,362; C-30 2338, U 2434; gap recovered 49 of 96)
+P3 PASS: naive late>60 132 (needs strictly between 76 and 203)
+P4 PASS: timely<=120 2366 (needs >= 2,327)
+P5 FAIL: recorded cumulative-only drop-budget prune records 3 (needs <= 2)

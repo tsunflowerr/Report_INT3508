@@ -1,0 +1,1 @@
+R34 complementary raw probe; SHA256 verified frames; no source imports; strict A-p0 thresholds; half-open sharing.

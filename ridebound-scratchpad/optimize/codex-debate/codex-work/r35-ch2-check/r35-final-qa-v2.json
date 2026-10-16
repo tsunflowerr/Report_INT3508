@@ -1,0 +1,17 @@
+{
+  "final_file": "R35-CH2-FACTCHECK-CODEX-v2.md",
+  "audit_items": 156,
+  "decision_counts": {
+    "ACCEPT": 106,
+    "ACCEPT WITH CORRECTIONS": 46,
+    "REJECT": 4
+  },
+  "markdown_table_blocks": 7,
+  "all_items_inside_valid_tables": true,
+  "ranked_replacements": 14,
+  "verified_citation_keys": 15,
+  "final_bytes": 65458,
+  "final_sha256": "93e6453b11be6a5661b6f298b4b586ae1ec9894710956027676f0f466ed795c1",
+  "source_draft_unchanged_by_task": true,
+  "latest_report": "R35-CH2-FACTCHECK-CODEX-v2.md"
+}

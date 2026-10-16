@@ -1,0 +1,26 @@
+[
+  {
+    "name": "bharti2026",
+    "url": "https://arxiv.org/pdf/2601.19601",
+    "pages": 26,
+    "sha256": "543abfdd64a1d3ed3ed9726a4fe9f898a2e00fe38ece7868788afb4594b5a6c6",
+    "bytes": 1626894
+  },
+  {
+    "name": "hsara2021",
+    "url": "https://optimization-online.org/wp-content/uploads/2021/07/8479.pdf",
+    "pages": 21,
+    "sha256": "e4f5e91f10db5c10e83fc041b59db3e8392ea3ca96a2b17a8b67c797397adcc5",
+    "bytes": 837776
+  },
+  {
+    "name": "paradiso2025",
+    "url": "https://www.research.unipd.it/retrieve/7404cd4d-161a-4cd8-9577-ea1517147529/1-s2.0-S0191261524002613-main.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "celik2026",
+    "url": "https://research.tue.nl/files/376517617/1-s2.0-S0191261525002309-main.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

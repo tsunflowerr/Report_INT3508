@@ -1,0 +1,59 @@
+% Cập nhật ngày 15/10/2026. Nguồn mới: results/stage1b-report.txt, mục 2, 5.
+\chapter*{Tóm tắt}
+\addcontentsline{toc}{chapter}{Tóm tắt}
+
+Trong dịch vụ đi chung xe, giờ trả đã hứa có thể bị dời khi bộ điều phối ghép thêm khách hoặc khi thời gian đi thay
+đổi. Khóa luận đặc tả và cài đặt luật C trong RideBound: tổng độ lớn phần dời giờ trả tính cho điều phối của mỗi
+khách trong cả chuyến không vượt một trần cố định. Mỗi lần dời được đo so với giờ trả tính lại khi giữ nguyên kế
+hoạch cũ, mốc đã có ở Hörl và Zwick. Luật C đi cùng lời hứa theo dự báo tắc đường và sổ theo từng khách; sổ phân
+biệt phần tính cho điều phối, phần được dự báo giải thích và phần còn lại.
+% EV: A01; A06; X3-12; J01; J03; J35. Giới hạn có điều kiện ở muc:giunguyen.
+
+Phép đo dùng FleetPy trên 34 kịch bản Manhattan, với 3.672 yêu cầu mỗi cấu hình. Khóa luận so hai cách chọn phương
+án: ưu tiên ổn định và ưu tiên chi phí kế hoạch. Khi cùng giữ trần 30 giây, cách thứ hai phục vụ 2.364 thay vì 2.338
+lượt và có 432 thay vì 313 khách hoàn thành chuyến có đi chung xe. Đổi lại, số khách bị sửa giờ trả tăng từ 33 lên
+106. Không khách nào vượt trần ở cả hai cách chọn. Với cách ưu tiên chi phí, bỏ trần tăng số lượt phục vụ từ 2.364
+lên 2.502, nhưng số lượt trễ hơn lời hứa đầu chưa tính dự báo quá một phút tăng từ 72 lên 379. Các nhóm khách được
+phục vụ khác nhau, nên các chênh lệch mô tả đánh đổi giữa các cấu hình.
+% EV: S15-01 (report mục 2, 5d--5f); S15-02 (kiểm lại số từ trích xuất).
+
+Khi tính lại lời hứa có dự báo trên hành trình đã ghi của cấu hình ưu tiên chi phí có trần, số lượt trễ quá một
+phút là 11 trong 2.364 lượt phục vụ. Đây là điều chỉnh giờ hứa, không làm xe chạy nhanh hơn. Đối chứng hạn chót
+và đệm lời hứa cho thấy luật C không vượt trội ở mọi thước đo. Các kết quả có tính thăm dò, chỉ áp cho mô phỏng tải
+thấp với hệ số tắc đường chung toàn thành phố. Khóa luận chưa chọn một trần tối ưu hoặc xác nhận mức hài lòng của
+khách; phần dự báo dùng hồ sơ lịch sử đơn giản, chưa phải một mô hình dự báo giao thông mới.
+% EV: S15-01 (5b); C01; C10; K05; K36; I01; I05; F01--F04.
+
+\vspace{6pt}
+\noindent\textbf{Từ khóa:} điều phối xe đi chung, lời hứa giờ trả, trần theo từng khách, lời hứa theo dự báo,
+sổ theo từng khách, mô phỏng FleetPy.
+\clearpage
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+In ride-pooling, promised drop-off times may change when a dispatcher inserts riders or travel times change.
+This thesis specifies and implements rule C in RideBound: each rider has a fixed cap on the sum of the magnitudes
+of dispatch-charged drop-off changes over the trip. Each change is measured against the updated drop-off time
+under the existing plan, a reference already used by Hörl and Zwick. Rule C is combined with forecast-based
+promises and a per-rider ledger separating dispatch-charged changes, the part explained by the forecast, and the
+remainder.
+
+Measurements use FleetPy on 34 Manhattan scenarios, with 3,672 requests per configuration. Two selection orders
+are compared: stability-first and planned-cost-first. Under the same 30-second cap, planned-cost-first serves
+2,364 rather than 2,338 riders, and 432 rather than 313 served riders share a vehicle. In exchange, the number
+whose drop-off promise is revised rises from 33 to 106. Neither capped configuration exceeds its dispatch-change
+budget. Under planned-cost-first, removing the cap raises service from 2,364 to 2,502, but arrivals more than one
+minute after the initial unadjusted promise rise from 72 to 379. Served populations differ, so these are
+descriptive configuration trade-offs.
+
+Replaying forecast-based promises on the capped planned-cost-first trajectories leaves 11 of 2,364 served
+riders more than one minute late. This changes the quoted time, not vehicle movement. Deadline and padding
+comparisons show that rule C does not dominate every measure. The findings are exploratory and limited to the
+low-load simulation with city-wide traffic factors. No optimal budget or passenger-satisfaction claim is made;
+the forecast uses a simple historical profile rather than a new traffic-prediction model.
+
+\vspace{6pt}
+\noindent\textbf{Keywords:} ride-pooling dispatch, promised drop-off time, per-rider cap, forecast-based promise,
+per-rider ledger, FleetPy simulation.
+\clearpage

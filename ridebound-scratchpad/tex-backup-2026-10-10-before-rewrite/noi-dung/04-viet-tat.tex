@@ -1,0 +1,62 @@
+\chapter*{Danh mục từ viết tắt và ký hiệu}
+\addcontentsline{toc}{chapter}{Danh mục từ viết tắt và ký hiệu}
+
+\vspace{4pt}
+\noindent\textbf{Từ viết tắt}
+\vspace{4pt}
+
+\begin{longtable}{@{}p{2.6cm}p{4.6cm}p{7.6cm}@{}}
+\toprule
+\textbf{Viết tắt} & \textbf{Cụm từ đầy đủ} & \textbf{Ý nghĩa}\\
+\midrule
+\endhead
+ODRP & On-Demand Ride-Pooling & Dịch vụ đi chung xe theo yêu cầu, ghép nhiều khách vào một xe.\\
+DARP & Dial-a-Ride Problem & Bài toán đưa đón theo yêu cầu với cặp điểm đón--trả.\\
+VRP & Vehicle Routing Problem & Bài toán định tuyến phương tiện.\\
+RTV & Request--Trip--Vehicle & Đồ thị ba tầng trong Alonso-Mora và cộng sự (2017).\\
+ILP & Integer Linear Programming & Quy hoạch tuyến tính nguyên; ở đây là bài toán đóng gói tập.\\
+ETA & Estimated Time of Arrival & Giờ đến dự kiến được công bố cho hành khách.\\
+MPS & Master Production Schedule & Lịch sản xuất chính trong hệ MRP.\\
+MRP & Material Requirements Planning & Hoạch định nhu cầu vật tư.\\
+VOT & Value of Time & Giá trị thời gian, tính bằng tiền trên giờ.\\
+VOR & Value of Reliability & Giá trị độ tin cậy.\\
+SLA & Service Level Agreement & Thỏa thuận mức dịch vụ.\\
+TLC & Taxi \& Limousine Commission & Cơ quan quản lý taxi New York, nguồn dữ liệu chuyến đi.\\
+pp & percentage point & Điểm phần trăm.\\
+\bottomrule
+\end{longtable}
+
+\vspace{8pt}
+\noindent\textbf{Ký hiệu chính}
+\vspace{4pt}
+
+\begin{longtable}{@{}p{2.6cm}p{12.2cm}@{}}
+\toprule
+\textbf{Ký hiệu} & \textbf{Ý nghĩa}\\
+\midrule
+\endhead
+$v$ & Lời hứa đã công bố lần gần nhất cho hành khách (\emph{previous}).\\
+$e$ & Chính kế hoạch đó, chiếu lại từ vị trí thật hiện tại của xe (\emph{exogenous}).\\
+$p$ & Lời hứa mà phương án đang xét sẽ tạo ra (\emph{proposed}).\\
+$d$ & Độ lớn phần thay đổi khi giữ nguyên tuyến, $d = |e-v|$; không đồng nhất với tác động thuần
+của giao thông, vì gồm cả tiến độ thực của xe (mục \ref{muc:phanra}).\\
+$A$ & Độ dời do quyết định tại một lần công bố, $A = |p-e|$; sổ cái theo cơ sở hành vi cộng dồn
+$A$ (\emph{conduct}, \texttt{decisionInduced}).\\
+$B$ & Độ dời khách nhìn thấy tại một lần công bố, $B = |p-v|$; sổ cái theo cơ sở kết quả cộng dồn
+$B$ (\emph{outcome}, \texttt{customerVisible}).\\
+$x_t, c_t, z_t$ & Các phần có dấu tại lần công bố $t$: $x_t = e_t - v_t$, $c_t = p_t - e_t$,
+$z_t = p_t - v_t = x_t + c_t$.\\
+$p_0$ & Lời hứa đầu tiên của một hành khách.\\
+$C, X, V$ & Tổng trên chuỗi công bố của $A$, $d$ và $B$ (mục \ref{muc:hocong}).\\
+$E, M, M^{+}$ & $E = |p_T - p_0|$; $M = \max_t |p_t - p_0|$; $M^{+} = \max_t \max(0, p_t - p_0)$.\\
+$D^{+}$ & Phần muộn cuối so với lời hứa đầu, $D^{+} = \max(0, p_T - p_0)$.\\
+$\beta$ & Trần ngân sách cam kết trên một chiều, một hành khách.\\
+$\kappa$ & Trần chung của một họ cổng trong mục \ref{muc:hocong}.\\
+$\ell$ & Độ chùng của hạn chót tính từ lời hứa đầu.\\
+$\Omega$ & Thời gian chờ tối đa cho phép (cửa sổ đón).\\
+$\Delta$ & Độ trễ tối đa cho phép (ràng buộc thời gian trên xe).\\
+$k$ & Số mũ khuếch đại hệ số tắc đường trong thí nghiệm trôi dạt.\\
+\bottomrule
+\end{longtable}
+
+\clearpage

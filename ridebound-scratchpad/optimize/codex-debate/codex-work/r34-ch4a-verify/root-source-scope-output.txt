@@ -1,0 +1,242 @@
+R34 root source/scope probe; all source inputs read-only.
+
+SOURCE C:\Code\RideBound-noworse\src\RideBound.Runner\Protocol\RunnerSession.cs
+1012:             var afterHash = OnlineStateCanonicalizer.CalculateHash(stateToStage);
+1013:             var breachWitnesses = ForcedBreachWitnesses(validation.ForcedExemptions);
+1014:             certificate = new CertificateShell(
+1015:                 CertificateStatus.Produced,
+1016:                 "VALIDATED",
+1017:                 new CommitmentCertificateBody(
+1018:                     "1.0.0",
+1019:                     "commitment-validator-v1",
+1020:                     breachWitnesses.Length == 0,
+1021:                     _stateHash,
+1022:                     afterHash,
+1023:                     publications.Select(value => value.PublicationId).ToArray(),
+1024:                     stateToStage.Run.Vehicles.Count,
+1025:                     stateToStage.Run.Requests.Values.Count(
+1026:                         value => value.IsAcceptedActive),
+1027:                     breachWitnesses));
+1090:     /// <summary>
+1091:     /// ADR-075: every decision that keeps a gate-rejected route is certified as
+1092:     /// non-normal operation, with one witness per breached gate code of each rider,
+1093:     /// including a decision that repeats an exemption without a new breach record.
+1094:     /// Under no-worse recovery a rider exempted on a changed route is certified with the stage
+1095:     /// `forcedNoWorse`, so a kept (frozen) vehicle stays distinguishable from one still serving.
+1096:     /// </summary>
+1097:     private static CertificateWitnessContract[] ForcedBreachWitnesses(
+1098:         IReadOnlyList<ForcedReferenceExemption> exemptions) =>
+1099:         exemptions
+1100:             .OrderBy(value => value.RequestId.Value, StringComparer.Ordinal)
+1101:             .SelectMany(
+1102:                 exemption => exemption.WitnessCodes.Select(
+1103:                     code => new CertificateWitnessContract(
+1104:                         exemption.NoWorse ? "forcedNoWorse" : "forcedReference",
+1105:                         code,
+1106:                         exemption.VehicleId.Value,
+1107:                         exemption.RequestId.Value)))
+1108:             .ToArray();
+
+SOURCE C:\Code\RideBound-noworse\src\RideBound.Algorithms\Commitments\HardVectorCandidateAssessor.cs
+244:             // The safety no-op is the one candidate whose rejection says why a vehicle
+245:             // lost its fallback. Identify it only when the set is well formed (exactly
+246:             // one no-op); otherwise the selection model reports the malformed set.
+247:             var noOps = requireSafetyNoOp
+248:                 ? set.Candidates.Where(value => value.IsNoOp).ToArray()
+249:                 : Array.Empty<InsertionCandidate>();
+250:             var noOpPrune = noOps.Length == 1
+251:                 ? hardPruned.FirstOrDefault(
+252:                     value => value.CandidateId == noOps[0].CandidateId)
+253:                 : null;
+254: 
+255:             // Only a validator rejection can be forced; a no-op that could not even be
+256:             // applied to the reduced state is a physical failure and stays fatal.
+257:             if (forcedReferenceRecovery
+258:                 && noOpPrune is not null
+259:                 && hardValidationWitnesses.ContainsKey(noOpPrune.CandidateId))
+260:             {
+261:                 var forced = AssessForcedCandidate(
+262:                     context,
+263:                     noOps[0],
+264:                     set.VehicleId,
+265:                     warningProfiles,
+266:                     noWorse: false,
+267:                     rankNonExempt: forcedNoWorse);
+268: 
+269:                 if (forced.Witness is not null)
+270:                 {
+271:                     return Failure(forced.Witness, noOps[0], set.VehicleId);
+272:                 }
+273: 
+274:                 if (forced.Assessment is not null)
+275:                 {
+276:                     retained.Add(noOps[0]);
+277:                     pruned.Remove(noOpPrune);
+278:                     hardPruned.Remove(noOpPrune);
+279:                     assessments.Add(forced.Assessment);
+280:                     forcedVehicles.Add(set.VehicleId);
+281:                     noOpPrune = null;
+282: 
+283:                     if (forcedNoWorse)
+284:                     {
+285:                         // Only validator rejections can be relaxed; a candidate that could not be
+286:                         // applied, or failed physically, stays pruned. Ordinal order keeps it
+287:                         // deterministic.
+288:                         foreach (var prune in hardPruned
+289:                                      .Where(value => hardValidationWitnesses.ContainsKey(value.CandidateId))
+290:                                      .OrderBy(value => value.CandidateId, StringComparer.Ordinal)
+291:                                      .ToArray())
+292:                         {
+293:                             var candidate = set.Candidates.Single(
+294:                                 value => value.CandidateId == prune.CandidateId);
+295:                             var relaxed = AssessForcedCandidate(
+296:                                 context,
+297:                                 candidate,
+298:                                 set.VehicleId,
+299:                                 warningProfiles,
+300:                                 noWorse: true,
+301:                                 rankNonExempt: true);
+
+SOURCE C:\Code\RideBound-noworse\src\RideBound.Algorithms\Policies\SolverBackedRidePoolingPolicy.cs
+443:     /// <summary>
+444:     /// The vehicles whose selected plan is a forced option (the kept no-op or, under no-worse
+445:     /// recovery, a changed route); null when none is, so a run without a forced selection
+446:     /// carries exactly the decision it had before.
+447:     /// </summary>
+448:     private static IReadOnlySet<VehicleId>? SelectedForcedVehicles(
+449:         FleetSelection selection,
+450:         IReadOnlyDictionary<string, HardVectorCandidateAssessment>? hardAssessments,
+451:         IReadOnlySet<VehicleId>? forcedReferenceVehicles)
+452:     {
+453:         if (forcedReferenceVehicles is null || hardAssessments is null)
+454:         {
+455:             return null;
+456:         }
+457: 
+458:         var selected = selection.VehiclePlans
+459:             .Where(value => hardAssessments[value.Candidate.CandidateId].IsForcedReference)
+460:             .Select(value => value.VehicleId)
+461:             .ToFrozenSet();
+462:         return selected.Count == 0 ? null : selected;
+463:     }
+
+SOURCE E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\drafts\07-chuong3-v3.tex
+353: \subsection{Phương án giữ nguyên kế hoạch dưới luật C}
+354: \label{muc:giunguyen}
+355: 
+356: Gọi \textbf{(N)} là giả thiết, áp cho lượt đang xét: (i) kế hoạch đang chạy không vi phạm ràng buộc cấu trúc
+357: (sức chứa, đón trước trả, phần kế hoạch đã cố định), nên bộ sinh dựng được phương án giữ nguyên; (ii) giờ trả
+358: theo phương án giữ nguyên được tính bằng đúng phép chiếu dùng cho $e$. RideBound thỏa (ii) vì dùng cùng một hàm
+359: chiếu với cùng đầu vào, và luôn giữ phương án giữ nguyên khi cắt còn 100 phương án.
+360: % EV: A22; X3-31 (GEN:171-182, 213-229); ServiceQualityAllowance.cs:66-73; X3-27 (VALID:355-360, 1048-1064; HVA:144-165; CandidatePortfolioRetainer.cs:102-113; WP4:15)
+361: 
+362: \begin{nhanxet}
+363: \label{nx:giunguyen}
+364: Giả sử (N) và mọi khách có lời hứa của xe có $0 \le L_r \le B$. Khi đó luật C không loại phương án giữ nguyên
+365: kế hoạch.
+366: \end{nhanxet}
+367: 
+368: \noindent\textit{Chứng minh.} Theo (N)(ii), với mọi khách $r$ có lời hứa của xe, $p_r = e_r$, nên
+369: $L_r + |p_r - e_r| = L_r \le B$ và phép kiểm~\eqref{eq:luatc} cho qua. \hfill$\square$
+370: % EV: A22 (theo cấu tạo, giả thiết N); A06; X3-27
+371: 
+372: Khóa và các trần 0 cũng so với kế hoạch giữ nguyên, nên phương án này qua cả chúng. Nếu (N) đúng ở mọi lượt thì
+373: $L_r \le B$ được giữ: $L_r = 0$ lúc xác nhận, và nếu $L_r \le B$ ở đầu một lượt thì không có miễn trừ nào, phương
+374: án được chọn đã qua~\eqref{eq:luatc}, nên $L_r$ mới vẫn không vượt $B$. Khi đó xe dùng luật C hay điều phối không
+375: trần không bao giờ bị ép; tính chất này vì vậy không riêng của luật C.
+376: % EV: A10 (LOCK:156-161); X3-06; X3-26 (véc-tơ c của phương án giữ nguyên bằng 0 ở mọi chiều); X3-09 (HVA:255-259); X3-25
+377: 
+378: Nhận xét đúng do cách đặt luật, không phải kết quả thực nghiệm; số liệu chỉ phù hợp với nó: trên tập kiểm tra
+379: chính, 0 trong 20.101 quyết định bị ép với trần 30 giây và 0 trong 20.435 với trần 120 giây (mỗi quyết định ứng với
+380: một lượt của cả đội xe).
+381: % EV: A21; N-21; X3-16 (STG:43-44); N-07; X3-30 (RunnerSession.cs:1013-1027); SPEC:31-34
+682: % EV: X3-15 (ProtocolPrimitives.cs:104-121; RunnerSession.cs:177-214: chỉ xử lý hello, initializeRun, eventBatch, decisionApplied, checkpoint, restore; shutdown làm bộ chạy dừng, không trả lời; finalizeRun/runSummary chỉ được khai báo; runner_client.py:158-273); X3-13 (SPEC:35-37)
+683: 
+684: \subsection{Giới hạn tính toán và thời gian chạy}
+685: \label{muc:gioihan}
+686: 
+687: Ngoài giới hạn 2 yêu cầu mỗi lượt và 100 phương án mỗi xe, các bước sinh, kiểm và giải đều có giới hạn số bước
+688: tính, và bộ giải dùng hạt giống ngẫu nhiên (số khởi tạo phần ngẫu nhiên) cố định bằng 7 để chạy lại cho cùng kết
+689: quả. Vì vậy bộ sinh không xét hết mọi phương án; mục~\ref{muc:c4-hople} báo các bộ đếm cho biết giới hạn có cắt bớt
+690: phương án hay không. Phép kiểm ở mỗi phương án duyệt mười chiều cho mỗi khách có lời hứa của xe và đếm đảo thứ tự
+691: trên từng cặp điểm dừng, nên không thể coi khối lượng kiểm là tuyến tính theo độ dài kế hoạch; nó chưa được đo
+692: riêng.
+693: % EV: A24 (WP4:9-23); X3-17; X3-32 (GEN:54-79); N-25; X3-05 (BUDGET:76-99); X3-04 (VALID:233-239); X3-26 (DELTA:190-215)
+694: 
+695: Khóa luận chỉ báo thời gian của cả lần chạy: trên tập tắc đường cố định (16 lần chạy mỗi cấu hình), trung vị là
+696: 730, 667 và 641 giây với ghép tự do, điều phối không trần và luật C trần 30 giây. Chi phí riêng của phép kiểm trần
+697: không được báo, nên các số này không dùng để so chi phí tính toán.
+698: % EV: H13 (EL17:2-6); X3-19; B17
+699: 
+700: \subsection{Kiểm tra kết quả}
+701: \label{muc:kiemtra}
+702: 
+703: Kết quả được kiểm ở bốn mức.
+704: \begin{itemize}[leftmargin=1.2cm,itemsep=2pt,topsep=3pt]
+705: \item \textbf{Kiểm thử phần mềm:} khi luật phục hồi không tệ hơn được thêm vào mã, bộ kiểm thử qua 1.025 trên
+706: 1.025 trường hợp; số này ghi lại lúc đó, chưa chạy lại khi viết khóa luận.
+707: \item \textbf{Kiểm tính nhất quán của sổ:} ở cả 382.006 bản ghi sửa của 185 lần chạy (170 lần chạy của năm cấu hình
+708: trên tập kiểm tra chính và 15 lần chạy luật C trần 30 giây trên 15 kịch bản hiệu chỉnh), $|x|$, $|c|$, $|z|$ tính
+709: lại từ $v$, $e$, $p$ trong sổ khớp đúng các trường độ lớn. Phép kiểm này không kiểm $e$ có được tính đúng hay không.
+710: \item \textbf{Tính lại độc lập:} một chương trình viết riêng, độc lập về mã nhưng dùng cùng đặc tả chỉ số, tính lại
+711: 13 hạng mục số liệu từ bản ghi thô và một bất biến, không lệch hạng mục nào; các số đếm chính được ít nhất hai bộ đọc
+712: viết độc lập tính lại và khớp trong phạm vi đã kiểm. Các chương trình kiểm ở hai mức này do các mô hình ngôn ngữ lớn
+713: Claude và Codex viết và chạy, không phải kiểm thủ công; chúng cho biết con số khớp bản ghi, không cho biết mô phỏng
+714: giống thực tế đến đâu.
+715: \item \textbf{Tái lập:} tập kiểm tra chính, tập chỉnh trần buổi sáng và các lần chạy trần 120 giây dùng cùng một bản
+716: bộ chạy đã biên dịch và lưu lại; tập tắc đường cố định dùng một bản cũ hơn. Bản dựng lại, nếu có, phải cho đúng kết
+717: quả cũ trên một số kịch bản trước khi dùng (Phụ lục~\ref{phuluc:C}).
+718: \end{itemize}
+719: % EV (kiểm thử): A27 (ADR:5100, số lịch sử)
+720: % EV (sổ): A26 (T38:106; T38I:68); B10 (170 + 15); RUN38:1-8 (15 lần chạy C-30 trên 15 kịch bản hiệu chỉnh)
+721: % EV (tính lại): C19 (T38I:79-97: 13 hạng mục + 1 bất biến); ADDENDUM-1:15-19; C04; E01; K41; A26 lưu ý; I01
+722: % EV (tái lập): A28 (RUNW07:40-41); X3-10 (run_w07.py:8; run_w07x.py:7; run_t38c120.py:3-8); B17; NEW:13; I13
+
+SOURCE E:\Code\Report_INT3508\ridebound-scratchpad\rewrite-2026-10\drafts\08-chuong4-phanA-v4.tex
+106: Chương này dùng bốn tập kịch bản (Bảng~\ref{bang:c4-taptu}). Từ các ngày 14--18/11/2018 dựng được 49 kịch bản, chia
+107: theo cặp ngày và mẫu để ba khung giờ của một cặp nằm cùng một phía. 34 kịch bản làm tập kiểm tra chính; 15 kịch bản
+108: dành cho một phép hiệu chỉnh không dùng trong khóa luận. Ngày 14--16/11 là ngày thường, 17 và 18/11 là cuối tuần.
+109: % EV: B08 (SPLIT: chia theo nhóm ngày, mẫu); C17 (15 kịch bản hiệu chỉnh khoảng dự phòng γ); B09; B21 (11/11/2018 là Chủ nhật)
+302: \caption{Nghĩa vụ của chính từng luật trên tập kiểm tra chính. Hai cột tỉ lệ là trung bình theo kịch bản (34
+303: kịch bản); trong mỗi kịch bản, mẫu số lần lượt là số lượt quyết định được xác nhận và số khách được phục vụ. Số gộp
+304: ghi riêng trong lời văn. Định nghĩa ``bị ép'' và ``bị phá lời hứa'' của từng luật ở Bảng~\ref{bang:c4-chiso}. Ở
+305: hàng luật C, các số 0 là điều Nhận xét~\ref{nx:giunguyen} cho trước dưới giả thiết (N).}
+327: Luật C không có quyết định nào bị ép và không vượt trần của khách nào ở cả 34 kịch bản. Đây là điều Nhận
+328: xét~\ref{nx:giunguyen} cho trước dưới giả thiết (N), không phải phát hiện thực nghiệm: phương án giữ nguyên kế hoạch
+329: có phần dời do điều phối bằng 0 nên không bị luật C loại. Điều phối không trần cũng có 0 trong 20.760 quyết định bị
+330: ép, và nhận xét không bảo đảm giờ trả thực tế. Luật hạn chót so giờ trả mới với lời hứa đầu, nên riêng phần thay đổi
+331: khi giữ nguyên kế hoạch cũng có thể làm nó bị ép (ví dụ 40 giây ở mục~\ref{muc:doichung}).
+332: % EV: A21; A22; N-21; X3-16 (U 0 / 20.760); X3-30; A10; K05
+440: Một ví dụ trên tập buổi sáng cho thấy luật C và luật hạn chót khác nhau ở đâu. Trước một quyết định, giờ trả đang hứa
+441: của một khách đã lùi 79,0 giây so với lời hứa đầu, toàn bộ là phần thay đổi khi giữ nguyên kế hoạch. Phương án ghép
+442: thêm một khách mới sẽ dời giờ trả dự kiến của khách đó thêm 68,3 giây do điều phối. Ở mức 90 giây, luật hạn chót cộng
+443: hai phần, khoảng 147 giây, nên loại phương án; luật C chỉ tính 68,3 giây nên cho qua. Trên tập này hai luật tách nhau
+444: ở đúng ba chỗ cùng kiểu, ở mức 90 hoặc 120 giây; mỗi chỗ luật C nhận thêm một khách. Đây là phép tính trên giờ trả dự
+445: kiến của mô hình, không phải phép đo nhân quả.
+446: % EV: D05 (79,0 + 68,3 s; 60,9 + 61,2 s); C4A-12 (W07XM:6,11,16: "sum x 79.0, sum c 0.0, p_last − p_first 79.0", c = 68,3 s, x = 0,1 s; W07X:54-62: "khách đang có", giai đoạn chờ đón hay trên xe không ghi); K04
+546: không trễ quá 60 giây. Tỉ lệ lượt quyết định luật hạn chót bị ép (trung bình theo kịch bản) giảm từ 58,6\% ở mức 30
+547: giây xuống 6,6\% ở 120 giây và 1,7\% ở 240--300 giây; luật C luôn 0\%. Ở cả tám mức, hai luật phục vụ chênh nhau không
+548: quá 2 lượt.
+549: % EV: D01; K12; D03 (+6 / +4 / +2); D04 (trung bình theo kịch bản; W07X:20-29); X3-28 (luật hạn chót chạy 30–300 s ở tập này)
+
+BODY WORD SCAN (comments excluded):
+niêm phong: NONE
+tiền đăng ký: NONE
+dự đoán trước: NONE
+kết quả mong đợi: NONE
+duy nhất: NONE
+đầu tiên: NONE
+vượt trội: NONE
+tối ưu: NONE
+đột phá: NONE
+chúng tôi: NONE
+phải phục hồi: NONE
+không dùng trong khóa luận: 108
+
+SYNTAX INVENTORY (read-only, not a compile):
+table: begin=12 end=12
+tabular: begin=16 end=16
+figure: begin=1 end=1
+tikzpicture: begin=1 end=1
+scope: begin=3 end=3
+duplicate labels in A: []

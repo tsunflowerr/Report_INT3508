@@ -1,0 +1,208 @@
+% Round 42 — sửa từ r31-ch5/11-phuluc-v2.tex; không sửa các bản trước.
+% Ghép sau tài liệu tham khảo; không cần gói mới. Quyết định ở r42-LOG.md.
+\appendix
+\chapter*{Phụ lục}
+\addcontentsline{toc}{chapter}{Phụ lục}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\theHsection}{appendix.\Alph{section}}
+\renewcommand{\theHtable}{appendix.\Alph{section}.\arabic{table}}
+
+\section{Tập kịch bản tĩnh của đợt thử trước}
+\label{phuluc:A}
+
+Tập này thuộc đợt thử trước, với thời gian đi giữa các điểm không đổi suốt lần chạy. Cấu hình cam kết đầy đủ dùng trần 30 giây cho tổng độ dời giờ trả của mỗi khách, cùng khóa xe, khóa hai điểm dừng và giữ cố định giờ đón từ lúc xác nhận. Phép so với ghép tự do vì vậy xét cả gói cam kết, không riêng trần. Mức 30 giây được giữ nguyên cho tập kiểm tra chính (mục~\ref{muc:c4-thamdo}). Phụ lục này không trình bày lại các bảng kết quả phục vụ và độ dời của tập tĩnh.
+% EV: C4A-15 (TEX08:136-137); K29; K33; K34; Ch4A-v5-v3 muc:c4-thamdo; lý do bỏ bảng: r31-NOTES.md §5 A
+
+\section{Phương án giữ nguyên kế hoạch dưới các luật}
+\label{phuluc:B}
+\setcounter{table}{0}
+
+Bảng~\ref{bang:pl-giunguyen} xét riêng phép kiểm giờ trả, dưới giả thiết (N) ở mục~\ref{muc:giunguyen} và khi phần trần đã dùng của mỗi khách không vượt trần tương ứng. Với phương án giữ nguyên, $p=e$. Qua được phép kiểm giờ trả chưa bảo đảm phương án qua mọi ràng buộc khác.
+% EV: A06; A22; X3-27; X3-31; A11
+
+\begin{table}[htbp]
+\centering
+\caption[Phép kiểm giờ trả của phương án giữ nguyên kế hoạch]{Phép kiểm giờ trả của phương án giữ nguyên. $L_r$ là phần trần khách $r$ đã dùng theo luật C; $L_r^{\mathrm V}$ là tổng $|z|$ đã tính theo luật trần độ dời khách thấy. $B$ là trần; các mốc giờ theo mục~\ref{muc:bamoc}.}
+\label{bang:pl-giunguyen}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{8.7cm}@{}}
+\toprule
+\textbf{Luật} & \textbf{Luôn qua?} & \textbf{Lý do hoặc điều kiện} \\
+\midrule
+Luật C & Có, khi $0\le L_r\le B$ & $L_r+|e-e|=L_r\le B$ (Nhận xét~\ref{nx:giunguyen}). \\
+% EV: A06; A22
+Luật hạn chót & Không & Có thể có $e-p_0>B$ dù kế hoạch không đổi. \\
+% EV: A09; A10
+Trần độ dời khách thấy & Không & $L_r^{\mathrm V}+|e-v|$ có thể vượt $B$. \\
+% EV: A11; A01; X3-33
+Hạn chót nới theo mốc giữ kế hoạch & Có, theo suy luận & $p=e\le\max(p_0+B,e)$. Biến thể do khóa luận dựng từ công thức 7 của Hörl và Zwick~\cite{horl2022}; chưa được chạy. \\
+% EV: A22; J03; J05; X3-36; K02; K27
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách đọc bảng: luật C không cộng thêm phần dời khi giữ nguyên kế hoạch. Hạn chót nới cho qua vì mốc giới hạn không nhỏ hơn $e$. Hai luật còn lại có thể loại phương án này khi mốc giữ kế hoạch đã đổi, dù không ghép thêm khách.
+% EV: A22; A10; A11; J03; J05
+
+Các ví dụ dựng tay, với mốc tính bằng giây, phân biệt tổng độ dời do điều phối $\sum|c_j|$, độ lệch so với lời hứa đầu và tổng độ dời khách thấy $\sum|z_j|$. Luật hạn chót kiểm $p_j-p_0\le B$ ở mỗi lần cập nhật, không chỉ ở cuối chuyến (công thức~\eqref{eq:dongnhat}).
+% EV: A01; A06; A09; A11; A12; X3-33; Ch3-v4-v3 bang:luat
+\begin{itemize}[leftmargin=1.2cm,itemsep=0pt,topsep=2pt]
+\item Với $v=e=600$ và $p=660$ thì $x=0$, $c=z=60$: mốc giữ kế hoạch không đổi, nhưng điều phối dời giờ trả.
+% EV: A01; TEX07:650 (CE-1; minh họa số)
+\item Chuỗi lời hứa $600\to660\to600$ có độ lệch cuối so với lời hứa đầu bằng 0, nhưng tổng độ dời khách thấy bằng 120.
+% EV: A01; A12; TEX07:655-656 (CE-4)
+\item Chuỗi $600\to660\to720$ có cả độ lệch cuối so với lời hứa đầu và tổng độ dời khách thấy bằng 120.
+% EV: A01; A12; TEX07:657-658 (CE-5)
+\item Khi $x$ và $c$ trái dấu, $|z|=|x+c|$ có thể nhỏ hơn $|c|$: hai phần bù nhau trong độ dời khách thấy.
+% EV: A01; suy luận đại số cho CE-6, không nhận là bản ghi thực nghiệm
+\end{itemize}
+
+\section{Thông tin tái lập}
+\label{phuluc:C}
+\setcounter{table}{0}
+
+Các đường dẫn tương đối tính từ \nolinkurl{E:/Code/Report_INT3508/ridebound-scratchpad/} trên máy thực nghiệm; gốc \texttt{tier3-}, \texttt{fixtures-} tính từ \nolinkurl{C:/RideBoundData/research/}. Bảng~\ref{bang:pl-danhsach} tóm tắt \nolinkurl{tang3/t38/split-t38-v1.json}; mỗi cặp mẫu và khung trong một ô là một kịch bản. Mã \nolinkurl{d20181114-s10-r3-w07} chỉ ngày 14/11/2018, mẫu 10\% số chuyến, mẫu thứ 3, khung bắt đầu lúc 7 giờ.
+% EV: B08; B09; B02; SPLIT:15-65; RUN38:39-55
+
+\begin{table}[htbp]
+\centering
+\caption[Danh sách kịch bản kiểm tra chính và hiệu chỉnh]{34 kịch bản kiểm tra chính và 15 kịch bản hiệu chỉnh, tháng 11/2018. Dấu chấm phẩy tách các nhóm cùng ngày; mỗi hàng lấy mọi cặp mẫu và khung trong từng nhóm.}
+\label{bang:pl-danhsach}
+\small
+\begin{tabular}{@{}p{1.5cm}p{6.8cm}p{6.5cm}@{}}
+\toprule
+\textbf{Ngày} & \textbf{Kiểm tra chính: mẫu $\times$ khung} & \textbf{Hiệu chỉnh: mẫu $\times$ khung} \\
+\midrule
+14 & $\{3,4\}\times\{7,8,17\}$ & $\{1,2\}\times\{7,8,17\}$ \\
+15 & $\{1,2,4\}\times\{7,8\}$ & $\{3\}\times\{7,8\}$ \\
+16 & $\{1,2,4\}\times\{7,8,17\}$ & $\{3\}\times\{7,8,17\}$ \\
+17 & $\{1,2\}\times\{8,17\}$; $\{3\}\times\{7,8,17\}$ & $\{4\}\times\{8,17\}$ \\
+18 & $\{2,3,4\}\times\{8,17\}$ & $\{1\}\times\{8,17\}$ \\
+% EV: B08; B09; SPLIT:15-65
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách đọc bảng: ngày 14 dùng mẫu 3, 4 ở cả ba khung cho tập kiểm tra chính. 15 kịch bản hiệu chỉnh chỉ chạy luật C trần 30 giây; trong khóa luận chỉ tham gia kiểm tính nhất quán của sổ (mục~\ref{muc:kiemtra}), không tính phục vụ hoặc đúng giờ. Các tập khác lấy mẫu 1--4: buổi sáng ngày 12--13/11/2018, khung 7; tắc đường cố định ngày 12--13/11/2018, khung 8, 17; chiều tuyết ngày 15/11/2018, khung 14, 15.
+% EV: B08; B10; A26; RUN38:42-44; Ch4A-v5-v3:107-110; B15; B16; B17; B20; RUNW07:3-8,33-34; run_forecast.py:73-74
+
+Bảng~\ref{bang:pl-goc} ghi cấu hình và gốc kết quả. Các tệp luật của tập kiểm tra chính, buổi sáng và tuyết nằm ở \nolinkurl{tang3/configs/}; mức bổ sung ở \nolinkurl{tang3/w07x/configs/}. Đầu vào lần lượt ở \nolinkurl{fixtures-panelA-v1/}, \nolinkurl{fixtures-w07-v1/}, \nolinkurl{fixtures-snow-v1/}; \nolinkurl{drivers/}, \nolinkurl{worlds/} tương ứng ở \nolinkurl{tang3/calib/panelA/}, \nolinkurl{tang3/w07/}, \nolinkurl{optimize/snow/}.
+% EV: RUN38:51-55; RUNW07:35-43; RW7X:35-40,77-79; run_forecast.py:85-87
+
+\begin{table}[htbp]
+\centering
+\caption[Cấu hình và gốc kết quả]{Cấu hình và gốc kết quả. U: điều phối không trần; C-$B$: luật C; M$^+$-$B$: luật hạn chót; V-30: trần độ dời khách thấy; FREE: ghép tự do. $B$ tính bằng giây.}
+\label{bang:pl-goc}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{6.8cm}@{}}
+\toprule
+\textbf{Tập} & \textbf{Cấu hình} & \textbf{Gốc kết quả} \\
+\midrule
+Kiểm tra chính & U, C-30, M$^+$-30, M$^+$-60, V-30; C-120 & \nolinkurl{tier3-t38-v1/}; C-120 ở \nolinkurl{tier3-t38c120-v1/} \\
+% EV: B10; L1a-01; RUN38:42-55; R120:22-26
+Buổi sáng & U; C và M$^+$ ở 30, 60, 90, 120, 150, 180, 240, 300 & \nolinkurl{tier3-w07-v1/}, \nolinkurl{tier3-w07x-v1/} \\
+% EV: B15; B16; X3-28; RUNW07:33-43; RW7X:35-40
+Tắc đường cố định & FREE, U, C-30, C-60, C-120 & \nolinkurl{E:/RideBoundData/wp14r/development-v6-ledger/}; kết quả trong \nolinkurl{attempt-01/output/} của từng lần chạy \\
+% EV: B17; LAD:1-6; wp14r_ladder_reanalysis.py:1-13
+Chiều tuyết & C-30 & \nolinkurl{tier3-forecast-v1/}; chỉ lấy tám thư mục của ngày 15/11/2018 có mã mẫu \texttt{r1}--\texttt{r4} và mã khung \texttt{w14}, \texttt{w15} \\
+% EV: B20; N-26; N4B8-05; R26 Q8; run_forecast.py:73-74
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cách đọc bảng: trần 120 giây của tập kiểm tra chính có gốc riêng. Tên thư mục của tập tắc đường cố định còn giữ mã cũ: \nolinkurl{b1-ref}, \nolinkurl{c1-nobudget}, \nolinkurl{c1-h6ref}, \nolinkurl{c1-budget60}, \nolinkurl{c1-budget120} lần lượt ứng với ghép tự do (FREE), điều phối không trần (U), C-30, C-60 và C-120.
+% EV: B17; X3-19; X3-38; LAD:1-6; DOC08:20-29; q4_cost_first_reselect.py:32-35 (LOCKS)
+
+Phép thử dự báo trong bộ điều phối dùng thư mục có tiền tố \texttt{C-30F}, \texttt{Mplus-30F} ở \nolinkurl{tier3-forecast-v1/}. Sàng lọc bộ chọn đọc tập cố định; học máy đọc tập buổi sáng, kiểm tra chính và cố định. Kết quả học máy ở tệp \nolinkurl{ml-pilot-report-a1-2026-10-08.txt} trong thư mục làm việc.
+% EV: run_forecast.py:44,67,71-74; q4_cost_first_reselect.py:32-35,178-182; ml_pilot_extract.py:9-28; forecast_family_a.py:57-60; N4B-08
+
+Tập cố định dùng bộ chạy cũ không có luật phục hồi; các lượt ưu tiên ổn định của các tập còn lại dùng \nolinkurl{C:/RideBoundData/research/runner-tier3-v2}, dựng từ phiên bản mã nguồn \texttt{45f8026}. Bản tin khởi tạo ghi mã lõi \texttt{1ce15e92}, FleetPy 1.0.2, hạt giống 7. \nolinkurl{wp4-tier3-v2.json} bật luật phục hồi không tệ hơn phương án giữ nguyên (mục~\ref{muc:doichung}). Mô phỏng tiến theo sự kiện, kết thúc khi hết yêu cầu tương lai, yêu cầu đang xử lý và hành trình xe; khung nhu cầu hai tiếng không phải độ dài lần chạy. Bản dựng lại phải cho đúng kết quả đã lưu trên một số kịch bản trước khi dùng để so sánh.
+% EV: A28; X3-10; N4B8-05; R26 Q1-Q2,Q8; WP4:7; B17; NEW:13; I13
+
+Một lần chạy ứng với một cặp kịch bản và cấu hình. Phân tích lấy bản hoàn tất thay bản hỏng hạ tầng, như \nolinkurl{C-30-d20181114-s10-r3-w17-rerun1}. Số dùng là 170 lần và thêm 34 lần trần 120 giây ở tập kiểm tra chính; 136 trong 192 lần buổi sáng; 16 mỗi cấu hình cố định; 8 chiều tuyết. Kiểm kê 08/10/2026 có 1.991 bản ghi, trước 34 lần trần 120 giây ngày 10/10/2026.
+% EV: B10; L1a-01; C4A-07; B17; H13; B20; C4A-17; ADD1:6; B19; C4A-20
+
+Các bộ đọc tính lại $v,e,p$, phần dời và lời hứa dự báo từ bản ghi thô. Trễ dùng điều kiện muộn hơn lời hứa quá ngưỡng; số lượt không trễ bằng phục vụ trừ trễ trên tổng yêu cầu. Độ dài thêm gộp theo khách; trung bình theo kịch bản ghi riêng. Phát lại giữ quyết định và giờ trả thực tế. Hai bộ đọc viết riêng khớp các trường đã so trên 7.159 khách của điều phối không trần và luật C trần 30, 120 giây. Đây là phép kiểm lại bằng chương trình đọc riêng, không phải kiểm thủ công (mục~\ref{muc:kiemtra}).
+% EV: A26; C19; N4B-14; ADD1:66-78; SPEC:28-63; C06; C08; C09; C10; F06; N-16; K41; Ch3-v4-v3:729-732
+
+Ngày 13/10/2026, cả 1.025 trong 1.025 kiểm thử đạt trong một lần chạy đầy đủ trên phiên bản \texttt{45f8026}, dùng lại bản sao ngày 12/10. Hai điều kiện là kiểu xuống dòng LF và một tệp chưa ghi nhận trong cây làm việc. LF dùng ký tự kết thúc dòng; CRLF dùng cặp ký tự trở về đầu dòng và kết thúc dòng. Ngày 12/10, hai lượt CRLF đạt 1.020 trong 1.025; lượt LF trên cây sạch đạt 1.024 trong 1.025. Kiểm thử còn lại, đòi có tệp chưa ghi nhận, đạt 1 trong 1 khi chạy riêng sau khi thêm tệp đó.
+% EV: TESTRUN-45f8026-2026-10-12.md:14-18,35-56; C:/RideBoundData/research/testrun-45f8026-eollf-dirty-fullrun-2026-10-13.log:1-6,27-70; N4B-13 (lượt 3,3b); A28
+
+
+\section{So sánh thứ tự chọn phương án và chứng cứ bổ sung}
+\label{phuluc:D}
+\setcounter{table}{0}
+
+Phép so ở mục~\ref{muc:c4-vaitro} bổ sung 68 lượt ưu tiên chi phí trên cùng tập kiểm tra chính, không bổ sung
+ngày dữ liệu. Bản chạy được dựng từ phiên bản \texttt{dce84ec}; các lượt ưu tiên ổn định dùng bản đã lưu.
+Bốn cặp kiểm hành vi cho kết quả khớp trên các mẫu được thử, nhưng không chứng minh tương đương toàn bộ hai
+bản. 68 lượt chính hoàn tất và qua kiểm tính toàn vẹn cuối. Các phép kiểm này xác nhận dữ liệu hợp lệ cho
+phân tích trong phạm vi đã nêu, không xác nhận hiệu quả ngoài đời.
+% EV: S15-01 (mục 0); main-final-admission.json; RUNNER-PROVENANCE.md; G0 behavioural-only.
+
+Bản trích xuất gồm 9.638 dòng khách của 136 lượt, tương ứng bốn cấu hình. Chương trình kiểm lại bằng mã riêng
+đạt 83 phép đối chiếu số học từ bản trích xuất, gồm mẫu số, các số gộp và đồng nhất thức giữa phục vụ, trễ và
+không trễ. Đây không phải một bộ giải mã bản ghi thô và dự báo độc lập thứ hai. Bảng số liệu, bản trích xuất
+và kết quả kiểm được lưu kèm hồ sơ; mã nguồn và các đầu ra có mã băm để truy vết.
+% EV: S15-01; S15-02; S15-04; results/stage1b-results.sha256.
+
+Kiểm thử trên phiên bản ưu tiên chi phí có 1.033 trong 1.034 bài đạt. Bài còn lại đòi cây mã nguồn có thay
+đổi chưa ghi nhận, nên thất bại khi chạy trên cây sạch; không được báo cả bộ kiểm thử đạt. Đây là kết quả
+của phiên bản riêng, không thay kết quả 1.025 bài của phiên bản đã lưu ở Phụ lục~\ref{phuluc:C}.
+% EV: evidence/dotnet-test-costfirst-2026-10-15.log; RESUME-STATUS.md; không sửa C# trong lượt cập nhật luận văn.
+
+Phép sàng lọc dưới đây được giữ để phân biệt chọn lại trên dữ liệu đã ghi với chạy cả diễn biến mới.
+Phép sàng lọc bổ trợ được thực hiện trên tập tắc đường cố định (Bảng~\ref{bang:c4-sangloc}). Ở mỗi lượt quyết định
+đã ghi, một chương trình viết riêng giải lại bài toán chọn trên đúng các phương án đã ghi nhưng bỏ tiêu chí 3; các lượt
+sau vẫn đi theo lựa chọn cũ. Với thứ tự gốc, chương trình cho đúng lựa chọn đã ghi ở mọi lượt quyết định của năm cấu
+hình trên tập này.
+% EV: N4B-01 (thứ tự còn lại: WPCHK:32); H10; H03 và N4B8-10 (PV:1-7; q4_cost_first_reselect.py:13-19, 131-138: giải lại đủ mọi mức đã ghi rồi so selectedCandidateIds; NEW:7; 12.663 + 12.525 + 12.364 + 12.325 + 12.960 = 62.837 của U, C-120, C-60, C-30 và ghép tự do; cùng mã chạy hai lần, không phải hai bản cài đặt độc lập); N4B-02
+
+\begin{table}[htbp]
+\centering
+\caption[Phép sàng lọc bỏ tiêu chí ổn định của bộ chọn]{Phép sàng lọc bỏ tiêu chí ổn định của bộ chọn trên tập tắc đường cố định (16 kịch bản mỗi cấu hình; bộ chạy
+cũ, nên kết quả không suy ra cho tập kiểm tra chính). U: điều phối không trần; C-30: luật C trần 30 giây. Mỗi cột dùng
+các lượt quyết định đã ghi của chính cấu hình đó, nên hai cột là hai tập tình huống khác nhau. Chi phí kế hoạch là thời
+lượng còn lại của các tuyến dự kiến, không phải chi phí vận hành.}
+\label{bang:c4-sangloc}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}p{9.4cm}rr@{}}
+\toprule
+\textbf{Chỉ số} & \textbf{U} & \textbf{C-30}\\
+\midrule
+Lượt quyết định có yêu cầu mới & 1.714 & 1.715\\
+Lượt đổi lựa chọn khi bỏ tiêu chí ổn định & 445 (25,96\%) & 104 (6,06\%)\\
+% EV: H04 (445/1.714; 104/1.715; WP17:6-7,20-21)
+\midrule
+\multicolumn{3}{@{}l}{\textit{Chi phí kế hoạch giảm (\%), ba cách tính}}\\
+Trung bình trên các lượt đổi lựa chọn & 7,79 & 8,00\\
+Trung bình trên mọi lượt có yêu cầu mới & 2,02 & 0,49\\
+Phần giảm tính trên tổng chi phí kế hoạch của mọi lượt quyết định, kể cả lượt không có yêu cầu mới & 0,3069 & 0,0794\\
+% EV: H05 (NEW:6; PV:2,5: 114.720.189 / 37.380.402.107 và 28.288.261 / 35.606.312.123 trên 12.663 và 12.325 lượt); K15; A16; I09
+\midrule
+\multicolumn{3}{@{}l}{\textit{Phần dời giờ trả do điều phối tăng thêm, cộng trên mọi khách của đội xe, ở các lượt đổi lựa chọn (s)}}\\
+Trung vị & 90,8 & 12,5\\
+Lớn nhất & 390,8 & 35,5\\
+% EV: H06 (WP17:8,22; PV:2,5); K17
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+Cách đọc bảng: khi không trần, bỏ tiêu chí ổn định làm lựa chọn đổi ở 445 trong 1.714 lượt có yêu cầu mới, và ở các
+lượt đó chi phí kế hoạch giảm trung bình 7,79\%. Tính trên tổng chi phí kế hoạch của mọi lượt, phần giảm chỉ là
+0,31\%, và 0,08\% với trần 30 giây.
+% EV: H04; H05 (PV:2,5); K15
+
+Số yêu cầu được nhận không đổi ở mọi lượt, đúng theo cách đặt thứ tự: tiêu chí nhận yêu cầu đứng trước tiêu chí 3. Hai
+cột đo trên hai tập tình huống khác nhau, nên tỉ lệ đổi thấp hơn dưới trần 30 giây chỉ gợi ý rằng trần để lại cho bộ chọn
+ít cơ hội đổi hơn. Mức 35,5 giây ở trần 30 giây là tổng của hai khách, mỗi khách 17,77 giây.
+% EV: H04 (accepted_changes 0 ở mọi cấu hình, PV:2-6; tỉ lệ ở trần 120 và 60 giây, 325/1.715 và 173/1.716, WP17:11,16, cắt khỏi thân bài vì ngân sách trang); N4B8-10 (Q4:15-19: tiêu chí 2 giữ trong cả hai thứ tự; Bảng rangbuoc); K16; H06; K17 (CASE: hai khách, mỗi khách 17.770 ms)
+
+
+
+Phép sàng lọc giữ nguyên các lượt sau lựa chọn đang xét, nên không cho biết số lượt phục vụ và đúng giờ
+khi cả lần mô phỏng đi theo lựa chọn khác. Kết quả mô phỏng đầy đủ của hai thứ tự được báo riêng ở
+Bảng~\ref{bang:c4-doi-uutien}; không cộng các chênh lệch sàng lọc thành lợi ích vận hành.

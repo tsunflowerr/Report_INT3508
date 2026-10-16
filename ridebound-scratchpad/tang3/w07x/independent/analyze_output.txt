@@ -1,0 +1,126 @@
+runs loaded: 184
+missing runs: []
+
+== Integrity ==
+runs with integrity issues: 0
+total frames checked (sha256 of decoded frame == frameSha256): 383059
+
+== Claim 1 ==
+new summaries: 104 status counts: {'pass': 104}
+inventory counts: {'0da63eaf2b30ab332fba265a6b2b6e5c36b3ee78950cbac6d6267e60f81e4cbe': 104}
+  C-90       distinct policy hashes over 8 cells: 1  27d5b4e0e3f134a7
+  C-150      distinct policy hashes over 8 cells: 1  4cd440ad64ab2016
+  C-180      distinct policy hashes over 8 cells: 1  d38fddc198926e9d
+  C-240      distinct policy hashes over 8 cells: 1  97810989944abf98
+  Mplus-90   distinct policy hashes over 8 cells: 1  32da40881aa7e0a5
+  Mplus-150  distinct policy hashes over 8 cells: 1  8c834716e331f2a2
+  Mplus-180  distinct policy hashes over 8 cells: 1  d6c2a66873084d1d
+  Mplus-240  distinct policy hashes over 8 cells: 1  b176a9f90fe970d2
+  V-90       distinct policy hashes over 8 cells: 1  d6bb90d1c677ef52
+  V-120      distinct policy hashes over 8 cells: 1  de870da9f2583093
+  V-150      distinct policy hashes over 8 cells: 1  6a8e8dae7fde5d13
+  V-180      distinct policy hashes over 8 cells: 1  925ada89823d482f
+  V-240      distinct policy hashes over 8 cells: 1  6078ac7ac5c943b6
+  U          distinct policy hashes over 8 cells: 1  251b331eb56fe870
+  C-30       distinct policy hashes over 8 cells: 1  a2f11a3ada0773f9
+  C-60       distinct policy hashes over 8 cells: 1  78222031cb8f034d
+  C-120      distinct policy hashes over 8 cells: 1  a9ac58b33558c6ec
+  C-300      distinct policy hashes over 8 cells: 1  33ee2b0d0fe5c4b3
+  Mplus-30   distinct policy hashes over 8 cells: 1  6c3e9d73f094d61e
+  Mplus-60   distinct policy hashes over 8 cells: 1  e8c7c6af4c9b9d2d
+  Mplus-120  distinct policy hashes over 8 cells: 1  69c69a73d6dcc200
+  Mplus-300  distinct policy hashes over 8 cells: 1  ba687412a7d5e60a
+  V-30       distinct policy hashes over 8 cells: 1  e1640647900c8731
+distinct arm-level policy hashes: 23 of 23
+CLAIM 1: MATCH
+(info) reused summaries status/inventory: {('pass', '0da63eaf2b30'): 80}
+
+== Claim 2 (served) ==
+  12r1: U 90 | 30: 87/87/87 | 60: 87/87 | 90: 90/89/89 | 120: 90/89/89 | 150: 90/90/90 | 180: 90/90/90 | 240: 90/90/90 | 300: 90/90
+  12r2: U 82 | 30: 82/82/82 | 60: 82/82 | 90: 82/82/82 | 120: 82/82/82 | 150: 82/82/82 | 180: 82/82/82 | 240: 82/82/82 | 300: 82/82
+  12r3: U 97 | 30: 97/97/97 | 60: 97/97 | 90: 97/97/97 | 120: 97/97/97 | 150: 97/97/97 | 180: 97/97/97 | 240: 97/97/97 | 300: 97/97
+  12r4: U 87 | 30: 86/86/86 | 60: 87/87 | 90: 87/87/87 | 120: 87/87/87 | 150: 87/87/87 | 180: 87/87/87 | 240: 87/87/87 | 300: 87/87
+  13r1: U 70 | 30: 68/68/68 | 60: 68/68 | 90: 69/69/69 | 120: 71/70/70 | 150: 71/71/71 | 180: 71/71/71 | 240: 70/70/70 | 300: 70/70
+  13r2: U 65 | 30: 65/65/65 | 60: 65/65 | 90: 65/65/65 | 120: 65/65/65 | 150: 65/65/65 | 180: 65/65/65 | 240: 65/65/65 | 300: 65/65
+  13r3: U 82 | 30: 83/83/83 | 60: 83/83 | 90: 82/82/82 | 120: 82/82/82 | 150: 82/82/82 | 180: 82/82/82 | 240: 82/82/82 | 300: 82/82
+  13r4: U 92 | 30: 92/92/92 | 60: 92/92 | 90: 92/92/92 | 120: 92/92/92 | 150: 92/92/92 | 180: 92/92/92 | 240: 92/92/92 | 300: 92/92
+claim-2 mismatches: []
+CLAIM 2: MATCH
+
+== Claim 3 (fleet-action sequences) ==
+C vs Mplus differing (level, cell, first diff index, nC, nM) [full payload]: [(90, '12r1', 294, 735, 729), (120, '12r1', 294, 735, 729), (120, '13r1', 285, 608, 601)]
+C vs Mplus differing [key: type+vehicle+candidate / type+request]: [(90, '12r1', 294), (120, '12r1', 294), (120, '13r1', 285)]
+V vs C differing [full payload] (level, cell, idx, nC, nV): [(90, '12r1', 294, 735, 729), (120, '12r1', 294, 735, 729), (120, '13r1', 285, 608, 601)]
+V vs C differing [key]: [(90, '12r1', 294), (120, '12r1', 294), (120, '13r1', 285)]
+V levels present: [30, 90, 120, 150, 180, 240]
+CLAIM 3: MATCH
+
+== Claim 4 ==
+non-normal counts in 32 new C runs: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] sum 0
+(info) non-normal in reused C runs: {'C-30': 0, 'C-60': 0, 'C-120': 0, 'C-300': 0}
+CLAIM 4: MATCH
+
+== Claim 5 ==
+Level | mean share A_r > x (Mplus-x) | per-cell k/n
+   30  0.240370  (>=: 0.240370)  24/87 21/82 24/97 14/86 26/68 16/65 13/83 18/92  
+   60  0.072505  (>=: 0.072505)  7/87 5/82 4/97 2/87 8/68 5/65 5/83 11/92  
+   90  0.021180  (>=: 0.021180)  4/89 3/82 1/97 1/87 2/69 1/65 0/82 2/92  claimed 0.0212 -> MATCH
+  120  0.008717  (>=: 0.008717)  0/89 0/82 0/97 1/87 3/70 1/65 0/82 0/92  
+  150  0.005073  (>=: 0.005073)  1/90 0/82 0/97 0/87 1/71 1/65 0/82 0/92  claimed 0.0051 -> MATCH
+  180  0.005073  (>=: 0.005073)  1/90 0/82 0/97 0/87 1/71 1/65 0/82 0/92  claimed 0.0051 -> MATCH
+  240  0.001786  (>=: 0.001786)  0/90 0/82 0/97 0/87 1/70 0/65 0/82 0/92  claimed 0.0018 -> MATCH
+  300  0.001786  (>=: 0.001786)  0/90 0/82 0/97 0/87 1/70 0/65 0/82 0/92  
+(info) same metric under C-x and V-x:
+   30  C 0.240370  V 0.240370
+   60  C 0.072505
+   90  C 0.021118  V 0.021180
+  120  C 0.011791  V 0.008717
+  150  C 0.005073  V 0.005073
+  180  C 0.005073  V 0.005073
+  240  C 0.001786  V 0.001786
+  300  C 0.001786
+Level | mean non-normal share Mplus / V
+   30  Mplus 0.586265  V 0.631962  C 0.000000  
+   60  Mplus 0.355383  C 0.000000  
+   90  Mplus 0.129608  V 0.173571  C 0.000000  claimed 0.130 / 0.174 -> MATCH
+  120  Mplus 0.065718  V 0.074291  C 0.000000  claimed V 0.074 / Mplus 0.066 -> MATCH
+  150  Mplus 0.068184  V 0.086121  C 0.000000  claimed 0.068 / 0.086 -> MATCH
+  180  Mplus 0.028206  V 0.028206  C 0.000000  claimed 0.028 / 0.028 -> MATCH
+  240  Mplus 0.016998  V 0.016998  C 0.000000  claimed 0.017 / 0.017 -> MATCH
+  300  Mplus 0.016998  C 0.000000  
+per-cell non-normal shares:
+  Mplus-90   132/729 106/688 108/791 66/719 82/593 110/566 0/685 106/753
+  V-90       219/729 124/688 108/791 69/719 103/593 110/566 55/685 171/753
+  Mplus-120  0/729 0/688 0/791 66/719 144/601 110/566 0/685 0/753
+  V-120      50/729 0/688 0/791 66/719 144/601 110/566 0/685 0/753
+  Mplus-150  84/735 0/688 0/791 0/719 144/608 110/566 0/685 0/753
+  V-150      122/735 0/688 0/791 66/719 144/608 110/566 0/685 0/753
+  Mplus-180  84/735 0/688 0/791 0/719 43/608 23/566 0/685 0/753
+  V-180      84/735 0/688 0/791 0/719 43/608 23/566 0/685 0/753
+  Mplus-240  0/735 0/688 0/791 0/719 82/603 0/566 0/685 0/753
+  V-240      0/735 0/688 0/791 0/719 82/603 0/566 0/685 0/753
+CLAIM 5: MATCH
+
+== Claim 6 ==
+  V-30  mean share V_r > x: 0.291866  cells 30/87 25/82 31/97 16/86 30/68 20/65 15/83 23/92  
+         (variants: completed-denominator 0.291866; sum|p-e| only 0.000000)
+  V-90  mean share V_r > x: 0.028924  cells 4/89 4/82 1/97 1/87 3/69 1/65 2/82 3/92  claimed 0.0289 -> MATCH
+         (variants: completed-denominator 0.028924; sum|p-e| only 0.000000)
+  V-120 mean share V_r > x: 0.010121  cells 1/89 0/82 0/97 1/87 3/70 1/65 0/82 0/92  claimed 0.0101 -> MATCH
+         (variants: completed-denominator 0.010121; sum|p-e| only 0.000000)
+  V-150 mean share V_r > x: 0.008270  cells 1/90 0/82 0/97 1/87 2/71 1/65 0/82 0/92  claimed 0.0083 -> MATCH
+         (variants: completed-denominator 0.008270; sum|p-e| only 0.000000)
+  V-180 mean share V_r > x: 0.005073  cells 1/90 0/82 0/97 0/87 1/71 1/65 0/82 0/92  claimed 0.0051 -> MATCH
+         (variants: completed-denominator 0.005073; sum|p-e| only 0.000000)
+  V-240 mean share V_r > x: 0.003571  cells 0/90 0/82 0/97 0/87 2/70 0/65 0/82 0/92  claimed 0.0036 -> MATCH
+         (variants: completed-denominator 0.003571; sum|p-e| only 0.000000)
+(info) V_r > x share under C-x and Mplus-x:
+   30  C 0.291866  Mplus 0.291866
+   60  C 0.087800  Mplus 0.087800
+   90  C 0.028861  Mplus 0.028924
+  120  C 0.013180  Mplus 0.010121
+  150  C 0.008270  Mplus 0.008270
+  180  C 0.005073  Mplus 0.005073
+  240  C 0.003571  Mplus 0.003571
+  300  C 0.001786  Mplus 0.001786
+CLAIM 6: MATCH

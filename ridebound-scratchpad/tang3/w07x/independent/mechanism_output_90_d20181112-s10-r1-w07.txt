@@ -1,0 +1,24 @@
+C-90 acked decisions 735; Mplus-90 acked decisions 729
+first differing acknowledged decision index (0-based): 294
+simTimeMs C / M: 3073000 3073000  epochId C / M: 295 295
+all earlier decisions have identical fleet actions: True
+C fleet actions:
+    requestAccepted rq-150ba8d3b7b93 
+    vehiclePlanUpdated veh-176f918dfe candidate-v1-45ce21a406020
+Mplus fleet actions:
+    requestRejected rq-150ba8d3b7b93 NO_FEASIBLE_INSERTION
+C accepts: ['rq-150ba8d3b7b93d22eea14d0130a02db23a53098b4ab8b8036600b3655ff9230a']  Mplus rejects: ['rq-150ba8d3b7b93d22eea14d0130a02db23a53098b4ab8b8036600b3655ff9230a']
+normalOperation C / M: True True
+certificate witnesses M: []
+C vehiclePlanUpdated: [('veh-176f918dfe', 'candidate-v1-45ce21a406020ed32')]
+C candidate for veh-176f918dfe found in Mplus prunedCandidates: 1 hit(s)
+   code: COMMITMENT_DEADLINE_EXCEEDED  vehicleId: veh-176f918dfe  newRequestIds: ['rq-150ba8d3b7b93']
+   witness: {"code": "COMMITMENT_DEADLINE_EXCEEDED", "dimension": "drop_eta_ms", "requestId": "rq-c7683667e6b359171482cb3bd2a7d6edba9147f5bdb85c10c743ae9cc5b0418f", "rule": "deadline_cap", "stage": "lock", "vehicleId": "veh-176f918dfe090b75ce86691ec554f8512afcfa10b021ea4e283d4a09a696d897"}
+   candidate in C's own prunedCandidates: False
+
+witness rider: rq-c7683667e6b359171482cb3bd2a7d6edba9147f5bdb85c10c743ae9cc5b0418f
+  initial promise at decision 247 (epoch 248, publishedAtMs 2669000): drop 4182321
+  revisions before decision 294: 19; sum(e-v) = 78.993 s; sum(p-e) = 0.000 s
+  at decision 294 (epoch 295, t=3073000): v=4261314 e=4261402 p=4329664 -> e-v = 0.088 s, p-e = 68.262 s  (action decisionDelta.dropEtaTotalMs=68262, exogenousDelta=88)
+  (ledger publishedEpoch of decision-294 revisions equals decision epochId 295)
+  Mplus decision 294 promise for witness rider: decisionDelta.drop=0 exogenousDelta.drop=88 dropEta=4261402
