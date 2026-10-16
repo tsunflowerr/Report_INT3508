@@ -58,7 +58,7 @@ kết quả/receipt, 136 cặp cấu hình–ô, số học TSV/JSON theo ô/ng�
 C30/không trần, lifecycle, accounting và trần. Không có vượt trần trên khách
 được hứa, không có ledger mismatch. Checker này không phải một bộ giải mã raw
 hay một triển khai dự báo độc lập. Bản kết quả phân tích gốc chỉ có đúng bốn
-tệp trong `cost-cap-sensitivity-v1/results/`; không sửa hay thêm tệp vào đó.
+tệp trong `results/`; không sửa hay thêm tệp vào đó.
 
 Mức C lớn nhất trên toàn bộ khách được hứa lần lượt là 29.657, 59.622,
 119.657 và 709.119 mili giây. Phân vị 95 trên khách hoàn thành lần lượt là
@@ -84,10 +84,11 @@ sẵn sàng bảo vệ, hợp đồng dự báo/giờ đón, chọn mẫu và WP
 
 ## Đọc và tiếp tục ở máy khác
 
-Đọc báo cáo này, `cost-cap-sensitivity-v1/results/REPORT.md`, `results.json`,
+Đọc báo cáo này, `results/REPORT.md`, `results.json`,
 `riders.tsv`, `results.sha256`, `analysis-complete.json` và checker proof.
 Nguồn runner nằm trong nhánh bàn giao RideBound; raw transcript, dữ liệu,
 runtime, binary và vendor vẫn ở máy gốc. Metadata bundle, log, kế hoạch,
 manifest và hash được bàn giao; clone chưa đủ để chạy lại trên máy mới.
 Đợt này đã kết thúc: không resume/rerun launcher hoặc analysis. Không xóa dữ liệu.
-Lịch theo giờ sẽ được tắt sau khi báo kết quả và push; báo thức 06:20 giữ PAUSED.
+Đã báo kết quả và push hai nhánh bàn giao; lịch theo giờ PAUSED lúc 2026-10-16T18:17:17.444172+07:00.
+Báo thức 06:20 giữ PAUSED; không archive chat.

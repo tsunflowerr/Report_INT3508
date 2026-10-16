@@ -24,3 +24,6 @@ C60/C120 đã hoàn tất:2/2smoke,68/68main,final/analysis exit0,4355/4355 đ�
 Đọc [báo cáo mới và số liệu gốc](research-results/2026-10-16-cost-cap-sensitivity/README.md).
 Nguồn/PDF khóa luận hiện có chưa chèn kết quả mới. Không chạy launcher cũ trên
 máy công ty trước khi provision dữ liệu và đóng manifest thực thi mới.
+
+Khảo sát C60/C120 đã báo và push xong; lịch theo giờ và báo thức06:20 đều
+PAUSED. Không có job pending, không resume/rerun đợt này; không archive chat.
