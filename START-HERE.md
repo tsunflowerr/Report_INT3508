@@ -19,6 +19,8 @@ Các file raw lớn, paper tải về, môi trường, thư mục build và ản
 được xuất. `HANDOFF-INVENTORY.json` và báo cáo loại trừ ở repo RideBound ghi
 phạm vi xuất. Không có dữ liệu nào bị xóa khỏi máy gốc.
 
-Chưa nhận khóa luận sẵn sàng nộp/bảo vệ. Các điểm còn mở và kết quả C60/C120
-đang tiếp tục được quản lý trong repo RideBound. Không chạy launcher cũ trên
+Chưa nhận khóa luận sẵn sàng nộp/bảo vệ. Các điểm còn mở được quản lý trong repo RideBound.
+C60/C120 đã hoàn tất:2/2smoke,68/68main,final/analysis exit0,4355/4355 đối chiếu.
+Đọc [báo cáo mới và số liệu gốc](research-results/2026-10-16-cost-cap-sensitivity/README.md).
+Nguồn/PDF khóa luận hiện có chưa chèn kết quả mới. Không chạy launcher cũ trên
 máy công ty trước khi provision dữ liệu và đóng manifest thực thi mới.

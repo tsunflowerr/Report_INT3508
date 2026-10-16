@@ -6,3 +6,6 @@ ridebound-scratchpad/** -text
 *.png -text
 *.jpg -text
 *.jpeg -text
+
+# Completed sensitivity reports retain their original hashes.
+research-results/** -text
