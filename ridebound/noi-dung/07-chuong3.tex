@@ -298,10 +298,12 @@ Tính với thời gian đi hiện tại, giữ nguyên kế hoạch thì A tớ
 \end{figure}
 
 Phần dời do điều phối được tính theo độ lớn: sớm hay muộn hơn $e$ 20 giây đều tính 20 giây, vì luật đo lần sửa
-lời hứa chứ không đo lợi hay hại; Fielbaum và Alonso-Mora~\cite{fielbaum2020} thì chỉ tính phần bất lợi. Bộ sinh chỉ
-chèn thêm không bảo đảm $c \ge 0$. Trên tập kiểm tra chính, khóa luận đã kiểm 136 lần chạy của bốn cấu hình: điều
-phối không trần, luật C trần 30 và 120 giây, luật hạn chót 30 giây. Ở các lần chạy này, mỗi lần kéo giờ trả sớm hơn
-$e$ chỉ sớm 1 mili giây, nên chiều sớm chưa cho thấy tác dụng đáng kể.
+lời hứa chứ không đo lợi hay hại; Fielbaum và Alonso-Mora~\cite{fielbaum2020} thì chỉ tính phần bất lợi. Trên mọi
+lần chạy đã ghi, $c \ge 0$ tới mức mili giây; đây là quan sát, chưa phải chứng minh cho trường hợp tổng quát. Trên
+tập kiểm tra chính, khóa luận đã kiểm 136 lần chạy của bốn cấu hình: điều phối không trần, luật C trần 30 và 120
+giây, luật hạn chót 30 giây. Ở các lần chạy này, mỗi lần kéo giờ trả sớm hơn $e$ chỉ sớm 1 mili giây. Hệ quả: khi
+bộ điều phối chỉ chèn thêm, phần tính hai chiều và không hoàn lại của luật C gần như không có việc; nó chỉ có tác
+dụng khi kế hoạch của khách đã nhận được phép đổi, ví dụ khi dời khách đang chờ sang xe khác.
 % EV: A04; X3-05 (DELTA:137-139, 259-262); J06 (FAM:293-296); N-05 (CORRECTED); ADD1:104-112; ADDENDUM-1 mục 0.1–0.2 (không nêu nguyên nhân của −1 ms)
 
 % -----------------------------------------------------------------------------------------------------
@@ -466,7 +468,8 @@ và công thức 7 đặt giờ trả bắt buộc bằng giá trị lớn hơn 
 (ràng buộc 9--10), kèm phạt cho phần vượt giờ gốc (công thức 11). Mục đích của họ, tránh tình huống không còn thứ tự
 trả khách khả thi, cũng là mục đích của Nhận xét~\ref{nx:giunguyen}. Đặt giờ trả muộn nhất là $p_0 + B$ cho hạn chót
 nới $p \le \max(p_0 + B, e)$, một cách viết lại của khóa luận; nó cho phép $c \le \max(p_0 + B - e, 0)$, về 0 khi
-tắc đường đẩy $e$ quá $p_0 + B$, và cũng không loại phương án giữ nguyên (suy luận, chưa chạy). Luật C khác ở ba chỗ:
+tắc đường đẩy $e$ quá $p_0 + B$, và cũng không loại phương án giữ nguyên. Cấu hình hạn chót M$^{+}$ với luật phục
+hồi ``không tệ hơn'' ở chương~4 chính là dạng này. Luật C khác ở ba chỗ:
 một trần cho mọi khách có lời hứa, còn phần nới của họ chỉ tác dụng khi giờ cập nhật đã vượt giờ trả muộn nhất;
 phần được phép dời, $|c| \le B - L_r$, không phụ thuộc tắc đường; và cộng qua cả chuyến, dù phần cộng dồn hiếm khi là
 lý do loại phương án (mục~\ref{muc:c4-congdon}).

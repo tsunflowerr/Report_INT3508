@@ -192,8 +192,8 @@ Schulz và Pfeiffer (2026)~\cite{schulz2026}
 Elmi và cộng sự (2026)~\cite{elmi2026}
 & Bảo đảm lời hứa cho nhóm khách được chọn
 & Thời gian đi trên mỗi cạnh cố định
-& Kế thừa bảo vệ từng khách; giới hạn tổng qua cả chuyến\\
-% EV: C2-08; A06.
+& Kế thừa bảo vệ từng khách; cách siết đều của bài đã có ngân sách cố định cho từng khách; khóa luận thêm cách tính phần do điều phối\\
+% EV: C2-08; A06; kiểm toán 23/10 §1-G4, §7-W13 (Elmi tr. 13: "can be naturally extended to subsequent changes").
 Laupichler và cộng sự (2026), bộ điều phối Mt-KaRRi~\cite{laupichler2026}
 & Giới hạn thời gian chuyến theo thời gian khách đã chấp nhận
 & Thời gian đi trên mỗi cạnh cố định
@@ -214,15 +214,20 @@ Khóa luận
 \end{table}
 
 Cách đọc bảng: các công trình đo hoặc giới hạn những đại lượng khác nhau. Tiền lệ trực tiếp là Hörl và
-Zwick: khóa luận dùng lại giờ trả tính theo tuyến cũ với thời gian đi hiện tại. So hai định nghĩa, luật C
-khác ở trần như nhau cho mọi khách có lời hứa, chỉ tính phần tính cho điều phối và cộng qua cả chuyến.
+Zwick: khóa luận dùng lại giờ trả tính theo tuyến cũ với thời gian đi hiện tại. Ngân sách cố định cho từng
+khách, bị tiêu dần bởi các lần chèn sau, cũng đã có trong cách siết đều của Elmi và cộng sự; các tác giả này
+còn nêu rằng cơ chế của họ có thể mở rộng cho các lần đổi sau. Theo hiểu biết của chúng tôi, phần luật C
+thêm vào là: chỉ tính phần dời do điều phối $c = p - e$, không tính phần do tắc đường; tính $|c|$ theo cả hai
+chiều và không hoàn lại, nên tổng các lần dời của một khách bị chặn; và trần $B$ cố định, kiểm tra lại được.
 Vì không tính phần thay đổi khi giữ nguyên kế hoạch, trần không cần nới theo tắc đường.
-% EV: J01; J03; J05 (suy luận từ hai định nghĩa); C2-04; A06.
+% EV: J01; J03; J05 (suy luận từ hai định nghĩa); C2-04; A06; kiểm toán 23/10 §7-W13; Elmi tr. 13.
 
-Đây là khác biệt về định nghĩa, chưa phải kết quả so sánh với luật kiểu Hörl và Zwick, vì luật đó chưa được
-chạy làm đối chứng. Hai tác giả thử trên nhu cầu MOIA ở Hamburg với tốc độ từ dữ liệu định vị của TomTom,
+Hạn chót nới kiểu Hörl và Zwick, $p \le \max(p_0 + B, e)$, trùng với cấu hình hạn chót M$^{+}$ có luật phục hồi
+``không tệ hơn'' đã chạy ở chương~4 (Bảng~\ref{bang:c4-nghiavu}); vì vậy phép so luật C với hạn chót nới đã có trên
+tập kiểm tra chính. Hai tác giả thử trên nhu cầu MOIA ở Hamburg với tốc độ từ dữ liệu định vị của TomTom,
 khác thiết lập hệ số tắc đường chung toàn thành phố của khóa luận. Tác dụng riêng của phép cộng qua cả
 chuyến cũng chưa được đo.
+% EV: kiểm toán 23/10 §5.3 (CommitmentDecisionValidator.cs:416-417: M+-B + no-worse là p <= max(p0 + B, e)).
 % EV: C2-05; B06; K27; E09; Ch4B-v10:445-446.
 
 \section{Mục tiêu và đóng góp}
@@ -265,7 +270,8 @@ Hai luật hứa những điều khác nhau. Luật hạn chót tính cả phầ
 trần loại. Luật phục hồi là cách tiếp tục phục vụ khi luật lời hứa loại phương án giữ nguyên, nêu ở
 mục~\ref{muc:doichung}. Đây không phải ưu thế giữ giờ tới; điều phối không trần cũng không lần nào phải dùng luật phục hồi
 (0 trong 20.760 quyết định được xác nhận). Theo định nghĩa, hạn chót nới tới giờ trả tính lại nếu giờ đó muộn hơn hạn cũ cũng cho qua phương án
-giữ nguyên; biến thể này chưa được chạy làm đối chứng.
+giữ nguyên; biến thể này chính là cấu hình hạn chót M$^{+}$ với luật phục hồi ``không tệ hơn'' đã chạy ở chương~4. Ở
+M$^{+}$-30, 7.710 trong 20.103 quyết định là lần phần nới được dùng (Bảng~\ref{bang:c4-nghiavu}).
 % EV: A09; A10; N-21; A22; X3-27; X3-16; K02; K05; Ch3-v4-v3:muc:giunguyen,muc:doichung.
 
 Khi có dự báo, cộng thêm 30 giây vào lời hứa của điều phối không trần cho cùng 2.328 lượt không trễ quá
@@ -342,8 +348,8 @@ lần chạy mẫu đã kiểm. Kết quả chưa cho biết đánh đổi ở t
 \item \textbf{Phạm vi phép so thứ tự ưu tiên:} luật C và điều phối không trần được so dưới cả thứ tự ưu tiên
 ổn định và ưu tiên chi phí kế hoạch. Trong mỗi thứ tự, hai cấu hình giữ cùng các ràng buộc còn lại và khác ở
 trần giờ trả. Phép so này xét trần 30 giây và không trần, chưa xác định ngưỡng thích hợp cho người dùng.
-\item \textbf{Ngoài phạm vi:} không có mô hình khách hủy chuyến hay từ chối lời mời; không chuyển
-khách đã nhận sang xe khác; không kiểm mở rộng sang mạng lớn hay hiệu quả kinh doanh.
+\item \textbf{Ngoài phạm vi:} không có mô hình khách hủy chuyến hay từ chối lời mời; các lần chạy ở chương~4
+không chuyển khách đã nhận sang xe khác; không kiểm mở rộng sang mạng lớn hay hiệu quả kinh doanh.
 Lời hứa theo dự báo chỉ được tính lại trên các lần chạy đã ghi, không thay đổi xe nào chở ai.
 % EV: I07; X3-39; B04; I01; I10; A08; H01; H02; H12; F03; X3-12.
 \end{itemize}
