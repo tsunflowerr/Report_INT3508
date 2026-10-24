@@ -24,6 +24,13 @@ thấp với hệ số tắc đường chung toàn thành phố. Khóa luận ch
 khách; phần dự báo dùng hồ sơ lịch sử đơn giản, chưa phải một mô hình dự báo giao thông mới.
 % EV: S15-01 (5b); C01; C10; K05; K36; I01; I05; F01--F04.
 
+Ở mật độ cao hơn, khóa luận dùng một bộ mô phỏng đã được kiểm khớp từng khách với RideBound trên 227 cặp kịch bản--luật
+cỡ nhỏ, chạy trên 60 ngày dữ liệu Via ở New York (512 yêu cầu mỗi hai giờ, 62 xe). So với cách siết đều của Elmi và
+cộng sự ở dạng hàng rào nới, cùng ngân sách theo từng khách, luật C phục vụ ngang khi chỉ chèn thêm khách. Khi cho dời
+khách đang chờ sang xe khác, luật C giảm 42\% số lần đảo hứa, đổi lại phục vụ ít hơn 0,4\%. Đây là đánh đổi có điều
+kiện, đo trong một cấu hình thăm dò, không phải ưu thế chung so với Elmi.
+% EV: noi-dung/08c-via-elmi.tex; TABLES-2x3-60days.txt; P5-RESULT.md; kiểm toán 23/10 §0 (phát biểu đóng góp), §7-W3, W4, W19.
+
 \vspace{6pt}
 \noindent\textbf{Từ khóa:} điều phối xe đi chung, lời hứa giờ trả, trần theo từng khách, lời hứa theo dự báo,
 sổ theo từng khách, mô phỏng FleetPy.
@@ -52,6 +59,13 @@ riders more than one minute late. This changes the quoted time, not vehicle move
 comparisons show that rule C does not dominate every measure. The findings are exploratory and limited to the
 low-load simulation with city-wide traffic factors. No optimal budget or passenger-satisfaction claim is made;
 the forecast uses a simple historical profile rather than a new traffic-prediction model.
+
+At higher density, the thesis uses an emulator that matches RideBound rider by rider on 227 small scenario-rule
+pairs, run on 60 days of New York Via demand (512 requests per two hours, 62 vehicles). Against the relaxed-fence
+form of Elmi et al.'s Ordinary Control with the same per-rider budget, rule C serves as many riders under
+insertion-only dispatch. When waiting riders may be moved to another vehicle, rule C has 42\% fewer promise
+reversals and serves 0.4\% fewer riders. This is a conditional trade-off measured in one exploratory
+configuration, not a general advantage over Elmi et al.
 
 \vspace{6pt}
 \noindent\textbf{Keywords:} ride-pooling dispatch, promised drop-off time, per-rider cap, forecast-based promise,
