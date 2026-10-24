@@ -1,0 +1,149 @@
+% =====================================================================================================
+% Mục mới (bản nháp 25/10/2026) theo kiểm toán 23/10 §6-P1, §6-P3, §7: so sánh với Elmi Ordinary trên dữ liệu Via
+% trong bộ mô phỏng, và kiểm chứng bộ mô phỏng bằng RideBound thật. Được \input trong 08-chuong4.tex, trước mục Thảo luận.
+% Số liệu: tables_2x3.py (tính lại độc lập từ wf14/results/main.ndjson và wf15/results/confirm.ndjson), P5-RESULT.md,
+% BAO-CAO-GIAI-DOAN-1.md, P7-RESULT.md (ridebound-scratchpad, 25/10/2026).
+% =====================================================================================================
+\section{So sánh với Elmi Ordinary trên dữ liệu Via trong bộ mô phỏng}
+\label{muc:c4-via}
+
+Các mục trước chạy RideBound thật trên những kịch bản Manhattan nhỏ, nơi phần cộng dồn và phần hai chiều của luật C
+hiếm khi có việc. Mục này đặt luật C cạnh đối chứng của Elmi và cộng sự~\cite{elmi2026} ở mật độ cao hơn nhiều, bằng một
+bộ mô phỏng. Mọi số trong mục là số của bộ mô phỏng, không phải của RideBound; phần kiểm chứng bộ mô phỏng bằng RideBound
+thật ở mục~\ref{muc:c4-cauno}.
+
+\subsection{Dữ liệu và cấu hình}
+\label{muc:c4-via-dulieu}
+
+Nhu cầu lấy từ bản ghi chuyến của các hãng xe lớn mà Ủy ban Taxi và Limousine New York (TLC) công bố, phần của Via
+(mã hãng HV0004), đón và trả trong Manhattan, năm 2019. Mỗi kịch bản là một khung hai giờ (8--10 giờ hoặc 17--19 giờ)
+của một ngày thường, gồm 512 yêu cầu rút ngẫu nhiên có hạt giống cố định từ các yêu cầu Via của khung đó, 62 xe bốn chỗ,
+thời gian đi tối đa gấp 2 lần đi thẳng tính ở đầu khung, thời gian dừng đón trả 0 giây. Điểm đón và trả là một nút ngẫu
+nhiên của mạng đường Manhattan trong khu vực TLC tương ứng. Hệ số tắc đường theo khung 15 phút được ước lượng từ chuyến
+taxi vàng, chung cho cả thành phố. Tập so sánh gồm 60 ngày thường của 10 tháng (6 ngày mỗi tháng), mỗi ngày hai khung và
+ba lần rút mẫu, tổng 360 kịch bản.
+% EV: sp/wf14/scripts/gen_cells_rs.js:5-9, 35, 96, 104-108; sp/wf15/scripts/shlib.js:17 (maxRidePermille 2000, dwellMs 0, nVeh 62); sp/wf15/work/days_confirm.csv (60 ngày)
+
+Để chắc dữ liệu đầu vào là chuyến thật, hai tháng (3/2019 và 9/2019, 12 ngày, 118.075 yêu cầu) được trích lại từ tệp
+gốc của TLC và so với đầu vào của bộ mô phỏng: không lệch dòng nào theo cả hai chiều, kể cả số thứ tự yêu cầu dùng để
+gán nút. Dữ liệu này chỉ gồm chuyến đã hoàn thành; không có yêu cầu bị hủy hay bị từ chối.
+% EV: p7-tlc-2026-10-25/P7-RESULT.md (EXCEPT ALL 0/0, rid theo request_datetime, pu, dz, trip_miles, trip_time)
+
+\subsection{Đối chứng}
+\label{muc:c4-via-doichung}
+
+Cách siết đều của Elmi và cộng sự được hình thức hóa như sau: mỗi khách nhận ngân sách $B_r = \mathrm{round}(\alpha \cdot
+\delta_r)$, với $\delta_r$ là độ dư giờ trả lúc hứa đầu tiên (giờ đón dự kiến cộng thời gian đi tối đa, trừ giờ trả đã
+hứa) và $\alpha = 35\%$; giờ trả mới phải thỏa $p \le p_0 + B_r$. Ở bảng gốc của bài, phía trễ tương ứng khoảng 20\% độ
+dư, nên cách hình thức hóa này lỏng hơn ở phía trễ. Bài Elmi giả định thời gian đi cố định, nên không nói hàng rào xử lý
+thế nào khi tắc đường đẩy giờ trả dự kiến $e$ vượt nó. Khóa luận xét hai cách mở rộng: hàng rào chặt (EO35), giữ nguyên
+tuyến của xe khi không còn phương án hợp lệ; và hàng rào nới (EOHZ35), $p \le \max(p_0 + B_r, e)$, chính là dạng hạn chót
+nới ở mục~\ref{muc:doichung}. Hàng rào nới là đối chứng chính; hàng rào chặt luôn được báo cạnh. Luật C dùng cùng ngân
+sách theo từng khách (RCE35).
+% EV: sp/wf15/runner/engine.js:36-39 (B_r = round(alpha * slk)); kiểm toán 23/10 §7-W10, §7-W11; ADR-082 (chủ chốt EOHZ35 là đối chứng chính, 25/10/2026)
+
+Bộ điều phối có hai kiểu. Kiểu chỉ chèn (INS) là kiểu của RideBound ở các mục trước. Kiểu gán lại (G2) cho phép, ở mỗi
+quyết định, dời tối đa một khách đang chờ sang một trong 8 xe gần nhất, với giờ đón không muộn hơn giờ đón dự kiến của xe
+cũ. Kiểu điều khiển theo điểm khả năng đi chung (Shadow) của bài cũng được cài lại: khách có điểm thấp nhất (72\% với INS,
+71\% với G2) nhận ngân sách 0, khách còn lại giữ toàn bộ độ dư; các ngưỡng này được hiệu chỉnh để số khách phục vụ của
+Shadow với hàng rào nới gần bằng EO35 trên các ngày khám phá. Ba cách xử lý ngân sách đi với Shadow là SHF (hàng rào chặt),
+SHHZ (hàng rào nới) và SHRC (luật C).
+% EV: sp/wf15/scripts/shlib.js:14-15 (g2Targets 8, ratchet); sp/wf15/SPEC.md:842, 1445; sp/wf15/work/CALIBRATION-RULE.md:24-34; sp/wf15/frozen/shadow-params.json
+
+\subsection{Kết quả}
+\label{muc:c4-via-ketqua}
+
+Bảng~\ref{bang:c4-via} ghi giá trị trung bình mỗi ngày (tổng hai khung của trung bình ba lần rút mẫu) trên 60 ngày.
+
+\begin{table}[htbp]
+\centering
+\caption[So sánh với Elmi Ordinary trên dữ liệu Via (bộ mô phỏng)]{Trung bình mỗi ngày trên 60 ngày, bộ mô phỏng.
+Phục vụ: số khách được phục vụ. Đảo hứa: số khách có hai lần đổi giờ hiển thị liên tiếp ($\ge 60$ giây) ngược chiều nhau.
+Dời: tỷ lệ khách được phục vụ bị điều phối lùi giờ trả muộn hơn ít nhất 5 giây. Trễ hạn: tỷ lệ khách được phục vụ đến muộn
+hơn $p_0 + B_r + 60$ giây.}
+\label{bang:c4-via}
+\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+& \multicolumn{4}{c}{Chỉ chèn (INS)} & \multicolumn{4}{c}{Gán lại (G2)}\\
+\cmidrule(lr){2-5}\cmidrule(l){6-9}
+Cách & Phục vụ & Đảo hứa & Dời (\%) & Trễ hạn (\%) & Phục vụ & Đảo hứa & Dời (\%) & Trễ hạn (\%)\\
+\midrule
+Không trần & 795,6 & 42,4 & 45,7 & -- & 804,5 & 88,2 & 47,1 & --\\
+EO35 (chặt) & 723,2 & 21,6 & 31,4 & 1,12 & 730,6 & 39,6 & 32,5 & 1,03\\
+EOHZ35 (nới) & 725,2 & 21,7 & 31,5 & 1,13 & 732,1 & 39,8 & 32,4 & 1,01\\
+RCE35 (luật C) & 726,7 & 19,9 & 31,7 & 1,79 & 729,2 & 23,1 & 32,0 & 1,77\\
+\midrule
+SHF & 685,5 & 30,3 & 21,3 & 2,63 & 694,4 & 50,0 & 22,4 & 2,59\\
+SHHZ & 723,9 & 31,4 & 20,6 & 3,27 & 732,8 & 53,6 & 21,9 & 3,17\\
+SHRC & 719,8 & 30,9 & 20,5 & 3,25 & 723,3 & 36,9 & 21,4 & 3,10\\
+\bottomrule
+\end{tabular}
+\end{table}
+% EV: p5-via-adapter-2026-10-25/TABLES-2x3-60days.txt (tính lại độc lập; trùng các số ở kiểm toán 23/10 §6-P1 bước 4, §7-W1, W3, W4, W7)
+
+So với hàng rào nới cùng ngân sách, khi chỉ chèn, luật C phục vụ ngang (+1,5 khách mỗi ngày, khoảng tin cậy 95\% theo
+ngày từ +0,4 tới +2,6) và giảm đảo hứa ít (−1,7 mỗi ngày). Khi gán lại, luật C giảm 16,7 lần đảo hứa mỗi ngày (−42\%;
+khoảng tin cậy −18,0 tới −15,3; 60 trên 60 ngày), đổi lại phục vụ ít hơn 2,8 khách mỗi ngày (0,4\%; khoảng tin cậy −4,4
+tới −1,3). So với hàng rào chặt, hai hiệu tương ứng là −16,5 lần đảo hứa và −1,3 khách (khoảng tin cậy chứa 0). Ở mức độ
+dư 35\% này, hai cách mở rộng hàng rào của Elmi cho kết quả gần như nhau, trừ số khách phục vụ (hàng rào nới nhiều hơn 1,5
+tới 2,0 khách mỗi ngày).
+% EV: TABLES-2x3-60days.txt (INS RCE35-EOHZ35 served 1.506 [0.369, 2.642]; visRev60 -1.728; G2 visRev60 -16.683 [-18.049, -15.317] 60/0; served -2.822 [-4.376, -1.269]; G2 RCE35-EO35 visRev60 -16.528, served -1.328 [-2.977, 0.321]; EOHZ35-EO35 served 2.006 và 1.494)
+
+Mỗi luật giữ lời hứa theo định nghĩa của chính nó. Theo sổ của luật C, hàng rào chặt để tổng thay đổi do điều phối vượt
+$B_r$ ở 1,18\% (chỉ chèn) và 4,17\% (gán lại) khách. Theo hạn chót của hàng rào, luật C để 1,78\% và 1,75\% khách đến muộn
+quá $p_0 + B_r + 60$ giây, so với 1,11\% và 1,02\% của hàng rào chặt. Không luật nào hơn trên cả hai thước đo.
+% EV: tỷ lệ gộp trên 60 ngày (main.ndjson, confirm.ndjson); kiểm toán 23/10 §7-W1
+
+Với Shadow, luật C phục vụ ít hơn hàng rào nới 4,0 (chỉ chèn) và 9,5 (gán lại) khách mỗi ngày, đổi lại ít hơn 16,6 lần
+đảo hứa mỗi ngày khi gán lại. Shadow với hàng rào chặt phục vụ ít hơn hẳn (SHF thấp hơn SHRC 29 tới 34 khách mỗi ngày).
+Khoảng cách này đến từ cách hình thức hóa hàng rào chặt: khi tắc đường đẩy $e$ của một khách có ngân sách 0 vượt $p_0$,
+xe của khách đó bị giữ nguyên tuyến và không nhận thêm khách. Nó không phải ưu thế của luật C. So với cách siết đều, Shadow
+giảm khoảng 10 điểm phần trăm số khách bị điều phối lùi giờ trả, nhưng có nhiều đảo hứa hơn và nhiều khách trễ hạn hơn.
+% EV: TABLES-2x3-60days.txt (SHRC-SHHZ served -4.017, -9.544; visRev60 G2 -16.644; SHRC-SHF +34.350, +28.906; SHHZ-EOHZ35 pDispPct -10.86, -10.49); kiểm toán 23/10 §2.4-F1, §7-W7
+
+\subsection{Độ vững khi đổi cách định danh của bộ mô phỏng}
+\label{muc:c4-via-dinhdanh}
+
+Các kết quả trên được sinh khi bộ mô phỏng phá thế hòa giữa các phương án bằng số thứ tự đơn giản. RideBound thật phá thế
+hòa bằng mã định danh băm của phương án. Để biết kết luận có phụ thuộc chi tiết này không, 60 kịch bản của 10 ngày (chọn
+bằng hạt giống cố định trước khi chạy) được chạy lại với cách định danh của RideBound. Kết quả theo từng khách đổi ở hầu
+hết kịch bản, nhưng mọi hiệu ở đoạn trên giữ dấu: với gán lại, luật C so với hàng rào nới giảm đảo hứa −14,9 (cách cũ)
+và −16,1 (cách của RideBound) lần mỗi ngày, phục vụ ít hơn 4,1 và 3,5 khách; Shadow với luật C so với Shadow với hàng rào
+nới cũng giữ dấu. Hai loại hiệu không giữ dấu: số khách trễ quá 60 giây của luật C so với hàng rào nới khi chỉ chèn, và
+các hiệu nhỏ giữa hàng rào nới và hàng rào chặt ngoài số khách phục vụ. Khóa luận không rút kết luận nào từ hai loại hiệu
+này.
+% EV: p5-via-adapter-2026-10-25/P5-RESULT.md (cổng 0: 840/840 dòng trùng số liệu gốc; 7/84 ô đánh dấu, một ô chỉ do sai số dấu phẩy động)
+
+\subsection{Kiểm chứng bộ mô phỏng bằng RideBound thật}
+\label{muc:c4-cauno}
+
+Bộ mô phỏng chỉ đáng tin tới mức nó làm đúng như RideBound. Vì vậy RideBound thật (bộ chạy C\# với FleetPy) và bộ mô phỏng
+được chạy trên cùng các kịch bản Manhattan, và so từng khách: thời điểm hứa, giờ trả đã hứa, giờ trả thật, có được phục vụ,
+tổng và số lần dời, đi chung. Dự đoán của bộ mô phỏng được khóa bằng mã băm trước khi chạy RideBound. Kết quả: 227 cặp
+kịch bản--luật trùng hoàn toàn, gồm điều phối không trần, luật C trần cố định, trần từng lần, hạn chót chặt và nới, ngân
+sách theo từng khách (luật C, hàng rào chặt và nới), gán lại G2 có và không giới hạn số xe nhận, trên 21 kịch bản (11 kịch bản 108
+yêu cầu, 8 xe; 10 kịch bản 128 yêu cầu, 10 xe). Để chạy được, lớp nối FleetPy được sửa ở hai chỗ, cả hai trong cùng một tình
+huống: FleetPy đã khóa một chặng đón khách dài 0 giây mà RideBound gửi lại dưới dạng chưa bắt đầu. RideBound và bộ mô phỏng
+không đổi.
+% EV: BAO-CAO-GIAI-DOAN-1.md (117/117, 11.521 khách); via-bridge-2026-10-22/BRIDGE-REPORT.md (55/55, 4.972 khách); ADR-081, ADR-082; tổng 227 = 55 + 22 + 33 + 117
+
+Phạm vi của phép kiểm này hẹp: kịch bản nhỏ, thời gian dừng 0 giây (RideBound chưa mô hình xe bận phục vụ, ADR-083), và trên
+mọi kịch bản đã kiểm, giới hạn 100 phương án mỗi xe và ngân sách của bộ giải chưa lần nào ràng buộc (232.103 quyết định,
+tất cả tối ưu). Ở kịch bản Via 512 yêu cầu, các giới hạn này có thể ràng buộc, và RideBound chưa chạy được ở cỡ đó. Shadow
+và dự báo chỉ có trong bộ mô phỏng. Vì vậy, các kết luận ở mục~\ref{muc:c4-via-ketqua} là kết luận về bộ mô phỏng đã được
+kiểm khớp với RideBound ở cỡ nhỏ, không phải về RideBound ở cỡ Via.
+% EV: SOLVER-EVIDENCE-RESULT.md; ADR-083; kiểm toán 23/10 §7-W12
+
+\subsection{Lịch sử thăm dò và giới hạn}
+\label{muc:c4-via-gioihan}
+
+Thiết lập Via (mật độ, số xe, thời gian đi tối đa, khung giờ) được chọn qua thăm dò để luật C có tình huống khác biệt.
+Phép phân tích chính được viết và khóa bằng mã băm trước khi chạy, trong cùng hệ thống đã chạy thăm dò, không có dấu thời gian
+bên ngoài; các giả thuyết được đặt sau thử nghiệm sơ bộ, không do người viết khóa luận đặt từ đầu; nghiên cứu Shadow dùng lại
+60 ngày của nghiên cứu trước. Vì vậy các so sánh với hàng rào nới ở mục này được ghi là thăm dò. Mọi hiệu đo trong một cấu
+hình (62 xe, 512 yêu cầu mỗi hai giờ, gấp 2 lần, $\alpha = 35\%$); ở cấu hình khác, hướng có thể giữ nhưng độ lớn đổi. Các
+điểm đón, trả là điểm giả trong khu vực, tắc đường đều theo không gian, và thời gian dừng bằng 0.
+% EV: kiểm toán 23/10 §4, §7-W19, §7-W20, §6-N9 (không có đợt xác nhận mới: mọi so sánh với đối thủ chính ghi là thăm dò)
+% CHỜ CHỦ QUYẾT: kiểm toán §6-P1 bước 9 yêu cầu khai rằng phép hình thức hóa Elmi và giả thuyết do trợ lý AI đề xuất; quyết định 14/10 là không nhắc AI trong khóa luận. Câu ở trên chỉ ghi thời điểm đặt giả thuyết.
