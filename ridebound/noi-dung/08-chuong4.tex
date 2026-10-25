@@ -1294,7 +1294,18 @@ chính tập kiểm tra chính, kể cả các phép tính thử ở 120 giây (
 \item Tải thấp: 0,535 khách trên xe kể cả lúc xe rỗi khi không trần, so với khoảng 1,33 trong nghiên cứu điển hình của
 FleetPy. Ở 49 kịch bản dựng từ dữ liệu thật, chuyến được chọn ngắn hơn mọi chuyến đủ điều kiện (trung vị thời gian đi thẳng 165
 so với 196 giây). Kết quả không suy ra cho tải cao hay chuyến dài hơn.
+\item Cách có 34 kịch bản: từ 60 tổ hợp dự kiến (5 ngày, 3 khung giờ, 4 mẫu nhu cầu), 11 tổ hợp không dựng được thành kịch
+bản 108 yêu cầu trên đồ thị 96 nút nên bị loại ở bước dựng dữ liệu, trước mọi lần chạy: ngày 15/11 khung 17 giờ (cả bốn
+mẫu), 17/11 khung 7 giờ (ba mẫu) và 18/11 khung 7 giờ (cả bốn mẫu). 49 kịch bản còn lại chia 15 cho hiệu chỉnh và kiểm
+tính nhất quán, 34 để đo. Đây là bộ lọc theo điều kiện dựng dữ liệu, không phải chọn theo kết quả; nhưng 34 kịch bản
+cũng không phải một mẫu ngẫu nhiên đại diện cho Manhattan.
+\item Trước các thực nghiệm của chương này, một đợt kiểm định có đăng ký trước trên hai nhóm 20 kịch bản (8 xe và 4 xe)
+không đạt cổng phục vụ đã khóa (không kém quá 1 điểm phần trăm): bộ điều phối có cam kết phục vụ ít hơn bộ điều phối gốc
+7,13 và 4,91 điểm phần trăm số yêu cầu, dù giảm gánh nặng dời giờ hơn 99\%. Kết quả âm này được giữ nguyên; các kết quả
+của chương là thăm dò sau đó, thu hẹp phạm vi câu hỏi, và không thay cho cổng đã trượt.
+\item Hai ô số khách đi chung ở Bảng~\ref{bang:c4-chinh} (M$^{+}$-60 và V-30) chưa được đếm.
 \end{itemize}
+% EV (thêm 25/10/2026): F09 (RIDEBOUND-RA-SOAT-TOAN-DIEN.md:628-641; 60 → 49 → 15 + 34, 11 tổ hợp bị loại); F04 (BENCHMARK-RESULTS-AUDIT.md:80-89: panel A 8 xe 1.735 → 1.581, −7,1296 điểm %; panel B 4 xe 966 → 860, −4,9074 điểm %; biên −1 điểm %; gánh nặng giảm 99,83% và 99,23%); kiểm toán 23/10 §5.4 (KT:580)
 % EV: B09; I05; B11; I06; C4A-11 (mức 120 giây, như phần A v5-v3 mục c4-thamdo); MLS:9-10; I11; B12 (LOAD:2-3; FLEET:447-449); J18; B13 (SEL6:2-4: 49/49 kịch bản); K42 (kể cả các phép tính thử ở 120 giây); chương 3 v4-v3 muc:gioihan (hạt giống7; chưa có kiểm độ nhạy)
 
 \textbf{Tích hợp.}

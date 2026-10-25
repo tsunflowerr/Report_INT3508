@@ -99,6 +99,41 @@ $B_r$ ở 1,18\% (chỉ chèn) và 4,17\% (gán lại) khách. Theo hạn chót 
 quá $p_0 + B_r + 60$ giây, so với 1,11\% và 1,02\% của hàng rào chặt. Không luật nào hơn trên cả hai thước đo.
 % EV: tỷ lệ gộp trên 60 ngày (main.ndjson, confirm.ndjson); kiểm toán 23/10 §7-W1
 
+Bảng~\ref{bang:c4-via-dinhnghia} tách hai loại số. Các số ở phần trên là hệ quả của chính định nghĩa luật: chúng chỉ cho
+biết cài đặt làm đúng định nghĩa, không phải phát hiện. Các số ở phần dưới là kết quả đo, có thể khác đi khi đổi cấu hình.
+
+\begin{table}[htbp]
+\centering
+\caption[Điều có theo định nghĩa và điều đo được (Via, bộ mô phỏng)]{Điều có theo định nghĩa của luật và điều đo được,
+gộp trên 60 ngày (chỉ chèn / gán lại). Khách bảo đảm: khách có ngân sách 0 dưới Shadow.}
+\label{bang:c4-via-dinhnghia}
+\footnotesize
+\begin{tabular}{@{}p{6.6cm}p{3.6cm}p{4.6cm}@{}}
+\toprule
+& Luật C & Hàng rào Elmi\\
+\midrule
+\multicolumn{3}{@{}l}{\textit{Theo định nghĩa (kiểm cài đặt)}}\\
+Khách có tổng phần dời do điều phối vượt ngân sách & 0 (RCE35, SHRC) & 1,18\% / 4,17\% (EO35)\\
+Khách bảo đảm bị điều phối đổi giờ trả ($\ge 1$ giây, hai chiều) & 0 (SHRC) & 0,56\% / 4,59\% (SHF); 0,65\% / 5,89\% (SHHZ)\\
+\midrule
+\multicolumn{3}{@{}l}{\textit{Đo được}}\\
+Khách đến muộn hơn $p_0 + B_r + 60$ giây & 1,78\% / 1,75\% (RCE35) & 1,11\% / 1,02\% (EO35)\\
+Khách bảo đảm có giờ hiển thị đổi $\ge 60$ giây & 4,86\% / 4,77\% (SHRC) & 4,20\% / 7,26\% (SHF)\\
+Khách bảo đảm đến muộn hơn lời hứa đầu quá 60 giây & 4,34\% / 4,22\% (SHRC) & 3,55\% / 3,55\% (SHF)\\
+Khách bảo đảm bị chuyển sang xe khác & 0 / 2 khách (SHRC) & 0 / 3.361 khách (SHF)\\
+\bottomrule
+\end{tabular}
+\end{table}
+% EV: tỷ lệ gộp trên 60 ngày từ confirm.ndjson (G_dispAny1, G_vis60, G_late60First, G_switched trên G_n) và main.ndjson (breachLedger, breachDeadline60 trên served); kiểm toán 23/10 §7-W5, W6
+
+Hai khách bảo đảm dưới SHRC bị chuyển sang xe khác dù tổng phần dời của họ bằng 0: luật C chỉ đếm việc dời giờ, không
+cấm đổi xe. Kết quả bất lợi cho luật C cũng phải nêu đủ. Khi chỉ chèn, so với hàng rào nới, luật C để nhiều khách bị điều
+phối lùi giờ trả hơn một chút (+0,24 điểm phần trăm, khoảng tin cậy +0,10 tới +0,39). Khi gán lại, nó phục vụ ít hơn có ý
+nghĩa (−2,8 khách mỗi ngày). Theo hạn chót của hàng rào, nó để nhiều khách trễ hơn (bảng trên). Với Shadow, luật C phục vụ
+ít hơn hàng rào nới 4,0 và 9,5 khách mỗi ngày, và khi gán lại có thêm 2,7 khách trễ quá 60 giây mỗi ngày (khoảng tin cậy
+1,4 tới 4,0). Khách bảo đảm dưới luật C vẫn đến muộn quá 60 giây vì tắc đường, ở tỉ lệ cao hơn dưới hàng rào chặt.
+% EV: TABLES-2x3-60days.txt (INS RCE35-EOHZ35 pDispPct 0.240 [0.095, 0.385]; G2 served -2.822 [-4.376, -1.269]; SHRC71-SHHZ71 late60First 2.700 [1.363, 4.037]); confirm.ndjson G_switched SHRC71 = 2; kiểm toán 23/10 §6-P1 bước 7
+
 Với Shadow, luật C phục vụ ít hơn hàng rào nới 4,0 (chỉ chèn) và 9,5 (gán lại) khách mỗi ngày, đổi lại ít hơn 16,6 lần
 đảo hứa mỗi ngày khi gán lại. Shadow với hàng rào chặt phục vụ ít hơn hẳn (SHF thấp hơn SHRC 29 tới 34 khách mỗi ngày).
 Khoảng cách này đến từ cách hình thức hóa hàng rào chặt: khi tắc đường đẩy $e$ của một khách có ngân sách 0 vượt $p_0$,
