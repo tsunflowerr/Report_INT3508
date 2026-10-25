@@ -128,13 +128,14 @@ này.
 
 Bộ mô phỏng chỉ đáng tin tới mức nó làm đúng như RideBound. Vì vậy RideBound thật (bộ chạy C\# với FleetPy) và bộ mô phỏng
 được chạy trên cùng các kịch bản Manhattan, và so từng khách: thời điểm hứa, giờ trả đã hứa, giờ trả thật, có được phục vụ,
-tổng và số lần dời, đi chung. Dự đoán của bộ mô phỏng được khóa bằng mã băm trước khi chạy RideBound. Kết quả: 227 cặp
-kịch bản--luật trùng hoàn toàn, gồm điều phối không trần, luật C trần cố định, trần từng lần, hạn chót chặt và nới, ngân
-sách theo từng khách (luật C, hàng rào chặt và nới), gán lại G2 có và không giới hạn số xe nhận, trên 21 kịch bản (11 kịch bản 108
+tổng và số lần dời, đi chung. Dự đoán của bộ mô phỏng được khóa bằng mã băm trước khi chạy RideBound. Kết quả: 238 cặp
+kịch bản--luật trùng hoàn toàn, gồm điều phối không trần, luật C trần cố định, trần từng lần, hạn chót chặt và nới (cả dạng
+hạn chót M$^{+}$ với luật phục hồi ``không tệ hơn'' của chương này), ngân sách theo từng khách (luật C, hàng rào chặt và
+nới), gán lại G2 có và không giới hạn số xe nhận, trên 21 kịch bản (11 kịch bản 108
 yêu cầu, 8 xe; 10 kịch bản 128 yêu cầu, 10 xe). Để chạy được, lớp nối FleetPy được sửa ở hai chỗ, cả hai trong cùng một tình
 huống: FleetPy đã khóa một chặng đón khách dài 0 giây mà RideBound gửi lại dưới dạng chưa bắt đầu. RideBound và bộ mô phỏng
 không đổi.
-% EV: BAO-CAO-GIAI-DOAN-1.md (117/117, 11.521 khách); via-bridge-2026-10-22/BRIDGE-REPORT.md (55/55, 4.972 khách); ADR-081, ADR-082; tổng 227 = 55 + 22 + 33 + 117
+% EV: BAO-CAO-GIAI-DOAN-1.md (117/117, 11.521 khách); via-bridge-2026-10-22/BRIDGE-REPORT.md (55/55, 4.972 khách); ADR-081, ADR-082, ADR-084; bridge-phase1-2026-10-23/compare/nw-2026-10-25/final-compare.json (DLS-120 + no-worse 11/11, 976 khách); tổng 238 = 55 + 22 + 33 + 117 + 11
 
 Phạm vi của phép kiểm này hẹp: kịch bản nhỏ, thời gian dừng 0 giây (RideBound chưa mô hình xe bận phục vụ, ADR-083), và trên
 mọi kịch bản đã kiểm, giới hạn 100 phương án mỗi xe và ngân sách của bộ giải chưa lần nào ràng buộc (232.103 quyết định,
