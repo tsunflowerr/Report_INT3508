@@ -45,14 +45,19 @@ trong nhánh ưu tiên chi phí không trần, cũng như một bản ghi chỉ 
 giây, cho thấy các điều kiện khác nhau của hai luật nhưng chưa cho biết chênh lệch kết quả phục vụ.
 % EV: N-06; L1a-02; S15-01 (5d--5e, H7); S15-02; K08.
 
-Ở mật độ cao hơn, trong một bộ mô phỏng đã được kiểm khớp từng khách với RideBound ở cỡ nhỏ
-(mục~\ref{muc:c4-cauno}) và trên 60 ngày dữ liệu Via, luật C với ngân sách theo từng khách phục vụ ngang cách siết đều
-của Elmi và cộng sự, dạng hàng rào nới, khi chỉ chèn thêm khách (+1,5 khách mỗi ngày). Khi cho dời khách đang chờ sang xe
-khác, luật C giảm 16,7 lần đảo hứa mỗi ngày (42\%), đổi lại phục vụ ít hơn 2,8 khách mỗi ngày (0,4\%). Theo hạn chót của
-hàng rào, luật C để nhiều khách đến muộn hơn: 1,78\% so với khoảng 1,1\%. Hướng của các hiệu chính giữ nguyên khi bộ mô
-phỏng phá thế hòa theo cách của RideBound. Đây là một đánh đổi có điều kiện, đo trong một cấu hình thăm dò
+Ở mật độ cao hơn, trong một bộ mô phỏng đã được kiểm khớp từng khách với RideBound ở cỡ nhỏ và, cho một số luật, ở cỡ Via
+trên kịch bản gộp điểm theo khu vực (mục~\ref{muc:c4-cauno}), và trên 60 ngày dữ liệu Via, luật C với ngân sách theo
+từng khách phục vụ ngang cách siết đều của Elmi và cộng sự, dạng hàng rào nới, khi chỉ chèn thêm khách (+1,5 khách mỗi
+ngày). Khi cho dời khách đang chờ sang xe khác, luật C giảm 16,7 lần đảo hứa mỗi ngày (42\%; khoảng 28--43\% qua các phép
+thăm dò khác), đổi lại phục vụ ít hơn 2,8 khách mỗi ngày (0,4\%). So với không gán lại, luật C khi gán lại vẫn có thêm 1,4
+lần đảo hứa nhưng phục vụ thêm 4,1 khách mỗi ngày. Ở cùng số khách phục vụ, mỗi khách tránh được đảo hứa đổi lấy khoảng một
+khách bị điều phối dời giờ trả muộn quá một phút, nên luật C chỉ đáng dùng nếu một lần bị đảo hứa được coi là khó chịu ít
+nhất gần bằng một lần bị dời muộn ($w^* = 0{,}94$, khoảng 0,46--1,61); chưa có số đo nào về cảm nhận của khách. Theo hạn chót
+của hàng rào, luật C để nhiều khách đến muộn hơn: 1,78\% so với khoảng 1,1\%. Hiệu đảo hứa giữ dấu khi bộ mô phỏng phá thế
+hòa theo cách của RideBound; các hiệu phục vụ nhỏ thì không vững. Mức giảm đảo hứa đến từ chính cơ chế của luật và đảo hứa
+được chọn làm chỉ số chính sau thử nghiệm sơ bộ. Đây là một đánh đổi có điều kiện, đo trong một cấu hình thăm dò
 (mục~\ref{muc:c4-via-gioihan}), không phải ưu thế chung so với Elmi và cộng sự.
-% EV: noi-dung/08c-via-elmi.tex; TABLES-2x3-60days.txt; P5-RESULT.md; kiểm toán 23/10 §7-W1, W3, W4.
+% EV: noi-dung/08c-via-elmi.tex; TABLES-2x3-60days.txt; P5-RESULT.md; breakeven-2026-10-26/BREAKEVEN-RESULT.md; RideBound-Code ADR-085, ADR-086; kiểm toán 23/10 §7-W1, W3, W4; khoảng 28--43\%: báo cáo wf17 §1, §2.3--2.5 (máy công ty).
 
 \section{Vai trò của dự báo và phần còn lại}
 

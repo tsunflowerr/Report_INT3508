@@ -44,11 +44,12 @@ sách theo từng khách (RCE35).
 
 Bộ điều phối có hai kiểu. Kiểu chỉ chèn (INS) là kiểu của RideBound ở các mục trước. Kiểu gán lại (G2) cho phép, ở mỗi
 quyết định, dời tối đa một khách đang chờ sang một trong 8 xe gần nhất, với giờ đón không muộn hơn giờ đón dự kiến của xe
-cũ. Kiểu điều khiển theo điểm khả năng đi chung (Shadow) của bài cũng được cài lại: khách có điểm thấp nhất (72\% với INS,
-71\% với G2) nhận ngân sách 0, khách còn lại giữ toàn bộ độ dư; các ngưỡng này được hiệu chỉnh để số khách phục vụ của
-Shadow với hàng rào nới gần bằng EO35 trên các ngày khám phá. Ba cách xử lý ngân sách đi với Shadow là SHF (hàng rào chặt),
-SHHZ (hàng rào nới) và SHRC (luật C).
+cũ. Kiểu điều khiển theo điểm khả năng đi chung (Shadow) của bài cũng được cài lại: khách có điểm thấp nhận ngân sách 0,
+khách còn lại giữ toàn bộ độ dư. Ngưỡng điểm là phân vị 72\% (INS) và 71\% (G2) của điểm trên các ngày khám phá, được hiệu
+chỉnh để số khách phục vụ của Shadow với hàng rào nới gần bằng EO35; trên 60 ngày so sánh, thực tế 67,6--69,1\% khách được
+phục vụ nhận ngân sách 0. Ba cách xử lý ngân sách đi với Shadow là SHF (hàng rào chặt), SHHZ (hàng rào nới) và SHRC (luật C).
 % EV: sp/wf15/scripts/shlib.js:14-15 (g2Targets 8, ratchet); sp/wf15/SPEC.md:842, 1445; sp/wf15/work/CALIBRATION-RULE.md:24-34; sp/wf15/frozen/shadow-params.json
+% EV (26/10): tỷ lệ khách bảo đảm thực tế: sp/wf15/results/CONFIRM-SHADOW-REPORT.txt:113-118 (S16 "realised guaranteed share" 67,64--69,09\% số khách được phục vụ); khóa ratchet của G2 so với giờ đón dự kiến theo kế hoạch cũ e, không phải giờ đã công bố: engine.js:19 (lock 'ratchet' <= e), CommitmentLockEvaluator.cs:183-186, 284-287
 
 \subsection{Kết quả}
 \label{muc:c4-via-ketqua}
@@ -60,7 +61,8 @@ Bảng~\ref{bang:c4-via} ghi giá trị trung bình mỗi ngày (tổng hai khun
 \caption[So sánh với Elmi Ordinary trên dữ liệu Via (bộ mô phỏng)]{Trung bình mỗi ngày trên 60 ngày, bộ mô phỏng.
 Phục vụ: số khách được phục vụ. Đảo hứa: số khách có hai lần đổi giờ hiển thị liên tiếp ($\ge 60$ giây) ngược chiều nhau.
 Dời: tỷ lệ khách được phục vụ bị điều phối lùi giờ trả muộn hơn ít nhất 5 giây. Trễ hạn: tỷ lệ khách được phục vụ đến muộn
-hơn $p_0 + B_r + 60$ giây.}
+hơn $p_0 + B_r + 60$ giây. Các cột phần trăm là trung bình của tỷ lệ theo ngày, nên lệch chút với tỷ lệ gộp nêu trong
+lời văn.}
 \label{bang:c4-via}
 \footnotesize
 \setlength{\tabcolsep}{3.2pt}
@@ -88,15 +90,42 @@ ngày từ +0,4 tới +2,6) và giảm đảo hứa ít (−1,7 mỗi ngày). Kh
 khoảng tin cậy −18,0 tới −15,3; 60 trên 60 ngày), đổi lại phục vụ ít hơn 2,8 khách mỗi ngày (0,4\%; khoảng tin cậy −4,4
 tới −1,3). So với hàng rào chặt, hai hiệu tương ứng là −16,5 lần đảo hứa và −1,3 khách (khoảng tin cậy chứa 0). Ở mức độ
 dư 35\% này, hai cách mở rộng hàng rào của Elmi cho kết quả gần như nhau, trừ số khách phục vụ (hàng rào nới nhiều hơn 1,5
-tới 2,0 khách mỗi ngày). Mức 35\% không phải điểm duy nhất cho hướng này: trong một phép thăm dò trên 10 ngày với $\alpha$ từ
-10\% tới 100\%, khi gán lại, luật C có ít hơn 33--55\% số lần đảo hứa so với hàng rào nới cùng $\alpha$, đổi lại phục vụ ít
-hơn 0,2--1,2\%; khi chỉ chèn, hai cách gần như trùng nhau ở mọi $\alpha$.
+tới 2,0 khách mỗi ngày).
+
+Con số $-42\%$ cần đọc cùng hai mốc khác. Thứ nhất, chính việc gán lại sinh thêm đảo hứa: với hàng rào nới, gán lại nâng số
+lần đảo hứa từ 21,7 lên 39,8 và số khách phục vụ từ 725,2 lên 732,1 mỗi ngày. Luật C khi gán lại có 23,1 lần đảo hứa và
+phục vụ 729,2 khách, tức so với không gán lại vẫn thêm 1,4 lần đảo hứa nhưng phục vụ thêm 4,1 khách mỗi ngày: luật C bỏ
+khoảng 92\% số lần đảo hứa do gán lại sinh ra và giữ khoảng 59\% phần phục vụ tăng thêm. Thứ hai, mức giảm đến từ chính cơ
+chế của luật (tính độ lớn phần dời theo cả hai chiều và không hoàn lại), và đảo hứa được chọn làm chỉ số chính sau thử
+nghiệm sơ bộ; kết quả cho biết luật làm đúng điều nó đặt ra, chưa cho biết khách được lợi. Độ lớn cũng đổi theo thiết lập:
+trong các phép thăm dò khác, 16 ngày chưa từng chạy cho $-38{,}5\%$ (16 trên 16 ngày), thêm phí chuyển xe 300 giây cho
+hàng rào còn $-28{,}6\%$, và ở mật độ 256 yêu cầu mỗi hai giờ mức giảm tính trên 1.000 khách chỉ còn khoảng một phần ba;
+vì vậy nên đọc mức giảm là khoảng 28--43\%, không phải một con số cố định. Một giả thuyết rút ra sau khi xem số liệu, chưa
+được kiểm, là riêng phí chuyển xe đã đạt khoảng 56\% mức giảm của luật C.
+% EV: TABLES-2x3-60days.txt (INS EOHZ35 21,672 / 725,167; G2 EOHZ35 39,761 / 732,056; G2 RCE35 23,078 / 729,233 → +1,406 đảo, +4,066 khách; 92\% = 1 − 1,406/18,089; 59\% = 4,066/6,889); khớp wf17 b2-reassignment-practice (máy công ty)
+% EV (máy công ty, chưa kiểm ở máy nhà): báo cáo wf17 RideBound-Do-Ben-Va-Gia-Tri-Loi-Ich-23-10.md §1, §2.3--2.5 (F16 −38,5\% 16/16; phí 300 s −28,6\%; P256 ≈ 1/3 tính trên 1.000 khách; 56\% là giả thuyết hậu kiểm R4)
+
+Mức 35\% không phải điểm duy nhất cho hướng này: trong một phép thăm dò trên 10 ngày với $\alpha$ từ 10\% tới 100\%, khi gán
+lại, luật C có ít hơn 33--55\% số lần đảo hứa so với hàng rào nới cùng $\alpha$, đổi lại phục vụ ít hơn 0,2--1,2\%; khi chỉ
+chèn, hai cách gần như trùng nhau ở mọi $\alpha$. So ở cùng $\alpha$ chưa cho thấy hết cái giá. Khi chỉnh $\alpha$ của luật C
+để nó phục vụ đúng bằng hàng rào nới (gán lại, $\alpha = 35\%$), luật C bớt 13,5 khách bị đảo hứa nhưng thêm 12,7 khách bị
+điều phối dời giờ trả muộn quá một phút mỗi ngày; tính theo phút, tổng độ chênh giữa giờ đến và lời hứa đầu tăng khoảng 13,8
+phút cho mỗi khách tránh được đảo hứa, trong đó 13,4 phút (khoảng 97\%) do điều phối. Như vậy luật C chỉ đáng dùng khi một lần bị đảo
+hứa được coi là khó chịu ít nhất bằng $w^* = 0{,}94$ lần một lần bị dời muộn quá một phút (khoảng bootstrap theo ngày
+0,46--1,61; $w^* = 0{,}77$ nếu đếm trễ theo mọi nguyên nhân); qua các mức $\alpha$ từ 10\% tới 75\%, ngưỡng này nằm trong
+khoảng 0,3--1,2. Đây là một điều kiện, không phải kết quả về cảm nhận: chưa có số đo nào cho biết khách thật đặt hai loại
+khó chịu này nặng nhẹ ra sao. Khi chỉ chèn, hai luật không phân biệt được. Một phép định giá minh họa dùng tham số giá trị
+thời gian trong văn liệu cho thấy, với các tham số đó, luật C làm giảm 0,95--1,34\% doanh thu cước và chỉ hòa vốn nếu mỗi lần
+đảo hứa tránh được đáng giá 12,8--17,8 phút ngồi xe; con số phụ thuộc giả định, không phải số đo.
 % EV: p5-via-adapter-2026-10-25/N2-RESULT.md, N2-ALPHA-TABLE.tsv (10 ngày P5, chế độ plain, thăm dò)
+% EV: breakeven-2026-10-26/BREAKEVEN-RESULT.md; BREAKEVEN-TABLE-v2.tsv:28 (dR −13,48; dLd +12,72; w* 0,944 [0,463; 1,614]; wstarLa 0,769; dDA_min 186,04 và dNet_min 180,28 → 13,8 và 13,4 phút mỗi khách, 97\%); BREAKEVEN-CURVES-v2.tsv (w* 0,316--1,241 qua α 10--75\%); kế hoạch phép hòa vốn viết sau một lần minh họa 0,77 trên cùng 10 ngày (docs/18 ADR-086); máy công ty chạy lại khớp (0,944)
+% EV (máy công ty, chưa kiểm ở máy nhà): báo cáo wf17 §4.3--4.5 (định giá minh họa 0,95--1,34\% doanh thu cước; hòa vốn 12,8--17,8 phút ngồi xe mỗi lần đảo hứa tránh được)
 % EV: TABLES-2x3-60days.txt (INS RCE35-EOHZ35 served 1.506 [0.369, 2.642]; visRev60 -1.728; G2 visRev60 -16.683 [-18.049, -15.317] 60/0; served -2.822 [-4.376, -1.269]; G2 RCE35-EO35 visRev60 -16.528, served -1.328 [-2.977, 0.321]; EOHZ35-EO35 served 2.006 và 1.494)
 
-Mỗi luật giữ lời hứa theo định nghĩa của chính nó. Theo sổ của luật C, hàng rào chặt để tổng thay đổi do điều phối vượt
-$B_r$ ở 1,18\% (chỉ chèn) và 4,17\% (gán lại) khách. Theo hạn chót của hàng rào, luật C để 1,78\% và 1,75\% khách đến muộn
-quá $p_0 + B_r + 60$ giây, so với 1,11\% và 1,02\% của hàng rào chặt. Không luật nào hơn trên cả hai thước đo.
+Mỗi luật giữ lời hứa theo định nghĩa của chính nó. Tính gộp trên 60 ngày, theo sổ của luật C, hàng rào chặt để tổng thay
+đổi do điều phối vượt $B_r$ ở 1,18\% (chỉ chèn) và 4,17\% (gán lại) khách; theo hạn chót của hàng rào, luật C để 1,78\% và
+1,75\% khách đến muộn quá $p_0 + B_r + 60$ giây, so với 1,11\% và 1,02\% của hàng rào chặt. Không luật nào hơn trên cả hai
+thước đo.
 % EV: tỷ lệ gộp trên 60 ngày (main.ndjson, confirm.ndjson); kiểm toán 23/10 §7-W1
 
 Bảng~\ref{bang:c4-via-dinhnghia} tách hai loại số. Các số ở phần trên là hệ quả của chính định nghĩa luật: chúng chỉ cho
@@ -115,6 +144,7 @@ gộp trên 60 ngày (chỉ chèn / gán lại). Khách bảo đảm: khách có
 \multicolumn{3}{@{}l}{\textit{Theo định nghĩa (kiểm cài đặt)}}\\
 Khách có tổng phần dời do điều phối vượt ngân sách & 0 (RCE35, SHRC) & 1,18\% / 4,17\% (EO35)\\
 Khách bảo đảm bị điều phối đổi giờ trả ($\ge 1$ giây, hai chiều) & 0 (SHRC) & 0,56\% / 4,59\% (SHF); 0,65\% / 5,89\% (SHHZ)\\
+Khách bảo đảm bị điều phối dời giờ trả muộn hơn ($\ge 1$ giây) & 0 (SHRC) & 0,56\% / 1,47\% (SHF); 0,65\% / 1,71\% (SHHZ)\\
 \midrule
 \multicolumn{3}{@{}l}{\textit{Đo được}}\\
 Khách đến muộn hơn $p_0 + B_r + 60$ giây & 1,78\% / 1,75\% (RCE35) & 1,11\% / 1,02\% (EO35)\\
@@ -125,25 +155,37 @@ Khách bảo đảm bị chuyển sang xe khác & 0 / 2 khách (SHRC) & 0 / 3.36
 \end{tabular}
 \end{table}
 % EV: tỷ lệ gộp trên 60 ngày từ confirm.ndjson (G_dispAny1, G_vis60, G_late60First, G_switched trên G_n) và main.ndjson (breachLedger, breachDeadline60 trên served); kiểm toán 23/10 §7-W5, W6
+% EV (26/10): dòng "dời muộn hơn" = G_dispUp1 / G_n gộp 60 ngày từ confirm.ndjson: SHF 0,56\% / 1,47\%, SHHZ 0,65\% / 1,71\%, SHRC 0 (tính lại ở máy nhà; kiểm toán KT:639, 707)
 
 Hai khách bảo đảm dưới SHRC bị chuyển sang xe khác dù tổng phần dời của họ bằng 0: luật C chỉ đếm việc dời giờ, không
 cấm đổi xe. Kết quả bất lợi cho luật C cũng phải nêu đủ. Khi chỉ chèn, so với hàng rào nới, luật C để nhiều khách bị điều
 phối lùi giờ trả hơn một chút (+0,24 điểm phần trăm, khoảng tin cậy +0,10 tới +0,39). Khi gán lại, nó phục vụ ít hơn có ý
 nghĩa (−2,8 khách mỗi ngày). Theo hạn chót của hàng rào, nó để nhiều khách trễ hơn (bảng trên). Với Shadow, luật C phục vụ
 ít hơn hàng rào nới 4,0 và 9,5 khách mỗi ngày, và khi gán lại có thêm 2,7 khách trễ quá 60 giây mỗi ngày (khoảng tin cậy
-1,4 tới 4,0). Khách bảo đảm dưới luật C vẫn đến muộn quá 60 giây vì tắc đường, ở tỉ lệ cao hơn dưới hàng rào chặt.
+1,4 tới 4,0). Khách bảo đảm dưới luật C vẫn đến muộn quá 60 giây vì tắc đường, ở tỉ lệ cao hơn dưới hàng rào chặt. Khi chỉ
+chèn, tổng độ lớn các lần giờ trả hiển thị thay đổi (bỏ qua thay đổi dưới 5 giây, cộng cho mọi khách) của luật C cao hơn hàng
+rào chặt 12,5 phút mỗi ngày (khoảng tin cậy +4,2 tới +20,9); so với hàng rào nới thì hiệu không rõ (+5,6; khoảng tin cậy
+$-2{,}6$ tới +13,9). Trong phần phân tích phụ của nghiên cứu Shadow, hai dự đoán ghi trước không khớp: khi gán lại, SHHZ
+phục vụ nhiều hơn EO35 2,3 khách mỗi ngày (dự đoán gần 0), và SHRC có tổng độ lớn thay đổi hiển thị thấp hơn SHF 77 phút mỗi
+ngày (dự đoán gần 0); còn khi chỉ chèn, SHRC phục vụ ít hơn EO35 3,3 khách mỗi ngày.
 % EV: TABLES-2x3-60days.txt (INS RCE35-EOHZ35 pDispPct 0.240 [0.095, 0.385]; G2 served -2.822 [-4.376, -1.269]; SHRC71-SHHZ71 late60First 2.700 [1.363, 4.037]); confirm.ndjson G_switched SHRC71 = 2; kiểm toán 23/10 §6-P1 bước 7
+% EV (26/10, tính lại ở máy nhà bằng tables_2x3.py trên main.ndjson + confirm.ndjson): INS RCE35-EO35 TV5min +12,504 [+4,150; +20,857] (21/39 ngày); INS RCE35-EOHZ35 TV5min +5,648 [−2,569; +13,865]; TV5 = metrics_sh.js:57-60 (ngưỡng 5 s); phân tích phụ wf15: CONFIRM-SHADOW-REPORT.txt:82 (S2 G2 SHHZ-EO35 served +2,283, pred ~0, sign p 0,022), :107 (S11 G2 SHRC-SHF TV5 −77,037, pred ~0, sign p 0,001), :55 (S4 INS SHRC-EO35 served −3,328, pred <0); kiểm toán KT:635
 
 Với Shadow, luật C phục vụ ít hơn hàng rào nới 4,0 (chỉ chèn) và 9,5 (gán lại) khách mỗi ngày, đổi lại ít hơn 16,6 lần
 đảo hứa mỗi ngày khi gán lại. Shadow với hàng rào chặt phục vụ ít hơn hẳn (SHF thấp hơn SHRC 29 tới 34 khách mỗi ngày).
-Khoảng cách này đến từ cách hình thức hóa hàng rào chặt: khi tắc đường đẩy $e$ của một khách có ngân sách 0 vượt $p_0$,
-xe của khách đó bị giữ nguyên tuyến và không nhận thêm khách. Nó không phải ưu thế của luật C. Trong một phép thăm dò trên 10
-ngày, cho hàng rào chặt một dung sai 1 giây đã xóa một phần ba (chỉ chèn) tới một nửa (gán lại) khoảng cách này, 5 giây
-xóa một nửa tới hai phần ba; với 60 giây, hàng rào chặt phục vụ nhiều hơn cả SHRC, đổi lại điều phối dời giờ của 43 tới
-66 khách bảo đảm mỗi ngày, so với 0 dưới SHRC. Các cách này nằm trên một đường đánh đổi giữa số khách phục vụ và số khách
-bảo đảm bị dời; không cách nào hơn hẳn. So với cách siết đều, Shadow
-giảm khoảng 10 điểm phần trăm số khách bị điều phối lùi giờ trả, nhưng có nhiều đảo hứa hơn và nhiều khách trễ hạn hơn.
-% EV: TABLES-2x3-60days.txt (SHRC-SHHZ served -4.017, -9.544; visRev60 G2 -16.644; SHRC-SHF +34.350, +28.906; SHHZ-EOHZ35 pDispPct -10.86, -10.49); kiểm toán 23/10 §2.4-F1, §7-W7
+Khoảng cách này đến từ cách hình thức hóa hàng rào chặt: khi giờ trả dự kiến $e$ của một khách có ngân sách 0 vượt $p_0$,
+dù do làm tròn vị trí xe hay do tắc đường, xe của khách đó bị giữ nguyên tuyến và không nhận thêm khách. Nó không phải ưu
+thế của luật C. Theo một phép thăm dò khác, khi giao thông phẳng, cho hàng rào chặt dung sai 1 giây xóa hết khoảng cách;
+khi có tắc đường, khoảng cách còn lại một phần. Trên 10 ngày, dung sai 1 giây xóa 33\% (chỉ chèn) và 54\% (gán lại) khoảng
+cách, 5 giây xóa 54\% và 66\%; trên 30 ngày của một mẫu khác, các tỉ lệ là 41\% và 65\% (1 giây), 58\% và 82\% (5 giây), và
+theo tiêu chí ghi trước, trường hợp chỉ chèn chưa kết luận được. Với 60 giây, hàng rào chặt phục vụ nhiều hơn cả SHRC, đổi
+lại điều phối dời giờ của 43 tới 66 khách bảo đảm mỗi ngày, so với 0 dưới SHRC. Các cách này nằm trên một đường đánh đổi
+giữa số khách phục vụ và số khách bảo đảm bị dời; không cách nào hơn hẳn. So với cách siết đều dạng hàng rào nới, Shadow
+giảm khoảng 10 điểm phần trăm số khách bị điều phối lùi giờ trả và có ít hơn hẳn số khách đến muộn hơn lời hứa đầu quá 60
+giây ($-59$ khách mỗi ngày khi chỉ chèn, $-55$ khi gán lại, cả 60 trên 60 ngày), nhưng có nhiều đảo hứa hơn và nhiều khách
+trễ hạn hơn.
+% EV: TABLES-2x3-60days.txt (SHRC-SHHZ served -4.017, -9.544; visRev60 G2 -16.644; SHRC-SHF +34.350, +28.906; SHHZ-EOHZ35 pDispPct -10.86, -10.49; SHHZ-EOHZ35 late60First -59.033 (60/0), -55.378 (60/0)); kiểm toán 23/10 §2.4-F1, §7-W7
+% EV: N1-RESULT.md (10 ngày: khoảng cách SHRC-SHF 35,0 → 23,6 → 16,1 (INS) và 29,4 → 13,6 → 10,0 (G2) ở 0 / 1 s / 5 s, tức 33\%/54\% và 54\%/66\%); (máy công ty, chưa kiểm ở máy nhà) báo cáo wf17 §2.2, r2: 30 ngày 41\%/65\% (1 s), 58\%/82\% (5 s), INS "chưa kết luận" theo tiêu chí ghi trước; giao thông phẳng 1 s xóa hết: kiểm toán KT:87-90
 
 \subsection{Độ vững khi đổi cách định danh của bộ mô phỏng}
 \label{muc:c4-via-dinhdanh}
@@ -151,12 +193,15 @@ giảm khoảng 10 điểm phần trăm số khách bị điều phối lùi gi�
 Các kết quả trên được sinh khi bộ mô phỏng phá thế hòa giữa các phương án bằng số thứ tự đơn giản. RideBound thật phá thế
 hòa bằng mã định danh băm của phương án. Để biết kết luận có phụ thuộc chi tiết này không, 60 kịch bản của 10 ngày (chọn
 bằng hạt giống cố định trước khi chạy) được chạy lại với cách định danh của RideBound. Kết quả theo từng khách đổi ở hầu
-hết kịch bản, nhưng mọi hiệu ở đoạn trên giữ dấu: với gán lại, luật C so với hàng rào nới giảm đảo hứa −14,9 (cách cũ)
-và −16,1 (cách của RideBound) lần mỗi ngày, phục vụ ít hơn 4,1 và 3,5 khách; Shadow với luật C so với Shadow với hàng rào
-nới cũng giữ dấu. Hai loại hiệu không giữ dấu: số khách trễ quá 60 giây của luật C so với hàng rào nới khi chỉ chèn, và
-các hiệu nhỏ giữa hàng rào nới và hàng rào chặt ngoài số khách phục vụ. Khóa luận không rút kết luận nào từ hai loại hiệu
-này.
+hết kịch bản. Hiệu đảo hứa giữ dấu: với gán lại, luật C so với hàng rào nới giảm đảo hứa −14,9 (cách cũ) và −16,1 (cách
+của RideBound) lần mỗi ngày; hiệu đảo hứa giữa Shadow với luật C và Shadow với hàng rào nới cũng giữ dấu. Các hiệu phục
+vụ chỉ vài khách mỗi ngày thì không vững: trên mẫu 10 ngày này, luật C phục vụ ít hơn hàng rào nới 4,1 và 3,5 khách, nhưng
+trên một mẫu 10 ngày khác, hiệu phục vụ đổi dấu khi đổi cách định danh (chỉ chèn từ −1,40 thành +2,10; gán lại từ −1,50
+thành +1,20), nên được coi là nhiễu. Hai loại hiệu khác cũng không giữ dấu: số khách trễ quá 60 giây của luật C so với hàng
+rào nới khi chỉ chèn, và các hiệu nhỏ giữa hàng rào nới và hàng rào chặt ngoài số khách phục vụ. Khóa luận không rút kết
+luận nào từ các hiệu này.
 % EV: p5-via-adapter-2026-10-25/P5-RESULT.md (cổng 0: 840/840 dòng trùng số liệu gốc; 7/84 ô đánh dấu, một ô chỉ do sai số dấu phẩy động)
+% EV (máy công ty, chưa kiểm ở máy nhà): wf17/r1-identity-fence-pad/results/r1_tables.txt:5-6, 130-131 (mẫu 10 ngày khác: hiệu phục vụ INS −1,40 → +2,10, G2 −1,50 → +1,20)
 
 \subsection{Kiểm chứng bộ mô phỏng bằng RideBound thật}
 \label{muc:c4-cauno}
@@ -168,25 +213,44 @@ kịch bản--luật trùng hoàn toàn, gồm điều phối không trần, lu�
 hạn chót M$^{+}$ với luật phục hồi ``không tệ hơn'' của chương này), ngân sách theo từng khách (luật C, hàng rào chặt và
 nới), gán lại G2 có và không giới hạn số xe nhận, trên 21 kịch bản (11 kịch bản 108
 yêu cầu, 8 xe; 10 kịch bản 128 yêu cầu, 10 xe). Để chạy được, lớp nối FleetPy được sửa ở hai chỗ, cả hai trong cùng một tình
-huống: FleetPy đã khóa một chặng đón khách dài 0 giây mà RideBound gửi lại dưới dạng chưa bắt đầu. RideBound và bộ mô phỏng
-không đổi.
+huống: FleetPy đã khóa một chặng đón khách dài 0 giây mà RideBound gửi lại dưới dạng chưa bắt đầu. Bộ mô phỏng không đổi.
+Phía RideBound, ngân sách theo từng khách và kiểu gán lại G2 được thêm vào trên một nhánh nghiên cứu, mặc định tắt, chỉ để
+chạy phép kiểm này; chúng không thuộc phiên bản RideBound được đánh giá ở chương~\ref{chuong:phuongphap} và các mục trước
+của chương này.
 % EV: BAO-CAO-GIAI-DOAN-1.md (117/117, 11.521 khách); via-bridge-2026-10-22/BRIDGE-REPORT.md (55/55, 4.972 khách); ADR-081, ADR-082, ADR-084; bridge-phase1-2026-10-23/compare/nw-2026-10-25/final-compare.json (DLS-120 + no-worse 11/11, 976 khách); tổng 238 = 55 + 22 + 33 + 117 + 11
 
-Phạm vi của phép kiểm này hẹp: kịch bản nhỏ, thời gian dừng 0 giây (RideBound chưa mô hình xe bận phục vụ, ADR-083), và trên
-mọi kịch bản đã kiểm, giới hạn 100 phương án mỗi xe và ngân sách của bộ giải chưa lần nào ràng buộc (232.103 quyết định,
-tất cả tối ưu). Ở kịch bản Via 512 yêu cầu, các giới hạn này có thể ràng buộc, và RideBound chưa chạy được ở cỡ đó. Shadow
-và dự báo chỉ có trong bộ mô phỏng. Vì vậy, các kết luận ở mục~\ref{muc:c4-via-ketqua} là kết luận về bộ mô phỏng đã được
-kiểm khớp với RideBound ở cỡ nhỏ, không phải về RideBound ở cỡ Via.
+Trên các kịch bản Manhattan này, thời gian dừng là 0 giây (RideBound chưa mô hình xe bận phục vụ), và giới hạn 100 phương án
+mỗi xe cùng ngân sách của bộ giải chưa lần nào ràng buộc (232.103 quyết định, tất cả tối ưu).
 % EV: SOLVER-EVIDENCE-RESULT.md; ADR-083; kiểm toán 23/10 §7-W12
+
+Ở cỡ Via, RideBound thật được chạy trên một họ kịch bản dựng từ dữ liệu Via ngày 13/2/2019, hai khung giờ, trong đó mỗi điểm
+đón, trả được gộp về một điểm đại diện của khu vực TLC: 60 và 58 điểm, 509 và 508 yêu cầu, 62 xe. Phải gộp vì lần chạy
+thật dựng đồ thị đầy đủ trên mọi điểm của kịch bản, và kịch bản gốc có khoảng 830 điểm. Ngân sách công việc của mỗi quyết
+định được nâng lên, vì với 62 xe nó vượt mức mặc định và bộ chạy dừng có chủ đích; giới hạn cho từng xe giữ nguyên. Mỗi lần
+chạy mất 1,4 tới 2 giờ, so với vài giây của bộ mô phỏng. Sáu cặp kịch bản--luật chạy xong và trùng bộ mô phỏng từng khách
+(2.407 khách): hàng rào nới khi chỉ chèn và khi gán lại ở cả hai khung, luật C khi gán lại ở khung 17 giờ, và điều phối
+không trần khi gán lại ở khung 8 giờ; số lần dời của G2 cũng trùng. Bốn lần chạy, gồm cả hai lần chạy luật C khi chỉ chèn,
+đi hết mọi quyết định nhưng hết bộ nhớ khi ghi trạng thái cuối, nên không đọc được sổ của khách; hai lần chạy khác không được
+thực hiện. Vì vậy, luật C khi chỉ chèn chưa được kiểm ở cỡ này; Shadow và dự báo vòng kín chỉ có trong bộ mô phỏng; và chính
+các kịch bản 512 yêu cầu dùng ở mục~\ref{muc:c4-via-ketqua} chưa được chạy bằng RideBound. Các kết luận ở mục đó là kết luận
+về bộ mô phỏng, đã được kiểm khớp với RideBound ở cỡ nhỏ và, cho các luật kể trên, ở cỡ Via trên kịch bản gộp theo khu.
+% EV: RideBound-Code nhánh research/via-zone-2026-10-26, docs/18 ADR-085, ADR-086; kits/via-real-2026-10-26/VIA-LOG.md (V1–V6), compare/runA3-final-compare.json (6/6 cặp, 2.407/2.407 khách, số lần dời G2 4/4); máy công ty dựng lại từ TSV của kit, khớp
 
 \subsection{Lịch sử thăm dò và giới hạn}
 \label{muc:c4-via-gioihan}
 
 Thiết lập Via (mật độ, số xe, thời gian đi tối đa, khung giờ) được chọn qua thăm dò để luật C có tình huống khác biệt.
 Phép phân tích chính được viết và khóa bằng mã băm trước khi chạy, trong cùng hệ thống đã chạy thăm dò, không có dấu thời gian
-bên ngoài; các giả thuyết được đặt sau thử nghiệm sơ bộ, không do người viết khóa luận đặt từ đầu; nghiên cứu Shadow dùng lại
-60 ngày của nghiên cứu trước. Vì vậy các so sánh với hàng rào nới ở mục này được ghi là thăm dò. Mọi hiệu đo trong một cấu
+bên ngoài; các giả thuyết được đặt sau thử nghiệm sơ bộ, không do người viết khóa luận đặt từ đầu; đảo hứa được chọn làm chỉ
+số chính sau thử nghiệm sơ bộ; đối chứng chính của phần Shadow đã đổi từ SHHZ sang SHF rồi trở lại SHHZ sau thăm dò; nghiên
+cứu Shadow dùng lại 60 ngày của nghiên cứu trước. Vì vậy mọi so sánh trong mục này là thăm dò. Mọi hiệu đo trong một cấu
 hình (62 xe, 512 yêu cầu mỗi hai giờ, gấp 2 lần, $\alpha = 35\%$); ở cấu hình khác, hướng có thể giữ nhưng độ lớn đổi. Các
 điểm đón, trả là điểm giả trong khu vực, tắc đường đều theo không gian, và thời gian dừng bằng 0.
-% EV: kiểm toán 23/10 §4, §7-W19, §7-W20, §6-N9 (không có đợt xác nhận mới: mọi so sánh với đối thủ chính ghi là thăm dò)
-% CHỜ CHỦ QUYẾT: kiểm toán §6-P1 bước 9 yêu cầu khai rằng phép hình thức hóa Elmi và giả thuyết do trợ lý AI đề xuất; quyết định 14/10 là không nhắc AI trong khóa luận. Câu ở trên chỉ ghi thời điểm đặt giả thuyết.
+% EV: kiểm toán 23/10 §4, §7-W19, §7-W20 (KT:389, 721), §6-N9 (không có đợt xác nhận mới: mọi so sánh trong mục ghi là thăm dò)
+
+Các so sánh trong mục này không dùng dự báo. Trên cùng dữ liệu Via, một phép thăm dò khác cho thấy tác dụng của dự báo khác
+nhau theo khung giờ: dùng dự báo ngay trong bộ điều phối làm kết quả trễ ở khung 17 giờ xấu đi (thêm khoảng 2,7 điểm phần
+trăm so với cộng một khoảng đệm cùng độ dài vào lời hứa), và lời hứa không dự báo được hiệu chỉnh theo giờ từ các ngày trước
+cho kết quả ngang với dự báo thô. Vì vậy mọi kết quả về dự báo cần được đọc theo từng khung giờ.
+% EV (máy công ty, chưa kiểm ở máy nhà): báo cáo wf17 §0 ý 6, §5.1; wf17 r3 (dự báo vòng kín CL/CLF trên F14, F16; khung 17 giờ +2,7 điểm phần trăm so với nhánh đệm, khoảng +4 điểm so với lời hứa không dự báo)
+% CHỜ CHỦ QUYẾT (kiểm toán §6-P1 bước 9, KT:637, 662): khai báo ai đặt giả thuyết và cách hình thức hóa đối chứng, theo quy định của khoa; chủ chốt với thầy rồi sửa câu "không do người viết khóa luận đặt từ đầu" cho nhất quán.

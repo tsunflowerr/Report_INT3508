@@ -217,7 +217,9 @@ Cách đọc bảng: các công trình đo hoặc giới hạn những đại l�
 Zwick: khóa luận dùng lại giờ trả tính theo tuyến cũ với thời gian đi hiện tại. Ngân sách cố định cho từng
 khách, bị tiêu dần bởi các lần chèn sau, cũng đã có trong cách siết đều của Elmi và cộng sự; các tác giả này
 còn nêu rằng cơ chế của họ có thể mở rộng cho các lần đổi sau. Phần mô tả trong các bằng sáng chế của Via cũng có một
-giới hạn do người dùng đặt cho độ trễ tới nơi do các lần đón sau gây ra trong chuyến~\cite{via2017patent,via2022patent}. Theo hiểu biết của chúng tôi, phần luật C
+giới hạn do người dùng đặt cho độ trễ tới nơi do các lần đón sau gây ra trong chuyến~\cite{via2017patent,via2022patent};
+bằng sáng chế đi chung của Uber giới hạn độ lệch của chuyến đang đi khi ghép thêm khách và thời gian cộng thêm so với đi
+riêng~\cite{uber2021patent}. Theo hiểu biết của chúng tôi, phần luật C
 thêm vào là: chỉ tính phần dời do điều phối $c = p - e$, không tính phần do tắc đường; tính $|c|$ theo cả hai
 chiều và không hoàn lại, nên tổng các lần dời của một khách bị chặn; và trần $B$ cố định, kiểm tra lại được.
 Vì không tính phần thay đổi khi giữ nguyên kế hoạch, trần không cần nới theo tắc đường.
@@ -349,8 +351,9 @@ lần chạy mẫu đã kiểm. Kết quả chưa cho biết đánh đổi ở t
 \item \textbf{Phạm vi phép so thứ tự ưu tiên:} luật C và điều phối không trần được so dưới cả thứ tự ưu tiên
 ổn định và ưu tiên chi phí kế hoạch. Trong mỗi thứ tự, hai cấu hình giữ cùng các ràng buộc còn lại và khác ở
 trần giờ trả. Phép so này xét trần 30 giây và không trần, chưa xác định ngưỡng thích hợp cho người dùng.
-\item \textbf{Ngoài phạm vi:} không có mô hình khách hủy chuyến hay từ chối lời mời; các lần chạy ở chương~4
-không chuyển khách đã nhận sang xe khác; không kiểm mở rộng sang mạng lớn hay hiệu quả kinh doanh.
+\item \textbf{Ngoài phạm vi:} không có mô hình khách hủy chuyến hay từ chối lời mời; các lần chạy trên kịch bản
+Manhattan ở chương~4 không chuyển khách đã nhận sang xe khác (kiểu gán lại chỉ có ở mục so sánh trên dữ liệu Via,
+mục~\ref{muc:c4-via}); không kiểm mở rộng sang mạng lớn hay hiệu quả kinh doanh.
 Lời hứa theo dự báo chỉ được tính lại trên các lần chạy đã ghi, không thay đổi xe nào chở ai.
 % EV: I07; X3-39; B04; I01; I10; A08; H01; H02; H12; F03; X3-12.
 \end{itemize}

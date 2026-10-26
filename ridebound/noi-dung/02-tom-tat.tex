@@ -25,11 +25,14 @@ khách; phần dự báo dùng hồ sơ lịch sử đơn giản, chưa phải m
 % EV: S15-01 (5b); C01; C10; K05; K36; I01; I05; F01--F04.
 
 Ở mật độ cao hơn, khóa luận dùng một bộ mô phỏng đã được kiểm khớp từng khách với RideBound trên 238 cặp kịch bản--luật
-cỡ nhỏ, chạy trên 60 ngày dữ liệu Via ở New York (512 yêu cầu mỗi hai giờ, 62 xe). So với cách siết đều của Elmi và
-cộng sự ở dạng hàng rào nới, cùng ngân sách theo từng khách, luật C phục vụ ngang khi chỉ chèn thêm khách. Khi cho dời
-khách đang chờ sang xe khác, luật C giảm 42\% số lần đảo hứa, đổi lại phục vụ ít hơn 0,4\%. Đây là đánh đổi có điều
-kiện, đo trong một cấu hình thăm dò, không phải ưu thế chung so với Elmi.
-% EV: noi-dung/08c-via-elmi.tex; TABLES-2x3-60days.txt; P5-RESULT.md; kiểm toán 23/10 §0 (phát biểu đóng góp), §7-W3, W4, W19.
+cỡ nhỏ và 6 cặp ở cỡ Via với điểm gộp theo khu vực, chạy trên 60 ngày dữ liệu Via ở New York (512 yêu cầu mỗi hai giờ,
+62 xe). So với cách siết đều của Elmi và cộng sự ở dạng hàng rào nới, cùng ngân sách theo từng khách, luật C phục vụ ngang
+khi chỉ chèn thêm khách. Khi cho dời khách đang chờ sang xe khác, luật C giảm 42\% số lần đảo hứa (khoảng 28--43\% qua các
+phép thăm dò khác), đổi lại phục vụ ít hơn 0,4\%; so với không gán lại, nó vẫn có thêm 1,4 lần đảo hứa mỗi ngày nhưng phục
+vụ thêm 4,1 khách. Mức giảm đến từ chính cơ chế của luật, và đảo hứa được chọn làm chỉ số chính sau thử nghiệm sơ bộ; ở cùng
+số khách phục vụ, mỗi khách tránh được đảo hứa đổi lấy khoảng một khách bị điều phối dời muộn quá một phút, và chưa có bằng
+chứng khách được lợi. Đây là đánh đổi có điều kiện, đo trong một cấu hình thăm dò, không phải ưu thế chung so với Elmi.
+% EV: noi-dung/08c-via-elmi.tex; TABLES-2x3-60days.txt; P5-RESULT.md; BREAKEVEN-RESULT.md; RideBound-Code ADR-085, ADR-086; kiểm toán 23/10 §0 (phát biểu đóng góp), §7-W3, W4, W19.
 
 \vspace{6pt}
 \noindent\textbf{Từ khóa:} điều phối xe đi chung, lời hứa giờ trả, trần theo từng khách, lời hứa theo dự báo,
@@ -61,11 +64,15 @@ low-load simulation with city-wide traffic factors. No optimal budget or passeng
 the forecast uses a simple historical profile rather than a new traffic-prediction model.
 
 At higher density, the thesis uses an emulator that matches RideBound rider by rider on 238 small scenario-rule
-pairs, run on 60 days of New York Via demand (512 requests per two hours, 62 vehicles). Against the relaxed-fence
-form of Elmi et al.'s Ordinary Control with the same per-rider budget, rule C serves as many riders under
-insertion-only dispatch. When waiting riders may be moved to another vehicle, rule C has 42\% fewer promise
-reversals and serves 0.4\% fewer riders. This is a conditional trade-off measured in one exploratory
-configuration, not a general advantage over Elmi et al.
+pairs and on 6 Via-scale pairs with trip ends grouped by zone, run on 60 days of New York Via demand (512 requests
+per two hours, 62 vehicles). Against the relaxed-fence form of Elmi et al.'s Ordinary Control with the same
+per-rider budget, rule C serves as many riders under insertion-only dispatch. When waiting riders may be moved to
+another vehicle, rule C has 42\% fewer promise reversals (28--43\% across other explorations) and serves 0.4\%
+fewer riders; compared with no reassignment, it still has 1.4 more reversals per day but serves 4.1 more riders.
+The reduction follows from the rule's own mechanism, and reversals were chosen as the main measure after pilot
+runs; at equal service, each avoided reversal costs about one more rider whose drop-off is pushed more than one
+minute later by dispatch, and there is no evidence yet that riders benefit. This is a conditional trade-off
+measured in one exploratory configuration, not a general advantage over Elmi et al.
 
 \vspace{6pt}
 \noindent\textbf{Keywords:} ride-pooling dispatch, promised drop-off time, per-rider cap, forecast-based promise,
